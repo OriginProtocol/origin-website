@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{title}}</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300,600|Open+Sans:400,300,600|Poiret+One" rel="stylesheet" type="text/css"/>
+
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+      background-color: #F6F4F1!important;
+      color: #404040;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #294494 !important;
+    }
+
+    .header {
+      height: 50px;
+      margin: 10px;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .main {
+      position: fixed;
+      left: 0;
+      top: 50px;
+      width: 100%;
+      height: calc(100vh - 50px);
+    }
+
+    .left-menu {
+      width: 300px;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      margin: 10px;
+    }
+
+    .right-body {
+      position: absolute;
+      top: 0;
+      left: calc(300px + 10px);
+      width: calc(100% - 300px - 10px - 20px);
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .body-section {
+      margin-bottom: 30px;
+    }
+
+    .body-section-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .model {
+      margin-bottom: 10px;
+    }
+
+    .model-name,
+    .field-name,
+    .menu-model a,
+    .field-type a {
+      color: #0D5E69;      
+    }
+
+    .model-name {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .field {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .field-type {
+      font-style: italic;
+      font-size: 0.8rem;
+    }
+
+    .field-constraint {
+      margin-left: 20px;
+      color: #777;
+    }
+
+    .menu-section {
+      margin-bottom: 20px;
+    }
+
+    .menu-section-title {
+      font-weight: 400;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .menu-service {
+      margin-bottom: 10px;
+    }
+
+    .menu-method-name {
+      margin-left: 10px;
+    }
+
+    .service-name,
+    .method-name,
+    .menu-service-name a,
+    .menu-method-name a {
+      color: #182F74;
+    }
+
+    .service {
+      margin-bottom: 30px;
+    }
+
+    .service-name {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .method {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .method-name {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .method-args {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  {% macro model_body(model) -%}
+    <div class="model" id="model-{{model.name}}">
+      <div class="model-name">
+        {{model.name}}
+      </div>
+      {% for field in model.fields %}
+      <div class="field">
+        <span class="field-name">{{field.name}}</span>
+        <span class="field-type">
+          {% if field.is_model %}
+            <a href="#model-{{field.type_name}}">{{field.type_name}}</a>
+          {% else %}
+            {{field.type_name}}
+            {%- if field.parameter_type_name -%}
+            &lt;{% if field.parameter_is_model -%}
+              <a href="#model-{{field.parameter_type_name}}">{{field.parameter_type_name}}</a>
+            {%- else -%}
+              {{field.parameter_type_name}}
+            {%- endif %}&gt;
+            {% endif %}
+          {% endif %}
+        </span>
+        {% for constraint in field.constraints %}
+        <div class="field-constraint">
+          {{constraint}}
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  {%- endmacro %}
+
+  <div class="header">
+    <div class="title">{{title}}</div>
+  </div>
+
+  <div class="main">
+    <div class="left-menu">
+      <div class="menu-section">
+        <div class="menu-section-title">
+          Core Models
+        </div>
+        {% for model in models %}
+        <div class="menu-model">
+          <a href="#model-{{model.name}}">{{model.name}}</a>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="menu-section">
+        <div class="menu-section-title">
+          Services
+        </div>
+        {% for service in services %}
+        <div class="menu-service">
+          <div class="menu-service-name">
+            <a href="#service-{{service.name}}">{{service.name}}</a>
+          </div>
+          {% for method in service.methods %}
+          <div class="menu-method-name">
+            <a href="#method-{{service.name}}.{{method.name}}">{{method.name}}</a>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="right-body">
+      <div class="body-section">
+        <div class="body-section-title">Core Models</div>
+        {% for model in models %}
+          {{ model_body(model) }}
+        {% endfor %}
+      </div>
+      <div class="body-section">
+        <div class="body-section-title">Services</div>
+        {% for service in services %}
+          <div class="service" id="service-{{service.name}}">
+            <div class="service-name">{{service.name}}</div>
+            {% for method in service.methods %}
+            <div class="method" id="method-{{service.name}}.{{method.name}}">
+              <div class="method-name">{{method.name}}()</div>
+              <div class="method-args">
+                {{ model_body(method.request) }}
+                {{ model_body(method.response) }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
