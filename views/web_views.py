@@ -1,8 +1,8 @@
+import apilib
 from flask import json
 from flask import render_template
 
 from app import app
-from api.lib import api_model_base
 
 @app.route('/')
 def index():
@@ -23,8 +23,8 @@ class ClientConfig(object):
     def _to_raw_object(cls, value):
         if value is None:
             return None
-        if isinstance(value, api_model_base.Model):
-            return value.raw
+        if isinstance(value, apilib.Model):
+            return value.to_json()
         elif isinstance(value, list) or isinstance(value, tuple):
             return [cls._to_raw_object(item) for item in value]
         elif isinstance(value, dict):

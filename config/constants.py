@@ -16,9 +16,6 @@ APP_LOG_FILENAME = os.path.join(PROJECTPATH, 'app.log')
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 
-SHOPIFY_API_KEY = None
-SHOPIFY_SHARED_SECRET = None
-
 try:
     from constants_override import *
 except ImportError:
