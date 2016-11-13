@@ -1,7 +1,7 @@
 import urllib
 import urlparse
 
-import constants
+from config import constants
 
 def absurl(relative_url):
     protocol = 'https' if constants.HTTPS else 'http'

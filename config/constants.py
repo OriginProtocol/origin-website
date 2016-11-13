@@ -11,7 +11,7 @@ FLASK_SECRET_KEY = None
 
 APP_LOG_FILENAME = os.path.join(PROJECTPATH, 'app.log')
 
-# SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/dataspaces'
+SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/<my-project>'
 
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')

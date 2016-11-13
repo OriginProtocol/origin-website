@@ -11,3 +11,4 @@ activate_env=os.path.expanduser(root + "/../bin/activate_this.py")
 execfile(activate_env, dict(__file__=activate_env))
 
 from main import app as application
+assert application  # Silence pyflakes

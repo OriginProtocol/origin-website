@@ -1,11 +1,13 @@
 from app import app
 from app import app_config
 from config import constants
+from util import patches
 
 from views import service_views
 from views import web_views
 
 # Silence pyflakes
+assert patches
 assert service_views
 assert web_views
 
