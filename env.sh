@@ -18,7 +18,7 @@ fi
 source "$ENV_DIR/../bin/activate"
 if [[ $PYTHONPATH != *"$ENV_DIR"* ]]
 then
-    export PYTHONPATH="$ENV_DIR/python:$PYTHONPATH"
+    export PYTHONPATH="$ENV_DIR:$PYTHONPATH"
 fi
 cd $ENV_DIR
 
