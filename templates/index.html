@@ -1,15 +1,405 @@
 {% extends 'base.html' %}
 
-{% block ng_app %}indexApp{% endblock %}
-
-{% block title %}Title{% endblock %}
+{% block title %}Origin - The sharing economy without intermediaries{% endblock %}
 
 {% block content %}
-<div>Hello world</div>
+
+<main class="landing-page">
+  {% include 'navbar.html' %}
+  <section class="hero-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-md-6">
+            <h1>
+              The sharing economy of tomorrow
+            </h1>
+            <p>
+              Origin protocols power gig economy
+              <br>
+              marketplaces on the blockchain
+            </p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="img-graphic">
+            <img src="static/img/hero-devices.png" 
+              srcset="static/img/hero-devices@2x.png 2x, static/img/hero-devices@3x.png 3x" 
+              class="hero-devices">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="platform-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-pane background-panes top-panes">
+          <div class="row row-pane">
+            <div class="col-8 col-pane">
+              <div class="left-upper-pane">
+              </div>
+            </div>
+            <div class="col-4 col-pane">
+              <div class="right-upper-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="img-graphic">
+                <img src="static/img/platform-graphic.png"
+                  srcset="static/img/platform-graphic@2x.png 2x,
+                  static/img/platform-graphic@3x.png 3x"
+                  class="platform-graphic">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h2>
+                The Origin platform
+              </h2>
+              <p>
+                We empower developers and businesses to build service marketplaces by enabling P2P bookings, identity and reputation management, reviews, referrals, arbitration, and more.
+              </p>
+              <div class="btn-container">
+                <a href="#" target="_blank">
+                  <button class="btn btn-primary">
+                    Read Our Product Brief
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="partners-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-7">
+              <h2>
+                Partners building on Origin
+              </h2>
+              <h3>
+                We'll be announcing our partners soon!
+              </h3>
+              <div class="btn-container">
+                <a href="#" target="_blank">
+                  <button class="btn btn-outline-primary">
+                    Join Our Slack
+                  </button>
+                </a>
+                <a href="#" target="_blank">
+                  <button class="btn btn-outline-primary">
+                    Join Our Telegram
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="img-graphic">
+                <img src="static/img/partners-graphic.png"
+                  srcset="static/img/partners-graphic@2x.png 2x,
+                  static/img/partners-graphic@3x.png 3x"
+                  class="partners-graphic">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
+          <div class="row row-pane align-items-end">
+            <div class="col-3 col-pane">
+              <div class="left-lower-pane">
+              </div>
+            </div>
+            <div class="col-9 col-pane">
+              <div class="right-lower-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="use-cases-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <div class="img-graphic">
+            <img src="static/img/video.png"
+              srcset="static/img/video@2x.png 2x,
+                static/img/video@3x.png 3x"
+              class="video">
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <h2>
+            The Origin platform
+          </h2>
+          <p>
+            Buyers and sellers connect and transact directly in the trustless economy
+          </p>
+          <div class="btn-container">
+            <a href="#" target="_blank">
+              <button class="btn btn-outline-primary">
+                Watch the Video
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="middlemen-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h2>
+            It's time to cut out the rent-seeking middlemen
+          </h2>
+          <p>
+            Buyers and sellers share the 20-30% transaction fees that Uber, Airbnb, Fiverr, and Getaround charge.
+          </p>
+          <div class="btn-container">
+            <a href="#" target="_blank">
+              <button class="btn btn-primary">
+                Read The Whitepaper
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="img-graphic">
+            <img src="static/img/middlemen-graphic.png"
+              srcset="static/img/middlemen-graphic@2x.png 2x,
+                static/img/middlemen-graphic@3x.png 3x"
+              class="middlemen-graphic">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-pane background-panes top-panes">
+          <div class="row row-pane">          
+            <div class="col-8 col-pane">
+              <div class="left-upper-pane">
+              </div>
+            </div>
+            <div class="col-4 col-pane">
+              <div class="right-upper-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-7">
+              <div class="img-graphic">
+                <img src="static/img/features-graphic.png"
+                  srcset="static/img/features-graphic@2x.png 2x,
+                  static/img/features-graphic@3x.png 3x"
+                  class="features-graphic">
+              </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <h2>
+                Features
+              </h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="img-feature">
+                    <img src="static/img/feature-1.png"
+                    srcset="static/img/feature-1@2x.png 2x,
+                      static/img/feature-1@3x.png 3x"
+                    class="feature-1">
+                  </div>
+                  <p class="feature-description">
+                    Smart Contract enable secure and reliable escrows and payments
+                  </p>
+                </div>
+                <div class="col-6">
+                  <div class="img-feature">
+                    <img src="static/img/feature-2.png"
+                    srcset="static/img/feature-2@2x.png 2x,
+                      static/img/feature-2@3x.png 3x"
+                    class="feature-2">
+                  </div>
+                  <p class="feature-description">
+                    Protocol schemas support hundreds of listing types, including custom verticals
+                  </p>
+                </div>
+                <div class="col-6">
+                  <div class="img-feature">
+                    <img src="static/img/feature-3.png"
+                    srcset="static/img/feature-3@2x.png 2x,
+                      static/img/feature-3@3x.png 3x"
+                    class="feature-3">
+                  </div>
+                  <p class="feature-description">
+                    Open and shared data corpus encourages innovation by developers and businesses
+                  </p>
+                </div>
+                <div class="col-6">
+                  <div class="img-feature">
+                    <img src="static/img/feature-4.png"
+                    srcset="static/img/feature-4@2x.png 2x,
+                      static/img/feature-4@3x.png 3x"
+                    class="feature-4">
+                  </div>
+                  <p class="feature-description">
+                    Idenity verification and reputation data on the blockchain ensures safe, reputable partners
+                  </p>
+                </div>
+              </div>  
+              <div class="btn-container">
+                <a href="#" target="_blank">
+                  <button class="btn btn-outline-primary">
+                    Check out our demo DApp
+                  </button>
+                </a>
+              </div>                                      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="technology-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container foreground-content">
+          <div class="row">    
+            <div class="col-12 col-md-7">
+              <h2>
+                Tech Stack
+              </h2>
+              <div class="row">
+                <div class="col-6">
+                  <div class="img-technology">
+                    <img src="static/img/ethereum-logo.png"
+                      srcset="static/img/ethereum-logo@2x.png 2x,
+                        static/img/ethereum-logo@3x.png 3x"
+                      class="ethereum-logo">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="img-technology">
+                    <img src="static/img/ipfs-logo.png"
+                      srcset="static/img/ipfs-logo@2x.png 2x,
+                        static/img/ipfs-logo@3x.png 3x"
+                      class="ipfs-logo">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="img-technology">
+                    <img src="static/img/x-logo.png"
+                      srcset="static/img/x-logo@2x.png 2x,
+                        static/img/x-logo@3x.png 3x"
+                      class="x-logo">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="img-technology">
+                    <img src="static/img/react-logo.png"
+                      srcset="static/img/react-logo@2x.png 2x,
+                        static/img/react-logo@3x.png 3x"
+                      class="react-logo">
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="img-graphic">
+                <img src="static/img/tech-stack-graphic.png"
+                  srcset="static/img/tech-stack-graphic@2x.png 2x,
+                  static/img/tech-stack-graphic@3x.png 3x"
+                  class="tech-stack-graphic">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-pane background-panes bottom-panes offset-panes">        
+          <div class="row row-pane align-items-end">
+            <div class="col-3 col-pane">
+              <div class="left-lower-pane">
+              </div>
+            </div>
+            <div class="col-9 col-pane">
+              <div class="right-lower-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="roadmap-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12">
+              <h2>
+                Roadmap
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-pane background-panes bottom-panes offset-panes">            
+          <div class="row row-pane align-items-end">
+            <div class="col-10 col-pane">
+              <div class="left-lower-pane">
+              </div>
+            </div>
+            <div class="col-2 col-pane">
+              <div class="right-lower-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="email-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            Take part in building the sharing economy of tomorrow
+          </h2>
+          <p>
+            Buyers, sellers, developers, and other contributors earn Origin token to use and refer Origin
+          </p>
+          <div class="btn-container">
+            <a href="#" target="_blank">
+              <button class="btn btn-primary">
+                Join the Community
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--       <section class="press-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12">
+          Press goes here
+        </div>
+      </div>
+    </div>
+  </section> -->
+  {% include 'footer.html' %}
+</main>
+
 {% endblock %}
 
 {% block extra_scripts %}
-<script>
-  angular.module('indexApp', []);
-</script>
 {% endblock %}
