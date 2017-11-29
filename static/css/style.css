@@ -138,7 +138,6 @@ a:hover {
 .hero-section {
   background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
   background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
-  /*background-color: #455d75;*/
   background-size: 80px 80px;
   margin-top: -160px;
 }
@@ -162,13 +161,25 @@ a:hover {
   top:-1px; /* hack to get rid of mysterious line */
   background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
   background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
-  /*background-color: #455d75;*/
   background-size: 80px 80px;
 }
 
 .partners-section .left-lower-pane,
 .partners-section .right-lower-pane {
   background-color: #f7f9fb;
+}
+
+.partners-section .btn-container {
+  display: inline-block;
+}
+
+.slack-btn-container {
+  margin-bottom: 10px !important;
+  margin-right: 10px;
+}
+
+.telegram-btn-container {
+  margin-top: 10px !important;
 }
 
 .slack-btn {
@@ -249,7 +260,6 @@ a:hover {
 .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
   border-style: solid;
   border-width: 0px 0px 0px 1px;
-  /*border-width: 1px 0px 0px 1px;*/
   border-image-slice: 1;
   padding:10px 10px 40px 10px;
 }
@@ -295,48 +305,6 @@ a:hover {
   border-image-source: linear-gradient(to top, #f7f9fb, #1a82ff);
 }
 
-/* horizontal */
-@media (min-width: 768px) {
-
-  .roadmap > div {
-    margin-left: 0px;
-    max-height: 80px;
-    margin-bottom: 100px;
-    text-align: center;
-  }
-
-  .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
-    border-width: 1px 1px 0px 0px;
-    padding:40px 10px 10px 10px;
-  }
-  .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
-    top:-55px;
-    left:-25px;
-  }
-
-
-  .roadmap .grey-to-green {
-    border-image-source: linear-gradient(to left, #26d198, #f7f9fb);
-
-  }
-
-  .roadmap .green-to-blue {
-    border-image-source: linear-gradient(to left, #1a82ff, #26d198);
-  }
-
-  .roadmap .blue-to-purple {
-    border-image-source: linear-gradient(to left, #6e3bea, #1a82ff);
-  }
-
-  .roadmap .purple-to-green {
-    border-image-source: linear-gradient(to left, #26d198, #6e3bea);
-  }
-
-  .roadmap .blue-to-grey {
-    border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
-  }
-}
-
 .roadmap-section .roadmap .when {
   color:#455d75;
   margin-bottom: 10px;
@@ -363,7 +331,8 @@ a:hover {
 }
 
 .email-section .foreground-content {
-  padding: 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .email-section .form-group {
@@ -597,7 +566,11 @@ footer .footer-link a {
     margin-top: 100px;
   }
   .roadmap-section h2 {
-    margin-top: 60px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+  .roadmap {
+    margin-bottom: 60px;
   }
   .email-section h2 {
     margin-top: 60px;
@@ -611,5 +584,34 @@ footer .footer-link a {
   footer .company-mission {
     max-width: 360px;
     margin-left: 0px;
+  }
+  .roadmap > div {
+    margin-left: 0px;
+    max-height: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+    border-width: 1px 1px 0px 0px;
+    padding:40px 10px 10px 10px;
+  }
+  .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+    top:-55px;
+    left:-25px;
+  }
+  .roadmap .grey-to-green {
+    border-image-source: linear-gradient(to left, #26d198, #f7f9fb);
+  }
+  .roadmap .green-to-blue {
+    border-image-source: linear-gradient(to left, #1a82ff, #26d198);
+  }
+  .roadmap .blue-to-purple {
+    border-image-source: linear-gradient(to left, #6e3bea, #1a82ff);
+  }
+  .roadmap .purple-to-green {
+    border-image-source: linear-gradient(to left, #26d198, #6e3bea);
+  }
+  .roadmap .blue-to-grey {
+    border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
   }
 }
