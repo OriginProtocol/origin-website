@@ -1,22 +1,24 @@
 import os
+import dotenv
 
-DEBUG = False
+dotenv.load() or dotenv.load('.env')
 
-HOST = None
-HTTPS = True
+DEV_EMAIL = dotenv.get('DEV_EMAIL', default=None)
 
-PROJECTPATH = os.environ.get('PROJECTPATH')
+DEBUG = dotenv.get('DEBUG', default=False)
 
-FLASK_SECRET_KEY = None
+HOST = dotenv.get('HOST', default='www.priceslash.co')
+HTTPS = dotenv.get('HTTPS', default=True)
+
+PROJECTPATH = dotenv.get('PROJECTPATH')
+
+FLASK_SECRET_KEY = dotenv.get('FLASK_SECRET_KEY')
 
 APP_LOG_FILENAME = os.path.join(PROJECTPATH, 'app.log')
 
-SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/<my-project>'
+SQLALCHEMY_DATABASE_URI = dotenv.get('DATABASE_URL')
+
+SENDGRID_API_KEY = dotenv.get('SENDGRID_API_KEY')
 
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
-
-try:
-    from constants_override import *
-except ImportError:
-    pass

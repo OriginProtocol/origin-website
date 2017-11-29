@@ -1,0 +1,624 @@
+/*.hero-section .foreground-content {
+  border: 1px solid blue;
+}
+
+.platform-section .foreground-content {
+  border: 1px solid black;
+}
+
+.partners-section .foreground-content {
+  border: 1px solid orange;
+}
+
+.use-cases-section .foreground-content {
+  border: 1px solid purple;
+}
+
+.middlemen-section .foreground-content {
+  border: 1px solid green;
+}
+
+.features-section .foreground-content {
+  border: 1px solid brown;
+}
+
+section {
+  border: 1px solid red;
+}*/
+
+html {
+  height: 100%;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  font-size: 1.0rem;
+  font-weight: 300;
+  font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+/*.landing-page .container,
+.navbar-light .container {
+  max-width: 940px;
+}*/
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin: 40px auto;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin: 20px auto;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin: 20px auto;
+}
+
+.navbar-light {
+  padding-top: 60px;
+  background-color: #455d75;
+}
+
+.navbar-light .nav-item {
+  font-size: 0.875rem;
+  padding: 20px 30px;
+}
+
+.navbar-light .nav-item a {
+  color: #ffffff !important;
+}
+
+.row-pane {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.container-panes {
+  position: relative;
+}
+
+.col-pane {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.background-panes {
+  position: absolute;
+  min-height: 100%;
+}
+
+.offset-panes {
+  position: relative;
+  margin-top: -42.264973082%;
+}
+
+.foreground-content {
+  position: relative;
+  z-index: 100;
+}
+
+.left-upper-pane {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 0 0);
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+  padding-top: 57.735026918%;    
+}
+
+.right-upper-pane {
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  padding-top: 57.735026918%;    
+}
+
+.left-lower-pane {
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  padding-top: 57.735026918%;
+}
+
+.right-lower-pane {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  padding-top: 57.735026918%;
+}
+
+.btn-container {
+  margin: 40px auto;
+}
+
+.btn {
+  border-radius: 24px;
+  font-size: 1.125rem;
+}
+
+.img-graphic {
+  margin: 0px auto;
+  text-align: center;
+  max-width: 320px;
+}
+
+.img-graphic img {
+  max-width: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+.hero-section {
+  background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
+  background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
+  background-size: 80px 80px;
+  margin-top: -160px;
+}
+
+.hero-section .foreground-content {
+  top: 160px;
+}
+
+.hero-section h1 {
+  font-weight: 200;
+  color: #ffffff;
+}
+
+.hero-section p {
+  color: #ffffff;
+}
+
+.platform-section .left-upper-pane,
+.platform-section .right-upper-pane {
+  background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
+  background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
+  background-size: 80px 80px;
+}
+
+.partners-section .left-lower-pane,
+.partners-section .right-lower-pane {
+  background-color: #f7f9fb;
+}
+
+.use-cases-section {
+  background-color: #f7f9fb;
+}
+
+.middlemen-section {
+  background-color: #f7f9fb;
+}
+
+.img-feature {
+  width: 48px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.feature-description {
+  font-size: 0.875rem;
+}
+
+.features-section .left-upper-pane,
+.features-section .right-upper-pane {
+  background-color: #f7f9fb;
+}
+
+.technology-section .left-lower-pane,
+.technology-section .right-lower-pane {
+  background-color: #f7f9fb;
+}
+
+.img-technology {
+  max-width: 100px;
+  margin: 40px auto;
+}
+
+.img-technology img {
+  width: 80%;
+}
+
+.ethereum-logo,
+.react-logo {
+  width: 100% !important;
+}
+
+.roadmap-section {
+  background-color: #f7f9fb;
+}
+
+.roadmap-section .right-lower-pane {
+  background-color: #ffffff;
+}
+
+.press-section {
+  background-color: #f7f9fb;
+}
+
+.dark-footer {
+  background-color: #2e3f53;
+  padding: 60px 0px;
+  min-height: 522px;
+}
+
+footer .logo-container {
+  margin: 40px auto;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+footer .footer-header {
+  margin: 40px auto 15px auto;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+footer .footer-links {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+footer .footer-link {
+  margin: 15px auto;
+  font-size: 0.875rem;
+}
+
+footer .footer-link a {
+  color: #ffffff;
+}
+
+@media (max-width: 575px) {
+  .navbar,
+  footer .container,
+  .foreground-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btn-container {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .hero-devices {
+    top: 30px;
+  }
+  .platform-section h2 {
+    margin-top: 240px;
+  }
+  .platform-graphic {
+    display: none;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section .video {
+    margin-top: 60px;
+  }
+  .middlemen-section h2 {
+    margin-top: 40px;
+  }
+  .middlemen-graphic {
+    display: none;
+  }
+  .features-graphic {
+    display: none;
+  }
+  .features-section h2 {
+    margin-top: 160px;
+  }
+  .technology-section h2 {
+    margin-top: 40px;
+  }
+  .tech-stack-graphic {
+    display: none;
+  }
+  .roadmap-section h2 {
+    margin-top: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar,
+  footer .container,
+  .foreground-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .btn-container {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .hero-devices {
+    top: 50px;
+    left: 100px;
+  }
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .platform-graphic {
+    display: none;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section .video {
+    margin-top: 60px;
+  }
+  .middlemen-section h2 {
+    margin-top: 40px;
+  }
+  .middlemen-graphic {
+    display: none;
+  }
+  .features-graphic {
+    display: none;
+  }
+  .features-section h2 {
+    margin-top: 60px;
+  }
+  .technology-section h2 {
+    margin-top: 40px;
+  }
+  .tech-stack-graphic {
+    display: none;
+  }
+  .roadmap-section h2 {
+    margin-top: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar,
+  footer .container,
+  .foreground-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btn-container {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .hero-devices {
+    top: 10px;
+    left: -30px;
+  }
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .platform-graphic {
+    display: inline-block;
+    width: 260px;
+    margin-top: 140px;
+  }
+  .partners-graphic {
+    margin-bottom: 180px;
+  }
+  .partners-section .foreground-content {
+    padding-top: 100px;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section .video {
+    top: -120px;
+    left: 40px;
+  }
+  .use-cases-section h2,
+  .use-cases-section p,
+  .use-cases-section .btn-container {
+    position: relative;
+    top: -120px;
+    left: 80px;
+  }
+  .middlemen-section {
+    margin-top: -180px;
+  }
+  .middlemen-section h2,
+  .middlemen-section p,
+  .middlemen-section .btn-container {
+    position: relative;
+    top: 120px;
+  }
+  .middlemen-graphic {
+    display: inline-block;
+    top: 160px;
+    left: -40px;
+  }
+  .features-graphic {
+    display: inline-block;
+    margin-top: 200px;
+  }
+  .features-section h2 {
+    margin-top: 200px;
+  }
+  .technology-section h2 {
+    margin-top: 100px;
+  }
+  .tech-stack-graphic {
+    display: inline-block;
+    margin-top: 100px;
+  }
+  .roadmap-section h2 {
+    margin-top: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar,
+  footer .container,
+  .foreground-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btn-container {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .hero-devices {
+    top: 10px;
+    left: -30px;
+  }
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .platform-graphic {
+    display: inline-block;
+    width: 260px;
+    margin-top: 140px;
+  }
+  .partners-graphic {
+    margin-bottom: 180px;
+  }
+  .partners-section .foreground-content {
+    padding-top: 100px;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section .video {
+    top: -120px;
+    left: 40px;
+  }
+  .use-cases-section h2,
+  .use-cases-section p,
+  .use-cases-section .btn-container {
+    position: relative;
+    top: -120px;
+    left: 80px;
+  }
+  .middlemen-section {
+    margin-top: -180px;
+  }
+  .middlemen-section h2,
+  .middlemen-section p,
+  .middlemen-section .btn-container {
+    position: relative;
+    top: 120px;
+  }
+  .middlemen-graphic {
+    display: inline-block;
+    top: 160px;
+    left: -40px;
+  }
+  .features-graphic {
+    display: inline-block;
+    margin-top: 200px;
+  }
+  .features-section h2 {
+    margin-top: 200px;
+  }
+  .technology-section h2 {
+    margin-top: 100px;
+  }
+  .tech-stack-graphic {
+    display: inline-block;
+    margin-top: 100px;
+  }
+  .roadmap-section h2 {
+    margin-top: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar,
+  footer .container,
+  .foreground-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btn-container {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .hero-devices {
+    top: 10px;
+    left: -30px;
+  }
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .platform-graphic {
+    display: inline-block;
+    width: 260px;
+    margin-top: 140px;
+  }
+  .partners-graphic {
+    margin-bottom: 180px;
+  }
+  .partners-section .foreground-content {
+    padding-top: 100px;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section .video {
+    top: -120px;
+    left: 40px;
+  }
+  .use-cases-section h2,
+  .use-cases-section p,
+  .use-cases-section .btn-container {
+    position: relative;
+    top: -120px;
+    left: 80px;
+  }
+  .middlemen-section {
+    margin-top: -180px;
+  }
+  .middlemen-section h2,
+  .middlemen-section p,
+  .middlemen-section .btn-container {
+    position: relative;
+    top: 120px;
+  }
+  .middlemen-graphic {
+    display: inline-block;
+    top: 160px;
+    left: -40px;
+  }
+  .features-graphic {
+    display: inline-block;
+    margin-top: 200px;
+  }
+  .features-section h2 {
+    margin-top: 200px;
+  }
+  .technology-section h2 {
+    margin-top: 100px;
+  }
+  .tech-stack-graphic {
+    display: inline-block;
+    margin-top: 100px;
+  }
+  .roadmap-section h2 {
+    margin-top: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
