@@ -7,6 +7,10 @@ from app import app
 def index():
     return render_template('index.html')
 
+@app.route('/team')
+def team():
+    return render_template('team.html')
+
 @app.route('/whitepaper')
 def whitepaper():
     return redirect("/static/docs/whitepaper_v2.pdf", code=302)
