@@ -233,11 +233,17 @@ a:hover {
   font-size: 14px;
 }
 
+.roadmap > div {
+  margin-left: 20px;
+  text-align: center;
+}
+
 .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
   border-style: solid;
   border-width: 0px 0px 0px 1px;
+  /*border-width: 1px 0px 0px 1px;*/
   border-image-slice: 1;
-  padding:40px 10px 10px 10px;
+  padding:10px 10px 40px 10px;
 }
 
 .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
@@ -245,7 +251,7 @@ a:hover {
   height: 29px;
   border-radius: 14.5px;
   position: relative;
-  top:-55px;
+  top:-25px;
   left:-25px;
   background-color: #f7f9fb;
 }
@@ -283,11 +289,27 @@ a:hover {
 
 /* horizontal */
 @media (min-width: 768px) {
+
+  .roadmap > div {
+    margin-left: 0px;
+    max-height: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
   .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
     border-width: 1px 1px 0px 0px;
+    padding:40px 10px 10px 10px;
   }
+  .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+    top:-55px;
+    left:-25px;
+  }
+
+
   .roadmap .grey-to-green {
     border-image-source: linear-gradient(to left, #26d198, #f7f9fb);
+
   }
 
   .roadmap .green-to-blue {
