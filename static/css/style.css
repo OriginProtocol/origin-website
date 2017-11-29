@@ -171,20 +171,24 @@ a:hover {
   background-color: #f7f9fb;
 }
 
-.slack-logo {
-  display: inline-block;
-  position: relative;
-  top: -1px;
-  height: 16px;
-  background: url('../img/slack-logo.svg');
+.slack-btn {
+  padding-left:42px;
+  background-image: url('/static/img/slack-logo.svg');
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+}
+.slack-btn:hover {
+  background-image: url('/static/img/slack-logo-white.svg');
 }
 
-.telegram-logo {
-  display: inline-block;
-  position: relative;
-  top: -1px;
-  height: 16px;
-  background: url('../img/telegram-logo.svg');
+.telegram-btn {
+  padding-left:45px;
+  background-image: url('/static/img/telegram-logo.svg');
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+}
+.telegram-btn:hover {
+  background-image: url('/static/img/telegram-logo-white.svg');
 }
 
 .use-cases-section {
