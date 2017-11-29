@@ -229,6 +229,89 @@ a:hover {
   background-color: #f7f9fb;
 }
 
+.roadmap-section .roadmap {
+  font-size: 14px;
+}
+
+.roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+  border-style: solid;
+  border-width: 0px 0px 0px 1px;
+  border-image-slice: 1;
+  padding:40px 10px 10px 10px;
+}
+
+.roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+  width: 29px;
+  height: 29px;
+  border-radius: 14.5px;
+  position: relative;
+  top:-55px;
+  left:-25px;
+  background-color: #f7f9fb;
+}
+
+.roadmap .green-circle {
+  border: solid 1px #26d198;
+}
+.roadmap .blue-circle {
+  border: solid 1px #1a82ff;
+}
+.roadmap .purple-circle {
+  border: solid 1px #6e3bea;
+}
+
+/* vertical */
+.roadmap .grey-to-green {
+  border-image-source: linear-gradient(to top, #26d198, #f7f9fb);
+}
+
+.roadmap .green-to-blue {
+  border-image-source: linear-gradient(to top, #1a82ff, #26d198);
+}
+
+.roadmap .blue-to-purple {
+  border-image-source: linear-gradient(to top, #6e3bea, #1a82ff);
+}
+
+.roadmap .purple-to-green {
+  border-image-source: linear-gradient(to top, #26d198, #6e3bea);
+}
+
+.roadmap .blue-to-grey {
+  border-image-source: linear-gradient(to top, #f7f9fb, #1a82ff);
+}
+
+/* horizontal */
+@media (min-width: 768px) {
+  .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+    border-width: 1px 1px 0px 0px;
+  }
+  .roadmap .grey-to-green {
+    border-image-source: linear-gradient(to left, #26d198, #f7f9fb);
+  }
+
+  .roadmap .green-to-blue {
+    border-image-source: linear-gradient(to left, #1a82ff, #26d198);
+  }
+
+  .roadmap .blue-to-purple {
+    border-image-source: linear-gradient(to left, #6e3bea, #1a82ff);
+  }
+
+  .roadmap .purple-to-green {
+    border-image-source: linear-gradient(to left, #26d198, #6e3bea);
+  }
+
+  .roadmap .blue-to-grey {
+    border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
+  }
+}
+
+.roadmap-section .roadmap .when {
+  color:#455d75;
+  margin-bottom: 10px;
+}
+
 .roadmap-section .right-lower-pane {
   background-color: #ffffff;
 }
