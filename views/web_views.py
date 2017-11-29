@@ -13,8 +13,8 @@ def team():
 
 @app.route('/whitepaper')
 def whitepaper():
-    return redirect("/static/docs/whitepaper_v2.pdf", code=302)
+    return redirect('/static/docs/whitepaper_v2.pdf', code=302)
 
 @app.route('/product-brief')
 def product_brief():
-    return redirect("/static/docs/product_brief_v15.pdf", code=302)
+    return redirect('/static/docs/product_brief_v15.pdf', code=302)
