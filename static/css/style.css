@@ -164,6 +164,11 @@ a:hover {
   background-size: 80px 80px;
 }
 
+.features-section {
+  position: relative;
+  top:-1px; /* hack to get rid of mysterious line */
+}
+
 .partners-section .left-lower-pane,
 .partners-section .right-lower-pane {
   background-color: #f7f9fb;
@@ -348,6 +353,11 @@ a:hover {
 
 .press-section {
   background-color: #f7f9fb;
+  padding-top:40px;
+  padding-bottom: 40px;
+}
+.press-section h2 {
+  margin-bottom: 40px;
 }
 
 .dark-footer {
@@ -384,6 +394,25 @@ footer .footer-link {
 
 footer .footer-link a {
   color: #ffffff;
+}
+
+.headshot-wrapper {
+  text-align: center;
+  margin: 0px auto 40px auto;
+}
+
+.headshot-wrapper div {
+  height: 140px;
+  width: 140px;
+  margin: 20px auto 20px auto;
+}
+
+.headshot-wrapper img {
+  box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  /*border: 2px solid #efefef;*/
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 575px) {
@@ -615,3 +644,4 @@ footer .footer-link a {
     border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
   }
 }
+
