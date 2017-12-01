@@ -1,7 +1,16 @@
-from flask import render_template
-from flask import redirect
-
 from app import app
+from config import constants
+from flask import redirect
+from flask import render_template
+from flask import request
+
+# force https on prod
+@app.before_request
+def beforeRequest():
+    if constants.HTTPS:
+        print 'yes'
+        if not request.url.startswith('https'):
+            return redirect(request.url.replace('http', 'https', 1))
 
 @app.route('/')
 def index():
