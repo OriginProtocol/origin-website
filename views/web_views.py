@@ -55,6 +55,8 @@ def signup():
     from_email = sgw.Email(constants.FROM_EMAIL, constants.FROM_EMAIL_NAME)
     html_body = constants.WELCOME_HTML_BODY
     text_body = html_body.replace("<br>","")
-    sgw.send_message(from_email, [to_email], constants.WELCOME_SUBJECT, text_body, html_body)
+    bcc = [sgw.Email('founders@originprotocol.com', 'Founders')]
+
+    sgw.send_message(from_email, [to_email], constants.WELCOME_SUBJECT, text_body, html_body, bccs=bcc)
 
     return jsonify('Thanks for signing up!')
