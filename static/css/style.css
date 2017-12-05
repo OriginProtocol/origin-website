@@ -12,6 +12,8 @@ body {
   font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
+/* Common */
+
 h1 {
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
@@ -41,18 +43,30 @@ a:hover {
   text-decoration: none;
 }
 
-.navbar-light {
+.navbar-origin {
   padding-top: 60px;
-  background-color: #455d75;
 }
 
-.navbar-light .nav-item {
+.navbar-origin .nav-item {
   font-size: 0.875rem;
   padding: 20px 30px;
+  font-weight: 400;
+}
+
+.navbar-dark {
+  background-color: #455d75;  
+}
+
+.navbar-dark .nav-item a {
+  color: #ffffff !important;
+}
+
+.navbar-light {
+  background-color: #f7f9fb;
 }
 
 .navbar-light .nav-item a {
-  color: #ffffff !important;
+  color: #6f8294;
 }
 
 .row-pane {
@@ -135,6 +149,44 @@ a:hover {
   position: relative;
 }
 
+.dark-footer {
+  background-color: #2e3f53;
+  padding: 80px 0px;
+  min-height: 522px;
+}
+
+footer .logo-container {
+  margin: 40px auto;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+
+footer .footer-header {
+  margin: 40px auto 15px auto;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+footer .footer-links {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+footer .footer-link {
+  margin: 15px auto;
+  font-size: 0.875rem;
+}
+
+footer .footer-link a {
+  color: #ffffff;
+}
+
+/* Index */
+
 .hero-section {
   background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
   background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
@@ -158,7 +210,7 @@ a:hover {
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
-  top:-1px; /* hack to get rid of mysterious line */
+  top: -1px; /* hack to get rid of mysterious line */
   background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
   background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;
   background-size: 80px 80px;
@@ -166,7 +218,7 @@ a:hover {
 
 .features-section {
   position: relative;
-  top:-1px; /* hack to get rid of mysterious line */
+  top: -1px; /* hack to get rid of mysterious line */
 }
 
 .partners-section .left-lower-pane,
@@ -353,66 +405,124 @@ a:hover {
 
 .press-section {
   background-color: #f7f9fb;
-  padding-top:40px;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 .press-section h2 {
   margin-bottom: 40px;
 }
 
-.dark-footer {
-  background-color: #2e3f53;
-  padding: 80px 0px;
-  min-height: 522px;
-}
+/* Team page */
 
-footer .logo-container {
-  margin: 40px auto;
-}
-
-footer p {
-  color: #ffffff;
-  font-size: 0.75rem;
-}
-
-footer .footer-header {
-  margin: 40px auto 15px auto;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 0.875rem;
-}
-
-footer .footer-links {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
-footer .footer-link {
-  margin: 15px auto;
-  font-size: 0.875rem;
-}
-
-footer .footer-link a {
-  color: #ffffff;
+.team-member {
+  margin: 20px;
 }
 
 .headshot-wrapper {
   text-align: center;
-  margin: 0px auto 40px auto;
-}
-
-.headshot-wrapper div {
-  height: 140px;
-  width: 140px;
-  margin: 20px auto 20px auto;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
 }
 
 .headshot-wrapper img {
-  box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 100px;
-  /*border: 2px solid #efefef;*/
   height: 100%;
   width: 100%;
+}
+
+.name {
+  margin: 20px auto 0px auto;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.title {
+  margin: 0px auto 10px auto;
+  text-align: center;
+  font-weight: 500;
+}
+
+.bio {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.team-header-section {
+  background-color: #f7f9fb;   
+}
+
+.team-header-section {
+  padding-bottom: 40px;
+}
+
+.team-header-section h1 {
+  font-weight: 200;
+}
+
+.core-team-section h2 {
+  margin: 80px auto 40px auto;
+}
+
+.core-team-section .left-upper-pane,
+.core-team-section .right-upper-pane {
+  position: relative;
+  top: -1px;
+  background-color: #f7f9fb;
+}
+
+.contributing-team-section .foreground-content {
+  margin-bottom: 140px;
+}
+
+.contributing-team-section h2 {
+  margin: 80px auto 40px auto;
+}
+
+.contributing-team-section .left-lower-pane,
+.contributing-team-section .right-lower-pane {
+  background-color: #f7f9fb;
+}
+
+.filler-section {
+  background-color: #f7f9fb;
+  height: 100px;
+}
+
+.investors-section .left-upper-pane,
+.investors-section .right-upper-pane {
+  position: relative;
+  top: -1px;
+  background-color: #f7f9fb;
+}
+
+.investors-section .foreground-content {
+  margin-bottom: 120px;
+}
+
+.investors-section h2 {
+  margin: 140px auto 40px auto;
+}
+
+.investor {
+  margin: 30px;
+}
+
+.logo-wrapper {
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.logo-wrapper img {
+  height: 100%;
+}
+
+.supported-by {
+  text-align: center;
 }
 
 @media (max-width: 575px) {
@@ -643,5 +753,33 @@ footer .footer-link a {
   .roadmap .blue-to-grey {
     border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
   }
+  .core-team-section h2 {
+    margin-top: 120px;
+  }
+  .contributing-team-section .foreground-content {
+    margin-bottom: 300px;
+  }
+  .filler-section {
+    height: 0px;
+  }
+  .investors-section h2 {
+    margin-top: 180px;
+  }
+  .consensys {
+    position: relative;
+    top: -42px;
+  }
 }
 
+@media (min-width: 992px) {
+  .headshot-wrapper {
+    height: 160px;
+    width: 160px;
+  }
+  .core-team-section h2 {
+    margin-top: 200px;
+  }
+  .contributing-team-section .foreground-content {
+    margin-bottom: 360px;
+  }
+}
