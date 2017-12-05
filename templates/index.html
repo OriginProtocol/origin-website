@@ -416,13 +416,16 @@
             Buyers, sellers, developers, and other contributors earn Origin token to use and refer Origin
           </p>
           <div class="form-group">
-            <form method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSd-OXoP98yBm36hjB71QZgo7xqYd6csm2XbMF9nY3A0PGWCLA/formResponse">
-            <input type="email" name="emailAddress" class="form-control email-signup-input" placeholder="Enter email" />
+            <form method="post" action="/signup">
+            <input id="email" type="email" name="emailAddress" class="form-control email-signup-input" placeholder="Enter email" />
           </div>
           <div class="btn-container">
-            <input type="submit" class="btn btn-primary" value="Join the Community">
+            <input id="submit" type="submit" class="btn btn-primary" value="Join the Community">
             </form>
+            <br>
           </div>
+          <div id='signup-result'></div>
+          <br>
         </div>
       </div>
     </div>
