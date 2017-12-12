@@ -1,5 +1,5 @@
 $( "form" ).submit(function( event ) {
-  $.post( "/signup?email="+$( "#email" ).val(), function( data ) {
+  $.post( "/signup?email="+encodeURIComponent($( "#email" ).val()), function( data ) {
     $( "#signup-result" ).html( data );
   },"json");
   event.preventDefault();
