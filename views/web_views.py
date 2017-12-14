@@ -1,13 +1,10 @@
-import re
-
-from app import app
-from config import constants
-from database import db, db_models, db_common
 from flask import redirect
 from flask import render_template
 from flask import request
-from flask import jsonify
-from util import sendgrid_wrapper as sgw
+
+from app import app
+from config import constants
+from logic.emails import send_emails
 
 # force https on prod
 @app.before_request
@@ -35,26 +32,6 @@ def product_brief():
 
 @app.route('/signup', methods=['POST','GET'])
 def signup():
-
     email = request.args.get("email")
-
-    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-        return jsonify("Please enter a valid email address")
-
-    try:
-        me = db_models.EmailList()
-        me.email = email
-        me.unsubscribed = False
-        db.session.add(me)
-        db.session.commit()
-    except:
-        return jsonify('You are already signed up!')
-
-    # send welcome email
-    to_email = sgw.Email(email, email)
-    from_email = sgw.Email(constants.FROM_EMAIL, constants.FROM_EMAIL_NAME)
-    bcc = [sgw.Email('founders@originprotocol.com', 'Founders')]
-
-    sgw.send_message(from_email, [to_email], constants.WELCOME_SUBJECT, constants.WELCOME_TEXT_BODY, constants.WELCOME_HTML_BODY, bccs=bcc)
-
-    return jsonify('Thanks for signing up!')
+    send_result = send_emails.send_welcome(email)
+    return send_result

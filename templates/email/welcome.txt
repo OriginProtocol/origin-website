@@ -1,0 +1,26 @@
+{% extends 'email/email_base.txt' %}
+
+{% block content %}
+
+Welcome to the {{ universal.BUSINESS_NAME }} email list! 
+
+We’ll keep you updated on our latest news from now on.
+
+But why just read when you can contribute? Please join our community on your favorite platforms and help shape the future of the decentralized sharing economy.
+
+* Slack ({{ universal.SLACK_URL }})
+* Telegram ({{ universal.TELEGRAM_URL }})
+* Twitter ({{ universal.TWITTER_URL }})
+* Facebook ({{ universal.FACEBOOK_URL }})
+
+Are you a developer? We’re actively developing our demo DApp and protocol specification on Github ({{ universal.GITHUB_URL }}) and welcome good pull requests.
+
+To learn more about our project, our product brief ({{ universal.PRODUCT_BRIEF_URL }}) and whitepaper ({{ universal.WHITEPAPER_URL }}) are a great place to start.
+
+Looking forward to getting to know you over the coming weeks and months!
+
+Thanks,
+The {{ universal.BUSINESS_NAME }} team
+
+{% endblock %}
+
