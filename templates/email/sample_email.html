@@ -1,0 +1,39 @@
+{% extends 'email/email_base.html' %}
+
+{% block content %}
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td style="padding: 40px; font-family: 'Lato', sans-serif; font-size: 15px; line-height: 20px; color: #444444;">
+      {{ user.first_name }},
+      <br><br>
+      Thanks for uploading your bill to {{ universal.BUSINESS_NAME }}. We're super excited to help you fight back against the big guys and reduce the amount you are paying.
+      <br><br>
+      We've already assigned one of our trained negotiators to your case! Before we can call your service provider though, we need to know a couple more details about your bill, like the phone number and any pin/passcodes associated with the account.
+      <br><br><br>
+      <!-- Button : Begin -->
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+        <tr>
+          <td style="border-radius: 3px; background: #2986E3; text-align: center;" class="button-td">
+            <a href="{{ universal.BASE_URL }}/bill-additional-info/{{ encrypted_bill_id }}" style="background: #2986E3; border: 15px solid #2986E3; font-family: 'Lato', sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+              <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;Add Bill Info&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </a>
+          </td>
+        </tr>
+      </table>
+      <!-- Button : END -->
+      <br><br>
+      This information is only used to confirm your account details with your service provider. We take your privacy and security extremely seriously.
+      <br><br>
+      If you'd like to chat about our bill negotiation process, you can reach a real human being on our website or by calling us at {{ universal.PHONE_NUMBER }}. Our entire team loves hearing from customers.
+      <br><br>
+      Thanks again,
+      <br>
+      The {{ universal.BUSINESS_NAME }} team
+      <br><br>
+    </td>
+  </tr>
+</table>
+  
+{% endblock %}
+
