@@ -22,7 +22,8 @@ def notify_admins(message, subject=None):
         subject = 'DEV: ' + str(subject) if subject else str(message)
     else:
         recipients = [Email('stan@originprotocol.com', 'Stan James'), 
-            Email('matt@originprotocol.com', 'Matthew Liu')]
+            Email('matt@originprotocol.com', 'Matthew Liu'),
+            Email('josh@originprotocol.com', 'Josh Fraser')]
         subject = str(subject) if subject else str(message)
     send_message(
         sender=Email('bot@originprotocol.com', 'Emily the bot'),
