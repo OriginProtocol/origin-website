@@ -9,8 +9,6 @@ def send_email_msg(from_email, to_email, msg_subject, msg_category,
     try:
         categories = [msg_category]
 
-        print constants.HOST
-
         if 'localhost' in constants.HOST or 'pagekite' in constants.HOST:
             sgw.send_message(
                 sender=from_email,
@@ -30,5 +28,7 @@ def send_email_msg(from_email, to_email, msg_subject, msg_category,
                 categories=categories)
 
     except Exception as e:
+        print to_email
+        print str(e)
         sgw.notify_admins("Unable to send email message to " + to_email + " because \n\n" + str(e))
 
