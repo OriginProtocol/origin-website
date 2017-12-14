@@ -10,7 +10,6 @@ from logic.emails import send_emails
 @app.before_request
 def beforeRequest():
     if constants.HTTPS:
-        print 'yes'
         if not request.url.startswith('https'):
             return redirect(request.url.replace('http', 'https', 1))
 

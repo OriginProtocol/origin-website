@@ -20,7 +20,7 @@ def send_email_msg(from_email, to_email, msg_subject, msg_category,
         else:
             sgw.send_message(
                 sender=from_email,
-                recipients=to_email,
+                recipients=[to_email],
                 subject=msg_subject,
                 body_text=msg_text,
                 body_html=msg_html,
