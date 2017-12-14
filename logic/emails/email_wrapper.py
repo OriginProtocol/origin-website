@@ -20,7 +20,7 @@ def send_email_msg(from_email, to_email, msg_subject, msg_category,
         else:
             sgw.send_message(
                 sender=from_email,
-                recipients=[sgw.Email(to_email, to_email)],
+                recipients=to_email,
                 subject=msg_subject,
                 body_text=msg_text,
                 body_html=msg_html,
@@ -28,7 +28,5 @@ def send_email_msg(from_email, to_email, msg_subject, msg_category,
                 categories=categories)
 
     except Exception as e:
-        print to_email
-        print str(e)
-        sgw.notify_admins("Unable to send email message to " + to_email + " because \n\n" + str(e))
+        sgw.notify_admins("Unable to send email message to " + to_email.email + " because \n\n" + str(e))
 
