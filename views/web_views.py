@@ -1,6 +1,4 @@
-from flask import redirect
-from flask import render_template
-from flask import request
+from flask import jsonify, redirect, render_template, request, flash
 
 from app import app
 from config import constants
@@ -15,10 +13,12 @@ def beforeRequest():
 
 @app.route('/')
 def index():
+    flash('telegram')
     return render_template('index.html')
 
 @app.route('/team')
 def team():
+    flash('slack')
     return render_template('team.html')
 
 @app.route('/whitepaper')
@@ -32,5 +32,16 @@ def product_brief():
 @app.route('/signup', methods=['POST','GET'])
 def signup():
     email = request.args.get("email")
-    send_result = send_emails.send_welcome(email)
-    return send_result
+    feedback = send_emails.send_welcome(email)
+    return jsonify(feedback)
+
+@app.route('/unsubscribe', methods=['GET'])
+def unsubscribe():
+    email = request.args.get("email")
+    feedback = send_emails.unsubscribe(email)
+    flash(feedback)
+    return redirect('/', code=302)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404

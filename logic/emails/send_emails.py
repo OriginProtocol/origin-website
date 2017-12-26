@@ -1,6 +1,6 @@
 import re
 
-from flask import jsonify
+from flask import jsonify, flash, redirect
 
 from config import universal
 from database import db, db_common, db_models
@@ -11,7 +11,7 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 
 def send_welcome(email):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-        return jsonify("Please enter a valid email address")
+        return 'Please enter a valid email address'
 
     try:
         me = db_models.EmailList()
@@ -20,9 +20,23 @@ def send_welcome(email):
         db.session.add(me)
         db.session.commit()
     except:
-        return jsonify('You are already signed up!')
+        return 'You are already signed up!'
 
     to_email = sgw.Email(email, email)
     email_types.send_email_type('welcome', DEFAULT_SENDER, to_email)
 
-    return jsonify('Thanks for signing up!')
+    return 'Thanks for signing up!'
+
+def unsubscribe(email):
+    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return 'Please enter a valid email address'
+
+    try:
+        me = db_models.EmailList.query \
+            .filter(db_models.EmailList.email == email).first()
+        me.unsubscribed = True
+        db.session.commit()
+    except Exception as e:
+        return 'Ooops, something went wrong'
+
+    return 'You have been unsubscribed'
