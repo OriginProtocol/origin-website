@@ -12,8 +12,9 @@ We should also mention that the app expects a `.env` file in your root directory
     DEV_EMAIL = "foo@bar.com"
     DEBUG = True
 
+    HOST = localhost
     HTTPS = False
-
+    
     PROJECTPATH = "/"
 
     FLASK_SECRET_KEY = putyoursupersecretkeyhere
