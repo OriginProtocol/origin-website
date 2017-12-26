@@ -1,0 +1,15 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script type='text/javascript'>
+    {% for message in messages %}
+      {% if message == "telegram" %}
+        alertify.log("Make new friends!<div class='telegram-btn-container'><a href='https://t.me/originprotocol'><button class='telegram-btn btn btn-outline-primary'>Join Our Telegram</button></a></div>", "default", 0)
+      {% elif message == "slack" %}
+        alertify.log("Want to contribute?<div class='slack-btn-container'><a href='https:slack.originprotocol.com'><button class='slack-btn btn btn-outline-primary'>Join Our Slack</button></a></div>", "default", 0)
+      {% else %}
+        alertify.log("{{ message }}", "default")
+      {% endif %}
+    {% endfor %}
+    </script>
+  {% endif %}
+{% endwith %}

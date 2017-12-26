@@ -17,6 +17,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500"/>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500"/>
       <link rel="stylesheet" href="/static/css/style.css"/>
+      <link rel="stylesheet" href="/static/css/alertify.css" />
       <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
       <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
 
@@ -34,6 +35,7 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>    
+      <script src="/static/js/alertify.js"></script>
       <script src="/static/js/script.js"></script>
 
       {% block extra_scripts %}
@@ -78,5 +80,6 @@
   </noscript>
 
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1637426076553052&ev=PageView&noscript=1"/></noscript>
+  {% include 'flashes.html' %}
 </body>
 </html>
