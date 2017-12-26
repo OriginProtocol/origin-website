@@ -241,20 +241,15 @@ footer .footer-link a {
   display: inline-block;
 }
 
-.slack-btn-container {
-  margin-bottom: 10px !important;
-  margin-right: 10px;
-}
-
-.telegram-btn-container {
-  margin-top: 10px !important;
+.slack-btn-container, .telegram-btn-container {
+  margin: 10px 10px 10px 0 !important;
 }
 
 .slack-btn {
   padding-left:42px;
   background-image: url('/static/img/slack-logo.svg');
   background-repeat: no-repeat;
-  background-position: 15px 13px;
+  background-position: 15px 13px; 
 }
 .slack-btn:hover {
   background-image: url('/static/img/slack-logo-white.svg');
