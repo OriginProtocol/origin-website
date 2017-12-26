@@ -3,9 +3,16 @@
     <script type='text/javascript'>
     {% for message in messages %}
       {% if message == "telegram" %}
-        alertify.log("Make new friends!<div class='telegram-btn-container'><a href='https://t.me/originprotocol'><button class='telegram-btn btn btn-outline-primary'>Join Our Telegram</button></a></div>", "default", 0)
+        setTimeout(function() {
+          alertify.log("Make new friends!<div class='telegram-btn-container'><a href='https://t.me/originprotocol'><button class='telegram-btn btn btn-outline-primary'>Join Our Telegram</button></a></div>", "default", 0)
+        }, 2000);
+        setTimeout(function() {
+          alertify.log("Stay in touch?<div class='telegram-btn-container'><a href='javascript:$(\"#email\").focus()'><button class='btn btn-primary'>Join Our Mailing List</button></a></div>", "default", 0)
+        }, 10000);
       {% elif message == "slack" %}
-        alertify.log("Want to contribute?<div class='slack-btn-container'><a href='https:slack.originprotocol.com'><button class='slack-btn btn btn-outline-primary'>Join Our Slack</button></a></div>", "default", 0)
+        setTimeout(function() {
+          alertify.log("Want to contribute?<div class='slack-btn-container'><a href='https:slack.originprotocol.com'><button class='slack-btn btn btn-outline-primary'>Join Our Slack</button></a></div>", "default", 0)
+        }, 2000);
       {% else %}
         alertify.log("{{ message }}", "default")
       {% endif %}
