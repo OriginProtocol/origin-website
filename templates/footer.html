@@ -3,16 +3,16 @@
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="logo-container">
-          <img src="static/img/origin-logo.png"
-            srcset="static/img/origin-logo@2x.png 2x,
-              static/img/origin-logo@3x.png 3x"
+          <img src="/static/img/origin-logo.png"
+            srcset="/static/img/origin-logo@2x.png 2x,
+              /static/img/origin-logo@3x.png 3x"
             class="origin-logo">
         </div>
         <p class="company-mission">
           Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network.
         </p>
         <p>
-          &copy; 2017 Origin, Inc.
+          &copy; {{ now.year }} Origin, Inc.
         </p>
       </div>
       <div class="col-12 col-md-6">
@@ -28,7 +28,7 @@
                 </a>
               </li>
               <li class="footer-link">
-                <a href="whitepaper">
+                <a href="/whitepaper">
                   Whitepaper
                 </a>
               </li>
