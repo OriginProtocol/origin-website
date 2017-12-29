@@ -19,6 +19,7 @@ class Presale(db.Model):
 	__tablename__ = 'presale'
 
 	id = db.Column(db.Integer, primary_key=True)
+	full_name = db.Column(db.String(255))
 	email = db.Column(db.String(255))
 	accredited = db.Column(db.Boolean())
 	entity_type = db.Column(db.String(255))
