@@ -28,13 +28,14 @@ def send_welcome(email):
 
     return 'Thanks for signing up!'
 
-def presale(email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note):
+def presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return 'Please enter a valid email address'
 
     try:
         me = db_models.Presale()
+        me.full_name = full_name
         me.email = email
         me.accredited = accredited
         me.entity_type = entity_type
@@ -48,10 +49,11 @@ def presale(email, accredited, entity_type, desired_allocation, desired_allocati
     except Exception as e:
          return 'Ooops! Something went wrong.'
 
-    # to_email = sgw.Email(email, email)
-    # email_types.send_email_type('welcome', DEFAULT_SENDER, to_email)
+    message = "Name: %s<br>Email: %s<br>Accredited: %s<br>Entity: %s<br>Desired allocation: %s %s<br>Citizenship: %s<br>Address: %s<br>Note: %s" % (full_name, email,
+        ("Yes" if accredited else "No"), entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
+    sgw.notify_admins(message, subject=full_name + " is interested in the presale")
 
-    return 'Thanks for signing up!'
+    return 'Thanks! We\'ll be in touch soon.'
 
 def unsubscribe(email):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):

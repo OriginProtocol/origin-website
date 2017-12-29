@@ -42,6 +42,7 @@ def join_mailing_list():
 
 @app.route('/presale/join', methods=['POST'])
 def join_presale():
+    full_name = request.form['full_name']
     email = request.form['email']
     accredited = request.form["accredited"]
     entity_type = request.form["entity_type"]
@@ -50,6 +51,8 @@ def join_presale():
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
+    if not full_name:
+        return jsonify("Please enter your name")
     if not email:
         return jsonify("Please enter your email")
     if not accredited or not entity_type or not citizenship or not desired_allocation_currency:
@@ -58,7 +61,7 @@ def join_presale():
         return jsonify("Please enter your desired allocation")
     if "confirm" not in request.form:
         return jsonify("Please agree to the important notice")
-    feedback = mailing_list.presale(email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
+    feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
     flash(feedback)
     return jsonify("OK")
 

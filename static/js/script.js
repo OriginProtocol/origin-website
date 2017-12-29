@@ -9,12 +9,14 @@ $("#mailing-list").submit(function(event) {
 });
 
 $("#presale").submit(function(event) {
-  $.post('/presale/join', $('form').serialize(), function(data) {
-      alertify.log(data, "default");
-    },
-    'json'
-  );
   event.preventDefault();
+  $.post('/presale/join', $('form').serialize(), function(data) {
+    if (data == "OK") {
+      window.location = "/";
+    }
+    alertify.log(data, "default");
+  },
+  'json');
 });
 
 $(function() {
