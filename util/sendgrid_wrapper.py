@@ -17,6 +17,7 @@ class Attachment(object):
         self.content_id = content_id
 
 def notify_admins(message, subject=None):
+    subject = subject.encode('ascii', 'ignore') if subject else None
     if 'localhost' in constants.HOST or 'pagekite' in constants.HOST:
         recipients=[Email(constants.DEV_EMAIL, constants.DEV_EMAIL)]
         subject = 'DEV: ' + str(subject) if subject else str(message)
