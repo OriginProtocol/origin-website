@@ -192,6 +192,7 @@ footer .footer-link a {
 footer .logo-container {
   margin: 40px auto 20px auto;
 }
+
 footer .company-mission {
   max-width: 360px;
   margin-left: 0px;
@@ -206,13 +207,12 @@ footer .company-mission {
   font-size:18px;
   font-weight: 400;
   text-align: center;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* Index */
 
 .hero-section {
-  /*background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;*/
-  /*background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;*/
   background-color: #455d75;
   background-size: 80px 80px;
   margin-top: -160px;
@@ -236,8 +236,6 @@ footer .company-mission {
   position: relative;
   top: -1px; /* hack to get rid of mysterious line */
   background-color: #455d75;
-  /*background: -webkit-linear-gradient(left, #455d75 78px, transparent 1%) center, -webkit-linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;*/
-  /*background: linear-gradient(90deg, #455d75 78px, transparent 1%) center, linear-gradient(#455d75 78px, transparent 1%) center, #6f8294;*/
   background-size: 80px 80px;
 }
 
@@ -265,6 +263,7 @@ footer .company-mission {
   background-repeat: no-repeat;
   background-position: 15px 13px; 
 }
+
 .slack-btn:hover {
   background-image: url('/static/img/slack-logo-white.svg');
 }
@@ -275,12 +274,21 @@ footer .company-mission {
   background-repeat: no-repeat;
   background-position: 15px 13px;
 }
+
 .telegram-btn:hover {
   background-image: url('/static/img/telegram-logo-white.svg');
 }
 
 .use-cases-section {
   background-color: #f7f9fb;
+}
+
+.use-cases-section .btn-container {
+  display: inline-block;
+}
+
+.demo-btn-container, .github-btn-container {
+  margin: 10px 10px 10px 0 !important;
 }
 
 .middlemen-section {
@@ -426,10 +434,32 @@ footer .company-mission {
 .press-section {
   background-color: #f7f9fb;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 100px;
 }
-.press-section h4 {
-  margin-bottom: 40px;
+
+.press-section h2 {
+  margin: 60px 0px 40px 0px;
+}
+
+.press-mention {
+  margin: 20px;
+}
+
+.press-logo-wrapper {
+  text-align: center;
+  width: 200px;
+  margin: 20px auto 30px auto;
+}
+
+.press-logo-wrapper img {
+  width: 100%;
+}
+
+.press-quote {
+  margin: 20px auto 0px auto;
+  text-align: center;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* presale page */
