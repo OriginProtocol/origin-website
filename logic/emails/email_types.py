@@ -3,6 +3,7 @@ from database import db, db_models
 from flask import render_template
 from util import sendgrid_wrapper as sgw
 
+DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 BCC_RECIPIENTS = [sgw.Email('founders@originprotocol.com', 'Founders')]
 
 EMAILS = {
@@ -13,7 +14,7 @@ EMAILS = {
         'subject': 'Thanks for your interest in Origin!'
     },
     'demo_dapp_announcement': {
-        'subject': 'Announcing the Origin demo DApp'
+        'subject': 'Origin Demo DApp is now live on testnet'
     }
 }
 

@@ -6,6 +6,7 @@ from config import universal
 from database import db, db_common, db_models
 from logic.emails import email_types
 from util import sendgrid_wrapper as sgw
+from tools import db_utils
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 
@@ -73,3 +74,14 @@ def unsubscribe(email):
         return 'Ooops, something went wrong'
 
     return 'You have been unsubscribed'
+
+
+def send_one_off(email_type):
+    with db_utils.request_context():
+        for e in db_models.Presale.query.all():
+            print e.email
+            email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
+
+        for e in db_models.EmailList.query.all():
+            print e.email
+            email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)

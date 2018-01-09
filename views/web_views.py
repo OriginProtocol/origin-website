@@ -72,6 +72,13 @@ def unsubscribe():
     flash(feedback)
     return redirect('/', code=302)
 
+@app.route('/webhook/fullcontact', methods=['GET','POST'])
+def fullcontact_webhook():
+    print 'POSTED!!'
+    print request.get_json() 
+    print request.json
+    return redirect('/', code=302)
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
