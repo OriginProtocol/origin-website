@@ -11,6 +11,9 @@ EMAILS = {
     },
     'presale': {
         'subject': 'Thanks for your interest in Origin!'
+    },
+    'demo_dapp_announcement': {
+        'subject': 'Announcing the Origin demo DApp'
     }
 }
 

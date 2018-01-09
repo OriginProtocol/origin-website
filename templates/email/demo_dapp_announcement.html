@@ -1,0 +1,39 @@
+{% extends 'email/email_base.html' %}
+
+{% block content %}
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td style="padding: 40px; font-family: 'Lato', sans-serif; font-size: 15px; line-height: 20px; color: #444444;">
+      Hello {{ universal.BUSINESS_NAME }} supporters. Today we're happy to announce the launch of the {{ universal.BUSINESS_NAME }} demo DApp on the Rinkeby testnet!
+      <br><br><br>
+      <center>
+        <a href="{{ universal.DEMO_DAPP_URL }}"><img src='{{universal.BASE_URL }}/static/img/try-the-demo-button.png' /></a>
+      </center>
+      <br><br><br>
+      Our demo DApp is 100% decentralized. That means there aren't any backend servers and databases. The entire DApp is built on the blockchain and IPFS.
+      <br><br>
+      Why is this important? It means that the DApp is hosted on computers all around the world. No centralized middleman required. This is the first of many important milestones towards building decentralized marketplaces that have 0% transaction fees, are censorship-resistant, and give back to early community members.
+      <br>
+      <br>
+      Check out the DApp now. You can buy your very own crypto unicorn or rent a yacht for the weekend - all with testnet Eth!
+      <br>
+      <br>
+      Want to get more involved? 
+      <br>
+      <br>
+      <br>
+      <center>
+        <a href="{{ universal.TELEGRAM_URL}}"><img src='{{universal.BASE_URL }}/static/img/telegram-button.png' /></a>
+      </center>
+      <br><br>
+      Have fun!
+      <br>
+      The {{ universal.BUSINESS_NAME }} team
+      <br><br>
+    </td>
+  </tr>
+</table>
+  
+{% endblock %}
+

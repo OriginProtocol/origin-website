@@ -10,6 +10,8 @@ CONTACT_EMAIL = 'info@originprotocol.com'
 PRODUCT_BRIEF_URL = BASE_URL + '/product-brief'
 WHITEPAPER_URL = BASE_URL + '/whitepaper'
 
+DEMO_DAPP_URL = 'https://demo.originprotocol.com'
+
 GITHUB_URL = 'https://github.com/originprotocol'
 SLACK_URL = 'http://slack.originprotocol.com/'
 TELEGRAM_URL = 'https://t.me/originprotocol'
