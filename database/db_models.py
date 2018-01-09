@@ -31,3 +31,14 @@ class Presale(db.Model):
 
 	def __str__(self):
 		return '%s' % (self.email)
+
+class MessageLog(db.Model):
+	__tablename__ = 'message_log'
+
+	id = db.Column(db.BigInteger, primary_key=True)
+	email = db.Column(db.String(255), index=True)
+	msg_purpose = db.Column(db.String(128), index=True)
+	msg_subject = db.Column(db.String(128))
+	msg_text = db.Column(db.Text())
+	msg_html = db.Column(db.Text())
+	msg_sent = db.Column(db.DateTime(timezone=True), server_default=db.func.now())

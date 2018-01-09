@@ -23,8 +23,7 @@ def send_welcome(email):
     except:
         return 'You are already signed up!'
 
-    to_email = sgw.Email(email, email)
-    email_types.send_email_type('welcome', DEFAULT_SENDER, to_email)
+    email_types.send_email_type('welcome', DEFAULT_SENDER, email)
 
     return 'Thanks for signing up!'
 
@@ -54,6 +53,9 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
 
     message = "Name: %s<br>Email: %s<br>Accredited: %s<br>Entity: %s<br>Desired allocation: %s %s<br>Citizenship: %s<br>Address: %s<br>Note: %s" % (full_name, email,
         ("Yes" if accredited == "1" else "No"), entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
+    
+    email_types.send_email_type('presale', DEFAULT_SENDER, email)
+
     sgw.notify_admins(message, subject=full_name + " is interested in the presale")
 
     return 'Thanks! We\'ll be in touch soon.'

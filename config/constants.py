@@ -20,5 +20,7 @@ SQLALCHEMY_DATABASE_URI = dotenv.get('DATABASE_URL')
 
 SENDGRID_API_KEY = dotenv.get('SENDGRID_API_KEY')
 
+FULLCONTACT_KEY = dotenv.get('FULLCONTACT_KEY')
+
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')

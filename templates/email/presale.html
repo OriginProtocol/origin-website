@@ -1,0 +1,35 @@
+{% extends 'email/email_base.html' %}
+
+{% block content %}
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td style="padding: 40px; font-family: 'Lato', sans-serif; font-size: 15px; line-height: 20px; color: #444444;">
+      Thank you for your interest in the {{ universal.BUSINESS_NAME }} presale. 
+      <br><br>
+      We have your information and will be in touch soon. Please help us spread the word and invite your friends to join us on Telegram.
+      <br><br>
+      <br>
+
+      <center>
+        <a href="{{ universal.TELEGRAM_URL}}"><img src='{{universal.BASE_URL }}/static/img/telegram-button.png' /></a>
+      </center>
+
+<!--       <a href="{{ universal.SLACK_URL}}">Slack</a>
+      <br>
+      <a href="{{ universal.TELEGRAM_URL}}">Telegram</a>
+      <br>
+      <a href="{{ universal.TWITTER_URL}}">Twitter</a>
+      <br>
+      <a href="{{ universal.FACEBOOK_URL}}">Facebook</a> -->
+      <br><br>
+      Thanks,
+      <br>
+      The {{ universal.BUSINESS_NAME }} team
+      <br><br>
+    </td>
+  </tr>
+</table>
+  
+{% endblock %}
+
