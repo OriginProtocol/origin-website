@@ -5,6 +5,8 @@ from config import constants
 from logic.emails import mailing_list
 from datetime import datetime
 
+from flask.ext.babel import gettext
+
 # force https on prod
 @app.before_request
 def beforeRequest():
@@ -15,7 +17,7 @@ def beforeRequest():
 @app.route('/')
 def index():
     flash('telegram')
-    return render_template('index.html')
+    return gettext("Please translate me") #render_template('index.html')
 
 @app.route('/team')
 def team():
@@ -75,7 +77,7 @@ def unsubscribe():
 @app.route('/webhook/fullcontact', methods=['GET','POST'])
 def fullcontact_webhook():
     print 'POSTED!!'
-    print request.get_json() 
+    print request.get_json()
     print request.json
     return redirect('/', code=302)
 

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask.ext.babel import Babel
 
 from config import constants
 
@@ -11,3 +12,5 @@ class MyFlask(Flask):
 app = MyFlask(__name__,
     template_folder=constants.TEMPLATE_ROOT,
     static_folder=constants.STATIC_ROOT)
+babel = Babel(app)
+
