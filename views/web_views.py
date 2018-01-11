@@ -17,7 +17,7 @@ def beforeRequest():
 @app.route('/')
 def index():
     flash('telegram')
-    return gettext("Please translate me") #render_template('index.html')
+    return render_template('index.html')
 
 @app.route('/team')
 def team():

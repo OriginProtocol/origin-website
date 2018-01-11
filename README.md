@@ -6,7 +6,7 @@ To get started (we recommend doing this in an virtualenv):
 
     git clone https://github.com/OriginProtocol/company-website.git
     pip install -r requirements.txt
-    
+
 We should also mention that the app expects a `.env` file in your root directory that looks something like this:
 
     DEV_EMAIL = "foo@bar.com"
@@ -14,7 +14,7 @@ We should also mention that the app expects a `.env` file in your root directory
 
     HOST = localhost
     HTTPS = False
-    
+
     PROJECTPATH = "/"
 
     FLASK_SECRET_KEY = putyoursupersecretkeyhere
@@ -25,5 +25,12 @@ We should also mention that the app expects a `.env` file in your root directory
 
     TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
     STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
-    
+
 Hit us up in the `eng-website` channel on [Slack](http://slack.originprotocol.com) if you need help.
+
+## Localization
+
+Use this command to extract strings into a file `messages.pot`
+```
+pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
+```

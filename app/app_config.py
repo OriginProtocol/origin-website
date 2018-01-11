@@ -11,6 +11,7 @@ class AppConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
 
+
 def init_app(app):
     db.init_app(app)
 
