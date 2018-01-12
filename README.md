@@ -48,6 +48,10 @@ Run it!
 ```
 python main.py
 ```
-Then open browser to view.    
+
+Open browser to view
+```
+open http://127.0.0.1:5000/
+```
     
 **Problems?** Hit us up in the `eng-website` channel on [Slack](http://slack.originprotocol.com) if you need help.
