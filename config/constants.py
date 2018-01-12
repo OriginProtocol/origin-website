@@ -24,3 +24,21 @@ FULLCONTACT_KEY = dotenv.get('FULLCONTACT_KEY')
 
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
+
+# Language option constants
+
+LANGUAGES = {
+    'ar': 'Arabic',
+    'de': 'German',
+    'en': 'English',
+    'es': 'Spanish',
+    'fr': 'French',
+    'it': 'Italian',
+    'ja': 'Japanese',
+    'ko': 'Korean',
+    'pt_PT': 'Portugese',
+    'ru': 'Russian',
+    'th': 'Thai',
+    'zh_Hans': 'Mandarin',
+    'zh_TW': 'Taiwanese'
+}

@@ -1,11 +1,29 @@
-from flask import jsonify, redirect, render_template, request, flash
+from flask import jsonify, redirect, render_template, request, flash, session
 
 from app import app
 from config import constants
 from logic.emails import mailing_list
 from datetime import datetime
 
-from flask.ext.babel import gettext
+from flask.ext.babel import gettext, Babel
+
+babel = Babel(app)
+
+@babel.localeselector
+def get_locale():
+    # if the user has set up the language manually it will be stored in the session,
+    # so we use the locale from the user settings
+    try:
+        language = session['language']
+    except KeyError:
+        language = None
+    if language is not None:
+        return language
+    return request.accept_languages.best_match(constants.LANGUAGES.keys())
+
+@app.context_processor
+def inject_conf_var():
+    return dict(CURRENT_LANGUAGE=session.get('language', request.accept_languages.best_match(constants.LANGUAGES.keys())))
 
 # force https on prod
 @app.before_request
@@ -80,6 +98,11 @@ def fullcontact_webhook():
     print request.get_json()
     print request.json
     return redirect('/', code=302)
+    
+@app.route('/language/<language>')
+def set_language(language=None):
+    session['language'] = language
+    return redirect(url_for('index.html'))
 
 @app.errorhandler(404)
 def page_not_found(e):

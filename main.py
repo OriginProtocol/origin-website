@@ -15,4 +15,4 @@ app_config.init_prod_app(app)
 
 if __name__ == '__main__':
     app.debug = constants.DEBUG
-    app.run()
+    app.run(host=constants.HOST)
