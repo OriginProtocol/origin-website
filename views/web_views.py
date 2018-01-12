@@ -6,14 +6,11 @@ from logic.emails import mailing_list
 from datetime import datetime
 
 # change path of messages.mo file
-app.config['BABEL_DEFAULT_LOCALE'] = 'de'
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
 
 from flask.ext.babel import gettext, Babel
 
 babel = Babel(app)
-babel.BABEL_DEFAULT_LOCALE = 'de'
-babel.BABEL_TRANSLATION_DIRECTORIES = '../translations'
 
 # force https on prod
 @app.before_request
