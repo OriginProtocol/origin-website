@@ -34,3 +34,8 @@ Use this command to extract strings into a file `messages.pot`
 ```
 pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
 ```
+
+After translations are updated, yse this to compile them
+```
+pybabel update -i messages.pot -d translations
+```
