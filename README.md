@@ -15,6 +15,11 @@ Clone
 git clone https://github.com/OriginProtocol/company-website.git && cd company-website
 ```
 
+Enter virtual environment
+```
+source env.sh
+```
+
 Install requirements
 ```
 pip install -r requirements.txt
