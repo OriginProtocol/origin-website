@@ -5,9 +5,15 @@ from config import constants
 from logic.emails import mailing_list
 from datetime import datetime
 
+# change path of messages.mo file
+app.config['BABEL_DEFAULT_LOCALE'] = 'de'
+app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
+
 from flask.ext.babel import gettext, Babel
 
 babel = Babel(app)
+babel.BABEL_DEFAULT_LOCALE = 'de'
+babel.BABEL_TRANSLATION_DIRECTORIES = '../translations'
 
 # force https on prod
 @app.before_request
@@ -82,7 +88,7 @@ def fullcontact_webhook():
     print request.get_json()
     print request.json
     return redirect('/', code=302)
-    
+
 @app.route('/language/<language>')
 def set_language(language=None):
     session['language'] = language
@@ -92,7 +98,7 @@ def set_language(language=None):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-    
+
 @babel.localeselector
 def get_locale():
     # if the user has set up the language manually it will be stored in the session,
@@ -110,8 +116,9 @@ def get_locale():
 @app.context_processor
 def inject_now():
     return {'now': datetime.utcnow()}
-    
+
 @app.context_processor
 def inject_conf_var():
+    print("@app.context_processor")
     print(constants.LANGUAGES)
     return dict(CURRENT_LANGUAGE=session.get('language', request.accept_languages.best_match(constants.LANGUAGES.keys())), AVAILABLE_LANGUAGES=constants.LANGUAGES)
