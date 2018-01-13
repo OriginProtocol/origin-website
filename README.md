@@ -30,7 +30,23 @@ Hit us up in the `eng-website` channel on [Slack](http://slack.originprotocol.co
 
 ## Localization
 
-Use this command to extract strings into a file `messages.pot`
+After pulling or any text updates, you must compile translations:
+```
+pybabel compile -d translations
+```
+
+Use this command to update strings after new or edited English string are used
+```
+pybabel update -i messages.pot -d translations
+```
+
+If an update is rejcted for being [**fuzzy**](https://stackoverflow.com/a/12555922/59913), then you can force the compile with `-f` flag:
+```
+pybabel compile -f -d  translations
+```
+
+Use this command to start from scratch, extracting strings into a file `messages.pot`
 ```
 pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
 ```
+
