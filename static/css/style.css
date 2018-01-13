@@ -61,7 +61,7 @@ a:hover {
   background-color: #455d75;
 }
 
-.navbar-dark .nav-item a {
+.navbar-dark .nav-item>a {
   color: #ffffff !important;
 }
 
@@ -71,6 +71,29 @@ a:hover {
 
 .navbar-light .nav-item a {
   color: #6f8294;
+}
+
+.dropdown-menu {
+  z-index: 1000;
+  background-color: #ebf0f3;
+}
+
+.dropdown-item  {
+  width: 100%;
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: yellow;
+}
+
+.dropdown-item  .selected{
+  width: 100%;
+  color: red;
 }
 
 .row-pane {
@@ -860,3 +883,5 @@ footer .company-mission {
     margin-bottom: 360px;
   }
 }
+
+

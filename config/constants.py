@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import os
 import dotenv
 
@@ -28,17 +31,33 @@ STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 # Language option constants
 
 LANGUAGES = {
-    'ar': 'Arabic',
-    'de': 'German',
-    'en': 'English',
-    'es': 'Spanish',
-    'fr': 'French',
-    'it': 'Italian',
-    'ja': 'Japanese',
-    'ko': 'Korean',
-    'pt_PT': 'Portugese',
-    'ru': 'Russian',
-    'th': 'Thai',
-    'zh_Hans': 'Mandarin',
-    'zh_TW': 'Taiwanese'
+    'ar': u'العربية',
+    'de': u'Deutsch',
+    'en': u'English',
+    'es': u'Español',
+    'fr': u'Français',
+    'it': u'Italiano',
+    'ja': u'日本語',
+    'ko': u'한국어',
+    'pt_PT': u'Português',
+    'ru': u'Русский',
+    'th': u'ไทย',
+    'zh_Hans': u'简体中文',
+    'zh_TW': u'繁體中文'
 }
+
+# LANGUAGES = {
+#     'ar': 'Arabic',
+#     'de': 'German',
+#     'en': 'English',
+#     'es': 'Spanish',
+#     'fr': 'French',
+#     'it': 'Italian',
+#     'ja': 'Japanese',
+#     'ko': 'Korean',
+#     'pt_PT': 'Portugese',
+#     'ru': 'Russian',
+#     'th': 'Thai',
+#     'zh_Hans': 'Mandarin',
+#     'zh_TW': 'Taiwanese'
+# }

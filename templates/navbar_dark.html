@@ -13,18 +13,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Language</a>
-          <div class="dropdown-menu">
-          {% for language in AVAILABLE_LANGUAGES.items() %}
-              {% if CURRENT_LANGUAGE == language[0] %}
-                {{ language[1] }}
-              {% else %}
-                <a class="dropdown-item" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
-              {%  endif %}
-          {% endfor %}
-          </div>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="/presale">{{gettext("Presale")}}</a>
         </li>
@@ -39,6 +27,18 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://medium.com/originprotocol/origin-demo-dapp-is-now-live-on-testnet-835ae201c58" target="_blank">{{gettext("Demo")}}</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
+          <div class="dropdown-menu">
+          {% for language in AVAILABLE_LANGUAGES.items() %}
+              {% if CURRENT_LANGUAGE == language[0] %}
+                <div class="dropdown-item selected">{{ language[1] }}</div>
+              {% else %}
+                <div class="dropdown-item"><a href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a></div>
+              {%  endif %}
+          {% endfor %}
+          </div>
         </li>
       </ul>
     </div>
