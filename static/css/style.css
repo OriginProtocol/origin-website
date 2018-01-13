@@ -58,7 +58,7 @@ a:hover {
 }
 
 .navbar-dark {
-  background-color: #455d75;  
+  background-color: #455d75;
 }
 
 .navbar-dark .nav-item a {
@@ -105,13 +105,13 @@ a:hover {
 .left-upper-pane {
   -webkit-clip-path: polygon(0 100%, 100% 0, 0 0);
   clip-path: polygon(0 100%, 100% 0, 0 0);
-  padding-top: 57.735026918%;    
+  padding-top: 57.735026918%;
 }
 
 .right-upper-pane {
   -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
   clip-path: polygon(100% 0, 0 0, 100% 100%);
-  padding-top: 57.735026918%;    
+  padding-top: 57.735026918%;
 }
 
 .left-lower-pane {
@@ -125,6 +125,35 @@ a:hover {
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
   padding-top: 57.735026918%;
 }
+
+
+:lang(ar) > .left-upper-pane {
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  padding-top: 57.735026918%;
+}
+
+:lang(ar) > .right-upper-pane {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 0 0);
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+  padding-top: 57.735026918%;
+}
+
+:lang(ar) > .left-lower-pane {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  padding-top: 57.735026918%;
+}
+
+:lang(ar) > .right-lower-pane {
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  padding-top: 57.735026918%;
+}
+
+
+
+
 
 .btn-container {
   margin: 40px auto;
@@ -261,7 +290,7 @@ footer .company-mission {
   padding-left:42px;
   background-image: url('/static/img/slack-logo.svg');
   background-repeat: no-repeat;
-  background-position: 15px 13px; 
+  background-position: 15px 13px;
 }
 
 .slack-btn:hover {
@@ -508,7 +537,7 @@ footer .company-mission {
 }
 
 .team-header-section {
-  background-color: #f7f9fb;   
+  background-color: #f7f9fb;
 }
 
 .team-header-section h1 {
