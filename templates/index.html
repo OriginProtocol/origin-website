@@ -8,13 +8,6 @@
 
 <main class="landing-page">
   {% include 'navbar_dark.html' %}
-  {% for language in AVAILABLE_LANGUAGES.items() %}
-        {% if CURRENT_LANGUAGE == language[0] %}
-            {{ language[1] }}
-        {% else %}
-            <a href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
-        {%  endif %}
-  {% endfor %}
   <section class="hero-section">
     <div class="container foreground-content">
       <div class="row">
