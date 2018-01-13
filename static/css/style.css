@@ -81,19 +81,27 @@ a:hover {
 .dropdown-item  {
   width: 100%;
   display: block;
+  cursor: pointer;
 }
 
-.dropdown-item {
+.dropdown-item a {
   display: block;
 }
 
 .dropdown-item:hover {
-  background-color: yellow;
+  background-color: #007bff;
+}
+.dropdown-item:hover a {
+    color: #ffffff;
 }
 
-.dropdown-item  .selected{
+.dropdown-item.selected {
   width: 100%;
-  color: red;
+  color: black;
+  cursor: default;
+}
+.dropdown-item.selected:hover {
+  background-color: transparent;
 }
 
 .row-pane {
