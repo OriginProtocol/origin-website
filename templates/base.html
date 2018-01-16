@@ -27,11 +27,7 @@
     {% endblock %}
   {% endblock %}
 </head>
-{% if CURRENT_LANGUAGE != "ar" %}
-<body dir="ltr">
-{% else %}
-<body dir="rtl">
-{%  endif %}
+<body dir="{{CURRENT_LANGUAGE_DIRECTION}}" id="{{CURRENT_LANGUAGE_DIRECTION}}">
   {% block body %}
     {% block content %}
     {% endblock %}

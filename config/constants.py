@@ -45,7 +45,7 @@ LANGUAGES = {
     'zh_Hans': u'简体中文',
     'zh_TW': u'繁體中文',
     'el': u'Ελληνικά',
-    'iw': u'עברית‬'
+    'he': u'עברית‬'
 }
 
 # LANGUAGES = {

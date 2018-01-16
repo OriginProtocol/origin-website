@@ -149,32 +149,33 @@ a:hover {
   padding-top: 57.735026918%;
 }
 
-
-:lang(ar) > .left-upper-pane {
+/*
+ * Right-to-left languages: Swap left/right pane graphics
+ * See: https://meiert.com/en/blog/css-how-to-host-right-to-left-styling/
+ */
+#rtl .left-upper-pane {
   -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
   clip-path: polygon(100% 0, 0 0, 100% 100%);
   padding-top: 57.735026918%;
 }
 
-:lang(ar) > .right-upper-pane {
+#rtl .right-upper-pane {
   -webkit-clip-path: polygon(0 100%, 100% 0, 0 0);
   clip-path: polygon(0 100%, 100% 0, 0 0);
   padding-top: 57.735026918%;
 }
 
-:lang(ar) > .left-lower-pane {
+#rtl .left-lower-pane {
   -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
   padding-top: 57.735026918%;
 }
 
-:lang(ar) > .right-lower-pane {
+#rtl .right-lower-pane {
   -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
   clip-path: polygon(0 100%, 0 0, 100% 100%);
   padding-top: 57.735026918%;
 }
-
-
 
 
 

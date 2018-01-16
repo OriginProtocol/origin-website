@@ -8,7 +8,7 @@ from datetime import datetime
 # change path of messages.mo file
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
 
-from flask.ext.babel import gettext, Babel
+from flask.ext.babel import gettext, Babel, Locale
 
 babel = Babel(app)
 
@@ -59,15 +59,15 @@ def join_presale():
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
     if not full_name:
-        return jsonify("Please enter your name")
+        return jsonify(gettext("Please enter your name"))
     if not email:
-        return jsonify("Please enter your email")
+        return jsonify(gettext("Please enter your email"))
     if not accredited or not entity_type or not citizenship or not desired_allocation_currency:
-        return jsonify("An error occured")
+        return jsonify(gettext("An error occured"))
     if not desired_allocation:
-        return jsonify("Please enter your desired allocation")
+        return jsonify(gettext("Please enter your desired allocation"))
     if "confirm" not in request.form:
-        return jsonify("Please agree to the important notice")
+        return jsonify(gettext("Please agree to the important notice"))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
     flash(feedback)
     return jsonify("OK")
@@ -116,6 +116,8 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    print("@app.context_processor")
-    print(constants.LANGUAGES)
-    return dict(CURRENT_LANGUAGE=session.get('language', request.accept_languages.best_match(constants.LANGUAGES.keys())), AVAILABLE_LANGUAGES=constants.LANGUAGES)
+    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES.keys()))
+    return dict(
+        CURRENT_LANGUAGE=current_language,
+        CURRENT_LANGUAGE_DIRECTION=Locale(current_language).text_direction,
+        AVAILABLE_LANGUAGES=constants.LANGUAGES)
