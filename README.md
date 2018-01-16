@@ -58,6 +58,10 @@ open http://127.0.0.1:5000/
 
 ## Localization
 
+Localization is done with the [Flask-Babel](https://pythonhosted.org/Flask-Babel/) module.
+
+Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
+
 After a `git pull` or any edits to `.po` files, you must compile translations:
 ```
 pybabel compile -d translations
