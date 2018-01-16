@@ -31,7 +31,7 @@ STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 # Language option constants
 
 LANGUAGES = {
-    'ar': u'العربية',
+    'ar': u'اللغة العربية',
     'de': u'Deutsch',
     'en': u'English',
     'es': u'Español',
@@ -43,7 +43,9 @@ LANGUAGES = {
     'ru': u'Русский',
     'th': u'ไทย',
     'zh_Hans': u'简体中文',
-    'zh_TW': u'繁體中文'
+    'zh_TW': u'繁體中文',
+    'el': u'Ελληνικά',
+    'iw': u'עברית‬'
 }
 
 # LANGUAGES = {
@@ -60,4 +62,7 @@ LANGUAGES = {
 #     'th': 'Thai',
 #     'zh_Hans': 'Mandarin',
 #     'zh_TW': 'Taiwanese'
+#     'el': u'Hebrew',
+#     'iw': u'Greek'
+#
 # }
