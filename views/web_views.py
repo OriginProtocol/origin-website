@@ -39,7 +39,7 @@ def whitepaper():
 
 @app.route('/product-brief')
 def product_brief():
-    return redirect('/static/docs/product_brief_v15.pdf', code=302)
+    return redirect('/static/docs/product_brief_v17.pdf', code=302)
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
