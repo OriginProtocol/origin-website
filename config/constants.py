@@ -60,9 +60,8 @@ LANGUAGES = {
 #     'pt_PT': 'Portugese',
 #     'ru': 'Russian',
 #     'th': 'Thai',
-#     'zh_Hans': 'Mandarin',
-#     'zh_TW': 'Taiwanese'
+#     'zh_Hans': 'Chinese (Simplified)',
+#     'zh_TW': 'Chinese (Traditional)'
 #     'el': u'Hebrew',
 #     'iw': u'Greek'
-#
 # }
