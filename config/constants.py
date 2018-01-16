@@ -39,7 +39,7 @@ LANGUAGES = [
     'it',
     'ja',
     'ko',
-    'pt_PT',
+    'pt',
     'ru',
     'th',
     'zh_Hans',
