@@ -116,8 +116,10 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES.keys()))
+    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES))
+    available_languages = dict((l,Locale(l).get_language_name(l)) for l in constants.LANGUAGES)
+    print available_languages
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=Locale(current_language).text_direction,
-        AVAILABLE_LANGUAGES=constants.LANGUAGES)
+        AVAILABLE_LANGUAGES=available_languages)

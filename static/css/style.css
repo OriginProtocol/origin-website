@@ -78,19 +78,21 @@ a:hover {
   background-color: #ebf0f3;
 }
 
-.dropdown-item  {
+.language .dropdown-item  {
+  text-transform: capitalize;
   width: 100%;
   display: block;
   padding: .25rem 1.5rem;
   color: #007bff;
 }
 
-.dropdown-item:hover {
+.language .dropdown-item:hover {
   background-color: #007bff;
   color: #ffffff;
 }
 
-.dropdown-item-selected {
+.language  .dropdown-item-selected {
+  text-transform: capitalize;
   width: 100%;
   color: black;
   padding: .25rem 1.5rem;
