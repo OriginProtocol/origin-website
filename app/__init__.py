@@ -1,5 +1,5 @@
 from flask import Flask
-from flask.ext.babel import Babel
+from flask_babel import Babel
 
 from config import constants
 

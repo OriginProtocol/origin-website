@@ -38,7 +38,7 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
         me = db_models.Presale()
         me.full_name = full_name
         me.email = email
-        me.accredited = accredited
+        me.accredited = (accredited=='1')
         me.entity_type = entity_type
         me.desired_allocation = desired_allocation
         me.desired_allocation_currency = desired_allocation_currency

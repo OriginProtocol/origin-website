@@ -8,7 +8,7 @@ from datetime import datetime
 # change path of messages.mo file
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
 
-from flask.ext.babel import gettext, Babel, Locale
+from flask_babel import gettext, Babel, Locale
 
 babel = Babel(app)
 
@@ -116,10 +116,19 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES))
-    available_languages = dict((l,Locale(l).get_language_name(l).capitalize()) for l in constants.LANGUAGES)
-    print available_languages
+    try:
+        current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES))
+    except:
+        current_language = 'en'
+    try:
+        current_language_direction = Locale(current_language).text_direction
+    except:
+        current_language_direction = 'ltr'
+    try:
+        available_languages = dict((l,Locale(l).get_language_name(l).capitalize()) for l in constants.LANGUAGES)
+    except:
+        available_languages = {'en':"English"}
     return dict(
         CURRENT_LANGUAGE=current_language,
-        CURRENT_LANGUAGE_DIRECTION=Locale(current_language).text_direction,
+        CURRENT_LANGUAGE_DIRECTION=current_language_direction,
         AVAILABLE_LANGUAGES=available_languages)
