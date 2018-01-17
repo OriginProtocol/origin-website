@@ -8,7 +8,7 @@ from datetime import datetime
 # change path of messages.mo file
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
 
-from flask.ext.babel import gettext, Babel, Locale
+from flask_babel import gettext, Babel, Locale
 
 babel = Babel(app)
 
