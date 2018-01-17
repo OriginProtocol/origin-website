@@ -116,10 +116,7 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    try:
-        current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES))
-    except:
-        current_language = 'en'
+    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES)) or 'en'
     try:
         current_language_direction = Locale(current_language).text_direction
     except:
