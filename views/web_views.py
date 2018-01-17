@@ -105,10 +105,10 @@ def get_locale():
     except KeyError:
         language = None
     if language is not None:
-        print("get_locale() method")
-        print(1, language)
         return language
-    return request.accept_languages.best_match(constants.LANGUAGES)
+    browser_language = request.accept_languages.best_match(constants.LANGUAGES)
+    print ("browser_language", browser_language)
+    return browser_language or 'en'
 
 @app.context_processor
 def inject_now():
