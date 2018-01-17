@@ -35,7 +35,7 @@ def presale():
 
 @app.route('/whitepaper')
 def whitepaper():
-    return redirect('/static/docs/whitepaper_v3.pdf', code=302)
+    return redirect('/static/docs/whitepaper_v4.pdf', code=302)
 
 @app.route('/product-brief')
 def product_brief():
