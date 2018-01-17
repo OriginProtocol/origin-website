@@ -108,7 +108,7 @@ def get_locale():
         print("get_locale() method")
         print(1, language)
         return language
-    return request.accept_languages.best_match(constants.LANGUAGES.keys())
+    return request.accept_languages.best_match(constants.LANGUAGES)
 
 @app.context_processor
 def inject_now():
