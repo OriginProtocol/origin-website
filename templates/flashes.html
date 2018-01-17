@@ -11,14 +11,14 @@
         }, 8000);
       {% elif message == "slack" %}
         setTimeout(function() {
-          alertify.log("{{gettext("Want to contribute?")}}<div class='slack-btn-container'><a targt='_blank' href='https:slack.originprotocol.com'><button class='slack-btn btn btn-outline-primary'>{{gettext("Join Our Slack")}}</button></a></div>", "default", 0)
+          alertify.log("{{gettext("Want to contribute?")}}<div class='slack-btn-container'><a targt='_blank' href='https://slack.originprotocol.com'><button class='slack-btn btn btn-outline-primary'>{{gettext("Join Our Slack")}}</button></a></div>", "default", 0)
         }, 2000);
       {% else %}
         alertify.log("{{ message }}", "default")
       {% endif %}
     {% endfor %}
     {% if CURRENT_LANGUAGE != "en" %}
-      alertify.log("Help improve this translation.<div class='slack-btn-container'><a targt='_blank' href='https:originprotocol.slack.com/messages/C8UNGUVCN/'><button class='slack-btn btn btn-outline-primary'>Join #translation on Slack</button></a></div>", "default", 0)
+      alertify.log("Help improve this translation.<div class='slack-btn-container'><a targt='_blank' href='https://originprotocol.slack.com/messages/C8UNGUVCN/'><button class='slack-btn btn btn-outline-primary'>Join #translation on Slack</button></a></div>", "default", 0)
     {% endif %}
 </script>
   {% endif %}
