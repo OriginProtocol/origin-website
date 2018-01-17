@@ -89,7 +89,6 @@ def fullcontact_webhook():
 @app.route('/language/<language>')
 def set_language(language=None):
     session['language'] = language
-    print(2, language)
     return redirect('/')
 
 @app.errorhandler(404)
