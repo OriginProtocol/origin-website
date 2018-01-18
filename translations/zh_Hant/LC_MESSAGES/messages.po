@@ -1,4 +1,4 @@
-# Translations template for PROJECT.
+# Chinese (Traditional) translations for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -8,10 +8,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-10 16:56-0800\n"
+"POT-Creation-Date: 2018-01-12 14:50-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_Hant\n"
+"Language-Team: zh_Hant <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +23,7 @@ msgstr ""
 msgid "Make new friends!"
 msgstr "結交新朋友！"
 
-#: templates/flashes.html:7 templates/index.html:94
+#: templates/flashes.html:7 templates/index.html:101
 msgid "Join Our Telegram"
 msgstr "加入我們的電報"
 
@@ -37,12 +39,16 @@ msgstr "加入我們的郵件列表"
 msgid "Want to contribute?"
 msgstr "想貢獻？"
 
-#: templates/flashes.html:14 templates/index.html:101
+#: templates/flashes.html:14 templates/index.html:108
 msgid "Join Our Slack"
 msgstr "加入我們的鬆懈"
 
 #: templates/footer.html:12
-msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network."
+msgid ""
+"Origin is building the sharing economy of tomorrow. Buyers and sellers "
+"will be able to transact without rent-seeking middlemen. We believe in "
+"lowering transaction fees, reducing censorship and regulation, and giving"
+" early participants in the community a stake in the network."
 msgstr "本源正在建設明天的分享經濟。買家和賣家可以在沒有尋租中介人的情況下進行交易。我們相信降低交易費用，減少審查和監管，讓社區的早期參與者參與到網絡中來。"
 
 #: templates/footer.html:15
@@ -120,161 +126,188 @@ msgstr "工作（我們正在招聘！）"
 msgid "845 Market St, #450A<br>San Francisco, CA 94103"
 msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
 
-#: templates/index.html:16
+#: templates/index.html:23
 msgid "The sharing economy without intermediaries"
 msgstr "沒有中介的共享經濟"
 
-#: templates/index.html:19
+#: templates/index.html:26
 msgid "Origin is a protocol for creating sharing economy marketplaces"
 msgstr "起源是創造共享經濟市場的協議"
 
-#: templates/index.html:21
+#: templates/index.html:28
 msgid "using the Ethereum blockchain and IPFS"
 msgstr "使用以太坊區塊鍊和IPFS"
 
-#: templates/index.html:61
+#: templates/index.html:68
 msgid "The Origin platform"
 msgstr "Origin平台"
 
-#: templates/index.html:64
-msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
+#: templates/index.html:71
+msgid ""
+"We empower developers and businesses to build decentralized marketplaces "
+"on the blockchain. Our protocol makes it easy to create and manage "
+"listings for the fractional usage of assets and services. Buyers and "
+"sellers can discover each other, browse listings, make bookings, leave "
+"ratings and reviews, and much more."
 msgstr "我們授權開發商和企業在區塊鏈上建立分散的市場。我們的協議可以輕鬆創建和管理資產和服務的部分使用清單。買賣雙方可以相互發現，瀏覽列表，預訂，評分和評論等等。"
 
-#: templates/index.html:69
+#: templates/index.html:76
 msgid "Read the Product Brief"
 msgstr "閱讀產品簡介"
 
-#: templates/index.html:86
+#: templates/index.html:93
 msgid "Partners building on Origin"
 msgstr "在Origin創建合作夥伴"
 
-#: templates/index.html:89
+#: templates/index.html:96
 msgid "We'll be announcing our partners soon!"
 msgstr "我們很快就會宣布我們的合作夥伴！"
 
-#: templates/index.html:144
+#: templates/index.html:151
 msgid "Build your business on Origin"
 msgstr "在Origin創建您的業務"
 
-#: templates/index.html:147
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web. Get in touch to learn more."
+#: templates/index.html:154
+msgid ""
+"Whether you are a freelance photographer, apartment owner, bikeshare "
+"supplier, or existing sharing economy business, Origin makes it easy to "
+"do business on the decentralized web. Get in touch to learn more."
 msgstr "無論您是自由攝影師，公寓業主，自行車供應商還是現有的共享經濟業務，Origin都可以輕鬆地在分散的網絡上開展業務。聯繫我們了解更多。"
 
-#: templates/index.html:152
+#: templates/index.html:159
 msgid "Try the Demo"
 msgstr "嘗試演示"
 
-#: templates/index.html:159
+#: templates/index.html:166
 msgid "View Github"
 msgstr "查看Github"
 
-#: templates/index.html:172
+#: templates/index.html:179
 msgid "It's time to replace rent-seeking middlemen"
 msgstr "現在是替代尋租中介的時候了"
 
-#: templates/index.html:175
+#: templates/index.html:182
 #, python-format
-msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "利用以太坊區塊鏈的力量，列表通過安全透明的系統進行管理，充當中立的第三方。買家和賣家分享目前進入Uber，Airbnb，Fiverr和Getaround等公司的20-30 %%交易費用。"
+msgid ""
+"Harnessing the power of the Ethereum blockchain, listings are managed via"
+" a secure and transparent system that acts as a neutral third party. "
+"Buyers and sellers share the 20-30%% transaction fees that currently go "
+"to companies like Uber, Airbnb, Fiverr, and Getaround."
+msgstr ""
+"利用以太坊區塊鏈的力量，列表通過安全透明的系統進行管理，充當中立的第三方。買家和賣家分享目前進入Uber，Airbnb，Fiverr和Getaround等公司的20-30"
+" %%交易費用。"
 
-#: templates/index.html:180
+#: templates/index.html:187
 msgid "Read the Whitepaper"
 msgstr "閱讀白皮書"
 
-#: templates/index.html:234
-msgid "Smart contracts enable secure and reliable payments directly from one party to another"
+#: templates/index.html:241
+msgid ""
+"Smart contracts enable secure and reliable payments directly from one "
+"party to another"
 msgstr "智能合同能夠實現從一方到另一方的安全可靠的支付"
 
-#: templates/index.html:245
-msgid "Protocol schemas support hundreds of listing types, including custom verticals"
+#: templates/index.html:252
+msgid ""
+"Protocol schemas support hundreds of listing types, including custom "
+"verticals"
 msgstr "協議模式支持數百種列表類型，包括自定義垂直"
 
-#: templates/index.html:256
+#: templates/index.html:263
 msgid "Open and shared data encourages innovation by developers and businesses"
 msgstr "開放和共享的數據鼓勵開發者和企業的創新"
 
-#: templates/index.html:267
-msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
+#: templates/index.html:274
+msgid ""
+"Identity verification and reputation data on the blockchain ensures safe,"
+" reputable partners"
 msgstr "區塊鏈上的身份驗證和聲譽數據確保安全，有信譽的合作夥伴"
 
-#: templates/index.html:284
+#: templates/index.html:291
 msgid "Tech Stack"
 msgstr "Tech Stack"
 
-#: templates/index.html:353
+#: templates/index.html:360
 msgid "Roadmap"
 msgstr "路線圖"
 
-#: templates/index.html:359
+#: templates/index.html:366
 msgid "May 2017"
 msgstr "2017年5月"
 
-#: templates/index.html:361
+#: templates/index.html:368
 msgid "Idea conception and demo DApp development"
 msgstr "思想概念和演示DApp開發"
 
-#: templates/index.html:366
+#: templates/index.html:373
 msgid "September 2017"
 msgstr "2017年9月"
 
-#: templates/index.html:368
+#: templates/index.html:375
 msgid "Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released"
 msgstr "產品簡介</a>和<a href='/whitepaper'>白皮書</a>發布"
 
-#: templates/index.html:373
+#: templates/index.html:380
 msgid "December 2017"
 msgstr "2017年12月22日"
 
-#: templates/index.html:375
-msgid "Launch <a href='https://demo.originprotocol.com'>alpha</a> on Ethereum testnet"
+#: templates/index.html:382
+msgid ""
+"Launch <a href='https://demo.originprotocol.com'>alpha</a> on Ethereum "
+"testnet"
 msgstr "在Ethereum測試網上啟動<a href='https://demo.originprotocol.com'> alpha </a>"
 
-#: templates/index.html:380
+#: templates/index.html:387
 msgid "March 2018"
 msgstr "2016 年 3 月 23 日  "
 
-#: templates/index.html:382
+#: templates/index.html:389
 msgid "Public beta and community sale"
 msgstr "公開測試和社區銷售"
 
-#: templates/index.html:387
+#: templates/index.html:394
 msgid "Q3 2018"
 msgstr "第三季度2018年"
 
-#: templates/index.html:389
+#: templates/index.html:396
 msgid "Token distribution and launch of 3rd-party DApps"
 msgstr "令牌分發和第三方DApps的推出"
 
-#: templates/index.html:394
+#: templates/index.html:401
 msgid "2019"
 msgstr "2019"
 
-#: templates/index.html:396
+#: templates/index.html:403
 msgid "Fully decentralized services and governance"
 msgstr "完全分散的服務和治理"
 
-#: templates/index.html:422
+#: templates/index.html:429
 msgid "Join us in building the sharing economy of tomorrow"
 msgstr "加入我們，共建明天的共享經濟"
 
-#: templates/index.html:425
+#: templates/index.html:432
 msgid "Sign up for our mailing list and be first to learn of any Origin news!"
 msgstr "註冊我們的郵件列表，成為第一個學習任何Origin新聞的人！"
 
-#: templates/index.html:432
+#: templates/index.html:439
 msgid "Join the Community"
 msgstr "加入社區"
 
-#: templates/index.html:446
+#: templates/index.html:453
 msgid "Press"
 msgstr "按"
 
-#: templates/index.html:459
-msgid "If Airbnb were being started today, it would’ve been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
+#: templates/index.html:466
+msgid ""
+"If Airbnb were being started today, it would’ve been a peer-to-peer "
+"cooperative model based on a blockchain - Joey Krug, Augur"
 msgstr "如果Airbnb今天開始使用，它將會是基於區塊鏈的點對點合作模式 -  Joey Krug，Augur"
 
-#: templates/index.html:475
-msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
+#: templates/index.html:482
+msgid ""
+"Origin wants to change that, hoping to decentralize the sharing economy "
+"with Ethereum by creating a peer-to-peer network for transacting directly"
+" for just about anything."
 msgstr "Origin希望改變這種狀況，希望通過創建一個直接為任何事情進行交易的點對點網絡來與Ethereum分散經濟。"
 
 #: templates/navbar_dark.html:26 templates/navbar_light.html:26
@@ -294,8 +327,14 @@ msgid "Origin Protocol - Team"
 msgstr "起源協議 - 團隊"
 
 #: templates/presale.html:21
-msgid "<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced."
-msgstr "<strong>原產地預售的具體日期和詳細信息尚未公佈。</ strong>如果您有興趣參與Origin預售，並且希望隨著更多細節的公佈，請填寫此表格。"
+msgid ""
+"<strong>The exact date and details of the Origin presale have not yet "
+"been announced.</strong> Please fill out this form if you are interested "
+"in participating in the Origin presale and want to be updated as more "
+"details are announced."
+msgstr ""
+"<strong>原產地預售的具體日期和詳細信息尚未公佈。</ "
+"strong>如果您有興趣參與Origin預售，並且希望隨著更多細節的公佈，請填寫此表格。"
 
 #: templates/presale.html:66
 msgid "Interested in contributing?"
@@ -358,7 +397,10 @@ msgid "Important notice"
 msgstr "重要的提醒"
 
 #: templates/presale.html:403
-msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
+msgid ""
+" I understand the presale will be subject to United States regulations "
+"and securities laws and that submitting this form is NOT a guarantee of "
+"allocation."
 msgstr "我了解預售將受到美國法規和證券法律的約束，提交此表格不是分配的保證。"
 
 #: templates/team.html:16
@@ -366,7 +408,10 @@ msgid "Our Team"
 msgstr "我們的隊伍"
 
 #: templates/team.html:21
-msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
+msgid ""
+"Origin is a team of distributed entrepreneurs, engineers, and blockchain "
+"experts. Our mission is to enable the sharing economy on the "
+"decentralized web. We're hiring!"
 msgstr "Origin是由分佈式企業家，工程師和區塊鏈專家組成的團隊。我們的使命是在分散的網絡上實現共享經濟。我們正在招聘！"
 
 #: templates/team.html:46
@@ -378,11 +423,17 @@ msgid "Cofounder"
 msgstr "聯合創始人"
 
 #: templates/team.html:62
-msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
+msgid ""
+"Josh started coding at the age of 10. Prior to Origin, he co-founded "
+"three other venture-backed companies: EventVue, Torbit (acquired by "
+"Walmart Labs) &amp; Forage."
 msgstr "Josh在10歲時開始編碼。在Origin之前，他共同創辦了另外三家風險投資公司：EventVue，Torbit（被沃爾瑪實驗室收購）飼料。"
 
 #: templates/team.html:79
-msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
+msgid ""
+"Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki "
+"(acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and "
+"BS from Stanford."
 msgstr "Matt是YouTube的第三名（被Google收購），Qwiki的副總裁（被雅虎收購）和Bonobos（被沃爾瑪收購）。他擁有斯坦福大學的碩士和學士學位。"
 
 #: templates/team.html:93
@@ -390,11 +441,17 @@ msgid "Senior engineer"
 msgstr "高級工程師"
 
 #: templates/team.html:96
-msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
+msgid ""
+"Stan is a software architect with deep experience in game design and "
+"machine learning. Previously, he founded Lijit Networks (acquired by "
+"Federated Media)."
 msgstr "Stan是一名在遊戲設計和機器學習方面具有豐富經驗的軟件架構師。之前，他創立了Lijit Networks（由Federated Media收購）。"
 
 #: templates/team.html:113
-msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
+msgid ""
+"Andrew was the founder of four startups, including Startup Weekend, and "
+"has built global communities across dozens of countries. He was employee "
+"number 1 at TechStars."
 msgstr "安德魯是包括初創週末在內的四家創業公司的創始人，並在全球數十個國家建立了全球社區。他是TechStars的第一名員工。"
 
 #: templates/team.html:127
@@ -402,7 +459,10 @@ msgid "Partnerships"
 msgstr "合作夥伴"
 
 #: templates/team.html:130
-msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
+msgid ""
+"Coleman is an active cryptocurrency investor and real estate "
+"entrepreneur, owning and managing multiple Airbnb properties. He studied "
+"mathematics at Berkeley."
 msgstr "Coleman是一家積極的加密貨幣投資者和房地產企業家，擁有和管理多個Airbnb物業。他在伯克利學習數學。"
 
 #: templates/team.html:148
@@ -414,7 +474,10 @@ msgid "Product Designer"
 msgstr "產品設計師"
 
 #: templates/team.html:164
-msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
+msgid ""
+"Aure has deep experience in crafting products that delight users. He has "
+"designed experiences with top brands (Nike, Sony, Virgin) and Silicon "
+"Valley startups."
 msgstr "Aure在製作令用戶滿意的產品方面有著豐富的經驗。他設計了頂級品牌（耐克，索尼，維珍）和矽谷初創公司的經驗。"
 
 #: templates/team.html:178
@@ -422,7 +485,10 @@ msgid "Evangelist"
 msgstr "傳播者"
 
 #: templates/team.html:181
-msgid "Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group."
+msgid ""
+"Derek is a product executive that has built global marketing and ad "
+"technology business lines. He's held leadership positions at GroupM and "
+"Omnicom Media Group."
 msgstr "Derek是一名產品經理，負責建立全球營銷和廣告技術業務。他曾在GroupM和Omnicom Media Group擔任過領導職務。"
 
 #: templates/team.html:195
@@ -430,7 +496,10 @@ msgid "Engineer/BD"
 msgstr "工程師/ BD"
 
 #: templates/team.html:198
-msgid "Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube."
+msgid ""
+"Saureen is a serial entrepreneur and investor. He was cofounder and CTO "
+"of sharing economy marketplace InstaWork and 10th software engineer at "
+"YouTube."
 msgstr "Saureen是連續的企業家和投資者。他是YouTube共享經濟市場InstaWork和第十位軟件工程師的共同創始人兼首席技術官。"
 
 #: templates/team.html:212 templates/team.html:229
@@ -438,11 +507,17 @@ msgid "Engineer"
 msgstr "工程師"
 
 #: templates/team.html:215
-msgid "Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL."
+msgid ""
+"Ryan has 10+ years experience building and operating consumer-facing web "
+"applications and highly scalable B2B APIs. He is founder of Ramen and "
+"ChartURL."
 msgstr "Ryan擁有10年以上構建和運營面向消費者的Web應用程序和高度可擴展的B2B API的經驗。他是Ramen和ChartURL的創始人。"
 
 #: templates/team.html:232
-msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
+msgid ""
+"Daniel is a full stack, polyglot developer. He's worked on projects from "
+"assembly programming to architecting systems tracking billions of dollars"
+" of NGO spend worldwide."
 msgstr "丹尼爾是一個完整的，多語種的開發者。他正在從彙編程序設計到設計系統，跟踪全球數十億美元的非政府組織花費。"
 
 #: templates/team.html:246
@@ -450,7 +525,10 @@ msgid "Advisor/PR"
 msgstr "顧問/ PR"
 
 #: templates/team.html:249
-msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
+msgid ""
+"Addison is a communications and marketing specialist with a degree in "
+"Physics from UC Berkeley. He previously worked with the Ethereum "
+"Foundation and DEVCON1."
 msgstr "Addison是加州大學伯克利分校物理學學位的通信和營銷專家。他曾在以太坊基金會和DEVCON1工作。"
 
 #: templates/team.html:259
@@ -462,7 +540,10 @@ msgid "Advisor/Business Operations"
 msgstr "顧問/業務運營"
 
 #: templates/team.html:266
-msgid "Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group."
+msgid ""
+"Zing was Venture Partner and EIR at East Ventures. She has over a decade "
+"of investment and deal experience, having worked at Temasek Holdings and "
+"Capital Group."
 msgstr "Zing曾在East Ventures擔任Venture Partner和EIR。她擁有超過十年的投資和交易經驗，在淡馬錫控股和資本集團工作過。"
 
 #: templates/team.html:276
@@ -474,7 +555,10 @@ msgid "Advisor/International BD"
 msgstr "顧問/國際BD"
 
 #: templates/team.html:283
-msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
+msgid ""
+"Melody is founder of Spartan Group, a blockchain advisory and investment "
+"fund. She was an early investor in TenX and strategic advisor to Gifto "
+"and Appcoins."
 msgstr "美樂蒂是區塊鏈諮詢和投資基金Spartan Group的創始人。她是TenX的早期投資者，也是Gifto和Appcoins的戰略顧問。"
 
 #: templates/team.html:297 templates/team.html:314
@@ -482,11 +566,17 @@ msgid "Advisor"
 msgstr "顧問"
 
 #: templates/team.html:300
-msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
+msgid ""
+"Paul is a Partner at Pantera Capital. He is also an advisor to several "
+"highly successful cryptocurrency projects including Orchid Labs, Enigma "
+"and ICON."
 msgstr "Paul是Pantera Capital的合夥人。他還是幾個非常成功的加密貨幣項目的顧問，包括Orchid Labs，Enigma和ICON。"
 
 #: templates/team.html:317
-msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
+msgid ""
+"Joey is the co-founder of Augur, the world’s first decentralized "
+"prediction market and oracle system. He is a Co-Chief Investment Officer "
+"at Pantera Capital."
 msgstr "Joey是Augur的聯合創始人，它是世界上第一個分散的預測市場和oracle系統。他是Pantera Capital的聯合首席投資官。"
 
 #: templates/team.html:361

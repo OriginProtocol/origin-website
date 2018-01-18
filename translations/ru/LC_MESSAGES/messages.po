@@ -1,4 +1,4 @@
-# Translations template for PROJECT.
+# Russian translations for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
@@ -8,10 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-10 16:56-0800\n"
+"POT-Creation-Date: 2018-01-12 14:50-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +24,7 @@ msgstr ""
 msgid "Make new friends!"
 msgstr "Завести новых друзей!"
 
-#: templates/flashes.html:7 templates/index.html:94
+#: templates/flashes.html:7 templates/index.html:101
 msgid "Join Our Telegram"
 msgstr "Присоединяйтесь к нашей телеграмме"
 
@@ -37,13 +40,21 @@ msgstr "Присоединиться к нашему списку рассылк
 msgid "Want to contribute?"
 msgstr "Хотите внести свой вклад?"
 
-#: templates/flashes.html:14 templates/index.html:101
+#: templates/flashes.html:14 templates/index.html:108
 msgid "Join Our Slack"
 msgstr "Присоединяйтесь к нашему слабину"
 
 #: templates/footer.html:12
-msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network."
-msgstr "Origin строит завтрашнюю экономику обмена. Покупатели и продавцы смогут совершать сделки без посредников-посредников. Мы верим в снижение комиссий за транзакции, снижение цензуры и регулирования, а также предоставление ранним участникам сообщества доли в сети."
+msgid ""
+"Origin is building the sharing economy of tomorrow. Buyers and sellers "
+"will be able to transact without rent-seeking middlemen. We believe in "
+"lowering transaction fees, reducing censorship and regulation, and giving"
+" early participants in the community a stake in the network."
+msgstr ""
+"Origin строит завтрашнюю экономику обмена. Покупатели и продавцы смогут "
+"совершать сделки без посредников-посредников. Мы верим в снижение "
+"комиссий за транзакции, снижение цензуры и регулирования, а также "
+"предоставление ранним участникам сообщества доли в сети."
 
 #: templates/footer.html:15
 msgid "Origin, Inc."
@@ -120,162 +131,218 @@ msgstr "Вакансии (Мы нанимаем!)"
 msgid "845 Market St, #450A<br>San Francisco, CA 94103"
 msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
 
-#: templates/index.html:16
+#: templates/index.html:23
 msgid "The sharing economy without intermediaries"
 msgstr "Экономика обмена без посредников"
 
-#: templates/index.html:19
+#: templates/index.html:26
 msgid "Origin is a protocol for creating sharing economy marketplaces"
 msgstr "Origin - это протокол для создания рыночных рынков обмена"
 
-#: templates/index.html:21
+#: templates/index.html:28
 msgid "using the Ethereum blockchain and IPFS"
 msgstr "используя цепочку Ethereum и IPFS"
 
-#: templates/index.html:61
+#: templates/index.html:68
 msgid "The Origin platform"
 msgstr "Платформа Origin"
 
-#: templates/index.html:64
-msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
-msgstr "Мы предоставляем разработчикам и предприятиям возможность создавать децентрализованные рынки на блокчейне. Наш протокол упрощает создание и управление списками для дробного использования активов и услуг. Покупатели и продавцы могут находить друг друга, просматривать списки, делать заказы, оставлять рейтинги и обзоры и многое другое."
+#: templates/index.html:71
+msgid ""
+"We empower developers and businesses to build decentralized marketplaces "
+"on the blockchain. Our protocol makes it easy to create and manage "
+"listings for the fractional usage of assets and services. Buyers and "
+"sellers can discover each other, browse listings, make bookings, leave "
+"ratings and reviews, and much more."
+msgstr ""
+"Мы предоставляем разработчикам и предприятиям возможность создавать "
+"децентрализованные рынки на блокчейне. Наш протокол упрощает создание и "
+"управление списками для дробного использования активов и услуг. "
+"Покупатели и продавцы могут находить друг друга, просматривать списки, "
+"делать заказы, оставлять рейтинги и обзоры и многое другое."
 
-#: templates/index.html:69
+#: templates/index.html:76
 msgid "Read the Product Brief"
 msgstr "Прочтите краткое описание продукта"
 
-#: templates/index.html:86
+#: templates/index.html:93
 msgid "Partners building on Origin"
 msgstr "Партнеры, основанные на Origin"
 
-#: templates/index.html:89
+#: templates/index.html:96
 msgid "We'll be announcing our partners soon!"
 msgstr "Мы скоро объявим наших партнеров!"
 
-#: templates/index.html:144
+#: templates/index.html:151
 msgid "Build your business on Origin"
 msgstr "Создайте свой бизнес на Origin"
 
-#: templates/index.html:147
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web. Get in touch to learn more."
-msgstr "Независимо от того, являетесь ли вы внештатным фотографом, владельцем квартиры, поставщиком bikeshare или существующим экономическим бизнесом обмена, Origin упрощает работу в децентрализованной сети. Свяжитесь с нами, чтобы узнать больше."
+#: templates/index.html:154
+msgid ""
+"Whether you are a freelance photographer, apartment owner, bikeshare "
+"supplier, or existing sharing economy business, Origin makes it easy to "
+"do business on the decentralized web. Get in touch to learn more."
+msgstr ""
+"Независимо от того, являетесь ли вы внештатным фотографом, владельцем "
+"квартиры, поставщиком bikeshare или существующим экономическим бизнесом "
+"обмена, Origin упрощает работу в децентрализованной сети. Свяжитесь с "
+"нами, чтобы узнать больше."
 
-#: templates/index.html:152
+#: templates/index.html:159
 msgid "Try the Demo"
 msgstr "Попробуйте демонстрацию"
 
-#: templates/index.html:159
+#: templates/index.html:166
 msgid "View Github"
 msgstr "Просмотр Github"
 
-#: templates/index.html:172
+#: templates/index.html:179
 msgid "It's time to replace rent-seeking middlemen"
 msgstr "Пришло время заменить посредников, ищущих ренту"
 
-#: templates/index.html:175
+#: templates/index.html:182
 #, python-format
-msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "Используя возможности блок-цепи Ethereum, списки управляются с помощью безопасной и прозрачной системы, которая действует как нейтральная третья сторона. Покупатели и продавцы разделяют комиссионные сборы в размере 20-30 %% которые в настоящее время идут на такие компании, как Uber, Airbnb, Fiverr и Getaround."
+msgid ""
+"Harnessing the power of the Ethereum blockchain, listings are managed via"
+" a secure and transparent system that acts as a neutral third party. "
+"Buyers and sellers share the 20-30%% transaction fees that currently go "
+"to companies like Uber, Airbnb, Fiverr, and Getaround."
+msgstr ""
+"Используя возможности блок-цепи Ethereum, списки управляются с помощью "
+"безопасной и прозрачной системы, которая действует как нейтральная третья"
+" сторона. Покупатели и продавцы разделяют комиссионные сборы в размере "
+"20-30 %% которые в настоящее время идут на такие компании, как Uber, "
+"Airbnb, Fiverr и Getaround."
 
-#: templates/index.html:180
+#: templates/index.html:187
 msgid "Read the Whitepaper"
 msgstr "Прочтите документ"
 
-#: templates/index.html:234
-msgid "Smart contracts enable secure and reliable payments directly from one party to another"
-msgstr "Смарт-контракты обеспечивают безопасные и надежные платежи непосредственно от одной стороны к другой"
+#: templates/index.html:241
+msgid ""
+"Smart contracts enable secure and reliable payments directly from one "
+"party to another"
+msgstr ""
+"Смарт-контракты обеспечивают безопасные и надежные платежи "
+"непосредственно от одной стороны к другой"
 
-#: templates/index.html:245
-msgid "Protocol schemas support hundreds of listing types, including custom verticals"
-msgstr "Схемы протоколов поддерживают сотни типов листингов, включая пользовательские вертикали"
+#: templates/index.html:252
+msgid ""
+"Protocol schemas support hundreds of listing types, including custom "
+"verticals"
+msgstr ""
+"Схемы протоколов поддерживают сотни типов листингов, включая "
+"пользовательские вертикали"
 
-#: templates/index.html:256
+#: templates/index.html:263
 msgid "Open and shared data encourages innovation by developers and businesses"
 msgstr "Открытые и общие данные поощряют инновации разработчиков и предприятий"
 
-#: templates/index.html:267
-msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
-msgstr "Данные проверки подлинности и данные о репутации на блок-цепочке обеспечивают надежных, уважаемых партнеров"
+#: templates/index.html:274
+msgid ""
+"Identity verification and reputation data on the blockchain ensures safe,"
+" reputable partners"
+msgstr ""
+"Данные проверки подлинности и данные о репутации на блок-цепочке "
+"обеспечивают надежных, уважаемых партнеров"
 
-#: templates/index.html:284
+#: templates/index.html:291
 msgid "Tech Stack"
 msgstr "Технический стек"
 
-#: templates/index.html:353
+#: templates/index.html:360
 msgid "Roadmap"
 msgstr "Дорожная карта"
 
-#: templates/index.html:359
+#: templates/index.html:366
 msgid "May 2017"
 msgstr "Май 2017 г."
 
-#: templates/index.html:361
+#: templates/index.html:368
 msgid "Idea conception and demo DApp development"
 msgstr "Идея концепции и демо DApp развития"
 
-#: templates/index.html:366
+#: templates/index.html:373
 msgid "September 2017"
 msgstr "Сентябрь 2017 года"
 
-#: templates/index.html:368
+#: templates/index.html:375
 msgid "Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released"
-msgstr "Краткое описание продукта </a> и <a href='/whitepaper'> Технический документ </a>"
+msgstr ""
+"Краткое описание продукта </a> и <a href='/whitepaper'> Технический "
+"документ </a>"
 
-#: templates/index.html:373
+#: templates/index.html:380
 msgid "December 2017"
 msgstr "декабрь 2017 года"
 
-#: templates/index.html:375
-msgid "Launch <a href='https://demo.originprotocol.com'>alpha</a> on Ethereum testnet"
-msgstr "Запустите <a href='https://demo.originprotocol.com'> альфа </a> в тестовой сети Ethereum"
+#: templates/index.html:382
+msgid ""
+"Launch <a href='https://demo.originprotocol.com'>alpha</a> on Ethereum "
+"testnet"
+msgstr ""
+"Запустите <a href='https://demo.originprotocol.com'> альфа </a> в "
+"тестовой сети Ethereum"
 
-#: templates/index.html:380
+#: templates/index.html:387
 msgid "March 2018"
 msgstr "Март 2018 г."
 
-#: templates/index.html:382
+#: templates/index.html:389
 msgid "Public beta and community sale"
 msgstr "Публичная бета-версия и продажа сообщества"
 
-#: templates/index.html:387
+#: templates/index.html:394
 msgid "Q3 2018"
 msgstr "Q3 2018"
 
-#: templates/index.html:389
+#: templates/index.html:396
 msgid "Token distribution and launch of 3rd-party DApps"
 msgstr "Распределение токенов и запуск сторонних DApps"
 
-#: templates/index.html:394
+#: templates/index.html:401
 msgid "2019"
 msgstr "2019"
 
-#: templates/index.html:396
+#: templates/index.html:403
 msgid "Fully decentralized services and governance"
 msgstr "Полностью децентрализованные услуги и управление"
 
-#: templates/index.html:422
+#: templates/index.html:429
 msgid "Join us in building the sharing economy of tomorrow"
 msgstr "Присоединяйтесь к нам в создании экономики завтрашнего дня"
 
-#: templates/index.html:425
-msgid "Sign up for our mailing list and be first to learn of any Origin news!"
-msgstr "Подпишитесь на нашу рассылку и сначала узнайте о любых новостях о происхождении!"
-
 #: templates/index.html:432
+msgid "Sign up for our mailing list and be first to learn of any Origin news!"
+msgstr ""
+"Подпишитесь на нашу рассылку и сначала узнайте о любых новостях о "
+"происхождении!"
+
+#: templates/index.html:439
 msgid "Join the Community"
 msgstr "Присоединиться к сообществу"
 
-#: templates/index.html:446
+#: templates/index.html:453
 msgid "Press"
 msgstr "Нажмите"
 
-#: templates/index.html:459
-msgid "If Airbnb were being started today, it would’ve been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
-msgstr "Если Airbnb запускается сегодня, это была бы модель однорангового сотрудничества, основанная на блочной цепочке - Joey Krug, Augur"
+#: templates/index.html:466
+msgid ""
+"If Airbnb were being started today, it would’ve been a peer-to-peer "
+"cooperative model based on a blockchain - Joey Krug, Augur"
+msgstr ""
+"Если Airbnb запускается сегодня, это была бы модель однорангового "
+"сотрудничества, основанная на блочной цепочке - Joey Krug, Augur"
 
-#: templates/index.html:475
-msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
-msgstr "Origin хочет изменить это, надеясь децентрализовать экономику обмена с Ethereum, создав одноранговую сеть для прямого взаимодействия практически для чего угодно."
+#: templates/index.html:482
+msgid ""
+"Origin wants to change that, hoping to decentralize the sharing economy "
+"with Ethereum by creating a peer-to-peer network for transacting directly"
+" for just about anything."
+msgstr ""
+"Origin хочет изменить это, надеясь децентрализовать экономику обмена с "
+"Ethereum, создав одноранговую сеть для прямого взаимодействия практически"
+" для чего угодно."
 
 #: templates/navbar_dark.html:26 templates/navbar_light.html:26
 msgid "Blog"
@@ -294,8 +361,16 @@ msgid "Origin Protocol - Team"
 msgstr "Протокол происхождения - команда"
 
 #: templates/presale.html:21
-msgid "<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced."
-msgstr "<strong> Точная дата и сведения о предпродаже Origin пока не объявлены. </ strong> Пожалуйста, заполните эту форму, если вы заинтересованы в участии в предпродажной презентации и хотите обновиться по мере того, как будут объявлены более подробные сведения."
+msgid ""
+"<strong>The exact date and details of the Origin presale have not yet "
+"been announced.</strong> Please fill out this form if you are interested "
+"in participating in the Origin presale and want to be updated as more "
+"details are announced."
+msgstr ""
+"<strong> Точная дата и сведения о предпродаже Origin пока не объявлены. "
+"</ strong> Пожалуйста, заполните эту форму, если вы заинтересованы в "
+"участии в предпродажной презентации и хотите обновиться по мере того, как"
+" будут объявлены более подробные сведения."
 
 #: templates/presale.html:66
 msgid "Interested in contributing?"
@@ -347,7 +422,9 @@ msgstr "гражданство"
 
 #: templates/presale.html:390
 msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
-msgstr "<strong> ETH или адрес BTC, из которого вы планируете отправлять сообщения </ strong> (необязательно)"
+msgstr ""
+"<strong> ETH или адрес BTC, из которого вы планируете отправлять "
+"сообщения </ strong> (необязательно)"
 
 #: templates/presale.html:395
 msgid "<strong>Anything else we should know?</strong> (optional)"
@@ -358,16 +435,28 @@ msgid "Important notice"
 msgstr "Важное примечание"
 
 #: templates/presale.html:403
-msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
-msgstr " Я понимаю, что предпродажа будет регулироваться законодательством США и законами о ценных бумагах, и что представление этой формы НЕ является гарантией распределения."
+msgid ""
+" I understand the presale will be subject to United States regulations "
+"and securities laws and that submitting this form is NOT a guarantee of "
+"allocation."
+msgstr ""
+" Я понимаю, что предпродажа будет регулироваться законодательством США и "
+"законами о ценных бумагах, и что представление этой формы НЕ является "
+"гарантией распределения."
 
 #: templates/team.html:16
 msgid "Our Team"
 msgstr "Наша команда"
 
 #: templates/team.html:21
-msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
-msgstr "Origin - это команда распределенных предпринимателей, инженеров и программистов. Наша миссия состоит в том, чтобы обеспечить совместную экономию на децентрализованной сети. Мы нанимаем!"
+msgid ""
+"Origin is a team of distributed entrepreneurs, engineers, and blockchain "
+"experts. Our mission is to enable the sharing economy on the "
+"decentralized web. We're hiring!"
+msgstr ""
+"Origin - это команда распределенных предпринимателей, инженеров и "
+"программистов. Наша миссия состоит в том, чтобы обеспечить совместную "
+"экономию на децентрализованной сети. Мы нанимаем!"
 
 #: templates/team.html:46
 msgid "Core Team"
@@ -378,32 +467,62 @@ msgid "Cofounder"
 msgstr "Соучредитель"
 
 #: templates/team.html:62
-msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
-msgstr "Джош начал кодирование в возрасте 10 лет. До Origin он основал три других венчурные компании: EventVue, Torbit (приобретенные Walmart Labs) и amp; Корма."
+msgid ""
+"Josh started coding at the age of 10. Prior to Origin, he co-founded "
+"three other venture-backed companies: EventVue, Torbit (acquired by "
+"Walmart Labs) &amp; Forage."
+msgstr ""
+"Джош начал кодирование в возрасте 10 лет. До Origin он основал три других"
+" венчурные компании: EventVue, Torbit (приобретенные Walmart Labs) и amp;"
+" Корма."
 
 #: templates/team.html:79
-msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
-msgstr "Мэтт был 3-м PM на YouTube (приобретенный Google) и вице-премьер в Qwiki (приобретенный Yahoo) и Bonobos (приобретенный Walmart). У него есть MS и BS из Стэнфорда."
+msgid ""
+"Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki "
+"(acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and "
+"BS from Stanford."
+msgstr ""
+"Мэтт был 3-м PM на YouTube (приобретенный Google) и вице-премьер в Qwiki "
+"(приобретенный Yahoo) и Bonobos (приобретенный Walmart). У него есть MS и"
+" BS из Стэнфорда."
 
 #: templates/team.html:93
 msgid "Senior engineer"
 msgstr "Старший инженер"
 
 #: templates/team.html:96
-msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
-msgstr "Стэн - архитектор программного обеспечения с глубоким опытом разработки игр и машинного обучения. Ранее он основал Lijit Networks (приобрел Federated Media)."
+msgid ""
+"Stan is a software architect with deep experience in game design and "
+"machine learning. Previously, he founded Lijit Networks (acquired by "
+"Federated Media)."
+msgstr ""
+"Стэн - архитектор программного обеспечения с глубоким опытом разработки "
+"игр и машинного обучения. Ранее он основал Lijit Networks (приобрел "
+"Federated Media)."
 
 #: templates/team.html:113
-msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
-msgstr "Эндрю был основателем четырех стартапов, в том числе Startup Weekend, и создал глобальные сообщества в десятках стран. Он был сотрудником № 1 в TechStars."
+msgid ""
+"Andrew was the founder of four startups, including Startup Weekend, and "
+"has built global communities across dozens of countries. He was employee "
+"number 1 at TechStars."
+msgstr ""
+"Эндрю был основателем четырех стартапов, в том числе Startup Weekend, и "
+"создал глобальные сообщества в десятках стран. Он был сотрудником № 1 в "
+"TechStars."
 
 #: templates/team.html:127
 msgid "Partnerships"
 msgstr "Партнёрства"
 
 #: templates/team.html:130
-msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
-msgstr "Coleman является активным инвестором в области криптовалюты и предпринимателем недвижимости, владеющим и управляющим несколькими объектами Airbnb. Он изучал математику в Беркли."
+msgid ""
+"Coleman is an active cryptocurrency investor and real estate "
+"entrepreneur, owning and managing multiple Airbnb properties. He studied "
+"mathematics at Berkeley."
+msgstr ""
+"Coleman является активным инвестором в области криптовалюты и "
+"предпринимателем недвижимости, владеющим и управляющим несколькими "
+"объектами Airbnb. Он изучал математику в Беркли."
 
 #: templates/team.html:148
 msgid "Contributing Team and Advisors"
@@ -414,44 +533,80 @@ msgid "Product Designer"
 msgstr "Дизайнер продуктов"
 
 #: templates/team.html:164
-msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
-msgstr "Aure имеет большой опыт в разработке продуктов, которые восхищают пользователей. Он разработал опыт работы с топ-брендами (Nike, Sony, Virgin) и стартапами Силиконовой долины."
+msgid ""
+"Aure has deep experience in crafting products that delight users. He has "
+"designed experiences with top brands (Nike, Sony, Virgin) and Silicon "
+"Valley startups."
+msgstr ""
+"Aure имеет большой опыт в разработке продуктов, которые восхищают "
+"пользователей. Он разработал опыт работы с топ-брендами (Nike, Sony, "
+"Virgin) и стартапами Силиконовой долины."
 
 #: templates/team.html:178
 msgid "Evangelist"
 msgstr "евангелист"
 
 #: templates/team.html:181
-msgid "Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group."
-msgstr "Дерек - руководитель продукта, который создал глобальные маркетинговые и рекламные бизнес-направления. Он занимал руководящие должности в GroupM и Omnicom Media Group."
+msgid ""
+"Derek is a product executive that has built global marketing and ad "
+"technology business lines. He's held leadership positions at GroupM and "
+"Omnicom Media Group."
+msgstr ""
+"Дерек - руководитель продукта, который создал глобальные маркетинговые и "
+"рекламные бизнес-направления. Он занимал руководящие должности в GroupM и"
+" Omnicom Media Group."
 
 #: templates/team.html:195
 msgid "Engineer/BD"
 msgstr "Инженер / BD"
 
 #: templates/team.html:198
-msgid "Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube."
-msgstr "Саурин является серийным предпринимателем и инвестором. Он был соучредителем и техническим директором по обмену экономическим рынком InstaWork и 10-м разработчиком программного обеспечения на YouTube."
+msgid ""
+"Saureen is a serial entrepreneur and investor. He was cofounder and CTO "
+"of sharing economy marketplace InstaWork and 10th software engineer at "
+"YouTube."
+msgstr ""
+"Саурин является серийным предпринимателем и инвестором. Он был "
+"соучредителем и техническим директором по обмену экономическим рынком "
+"InstaWork и 10-м разработчиком программного обеспечения на YouTube."
 
 #: templates/team.html:212 templates/team.html:229
 msgid "Engineer"
 msgstr "инженер"
 
 #: templates/team.html:215
-msgid "Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL."
-msgstr "Райан имеет более чем 10-летний опыт создания и эксплуатации пользовательских веб-приложений и высокомасштабируемых B2B-интерфейсов. Он является основателем Ramen и ChartURL."
+msgid ""
+"Ryan has 10+ years experience building and operating consumer-facing web "
+"applications and highly scalable B2B APIs. He is founder of Ramen and "
+"ChartURL."
+msgstr ""
+"Райан имеет более чем 10-летний опыт создания и эксплуатации "
+"пользовательских веб-приложений и высокомасштабируемых B2B-интерфейсов. "
+"Он является основателем Ramen и ChartURL."
 
 #: templates/team.html:232
-msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
-msgstr "Даниэль - полный стек, разработчик полиглотов. Он работал над проектами по сборочному программированию и архитектуре, отслеживая миллиарды долларов НПО во всем мире."
+msgid ""
+"Daniel is a full stack, polyglot developer. He's worked on projects from "
+"assembly programming to architecting systems tracking billions of dollars"
+" of NGO spend worldwide."
+msgstr ""
+"Даниэль - полный стек, разработчик полиглотов. Он работал над проектами "
+"по сборочному программированию и архитектуре, отслеживая миллиарды "
+"долларов НПО во всем мире."
 
 #: templates/team.html:246
 msgid "Advisor/PR"
 msgstr "Советник / PR"
 
 #: templates/team.html:249
-msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
-msgstr "Эддисон - специалист по коммуникациям и маркетингу со степенью в области физики из Калифорнийского университета в Беркли. Ранее он работал с Фондом Ethereum и DEVCON1."
+msgid ""
+"Addison is a communications and marketing specialist with a degree in "
+"Physics from UC Berkeley. He previously worked with the Ethereum "
+"Foundation and DEVCON1."
+msgstr ""
+"Эддисон - специалист по коммуникациям и маркетингу со степенью в области "
+"физики из Калифорнийского университета в Беркли. Ранее он работал с "
+"Фондом Ethereum и DEVCON1."
 
 #: templates/team.html:259
 msgid "Zing Yang"
@@ -462,8 +617,14 @@ msgid "Advisor/Business Operations"
 msgstr "Советник / Бизнес-операции"
 
 #: templates/team.html:266
-msgid "Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group."
-msgstr "Zing был венчурным партнером и EIR в East Ventures. У нее более десяти лет инвестиций и опыта работы, работая в Temasek Holdings и Capital Group."
+msgid ""
+"Zing was Venture Partner and EIR at East Ventures. She has over a decade "
+"of investment and deal experience, having worked at Temasek Holdings and "
+"Capital Group."
+msgstr ""
+"Zing был венчурным партнером и EIR в East Ventures. У нее более десяти "
+"лет инвестиций и опыта работы, работая в Temasek Holdings и Capital "
+"Group."
 
 #: templates/team.html:276
 msgid "Melody He"
@@ -474,20 +635,38 @@ msgid "Advisor/International BD"
 msgstr "Советник / Международный BD"
 
 #: templates/team.html:283
-msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
-msgstr "Мелодия является основателем спартанской группы, консультативного и инвестиционного фонда с цепочкой. Она была ранним инвестором в TenX и стратегическим консультантом компании Gifto и Appcoins."
+msgid ""
+"Melody is founder of Spartan Group, a blockchain advisory and investment "
+"fund. She was an early investor in TenX and strategic advisor to Gifto "
+"and Appcoins."
+msgstr ""
+"Мелодия является основателем спартанской группы, консультативного и "
+"инвестиционного фонда с цепочкой. Она была ранним инвестором в TenX и "
+"стратегическим консультантом компании Gifto и Appcoins."
 
 #: templates/team.html:297 templates/team.html:314
 msgid "Advisor"
 msgstr "советник"
 
 #: templates/team.html:300
-msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
-msgstr "Пол является партнером Pantera Capital. Он также является советником нескольких очень успешных проектов с криптовалютами, включая Orchid Labs, Enigma и ICON."
+msgid ""
+"Paul is a Partner at Pantera Capital. He is also an advisor to several "
+"highly successful cryptocurrency projects including Orchid Labs, Enigma "
+"and ICON."
+msgstr ""
+"Пол является партнером Pantera Capital. Он также является советником "
+"нескольких очень успешных проектов с криптовалютами, включая Orchid Labs,"
+" Enigma и ICON."
 
 #: templates/team.html:317
-msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
-msgstr "Джои является соучредителем Augur, первого в мире децентрализованного рынка прогнозов и системы оракула. Он является со-руководителем по инвестициям в Pantera Capital."
+msgid ""
+"Joey is the co-founder of Augur, the world’s first decentralized "
+"prediction market and oracle system. He is a Co-Chief Investment Officer "
+"at Pantera Capital."
+msgstr ""
+"Джои является соучредителем Augur, первого в мире децентрализованного "
+"рынка прогнозов и системы оракула. Он является со-руководителем по "
+"инвестициям в Pantera Capital."
 
 #: templates/team.html:361
 msgid "Investors"
