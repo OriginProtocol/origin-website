@@ -13,7 +13,7 @@ WHITEPAPER_URL = BASE_URL + '/whitepaper'
 DEMO_DAPP_URL = 'https://demo.originprotocol.com'
 
 GITHUB_URL = 'https://github.com/originprotocol'
-SLACK_URL = 'http://slack.originprotocol.com/'
+SLACK_URL = 'https://slack.originprotocol.com/'
 TELEGRAM_URL = 'https://t.me/originprotocol'
 TWITTER_URL = 'https://twitter.com/originprotocol'
 FACEBOOK_URL = 'https://www.facebook.com/originprotocol'

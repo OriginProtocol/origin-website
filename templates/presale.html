@@ -79,7 +79,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="accredited"><strong>{{gettext("Are you an an accredited investor?")}}</strong> (<a id="huh" href="javascript:void(0)">Huh?</a>)</label><br>
+                  <label for="accredited"><strong>{{gettext("Are you an an accredited investor?")}}</strong>
+                  (<a id="huh" href="javascript:alertify.log(document.getElementById('accredited_popup').innerText)">{{gettext("Huh?")}}</a>)</label><br>
+                  <div style="display:none" id="accredited_popup">{{gettext("An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.")}}</div>
 
                 <div class="form-check form-check-inline">
                   <label class="form-check-label">

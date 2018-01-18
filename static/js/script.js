@@ -21,10 +21,6 @@ $("#presale").submit(function(event) {
   'json');
 });
 
-$("#huh").click(function() {
-  alertify.log('An accredited investor must have a net worth of at least $1,000,000, excluding the value of one\'s primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)','default',0);
-});
-
 $(function() {
   $(".dropdown-menu a").click(function() {
     $("input[name='desired_allocation_currency']").val($(this).text());
