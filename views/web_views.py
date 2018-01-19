@@ -1,4 +1,4 @@
-from flask import jsonify, redirect, render_template, request, flash, session
+from flask import jsonify, redirect, render_template, request, flash, session, g, url_for
 
 from app import app
 from config import constants
@@ -19,18 +19,36 @@ def beforeRequest():
         if not request.url.startswith('https'):
             return redirect(request.url.replace('http', 'https', 1))
 
-@app.route('/')
-def index():
+'''            
+@app.url_defaults
+def add_language_code(endpoint, values):
+    if 'lang_code' in values or not g.lang_code:
+        print("this aint working!")
+        return
+    if app.url_map.is_endpoint_expecting(endpoint, 'lang_code'):
+        print("second if result")
+        values['lang_code'] = g.lang_code
+
+@app.url_value_preprocessor
+def pull_lang_code(endpoint, values):
+    g.lang_code = values.pop('lang_code', None)
+'''
+
+@app.route('/<lang_code>')
+def index(lang_code):
+    g.lang_code = lang_code
     flash('telegram')
     return render_template('index.html')
 
-@app.route('/team')
-def team():
+@app.route('/<lang_code>/team')
+def team(lang_code):
+    g.lang_code = lang_code
     flash('slack')
     return render_template('team.html')
 
-@app.route('/presale')
-def presale():
+@app.route('/<lang_code>/presale')
+def presale(lang_code):
+    g.lang_code = lang_code
     return render_template('presale.html')
 
 @app.route('/whitepaper')
@@ -89,7 +107,7 @@ def fullcontact_webhook():
 @app.route('/language/<language>')
 def set_language(language=None):
     session['language'] = language
-    return redirect('/')
+    return redirect(url_for('index', lang_code=language))
 
 @app.errorhandler(404)
 def page_not_found(e):
