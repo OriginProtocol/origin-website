@@ -88,3 +88,36 @@ def send_one_off(email_type):
         for e in db_models.EmailList.query.all():
             print e.email
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
+
+
+def build_interest(name, company_name, email, website, note):
+
+    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return gettext('Please enter a valid email address')
+
+    if website and not re.match(r"(^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$)", website):
+        return gettext('Please enter a valid website address')
+
+    try:
+        me = db_models.Interest()
+        me.name = name
+        me.company_name = company_name
+        me.email = email
+        me.website = website
+        me.note = note
+        db.session.add(me)
+        db.session.commit()
+    except Exception as e:
+        print (e)
+        return gettext('Ooops! Something went wrong.')
+
+    message = "Name: %s<br>Company Name: %s<br>Email: %s<br>Website: %s<br>Note: %s" % (name, company_name,
+                                                                                        email, website, note)
+
+    email_types.send_email_type('build_on_origin', DEFAULT_SENDER, email)
+
+    sgw.notify_admins(message,
+                      subject="{name}({company_name}) is interested in building on Origin".format(name=name,
+                                                                                                  company_name=company_name))
+
+    return gettext('Thanks! We\'ll be in touch soon.')

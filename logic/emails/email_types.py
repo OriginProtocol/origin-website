@@ -15,7 +15,10 @@ EMAILS = {
     },
     'demo_dapp_announcement': {
         'subject': 'Origin Demo DApp is now live on testnet'
-    }
+    },
+    'build_on_origin': {
+        'subject': 'Thanks for your interest in Origin!'
+    },
 }
 
 def send_email_type(email_type, from_email, to_email):
