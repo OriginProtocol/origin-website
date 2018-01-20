@@ -1,13 +1,14 @@
-# Translations template for Origin Protocol Website.
-# This file is distributed under the same license as the Origin Protocol Website project.
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-# This is 2nd rev of .pot file, including some strings that were hidden in JS files
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.2\n"
-"Report-Msgid-Bugs-To: stan@originprotocol.com\n"
-"POT-Creation-Date: 2018-01-17 17:06-0700\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-01-20 10:52-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:35
+#: logic/emails/mailing_list.py:96
 msgid "Please enter a valid email address"
 msgstr ""
 
@@ -28,11 +30,11 @@ msgstr ""
 msgid "Thanks for signing up!"
 msgstr ""
 
-#: logic/emails/mailing_list.py:52
+#: logic/emails/mailing_list.py:52 logic/emails/mailing_list.py:112
 msgid "Ooops! Something went wrong."
 msgstr ""
 
-#: logic/emails/mailing_list.py:64
+#: logic/emails/mailing_list.py:64 logic/emails/mailing_list.py:123
 msgid "Thanks! We'll be in touch soon."
 msgstr ""
 
@@ -42,6 +44,55 @@ msgstr ""
 
 #: logic/emails/mailing_list.py:79
 msgid "You have been unsubscribed"
+msgstr ""
+
+#: logic/emails/mailing_list.py:99
+msgid "Please enter a valid website address"
+msgstr ""
+
+#: templates/build_on_origin.html:3
+msgid "The sharing economy without intermediaries: Build on Origin"
+msgstr ""
+
+#: templates/build_on_origin.html:5
+msgid "Origin Protocol - Build on Origin"
+msgstr ""
+
+#: templates/build_on_origin.html:16
+msgid "Build on Origin"
+msgstr ""
+
+#: templates/build_on_origin.html:21
+msgid "<strong>Teams all over the world are building on Origin's protocols. We're looking for more amazing people to join our mission.</strong> Whether you're an existing blockchain company or a traditional marketplace thinking about the blockchain, we'd love to hear from you! Fill out the form below and we'll get back to you shortly."
+msgstr ""
+
+#: templates/build_on_origin.html:66
+msgid "Interested in building?"
+msgstr ""
+
+#: templates/build_on_origin.html:72 templates/build_on_origin.html:73
+msgid "Name"
+msgstr ""
+
+#: templates/build_on_origin.html:77 templates/build_on_origin.html:78
+msgid "Company"
+msgstr ""
+
+#: templates/build_on_origin.html:82 templates/build_on_origin.html:83
+#: templates/presale.html:77 templates/presale.html:78
+msgid "Email"
+msgstr ""
+
+#: templates/build_on_origin.html:87 templates/build_on_origin.html:88
+msgid "Website"
+msgstr ""
+
+#: templates/build_on_origin.html:92 templates/presale.html:397
+msgid "<strong>Anything else we should know?</strong> (optional)"
+msgstr ""
+
+#: templates/build_on_origin.html:96 templates/presale.html:411
+msgid "Submit"
 msgstr ""
 
 #: templates/flashes.html:7
@@ -180,7 +231,11 @@ msgid "Build your business on Origin"
 msgstr ""
 
 #: templates/index.html:138
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web. Get in touch to learn more."
+msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
+msgstr ""
+
+#: templates/index.html:138
+msgid "Get in touch to learn more."
 msgstr ""
 
 #: templates/index.html:143
@@ -300,8 +355,16 @@ msgstr ""
 msgid "If Airbnb were being started today, it would’ve been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
 msgstr ""
 
-#: templates/index.html:466
+#: templates/index.html:467
+msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
+msgstr ""
+
+#: templates/index.html:484
 msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
+msgstr ""
+
+#: templates/index.html:501
+msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
 msgstr ""
 
 #: templates/navbar_dark.html:26 templates/navbar_light.html:26
@@ -312,12 +375,12 @@ msgstr ""
 msgid "Demo"
 msgstr ""
 
-#: templates/presale.html:3 templates/team.html:3
-msgid "The sharing economy without intermediaries: Origin Protocol Team"
+#: templates/presale.html:3
+msgid "The sharing economy without intermediaries: Origin Protocol Presale"
 msgstr ""
 
-#: templates/presale.html:5 templates/team.html:5
-msgid "Origin Protocol - Team"
+#: templates/presale.html:5
+msgid "Origin Protocol - Presale"
 msgstr ""
 
 #: templates/presale.html:21
@@ -332,10 +395,6 @@ msgstr ""
 msgid "Full Name"
 msgstr ""
 
-#: templates/presale.html:77 templates/presale.html:78
-msgid "Email"
-msgstr ""
-
 #: templates/presale.html:82
 msgid "Are you an an accredited investor?"
 msgstr ""
@@ -345,7 +404,7 @@ msgid "Huh?"
 msgstr ""
 
 #: templates/presale.html:84
-msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married."
+msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
 msgstr ""
 
 #: templates/presale.html:88
@@ -384,16 +443,20 @@ msgstr ""
 msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
 msgstr ""
 
-#: templates/presale.html:397
-msgid "<strong>Anything else we should know?</strong> (optional)"
-msgstr ""
-
 #: templates/presale.html:402
 msgid "Important notice"
 msgstr ""
 
 #: templates/presale.html:405
 msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
+msgstr ""
+
+#: templates/team.html:3
+msgid "The sharing economy without intermediaries: Origin Protocol Team"
+msgstr ""
+
+#: templates/team.html:5
+msgid "Origin Protocol - Team"
 msgstr ""
 
 #: templates/team.html:16
@@ -440,8 +503,16 @@ msgstr ""
 msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr ""
 
+#: templates/team.html:147
+msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
+msgstr ""
+
 #: templates/team.html:165
 msgid "Contributing Team and Advisors"
+msgstr ""
+
+#: templates/team.html:174
+msgid "Aure Gimon"
 msgstr ""
 
 #: templates/team.html:178
@@ -452,12 +523,20 @@ msgstr ""
 msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
 msgstr ""
 
+#: templates/team.html:191
+msgid "Derek Kan"
+msgstr ""
+
 #: templates/team.html:195
 msgid "Evangelist"
 msgstr ""
 
 #: templates/team.html:198
 msgid "Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group."
+msgstr ""
+
+#: templates/team.html:208
+msgid "Saureen Shah"
 msgstr ""
 
 #: templates/team.html:212
@@ -468,6 +547,10 @@ msgstr ""
 msgid "Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube."
 msgstr ""
 
+#: templates/team.html:225
+msgid "Ryan Angilly"
+msgstr ""
+
 #: templates/team.html:229 templates/team.html:246
 msgid "Engineer"
 msgstr ""
@@ -476,8 +559,16 @@ msgstr ""
 msgid "Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL."
 msgstr ""
 
+#: templates/team.html:242
+msgid "Daniel Von Fange"
+msgstr ""
+
 #: templates/team.html:249
 msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
+msgstr ""
+
+#: templates/team.html:259
+msgid "Addison Huegel"
 msgstr ""
 
 #: templates/team.html:263
@@ -512,12 +603,20 @@ msgstr ""
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr ""
 
+#: templates/team.html:310
+msgid "Paul Veradittakit"
+msgstr ""
+
 #: templates/team.html:314 templates/team.html:331
 msgid "Advisor"
 msgstr ""
 
 #: templates/team.html:317
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
+msgstr ""
+
+#: templates/team.html:327
+msgid "Joey Krug"
 msgstr ""
 
 #: templates/team.html:334
@@ -528,11 +627,11 @@ msgstr ""
 msgid "Investors"
 msgstr ""
 
-#: views/web_views.py:62
+#: views/web_views.py:62 views/web_views.py:106
 msgid "Please enter your name"
 msgstr ""
 
-#: views/web_views.py:64
+#: views/web_views.py:64 views/web_views.py:110
 msgid "Please enter your email"
 msgstr ""
 
@@ -546,5 +645,9 @@ msgstr ""
 
 #: views/web_views.py:70
 msgid "Please agree to the important notice"
+msgstr ""
+
+#: views/web_views.py:108
+msgid "Please enter your company name"
 msgstr ""
 
