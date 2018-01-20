@@ -1,0 +1,13 @@
+{% extends 'email/email_base.txt' %}
+
+{% block content %}
+
+Thank you for your interest in {{ universal.BUSINESS_NAME }}. 
+
+We have your information and will be in touch soon.
+
+Thanks,
+The {{ universal.BUSINESS_NAME }} team
+
+{% endblock %}
+

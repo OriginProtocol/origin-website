@@ -91,6 +91,27 @@ def set_language(language=None):
     session['language'] = language
     return redirect('/')
 
+@app.route('/build-on-origin')
+def build_on_origin():
+    return render_template('build_on_origin.html')
+
+@app.route('/build-on-origin/interest', methods=['POST'])
+def build_on_origin_interest():
+    name = request.form['name']
+    company_name = request.form['comapny_name']
+    email = request.form['email']
+    website = request.form["website"]
+    note = request.form["note"]
+    if not name:
+        return jsonify(gettext("Please enter your name"))
+    if not company_name:
+        return jsonify(gettext("Please enter your company name"))
+    if not email:
+        return jsonify(gettext("Please enter your email"))
+    feedback = mailing_list.build_interest(name, company_name, email, website, note)
+    flash(feedback)
+    return jsonify("OK")
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404

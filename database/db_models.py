@@ -42,3 +42,16 @@ class MessageLog(db.Model):
 	msg_text = db.Column(db.Text())
 	msg_html = db.Column(db.Text())
 	msg_sent = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+
+class Interest(db.Model):
+	__tablename__ = 'interest'
+
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(255))
+	company_name = db.Column(db.String(255))
+	email = db.Column(db.String(255))
+	website = db.Column(db.String(255))
+	note = db.Column(db.Text())
+
+	def __str__(self):
+		return '%s' % (self.email)
