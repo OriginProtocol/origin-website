@@ -1,4 +1,4 @@
-from flask import jsonify, redirect, render_template, request, flash, session
+from flask import jsonify, redirect, render_template, request, flash, g, url_for
 
 from app import app
 from config import constants
@@ -20,34 +20,38 @@ def beforeRequest():
             return redirect(request.url.replace('http', 'https', 1))
 
 @app.route('/')
+def root():
+    return redirect(url_for('index', lang_code='en'))
+
+@app.route('/<lang_code>')
 def index():
     flash('telegram')
     return render_template('index.html')
 
-@app.route('/team')
+@app.route('/<lang_code>/team')
 def team():
     flash('slack')
     return render_template('team.html')
 
-@app.route('/presale')
+@app.route('/<lang_code>/presale')
 def presale():
     return render_template('presale.html')
 
-@app.route('/whitepaper')
+@app.route('/<lang_code>/whitepaper')
 def whitepaper():
     return redirect('/static/docs/whitepaper_v4.pdf', code=302)
 
-@app.route('/product-brief')
+@app.route('/<lang_code>/product-brief')
 def product_brief():
     return redirect('/static/docs/product_brief_v17.pdf', code=302)
 
-@app.route('/mailing-list/join', methods=['POST'])
+@app.route('/<lang_code>/mailing-list/join', methods=['POST'])
 def join_mailing_list():
     email = request.form['email']
     feedback = mailing_list.send_welcome(email)
     return jsonify(feedback)
 
-@app.route('/presale/join', methods=['POST'])
+@app.route('/<lang_code>/presale/join', methods=['POST'])
 def join_presale():
     full_name = request.form['full_name']
     email = request.form['email']
@@ -72,14 +76,14 @@ def join_presale():
     flash(feedback)
     return jsonify("OK")
 
-@app.route('/mailing-list/unsubscribe', methods=['GET'])
+@app.route('/<lang_code>/mailing-list/unsubscribe', methods=['GET'])
 def unsubscribe():
     email = request.args.get("email")
     feedback = mailing_list.unsubscribe(email)
     flash(feedback)
     return redirect('/', code=302)
 
-@app.route('/webhook/fullcontact', methods=['GET','POST'])
+@app.route('/<lang_code>/webhook/fullcontact', methods=['GET','POST'])
 def fullcontact_webhook():
     print 'POSTED!!'
     print request.get_json()
@@ -88,14 +92,14 @@ def fullcontact_webhook():
 
 @app.route('/language/<language>')
 def set_language(language=None):
-    session['language'] = language
-    return redirect('/')
+    # session['language'] = language
+    return redirect('/' + language)
 
-@app.route('/build-on-origin')
+@app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
     return render_template('build_on_origin.html')
 
-@app.route('/build-on-origin/interest', methods=['POST'])
+@app.route('/<lang_code>/build-on-origin/interest', methods=['POST'])
 def build_on_origin_interest():
     name = request.form['name']
     company_name = request.form['comapny_name']
@@ -116,19 +120,20 @@ def build_on_origin_interest():
 def page_not_found(e):
     return render_template('404.html'), 404
 
+@app.before_request
+def before():
+    if request.view_args and 'lang_code' in request.view_args:
+        if request.view_args['lang_code'] not in constants.LANGUAGES:
+            return render_template('404.html'), 404
+        g.current_lang = request.view_args['lang_code']
+        request.view_args.pop('lang_code')
+
 @babel.localeselector
 def get_locale():
-    # if the user has set up the language manually it will be stored in the session,
-    # so we use the locale from the user settings
-    try:
-        language = session['language']
-    except KeyError:
-        language = None
-    if language is not None:
-        return language
     browser_language = request.accept_languages.best_match(constants.LANGUAGES)
     print ("browser_language", browser_language)
     return browser_language or 'en'
+    # return g.get('current_lang', 'en')
 
 @app.context_processor
 def inject_now():
@@ -136,7 +141,11 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES)) or 'en'
+    print ("Yo yo", request.accept_languages.best_match(constants.LANGUAGES))
+    try:
+        current_language = g.current_lang # session.get('language', request.accept_languages.best_match(constants.LANGUAGES)) or 'en'
+    except:
+        current_language = 'en'
     try:
         current_language_direction = Locale(current_language).text_direction
     except:
