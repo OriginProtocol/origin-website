@@ -46,7 +46,8 @@ LANGUAGES = [
     'zh_Hant',
     'el',
     'he',
-    'hr'
+    'hr',
+    'nl',
 ]
 
 # LANGUAGES = {
@@ -66,4 +67,5 @@ LANGUAGES = [
 #     'el': u'Greek',
 #     'he': u'Hebrew'
 #     'hr': u'Croatian'
+#     'nl': u'Dutch'
 # }
