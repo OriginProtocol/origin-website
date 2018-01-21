@@ -19,7 +19,7 @@ brew install gettext
 brew link gettext --force
 ```
 
-## New translation files
+## New or updated translation files
 
 After downloading or manual edits to `.po` files, you must compile translations:
 ```
@@ -27,8 +27,9 @@ pybabel compile -f -d  translations
 ```
 (The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy')
 
-If you get an error *ValueError: expected only letters, got u''*, run the python script `fix_po_files.py`. This error is caused by a `.po` file containg an empty language header: `"Language: \n"`, where it should be e.g. `"Language: de\n"`
+If you get an error `ValueError: expected only letters, got u''`, run the python script `fix_po_files.py`. This error is caused by a `.po` file containg an empty language header: `"Language: \n"`, where it should be e.g. `"Language: de\n"`
 
+This step will generate compiled `.mo` files from each `.po`.  These are the files used to actaully render translated versions of the site.
 
 ## New language
 
