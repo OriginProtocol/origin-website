@@ -62,20 +62,17 @@ Localization is done with the [Flask-Babel](https://pythonhosted.org/Flask-Babel
 
 Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
 
-After a `git pull` or any edits to `.po` files, you must compile translations:
-```
-pybabel compile -d translations
-```
 
 Use this command to update strings after new or edited English string are used
 ```
 pybabel update -i messages.pot -d translations
 ```
 
-If an update is rejcted for being [**fuzzy**](https://stackoverflow.com/a/12555922/59913), then you can force the compile with `-f` flag:
+After a `git pull` or any edits to `.po` files, you must compile translations:
 ```
 pybabel compile -f -d  translations
 ```
+The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy'
 
 Use this command to start from scratch, extracting strings into a file `messages.pot`
 ```
