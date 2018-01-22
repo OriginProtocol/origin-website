@@ -4,9 +4,9 @@ Localization is done with the [Flask-Babel](https://pythonhosted.org/Flask-Babel
 
 Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
 
-- `.pot` file contains found English strings. This is the "master list" of strings to translate.
-- `.po` files contain speicific language translations.
-- `.mo` files are binary, compiled versions of the `.po` files and should never be edited directly.
+- `../messages.pot` file contains found English strings. This is the "master list" of strings needing translation.
+- `messages.po` files contain specific language translations.
+- `messages.mo` files are binary, compiled versions of the `.po` files and should never be edited directly.
 
 ## Updating for new/edited English strings
 
