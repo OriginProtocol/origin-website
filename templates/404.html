@@ -7,7 +7,7 @@
 {% block content %}
 
 <main class="landing-page">
-  {% include 'navbar_light.html' %}
+  {% include 'navbar.html' %}
   <section class="team-header-section">
     <div class="container foreground-content">
       <div class="row">
@@ -63,22 +63,22 @@
           <div class="row">
             <div class="col-12 offset-xl-1 col-xl-10">
               <h2>
-                Page not found.
+                {{gettext("Page not found.")}}
               </h2>
               <div class="row">
                 <div class="col-12">
-                  
+
                   <div class="btn-container slack-btn-container">
-                    <a href="http://slack.originprotocol.com/">
+                    <a href="https://slack.originprotocol.com/">
                       <button class="slack-btn btn btn-outline-primary">
-                        Ask For Directions On Slack
+                        {{gettext("Ask For Directions On Slack")}}
                       </button>
                     </a>
                   </div>
                   <div class="btn-container telegram-btn-container">
                     <a href="https://t.me/originprotocol">
                       <button class="telegram-btn btn btn-outline-primary">
-                        Make New Friends On Telegram
+                        {{gettext("Make New Friends On Telegram")}}
                       </button>
                     </a>
                   </div>
@@ -89,7 +89,7 @@
         </div>
       </div>
     </div>
-  </section>  
+  </section>
   {% include 'footer.html' %}
 </main>
 

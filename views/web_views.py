@@ -12,15 +12,23 @@ from flask_babel import gettext, Babel, Locale
 
 babel = Babel(app)
 
-# force https on prod
 @app.before_request
 def beforeRequest():
+    """ Processing of URL before any routing """
+    # Force https on prod
     if constants.HTTPS:
         if not request.url.startswith('https'):
             return redirect(request.url.replace('http', 'https', 1))
     if request.view_args and 'lang_code' in request.view_args:
-        g.current_lang = request.view_args['lang_code']
-        request.view_args.pop('lang_code')
+        if request.view_args['lang_code'] in constants.LANGUAGES:
+            # Pull off current language from URL
+            g.current_lang = request.view_args['lang_code']
+            request.view_args.pop('lang_code')
+        else:
+            # Possible old style URL without language prefix
+            # e.g. /blah --> /en/blah
+            return redirect("/%s/%s" % (get_locale(), request.view_args['lang_code']), code=302)
+
 
 @app.route('/')
 def root():

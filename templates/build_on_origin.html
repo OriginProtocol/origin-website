@@ -7,7 +7,7 @@
 {% block content %}
 
 <main class="landing-page">
-  {% include 'navbar_light.html' %}
+  {% include 'navbar.html' %}
   <section class="team-header-section">
     <div class="container foreground-content">
       <div class="row">
@@ -72,7 +72,7 @@
                   <label for="name"><strong>{{gettext("Name")}}</strong></label>
                   <input name="name" id="name" class="form-control" placeholder="{{gettext("Name")}}" />
                 </div>
-                
+
                 <div class="form-group">
                   <label for="comapny_name"><strong>{{gettext("Company")}}</strong></label>
                   <input name="comapny_name" id="comapny_name" class="form-control" placeholder="{{gettext("Company")}}" />
@@ -82,7 +82,7 @@
                   <label for="email"><strong>{{gettext("Email")}}</strong></label>
                   <input name="email" id="email" type="email" class="form-control" placeholder="{{gettext("Email")}}" />
                 </div>
-                
+
                 <div class="form-group">
                   <label for="website"><strong>{{gettext("Website")}}</strong></label>
                   <input name="website" id="website" type="url" class="form-control" placeholder="{{gettext("Website")}}" />
