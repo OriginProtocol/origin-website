@@ -4,19 +4,19 @@ Localization is done with the [Flask-Babel](https://pythonhosted.org/Flask-Babel
 
 Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
 
+- `.pot` file contains found English strings. This is the "master list" of strings to translate.
+- `.po` files contain speicific language translations.
+
 ## New English strings
 
-Use this command to update strings after new or edited English strings. It will create a new `messages.pot` file.
+1. Search source files and extract strings into a file `messages.pot`
 ```
-pybabel update -i messages.pot -d translations
+pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
 ```
 
-Then run  `merge_new_pot.sh` which will merge these new english phrases into all the language `.po` files, using the `msgmerge` command.
-
-If you don't have `msmerge` you can get it on Mac with homebrew:
+2. Update `.po` translations with new strings.
 ```
-brew install gettext
-brew link gettext --force
+pybabel update -i messages.pot -d translations --no-wrap
 ```
 
 ## New or updated translation files
@@ -31,19 +31,15 @@ If you get an error `ValueError: expected only letters, got u''`, run the python
 
 This step will generate compiled `.mo` files from each `.po`.  These are the files used to actaully render translated versions of the site.
 
-## New language
+Note: `.po` files must committed in the repo in order for them to get on heroku.
+
+## Add New language
 
 ```
 pybabel init -i messages.pot -d translations -l <Language Code>
 ```
 See [pybabel docs for init](http://babel.pocoo.org/en/latest/cmdline.html#init)
 
-## Fresh Start
-
-Use this command to start from scratch, extracting strings into a file `messages.pot`
-```
-pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
-```
 
 
 
