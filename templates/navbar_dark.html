@@ -35,7 +35,7 @@
               {% if CURRENT_LANGUAGE == language[0] %}
                 <div class="dropdown-item-selected">{{ language[1] }}</div>
               {% else %}
-                <a class="dropdown-item" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
+                <a class="dropdown-item" href="/{{language[0]}}" >{{ language[1] }}</a>
               {%  endif %}
           {% endfor %}
           </div>

@@ -24,23 +24,20 @@ def beforeRequest():
 
 @app.route('/')
 def root():
-    return redirect(url_for('index', lang_code='en'))
+    return redirect(url_for('index', lang_code=get_locale()))
 
 @app.route('/<lang_code>')
 def index():
-    # g.lang_code = lang_code
     flash('telegram')
     return render_template('index.html')
 
 @app.route('/<lang_code>/team')
 def team():
-    # g.lang_code = lang_code
     flash('slack')
     return render_template('team.html')
 
 @app.route('/<lang_code>/presale')
 def presale():
-    # g.lang_code = lang_code
     return render_template('presale.html')
 
 @app.route('/whitepaper')
@@ -96,10 +93,6 @@ def fullcontact_webhook():
     print request.json
     return redirect('/', code=302)
 
-@app.route('/language/<language>')
-def set_language(language=None):
-    return redirect('/%s' % language or 'en')
-
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
     return render_template('build_on_origin.html')
@@ -127,7 +120,8 @@ def page_not_found(e):
 
 @babel.localeselector
 def get_locale():
-    return g.get('current_lang', 'en')
+    browser_language = request.accept_languages.best_match(constants.LANGUAGES) or 'en'
+    return g.get('current_lang', browser_language)
 
 @app.context_processor
 def inject_now():
@@ -135,7 +129,7 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    current_language = g.get('current_lang', 'en')
+    current_language = get_locale()
     try:
         current_language_direction = Locale(current_language).text_direction
     except:
