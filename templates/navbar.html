@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-origin navbar-dark">
 {% else %}
 <nav class="navbar navbar-expand-md navbar-origin navbar-light">
-{%  endif %}
+{% endif %}
   <div class="container">
     <a class="navbar-brand" href="{{'/%s'% CURRENT_LANGUAGE}}">
       <div class="logo-container">
@@ -16,7 +16,7 @@
           srcset="/static/img/origin-logo-dark@2x.png 2x,
             /static/img/origin-logo-dark@3x.png 3x"
           class="origin-logo">
-        {%  endif %}
+        {% endif %}
       </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +46,8 @@
               {% if CURRENT_LANGUAGE == language[0] %}
                 <div class="dropdown-item-selected">{{ language[1] }}</div>
               {% else %}
-                <a class="dropdown-item" href="/{{language[0]}}" >{{ language[1] }}</a>
-              {%  endif %}
+                <a class="dropdown-item" href="/{{language[0]}}">{{ language[1] }}</a>
+              {% endif %}
           {% endfor %}
           </div>
         </li>
