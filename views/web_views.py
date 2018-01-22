@@ -1,4 +1,4 @@
-from flask import jsonify, redirect, render_template, request, flash, session
+from flask import jsonify, redirect, render_template, request, flash, session, g, url_for
 
 from app import app
 from config import constants
@@ -18,19 +18,29 @@ def beforeRequest():
     if constants.HTTPS:
         if not request.url.startswith('https'):
             return redirect(request.url.replace('http', 'https', 1))
+    if request.view_args and 'lang_code' in request.view_args:
+        g.current_lang = request.view_args['lang_code']
+        request.view_args.pop('lang_code')
 
 @app.route('/')
+def root():
+    return redirect(url_for('index', lang_code='en'))
+
+@app.route('/<lang_code>')
 def index():
+    # g.lang_code = lang_code
     flash('telegram')
     return render_template('index.html')
 
-@app.route('/team')
+@app.route('/<lang_code>/team')
 def team():
+    # g.lang_code = lang_code
     flash('slack')
     return render_template('team.html')
 
-@app.route('/presale')
+@app.route('/<lang_code>/presale')
 def presale():
+    # g.lang_code = lang_code
     return render_template('presale.html')
 
 @app.route('/whitepaper')
@@ -88,10 +98,9 @@ def fullcontact_webhook():
 
 @app.route('/language/<language>')
 def set_language(language=None):
-    session['language'] = language
-    return redirect('/')
+    return redirect('/%s' % language or 'en')
 
-@app.route('/build-on-origin')
+@app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
     return render_template('build_on_origin.html')
 
@@ -118,17 +127,7 @@ def page_not_found(e):
 
 @babel.localeselector
 def get_locale():
-    # if the user has set up the language manually it will be stored in the session,
-    # so we use the locale from the user settings
-    try:
-        language = session['language']
-    except KeyError:
-        language = None
-    if language is not None:
-        return language
-    browser_language = request.accept_languages.best_match(constants.LANGUAGES)
-    print ("browser_language", browser_language)
-    return browser_language or 'en'
+    return g.get('current_lang', 'en')
 
 @app.context_processor
 def inject_now():
@@ -136,7 +135,7 @@ def inject_now():
 
 @app.context_processor
 def inject_conf_var():
-    current_language = session.get('language', request.accept_languages.best_match(constants.LANGUAGES)) or 'en'
+    current_language = g.get('current_lang', 'en')
     try:
         current_language_direction = Locale(current_language).text_direction
     except:
