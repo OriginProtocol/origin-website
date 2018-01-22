@@ -1,11 +1,22 @@
+{% if navbar_dark==True %}
+<nav class="navbar navbar-expand-md navbar-origin navbar-dark">
+{% else %}
 <nav class="navbar navbar-expand-md navbar-origin navbar-light">
+{%  endif %}
   <div class="container">
     <a class="navbar-brand" href="{{'/%s'% CURRENT_LANGUAGE}}">
       <div class="logo-container">
+        {% if navbar_dark==True %}
+        <img src="/static/img/origin-logo.png"
+          srcset="/static/img/origin-logo@2x.png 2x,
+            /static/img/origin-logo@3x.png 3x"
+          class="origin-logo">
+        {% else %}
         <img src="/static/img/origin-logo-dark.png"
           srcset="/static/img/origin-logo-dark@2x.png 2x,
             /static/img/origin-logo-dark@3x.png 3x"
           class="origin-logo">
+        {%  endif %}
       </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

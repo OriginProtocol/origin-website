@@ -7,7 +7,7 @@
 {% block content %}
 
 <main class="landing-page">
-  {% include 'navbar_dark.html' %}
+  {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
   <section class="hero-section">
     <div class="container foreground-content">
       <div class="row">
