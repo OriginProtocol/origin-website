@@ -2,9 +2,9 @@
   <div class="container">
     <a class="navbar-brand" href="{{'/%s'% CURRENT_LANGUAGE}}">
       <div class="logo-container">
-        <img src="static/img/origin-logo.png"
-          srcset="static/img/origin-logo@2x.png 2x,
-            static/img/origin-logo@3x.png 3x"
+        <img src="/static/img/origin-logo.png"
+          srcset="/static/img/origin-logo@2x.png 2x,
+            /static/img/origin-logo@3x.png 3x"
           class="origin-logo">
       </div>
     </a>
@@ -35,7 +35,7 @@
               {% if CURRENT_LANGUAGE == language[0] %}
                 <div class="dropdown-item-selected">{{ language[1] }}</div>
               {% else %}
-                <a class="dropdown-item" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
+                <a class="dropdown-item" href="/{{language[0]}}" >{{ language[1] }}</a>
               {%  endif %}
           {% endfor %}
           </div>
