@@ -47,6 +47,43 @@ a:hover {
   text-decoration: none;
 }
 
+main.landing-page {
+  position: relative;
+  background-color: #2e3f53;
+  background-image:
+    radial-gradient(circle, #6e3bea 1px, transparent 1px),
+    radial-gradient(circle, #26d198 1px, transparent 1px),
+    radial-gradient(circle, #1a82ff 1px, transparent 1px),
+    radial-gradient(circle, #26d198 1px, transparent 1px),
+    radial-gradient(circle, #ebf0f3 0, transparent 1px),
+    radial-gradient(circle, #ebf0f3 0, transparent 1px);
+  background-size:
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    2px 2px,
+    100px 60px,
+    100px 60px;
+  background-position:
+    319px 19px,
+    319px 79px,
+    419px 19px,
+    369px 49px,
+    20px 20px,
+    70px 50px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+  overflow-y: hidden;
+}
+
+.vectors-container {
+  position: absolute;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .navbar-origin {
   padding-top: 60px;
 }
@@ -55,10 +92,6 @@ a:hover {
   font-size: 0.875rem;
   padding: 20px 30px;
   font-weight: 400;
-}
-
-.navbar-dark {
-  background-color: #455d75;
 }
 
 .navbar-dark .nav-item>a {
@@ -125,6 +158,13 @@ a:hover {
 .foreground-content {
   position: relative;
   z-index: 100;
+}
+
+.platform-bottom-pane {
+  background-color: white;
+  height: 9999px; /* non-moz/webkit fallback */
+  height: -moz-available;
+  height: -webkit-fill-available;
 }
 
 .left-upper-pane {
@@ -272,8 +312,6 @@ footer .company-mission {
 /* Index */
 
 .hero-section {
-  background-color: #455d75;
-  background-size: 80px 80px;
   margin-top: -160px;
 }
 
@@ -290,17 +328,43 @@ footer .company-mission {
   color: #ffffff;
 }
 
+.platform-section > div > .row {
+  position: relative;
+  overflow-y: hidden;
+}
+
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
-  top: -1px; /* hack to get rid of mysterious line */
-  background-color: #455d75;
-  background-size: 80px 80px;
+  background-color: white;
+}
+
+.platform-section .left-upper-pane {
+  height: 100%;
+}
+
+.platform-section .right-upper-pane {
+  height: calc(100% + 1px);
+}
+
+.platform-section .left-upper-pane {
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  margin: 0 -1px -1px 0;
+}
+
+.platform-section .right-upper-pane {
+  -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
 }
 
 .features-section {
   position: relative;
-  top: -1px; /* hack to get rid of mysterious line */
+  background-color: white;
+}
+
+.partners-section {
+  background-color: white;
 }
 
 .partners-section .left-lower-pane,
@@ -371,6 +435,10 @@ footer .company-mission {
 .features-section .left-upper-pane,
 .features-section .right-upper-pane {
   background-color: #f7f9fb;
+}
+
+.technology-section {
+  background-color: white;
 }
 
 .technology-section .left-lower-pane,
@@ -469,6 +537,10 @@ footer .company-mission {
   font-style: italic;
   width: 324px;
   height: 45px;
+}
+
+.email-section {
+  background-color: white;
 }
 
 .email-section form {
@@ -585,7 +657,6 @@ footer .company-mission {
 .core-team-section .left-upper-pane,
 .core-team-section .right-upper-pane {
   position: relative;
-  top: -1px;
   background-color: #f7f9fb;
 }
 
@@ -610,7 +681,6 @@ footer .company-mission {
 .investors-section .left-upper-pane,
 .investors-section .right-upper-pane {
   position: relative;
-  top: -1px;
   background-color: #f7f9fb;
 }
 
@@ -894,5 +964,3 @@ footer .company-mission {
     margin-bottom: 360px;
   }
 }
-
-
