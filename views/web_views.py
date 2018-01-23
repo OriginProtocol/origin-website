@@ -73,6 +73,10 @@ def join_presale():
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
+
+    # Temp for spam attack
+    print("CHECK:", email, request.remote_addr)
+
     if not full_name:
         return jsonify(gettext("Please enter your name"))
     if not email:
