@@ -7,6 +7,7 @@
 {% block content %}
 
 <main class="landing-page">
+  {% include 'background_vectors.html' %}
   {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
   <section class="hero-section">
     <div class="container foreground-content">
@@ -50,6 +51,7 @@
               </div>
             </div>
           </div>
+          <div class="row row-pane"></div>
         </div>
         <div class="container foreground-content">
           <div class="row">
