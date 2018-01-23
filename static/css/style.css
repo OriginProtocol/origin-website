@@ -50,38 +50,9 @@ a:hover {
 main.landing-page {
   position: relative;
   background-color: #2e3f53;
-  background-image:
-    radial-gradient(circle, #6e3bea 1px, transparent 1px),
-    radial-gradient(circle, #26d198 1px, transparent 1px),
-    radial-gradient(circle, #1a82ff 1px, transparent 1px),
-    radial-gradient(circle, #26d198 1px, transparent 1px),
-    radial-gradient(circle, #ebf0f3 0, transparent 1px),
-    radial-gradient(circle, #ebf0f3 0, transparent 1px);
-  background-size:
-    2px 2px,
-    2px 2px,
-    2px 2px,
-    2px 2px,
-    100px 60px,
-    100px 60px;
-  background-position:
-    319px 19px,
-    319px 79px,
-    419px 19px,
-    369px 49px,
-    20px 20px,
-    70px 50px;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
-  overflow-y: hidden;
-}
-
-.vectors-container {
-  position: absolute;
-  background: transparent;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+  background-image: url("/static/img/dot-grid.svg");
+  background-position: center top;
+  background-repeat: repeat-x;
 }
 
 .navbar-origin {
