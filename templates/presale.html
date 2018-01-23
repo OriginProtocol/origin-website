@@ -407,9 +407,11 @@
                    <input name="confirm" class="form-check-input" type="checkbox" id="confirm" value="1">{{gettext(" I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.")}}
                  </label>
                </div>
+
               </div>
 
-              <div class="g-recaptcha" data-sitekey="6Lf5KUIUAAAAANMf_MytGlGEmq6UR7J_YdKVLkid"></div>
+              <!-- Recaptcha -->
+              {{ recaptcha }}
 
               <div class="btn-container">
                 <input type="submit" class="btn btn-primary" value="{{gettext("Submit")}}">

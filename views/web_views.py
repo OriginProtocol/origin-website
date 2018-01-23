@@ -75,6 +75,10 @@ def join_presale():
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
+    print request.remote_addr
+    print "ReCaptcha"
+    print reCaptcha
+    print recaptcha.verify()
     if not recaptcha.verify():
         return jsonify(gettext("Please pass the reCaptcha"))
     if not full_name:
