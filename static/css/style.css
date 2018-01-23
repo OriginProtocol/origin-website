@@ -72,6 +72,7 @@ main.landing-page {
     20px 20px,
     70px 50px;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+  overflow-y: hidden;
 }
 
 .vectors-container {
@@ -157,6 +158,13 @@ main.landing-page {
 .foreground-content {
   position: relative;
   z-index: 100;
+}
+
+.platform-bottom-pane {
+  background-color: white;
+  height: 9999px; /* non-moz/webkit fallback */
+  height: -moz-available;
+  height: -webkit-fill-available;
 }
 
 .left-upper-pane {
@@ -320,17 +328,23 @@ footer .company-mission {
   color: #ffffff;
 }
 
-.platform-section .background-panes > .row-pane:last-of-type {
-  background-color: white;
-  height: 200px; /* overreach to be safe */
+.platform-section > div > .row {
+  position: relative;
+  overflow-y: hidden;
 }
 
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
-  top: -1px; /* hack to get rid of mysterious line */
   background-color: white;
-  height: calc(100% + 2px);
+}
+
+.platform-section .left-upper-pane {
+  height: 100%;
+}
+
+.platform-section .right-upper-pane {
+  height: calc(100% + 1px);
 }
 
 .platform-section .left-upper-pane {
@@ -347,8 +361,6 @@ footer .company-mission {
 .features-section {
   position: relative;
   background-color: white;
-  top: -1px; /* hack to get rid of mysterious line */
-  margin-bottom: -1px; /* offset top hack */
 }
 
 .partners-section {
@@ -645,7 +657,6 @@ footer .company-mission {
 .core-team-section .left-upper-pane,
 .core-team-section .right-upper-pane {
   position: relative;
-  top: -1px;
   background-color: #f7f9fb;
 }
 
@@ -670,7 +681,6 @@ footer .company-mission {
 .investors-section .left-upper-pane,
 .investors-section .right-upper-pane {
   position: relative;
-  top: -1px;
   background-color: #f7f9fb;
 }
 
