@@ -6,6 +6,8 @@
 
 {% block content %}
 
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <main class="landing-page">
   {% include 'navbar.html' %}
   <section class="team-header-section">
@@ -406,6 +408,8 @@
                  </label>
                </div>
               </div>
+
+              <div class="g-recaptcha" data-sitekey="6Lf5KUIUAAAAANMf_MytGlGEmq6UR7J_YdKVLkid"></div>
 
               <div class="btn-container">
                 <input type="submit" class="btn btn-primary" value="{{gettext("Submit")}}">
