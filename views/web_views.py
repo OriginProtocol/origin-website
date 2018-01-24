@@ -76,8 +76,7 @@ def join_presale():
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
-    print request.remote_addr
-    print "ReCaptcha"
+    print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
     if not recaptcha.verify():
         return jsonify(gettext("Please pass the reCaptcha box"))
     if not full_name:
@@ -90,7 +89,7 @@ def join_presale():
         return jsonify(gettext("Please enter your desired allocation"))
     if "confirm" not in request.form:
         return jsonify(gettext("Please agree to the important notice"))
-    feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
+    feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
     flash(feedback)
     return jsonify("OK")
 

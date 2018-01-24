@@ -29,7 +29,7 @@ def send_welcome(email):
 
     return gettext('Thanks for signing up!')
 
-def presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note):
+def presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, ip_address):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return gettext('Please enter a valid email address')
@@ -54,8 +54,23 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
     if sending_addr:
         sending_addr = "<a href='https://etherscan.io/address/"+sending_addr+"'>"+sending_addr+"</a>" if sending_addr.startswith('0x') else "<a href='https://blockchain.info/address/"+sending_addr+"'>"+sending_addr+"</a>"
 
-    message = "Name: %s<br>Email: %s<br>Accredited: %s<br>Entity: %s<br>Desired allocation: %s %s<br>Citizenship: %s<br>Address: %s<br>Note: %s" % (full_name, email,
-        ("Yes" if accredited == "1" else "No"), entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note)
+    message = """Name: %s<br>
+                 Email: %s<br>
+                 Accredited: %s<br>
+                 Entity: %s<br>
+                 Desired allocation: %s %s<br>
+                 Citizenship: %s<br>
+                 Address: %s<br>
+                 Note: %s<br>
+                 IP: %s""" % (
+                    full_name, email,
+                    ("Yes" if accredited == "1" else "No"),
+                    entity_type,
+                    desired_allocation, desired_allocation_currency,
+                    citizenship,
+                    sending_addr,
+                    note,
+                    ip_address)
 
     email_types.send_email_type('presale', DEFAULT_SENDER, email)
 
