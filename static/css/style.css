@@ -118,7 +118,11 @@ main.landing-page {
 
 .background-panes {
   position: absolute;
-  min-height: 100%;
+  height: 100%;
+}
+
+.background-panes .row-pane:not(:first-of-type) {
+  height: 100%;
 }
 
 .offset-panes {
@@ -133,9 +137,7 @@ main.landing-page {
 
 .platform-bottom-pane {
   background-color: white;
-  height: 9999px; /* non-moz/webkit fallback */
-  height: -moz-available;
-  height: -webkit-fill-available;
+  height: 100%;
 }
 
 .left-upper-pane {
