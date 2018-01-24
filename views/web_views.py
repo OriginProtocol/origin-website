@@ -118,6 +118,9 @@ def build_on_origin_interest():
     email = request.form['email']
     website = request.form["website"]
     note = request.form["note"]
+    print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
+    if not recaptcha.verify():
+        return jsonify(gettext("Please pass the reCaptcha box"))
     if not name:
         return jsonify(gettext("Please enter your name"))
     if not company_name:
