@@ -78,7 +78,7 @@ def join_presale():
     note = request.form["note"]
     print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
     if not recaptcha.verify():
-        return jsonify(gettext("Please pass the reCaptcha box"))
+        return jsonify(gettext("Please prove you are not a robot."))
     if not full_name:
         return jsonify(gettext("Please enter your name"))
     if not email:
@@ -120,7 +120,7 @@ def build_on_origin_interest():
     note = request.form["note"]
     print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
     if not recaptcha.verify():
-        return jsonify(gettext("Please pass the reCaptcha box"))
+        return jsonify(gettext("Please prove you are not a robot."))
     if not name:
         return jsonify(gettext("Please enter your name"))
     if not company_name:
@@ -158,4 +158,5 @@ def inject_conf_var():
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
-        AVAILABLE_LANGUAGES=available_languages)
+        AVAILABLE_LANGUAGES=available_languages,
+        URL_ROOT=request.url_root)

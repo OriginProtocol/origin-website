@@ -3,6 +3,11 @@
 {% else %}
 <nav class="navbar navbar-expand-md navbar-origin navbar-light">
 {% endif %}
+
+  {% if URL_ROOT != "https://www.originprotocol.com" %}
+  <div class="url-warning">{{ URL_ROOT }}</div>
+  {% endif %}
+
   <div class="container">
     <a class="navbar-brand" href="{{'/%s'% CURRENT_LANGUAGE}}">
       <div class="logo-container">

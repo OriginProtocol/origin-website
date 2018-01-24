@@ -47,6 +47,25 @@ a:hover {
   text-decoration: none;
 }
 
+.url-warning {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px auto;
+  color: black;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  pointer-events: none;
+  opacity: 0.15;
+  position: fixed;
+  z-index: 99999;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+
 .navbar-origin {
   padding-top: 60px;
 }
