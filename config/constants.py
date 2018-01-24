@@ -28,6 +28,9 @@ FULLCONTACT_KEY = dotenv.get('FULLCONTACT_KEY')
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 
+RECAPTCHA_SITE_KEY = dotenv.get('RECAPTCHA_SITE_KEY')
+RECAPTCHA_SECRET_KEY = dotenv.get('RECAPTCHA_SECRET_KEY')
+
 # Language option constants
 
 LANGUAGES = [

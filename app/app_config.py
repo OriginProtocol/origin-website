@@ -11,6 +11,9 @@ class AppConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
 
+    RECAPTCHA_SITE_KEY = constants.RECAPTCHA_SITE_KEY
+    RECAPTCHA_SECRET_KEY = constants.RECAPTCHA_SECRET_KEY
+
 
 def init_app(app):
     db.init_app(app)

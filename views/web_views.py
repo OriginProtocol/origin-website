@@ -4,15 +4,16 @@ from app import app
 from config import constants
 from logic.emails import mailing_list
 from datetime import datetime
+from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
 
-# change path of messages.mo file
+# Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
-
-from flask_babel import gettext, Babel, Locale
+babel = Babel(app)
 
 recaptcha = ReCaptcha(app=app)
-babel = Babel(app)
+if not recaptcha.is_enabled:
+    print "Warning: recaptcha is not is_enabled"
 
 @app.before_request
 def beforeRequest():
@@ -77,10 +78,8 @@ def join_presale():
     note = request.form["note"]
     print request.remote_addr
     print "ReCaptcha"
-    print reCaptcha
-    print recaptcha.verify()
     if not recaptcha.verify():
-        return jsonify(gettext("Please pass the reCaptcha"))
+        return jsonify(gettext("Please pass the reCaptcha box"))
     if not full_name:
         return jsonify(gettext("Please enter your name"))
     if not email:
