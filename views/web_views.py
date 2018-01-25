@@ -1,11 +1,15 @@
-from flask import jsonify, redirect, render_template, request, flash, session, g, url_for
+from collections import OrderedDict
+from datetime import datetime
+
+from flask import (jsonify, redirect, render_template,
+                   request, flash, g, url_for)
+from flask_babel import gettext, Babel, Locale
+from flask_recaptcha import ReCaptcha
 
 from app import app
 from config import constants
 from logic.emails import mailing_list
-from datetime import datetime
-from flask_babel import gettext, Babel, Locale
-from flask_recaptcha import ReCaptcha
+from util.misc import sort_language_constants
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -144,6 +148,7 @@ def get_locale():
 def inject_now():
     return {'now': datetime.utcnow()}
 
+
 @app.context_processor
 def inject_conf_var():
     current_language = get_locale()
@@ -152,9 +157,12 @@ def inject_conf_var():
     except:
         current_language_direction = 'ltr'
     try:
-        available_languages = dict((l,Locale(l).get_language_name(l).capitalize()) for l in constants.LANGUAGES)
+        available_languages =\
+            OrderedDict([(lang,
+                          Locale(lang).get_language_name(lang).capitalize())
+                         for lang in sort_language_constants()])
     except:
-        available_languages = {'en':"English"}
+        available_languages = {'en': "English"}
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
