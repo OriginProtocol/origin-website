@@ -77,8 +77,6 @@ def join_presale():
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
     print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
-    if not recaptcha.verify():
-        return jsonify(gettext("Please prove you are not a robot."))
     if not full_name:
         return jsonify(gettext("Please enter your name"))
     if not email:
@@ -89,6 +87,8 @@ def join_presale():
         return jsonify(gettext("Please enter your desired allocation"))
     if "confirm" not in request.form:
         return jsonify(gettext("Please agree to the important notice"))
+    if not recaptcha.verify():
+        return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
     flash(feedback)
     return jsonify("OK")
@@ -119,14 +119,14 @@ def build_on_origin_interest():
     website = request.form["website"]
     note = request.form["note"]
     print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
-    if not recaptcha.verify():
-        return jsonify(gettext("Please prove you are not a robot."))
     if not name:
         return jsonify(gettext("Please enter your name"))
     if not company_name:
         return jsonify(gettext("Please enter your company name"))
     if not email:
         return jsonify(gettext("Please enter your email"))
+    if not recaptcha.verify():
+        return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.build_interest(name, company_name, email, website, note)
     flash(feedback)
     return jsonify("OK")
