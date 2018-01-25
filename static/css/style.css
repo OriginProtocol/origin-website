@@ -133,12 +133,14 @@ a:hover {
 
 .background-panes {
   position: absolute;
-  min-height: 100%;
 }
 
-.offset-panes {
-  position: relative;
-  margin-top: -42.264973082%;
+.partners-section .background-panes {
+  height: 100%;
+}
+
+.partners-section .bottom-panes .row-pane {
+  height: 100%;
 }
 
 .foreground-content {
@@ -309,6 +311,10 @@ footer .company-mission {
   color: #ffffff;
 }
 
+.platform-section .background-panes {
+  height: 100%;
+}
+
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
@@ -320,6 +326,10 @@ footer .company-mission {
 .features-section {
   position: relative;
   top: -1px; /* hack to get rid of mysterious line */
+}
+
+.partners-section > div > .row {
+  position: relative;
 }
 
 .partners-section .left-lower-pane,
@@ -392,6 +402,14 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
+.technology-section > div > .row {
+  position: relative;
+}
+
+.technology-section .background-panes {
+  bottom: 0;
+}
+
 .technology-section .left-lower-pane,
 .technology-section .right-lower-pane {
   background-color: #f7f9fb;
@@ -415,8 +433,20 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
+.roadmap-section > div > .row {
+  position: relative;
+}
+
+.roadmap-section .foreground-content {
+  padding-bottom: 60px;
+}
+
 .roadmap-section .roadmap {
   font-size: 14px;
+}
+
+.roadmap-section .background-panes {
+  bottom: 0;
 }
 
 .roadmap > div {
@@ -608,12 +638,20 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
+.contributing-team-section > div > .row {
+  position: relative;
+}
+
 .contributing-team-section .foreground-content {
   margin-bottom: 140px;
 }
 
 .contributing-team-section h2 {
   margin: 80px auto 40px auto;
+}
+
+.contributing-team-section .background-panes {
+  bottom: 0;
 }
 
 .contributing-team-section .left-lower-pane,
