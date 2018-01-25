@@ -159,4 +159,4 @@ def inject_conf_var():
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
         AVAILABLE_LANGUAGES=available_languages,
-        URL_ROOT=request.url_root)
+        DOMAIN=request.headers['Host'])

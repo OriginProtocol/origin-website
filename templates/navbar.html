@@ -4,8 +4,8 @@
 <nav class="navbar navbar-expand-md navbar-origin navbar-light">
 {% endif %}
 
-  {% if URL_ROOT != "https://www.originprotocol.com" %}
-  <div class="url-warning">{{ URL_ROOT }}</div>
+  {% if DOMAIN != "www.originprotocol.com" %}
+  <div class="url-warning">{{ DOMAIN }}</div>
   {% endif %}
 
   <div class="container">
