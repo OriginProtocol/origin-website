@@ -1,6 +1,6 @@
 # Localization
 
-## Statusn 2018-01-26
+## Status 2018-01-26
 
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
@@ -17,7 +17,7 @@
 | nl | Dutch | Yasinz | ✅ Complete |
 | pt | Portugese | | | |
 | ru | Russian | Alex K | ✅ Complete |
-| th | Thai | Ben V | In Progress |
+| th | Thai | Ben V | 🚧 In Progress |
 | zh_Hans | Chinese (Simplified) | Anson | 🚧 In Progress |
 | zh_Hant | Chinese (Traditional) | Anson | 🚧 In Progress |
 
