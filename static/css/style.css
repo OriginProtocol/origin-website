@@ -137,7 +137,6 @@ main.landing-page {
 
 .background-panes {
   position: absolute;
-  height: 100%;
 }
 
 .background-panes .row-pane:not(:first-of-type) {
@@ -323,6 +322,10 @@ footer .company-mission {
   color: #ffffff;
 }
 
+.platform-section .background-panes {
+  height: 100%;
+}
+
 .platform-section > div > .row {
   position: relative;
   overflow-y: hidden;
@@ -436,8 +439,9 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
-.technology-section {
+.technology-section .background-panes {
   background-color: white;
+  border-bottom: 2px solid #f7f9fb;
 }
 
 .technology-section .left-lower-pane,
