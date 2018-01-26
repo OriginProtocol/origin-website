@@ -7,18 +7,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: stan@originprotocol.com\n"
-"POT-Creation-Date: 2018-01-21 21:10-0700\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-01-26 13:34-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:35
-#: logic/emails/mailing_list.py:96
+#: logic/emails/mailing_list.py:111
 msgid "Please enter a valid email address"
 msgstr ""
 
@@ -30,24 +30,44 @@ msgstr ""
 msgid "Thanks for signing up!"
 msgstr ""
 
-#: logic/emails/mailing_list.py:52 logic/emails/mailing_list.py:112
+#: logic/emails/mailing_list.py:52 logic/emails/mailing_list.py:127
 msgid "Ooops! Something went wrong."
 msgstr ""
 
-#: logic/emails/mailing_list.py:64 logic/emails/mailing_list.py:123
+#: logic/emails/mailing_list.py:79 logic/emails/mailing_list.py:138
 msgid "Thanks! We'll be in touch soon."
 msgstr ""
 
-#: logic/emails/mailing_list.py:77
+#: logic/emails/mailing_list.py:92
 msgid "Ooops, something went wrong"
 msgstr ""
 
-#: logic/emails/mailing_list.py:79
+#: logic/emails/mailing_list.py:94
 msgid "You have been unsubscribed"
 msgstr ""
 
-#: logic/emails/mailing_list.py:99
+#: logic/emails/mailing_list.py:114
 msgid "Please enter a valid website address"
+msgstr ""
+
+#: templates/404.html:66
+msgid "Page not found."
+msgstr ""
+
+#: templates/404.html:74
+msgid "Ask For Directions On Slack"
+msgstr ""
+
+#: templates/404.html:81
+msgid "Make New Friends On Telegram"
+msgstr ""
+
+#: templates/base.html:16 templates/index.html:5
+msgid "Origin Protocol"
+msgstr ""
+
+#: templates/base.html:17
+msgid "Origin Protocol enables the sharing economy on the blockchain"
 msgstr ""
 
 #: templates/build_on_origin.html:3
@@ -79,7 +99,7 @@ msgid "Company"
 msgstr ""
 
 #: templates/build_on_origin.html:82 templates/build_on_origin.html:83
-#: templates/presale.html:77 templates/presale.html:78
+#: templates/presale.html:79 templates/presale.html:80
 msgid "Email"
 msgstr ""
 
@@ -87,11 +107,11 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: templates/build_on_origin.html:92 templates/presale.html:397
+#: templates/build_on_origin.html:92 templates/presale.html:399
 msgid "<strong>Anything else we should know?</strong> (optional)"
 msgstr ""
 
-#: templates/build_on_origin.html:96 templates/presale.html:411
+#: templates/build_on_origin.html:102 templates/presale.html:417
 msgid "Submit"
 msgstr ""
 
@@ -124,15 +144,14 @@ msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers wi
 msgstr ""
 
 #: templates/footer.html:15
-msgid "Origin, Inc."
+msgid "Origin Protocol, Inc."
 msgstr ""
 
 #: templates/footer.html:22
 msgid "Documentation"
 msgstr ""
 
-#: templates/footer.html:27 templates/navbar_dark.html:20
-#: templates/navbar_light.html:20
+#: templates/footer.html:27 templates/navbar.html:36
 msgid "Product Brief"
 msgstr ""
 
@@ -180,13 +199,11 @@ msgstr ""
 msgid "Organization"
 msgstr ""
 
-#: templates/footer.html:91 templates/navbar_dark.html:23
-#: templates/navbar_light.html:23
+#: templates/footer.html:91 templates/navbar.html:39
 msgid "Team"
 msgstr ""
 
-#: templates/footer.html:96 templates/navbar_dark.html:17
-#: templates/navbar_light.html:17 templates/presale.html:16
+#: templates/footer.html:96 templates/navbar.html:33 templates/presale.html:18
 msgid "Presale"
 msgstr ""
 
@@ -200,10 +217,6 @@ msgstr ""
 
 #: templates/index.html:3
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
-msgstr ""
-
-#: templates/index.html:5
-msgid "Origin Protocol"
 msgstr ""
 
 #: templates/index.html:16
@@ -375,11 +388,11 @@ msgstr ""
 msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
 msgstr ""
 
-#: templates/navbar_dark.html:26 templates/navbar_light.html:26
+#: templates/navbar.html:42
 msgid "Blog"
 msgstr ""
 
-#: templates/navbar_dark.html:29 templates/navbar_light.html:29
+#: templates/navbar.html:45
 msgid "Demo"
 msgstr ""
 
@@ -391,71 +404,71 @@ msgstr ""
 msgid "Origin Protocol - Presale"
 msgstr ""
 
-#: templates/presale.html:21
+#: templates/presale.html:23
 msgid "<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced."
 msgstr ""
 
-#: templates/presale.html:66
+#: templates/presale.html:68
 msgid "Interested in contributing?"
 msgstr ""
 
-#: templates/presale.html:72 templates/presale.html:73
+#: templates/presale.html:74 templates/presale.html:75
 msgid "Full Name"
 msgstr ""
 
-#: templates/presale.html:82
+#: templates/presale.html:84
 msgid "Are you an an accredited investor?"
 msgstr ""
 
-#: templates/presale.html:83
+#: templates/presale.html:85
 msgid "Huh?"
 msgstr ""
 
-#: templates/presale.html:84
+#: templates/presale.html:86
 msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
 msgstr ""
 
-#: templates/presale.html:88
+#: templates/presale.html:90
 msgid "Yes"
 msgstr ""
 
-#: templates/presale.html:93
+#: templates/presale.html:95
 msgid "No"
 msgstr ""
 
-#: templates/presale.html:99
+#: templates/presale.html:101
 msgid "What type of entity do you represent?"
 msgstr ""
 
-#: templates/presale.html:103
+#: templates/presale.html:105
 msgid "Individual"
 msgstr ""
 
-#: templates/presale.html:108
+#: templates/presale.html:110
 msgid "Syndicate"
 msgstr ""
 
-#: templates/presale.html:113
+#: templates/presale.html:115
 msgid "Professional Fund"
 msgstr ""
 
-#: templates/presale.html:120
+#: templates/presale.html:122
 msgid "<strong>Desired allocation</strong>"
 msgstr ""
 
-#: templates/presale.html:137
+#: templates/presale.html:139
 msgid "Citizenship"
 msgstr ""
 
-#: templates/presale.html:392
+#: templates/presale.html:394
 msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
 msgstr ""
 
-#: templates/presale.html:402
+#: templates/presale.html:404
 msgid "Important notice"
 msgstr ""
 
-#: templates/presale.html:405
+#: templates/presale.html:407
 msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
 msgstr ""
 
@@ -659,27 +672,31 @@ msgstr ""
 msgid "Investors"
 msgstr ""
 
-#: views/web_views.py:62 views/web_views.py:106
+#: views/web_views.py:85 views/web_views.py:127
 msgid "Please enter your name"
 msgstr ""
 
-#: views/web_views.py:64 views/web_views.py:110
+#: views/web_views.py:87 views/web_views.py:131
 msgid "Please enter your email"
 msgstr ""
 
-#: views/web_views.py:66
+#: views/web_views.py:89
 msgid "An error occured"
 msgstr ""
 
-#: views/web_views.py:68
+#: views/web_views.py:91
 msgid "Please enter your desired allocation"
 msgstr ""
 
-#: views/web_views.py:70
+#: views/web_views.py:93
 msgid "Please agree to the important notice"
 msgstr ""
 
-#: views/web_views.py:108
+#: views/web_views.py:95 views/web_views.py:133
+msgid "Please prove you are not a robot."
+msgstr ""
+
+#: views/web_views.py:129
 msgid "Please enter your company name"
 msgstr ""
 
