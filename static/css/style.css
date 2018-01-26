@@ -66,6 +66,14 @@ a:hover {
   border-radius: 30px;
 }
 
+main.landing-page {
+  position: relative;
+  background-color: #2e3f53;
+  background-image: url("/static/img/dot-grid.svg");
+  background-position: center top;
+  background-repeat: repeat-x;
+}
+
 .navbar-origin {
   padding-top: 60px;
 }
@@ -74,10 +82,6 @@ a:hover {
   font-size: 0.875rem;
   padding: 20px 30px;
   font-weight: 400;
-}
-
-.navbar-dark {
-  background-color: #455d75;
 }
 
 .navbar-dark .nav-item>a {
@@ -133,6 +137,11 @@ a:hover {
 
 .background-panes {
   position: absolute;
+  height: 100%;
+}
+
+.background-panes .row-pane:not(:first-of-type) {
+  height: 100%;
 }
 
 .partners-section .background-panes {
@@ -146,6 +155,11 @@ a:hover {
 .foreground-content {
   position: relative;
   z-index: 100;
+}
+
+.platform-bottom-pane {
+  background-color: white;
+  height: 100%;
 }
 
 .left-upper-pane {
@@ -293,8 +307,6 @@ footer .company-mission {
 /* Index */
 
 .hero-section {
-  background-color: #455d75;
-  background-size: 80px 80px;
   margin-top: -160px;
 }
 
@@ -311,21 +323,43 @@ footer .company-mission {
   color: #ffffff;
 }
 
-.platform-section .background-panes {
-  height: 100%;
+.platform-section > div > .row {
+  position: relative;
+  overflow-y: hidden;
 }
 
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
-  top: -1px; /* hack to get rid of mysterious line */
-  background-color: #455d75;
-  background-size: 80px 80px;
+  background-color: white;
+}
+
+.platform-section .left-upper-pane {
+  height: 100%;
+}
+
+.platform-section .right-upper-pane {
+  height: calc(100% + 1px);
+}
+
+.platform-section .left-upper-pane {
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  margin: 0 -1px -1px 0;
+}
+
+.platform-section .right-upper-pane {
+  -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
 }
 
 .features-section {
   position: relative;
-  top: -1px; /* hack to get rid of mysterious line */
+  background-color: white;
+}
+
+.partners-section {
+  background-color: white;
 }
 
 .partners-section > div > .row {
@@ -402,12 +436,8 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
-.technology-section > div > .row {
-  position: relative;
-}
-
-.technology-section .background-panes {
-  bottom: 0;
+.technology-section {
+  background-color: white;
 }
 
 .technology-section .left-lower-pane,
@@ -518,6 +548,10 @@ footer .company-mission {
   font-style: italic;
   width: 324px;
   height: 45px;
+}
+
+.email-section {
+  background-color: white;
 }
 
 .email-section form {
@@ -634,7 +668,6 @@ footer .company-mission {
 .core-team-section .left-upper-pane,
 .core-team-section .right-upper-pane {
   position: relative;
-  top: -1px;
   background-color: #f7f9fb;
 }
 
@@ -667,7 +700,6 @@ footer .company-mission {
 .investors-section .left-upper-pane,
 .investors-section .right-upper-pane {
   position: relative;
-  top: -1px;
   background-color: #f7f9fb;
 }
 
@@ -951,5 +983,3 @@ footer .company-mission {
     margin-bottom: 360px;
   }
 }
-
-
