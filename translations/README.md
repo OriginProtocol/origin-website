@@ -1,5 +1,28 @@
 # Localization
 
+## Statusn 2018-01-26
+
+| Code | Language | Translator(s) | Status |
+| ---- | -------- | ------------- | ------ |
+| ar | Arabic | m.alqattan | 🚧 In Progress |
+| de | German | Filip | ✅ Complete |
+| el | Greek | Tasso | ✅ Complete |
+| es | Spanish | funk | ✅ Complete |
+| fr | French | JB, Aline | 🚧 In Progress |
+| he | Hebrew | | | |
+| hr | Croatian | Filip | ✅ Complete |
+| it | Italian | funk | 🚧 In Progress |
+| ja | Japanese | | | |
+| ko | Korean | | | |
+| nl | Dutch | Yasinz | ✅ Complete |
+| pt | Portugese | | | |
+| ru | Russian | Alex K | ✅ Complete |
+| th | Thai | Ben V | In Progress |
+| zh_Hans | Chinese (Simplified) | Anson | 🚧 In Progress |
+| zh_Hant | Chinese (Traditional) | Anson | 🚧 In Progress |
+
+## Implementation
+
 Localization is done with the [Flask-Babel](https://pythonhosted.org/Flask-Babel/) module.
 
 Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
