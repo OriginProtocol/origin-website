@@ -2,7 +2,7 @@
 <html lang="{{ CURRENT_LANGUAGE }}">
 <head>
   {% for language in AVAILABLE_LANGUAGES.items() %}
-    <link rel="alternate" hreflang="{{ language[0] }}" href='{{ "https://www.originprotocol.com/%s"% language[0] }}' />
+    <link rel="alternate" hreflang="{{ language[0] }}" href='{{ universal.BASE_URL }}/{{"%s"% language[0] }}' />
   {% endfor %}
   {% block head %}
     <title>{% block title %}{% endblock %}</title>
