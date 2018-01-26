@@ -7,7 +7,7 @@ from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
 
 from app import app
-from config import constants
+from config import constants, universal
 from logic.emails import mailing_list
 from util.misc import sort_language_constants
 
@@ -145,8 +145,8 @@ def get_locale():
     return g.get('current_lang', browser_language)
 
 @app.context_processor
-def inject_now():
-    return {'now': datetime.utcnow()}
+def inject():
+    return {'now': datetime.utcnow(), 'universal':universal}
 
 
 @app.context_processor
