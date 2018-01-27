@@ -66,7 +66,16 @@ pybabel init -i messages.pot -d translations -l <Language Code>
 ```
 See [pybabel docs for init](http://babel.pocoo.org/en/latest/cmdline.html#init)
 
+## Add language as constant
 
+Go to the following file:  /config/constants.py
 
+And add the language-code to this file under `LANGUAGES`
 
+## Test
 
+In the `company-website` directory, run:
+
+`python main.py`
+
+And you should see the new language on the site.
