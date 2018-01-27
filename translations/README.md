@@ -66,7 +66,7 @@ pybabel init -i messages.pot -d translations -l <Language Code>
 ```
 See [pybabel docs for init](http://babel.pocoo.org/en/latest/cmdline.html#init)
 
-
+Be sure to add any new language to `config/constants.py` for it to be appear.
 
 
 
