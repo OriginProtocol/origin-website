@@ -5,6 +5,7 @@
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
 | ar | Arabic | m.alqattan | 🚧 In Progress |
+| cs | Czech | Daosta | 🚧 In Progress |
 | de | German | Filip | ✅ Complete |
 | el | Greek | Tasso | ✅ Complete |
 | es | Spanish | funk | ✅ Complete |
