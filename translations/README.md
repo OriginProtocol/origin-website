@@ -5,6 +5,7 @@
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
 | ar | Arabic | m.alqattan | 🚧 In Progress |
+| cs | Czech | Daosta | 🚧 In Progress |
 | de | German | Filip | ✅ Complete |
 | el | Greek | Tasso | ✅ Complete |
 | es | Spanish | funk | ✅ Complete |
@@ -66,7 +67,7 @@ pybabel init -i messages.pot -d translations -l <Language Code>
 ```
 See [pybabel docs for init](http://babel.pocoo.org/en/latest/cmdline.html#init)
 
-
+Be sure to add any new language to `config/constants.py` for it to be appear.
 
 
 
