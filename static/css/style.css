@@ -762,9 +762,6 @@ footer .company-mission {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .btn-container {
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 30px;
   }
@@ -806,6 +803,21 @@ footer .company-mission {
   }
 }
 
+@media (min-width: 576px) {
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section {
+    padding-bottom: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar,
   footer .container,
@@ -813,22 +825,12 @@ footer .company-mission {
     padding-left: 60px;
     padding-right: 60px;
   }
-  .btn-container {
-    text-align: left;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 50px;
     left: 100px;
   }
-  .platform-section h2 {
-    margin-top: 280px;
-  }
   .platform-graphic {
     display: none;
-  }
-  .partners-section h2 {
-    margin-top: 40px;
   }
   .use-cases-section .video {
     margin-top: 60px;
@@ -854,9 +856,6 @@ footer .company-mission {
   .roadmap-section h2 {
     margin-top: 60px;
   }
-  .email-section h2 {
-    margin-top: 60px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -866,16 +865,9 @@ footer .company-mission {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .btn-container {
-    text-align: left;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 10px;
     left: -30px;
-  }
-  .platform-section h2 {
-    margin-top: 280px;
   }
   .platform-graphic {
     display: inline-block;
@@ -887,9 +879,6 @@ footer .company-mission {
   }
   .partners-section .foreground-content {
     padding-top: 100px;
-  }
-  .partners-section h2 {
-    margin-top: 40px;
   }
   .use-cases-section .video {
     top: -120px;
@@ -939,9 +928,6 @@ footer .company-mission {
   }
   .roadmap {
     margin-bottom: 60px;
-  }
-  .email-section h2 {
-    margin-top: 60px;
   }
   .email-section .btn-container {
     margin-left: 20px;
