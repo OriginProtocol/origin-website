@@ -18,7 +18,7 @@
 | nl | Dutch | Yasinz | ✅ Complete |
 | pt | Portugese | | | |
 | ru | Russian | Alex K | ✅ Complete |
-| th | Thai | Ben V | 🚧 In Progress |
+| th | Thai | Ben V / @cvibhagool | ✅ Complete |
 | zh_Hans | Chinese (Simplified) | Anson | 🚧 In Progress |
 | zh_Hant | Chinese (Traditional) | Anson | 🚧 In Progress |
 
