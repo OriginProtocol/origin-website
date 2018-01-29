@@ -5,6 +5,7 @@
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
 | ar | Arabic | m.alqattan | 🚧 In Progress |
+| cs | Czech | Daosta | 🚧 In Progress |
 | de | German | Filip | ✅ Complete |
 | el | Greek | Tasso | ✅ Complete |
 | es | Spanish | funk | ✅ Complete |
@@ -17,7 +18,7 @@
 | nl | Dutch | Yasinz | ✅ Complete |
 | pt | Portugese | | | |
 | ru | Russian | Alex K | ✅ Complete |
-| th | Thai | Ben V | 🚧 In Progress |
+| th | Thai | Ben V / @cvibhagool | ✅ Complete |
 | zh_Hans | Chinese (Simplified) | Anson | 🚧 In Progress |
 | zh_Hant | Chinese (Traditional) | Anson | 🚧 In Progress |
 
@@ -66,16 +67,14 @@ pybabel init -i messages.pot -d translations -l <Language Code>
 ```
 See [pybabel docs for init](http://babel.pocoo.org/en/latest/cmdline.html#init)
 
-## Add language as constant
+This will create the directory structure and initial `.po` file.
 
-Go to the following file:  /config/constants.py
+Edit `config/constants.py` and add the language-code under `LANGUAGES`
 
-And add the language-code to this file under `LANGUAGES`
-
-## Test
+### Test
 
 In the `company-website` directory, run:
-
-`python main.py`
-
+```
+python main.py
+```
 And you should see the new language on the site.

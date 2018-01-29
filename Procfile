@@ -1,2 +1,2 @@
 +rm .git/hooks/pre-push
-web: gunicorn main:app
+web: newrelic-admin run-program gunicorn main:app
