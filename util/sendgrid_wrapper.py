@@ -1,6 +1,5 @@
-import sendgrid
 import sendgrid.helpers.mail as sgh
-
+from tasks import send_email
 from config import constants
 
 class Email(object):
@@ -32,9 +31,9 @@ def notify_admins(message, subject=None):
         body_html=message,
         categories=['admin'])
 
+
 def send_message(sender, recipients, subject, body_text, body_html, 
     attachments=None, ccs=None, bccs=None, categories=None, send=True):
-    sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     mail = sgh.Mail()
     mail.from_email = sgh.Email(sender.email, sender.name)
     mail.subject = subject
@@ -67,4 +66,4 @@ def send_message(sender, recipients, subject, body_text, body_html,
         for category in categories:
             mail.add_category(sgh.Category(category))
     if send:
-        return sg_api.client.mail.send.post(request_body=mail.get())    
+        send_email.delay(body=mail.get())
