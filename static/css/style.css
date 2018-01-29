@@ -356,6 +356,15 @@ footer .company-mission {
   clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
 }
 
+.platform-section .foreground-content .row {
+  padding-bottom: 60px;
+}
+
+.platform-section .btn-container {
+  display: inline-block;
+  margin: 20px 0 0 0;
+}
+
 .features-section {
   position: relative;
   background-color: #ffffff;
@@ -397,6 +406,10 @@ footer .company-mission {
   background-image: url('/static/img/slack-logo-white.svg');
 }
 
+.product-brief-btn {
+  margin-right: 20px;
+}
+
 .telegram-btn {
   padding-left:45px;
   background-image: url('/static/img/telegram-logo.svg');
@@ -417,7 +430,11 @@ footer .company-mission {
 }
 
 .demo-btn-container, .github-btn-container {
-  margin: 10px 10px 10px 0 !important;
+  margin: 10px 0;
+}
+
+.demo-btn-container {
+  margin-right: 20px;
 }
 
 .middlemen-section {
@@ -746,7 +763,6 @@ footer .company-mission {
     padding-right: 30px;
   }
   .btn-container {
-    text-align: center;
     margin-bottom: 60px;
   }
   .hero-devices {
