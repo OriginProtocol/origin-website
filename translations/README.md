@@ -9,10 +9,10 @@
 | de | German | Filip | ✅ Complete |
 | el | Greek | Tasso | ✅ Complete |
 | es | Spanish | funk | ✅ Complete |
-| fr | French | JB, Aline | 🚧 In Progress |
+| fr | French | JB |  ✅ Complete |
 | he | Hebrew | | | |
 | hr | Croatian | Filip | ✅ Complete |
-| it | Italian | funk | 🚧 In Progress |
+| it | Italian | funk |  ✅ Complete |
 | ja | Japanese | | | |
 | ko | Korean | | | |
 | nl | Dutch | Yasinz | ✅ Complete |
