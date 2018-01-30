@@ -1,17 +1,19 @@
 """empty message
 
-Revision ID: e26b1ba7f827
-Revises: None
-Create Date: 2018-01-30 13:50:56.998065
+Revision ID: 77799c791f03
+Revises: 
+Create Date: 2018-01-30 14:11:55.771532
 
 """
-
-# revision identifiers, used by Alembic.
-revision = 'e26b1ba7f827'
-down_revision = None
-
 from alembic import op
 import sqlalchemy as sa
+
+
+# revision identifiers, used by Alembic.
+revision = '77799c791f03'
+down_revision = None
+branch_labels = None
+depends_on = None
 
 
 def upgrade():

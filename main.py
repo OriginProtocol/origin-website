@@ -9,6 +9,9 @@ from flask_compress import Compress
 from views import service_views
 from views import web_views
 
+from flask_migrate import Migrate
+from database import db
+
 # Silence pyflakes
 assert patches
 assert service_views
@@ -19,7 +22,9 @@ Compress(app)
 
 app_config.init_prod_app(app)
 
+migrate = Migrate(app, db)
+
 if __name__ == '__main__':
-	app.debug = constants.DEBUG
-	port = int(os.environ.get("PORT", 5000))
-	app.run(host='0.0.0.0', port=port, threaded=True)
+    app.debug = constants.DEBUG
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, threaded=True)
