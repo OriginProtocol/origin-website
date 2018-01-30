@@ -17,4 +17,3 @@ def sort_language_constants():
     sorted_lang_names = sorted(lang_names, key=c.sort_key)
 
     return [available_languages[lang_name] for lang_name in sorted_lang_names]
-

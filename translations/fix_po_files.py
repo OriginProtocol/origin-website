@@ -14,13 +14,13 @@ for root, dirnames, filenames in os.walk('.'):
         # Get language code
         try:
             language_code = pathname.split("/")[1]
-        except:
+        except BaseException:
             continue
 
         print language_code
 
         # Fix it
-        f = open(pathname,"r+")
+        f = open(pathname, "r+")
         d = f.readlines()
         f.seek(0)
         for i in d:

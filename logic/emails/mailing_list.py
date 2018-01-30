@@ -11,9 +11,12 @@ from flask_babel import gettext, Babel, Locale
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 
+
 def send_welcome(email):
 
-    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+    if not re.match(
+        r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
+            email):
         return gettext('Please enter a valid email address')
 
     try:
@@ -22,23 +25,36 @@ def send_welcome(email):
         me.unsubscribed = False
         db.session.add(me)
         db.session.commit()
-    except:
+    except BaseException:
         return gettext('You are already signed up!')
 
     email_types.send_email_type('welcome', DEFAULT_SENDER, email)
 
     return gettext('Thanks for signing up!')
 
-def presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, ip_address):
 
-    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+def presale(
+        full_name,
+        email,
+        accredited,
+        entity_type,
+        desired_allocation,
+        desired_allocation_currency,
+        citizenship,
+        sending_addr,
+        note,
+        ip_address):
+
+    if not re.match(
+        r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
+            email):
         return gettext('Please enter a valid email address')
 
     try:
         me = db_models.Presale()
         me.full_name = full_name
         me.email = email
-        me.accredited = (accredited=='1')
+        me.accredited = (accredited == '1')
         me.entity_type = entity_type
         me.desired_allocation = desired_allocation
         me.desired_allocation_currency = desired_allocation_currency
@@ -52,7 +68,8 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
         return gettext('Ooops! Something went wrong.')
 
     if sending_addr:
-        sending_addr = "<a href='https://etherscan.io/address/"+sending_addr+"'>"+sending_addr+"</a>" if sending_addr.startswith('0x') else "<a href='https://blockchain.info/address/"+sending_addr+"'>"+sending_addr+"</a>"
+        sending_addr = "<a href='https://etherscan.io/address/" + sending_addr + "'>" + sending_addr + \
+            "</a>" if sending_addr.startswith('0x') else "<a href='https://blockchain.info/address/" + sending_addr + "'>" + sending_addr + "</a>"
 
     message = """Name: %s<br>
                  Email: %s<br>
@@ -63,23 +80,29 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
                  Address: %s<br>
                  Note: %s<br>
                  IP: %s""" % (
-                    full_name, email,
-                    ("Yes" if accredited == "1" else "No"),
-                    entity_type,
-                    desired_allocation, desired_allocation_currency,
-                    citizenship,
-                    sending_addr,
-                    note,
-                    ip_address)
+        full_name, email,
+        ("Yes" if accredited == "1" else "No"),
+        entity_type,
+        desired_allocation, desired_allocation_currency,
+        citizenship,
+        sending_addr,
+        note,
+        ip_address)
 
     email_types.send_email_type('presale', DEFAULT_SENDER, email)
 
-    sgw.notify_admins(message, subject=full_name + " is interested in the presale")
+    sgw.notify_admins(
+        message,
+        subject=full_name +
+        " is interested in the presale")
 
     return gettext('Thanks! We\'ll be in touch soon.')
 
+
 def unsubscribe(email):
-    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+    if not re.match(
+        r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
+            email):
         return 'Please enter a valid email address'
 
     try:
@@ -107,10 +130,14 @@ def send_one_off(email_type):
 
 def build_interest(name, company_name, email, website, note):
 
-    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+    if not re.match(
+        r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
+            email):
         return gettext('Please enter a valid email address')
 
-    if website and not re.match(r"(^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$)", website):
+    if website and not re.match(
+        r"(^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$)",
+            website):
         return gettext('Please enter a valid website address')
 
     try:
@@ -126,13 +153,15 @@ def build_interest(name, company_name, email, website, note):
         print (e)
         return gettext('Ooops! Something went wrong.')
 
-    message = "Name: %s<br>Company Name: %s<br>Email: %s<br>Website: %s<br>Note: %s" % (name, company_name,
-                                                                                        email, website, note)
+    message = "Name: %s<br>Company Name: %s<br>Email: %s<br>Website: %s<br>Note: %s" % (
+        name, company_name, email, website, note)
 
     email_types.send_email_type('build_on_origin', DEFAULT_SENDER, email)
 
-    sgw.notify_admins(message,
-                      subject="{name}({company_name}) is interested in building on Origin".format(name=name,
-                                                                                                  company_name=company_name))
+    sgw.notify_admins(
+        message,
+        subject="{name}({company_name}) is interested in building on Origin".format(
+            name=name,
+            company_name=company_name))
 
     return gettext('Thanks! We\'ll be in touch soon.')
