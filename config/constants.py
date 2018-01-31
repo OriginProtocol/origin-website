@@ -45,6 +45,7 @@ LANGUAGES = [
     'pt',
     'ru',
     'th',
+    'tr',
     'zh_Hans',
     'zh_Hant',
     'el',
