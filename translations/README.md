@@ -1,6 +1,6 @@
 # Localization
 
-## Status 2018-01-30
+## Status 2018-01-31
 
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
@@ -14,7 +14,7 @@
 | hr | Croatian | Filip | ✅ Complete |
 | it | Italian | funk |  ✅ Complete |
 | ja | Japanese | | | |
-| ko | Korean | | | |
+| ko | Korean | stellayujinlee |  🚧 In Progress |
 | nl | Dutch | Yasinz | ✅ Complete |
 | pt | Portugese | | | |
 | ru | Russian | Alex K | ✅ Complete |

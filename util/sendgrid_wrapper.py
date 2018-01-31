@@ -1,7 +1,15 @@
 import os
 import sendgrid.helpers.mail as sgh
-from tasks import send_email
 from config import constants
+import os
+
+# Use Redis to send mail only if env var present.
+if os.environ.get('REDIS_URL') is not None:
+    from tasks import send_email
+else:
+    def send_email(body):
+        print "Email disabled."
+        return
 
 class Email(object):
     def __init__(self, email, name):
@@ -33,7 +41,7 @@ def notify_admins(message, subject=None):
         categories=['admin'])
 
 
-def send_message(sender, recipients, subject, body_text, body_html, 
+def send_message(sender, recipients, subject, body_text, body_html,
     attachments=None, ccs=None, bccs=None, categories=None, send=True):
     mail = sgh.Mail()
     mail.from_email = sgh.Email(sender.email, sender.name)

@@ -55,15 +55,20 @@ def team():
 def presale():
     return render_template('presale.html')
 
-@app.route('/whitepaper')
+@app.route('/<lang_code>/whitepaper')
 def whitepaper():
-    return redirect('/static/docs/whitepaper_v4.pdf', code=302)
+    localized_filename = 'whitepaper_v4_%s.pdf' % g.current_lang.lower()
+    whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
+    if os.path.isfile(whitepaper_path):
+        return app.send_static_file('docs/%s' % localized_filename)
+    else:
+        # Default to English
+        return app.send_static_file('docs/whitepaper_v4.pdf')
 
 @app.route('/<lang_code>/product-brief')
 def product_brief():
     localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
-    print product_brief_path
     if os.path.isfile(product_brief_path):
         return app.send_static_file('docs/%s' % localized_filename)
     else:
