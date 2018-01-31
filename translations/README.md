@@ -1,6 +1,6 @@
 # Localization
 
-## Status 2018-01-26
+## Status 2018-01-30
 
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
