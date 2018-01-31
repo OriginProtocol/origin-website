@@ -1,3 +1,4 @@
+import os
 import sendgrid.helpers.mail as sgh
 from tasks import send_email
 from config import constants
@@ -66,4 +67,9 @@ def send_message(sender, recipients, subject, body_text, body_html,
         for category in categories:
             mail.add_category(sgh.Category(category))
     if send:
-        send_email.delay(body=mail.get())
+        if os.environ.get('REDIS_URL') is not None:
+            send_email.delay(body=mail.get())
+        else:
+            send_email(body=mail.get())
+
+

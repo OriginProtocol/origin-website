@@ -17,15 +17,17 @@ def make_celery(app):
     celery.Task = ContextTask
     return celery
 
-flask_app = Flask(__name__)
-flask_app.config.update(
-    CELERY_BROKER_URL=os.environ['REDIS_URL'],
-    CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
-)
-celery = make_celery(flask_app)
-
-@celery.task()
 def send_email(body):
-    flask_app.logger.fatal("Sending email from Celery...")
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     sg_api.client.mail.send.post(request_body=body) 
+
+# Conditionally bring Celery into the mix if there is a REDIS_URL
+if os.environ.get('REDIS_URL') is not None:
+    flask_app = Flask(__name__)
+    flask_app.config.update(
+        CELERY_BROKER_URL=os.environ['REDIS_URL'],
+        CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
+    )
+    celery = make_celery(flask_app)
+
+    send_email = celery.task(send_email)
