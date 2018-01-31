@@ -61,7 +61,7 @@ def whitepaper():
 
 @app.route('/<lang_code>/product-brief')
 def product_brief():
-    localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang
+    localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     print product_brief_path
     if os.path.isfile(product_brief_path):
