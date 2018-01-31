@@ -65,11 +65,10 @@ def product_brief():
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     print product_brief_path
     if os.path.isfile(product_brief_path):
-        # We have a translated version
-        return redirect('/static/docs/%s' % localized_filename, code=302)
+        return app.send_static_file('docs/%s' % localized_filename)
     else:
-        # Default to english
-        return redirect('/static/docs/product_brief_v17.pdf', code=302)
+        # Default to English
+        return app.send_static_file('docs/product_brief_v17.pdf')
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
