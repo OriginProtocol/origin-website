@@ -3,10 +3,12 @@ import sendgrid.helpers.mail as sgh
 
 from config import constants
 
+
 class Email(object):
     def __init__(self, email, name):
         self.email = email
         self.name = name
+
 
 class Attachment(object):
     def __init__(self, content, type, filename, disposition, content_id):
@@ -16,10 +18,11 @@ class Attachment(object):
         self.disposition = disposition
         self.content_id = content_id
 
+
 def notify_admins(message, subject=None):
     subject = subject.encode('ascii', 'ignore') if subject else None
     if 'localhost' in constants.HOST or 'pagekite' in constants.HOST:
-        recipients=[Email(constants.DEV_EMAIL, constants.DEV_EMAIL)]
+        recipients = [Email(constants.DEV_EMAIL, constants.DEV_EMAIL)]
         subject = 'DEV: ' + str(subject) if subject else str(message)
     else:
         recipients = [Email('info@originprotocol.com', 'Origin Team')]
@@ -32,8 +35,18 @@ def notify_admins(message, subject=None):
         body_html=message,
         categories=['admin'])
 
-def send_message(sender, recipients, subject, body_text, body_html, 
-    attachments=None, ccs=None, bccs=None, categories=None, send=True):
+
+def send_message(
+        sender,
+        recipients,
+        subject,
+        body_text,
+        body_html,
+        attachments=None,
+        ccs=None,
+        bccs=None,
+        categories=None,
+        send=True):
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     mail = sgh.Mail()
     mail.from_email = sgh.Email(sender.email, sender.name)
@@ -67,4 +80,4 @@ def send_message(sender, recipients, subject, body_text, body_html,
         for category in categories:
             mail.add_category(sgh.Category(category))
     if send:
-        return sg_api.client.mail.send.post(request_body=mail.get())    
+        return sg_api.client.mail.send.post(request_body=mail.get())

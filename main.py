@@ -20,6 +20,6 @@ Compress(app)
 app_config.init_prod_app(app)
 
 if __name__ == '__main__':
-	app.debug = constants.DEBUG
-	port = int(os.environ.get("PORT", 5000))
-	app.run(host='0.0.0.0', port=port, threaded=True)
+    app.debug = constants.DEBUG
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, threaded=True)

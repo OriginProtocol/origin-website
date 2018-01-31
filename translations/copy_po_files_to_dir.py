@@ -23,7 +23,7 @@ for root, dirnames, filenames in os.walk('.'):
         # Get language code
         try:
             language_code = pathname.split("/")[1]
-        except:
+        except BaseException:
             continue
 
         if add_date:

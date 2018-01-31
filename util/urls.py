@@ -3,9 +3,11 @@ import urlparse
 
 from config import constants
 
+
 def absurl(relative_url):
     protocol = 'https' if constants.HTTPS else 'http'
     return '%s://%s%s' % (protocol, constants.HOST, relative_url)
+
 
 def append_params(url, params):
     parsed = urlparse.urlparse(url)
@@ -18,6 +20,7 @@ def append_params(url, params):
     new_parsed = list(parsed)
     new_parsed[4] = urllib.urlencode(parsed_params, doseq=True)
     return urlparse.urlunparse(new_parsed)
+
 
 def replace_params(url, params):
     parsed = urlparse.urlparse(url)

@@ -4,8 +4,14 @@ from flask import request
 
 from app import app
 
+
 def serviceroute(service_class):
-    return app.route(service_class.path + '/' + '<method_name>', methods=['POST'])
+    return app.route(
+        service_class.path +
+        '/' +
+        '<method_name>',
+        methods=['POST'])
+
 
 def invoke_service(service_class, method_name, **kwargs):
     request_json = request.json
@@ -17,4 +23,3 @@ def invoke_service(service_class, method_name, **kwargs):
     elif response['response_code'] == apilib.ResponseCode.REQUEST_ERROR:
         response_code = 400
     return json.jsonify(response), response_code
-
