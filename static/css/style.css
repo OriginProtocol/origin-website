@@ -460,6 +460,25 @@ footer .company-mission {
   background-color: #ffffff;
 }
 
+.technology-section .img-technology {
+  text-align: center;
+  margin: 30px 0;
+  width: 150px;
+}
+
+.technology-section .img-technology img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.technology-section .img-technology .ipfs-logo {
+  margin-top: 7px;
+}
+
+.technology-section .img-technology .react-logo {
+  margin-top: 21px;
+}
+
 .technology-section > div > .row {
   position: relative;
 }
@@ -473,20 +492,6 @@ footer .company-mission {
 .technology-section .left-lower-pane,
 .technology-section .right-lower-pane {
   background-color: #f7f9fb;
-}
-
-.img-technology {
-  max-width: 100px;
-  margin: 40px auto;
-}
-
-.img-technology img {
-  width: 80%;
-}
-
-.ethereum-logo,
-.react-logo {
-  width: 100% !important;
 }
 
 .roadmap-section {
@@ -762,9 +767,6 @@ footer .company-mission {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .btn-container {
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 30px;
   }
@@ -806,6 +808,21 @@ footer .company-mission {
   }
 }
 
+@media (min-width: 576px) {
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section {
+    padding-bottom: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar,
   footer .container,
@@ -813,22 +830,12 @@ footer .company-mission {
     padding-left: 60px;
     padding-right: 60px;
   }
-  .btn-container {
-    text-align: left;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 50px;
     left: 100px;
   }
-  .platform-section h2 {
-    margin-top: 280px;
-  }
   .platform-graphic {
     display: none;
-  }
-  .partners-section h2 {
-    margin-top: 40px;
   }
   .use-cases-section .video {
     margin-top: 60px;
@@ -854,9 +861,6 @@ footer .company-mission {
   .roadmap-section h2 {
     margin-top: 60px;
   }
-  .email-section h2 {
-    margin-top: 60px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -866,16 +870,9 @@ footer .company-mission {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .btn-container {
-    text-align: left;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 10px;
     left: -30px;
-  }
-  .platform-section h2 {
-    margin-top: 280px;
   }
   .platform-graphic {
     display: inline-block;
@@ -887,9 +884,6 @@ footer .company-mission {
   }
   .partners-section .foreground-content {
     padding-top: 100px;
-  }
-  .partners-section h2 {
-    margin-top: 40px;
   }
   .use-cases-section .video {
     top: -120px;
@@ -939,9 +933,6 @@ footer .company-mission {
   }
   .roadmap {
     margin-bottom: 60px;
-  }
-  .email-section h2 {
-    margin-top: 60px;
   }
   .email-section .btn-container {
     margin-left: 20px;
