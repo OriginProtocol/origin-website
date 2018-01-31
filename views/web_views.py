@@ -5,7 +5,7 @@ from flask import (jsonify, redirect, render_template,
                    request, flash, g, url_for)
 from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
-
+import os
 from app import app
 from config import constants, universal
 from logic.emails import mailing_list
@@ -59,9 +59,17 @@ def presale():
 def whitepaper():
     return redirect('/static/docs/whitepaper_v4.pdf', code=302)
 
-@app.route('/product-brief')
+@app.route('/<lang_code>/product-brief')
 def product_brief():
-    return redirect('/static/docs/product_brief_v17.pdf', code=302)
+    localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang
+    product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
+    print product_brief_path
+    if os.path.isfile(product_brief_path):
+        # We have a translated version
+        return redirect('/static/docs/%s' % localized_filename, code=302)
+    else:
+        # Default to english
+        return redirect('/static/docs/product_brief_v17.pdf', code=302)
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():

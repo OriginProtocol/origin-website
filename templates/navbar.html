@@ -9,7 +9,7 @@
   {% endif %}
 
   <div class="container">
-    <a class="navbar-brand" href="{{'/%s'% CURRENT_LANGUAGE}}">
+    <a class="navbar-brand" href="{{'/%s' % CURRENT_LANGUAGE}}">
       <div class="logo-container">
         {% if navbar_dark==True %}
         <img src="/static/img/origin-logo.png"
@@ -33,7 +33,7 @@
           <a class="nav-link" href="{{'/%s/presale'% CURRENT_LANGUAGE}}">{{gettext("Presale")}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/product-brief">{{gettext("Product Brief")}}</a>
+          <a class="nav-link" href="{{'/%s/product-brief'% CURRENT_LANGUAGE}}">{{gettext("Product Brief")}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{'/%s/team'% CURRENT_LANGUAGE}}">{{gettext("Team")}}</a>
