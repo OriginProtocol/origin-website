@@ -72,6 +72,7 @@ main.landing-page {
   background-image: url("/static/img/dot-grid.svg");
   background-position: center top;
   background-repeat: repeat-x;
+  overflow-x: hidden;
 }
 
 .navbar-origin {
@@ -158,7 +159,8 @@ main.landing-page {
 
 .platform-bottom-pane {
   background-color: #ffffff;
-  height: 100%;
+  display: flex;
+  flex: 1;
 }
 
 .left-upper-pane {
@@ -326,23 +328,26 @@ footer .company-mission {
   height: 100%;
 }
 
+.platform-section .top-panes .col-pane {
+  display: flex;
+}
+
 .platform-section > div > .row {
   position: relative;
   overflow-y: hidden;
 }
 
+.platform-section .background-panes .row:last-of-type > .col-12 {
+  display: flex;
+  flex: 1;
+}
+
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
+  display: flex;
+  flex: 1;
   background-color: #ffffff;
-}
-
-.platform-section .left-upper-pane {
-  height: 100%;
-}
-
-.platform-section .right-upper-pane {
-  height: calc(100% + 1px);
 }
 
 .platform-section .left-upper-pane {
