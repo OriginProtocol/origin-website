@@ -144,8 +144,15 @@ main.landing-page {
   height: 100%;
 }
 
-.partners-section .background-panes {
-  height: 100%;
+.background-panes.bottom-panes {
+  bottom: 0;
+  display: flex;
+  flex: 1;
+  left: 0;
+}
+
+.background-panes.bottom-panes > .align-items-end {
+  flex: 1;
 }
 
 .partners-section .bottom-panes .row-pane {
