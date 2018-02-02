@@ -9,7 +9,7 @@
 | de | German | Filip | ✅ Complete |
 | el | Greek | Tasso | ✅ Complete |
 | es | Spanish | funk | ✅ Complete |
-| fr | French | JB |  ✅ Complete |
+| fr | French | Bastien |  ✅ Complete |
 | he | Hebrew | | | |
 | hr | Croatian | Filip | ✅ Complete |
 | it | Italian | funk |  ✅ Complete |
