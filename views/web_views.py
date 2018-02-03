@@ -130,7 +130,7 @@ def build_on_origin():
 @app.route('/build-on-origin/interest', methods=['POST'])
 def build_on_origin_interest():
     name = request.form['name']
-    company_name = request.form['comapny_name']
+    company_name = request.form['company_name']
     email = request.form['email']
     website = request.form["website"]
     note = request.form["note"]
