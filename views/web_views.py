@@ -5,7 +5,7 @@ from flask import (jsonify, redirect, render_template,
                    request, flash, g, url_for)
 from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
-
+import os
 from app import app
 from config import constants, universal
 from logic.emails import mailing_list
@@ -55,13 +55,25 @@ def team():
 def presale():
     return render_template('presale.html')
 
-@app.route('/whitepaper')
+@app.route('/<lang_code>/whitepaper')
 def whitepaper():
-    return redirect('/static/docs/whitepaper_v4.pdf', code=302)
+    localized_filename = 'whitepaper_v4_%s.pdf' % g.current_lang.lower()
+    whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
+    if os.path.isfile(whitepaper_path):
+        return app.send_static_file('docs/%s' % localized_filename)
+    else:
+        # Default to English
+        return app.send_static_file('docs/whitepaper_v4.pdf')
 
-@app.route('/product-brief')
+@app.route('/<lang_code>/product-brief')
 def product_brief():
-    return redirect('/static/docs/product_brief_v17.pdf', code=302)
+    localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
+    product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
+    if os.path.isfile(product_brief_path):
+        return app.send_static_file('docs/%s' % localized_filename)
+    else:
+        # Default to English
+        return app.send_static_file('docs/product_brief_v17.pdf')
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():

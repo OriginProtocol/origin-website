@@ -1,25 +1,26 @@
 # Localization
 
-## Status 2018-01-26
+## Status 2018-01-31
 
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
 | ar | Arabic | m.alqattan | 🚧 In Progress |
+| cs | Czech | Daosta | 🚧 In Progress |
 | de | German | Filip | ✅ Complete |
 | el | Greek | Tasso | ✅ Complete |
 | es | Spanish | funk | ✅ Complete |
-| fr | French | JB, Aline | 🚧 In Progress |
+| fr | French | Bastien |  ✅ Complete |
 | he | Hebrew | | | |
 | hr | Croatian | Filip | ✅ Complete |
-| it | Italian | funk | 🚧 In Progress |
+| it | Italian | funk |  ✅ Complete |
 | ja | Japanese | | | |
-| ko | Korean | | | |
+| ko | Korean | stellayujinlee |  🚧 In Progress |
 | nl | Dutch | Yasinz | ✅ Complete |
 | pt | Portugese | | | |
 | ru | Russian | Alex K | ✅ Complete |
-| th | Thai | Ben V | 🚧 In Progress |
-| zh_Hans | Chinese (Simplified) | Anson | 🚧 In Progress |
-| zh_Hant | Chinese (Traditional) | Anson | 🚧 In Progress |
+| th | Thai | Ben V / @cvibhagool | ✅ Complete |
+| zh_Hans | Chinese (Simplified) | Anson | ✅ Complete |
+| zh_Hant | Chinese (Traditional) | Anson | ✅ Complete |
 
 ## Implementation
 
@@ -66,7 +67,24 @@ pybabel init -i messages.pot -d translations -l <Language Code>
 ```
 See [pybabel docs for init](http://babel.pocoo.org/en/latest/cmdline.html#init)
 
-Be sure to add any new language to `config/constants.py` for it to be appear.
+This will create the directory structure and initial `.po` file.
 
+Edit `config/constants.py` and add the language-code under `LANGUAGES`
 
+### Test
 
+In the `company-website` directory, run:
+```
+python main.py
+```
+And you should see the new language on the site.
+
+## Troubleshooting
+
+If you get this error:
+```
+  File "/Users/stan/Documents/Origin/company-website/lib/python2.7/site-packages/babel/messages/pofile.py", line 147, in _add_message
+    string = self.translations[0][1].denormalize()
+IndexError: list index out of range
+```
+It most likely means that you have a `%` in a `msgstr`. These must be escaped as `%%`.

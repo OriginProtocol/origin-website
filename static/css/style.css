@@ -54,7 +54,7 @@ a:hover {
   font-family: 'Poppins', sans-serif;
   margin: 10px auto;
   color: black;
-  background-color: white;
+  background-color: #ffffff;
   position: absolute;
   top: 0px;
   left: 10px;
@@ -72,6 +72,7 @@ main.landing-page {
   background-image: url("/static/img/dot-grid.svg");
   background-position: center top;
   background-repeat: repeat-x;
+  overflow-x: hidden;
 }
 
 .navbar-origin {
@@ -143,8 +144,15 @@ main.landing-page {
   height: 100%;
 }
 
-.partners-section .background-panes {
-  height: 100%;
+.background-panes.bottom-panes {
+  bottom: 0;
+  display: flex;
+  flex: 1;
+  left: 0;
+}
+
+.background-panes.bottom-panes > .align-items-end {
+  flex: 1;
 }
 
 .partners-section .bottom-panes .row-pane {
@@ -157,8 +165,9 @@ main.landing-page {
 }
 
 .platform-bottom-pane {
-  background-color: white;
-  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex: 1;
 }
 
 .left-upper-pane {
@@ -326,23 +335,26 @@ footer .company-mission {
   height: 100%;
 }
 
+.platform-section .top-panes .col-pane {
+  display: flex;
+}
+
 .platform-section > div > .row {
   position: relative;
   overflow-y: hidden;
 }
 
+.platform-section .background-panes .row:last-of-type > .col-12 {
+  display: flex;
+  flex: 1;
+}
+
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
-  background-color: white;
-}
-
-.platform-section .left-upper-pane {
-  height: 100%;
-}
-
-.platform-section .right-upper-pane {
-  height: calc(100% + 1px);
+  display: flex;
+  flex: 1;
+  background-color: #ffffff;
 }
 
 .platform-section .left-upper-pane {
@@ -356,13 +368,33 @@ footer .company-mission {
   clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
 }
 
+#rtl .platform-section .left-upper-pane {
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+#rtl .platform-section .right-upper-pane {
+  -webkit-clip-path: polygon(0 50%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 50%, 100% 0%, 100% 100%, 0% 100%);
+  margin: 0 -1px -1px 0;
+}
+
+.platform-section .foreground-content .row {
+  padding-bottom: 60px;
+}
+
+.platform-section .btn-container {
+  display: inline-block;
+  margin: 20px 0 0 0;
+}
+
 .features-section {
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .partners-section {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .partners-section > div > .row {
@@ -397,6 +429,10 @@ footer .company-mission {
   background-image: url('/static/img/slack-logo-white.svg');
 }
 
+.product-brief-btn {
+  margin-right: 20px;
+}
+
 .telegram-btn {
   padding-left:45px;
   background-image: url('/static/img/telegram-logo.svg');
@@ -417,7 +453,11 @@ footer .company-mission {
 }
 
 .demo-btn-container, .github-btn-container {
-  margin: 10px 10px 10px 0 !important;
+  margin: 10px 0;
+}
+
+.demo-btn-container {
+  margin-right: 20px;
 }
 
 .middlemen-section {
@@ -439,28 +479,42 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
+.technology-section {
+  background-color: #ffffff;
+}
+
+.technology-section .img-technology {
+  text-align: center;
+  margin: 30px 0;
+  width: 150px;
+}
+
+.technology-section .img-technology img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.technology-section .img-technology .ipfs-logo {
+  margin-top: 7px;
+}
+
+.technology-section .img-technology .react-logo {
+  margin-top: 21px;
+}
+
+.technology-section > div > .row {
+  position: relative;
+}
+
 .technology-section .background-panes {
-  background-color: white;
+  background-color: #ffffff;
   border-bottom: 2px solid #f7f9fb;
+  bottom: 0;
 }
 
 .technology-section .left-lower-pane,
 .technology-section .right-lower-pane {
   background-color: #f7f9fb;
-}
-
-.img-technology {
-  max-width: 100px;
-  margin: 40px auto;
-}
-
-.img-technology img {
-  width: 80%;
-}
-
-.ethereum-logo,
-.react-logo {
-  width: 100% !important;
 }
 
 .roadmap-section {
@@ -555,7 +609,7 @@ footer .company-mission {
 }
 
 .email-section {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .email-section form {
@@ -736,10 +790,6 @@ footer .company-mission {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .btn-container {
-    text-align: center;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 30px;
   }
@@ -781,6 +831,21 @@ footer .company-mission {
   }
 }
 
+@media (min-width: 576px) {
+  .platform-section h2 {
+    margin-top: 280px;
+  }
+  .partners-section h2 {
+    margin-top: 40px;
+  }
+  .use-cases-section {
+    padding-bottom: 60px;
+  }
+  .email-section h2 {
+    margin-top: 60px;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar,
   footer .container,
@@ -788,22 +853,12 @@ footer .company-mission {
     padding-left: 60px;
     padding-right: 60px;
   }
-  .btn-container {
-    text-align: left;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 50px;
     left: 100px;
   }
-  .platform-section h2 {
-    margin-top: 280px;
-  }
   .platform-graphic {
     display: none;
-  }
-  .partners-section h2 {
-    margin-top: 40px;
   }
   .use-cases-section .video {
     margin-top: 60px;
@@ -829,9 +884,6 @@ footer .company-mission {
   .roadmap-section h2 {
     margin-top: 60px;
   }
-  .email-section h2 {
-    margin-top: 60px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -841,16 +893,9 @@ footer .company-mission {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .btn-container {
-    text-align: left;
-    margin-bottom: 60px;
-  }
   .hero-devices {
     top: 10px;
     left: -30px;
-  }
-  .platform-section h2 {
-    margin-top: 280px;
   }
   .platform-graphic {
     display: inline-block;
@@ -862,9 +907,6 @@ footer .company-mission {
   }
   .partners-section .foreground-content {
     padding-top: 100px;
-  }
-  .partners-section h2 {
-    margin-top: 40px;
   }
   .use-cases-section .video {
     top: -120px;
@@ -914,9 +956,6 @@ footer .company-mission {
   }
   .roadmap {
     margin-bottom: 60px;
-  }
-  .email-section h2 {
-    margin-top: 60px;
   }
   .email-section .btn-container {
     margin-left: 20px;

@@ -76,10 +76,12 @@
               </p>
               <div class="btn-container">
                 <a href="/product-brief">
-                  <button class="btn btn-primary">
+                  <button class="product-brief-btn btn btn-primary">
                     {{gettext("Read the Product Brief")}}
                   </button>
                 </a>
+              </div>
+              <div class="btn-container">
                 <a href="https://t.me/originprotocol">
                   <button class="telegram-btn btn btn-outline-primary">
                     Join Our Telegram
@@ -102,7 +104,7 @@
                 {{gettext("Companies building on the Origin Protocol")}}
               </h2>
               <div class="row">
-                  <div class="col-12"><img class='img-fluid' src='/static/img/partners/partners.png'></div>
+                  <div class="col-12"><img class='img-fluid wow fadeInUp' src='/static/img/partners/partners.png'></div>
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -110,7 +112,7 @@
                 <img src="/static/img/partners-graphic.png"
                   srcset="/static/img/partners-graphic@2x.png 2x,
                   /static/img/partners-graphic@3x.png 3x"
-                  class="partners-graphic">
+                  class="partners-graphic wow fadeInUp">
               </div>
             </div>
           </div>
@@ -138,7 +140,7 @@
             <img src="/static/img/video.png"
               srcset="/static/img/video@2x.png 2x,
                 /static/img/video@3x.png 3x"
-              class="video">
+              class="video wow fadeInUp">
           </div>
         </div>
         <div class="col-12 col-md-5">
@@ -177,7 +179,7 @@
             {{gettext("Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround.")}}
           </p>
           <div class="btn-container">
-            <a href="/whitepaper">
+            <a href="{{'/%s/whitepaper'% CURRENT_LANGUAGE}}">
               <button class="btn btn-primary">
                 {{gettext("Read the Whitepaper")}}
               </button>
@@ -189,7 +191,7 @@
             <img src="/static/img/middlemen-graphic.png"
               srcset="/static/img/middlemen-graphic@2x.png 2x,
                 /static/img/middlemen-graphic@3x.png 3x"
-              class="middlemen-graphic">
+              class="middlemen-graphic wow fadeInUp">
           </div>
         </div>
       </div>
@@ -217,7 +219,7 @@
                 <img src="/static/img/features-graphic.png"
                   srcset="/static/img/features-graphic@2x.png 2x,
                   /static/img/features-graphic@3x.png 3x"
-                  class="features-graphic">
+                  class="features-graphic wow fadeInUp">
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -325,7 +327,7 @@
                 <img src="/static/img/tech-stack-graphic.png"
                   srcset="/static/img/tech-stack-graphic@2x.png 2x,
                   /static/img/tech-stack-graphic@3x.png 3x"
-                  class="tech-stack-graphic">
+                  class="tech-stack-graphic wow fadeInUp">
               </div>
             </div>
           </div>
@@ -367,7 +369,7 @@
                   <div class="when">
                     {{gettext("September 2017")}}
                   </div>
-                  <a href="/product-brief">{{gettext("Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released")}}
+                  <a href="{{'/%s/product-brief'% CURRENT_LANGUAGE}}">{{gettext("Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released")}}
                 </div>
                 <div class="col-md-2 col-xs-12 blue-to-purple">
                   <div class="blue-circle"></div>
