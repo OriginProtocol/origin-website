@@ -8,7 +8,7 @@
 
 <main class="build-page">
   {% include 'navbar.html' %}
-  <section class="team-header-section">
+  <section class="build-header-section">
     <div class="container foreground-content">
       <div class="row">
         <div class="col-12 col-md-6">
@@ -17,26 +17,13 @@
           </h1>
         </div>
         <div class="col-12 col-md-6">
-          <p>
-            {{gettext("<strong>Teams all over the world are building on Origin's protocols. We're looking for more amazing people to join our mission.</strong> Whether you're an existing blockchain company or a traditional marketplace thinking about the blockchain, we'd love to hear from you! Fill out the form below and we'll get back to you shortly.")}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="core-team-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes">
-          <div class="row row-pane">
-            <div class="col-4 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-8 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
+          <div class="text-container">
+            <p>
+              {{gettext("<strong>Teams all over the world are building on Origin's protocols. We're looking for more amazing people to join our mission.</strong>")}}
+            </p>
+            <p>
+              {{gettext("Whether you're an existing blockchain company or a traditional marketplace thinking about the blockchain, we'd love to hear from you! Fill out the form below and we'll get back to you shortly.")}}
+            </p>
           </div>
         </div>
       </div>
@@ -44,7 +31,7 @@
   </section>
   <section class="filler-section">
   </section>
-  <section class="investors-section">
+  <section class="building-partners-section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-pane background-panes">
@@ -60,11 +47,105 @@
           </div>
         </div>
         <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="partners img-graphic">
+                <img src="/static/img/partners-graphic.png"
+                  srcset="/static/img/partners-graphic@2x.png 2x,
+                  /static/img/partners-graphic@3x.png 3x"
+                  class="partners-graphic wow fadeInUp">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="logos">
+                <div class="img-graphic">
+                  <img src="/static/img/partners/canya.png"
+                    class="canya-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/beetoken.png"
+                    class="beetoken-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/wetrust.png"
+                    class="wetrust-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/antiqmall.jpg"
+                    class="antiqmall-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/aworker.png"
+                    class="aworker-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/acquaint.jpg"
+                    class="acquaint-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/snagride.png"
+                    class="snagride-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/edgecoin.png"
+                    class="edgecoin-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/jolyy.png"
+                    class="jolyy-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/blockfood.png"
+                    class="blockfood-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/galaxy.png"
+                    class="galaxy-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/thrive.png"
+                    class="thrive-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/mobotiq.png"
+                    class="mobotiq-logo wow fadeInUp">
+                </div>
+                <div class="img-graphic">
+                  <img src="/static/img/partners/odem.png"
+                    class="odem-logo wow fadeInUp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
+          <div class="row row-pane align-items-end">
+            <div class="col-9 col-pane">
+              <div class="left-lower-pane">
+              </div>
+            </div>
+            <div class="col-3 col-pane">
+              <div class="right-lower-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="building-interest-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container foreground-content">
           <div class="row build-on-origin-form">
-            <div class="col-12 offset-xl-1 col-xl-5">
+            <div class="col-12 col-md-6">
               <h2>
-                {{gettext("Interested in building?")}}
+                {{gettext("Join our mission!")}}
               </h2>
+
+              <p>
+                {{gettext("We'd love to hear from you! Fill out the form below and we'll get back to you shortly.")}}
+              </p>
 
               <form method="post" action="/build-on-origin/interest" id="build-on-origin">
 
@@ -74,8 +155,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="comapny_name"><strong>{{gettext("Company")}}</strong></label>
-                  <input name="comapny_name" id="comapny_name" class="form-control" placeholder="{{gettext("Company")}}" />
+                  <label for="company_name"><strong>{{gettext("Company")}}</strong></label>
+                  <input name="company_name" id="company_name" class="form-control" placeholder="{{gettext("Company")}}" />
                 </div>
 
                 <div class="form-group">
@@ -104,6 +185,34 @@
             </form>
 
             <!-- </div> -->
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="row text-center social-links">
+              <div class="col-12 col-sm-6 col-md-12 offset-lg-2 col-lg-4">
+                <a href="https://t.me/originprotocol">
+                  <button class="btn btn-outline-primary"><i class="fab fa-slack-hash" aria-hidden="true"></i></button>
+                  <br /><strong>Join our Slack</strong>
+                </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-12 col-lg-4">
+                <a href="https://t.me/originprotocol">
+                  <button class="btn btn-outline-primary"><i class="fab fa-telegram-plane" aria-hidden="true"></i></button>
+                  <br /><strong>Join our Telegram</strong>
+                </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-12 offset-lg-2 col-lg-4">
+                <a href="https://t.me/originprotocol">
+                  <button class="btn btn-outline-primary"><i class="fab fa-twitter" aria-hidden="true"></i></button>
+                  <br /><strong>Join our Twitter</strong>
+                </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-12 col-lg-4">
+                <a href="https://t.me/originprotocol">
+                  <button class="btn btn-outline-primary"><i class="fab fa-facebook-f" aria-hidden="true"></i></button>
+                  <br /><strong>Join our Facebook</strong>
+                </a>
+              </div>
+            <div>
           </div>
         </div>
       </div>

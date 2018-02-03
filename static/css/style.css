@@ -711,26 +711,92 @@ footer .company-mission {
   font-size: 0.75rem;
 }
 
+.build-header-section,
 .team-header-section {
   background-color: #f7f9fb;
 }
 
+.build-header-section h1,
 .team-header-section h1 {
   font-weight: 200;
 }
 
+.build-header-section .text-container {
+  border-left: 1px solid #dee0e2;
+  padding-left: 20px;
+}
+
+.building-partners-section .partners.img-graphic {
+  margin-top: -140px;
+}
+
+.building-partners-section h2,
 .core-team-section h2 {
   margin: 80px auto 40px auto;
 }
 
+.building-partners-section .left-upper-pane,
+.building-partners-section .right-upper-pane,
 .core-team-section .left-upper-pane,
 .core-team-section .right-upper-pane {
   position: relative;
   background-color: #f7f9fb;
 }
 
+.building-partners-section .logos {
+  text-align: center;
+}
+
+.building-partners-section .logos .img-graphic {
+  display: inline-block;
+  padding: 0 20px 80px;
+}
+
+.building-partners-section .logos .img-graphic img {
+  max-height: 120px;
+  max-width: 180px;
+}
+
+.edgecoin-logo {
+  background: #333333;
+}
+
+.building-partners-section > div > .row,
 .contributing-team-section > div > .row {
   position: relative;
+}
+
+.building-partners-section .foreground-content {
+  padding-bottom: calc(10vw + 120px);
+}
+
+.building-interest-section .foreground-content {
+  padding-bottom: 10vw;
+  margin-top: -10vw;
+}
+
+.building-interest-section .social-links {
+  font-weight: bold;
+}
+
+.building-interest-section .social-links div {
+  padding-top: 40px;
+}
+
+.building-interest-section .social-links .btn {
+  background-color: #f7f9fb;
+  border-radius: 80px;
+  font-size: 60px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+}
+
+.building-interest-section .social-links .btn:hover {
+  background-color: #007bff;
+}
+
+.building-interest-section .social-links .btn .fab {
+  width: 80px;
 }
 
 .contributing-team-section .foreground-content {
@@ -741,10 +807,9 @@ footer .company-mission {
   margin: 80px auto 40px auto;
 }
 
-.contributing-team-section .background-panes {
-  bottom: 0;
-}
-
+.building-interest-section,
+.building-partners-section .left-lower-pane,
+.building-partners-section .right-lower-pane,
 .contributing-team-section .left-lower-pane,
 .contributing-team-section .right-lower-pane {
   background-color: #f7f9fb;
@@ -829,6 +894,22 @@ footer .company-mission {
   .email-section h2 {
     margin-top: 60px;
   }
+  .build-header-section {
+    padding-bottom: 80px;
+  }
+  .build-header-section .text-container {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .building-partners-section .bottom-panes {
+    bottom: 0;
+  }
+  .building-partners-section .logos {
+    padding-top: 100px;
+  }
+  .building-partners-section .logos .img-graphic {
+    display: block;
+  }
 }
 
 @media (min-width: 576px) {
@@ -883,6 +964,16 @@ footer .company-mission {
   }
   .roadmap-section h2 {
     margin-top: 60px;
+  }
+  .build-header-section {
+    padding-bottom: 80px;
+  }
+  .build-header-section .text-container {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .building-partners-section .logos {
+    padding-top: 100px;
   }
 }
 
@@ -996,6 +1087,7 @@ footer .company-mission {
   .roadmap .blue-to-grey {
     border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
   }
+  .building-partners-section h2,
   .core-team-section h2 {
     margin-top: 120px;
   }
@@ -1004,6 +1096,9 @@ footer .company-mission {
   }
   .filler-section {
     height: 0px;
+  }
+  .build-page .filler-section {
+    height: 100px;
   }
   .investors-section h2 {
     margin-top: 180px;
@@ -1019,6 +1114,7 @@ footer .company-mission {
     height: 160px;
     width: 160px;
   }
+  .building-partners-section h2,
   .core-team-section h2 {
     margin-top: 200px;
   }
