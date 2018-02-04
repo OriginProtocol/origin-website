@@ -21,9 +21,9 @@ $("#presale").submit(function(event) {
   'json');
 });
 
-$("#build-on-origin").submit(function(event) {
+$("#partners-interest").submit(function(event) {
   event.preventDefault();
-  $.post('/build-on-origin/interest', $('form').serialize(), function(data) {
+  $.post('/partners/interest', $('form').serialize(), function(data) {
     if (data == "OK") {
       fbq('track', 'Lead');
       window.location = "/";

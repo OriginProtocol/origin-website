@@ -105,7 +105,7 @@ def send_one_off(email_type):
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
 
-def build_interest(name, company_name, email, website, note):
+def partners_interest(name, company_name, email, website, note):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return gettext('Please enter a valid email address')
