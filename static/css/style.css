@@ -481,13 +481,25 @@ footer .company-mission {
 
 .partners-section .card-deck .partner-card[data-pos="1"] {
   background-color: #6f8294;
-  opacity: 0;
+  /* if there are more than four cards, remove opacity transitions and set opacity: 0; */
+  -webkit-transition: opacity 100ms linear 400ms;
+  -moz-transition: opacity 100ms linear 400ms;
+  -ms-transition: opacity 100ms linear 400ms;
+  -o-transition: opacity 100ms linear 400ms;
+  transition: opacity 100ms linear 400ms;
 }
 
 .partners-section .card-deck .partner-card img {
   margin-bottom: 14px;
   max-width: 100%;
   height: 56px;
+
+  /* match p transition */
+  -webkit-transition: opacity 60ms linear 440ms;
+  -moz-transition: opacity 60ms linear 440ms;
+  -ms-transition: opacity 60ms linear 440ms;
+  -o-transition: opacity 60ms linear 440ms;
+  transition: opacity 60ms linear 440ms;
 }
 
 .partners-section .card-deck .partner-card p {
@@ -496,6 +508,23 @@ footer .company-mission {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  /* text wrap will flicker without late transition due to expanding width */
+  -webkit-transition: opacity 60ms linear 440ms;
+  -moz-transition: opacity 60ms linear 440ms;
+  -ms-transition: opacity 60ms linear 440ms;
+  -o-transition: opacity 60ms linear 440ms;
+  transition: opacity 60ms linear 440ms;
+}
+
+/* match p transition */
+.partners-section .card-deck .partner-card.next img {
+  opacity: 0;
+}
+
+/* hide until width transition is nearly complete */
+.partners-section .card-deck .partner-card.next p {
+  opacity: 0;
 }
 
 .partners-section .card-deck .oval-shadow {
