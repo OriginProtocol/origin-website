@@ -1111,6 +1111,16 @@ footer .company-mission {
     position: relative;
     top: -42px;
   }
+  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
+  .building-partners-section .logos .col-md-2 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%
+  }
+  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
+  .building-partners-section .logos .offset-md-4 {
+    margin-left: 40%;
+  }
   .building-partners-section .logos .img-graphic img {
     max-width: 90%;
   }

@@ -125,7 +125,7 @@ def fullcontact_webhook():
 
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
-    return redirect('/<lang_code>/partners', code=301)
+    return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
 @app.route('/<lang_code>/partners')
 def partners():
