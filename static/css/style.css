@@ -155,10 +155,6 @@ main.landing-page {
   flex: 1;
 }
 
-.partners-section .bottom-panes .row-pane {
-  height: 100%;
-}
-
 .foreground-content {
   position: relative;
   z-index: 100;
@@ -397,6 +393,10 @@ footer .company-mission {
   background-color: #ffffff;
 }
 
+.partners-section .bottom-panes .row-pane {
+  height: 100%;
+}
+
 .partners-section > div > .row {
   position: relative;
 }
@@ -406,8 +406,107 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
+.partners-section .foreground-content .row {
+  padding-bottom: 220px;
+}
+
 .partners-section .btn-container {
   display: inline-block;
+}
+
+.partners-section .card-deck {
+  position: relative;
+  height: 240px;
+  margin: 40px auto;
+  max-width: 100%;
+  width: 340px;
+}
+
+/* not to be confused with a Bootstrap card */
+.partners-section .card-deck .partner-card {
+  position: absolute;
+  padding: 29px;
+  text-align: center;
+
+  -webkit-transition: 500ms linear;
+  -moz-transition: 500ms linear;
+  -ms-transition: 500ms linear;
+  -o-transition: 500ms linear;
+  transition: 500ms linear;
+
+  background-color: #6f8294;
+  border-radius: 6px;
+  color: #ffffff;
+  height: 188px;
+  left: 20px;
+  max-width: calc(100% - 40px);
+  top: 20px;
+  width: 300px;
+  z-index: 101;
+}
+
+.partners-section .card-deck .partner-card.next {
+  background-color: #455d75;
+  border-radius: 8px;
+  height: 188px;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  top: 10px;
+  width: 320px;
+  z-index: 102;
+}
+
+.partners-section .card-deck .partner-card.current {
+  background-color: #2e3f53;
+  border-radius: 10px;
+  height: 188px;
+  left: 0;
+  max-width: 100%;
+  top: 0;
+  width: 340px;
+  z-index: 103;
+}
+
+.partners-section .card-deck .partner-card[data-pos="0"] {
+  background-color: #2e3f53;
+  border-radius: 10px;
+  height: 188px;
+  left: 0;
+  max-width: 100%;
+  opacity: 0;
+  top: -20px;
+  width: 340px;
+  z-index: 103;
+}
+
+.partners-section .card-deck .partner-card[data-pos="1"] {
+  background-color: #6f8294;
+  opacity: 0;
+}
+
+.partners-section .card-deck .partner-card img {
+  margin-bottom: 14px;
+  max-width: 100%;
+  height: 56px;
+}
+
+.partners-section .card-deck .partner-card p {
+  font-size: 14px;
+  height: 66px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.partners-section .card-deck .oval-shadow {
+  position: absolute;
+  background-color: rgba(17, 29, 40, 0.1);
+  border-radius: 200px / 10px;
+  bottom: 0;
+  height: 18px;
+  left: 2px;
+  max-width: 100%;
+  width: 336px;
 }
 
 .alertify-log button {
