@@ -99,20 +99,57 @@
       <div class="row">
         <div class="container foreground-content">
           <div class="row">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-6">
               <h2>
-                {{gettext("Companies building on the Origin Protocol")}}
+                {{gettext("Partners building on Origin")}}
               </h2>
-              <div class="row">
-                  <div class="col-12"><img class='img-fluid wow fadeInUp' src='/static/img/partners/partners.png'></div>
+              <p>
+                {{gettext("Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission.")}}
+              </p>
+              <div class="btn-container">
+                <a href="{{'/%s/partners'% CURRENT_LANGUAGE}}">
+                  <button class="partners-btn btn btn-primary">
+                    {{gettext("View All Partners")}}
+                  </button>
+                </a>
               </div>
             </div>
-            <div class="col-12 col-md-5">
-              <div class="img-graphic">
-                <img src="/static/img/partners-graphic.png"
-                  srcset="/static/img/partners-graphic@2x.png 2x,
-                  /static/img/partners-graphic@3x.png 3x"
-                  class="partners-graphic wow fadeInUp">
+            <div class="col-12 col-md-6">
+              <div class="card-deck">
+                <div class="partner-card">
+                  <img src="/static/img/partners/propy.png"
+                    class="propy-logo">
+                  <p>
+                    {{gettext("Propy is building their property manager marketplace DApp with Origin Protocol.")}}
+                  </p>
+                </div>
+                <div class="partner-card">
+                  <img src="/static/img/partners/wetrust.png"
+                    class="wetrust-logo">
+                  <p>
+                    {{gettext("DApps built on Origin will be able to use WeTrust’s decentralized insurance protocols to protect users.")}}
+                  </p>
+                </div>
+                <div class="partner-card next">
+                  <img src="/static/img/partners/beetoken.png"
+                    srcset="/static/img/partners/beetoken@2x.png 2x,
+                    /static/img/partners/beetoken@3x.png 3x"
+                    class="beetoken-logo">
+                  <p>
+                    {{gettext("Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol.")}}
+                  </p>
+                </div>
+                <div class="partner-card current">
+                  <img src="/static/img/partners/canya.png"
+                    srcset="/static/img/partners/canya@2x.png 2x,
+                    /static/img/partners/canya@3x.png 3x"
+                    class="canya-logo">
+                  <p>
+                    {{gettext("CanYa is building their “marketplace of services” with Origin Protocol for the gig economy.")}}
+                  </p>
+                </div>
+                <div class="oval-shadow">
+                </div>
               </div>
             </div>
           </div>
@@ -148,7 +185,7 @@
             {{gettext("Build your business on Origin")}}
           </h2>
           <p>
-            {{gettext("Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web.")}} <a href='/build-on-origin'>{{gettext("Get in touch to learn more.")}}</a>
+            {{gettext("Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web.")}} <a href="{{'/%s/partners'% CURRENT_LANGUAGE}}">{{gettext("Get in touch to learn more.")}}</a>
           </p>
           <div class="btn-container demo-btn-container">
             <a href="https://demo.originprotocol.com" target="_blank">
@@ -529,4 +566,61 @@
 {% endblock %}
 
 {% block extra_scripts %}
+  <script>
+    var cards = document.querySelectorAll('.partner-card');
+    var interval;
+
+    function advance() {
+      // increment each element's position and conditionally change its class
+      for (var i = 0; i < cards.length; i++) {
+        var el = cards[i];
+        var oldPos = parseInt(el.dataset.pos);
+        var max = cards.length - 1;
+        var newPos = oldPos === max ? 0 : oldPos + 1;
+        var classes = el.classList;
+
+        el.dataset.pos = newPos;
+
+        switch(newPos) {
+          case max:
+            classes.add('current')
+            classes.remove('next')
+            break;
+          case max - 1:
+            classes.add('next')
+            break;
+          case 0:
+            classes.remove('current')
+        }
+      }
+    }
+
+    function initAutoAdvance() {
+      if (interval) {
+        clearInterval(interval);
+      }
+
+      interval = setInterval(function() {
+        advance();
+      }, 4000);
+    }
+
+    for (var i = 0; i < cards.length; i++) {
+      var el = cards[i];
+
+      // use data attribute for managing position in queue
+      el.dataset.pos = i;
+
+      // 'touchstart' should potentially be handled for more responsive ux
+      el.addEventListener('click', function() {
+        advance();
+
+        // restart
+        initAutoAdvance();
+      });
+    }
+
+    // start
+    initAutoAdvance();
+  </script>
 {% endblock %}

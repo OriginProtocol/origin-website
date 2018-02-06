@@ -76,6 +76,7 @@ main.landing-page {
 }
 
 .navbar-origin {
+  padding-bottom: 60px;
   padding-top: 60px;
 }
 
@@ -153,10 +154,6 @@ main.landing-page {
 
 .background-panes.bottom-panes > .align-items-end {
   flex: 1;
-}
-
-.partners-section .bottom-panes .row-pane {
-  height: 100%;
 }
 
 .foreground-content {
@@ -253,7 +250,7 @@ main.landing-page {
 
 .dark-footer {
   background-color: #2e3f53;
-  padding: 80px 0px;
+  padding: 78px 0px 258px;
   min-height: 522px;
 }
 
@@ -366,6 +363,7 @@ footer .company-mission {
 .platform-section .right-upper-pane {
   -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+  margin-bottom: -1px;
 }
 
 #rtl .platform-section .left-upper-pane {
@@ -397,6 +395,10 @@ footer .company-mission {
   background-color: #ffffff;
 }
 
+.partners-section .bottom-panes .row-pane {
+  height: 100%;
+}
+
 .partners-section > div > .row {
   position: relative;
 }
@@ -406,8 +408,136 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
+.partners-section .foreground-content .row {
+  padding-bottom: 220px;
+}
+
 .partners-section .btn-container {
   display: inline-block;
+}
+
+.partners-section .card-deck {
+  position: relative;
+  height: 240px;
+  margin: 40px auto;
+  max-width: 100%;
+  width: 340px;
+}
+
+/* not to be confused with a Bootstrap card */
+.partners-section .card-deck .partner-card {
+  position: absolute;
+  padding: 29px;
+  text-align: center;
+
+  -webkit-transition: 500ms linear;
+  -moz-transition: 500ms linear;
+  -ms-transition: 500ms linear;
+  -o-transition: 500ms linear;
+  transition: 500ms linear;
+
+  background-color: #6f8294;
+  border-radius: 6px;
+  color: #ffffff;
+  height: 188px;
+  left: 20px;
+  max-width: calc(100% - 40px);
+  top: 20px;
+  width: 300px;
+  z-index: 101;
+}
+
+.partners-section .card-deck .partner-card.next {
+  background-color: #455d75;
+  border-radius: 8px;
+  height: 188px;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  top: 10px;
+  width: 320px;
+  z-index: 102;
+}
+
+.partners-section .card-deck .partner-card.current {
+  background-color: #2e3f53;
+  border-radius: 10px;
+  height: 188px;
+  left: 0;
+  max-width: 100%;
+  top: 0;
+  width: 340px;
+  z-index: 103;
+}
+
+.partners-section .card-deck .partner-card[data-pos="0"] {
+  background-color: #2e3f53;
+  border-radius: 10px;
+  height: 188px;
+  left: 0;
+  max-width: 100%;
+  opacity: 0;
+  top: -20px;
+  width: 340px;
+  z-index: 103;
+}
+
+.partners-section .card-deck .partner-card[data-pos="1"] {
+  background-color: #6f8294;
+  /* if there are more than four cards, remove opacity transitions and set opacity: 0; */
+  -webkit-transition: opacity 100ms linear 400ms;
+  -moz-transition: opacity 100ms linear 400ms;
+  -ms-transition: opacity 100ms linear 400ms;
+  -o-transition: opacity 100ms linear 400ms;
+  transition: opacity 100ms linear 400ms;
+}
+
+.partners-section .card-deck .partner-card img {
+  margin-bottom: 14px;
+  max-width: 100%;
+  height: 56px;
+
+  /* match p transition */
+  -webkit-transition: opacity 60ms linear 440ms;
+  -moz-transition: opacity 60ms linear 440ms;
+  -ms-transition: opacity 60ms linear 440ms;
+  -o-transition: opacity 60ms linear 440ms;
+  transition: opacity 60ms linear 440ms;
+}
+
+.partners-section .card-deck .partner-card p {
+  font-size: 14px;
+  height: 66px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* text wrap will flicker without late transition due to expanding width */
+  -webkit-transition: opacity 60ms linear 440ms;
+  -moz-transition: opacity 60ms linear 440ms;
+  -ms-transition: opacity 60ms linear 440ms;
+  -o-transition: opacity 60ms linear 440ms;
+  transition: opacity 60ms linear 440ms;
+}
+
+/* match p transition */
+.partners-section .card-deck .partner-card.next img {
+  opacity: 0;
+}
+
+/* hide until width transition is nearly complete */
+.partners-section .card-deck .partner-card.next p {
+  opacity: 0;
+}
+
+.partners-section .card-deck .oval-shadow {
+  position: absolute;
+  background-color: rgba(17, 29, 40, 0.1);
+  border-radius: 200px / 10px;
+  bottom: 0;
+  height: 18px;
+  left: 2px;
+  max-width: 100%;
+  width: 336px;
 }
 
 .alertify-log button {
@@ -711,40 +841,101 @@ footer .company-mission {
   font-size: 0.75rem;
 }
 
+.build-header-section,
 .team-header-section {
   background-color: #f7f9fb;
 }
 
+.build-header-section h1,
 .team-header-section h1 {
   font-weight: 200;
 }
 
+.build-header-section .text-container {
+  border-left: 1px solid #dee0e2;
+  padding-left: 20px;
+}
+
+.building-partners-section h2,
 .core-team-section h2 {
   margin: 80px auto 40px auto;
 }
 
+.building-partners-section .left-upper-pane,
+.building-partners-section .right-upper-pane,
 .core-team-section .left-upper-pane,
 .core-team-section .right-upper-pane {
   position: relative;
   background-color: #f7f9fb;
 }
 
+.building-partners-section .logos {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.building-partners-section .logos .col-12 {
+  align-items: center;
+  display: flex;
+  padding-bottom: 92px;
+}
+
+.building-partners-section .logos .img-graphic img {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+.edgecoin-logo {
+  background: #333333;
+}
+
+.building-partners-section > div > .row,
 .contributing-team-section > div > .row {
   position: relative;
 }
 
+.building-partners-section .foreground-content {
+  padding-bottom: 540px;
+}
+
+.building-interest-section .foreground-content {
+  padding-bottom: 120px;
+  margin-top: -483px;
+}
+
+.building-interest-section .build-on-origin-form {
+  background-color: #111d28;
+  border-radius: 10px;
+  color: #ffffff;
+  margin: auto;
+  max-width: 560px;
+  padding: 47px 43px 41px;
+}
+
+.building-interest-section .build-on-origin-form > h2 {
+  margin-top: 0;
+}
+
+.building-interest-section .build-on-origin-form > p {
+  margin-left: 0;
+  max-width: 376px;
+}
+
+.building-interest-section .btn-container {
+  margin-bottom: 0;
+}
+
 .contributing-team-section .foreground-content {
-  margin-bottom: 140px;
+  margin-bottom: 131px;
 }
 
 .contributing-team-section h2 {
   margin: 80px auto 40px auto;
 }
 
-.contributing-team-section .background-panes {
-  bottom: 0;
-}
-
+.building-interest-section,
+.building-partners-section .left-lower-pane,
+.building-partners-section .right-lower-pane,
 .contributing-team-section .left-lower-pane,
 .contributing-team-section .right-lower-pane {
   background-color: #f7f9fb;
@@ -783,6 +974,7 @@ footer .company-mission {
   height: 100%;
 }
 
+/* xs */
 @media (max-width: 575px) {
   .navbar,
   footer .container,
@@ -829,8 +1021,28 @@ footer .company-mission {
   .email-section h2 {
     margin-top: 60px;
   }
+  .build-header-section {
+    padding-bottom: 120px;
+  }
+  .build-header-section .text-container {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .building-partners-section .bottom-panes {
+    bottom: 0;
+  }
+  .building-partners-section .logos {
+    padding-top: 100px;
+  }
+  .building-partners-section .logos .img-graphic {
+    max-width: 200px;
+  }
+  .building-interest-section .partners.img-graphic {
+    margin-top: 120px;
+  }
 }
 
+/* sm + */
 @media (min-width: 576px) {
   .platform-section h2 {
     margin-top: 280px;
@@ -846,6 +1058,7 @@ footer .company-mission {
   }
 }
 
+/* sm - md */
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar,
   footer .container,
@@ -884,8 +1097,22 @@ footer .company-mission {
   .roadmap-section h2 {
     margin-top: 60px;
   }
+  .build-header-section {
+    padding-bottom: 80px;
+  }
+  .build-header-section .text-container {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .building-partners-section .logos {
+    padding-top: 100px;
+  }
+  .building-interest-section .partners.img-graphic {
+    margin-top: 120px;
+  }
 }
 
+/* md + */
 @media (min-width: 768px) {
   .navbar,
   footer .container,
@@ -903,7 +1130,7 @@ footer .company-mission {
     margin-top: 140px;
   }
   .partners-graphic {
-    margin-bottom: 180px;
+    margin-bottom: 120px;
   }
   .partners-section .foreground-content {
     padding-top: 100px;
@@ -996,6 +1223,7 @@ footer .company-mission {
   .roadmap .blue-to-grey {
     border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
   }
+  .building-partners-section h2,
   .core-team-section h2 {
     margin-top: 120px;
   }
@@ -1005,6 +1233,9 @@ footer .company-mission {
   .filler-section {
     height: 0px;
   }
+  .build-page .filler-section {
+    height: 100px;
+  }
   .investors-section h2 {
     margin-top: 180px;
   }
@@ -1012,17 +1243,47 @@ footer .company-mission {
     position: relative;
     top: -42px;
   }
+  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
+  .building-partners-section .logos .col-md-2 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%
+  }
+  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
+  .building-partners-section .logos .offset-md-4 {
+    margin-left: 40%;
+  }
+  .building-partners-section .logos .img-graphic img {
+    max-width: 90%;
+  }
 }
 
+/* lg + */
 @media (min-width: 992px) {
   .headshot-wrapper {
     height: 160px;
     width: 160px;
   }
+  .building-partners-section h2,
   .core-team-section h2 {
     margin-top: 200px;
   }
   .contributing-team-section .foreground-content {
     margin-bottom: 360px;
+  }
+  .social-links {
+    padding-top: 200px;
+  }
+}
+
+/* firefox hacks */
+@-moz-document url-prefix() {
+  .platform-section .top-panes .col-pane {
+    display: block;
+  }
+
+  .platform-section .left-upper-pane,
+  .platform-section .right-upper-pane {
+    height: 100%;
   }
 }
