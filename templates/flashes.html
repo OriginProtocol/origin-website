@@ -4,21 +4,21 @@
     {% for message in messages %}
       {% if message == "telegram" %}
         setTimeout(function() {
-          alertify.log("{{gettext("Make new friends!")}}<div class='telegram-btn-container'><a targt='_blank' href='https://t.me/originprotocol'><button class='telegram-btn btn btn-outline-primary'>{{gettext("Join Our Telegram")}}</button></a></div>", "default", 0)
+          alertify.log("{{gettext("Make new friends!")}}<div class='telegram-btn-container'><a href='https://t.me/originprotocol' target='_blank'><button class='telegram-btn btn btn-outline-primary'>{{gettext("Join Our Telegram")}}</button></a></div>", "default", 0)
         }, 2000);
         setTimeout(function() {
           alertify.log("{{gettext("Stay in touch?")}}<div class='telegram-btn-container'><a href='javascript:$(\"#email\").focus()'><button class='btn btn-primary'>{{gettext("Join Our Mailing List")}}</button></a></div>", "default", 0)
         }, 8000);
       {% elif message == "slack" %}
         setTimeout(function() {
-          alertify.log("{{gettext("Want to contribute?")}}<div class='slack-btn-container'><a targt='_blank' href='https://slack.originprotocol.com'><button class='slack-btn btn btn-outline-primary'>{{gettext("Join Our Slack")}}</button></a></div>", "default", 0)
+          alertify.log("{{gettext("Want to contribute?")}}<div class='slack-btn-container'><a href='https://slack.originprotocol.com' target='_blank'><button class='slack-btn btn btn-outline-primary'>{{gettext("Join Our Slack")}}</button></a></div>", "default", 0)
         }, 2000);
       {% else %}
         alertify.log("{{ message }}", "default")
       {% endif %}
     {% endfor %}
     {% if CURRENT_LANGUAGE != "en" %}
-      alertify.log("Help improve this translation.<div class='slack-btn-container'><a targt='_blank' href='https://originprotocol.slack.com/messages/C8UNGUVCN/'><button class='slack-btn btn btn-outline-primary'>Join #translation on Slack</button></a></div>", "default", 0)
+      alertify.log("Help improve this translation.<div class='slack-btn-container'><a href='https://originprotocol.slack.com/messages/C8UNGUVCN/' target='_blank'><button class='slack-btn btn btn-outline-primary'>Join #translation on Slack</button></a></div>", "default", 0)
     {% endif %}
 </script>
   {% endif %}
