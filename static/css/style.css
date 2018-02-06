@@ -43,6 +43,32 @@ label {
   cursor: pointer;
 }
 
+.form-control {
+  background-color: #ebf0f3;
+  color: #98a7b4;
+  font-style: italic;
+  text-align: left;
+}
+
+input.form-control, textarea.form-control {
+  border-radius: 10px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 0.5rem 2.9rem;
+  font-size: 1.125rem;
+  font-weight: 900;
+}
+
+textarea.form-control {
+  height: 250px;
+}
+
+input.form-control, .btn {
+  height: 50px;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -223,13 +249,6 @@ main.landing-page {
 
 .btn-container {
   margin: 40px auto;
-}
-
-.btn {
-  border-radius: 30px;
-  padding: 0.5rem 1rem;
-  font-size: 1.125rem;
-  font-weight: 400;
 }
 
 .btn:hover {
@@ -549,7 +568,7 @@ footer .company-mission {
 }
 
 .slack-btn {
-  padding-left:42px;
+  padding-left: 42px;
   background-image: url('/static/img/slack-logo.svg');
   background-repeat: no-repeat;
   background-position: 15px 13px;
@@ -564,10 +583,10 @@ footer .company-mission {
 }
 
 .telegram-btn {
-  padding-left:45px;
+  padding-left: 4.3rem;
   background-image: url('/static/img/telegram-logo.svg');
   background-repeat: no-repeat;
-  background-position: 15px 13px;
+  background-position: 2.7rem 1rem;
 }
 
 .telegram-btn:hover {
@@ -731,9 +750,6 @@ footer .company-mission {
 
 .email-signup-input {
   display: inline-block;
-  border-radius: 30px;
-  background-color: #ebf0f3;
-  font-style: italic;
   width: 324px;
   height: 45px;
 }
@@ -800,6 +816,11 @@ footer .company-mission {
 
 .presale-form .form-group {
   margin-bottom: 40px;
+}
+
+.presale-form .form-group #desired_allocation_currency {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Team page */
@@ -921,8 +942,13 @@ footer .company-mission {
   max-width: 376px;
 }
 
+.building-interest-section .build-on-origin-form label[for=note] {
+  display: block;
+}
+
 .building-interest-section .btn-container {
-  margin-bottom: 0;
+  margin: 0;
+  text-align: right;
 }
 
 .contributing-team-section .foreground-content {
@@ -1264,6 +1290,16 @@ footer .company-mission {
     height: 160px;
     width: 160px;
   }
+  .platform-section .btn {
+    padding: 0.5rem 1.7rem;
+  }
+  .platform-section .telegram-btn {
+    padding-left: 3.3rem;
+    background-position: 1.7rem 1rem;
+  }
+  .use-cases-section .btn {
+    padding: 0.5rem 2.7rem;
+  }
   .building-partners-section h2,
   .core-team-section h2 {
     margin-top: 200px;
@@ -1273,6 +1309,33 @@ footer .company-mission {
   }
   .social-links {
     padding-top: 200px;
+  }
+  .building-interest-section .build-on-origin-form .form-group.flex {
+    align-items: center;
+    display: flex;
+  }
+  .building-interest-section .build-on-origin-form .form-group.flex label,
+  .building-interest-section .build-on-origin-form .form-group.flex .flex-offset {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .building-interest-section .build-on-origin-form .form-group.flex input,
+  .building-interest-section .build-on-origin-form .form-group.flex textarea,
+  .building-interest-section .build-on-origin-form .form-group.flex .g-recaptcha {
+    flex: 3;
+    margin-left: 10px;
+  }
+}
+
+/* firefox hacks */
+@-moz-document url-prefix() {
+  .platform-section .top-panes .col-pane {
+    display: block;
+  }
+
+  .platform-section .left-upper-pane,
+  .platform-section .right-upper-pane {
+    height: 100%;
   }
 }
 
