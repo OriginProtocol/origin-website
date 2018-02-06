@@ -1275,3 +1275,15 @@ footer .company-mission {
     padding-top: 200px;
   }
 }
+
+/* firefox hacks */
+@-moz-document url-prefix() {
+  .platform-section .top-panes .col-pane {
+    display: block;
+  }
+
+  .platform-section .left-upper-pane,
+  .platform-section .right-upper-pane {
+    height: 100%;
+  }
+}
