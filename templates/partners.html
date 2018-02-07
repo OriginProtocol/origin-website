@@ -189,11 +189,19 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 offset-md-4 col-md-2">
+                <div class="col-12 col-sm-6 offset-md-3 col-md-2">
                   <div class="img-graphic">
                     <a href="https://www.brixby.io/" target="_blank">
                       <img src="/static/img/partners/brixby.png"
                         class="brixby-logo wow fadeInUp">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2">
+                  <div class="img-graphic">
+                    <a href="https://hirematch.io/" target="_blank">
+                      <img src="/static/img/partners/hirematch.png"
+                        class="hirematch-logo wow fadeInUp">
                     </a>
                   </div>
                 </div>
@@ -230,32 +238,33 @@
                   {{gettext("Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly.")}}
                 </p>
                 <form method="post" action="/partners/interest" id="partners-interest">
-                  <div class="form-group">
+                  <div class="form-group flex">
                     <label for="name"><strong>{{gettext("Name")}}</strong></label>
-                    <input name="name" id="name" class="form-control" placeholder="{{gettext('Name')}}" />
+                    <input name="name" id="name" class="form-control" placeholder="{{gettext('Firstname Lastname')}}" />
                   </div>
-                  <div class="form-group">
+                  <div class="form-group flex">
                     <label for="company_name"><strong>{{gettext("Company")}}</strong></label>
-                    <input name="company_name" id="company_name" class="form-control" placeholder="{{gettext('Company')}}" />
+                    <input name="company_name" id="company_name" class="form-control" placeholder="{{gettext('My Amazing Company')}}" />
                   </div>
-                  <div class="form-group">
+                  <div class="form-group flex">
                     <label for="email"><strong>{{gettext("Email")}}</strong></label>
-                    <input name="email" id="email" type="email" class="form-control" placeholder="{{gettext('Email')}}" />
+                    <input name="email" id="email" type="email" class="form-control" placeholder="{{gettext('yourname@websitename.com')}}" />
                   </div>
-                  <div class="form-group">
+                  <div class="form-group flex">
                     <label for="website"><strong>{{gettext("Website")}}</strong></label>
-                    <input name="website" id="website" type="url" class="form-control" placeholder="{{gettext('Website')}}" />
+                    <input name="website" id="website" type="url" class="form-control" placeholder="{{gettext('https://websitename.com')}}" />
                   </div>
                   <div class="form-group">
                     <label for="note">{{gettext("<strong>Anything else we should know?</strong> (optional)")}}</label>
+                  </div>
+                  <div class="form-group flex">
+                    <div class="flex-offset"></div>
                     <textarea name="note" id="note" type="textarea" class="form-control"></textarea>
                   </div>
-                  <div class="form-group">
-                    <!-- Recaptcha -->
-                    {{ recaptcha }}
-                  </div>
+                  <!-- Recaptcha -->
+                  {{ recaptcha }}
                   <div class="btn-container">
-                    <input type="submit" class="btn btn-primary" value="{{gettext('Submit')}}">
+                    <input type="submit" class="btn btn-primary" value="{{gettext('Become a Partner')}}">
                   </div>
                 </form>
               </div> 
