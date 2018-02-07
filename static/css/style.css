@@ -59,6 +59,16 @@ input.form-control, textarea.form-control {
   padding: 0.5rem 2.9rem;
   font-size: 1.125rem;
   font-weight: 900;
+  white-space: normal;
+}
+
+.btn > i {
+  margin: 0 0.5rem 0 0;
+}
+
+
+#rtl .btn > i {
+  margin: 0 0 0 0.5rem;
 }
 
 textarea.form-control {
@@ -66,7 +76,7 @@ textarea.form-control {
 }
 
 input.form-control, .btn {
-  height: 48px;
+  min-height: 48px;
 }
 
 a:hover {
@@ -559,38 +569,12 @@ footer .company-mission {
   width: 336px;
 }
 
-.alertify-log button {
-  white-space: normal;
-}
-
 .slack-btn-container, .telegram-btn-container {
   margin: 10px 10px 10px 0 !important;
 }
 
-.slack-btn {
-  padding-left: 42px;
-  background-image: url('/static/img/slack-logo.svg');
-  background-repeat: no-repeat;
-  background-position: 15px 13px;
-}
-
-.slack-btn:hover {
-  background-image: url('/static/img/slack-logo-white.svg');
-}
-
 .product-brief-btn {
   margin-right: 20px;
-}
-
-.telegram-btn {
-  padding-left: 4.3rem;
-  background-image: url('/static/img/telegram-logo.svg');
-  background-repeat: no-repeat;
-  background-position: 2.7rem 1rem;
-}
-
-.telegram-btn:hover {
-  background-image: url('/static/img/telegram-logo-white.svg');
 }
 
 .use-cases-section {
@@ -946,6 +930,10 @@ footer .company-mission {
   text-align: right;
 }
 
+.building-interest-section .partners.img-graphic {
+  margin-top: 120px;
+}
+
 .contributing-team-section .foreground-content {
   margin-bottom: 131px;
 }
@@ -1058,9 +1046,6 @@ footer .company-mission {
   .building-partners-section .logos .img-graphic {
     max-width: 200px;
   }
-  .building-interest-section .partners.img-graphic {
-    margin-top: 120px;
-  }
 }
 
 /* sm + */
@@ -1127,9 +1112,6 @@ footer .company-mission {
   }
   .building-partners-section .logos {
     padding-top: 100px;
-  }
-  .building-interest-section .partners.img-graphic {
-    margin-top: 120px;
   }
 }
 
@@ -1320,17 +1302,8 @@ footer .company-mission {
     flex: 3;
     margin-left: 10px;
   }
-}
-
-/* firefox hacks */
-@-moz-document url-prefix() {
-  .platform-section .top-panes .col-pane {
-    display: block;
-  }
-
-  .platform-section .left-upper-pane,
-  .platform-section .right-upper-pane {
-    height: 100%;
+  .building-interest-section .partners.img-graphic {
+    margin-top: 0;
   }
 }
 
