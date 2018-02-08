@@ -50,7 +50,8 @@ label {
   text-align: left;
 }
 
-input.form-control, textarea.form-control {
+input.form-control,
+textarea.form-control {
   border-radius: 10px;
 }
 
@@ -75,8 +76,10 @@ textarea.form-control {
   height: 68px;
 }
 
-input.form-control, .btn {
+.btn,
+input.form-control {
   min-height: 48px;
+  min-width: 280px;
 }
 
 a:hover {
@@ -577,6 +580,10 @@ footer .company-mission {
   margin-right: 20px;
 }
 
+#rtl .product-brief-btn {
+  margin-right: 0;
+}
+
 .use-cases-section {
   background-color: #f7f9fb;
 }
@@ -591,6 +598,10 @@ footer .company-mission {
 
 .demo-btn-container {
   margin-right: 20px;
+}
+
+#rtl .demo-btn-container {
+  margin-right: 0;
 }
 
 .middlemen-section {
@@ -743,7 +754,6 @@ footer .company-mission {
 }
 
 .email-section form {
-  width: 324px;
   display: inline-block;
   position: relative;
   top: 2px;
@@ -755,14 +765,13 @@ footer .company-mission {
 }
 
 .email-section .form-group {
-  width: 324px;
   display: inline-block;
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0px;
 }
 
 .email-section .btn-container {
   display: inline-block;
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0px;
 }
 
 .press-section {
@@ -985,6 +994,13 @@ footer .company-mission {
 
 /* xs */
 @media (max-width: 575px) {
+  .btn,
+  .btn-container,
+  form,
+  .form-control,
+  .form-group {
+    width: 100%;
+  }
   .navbar,
   footer .container,
   .foreground-content {
@@ -999,6 +1015,12 @@ footer .company-mission {
   }
   .platform-graphic {
     display: none;
+  }
+  .partners-section {
+    margin-bottom: -180px;
+  }
+  .partners-section .background-panes {
+    bottom: 180px;
   }
   .partners-section h2 {
     margin-top: 40px;
@@ -1018,11 +1040,17 @@ footer .company-mission {
   .features-section h2 {
     margin-top: 160px;
   }
+  .technology-section {
+    padding-top: 120px;
+  }
   .technology-section h2 {
     margin-top: 40px;
   }
   .tech-stack-graphic {
     display: none;
+  }
+  .roadmap-section {
+    padding-top: 120px;
   }
   .roadmap-section h2 {
     margin-top: 60px;
@@ -1061,6 +1089,10 @@ footer .company-mission {
   }
   .email-section h2 {
     margin-top: 60px;
+  }
+  .email-section form,
+  .email-section .form-group {
+    width: 324px;
   }
 }
 
@@ -1253,6 +1285,10 @@ footer .company-mission {
     max-width: 20%
   }
   /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
+  .building-partners-section .logos .offset-md-2 {
+    margin-left: 20%;
+  }
+  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
   .building-partners-section .logos .offset-md-3 {
     margin-left: 30%;
   }
@@ -1270,12 +1306,8 @@ footer .company-mission {
   .platform-section .btn {
     padding: 0.5rem 1.7rem;
   }
-  .platform-section .telegram-btn {
-    padding-left: 3.3rem;
-    background-position: 1.7rem 1rem;
-  }
   .use-cases-section .btn {
-    padding: 0.5rem 2.7rem;
+    padding: 0.5rem 1.7rem;
   }
   .building-partners-section h2,
   .core-team-section h2 {
