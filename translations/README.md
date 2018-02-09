@@ -1,6 +1,6 @@
 # Localization
 
-## Status 2018-01-26
+## Status 2018-01-31
 
 | Code | Language | Translator(s) | Status |
 | ---- | -------- | ------------- | ------ |
@@ -14,13 +14,13 @@
 | hr | Croatian | Filip | ✅ Complete |
 | it | Italian | funk |  ✅ Complete |
 | ja | Japanese | | | |
-| ko | Korean | | | |
+| ko | Korean | stellayujinlee |  🚧 In Progress |
 | nl | Dutch | Yasinz | ✅ Complete |
 | pt | Portugese | | | |
 | ru | Russian | Alex K | ✅ Complete |
 | th | Thai | Ben V / @cvibhagool | ✅ Complete |
-| zh_Hans | Chinese (Simplified) | Anson | 🚧 In Progress |
-| zh_Hant | Chinese (Traditional) | Anson | 🚧 In Progress |
+| zh_Hans | Chinese (Simplified) | Anson | ✅ Complete |
+| zh_Hant | Chinese (Traditional) | Anson | ✅ Complete |
 
 ## Implementation
 
