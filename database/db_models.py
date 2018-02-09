@@ -3,6 +3,7 @@ from decimal import *
 
 from sqlalchemy.orm import deferred
 from sqlalchemy.orm import relationship
+from sqlalchemy.dialects.postgresql import JSONB
 
 from database import db, db_common
 
@@ -31,6 +32,16 @@ class Presale(db.Model):
 
 	def __str__(self):
 		return '%s' % (self.email)
+
+class FullContact(db.Model):
+    __tablename__ = 'fullcontact'
+
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(255), index=True)
+    fullcontact_response = db.Column(JSONB)
+    github_handle = db.Column(db.String(255))
+    angellist_handle = db.Column(db.String(255))
+    twitter_handle = db.Column(db.String(255))
 
 class MessageLog(db.Model):
 	__tablename__ = 'message_log'
