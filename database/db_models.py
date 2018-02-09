@@ -37,7 +37,7 @@ class FullContact(db.Model):
     __tablename__ = 'fullcontact'
 
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(255), index=True)
+    email = db.Column(db.String(255), index=True, unique=True)
     fullcontact_response = db.Column(JSONB)
     github_handle = db.Column(db.String(255))
     angellist_handle = db.Column(db.String(255))
