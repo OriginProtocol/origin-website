@@ -717,18 +717,28 @@ footer .company-mission {
   margin-right: 20px;
 }
 
-.roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+.roadmap .green-to-blue,
+.roadmap .blue-to-purple,
+.roadmap .purple-to-green,
+.roadmap .blue-to-grey,
+.roadmap .grey-to-green {
   border-style: solid;
   border-width: 0px 0px 0px 1px;
   border-image-slice: 1;
   padding: 10px 10px 40px 10px;
 }
 
-#rtl .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+#rtl .roadmap .green-to-blue,
+#rtl .roadmap .blue-to-purple,
+#rtl .roadmap .purple-to-green,
+#rtl .roadmap .blue-to-grey,
+#rtl .roadmap .grey-to-green {
   border-width: 0px 1px 0px 0px;
 }
 
-.roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+.roadmap .green-circle,
+.roadmap .purple-circle,
+.roadmap .blue-circle {
   width: 29px;
   height: 29px;
   border-radius: 14.5px;
@@ -738,7 +748,9 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
-#rtl .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+#rtl .roadmap .green-circle,
+#rtl .roadmap .purple-circle,
+#rtl .roadmap .blue-circle {
   left: unset;
   right: -25px;
 }
@@ -785,8 +797,9 @@ footer .company-mission {
 
 .email-signup-input {
   display: inline-block;
-  width: 324px;
   height: 45px;
+  max-width: 324px;
+  width: 100%;
 }
 
 .email-section {
@@ -1142,7 +1155,8 @@ footer .company-mission {
   }
   .email-section form,
   .email-section .form-group {
-    width: 324px;
+    max-width: 324px;
+    width: 100%;
   }
 }
 
@@ -1322,15 +1336,28 @@ footer .company-mission {
   #rtl .roadmap > div {
     margin-right: 0px;
   }
-  .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+  .roadmap .green-to-blue,
+  .roadmap .blue-to-purple,
+  .roadmap .purple-to-green,
+  .roadmap .blue-to-grey,
+  .roadmap .grey-to-green {
     border-width: 1px 1px 0px 0px;
-    padding:40px 10px 10px 10px;
+    padding: 40px 10px 10px 10px;
+  }
+  #rtl .roadmap .green-to-blue,
+  #rtl .roadmap .blue-to-purple,
+  #rtl .roadmap .purple-to-green,
+  #rtl .roadmap .blue-to-grey,
+  #rtl .roadmap .grey-to-green {
+    border-width: 1px 1px 0px 0px;
   }
   .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
     top: -55px;
     left: -25px;
   }
-  #rtl .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+  #rtl .roadmap .green-circle,
+  #rtl .roadmap .purple-circle,
+  #rtl .roadmap .blue-circle {
     left: unset;
     right: -25px;
   }
