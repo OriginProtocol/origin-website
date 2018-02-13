@@ -12,6 +12,10 @@ body {
   font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
+#rtl {
+  text-align: right;
+}
+
 /* Common */
 
 h1 {
@@ -41,6 +45,49 @@ p {
 
 label {
   cursor: pointer;
+}
+
+.form-control {
+  background-color: #ebf0f3;
+  color: #98a7b4;
+  font-style: italic;
+  text-align: left;
+}
+
+#rtl .form-control {
+  text-align: right;
+}
+
+input.form-control,
+textarea.form-control {
+  border-radius: 10px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 0.5rem 2.9rem;
+  font-size: 1.125rem;
+  font-weight: 900;
+  white-space: normal;
+}
+
+.btn > i {
+  margin: 0px 0.5rem 0px 0px;
+}
+
+
+#rtl .btn > i {
+  margin: 0px 0px 0px 0.5rem;
+}
+
+textarea.form-control {
+  height: 68px;
+}
+
+.btn,
+input.form-control {
+  min-height: 48px;
+  min-width: 250px;
 }
 
 a:hover {
@@ -133,8 +180,8 @@ main.landing-page {
 }
 
 .col-pane {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .background-panes {
@@ -146,10 +193,10 @@ main.landing-page {
 }
 
 .background-panes.bottom-panes {
-  bottom: 0;
+  bottom: 0px;
   display: flex;
   flex: 1;
-  left: 0;
+  left: 0px;
 }
 
 .background-panes.bottom-panes > .align-items-end {
@@ -225,13 +272,6 @@ main.landing-page {
   margin: 40px auto;
 }
 
-.btn {
-  border-radius: 30px;
-  padding: 0.5rem 1rem;
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-
 .btn:hover {
   cursor: pointer;
 }
@@ -275,6 +315,10 @@ footer .footer-links {
   padding-left: 0px;
 }
 
+#rtl footer .footer-links {
+  padding-right: 0px;
+}
+
 footer .footer-link {
   margin: 15px auto;
   font-size: 0.875rem;
@@ -291,6 +335,10 @@ footer .logo-container {
 footer .company-mission {
   max-width: 360px;
   margin-left: 0px;
+}
+
+#rtl footer .company-mission {
+  margin-right: 0px;
 }
 
 /* Alertify */
@@ -357,7 +405,7 @@ footer .company-mission {
 .platform-section .left-upper-pane {
   -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  margin: 0 -1px -1px 0;
+  margin: 0px -1px -1px 0px;
 }
 
 .platform-section .right-upper-pane {
@@ -374,7 +422,7 @@ footer .company-mission {
 #rtl .platform-section .right-upper-pane {
   -webkit-clip-path: polygon(0 50%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(0 50%, 100% 0%, 100% 100%, 0% 100%);
-  margin: 0 -1px -1px 0;
+  margin: 0px -1px -1px 0px;
 }
 
 .platform-section .foreground-content .row {
@@ -383,7 +431,7 @@ footer .company-mission {
 
 .platform-section .btn-container {
   display: inline-block;
-  margin: 20px 0 0 0;
+  margin: 20px 0px 0px 0px;
 }
 
 .features-section {
@@ -462,9 +510,9 @@ footer .company-mission {
   background-color: #2e3f53;
   border-radius: 10px;
   height: 188px;
-  left: 0;
+  left: 0px;
   max-width: 100%;
-  top: 0;
+  top: 0px;
   width: 340px;
   z-index: 103;
 }
@@ -473,7 +521,7 @@ footer .company-mission {
   background-color: #2e3f53;
   border-radius: 10px;
   height: 188px;
-  left: 0;
+  left: 0px;
   max-width: 100%;
   opacity: 0;
   top: -20px;
@@ -507,7 +555,7 @@ footer .company-mission {
 .partners-section .card-deck .partner-card p {
   font-size: 14px;
   height: 66px;
-  margin: 0;
+  margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -533,45 +581,24 @@ footer .company-mission {
   position: absolute;
   background-color: rgba(17, 29, 40, 0.1);
   border-radius: 200px / 10px;
-  bottom: 0;
+  bottom: 0px;
   height: 18px;
   left: 2px;
   max-width: 100%;
   width: 336px;
 }
 
-.alertify-log button {
-  white-space: normal;
-}
-
 .slack-btn-container, .telegram-btn-container {
   margin: 10px 10px 10px 0 !important;
-}
-
-.slack-btn {
-  padding-left:42px;
-  background-image: url('/static/img/slack-logo.svg');
-  background-repeat: no-repeat;
-  background-position: 15px 13px;
-}
-
-.slack-btn:hover {
-  background-image: url('/static/img/slack-logo-white.svg');
 }
 
 .product-brief-btn {
   margin-right: 20px;
 }
 
-.telegram-btn {
-  padding-left:45px;
-  background-image: url('/static/img/telegram-logo.svg');
-  background-repeat: no-repeat;
-  background-position: 15px 13px;
-}
-
-.telegram-btn:hover {
-  background-image: url('/static/img/telegram-logo-white.svg');
+#rtl .product-brief-btn {
+  margin-left: 20px;
+  margin-right: 0px;
 }
 
 .use-cases-section {
@@ -582,12 +609,21 @@ footer .company-mission {
   display: inline-block;
 }
 
+.use-cases-section .btn-container .btn {
+  min-width: 200px;
+}
+
 .demo-btn-container, .github-btn-container {
-  margin: 10px 0;
+  margin: 10px 0px;
 }
 
 .demo-btn-container {
   margin-right: 20px;
+}
+
+#rtl .demo-btn-container {
+  margin-left: 20px;
+  margin-right: 0px;
 }
 
 .middlemen-section {
@@ -598,6 +634,10 @@ footer .company-mission {
   width: 48px;
   text-align: left;
   margin-top: 20px;
+}
+
+#rtl .img-feature {
+  text-align: right;
 }
 
 .feature-description {
@@ -615,7 +655,7 @@ footer .company-mission {
 
 .technology-section .img-technology {
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0px;
   width: 150px;
 }
 
@@ -639,7 +679,7 @@ footer .company-mission {
 .technology-section .background-panes {
   background-color: #ffffff;
   border-bottom: 2px solid #f7f9fb;
-  bottom: 0;
+  bottom: 0px;
 }
 
 .technology-section .left-lower-pane,
@@ -664,7 +704,7 @@ footer .company-mission {
 }
 
 .roadmap-section .background-panes {
-  bottom: 0;
+  bottom: 0px;
 }
 
 .roadmap > div {
@@ -672,21 +712,47 @@ footer .company-mission {
   text-align: center;
 }
 
-.roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+#rtl .roadmap > div {
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.roadmap .green-to-blue,
+.roadmap .blue-to-purple,
+.roadmap .purple-to-green,
+.roadmap .blue-to-grey,
+.roadmap .grey-to-green {
   border-style: solid;
   border-width: 0px 0px 0px 1px;
   border-image-slice: 1;
-  padding:10px 10px 40px 10px;
+  padding: 10px 10px 40px 10px;
 }
 
-.roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+#rtl .roadmap .green-to-blue,
+#rtl .roadmap .blue-to-purple,
+#rtl .roadmap .purple-to-green,
+#rtl .roadmap .blue-to-grey,
+#rtl .roadmap .grey-to-green {
+  border-width: 0px 1px 0px 0px;
+}
+
+.roadmap .green-circle,
+.roadmap .purple-circle,
+.roadmap .blue-circle {
   width: 29px;
   height: 29px;
   border-radius: 14.5px;
   position: relative;
-  top:-25px;
-  left:-25px;
+  top: -25px;
+  left: -25px;
   background-color: #f7f9fb;
+}
+
+#rtl .roadmap .green-circle,
+#rtl .roadmap .purple-circle,
+#rtl .roadmap .blue-circle {
+  left: unset;
+  right: -25px;
 }
 
 .roadmap .green-circle {
@@ -731,11 +797,9 @@ footer .company-mission {
 
 .email-signup-input {
   display: inline-block;
-  border-radius: 30px;
-  background-color: #ebf0f3;
-  font-style: italic;
-  width: 324px;
   height: 45px;
+  max-width: 324px;
+  width: 100%;
 }
 
 .email-section {
@@ -743,7 +807,6 @@ footer .company-mission {
 }
 
 .email-section form {
-  width: 324px;
   display: inline-block;
   position: relative;
   top: 2px;
@@ -755,14 +818,13 @@ footer .company-mission {
 }
 
 .email-section .form-group {
-  width: 324px;
   display: inline-block;
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0px;
 }
 
 .email-section .btn-container {
   display: inline-block;
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0px;
 }
 
 .press-section {
@@ -800,6 +862,11 @@ footer .company-mission {
 
 .presale-form .form-group {
   margin-bottom: 40px;
+}
+
+.presale-form .form-group #desired_allocation_currency {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Team page */
@@ -854,6 +921,12 @@ footer .company-mission {
 .build-header-section .text-container {
   border-left: 1px solid #dee0e2;
   padding-left: 20px;
+}
+
+#rtl .build-header-section .text-container {
+  border-left: none;
+  border-right: 1px solid #dee0e2;
+  padding: 0px 20px 0px 0px;
 }
 
 .building-partners-section h2,
@@ -913,16 +986,20 @@ footer .company-mission {
 }
 
 .building-interest-section .build-on-origin-form > h2 {
-  margin-top: 0;
+  margin-top: 0px;
 }
 
-.building-interest-section .build-on-origin-form > p {
-  margin-left: 0;
-  max-width: 376px;
+.building-interest-section .build-on-origin-form label[for=note] {
+  display: block;
 }
 
 .building-interest-section .btn-container {
-  margin-bottom: 0;
+  margin: 0px;
+  text-align: right;
+}
+
+.building-interest-section .partners.img-graphic {
+  margin: 120px auto 0px;
 }
 
 .contributing-team-section .foreground-content {
@@ -976,6 +1053,13 @@ footer .company-mission {
 
 /* xs */
 @media (max-width: 575px) {
+  .btn,
+  .btn-container,
+  form,
+  .form-control,
+  .form-group {
+    width: 100%;
+  }
   .navbar,
   footer .container,
   .foreground-content {
@@ -990,6 +1074,12 @@ footer .company-mission {
   }
   .platform-graphic {
     display: none;
+  }
+  .partners-section {
+    margin-bottom: -180px;
+  }
+  .partners-section .background-panes {
+    bottom: 180px;
   }
   .partners-section h2 {
     margin-top: 40px;
@@ -1009,11 +1099,17 @@ footer .company-mission {
   .features-section h2 {
     margin-top: 160px;
   }
+  .technology-section {
+    padding-top: 120px;
+  }
   .technology-section h2 {
     margin-top: 40px;
   }
   .tech-stack-graphic {
     display: none;
+  }
+  .roadmap-section {
+    padding-top: 120px;
   }
   .roadmap-section h2 {
     margin-top: 60px;
@@ -1025,20 +1121,21 @@ footer .company-mission {
     padding-bottom: 120px;
   }
   .build-header-section .text-container {
-    border-left: 0;
-    padding-left: 0;
+    border-left: 0px;
+    padding-left: 0px;
+  }
+  #rtl .build-header-section .text-container {
+    border-right: 0px;
+    padding-right: 0px;
   }
   .building-partners-section .bottom-panes {
-    bottom: 0;
+    bottom: 0px;
   }
   .building-partners-section .logos {
     padding-top: 100px;
   }
   .building-partners-section .logos .img-graphic {
     max-width: 200px;
-  }
-  .building-interest-section .partners.img-graphic {
-    margin-top: 120px;
   }
 }
 
@@ -1055,6 +1152,11 @@ footer .company-mission {
   }
   .email-section h2 {
     margin-top: 60px;
+  }
+  .email-section form,
+  .email-section .form-group {
+    max-width: 324px;
+    width: 100%;
   }
 }
 
@@ -1101,14 +1203,18 @@ footer .company-mission {
     padding-bottom: 80px;
   }
   .build-header-section .text-container {
-    border-left: 0;
-    padding-left: 0;
+    border-left: 0px;
+    padding-left: 0px;
   }
   .building-partners-section .logos {
     padding-top: 100px;
   }
-  .building-interest-section .partners.img-graphic {
-    margin-top: 120px;
+  /***************************************************************************************/
+  /* this should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
+  /***************************************************************************************/
+  #rtl .building-partners-section .logos .offset-sm-3 {
+    margin-left: 0%;
+    margin-right: 25%;
   }
 }
 
@@ -1123,6 +1229,10 @@ footer .company-mission {
   .hero-devices {
     top: 10px;
     left: -30px;
+  }
+  #rtl .hero-devices {
+    left: unset;
+    right: -30px;
   }
   .platform-graphic {
     display: inline-block;
@@ -1139,12 +1249,23 @@ footer .company-mission {
     top: -120px;
     left: 40px;
   }
+  #rtl .use-cases-section .video {
+    left: unset;
+    right: 40px;
+  }
   .use-cases-section h2,
   .use-cases-section p,
   .use-cases-section .btn-container {
     position: relative;
     top: -120px;
     left: 80px;
+  }
+  #rtl .use-cases-section h2,
+  #rtl .use-cases-section p,
+  #rtl .use-cases-section .btn-container {
+    position: relative;
+    left: unset;
+    right: 80px;
   }
   .middlemen-section {
     margin-top: -180px;
@@ -1162,6 +1283,11 @@ footer .company-mission {
     display: inline-block;
     top: 120px;
     left: -40px;
+  }
+  #rtl .middlemen-graphic {
+    display: inline-block;
+    left: unset;
+    right: -40px;
   }
   .features-graphic {
     display: inline-block;
@@ -1187,6 +1313,10 @@ footer .company-mission {
   .email-section .btn-container {
     margin-left: 20px;
   }
+  #rtl .email-section .btn-container {
+    margin-left: unset;
+    margin-right: 20px;
+  }
   footer .logo-container {
     margin: 40px auto 20px auto;
   }
@@ -1194,19 +1324,42 @@ footer .company-mission {
     max-width: 360px;
     margin-left: 0px;
   }
+  #rtl footer .company-mission {
+    margin-right: 0px;
+  }
   .roadmap > div {
     margin-left: 0px;
     max-height: 80px;
     margin-bottom: 100px;
     text-align: center;
   }
-  .roadmap .green-to-blue, .roadmap .blue-to-purple, .roadmap .purple-to-green, .roadmap .blue-to-grey, .roadmap .grey-to-green {
+  #rtl .roadmap > div {
+    margin-right: 0px;
+  }
+  .roadmap .green-to-blue,
+  .roadmap .blue-to-purple,
+  .roadmap .purple-to-green,
+  .roadmap .blue-to-grey,
+  .roadmap .grey-to-green {
     border-width: 1px 1px 0px 0px;
-    padding:40px 10px 10px 10px;
+    padding: 40px 10px 10px 10px;
+  }
+  #rtl .roadmap .green-to-blue,
+  #rtl .roadmap .blue-to-purple,
+  #rtl .roadmap .purple-to-green,
+  #rtl .roadmap .blue-to-grey,
+  #rtl .roadmap .grey-to-green {
+    border-width: 1px 1px 0px 0px;
   }
   .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
-    top:-55px;
-    left:-25px;
+    top: -55px;
+    left: -25px;
+  }
+  #rtl .roadmap .green-circle,
+  #rtl .roadmap .purple-circle,
+  #rtl .roadmap .blue-circle {
+    left: unset;
+    right: -25px;
   }
   .roadmap .grey-to-green {
     border-image-source: linear-gradient(to left, #26d198, #f7f9fb);
@@ -1222,6 +1375,21 @@ footer .company-mission {
   }
   .roadmap .blue-to-grey {
     border-image-source: linear-gradient(to left, #f7f9fb, #1a82ff);
+  }
+  #rtl .roadmap .grey-to-green {
+    border-image-source: linear-gradient(to right, #26d198, #f7f9fb);
+  }
+  #rtl .roadmap .green-to-blue {
+    border-image-source: linear-gradient(to right, #1a82ff, #26d198);
+  }
+  #rtl .roadmap .blue-to-purple {
+    border-image-source: linear-gradient(to right, #6e3bea, #1a82ff);
+  }
+  #rtl .roadmap .purple-to-green {
+    border-image-source: linear-gradient(to right, #26d198, #6e3bea);
+  }
+  #rtl .roadmap .blue-to-grey {
+    border-image-source: linear-gradient(to right, #f7f9fb, #1a82ff);
   }
   .building-partners-section h2,
   .core-team-section h2 {
@@ -1243,18 +1411,56 @@ footer .company-mission {
     position: relative;
     top: -42px;
   }
-  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
+
+  /***************************************************************************************/
+  /* these should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
+  /***************************************************************************************/
   .building-partners-section .logos .col-md-2 {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
     max-width: 20%
   }
-  /* this should be replaced with a proper LESS override, i.e., @grid-columns: 10; */
-  .building-partners-section .logos .offset-md-4 {
-    margin-left: 40%;
+  .building-partners-section .logos .offset-md-1 {
+    margin-left: 10%;
   }
+  .building-partners-section .logos .offset-md-2 {
+    margin-left: 20%;
+  }
+  .building-partners-section .logos .offset-md-3 {
+    margin-left: 30%;
+  }
+  #rtl .building-partners-section .logos .offset-sm-3 {
+    margin-left: 0%;
+    margin-right: 25%;
+  }
+  #rtl .building-partners-section .logos .offset-md-1 {
+    margin-left: 0%;
+    margin-right: 10%;
+  }
+  #rtl .building-partners-section .logos .offset-md-2 {
+    margin-left: 0%;
+    margin-right: 20%;
+  }
+  #rtl .building-partners-section .logos .offset-md-3 {
+    margin-left: 0%;
+    margin-right: 30%;
+  }
+  #rtl .building-partners-section .logos .rtl-offset-md-1 {
+    margin-left: 10%;
+  }
+  #rtl .building-partners-section .logos .rtl-offset-md-2 {
+    margin-left: 20%;
+  }
+  #rtl .building-partners-section .logos .rtl-offset-md-3 {
+    margin-left: 30%;
+  }
+  /*********************************************************************************/
+
   .building-partners-section .logos .img-graphic img {
     max-width: 90%;
+  }
+  #rtl .building-partners-section .logos .offset-md-0 {
+    margin-right: 0;
   }
 }
 
@@ -1263,6 +1469,12 @@ footer .company-mission {
   .headshot-wrapper {
     height: 160px;
     width: 160px;
+  }
+  .platform-section .btn {
+    padding: 0.5rem 1.7rem;
+  }
+  .use-cases-section .btn {
+    padding: 0.5rem 1.7rem;
   }
   .building-partners-section h2,
   .core-team-section h2 {
@@ -1273,6 +1485,28 @@ footer .company-mission {
   }
   .social-links {
     padding-top: 200px;
+  }
+  .building-interest-section .build-on-origin-form .form-group.flex {
+    align-items: center;
+    display: flex;
+  }
+  .building-interest-section .build-on-origin-form .form-group.flex label,
+  .building-interest-section .build-on-origin-form .form-group.flex .flex-offset {
+    flex: 1;
+    margin-bottom: 0px;
+  }
+  .building-interest-section .build-on-origin-form .form-group.flex input,
+  .building-interest-section .build-on-origin-form .form-group.flex textarea {
+    flex: 3;
+    margin-left: 10px;
+  }
+  #rtl .building-interest-section .build-on-origin-form .form-group.flex input,
+  #rtl .building-interest-section .build-on-origin-form .form-group.flex textarea {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .building-interest-section .partners.img-graphic {
+    margin-top: 0px;
   }
 }
 
