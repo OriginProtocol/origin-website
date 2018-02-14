@@ -74,4 +74,9 @@ def send_message(sender, recipients, subject, body_text, body_html,
         for category in categories:
             mail.add_category(sgh.Category(category))
     if send:
-        send_email.delay(body=mail.get())
+        if os.environ.get('REDIS_URL') is not None:
+            send_email.delay(body=mail.get())
+        else:
+            import sendgrid
+            sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+            return sg_api.client.mail.send.post(request_body=mail.get()) 
