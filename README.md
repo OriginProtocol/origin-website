@@ -46,6 +46,11 @@ Create a file named `.env`  in this directory that looks something like this:
     TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
     STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 
+    CELERY_DEBUG = True
+    REDIS_URL= "redis://"
+
+
+
 Run it!
 ```
 python main.py

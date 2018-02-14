@@ -18,11 +18,15 @@ def make_celery(app):
     return celery
 
 flask_app = Flask(__name__)
+
 flask_app.config.update(
-    CELERY_BROKER_URL=os.environ['REDIS_URL'],
-    CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
+    broker_url=os.environ['REDIS_URL'],
+    result_backend=os.environ['REDIS_URL'],
+    task_always_eager=os.environ.get('CELERY_DEBUG', False)
 )
+
 celery = make_celery(flask_app)
+
 
 @celery.task()
 def send_email(body):
