@@ -25,12 +25,18 @@ class Attachment(object):
         self.content_id = content_id
 
 def notify_admins(message, subject=None):
+    return notify_(message, subject, Email('info@originprotocol.com', 'Origin Team'))
+
+def notify_founders(message, subject=None):
+    return notify_(message, subject, Email('founders@originprotocol.com', 'Origin Founders'))
+
+def notify_(message, subject=None, to_notify=None):
     subject = subject.encode('ascii', 'ignore') if subject else None
     if 'localhost' in constants.HOST or 'pagekite' in constants.HOST:
         recipients=[Email(constants.DEV_EMAIL, constants.DEV_EMAIL)]
         subject = 'DEV: ' + str(subject) if subject else str(message)
     else:
-        recipients = [Email('info@originprotocol.com', 'Origin Team')]
+        recipients = [to_notify]
         subject = str(subject) if subject else str(message)
     send_message(
         sender=Email('bot@originprotocol.com', 'Emily the bot'),
@@ -78,6 +84,6 @@ def send_message(sender, recipients, subject, body_text, body_html,
         if os.environ.get('REDIS_URL') is not None:
             send_email.delay(body=mail.get())
         else:
-            send_email(body=mail.get())
-
-
+            import sendgrid
+            sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+            return sg_api.client.mail.send.post(request_body=mail.get()) 

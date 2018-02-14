@@ -125,12 +125,16 @@ def fullcontact_webhook():
 
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
-    return render_template('build_on_origin.html')
+    return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
-@app.route('/build-on-origin/interest', methods=['POST'])
-def build_on_origin_interest():
+@app.route('/<lang_code>/partners')
+def partners():
+    return render_template('partners.html')
+
+@app.route('/partners/interest', methods=['POST'])
+def partners_interest():
     name = request.form['name']
-    company_name = request.form['comapny_name']
+    company_name = request.form['company_name']
     email = request.form['email']
     website = request.form["website"]
     note = request.form["note"]
@@ -143,7 +147,7 @@ def build_on_origin_interest():
         return jsonify(gettext("Please enter your email"))
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.build_interest(name, company_name, email, website, note)
+    feedback = mailing_list.partners_interest(name, company_name, email, website, note)
     flash(feedback)
     return jsonify("OK")
 
