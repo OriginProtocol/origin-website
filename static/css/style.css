@@ -588,7 +588,8 @@ footer .company-mission {
   width: 336px;
 }
 
-.slack-btn-container, .telegram-btn-container {
+.slack-btn-container,
+.telegram-btn-container {
   margin: 10px 10px 10px 0 !important;
 }
 
@@ -613,7 +614,8 @@ footer .company-mission {
   min-width: 200px;
 }
 
-.demo-btn-container, .github-btn-container {
+.demo-btn-container,
+.github-btn-container {
   margin: 10px 0px;
 }
 
@@ -958,10 +960,6 @@ footer .company-mission {
   max-width: 100%;
 }
 
-.edgecoin-logo {
-  background: #333333;
-}
-
 .building-partners-section > div > .row,
 .contributing-team-section > div > .row {
   position: relative;
@@ -1209,13 +1207,6 @@ footer .company-mission {
   .building-partners-section .logos {
     padding-top: 100px;
   }
-  /***************************************************************************************/
-  /* this should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
-  /***************************************************************************************/
-  #rtl .building-partners-section .logos .offset-sm-3 {
-    margin-left: 0%;
-    margin-right: 25%;
-  }
 }
 
 /* md + */
@@ -1351,7 +1342,9 @@ footer .company-mission {
   #rtl .roadmap .grey-to-green {
     border-width: 1px 1px 0px 0px;
   }
-  .roadmap .green-circle, .roadmap .purple-circle, .roadmap .blue-circle {
+  .roadmap .green-circle,
+  .roadmap .purple-circle,
+  .roadmap .blue-circle {
     top: -55px;
     left: -25px;
   }
@@ -1412,55 +1405,15 @@ footer .company-mission {
     top: -42px;
   }
 
-  /***************************************************************************************/
-  /* these should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
-  /***************************************************************************************/
+  /* this should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
   .building-partners-section .logos .col-md-2 {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
     max-width: 20%
   }
-  .building-partners-section .logos .offset-md-1 {
-    margin-left: 10%;
-  }
-  .building-partners-section .logos .offset-md-2 {
-    margin-left: 20%;
-  }
-  .building-partners-section .logos .offset-md-3 {
-    margin-left: 30%;
-  }
-  #rtl .building-partners-section .logos .offset-sm-3 {
-    margin-left: 0%;
-    margin-right: 25%;
-  }
-  #rtl .building-partners-section .logos .offset-md-1 {
-    margin-left: 0%;
-    margin-right: 10%;
-  }
-  #rtl .building-partners-section .logos .offset-md-2 {
-    margin-left: 0%;
-    margin-right: 20%;
-  }
-  #rtl .building-partners-section .logos .offset-md-3 {
-    margin-left: 0%;
-    margin-right: 30%;
-  }
-  #rtl .building-partners-section .logos .rtl-offset-md-1 {
-    margin-left: 10%;
-  }
-  #rtl .building-partners-section .logos .rtl-offset-md-2 {
-    margin-left: 20%;
-  }
-  #rtl .building-partners-section .logos .rtl-offset-md-3 {
-    margin-left: 30%;
-  }
-  /*********************************************************************************/
 
   .building-partners-section .logos .img-graphic img {
     max-width: 90%;
-  }
-  #rtl .building-partners-section .logos .offset-md-0 {
-    margin-right: 0;
   }
 }
 
