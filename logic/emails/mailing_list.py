@@ -74,7 +74,7 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
 
     email_types.send_email_type('presale', DEFAULT_SENDER, email)
 
-    sgw.notify_admins(message, subject=full_name + " is interested in the presale")
+    sgw.notify_founders(message, subject=full_name + " is interested in the presale")
 
     return gettext('Thanks! We\'ll be in touch soon.')
 
@@ -132,7 +132,7 @@ def partners_interest(name, company_name, email, website, note):
     email_types.send_email_type('build_on_origin', DEFAULT_SENDER, email)
 
     sgw.notify_admins(message,
-                      subject="{name}({company_name}) is interested in building on Origin".format(name=name,
+                      subject="{name} ({company_name}) is interested in building on Origin".format(name=name,
                                                                                                   company_name=company_name))
 
     return gettext('Thanks! We\'ll be in touch soon.')
