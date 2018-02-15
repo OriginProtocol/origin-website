@@ -41,6 +41,10 @@ def beforeRequest():
 def root():
     return redirect(url_for('index', lang_code=get_locale()))
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('files/robots.txt')
+
 @app.route('/<lang_code>')
 def index():
     flash('telegram')
