@@ -105,6 +105,36 @@ a:hover {
   border-radius: 30px;
 }
 
+.warning-section {
+  display: flex;
+  background-color: #111d28;
+  color: #ffffff;
+}
+
+.warning-section .img-container {
+  flex-grow: 1;
+  margin: 10px 0 10px 20px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+#rtl .warning-section .img-container {
+  text-align: left;
+  margin: 10px 20px 10px 0;
+}
+
+.warning-section p {
+  flex-grow: 1;
+  font-size: 1rem;
+  margin: 20px 20px 20px 10px;
+  text-align: left;
+}
+
+#rtl .warning-section p {
+  margin: 20px 10px 20px 20px;
+  text-align: right;
+}
+
 main.landing-page {
   position: relative;
   background-color: #2e3f53;
