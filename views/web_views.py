@@ -41,6 +41,10 @@ def beforeRequest():
 def root():
     return redirect(url_for('index', lang_code=get_locale()))
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('files/robots.txt')
+
 @app.route('/<lang_code>')
 def index():
     flash('telegram')
@@ -103,6 +107,8 @@ def join_presale():
         return jsonify(gettext("Please enter your desired allocation"))
     if "confirm" not in request.form:
         return jsonify(gettext("Please agree to the important notice"))
+    if not recaptcha.verify():
+        return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
     flash(feedback)
     return jsonify("OK")
@@ -143,6 +149,8 @@ def partners_interest():
         return jsonify(gettext("Please enter your company name"))
     if not email:
         return jsonify(gettext("Please enter your email"))
+    if not recaptcha.verify():
+        return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.partners_interest(name, company_name, email, website, note)
     flash(feedback)
     return jsonify("OK")

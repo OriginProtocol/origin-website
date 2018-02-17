@@ -6,8 +6,6 @@
 
 {% block content %}
 
-<script src='https://www.google.com/recaptcha/api.js'></script>
-
 <main class="presale-page">
   {% include 'navbar.html' %}
   <section class="team-header-section">
@@ -405,8 +403,12 @@
                  </label>
                </div>
               </div>
-              <!-- Recaptcha -->
-              {{ recaptcha }}
+
+              <div class="form-group">
+                <!-- Recaptcha -->
+                {{ recaptcha }}
+              </div>
+
               <div class="btn-container">
                 <input type="submit" class="btn btn-primary" value="{{ gettext("Submit") }}">
               </div>

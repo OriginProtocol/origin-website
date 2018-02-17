@@ -44,7 +44,7 @@
         <div class="container foreground-content">
           <div class="row">
             <div class="col-12">
-              <div class="logos row">
+              <div class="logos row justify-content-center">
                 <div class="col-12 col-sm-6 col-md-2">
                   <div class="img-graphic">
                     <a href="https://canya.io/" target="_blank">
@@ -127,7 +127,7 @@
                       <img src="/static/img/partners/edge.png"
                         srcset="/static/img/partners/edge@2x.png 2x,
                         /static/img/partners/edege@3x.png 3x"
-                        class="edge-logo wow fadeInUp">
+                        class="edgecoin-logo wow fadeInUp">
                     </a>
                   </div>
                 </div>
@@ -189,7 +189,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 offset-md-2 col-md-2">
+                <div class="col-12 col-sm-6 col-md-2">
                   <div class="img-graphic">
                     <a href="https://www.brixby.io/" target="_blank">
                       <img src="/static/img/partners/brixby.png"
@@ -205,12 +205,43 @@
                     </a>
                   </div>
                 </div>
-                <!-- Odd nth logo requires offset-sm-3-->
                 <div class="col-12 col-sm-6 col-md-2">
                   <div class="img-graphic">
                     <a href="https://smartrefer.io/" target="_blank">
                       <img src="/static/img/partners/smartrefer.png"
                         class="smartrefer-logo wow fadeInUp">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2">
+                  <div class="img-graphic">
+                    <a href="https://lotus.sh/" target="_blank">
+                      <img src="/static/img/partners/lotus.png"
+                        class="lotus-logo wow fadeInUp">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2">
+                  <div class="img-graphic">
+                    <a href="https://deco.network/" target="_blank">
+                      <img src="/static/img/partners/deconet.jpg"
+                        class="deconet-logo wow fadeInUp">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2">
+                  <div class="img-graphic">
+                    <a href="https://thegastronomie.com/" target="_blank">
+                      <img src="/static/img/partners/gastronomie.png"
+                        class="gastronomie-logo wow fadeInUp">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2">
+                  <div class="img-graphic">
+                    <a href="https://workspace0x.com/" target="_blank">
+                      <img src="/static/img/partners/workspace0x.png"
+                        class="workspace0x-logo wow fadeInUp">
                     </a>
                   </div>
                 </div>
@@ -270,13 +301,16 @@
                     <div class="flex-offset"></div>
                     <textarea name="note" id="note" type="textarea" class="form-control"></textarea>
                   </div>
-                  <!-- Recaptcha -->
-                  {{ recaptcha }}
+                  <div class="form-group flex">
+                    <div class="flex-offset"></div>
+                    <!-- Recaptcha -->
+                    {{ recaptcha }}
+                  </div>
                   <div class="btn-container">
                     <input type="submit" class="btn btn-primary" value="{{ gettext('Become a Partner') }}">
                   </div>
                 </form>
-              </div> 
+              </div>
             </div>
             <div class="col-12 col-lg-6">
               <div class="partners img-graphic">

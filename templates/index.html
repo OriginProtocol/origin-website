@@ -16,14 +16,7 @@
             {% trans %}The sharing economy without intermediaries{% endtrans %}
           </h1>
           <p>
-            {{ gettext("Origin is a protocol for creating sharing economy marketplaces") }}
-            <!--
-            TODO: (Stan) Tempory hack to remove random line break location in other languages.
-            These two phrases should be combined into a single phrase in .po file, with
-            <br> part of text
-            -->
-            {% if CURRENT_LANGUAGE == 'en' %} <br> {%  endif %}
-            {{ gettext("using the Ethereum blockchain and IPFS") }}
+            {{gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS")}}
           </p>
         </div>
         <div class="col-12 col-md-6">
