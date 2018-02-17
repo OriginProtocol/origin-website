@@ -27,24 +27,10 @@ Install requirements
 pip install -r requirements.txt
 ```
 
-Create a file named `.env`  in this directory that looks something like this:
-
-    DEV_EMAIL = "foo@bar.com"
-    DEBUG = True
-
-    HOST = localhost
-    HTTPS = False
-
-    PROJECTPATH = "/"
-
-    FLASK_SECRET_KEY = putyoursupersecretkeyhere
-
-    DATABASE_URL = postgresql://localhost/origin
-
-    SENDGRID_API_KEY = putyoursupersecretkeyhere
-
-    TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
-    STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
+Rename the file `sample.env` to `.env`, and update env variables as desired.
+```
+mv sample.env .env
+```
 
 Run it!
 ```
