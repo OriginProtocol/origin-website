@@ -30,6 +30,7 @@ STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 
 RECAPTCHA_SITE_KEY = dotenv.get('RECAPTCHA_SITE_KEY')
 RECAPTCHA_SECRET_KEY = dotenv.get('RECAPTCHA_SECRET_KEY')
+RECAPTCHA_SIZE = dotenv.get('RECAPTCHA_SIZE')
 
 # Language option constants
 
