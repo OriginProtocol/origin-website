@@ -9,7 +9,7 @@
   {% endif %}
 
   <div class="container">
-    <a class="navbar-brand" href="{{'/%s' % CURRENT_LANGUAGE}}">
+    <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
       <div class="logo-container">
         {% if navbar_dark==True %}
         <img src="/static/img/origin-logo.png"
@@ -30,28 +30,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{'/%s/presale'% CURRENT_LANGUAGE}}">{{gettext("Presale")}}</a>
+          <a class="nav-link" href="{{ url_for('presale', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Presale") }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{'/%s/product-brief'% CURRENT_LANGUAGE}}">{{gettext("Product Brief")}}</a>
+          <a class="nav-link" href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Product Brief") }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{'/%s/team'% CURRENT_LANGUAGE}}">{{gettext("Team")}}</a>
+          <a class="nav-link" href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://medium.com/originprotocol" target="_blank">{{gettext("Blog")}}</a>
+          <a class="nav-link" href="https://medium.com/originprotocol" target="_blank">{{ gettext("Blog") }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://medium.com/originprotocol/origin-demo-dapp-is-now-live-on-testnet-835ae201c58" target="_blank">{{gettext("Demo")}}</a>
+          <a class="nav-link" href="https://medium.com/originprotocol/origin-demo-dapp-is-now-live-on-testnet-835ae201c58" target="_blank">{{ gettext("Demo") }}</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
           <div class="dropdown-menu language">
           {% for language in AVAILABLE_LANGUAGES.items() %}
               {% if CURRENT_LANGUAGE == language[0] %}
-                <div class="dropdown-item-selected">{{ language[1] }}</div>
+              <div class="dropdown-item-selected">{{ language[1] }}</div>
               {% else %}
-                <a class="dropdown-item" href="/{{language[0]}}">{{ language[1] }}</a>
+              <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
               {% endif %}
           {% endfor %}
           </div>
