@@ -32,11 +32,6 @@ Rename the file `sample.env` to `.env`, and update env variables as desired.
 mv sample.env .env
 ```
 
-    CELERY_DEBUG = True
-    REDIS_URL= "redis://"
-
-
-
 Run it!
 ```
 python main.py
