@@ -60,3 +60,7 @@ open http://127.0.0.1:5000/
 
 ## Localization
 See README in `translations` directory
+
+## Database changes
+
+We use [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) to handle database revisions. If you make changes to the database, use `flask db migrate` to generate the required migration file and then `flask db upgrade` to implement and test your changes on your local database before committing. 
