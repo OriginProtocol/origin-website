@@ -1,4 +1,3 @@
--e git+https://github.com/UnicycleLabs/apilib@ffebb0851aa41b012bb9277544617ec902be65a2#egg=apilib
 appier==1.13.49
 appnope==0.1.0
 asn1crypto==0.24.0
@@ -15,6 +14,8 @@ enum34==1.1.6
 Flask==0.12.2
 Flask-Babel==0.11.2
 Flask-Compress==1.4.0
+Flask-Migrate==2.1.1
+Flask-Script
 Flask-SQLAlchemy==2.3.2
 gnureadline==6.3.8
 gunicorn==19.7.1
@@ -55,5 +56,4 @@ traitlets==4.3.2
 urllib3==1.22
 wcwidth==0.1.7
 Werkzeug==0.14.1
-flask-recaptcha==0.4.2
-
+-e git://github.com/OriginProtocol/flask-recaptcha.git@master#egg=flask-recaptcha

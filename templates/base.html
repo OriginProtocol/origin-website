@@ -13,8 +13,8 @@
     <meta property="og:url" content="https://www.originprotocol.com"/>
     <meta property="og:image" content="https://www.originprotocol.com/static/img/fb-og-img.png"/>
     <meta property="og:locale" content="{{ CURRENT_LANGUAGE }}"/>
-    <meta property="og:title" content="{{gettext("Origin Protocol")}}"/>
-    <meta property="og:description" content="{{gettext("Origin Protocol enables the sharing economy on the blockchain")}}"/>
+    <meta property="og:title" content="{{ gettext("Origin Protocol") }}"/>
+    <meta property="og:description" content="{{ gettext("Origin Protocol enables the sharing economy on the blockchain") }}"/>
 
     {% block styles %}
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
@@ -25,7 +25,7 @@
       <link rel="stylesheet" href="/static/css/animate.css"/>
       <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon"/>
       <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon"/>
-      <link rel="stylesheet" href="https://use.fontawesome.com/a0d3d1535a.css" media="all"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" media="all"/>
 
       {% block extra_styles %}
       {% endblock %}
@@ -36,6 +36,7 @@
 </head>
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
   {% block body %}
+    {% include 'warning.html' %}
     {% block content %}
     {% endblock %}
 
