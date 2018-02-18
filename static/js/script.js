@@ -9,8 +9,7 @@ $("#mailing-list").submit(function(event) {
   event.preventDefault();
 });
 
-$("#presale").submit(function(event) {
-  event.preventDefault();
+function presaleFormSubmit(event) {
   $.post('/presale/join', $('form').serialize(), function(data) {
     if (data == "OK") {
       fbq('track', 'Lead');
@@ -18,12 +17,12 @@ $("#presale").submit(function(event) {
     }
     alertify.log(data, "default");
   },
-  'json');
-});
+  'json')
+}
 
-$("#partners-interest").submit(function(event) {
-  event.preventDefault();
+function partnerFormSubmit(event) {
   $.post('/partners/interest', $('form').serialize(), function(data) {
+
     if (data == "OK") {
       fbq('track', 'Lead');
       window.location = "/";
@@ -31,7 +30,7 @@ $("#partners-interest").submit(function(event) {
     alertify.log(data, "default");
   },
   'json');
-});
+}
 
 
 $(function() {
