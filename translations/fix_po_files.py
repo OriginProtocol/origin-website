@@ -1,10 +1,10 @@
 #!/usr/local/bin/python
 
-# Script to fix dumb issue  "Language:" header is present, but
-# Doesn't specify the language
+# Script to fix or detect various issues that come up in po files
 
 import fnmatch
 import os
+import re
 
 po_files = []
 for root, dirnames, filenames in os.walk('.'):
@@ -19,15 +19,23 @@ for root, dirnames, filenames in os.walk('.'):
 
         print language_code
 
-        # Fix it
         f = open(pathname,"r+")
         d = f.readlines()
         f.seek(0)
-        for i in d:
-            if i == '"Language: \\n"\n':
-                print ("-FIXED %s" % language_code)
-                f.write('"Language: %s\\n"\n' % language_code)
-            else:
-                f.write(i)
+        for line in d:
+
+            # Fix spaces in closing tags (Google Translator Toolkit does this)
+            (line, subs) = re.subn(r'</ +', '</', line, flags=re.IGNORECASE)
+            if subs > 0:
+                print ("-FIXED %s: `</ ` space" % language_code)
+
+            if line == '"Language: \\n"\n':
+                # Fix dumb issue  "Language:" header is present, but
+                # Doesn't specify the language
+                print ("-FIXED %s: `Langage: header`" % language_code)
+                line = '"Language: %s\\n"\n' % language_code
+
+            f.write(line)
+
         f.truncate()
         f.close()
