@@ -143,12 +143,12 @@ a:hover {
   text-align: right;
 }
 
-main.landing-page {
+main.landing-page,
+main.team-page {
   position: relative;
   background-color: #2e3f53;
   background-image: url("/static/img/dot-grid.svg");
   background-position: center top;
-  background-repeat: repeat-x;
   overflow-x: hidden;
 }
 
@@ -238,9 +238,9 @@ main.landing-page {
   z-index: 100;
 }
 
+.core-team-bottom-pane,
 .platform-bottom-pane {
   background-color: #ffffff;
-  display: flex;
   flex: 1;
 }
 
@@ -371,6 +371,16 @@ footer .company-mission {
   margin-right: 0px;
 }
 
+.logo-wrapper {
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.logo-wrapper img {
+  height: 100%;
+}
+
 /* Alertify */
 .alertify-log {
   padding: 20px;
@@ -421,13 +431,11 @@ footer .company-mission {
 
 .platform-section .background-panes .row:last-of-type > .col-12 {
   display: flex;
-  flex: 1;
 }
 
 .platform-section .left-upper-pane,
 .platform-section .right-upper-pane {
   position: relative;
-  display: flex;
   flex: 1;
   background-color: #ffffff;
 }
@@ -940,13 +948,120 @@ footer .company-mission {
   font-size: 0.75rem;
 }
 
-.build-header-section,
 .team-header-section {
+  color: #ffffff;
+}
+
+.team-header-section h1 {
+  font-weight: 200;
+}
+
+.core-team-section > div > .row {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.core-team-section .background-panes {
+  height: 100%;
+}
+
+.core-team-section .background-panes .row:last-of-type > .col-12 {
+  display: flex;
+}
+
+.core-team-section .top-panes .col-pane {
+  display: flex;
+}
+
+.core-team-section .left-upper-pane,
+.core-team-section .right-upper-pane {
+  position: relative;
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.core-team-section .left-upper-pane {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
+  margin-bottom: -1px;
+}
+
+.core-team-section .right-upper-pane {
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  margin: 0px 0px -1px -1px;
+}
+
+#rtl .core-team-section .left-upper-pane {
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%);
+  margin: 0px 0px -1px -1px;
+}
+
+#rtl .core-team-section .right-upper-pane {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.core-team-section h2 {
+  margin: 80px auto 40px auto;
+}
+
+.contributing-team-section > div > .row {
+  position: relative;
+}
+
+.contributing-team-section {
+  background-color: #ffffff;
+}
+
+.contributing-team-section .foreground-content {
+  margin-bottom: 131px;
+}
+
+.contributing-team-section h2 {
+  margin: 80px auto 40px auto;
+}
+
+.contributing-team-section .left-lower-pane,
+.contributing-team-section .right-lower-pane {
   background-color: #f7f9fb;
 }
 
-.build-header-section h1,
-.team-header-section h1 {
+.filler-section {
+  background-color: #f7f9fb;
+  height: 100px;
+}
+
+.investors-section {
+  background-color: #ffffff;
+}
+
+.investors-section .left-upper-pane,
+.investors-section .right-upper-pane {
+  position: relative;
+  background-color: #f7f9fb;
+}
+
+.investors-section .foreground-content {
+  margin-bottom: 120px;
+}
+
+.investors-section h2 {
+  margin: 140px auto 40px auto;
+}
+
+.investor {
+  margin: 30px;
+}
+
+/* Partners page */
+
+.build-header-section {
+  background-color: #f7f9fb;
+}
+
+.build-header-section h1 {
   font-weight: 200;
 }
 
@@ -961,15 +1076,12 @@ footer .company-mission {
   padding: 0px 20px 0px 0px;
 }
 
-.building-partners-section h2,
-.core-team-section h2 {
+.building-partners-section h2, {
   margin: 80px auto 40px auto;
 }
 
 .building-partners-section .left-upper-pane,
-.building-partners-section .right-upper-pane,
-.core-team-section .left-upper-pane,
-.core-team-section .right-upper-pane {
+.building-partners-section .right-upper-pane {
   position: relative;
   background-color: #f7f9fb;
 }
@@ -990,8 +1102,7 @@ footer .company-mission {
   max-width: 100%;
 }
 
-.building-partners-section > div > .row,
-.contributing-team-section > div > .row {
+.building-partners-section > div > .row {
   position: relative;
 }
 
@@ -1030,53 +1141,15 @@ footer .company-mission {
   margin: 120px auto 0px;
 }
 
-.contributing-team-section .foreground-content {
-  margin-bottom: 131px;
-}
-
-.contributing-team-section h2 {
-  margin: 80px auto 40px auto;
-}
-
 .building-interest-section,
 .building-partners-section .left-lower-pane,
-.building-partners-section .right-lower-pane,
-.contributing-team-section .left-lower-pane,
-.contributing-team-section .right-lower-pane {
+.building-partners-section .right-lower-pane {
   background-color: #f7f9fb;
 }
 
 .filler-section {
   background-color: #f7f9fb;
   height: 100px;
-}
-
-.investors-section .left-upper-pane,
-.investors-section .right-upper-pane {
-  position: relative;
-  background-color: #f7f9fb;
-}
-
-.investors-section .foreground-content {
-  margin-bottom: 120px;
-}
-
-.investors-section h2 {
-  margin: 140px auto 40px auto;
-}
-
-.investor {
-  margin: 30px;
-}
-
-.logo-wrapper {
-  text-align: center;
-  width: 200px;
-  margin: 20px auto;
-}
-
-.logo-wrapper img {
-  height: 100%;
 }
 
 /* xs */
@@ -1495,10 +1568,13 @@ footer .company-mission {
 
 /* firefox hacks */
 @-moz-document url-prefix() {
+  .core-team-section .top-panes .col-pane,
   .platform-section .top-panes .col-pane {
     display: block;
   }
 
+  .core-team-section .left-upper-pane,
+  .core-team-section .right-upper-pane,
   .platform-section .left-upper-pane,
   .platform-section .right-upper-pane {
     height: 100%;
