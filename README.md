@@ -60,3 +60,4 @@ To enable recaptcha, add the following environment variables to `.env`
     RECAPTCHA_SIZE = "invisible"
 
 You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
+
