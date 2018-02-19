@@ -5,7 +5,7 @@ from flask import (jsonify, redirect, render_template,
                    request, flash, g, url_for)
 from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
-
+import os
 from app import app
 from config import constants, universal
 from logic.emails import mailing_list
@@ -41,6 +41,10 @@ def beforeRequest():
 def root():
     return redirect(url_for('index', lang_code=get_locale()))
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('files/robots.txt')
+
 @app.route('/<lang_code>')
 def index():
     flash('telegram')
@@ -55,13 +59,25 @@ def team():
 def presale():
     return render_template('presale.html')
 
-@app.route('/whitepaper')
+@app.route('/<lang_code>/whitepaper')
 def whitepaper():
-    return redirect('/static/docs/whitepaper_v4.pdf', code=302)
+    localized_filename = 'whitepaper_v4_%s.pdf' % g.current_lang.lower()
+    whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
+    if os.path.isfile(whitepaper_path):
+        return app.send_static_file('docs/%s' % localized_filename)
+    else:
+        # Default to English
+        return app.send_static_file('docs/whitepaper_v4.pdf')
 
-@app.route('/product-brief')
+@app.route('/<lang_code>/product-brief')
 def product_brief():
-    return redirect('/static/docs/product_brief_v17.pdf', code=302)
+    localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
+    product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
+    if os.path.isfile(product_brief_path):
+        return app.send_static_file('docs/%s' % localized_filename)
+    else:
+        # Default to English
+        return app.send_static_file('docs/product_brief_v17.pdf')
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
@@ -113,12 +129,16 @@ def fullcontact_webhook():
 
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
-    return render_template('build_on_origin.html')
+    return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
-@app.route('/build-on-origin/interest', methods=['POST'])
-def build_on_origin_interest():
+@app.route('/<lang_code>/partners')
+def partners():
+    return render_template('partners.html')
+
+@app.route('/partners/interest', methods=['POST'])
+def partners_interest():
     name = request.form['name']
-    company_name = request.form['comapny_name']
+    company_name = request.form['company_name']
     email = request.form['email']
     website = request.form["website"]
     note = request.form["note"]
@@ -131,7 +151,7 @@ def build_on_origin_interest():
         return jsonify(gettext("Please enter your email"))
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.build_interest(name, company_name, email, website, note)
+    feedback = mailing_list.partners_interest(name, company_name, email, website, note)
     flash(feedback)
     return jsonify("OK")
 

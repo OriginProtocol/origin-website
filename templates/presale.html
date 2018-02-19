@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}{{gettext("The sharing economy without intermediaries: Origin Protocol Presale")}}{% endblock %}
+{% block title %}{{ gettext("The sharing economy without intermediaries: Origin Protocol Presale") }}{% endblock %}
 
-{% block meta_description %}{{gettext("Origin Protocol - Presale")}}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Presale") }}{% endblock %}
 
 {% block content %}
-
-<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <main class="presale-page">
   {% include 'navbar.html' %}
@@ -15,12 +13,12 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <h1>
-            {{gettext("Presale")}}
+            {{ gettext("Presale") }}
           </h1>
         </div>
         <div class="col-12 col-md-6">
           <p>
-            {{gettext("<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced.")}}
+            {{ gettext("<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced.") }}
           </p>
         </div>
       </div>
@@ -65,61 +63,61 @@
           <div class="row presale-form">
             <div class="col-12 offset-xl-1 col-xl-5">
               <h2>
-                {{gettext("Interested in contributing?")}}
+                {{ gettext("Interested in contributing?") }}
               </h2>
 
               <form method="post" action="/presale/join" id="presale">
 
                 <div class="form-group">
-                  <label for="full_name"><strong>{{gettext("Full Name")}}</strong></label>
-                  <input name="full_name" id="full_name" class="form-control" placeholder="{{gettext("Full Name")}}" />
+                  <label for="full_name"><strong>{{ gettext("Full Name") }}</strong></label>
+                  <input name="full_name" id="full_name" class="form-control" placeholder="{{ gettext("Full Name") }}" />
                 </div>
 
                 <div class="form-group">
-                  <label for="email"><strong>{{gettext("Email")}}</strong></label>
-                  <input name="email" id="email" type="email" class="form-control" placeholder="{{gettext("Email")}}" />
+                  <label for="email"><strong>{{ gettext("Email") }}</strong></label>
+                  <input name="email" id="email" type="email" class="form-control" placeholder="{{ gettext("Email") }}" />
                 </div>
 
                 <div class="form-group">
-                  <label for="accredited"><strong>{{gettext("Are you an an accredited investor?")}}</strong>
-                  (<a id="huh" href="javascript:alertify.log(document.getElementById('accredited_popup').innerText)">{{gettext("Huh?")}}</a>)</label><br>
-                  <div style="display:none" id="accredited_popup">{{gettext("An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)")}}</div>
+                  <label for="accredited"><strong>{{ gettext("Are you an an accredited investor?") }}</strong>
+                  (<a id="huh" href="javascript:alertify.log(document.getElementById('accredited_popup').innerText)">{{ gettext("Huh?") }}</a>)</label><br>
+                  <div style="display:none" id="accredited_popup">{{ gettext("An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)") }}</div>
 
                 <div class="form-check form-check-inline">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="accredited" id="accredited_yes" value="1" checked="checked"> <strong>{{gettext("Yes")}}</strong>
+                    <input class="form-check-input" type="radio" name="accredited" id="accredited_yes" value="1" checked="checked"> <strong>{{ gettext("Yes") }}</strong>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="accredited" id="accredited_no" value="0"> <strong>{{gettext("No")}}</strong>
+                    <input class="form-check-input" type="radio" name="accredited" id="accredited_no" value="0"> <strong>{{ gettext("No") }}</strong>
                   </label>
                 </div>
               </div>
 
               <div class="form-group">
-                  <label for="entity_type"><strong>{{gettext("What type of entity do you represent?")}}</strong></label><br>
+                  <label for="entity_type"><strong>{{ gettext("What type of entity do you represent?") }}</strong></label><br>
 
                 <div class="form-check form-check-inline">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="entity_type" id="individual" value="individual" checked="checked"> <strong>{{gettext("Individual")}}</strong>
+                    <input class="form-check-input" type="radio" name="entity_type" id="individual" value="individual" checked="checked"> <strong>{{ gettext("Individual") }}</strong>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="entity_type" id="syndicate" value="syndicate"> <strong>{{gettext("Syndicate")}}</strong>
+                    <input class="form-check-input" type="radio" name="entity_type" id="syndicate" value="syndicate"> <strong>{{ gettext("Syndicate") }}</strong>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="entity_type" id="fund" value="fund"> <strong>{{gettext("Professional Fund")}}</strong>
+                    <input class="form-check-input" type="radio" name="entity_type" id="fund" value="fund"> <strong>{{ gettext("Professional Fund") }}</strong>
                   </label>
                 </div>
               </div>
 
               <div class="form-group">
                 <input type="hidden" name="desired_allocation_currency" value="USD" />
-                <label for="desired_allocation">{{gettext("<strong>Desired allocation</strong>")}}</label>
+                <label for="desired_allocation">{{ gettext("<strong>Desired allocation</strong>") }}</label>
                 <div class="input-group">
                   <input name="desired_allocation" type="text" class="form-control" id="desired_allocation" placeholder="25000">
                   <div class="input-group-btn">
@@ -136,7 +134,7 @@
               </div>
 
               <div class="form-group">
-                <label for="citizenship"><strong>{{gettext("Citizenship")}}</strong></label>
+                <label for="citizenship"><strong>{{ gettext("Citizenship") }}</strong></label>
                 <select name="citizenship" class="custom-select form-control" id="citizenship">
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
@@ -389,36 +387,32 @@
                   <option value="ZW">Zimbabwe</option>
                 </select>
               </div>
-
               <div class="form-group">
-                <label for="sending_addr">{{gettext("<strong>ETH or BTC address you plan to send from?</strong> (optional)")}}</label>
+                <label for="sending_addr">{{ gettext("<strong>ETH or BTC address you plan to send from?</strong> (optional)") }}</label>
                 <input name="sending_addr" id="desired_allocation" id="sending_addr" class="form-control" placeholder="0x..." />
               </div>
-
               <div class="form-group">
-                <label for="note">{{gettext("<strong>Anything else we should know?</strong> (optional)")}}</label>
+                <label for="note">{{ gettext("<strong>Anything else we should know?</strong> (optional)") }}</label>
                 <input name="note" id="note" class="form-control" placeholder="" />
               </div>
-
               <div class="form-group">
-                <label for="desired_allocation"><strong>{{gettext("Important notice")}}</strong></label>
+                <label for="desired_allocation"><strong>{{ gettext("Important notice") }}</strong></label>
                <div class="form-check form-check-inline">
                  <label class="form-check-label">
-                   <input name="confirm" class="form-check-input" type="checkbox" id="confirm" value="1">{{gettext(" I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.")}}
+                   <input name="confirm" class="form-check-input" type="checkbox" id="confirm" value="1">{{ gettext(" I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.") }}
                  </label>
                </div>
-
               </div>
 
-              <!-- Recaptcha -->
-              {{ recaptcha }}
+              <div class="form-group">
+                <!-- Recaptcha -->
+                {{ recaptcha('presale', 'presaleFormSubmit') }}
+              </div>
 
               <div class="btn-container">
-                <input type="submit" class="btn btn-primary" value="{{gettext("Submit")}}">
+                <input type="submit" class="btn btn-primary" value="{{ gettext("Submit") }}">
               </div>
             </form>
-
-            <!-- </div> -->
           </div>
         </div>
       </div>

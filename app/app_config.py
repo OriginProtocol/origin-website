@@ -13,6 +13,7 @@ class AppConfig(object):
 
     RECAPTCHA_SITE_KEY = constants.RECAPTCHA_SITE_KEY
     RECAPTCHA_SECRET_KEY = constants.RECAPTCHA_SECRET_KEY
+    RECAPTCHA_SIZE = constants.RECAPTCHA_SIZE
 
 
 def init_app(app):
