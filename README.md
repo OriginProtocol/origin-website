@@ -2,7 +2,7 @@
 
 Official website for Origin Protocol
 
-This is a pretty simple bare bones Flask app with the source code for [originprotocol.com](https://www.originprotocol.com). The code is all `Python 2.7` and we use `Postgres` for the database (basically just for the mailing list). The database is not required to be configured if you're just working on the website.
+This is a Flask app with the source code for [www.originprotocol.com](https://www.originprotocol.com). The code is all `Python 2.7` with `Postgres` for the database (basically just for the mailing list). The database is not required to be configured if you're just working on the website.
 
 ## Installing
 _Note: This site is set up differently from typical virtualenv/flask applications._
