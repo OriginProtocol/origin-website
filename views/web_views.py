@@ -52,7 +52,6 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
-    flash('slack')
     return render_template('team.html')
 
 @app.route('/<lang_code>/presale')
