@@ -14,6 +14,7 @@ DEMO_DAPP_URL = 'https://demo.originprotocol.com'
 
 GITHUB_URL = 'https://github.com/originprotocol'
 SLACK_URL = 'https://slack.originprotocol.com/'
+DISCORD_URL = 'https://www.originprotocol.com/discord'
 TELEGRAM_URL = 'https://t.me/originprotocol'
 TWITTER_URL = 'https://twitter.com/originprotocol'
 FACEBOOK_URL = 'https://www.facebook.com/originprotocol'
