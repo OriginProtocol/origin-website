@@ -52,7 +52,6 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
-    flash('slack')
     return render_template('team.html')
 
 @app.route('/<lang_code>/presale')
@@ -130,6 +129,10 @@ def fullcontact_webhook():
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
     return redirect(url_for('partners', lang_code=g.current_lang), code=301)
+
+@app.route('/<lang_code>/discord')
+def discord():
+    return redirect('https://discord.gg/jyxpUSe', code=301)
 
 @app.route('/<lang_code>/partners')
 def partners():

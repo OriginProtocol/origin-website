@@ -42,7 +42,7 @@ Open browser to view
 open http://127.0.0.1:5000/
 ```
 
-**Problems?** Hit us up in the `eng-website` channel on [Slack](https://slack.originprotocol.com) if you need help.
+**Problems?** Hit us up in the `engineering` channel on [Discord](https://www.originprotocol.com/discord) if you need help.
 
 ## Localization
 See README in `translations` directory
@@ -60,3 +60,4 @@ To enable recaptcha, add the following environment variables to `.env`
     RECAPTCHA_SIZE = "invisible"
 
 You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
+
