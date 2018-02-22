@@ -41,6 +41,10 @@ def beforeRequest():
 def root():
     return redirect(url_for('index', lang_code=get_locale()))
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('files/robots.txt')
+
 @app.route('/<lang_code>')
 def index():
     flash('telegram')
@@ -48,7 +52,6 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
-    flash('slack')
     return render_template('team.html')
 
 @app.route('/<lang_code>/presale')
@@ -127,6 +130,10 @@ def fullcontact_webhook():
 def build_on_origin():
     return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
+@app.route('/<lang_code>/discord')
+def discord():
+    return redirect('https://discord.gg/jyxpUSe', code=301)
+
 @app.route('/<lang_code>/partners')
 def partners():
     return render_template('partners.html')
@@ -153,7 +160,7 @@ def partners_interest():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return render_template('404.html', **inject_conf_var()), 404
 
 @babel.localeselector
 def get_locale():

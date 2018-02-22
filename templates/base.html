@@ -13,8 +13,8 @@
     <meta property="og:url" content="https://www.originprotocol.com"/>
     <meta property="og:image" content="https://www.originprotocol.com/static/img/fb-og-img.png"/>
     <meta property="og:locale" content="{{ CURRENT_LANGUAGE }}"/>
-    <meta property="og:title" content="{{gettext("Origin Protocol")}}"/>
-    <meta property="og:description" content="{{gettext("Origin Protocol enables the sharing economy on the blockchain")}}"/>
+    <meta property="og:title" content="{{ gettext("Origin Protocol") }}"/>
+    <meta property="og:description" content="{{ gettext("Origin Protocol enables the sharing economy on the blockchain") }}"/>
 
     {% block styles %}
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
@@ -23,9 +23,18 @@
       <link rel="stylesheet" href="/static/css/style.css"/>
       <link rel="stylesheet" href="/static/css/alertify.css"/>
       <link rel="stylesheet" href="/static/css/animate.css"/>
-      <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon"/>
-      <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" media="all"/>
+
+      <!-- Favicons generated with https://realfavicongenerator.net/ -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
+      <link rel="manifest" href="/static/img/favicon/site.webmanifest">
+      <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#2585FB">
+      <link rel="shortcut icon" href="/static/img/favicon/favicon.ico">
+      <meta name="msapplication-TileColor" content="#2585FB">
+      <meta name="msapplication-config" content="/static/img/favicon/browserconfig.xml">
+      <meta name="theme-color" content="#2585FB">
 
       {% block extra_styles %}
       {% endblock %}
@@ -36,6 +45,7 @@
 </head>
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
   {% block body %}
+    {% include 'warning.html' %}
     {% block content %}
     {% endblock %}
 

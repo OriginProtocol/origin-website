@@ -1,95 +1,52 @@
 {% extends 'base.html' %}
 
-{% block title %}The sharing economy without intermediaries: Origin Protocol Team{% endblock %}
+{% block title %}Origin Protocol{% endblock %}
 
-{% block meta_description %}Origin Protocol - Team{% endblock %}
+{% block meta_description %}Origin Protocol{% endblock %}
 
 {% block content %}
 
 <main class="error-page">
   {% include 'navbar.html' %}
-  <section class="team-header-section">
+  <section class="error-header-section">
     <div class="container foreground-content">
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12">
           <h1>
-            404
+            {{ gettext("How did I get here?") }}
           </h1>
         </div>
-        <div class="col-12 col-md-6">
-         <!--  <p>
-            The sharing economy without intermediaries
-          </p> -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="core-team-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes">
-          <div class="row row-pane">
-            <div class="col-4 col-pane">
-              <div class="left-upper-pane">
-              </div>
+        <div class="col-12 col-md-9 col-lg-6">
+          <div class="indented text-container">
+            <p>
+              {{ gettext("The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)") }}
+            </p>
+            <div class="btn-container d-none d-sm-block">
+              <a href="/">
+                <button class="btn btn-sm btn-outline-primary">
+                  {{ gettext("Go Home") }}
+                </button>
+              </a>
             </div>
-            <div class="col-8 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
+          </div>
+          <div class="btn-container d-sm-none">
+            <a href="/">
+              <button class="btn btn-sm btn-outline-primary">
+                {{ gettext("Go Home") }}
+              </button>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="filler-section">
-  </section>
-  <section class="investors-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes">
-          <div class="row row-pane">
-            <div class="col-4 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-8 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12 offset-xl-1 col-xl-10">
-              <h2>
-                {{gettext("Page not found.")}}
-              </h2>
-              <div class="row">
-                <div class="col-12">
-
-                  <div class="btn-container slack-btn-container">
-                    <a href="https://slack.originprotocol.com/" target="_blank">
-                      <button class="slack-btn btn btn-outline-primary">
-                        <i class='fab fa-slack-hash'></i>
-                        {{gettext("Ask For Directions On Slack")}}
-                      </button>
-                    </a>
-                  </div>
-                  <div class="btn-container telegram-btn-container">
-                    <a href="https://t.me/originprotocol" target="_blank">
-                      <button class="telegram-btn btn btn-outline-primary">
-                        <i class='fab fa-telegram-plane'></i>
-                        {{gettext("Make New Friends On Telegram")}}
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="error-content-section">
+    <div class="images-container">
+      <img src="/static/img/mask.svg" class="mask" />
+      <img src="/static/img/404.svg" class="code" />
+      <img src="/static/img/blocks-1.svg" class="blocks-1" />
+      <img src="/static/img/blocks-2.svg" class="blocks-2" />
+      <img src="/static/img/dude.svg" class="dude" />
     </div>
   </section>
   {% include 'footer.html' %}

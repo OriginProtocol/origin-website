@@ -6,7 +6,6 @@ from util import patches
 
 from flask_compress import Compress
 
-from views import service_views
 from views import web_views
 
 from flask_migrate import Migrate
@@ -14,7 +13,6 @@ from database import db
 
 # Silence pyflakes
 assert patches
-assert service_views
 assert web_views
 
 # enable gzip since it's not supported out of the box on Heroku
