@@ -65,10 +65,13 @@ textarea.form-control {
 
 .btn {
   border-radius: 30px;
-  padding: 0.5rem 2.9rem;
-  font-size: 1.125rem;
   font-weight: 900;
   white-space: normal;
+}
+
+.btn-min-size {
+  font-size: 1.125rem;
+  padding: 0.5rem 2.9rem;
 }
 
 .btn > i {
@@ -84,7 +87,7 @@ textarea.form-control {
   height: 68px;
 }
 
-.btn,
+.btn-min-size,
 input.form-control {
   min-height: 48px;
   min-width: 250px;
@@ -276,6 +279,20 @@ main.team-page {
   padding-top: 57.735026918%;
 }
 
+.indented {
+  border: 1px solid #dee0e2;
+}
+
+#ltr .indented {
+  border-width: 0px 0px 0px 1px;
+  padding: 0px 0px 0px 20px;
+}
+
+#rtl .indented {
+  border-width: 0px 1px 0px 0px;
+  padding: 0px 20px 0px 0px;
+}
+
 /*
  * Right-to-left languages: Swap left/right pane graphics
  * See: https://meiert.com/en/blog/css-how-to-host-right-to-left-styling/
@@ -405,7 +422,7 @@ footer .company-mission {
   background-color: #ebf0f3;
 }
 
-/* Index */
+/* Index Page */
 
 .hero-section {
   margin-top: -160px;
@@ -906,7 +923,7 @@ footer .company-mission {
   font-style: italic;
 }
 
-/* presale page */
+/* Presale page */
 
 .presale-form .form-group {
   margin-bottom: 40px;
@@ -1075,17 +1092,6 @@ footer .company-mission {
   font-weight: 200;
 }
 
-.build-header-section .text-container {
-  border-left: 1px solid #dee0e2;
-  padding-left: 20px;
-}
-
-#rtl .build-header-section .text-container {
-  border-left: none;
-  border-right: 1px solid #dee0e2;
-  padding: 0px 20px 0px 0px;
-}
-
 .building-partners-section h2, {
   margin: 80px auto 40px auto;
 }
@@ -1162,6 +1168,78 @@ footer .company-mission {
   height: 100px;
 }
 
+/* Error page */
+
+.error-page {
+  background-color: #f7f9fb;
+}
+
+.error-header-section h1 {
+  font-size: 3.7rem;
+  font-weight: 200;
+}
+
+.error-header-section p {
+  margin-bottom: 0px;
+}
+
+.error-header-section .btn-container {
+  margin: 0px;
+}
+
+.error-header-section .btn {
+  font-size: 1.125rem;
+  margin-top: 30px;
+  padding: 0.4rem 2.2rem;
+}
+
+.error-content-section {
+  position: relative;
+  margin-bottom: 40px;
+  overflow: hidden;
+  top: 40px;
+}
+
+.error-content-section .images-container {
+  position: relative;
+  height: 70vw;
+}
+
+.error-content-section .images-container .mask {
+  position: relative;
+  left: -70%;
+  top: 0px;
+  width: 200%;
+}
+
+.error-content-section .images-container .code {
+  position: absolute;
+  right: -5%;
+  top: 0px;
+  width: 60%;
+}
+
+.error-content-section .images-container .blocks-1 {
+  position: absolute;
+  bottom: -5%;
+  left: 40%;
+  width: 50%;
+}
+
+.error-content-section .images-container .blocks-2 {
+  position: absolute;
+  right: 62%;
+  top: 36%;
+  width: 50%;
+}
+
+.error-content-section .images-container .dude {
+  position: absolute;
+  left: 36%;
+  top: 20%;
+  width: 20%;
+}
+
 /* xs */
 @media (max-width: 575px) {
   .btn,
@@ -1230,14 +1308,6 @@ footer .company-mission {
   }
   .build-header-section {
     padding-bottom: 120px;
-  }
-  .build-header-section .text-container {
-    border-left: 0px;
-    padding-left: 0px;
-  }
-  #rtl .build-header-section .text-container {
-    border-right: 0px;
-    padding-right: 0px;
   }
   .building-partners-section .bottom-panes {
     bottom: 0px;
@@ -1312,10 +1382,6 @@ footer .company-mission {
   }
   .build-header-section {
     padding-bottom: 80px;
-  }
-  .build-header-section .text-container {
-    border-left: 0px;
-    padding-left: 0px;
   }
   .building-partners-section .logos {
     padding-top: 100px;
@@ -1517,6 +1583,39 @@ footer .company-mission {
     position: relative;
     top: -42px;
   }
+  .error-content-section {
+    margin-bottom: -40px;
+    top: -40px;
+  }
+  .error-content-section .images-container .mask {
+    top: 20px;
+  }
+  .error-content-section .images-container {
+    height: 50vw;
+  }
+  .error-content-section .images-container .mask {
+    left: 0%;
+    top: 10px;
+    width: 100%;
+  }
+  .error-content-section .images-container .code {
+    right: 5%;
+    width: 40%;
+  }
+  .error-content-section .images-container .blocks-1 {
+    left: 50%;
+    width: 30%;
+  }
+  .error-content-section .images-container .blocks-2 {
+    right: 60%;
+    top: 50%;
+    width: 30%;
+  }
+  .error-content-section .images-container .dude {
+    left: 39%;
+    top: 36%;
+    width: 8%;
+  }
 
   /* this should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
   .building-partners-section .logos .col-md-2 {
@@ -1524,7 +1623,6 @@ footer .company-mission {
     flex: 0 0 20%;
     max-width: 20%
   }
-
   .building-partners-section .logos .img-graphic img {
     max-width: 90%;
   }
