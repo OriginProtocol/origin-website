@@ -238,7 +238,6 @@ main.team-page {
 }
 
 .navbar-origin .navbar-collapse .col-6:nth-last-of-type(1),
-.navbar-origin .navbar-collapse .col-6:nth-last-of-type(2),
 .navbar-origin .navbar-collapse .nav-item:nth-last-of-type(2) {
   padding-bottom: 20px;
 }
@@ -1460,6 +1459,9 @@ footer .company-mission {
 
 /* sm + */
 @media (min-width: 576px) {
+  .navbar-origin .nav-item {
+    font-size: 1.125rem;
+  }
   .platform-section h2 {
     margin-top: 280px;
   }
@@ -1528,6 +1530,9 @@ footer .company-mission {
 
 /* md + */
 @media (min-width: 768px) {
+  .navbar-origin .navbar-collapse .col-md-4:nth-of-type(3) {
+    padding-top: 20px;
+  }
   .navbar,
   footer .container,
   .foreground-content {
@@ -1778,6 +1783,9 @@ footer .company-mission {
     margin: 0px;
     padding: 0px;
     z-index: auto;
+  }
+  .navbar-origin .nav-item {
+    font-size: 0.875rem;
   }
   .navbar-light .nav-item .nav-link {
     color: #6f8294;

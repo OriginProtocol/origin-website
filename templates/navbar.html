@@ -47,7 +47,7 @@
       <div class="container">
         <div class="row">
           {% for language in AVAILABLE_LANGUAGES.items() %}
-          <div class="col-6">
+          <div class="col-6 col-md-4">
             {% if CURRENT_LANGUAGE == language[0] %}
               <a class="nav-link selected">{{ language[1] }}</a>
             {% else %}
