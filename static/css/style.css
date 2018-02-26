@@ -176,6 +176,14 @@ main.team-page {
   padding-top: 20px;
 }
 
+.navbar-origin .brand-container {
+  flex-grow: 1;
+}
+
+.navbar-origin .logo-container {
+  width: 100px;
+}
+
 .navbar-origin .mobile-background {
   position: absolute;
   height: calc(100% - 20px - 40px - 20px - 35px);
@@ -198,8 +206,7 @@ main.team-page {
   font-weight: 400;
 }
 
-.navbar-origin .navbar-brand {
-  flex: 1;
+.navbar-origin .brand-container .navbar-brand {
   padding-top: 0px;
 }
 
@@ -1778,6 +1785,13 @@ footer .company-mission {
     display: none !important;
   }
 
+  .navbar-origin .brand-container {
+    flex-grow: 0;
+  }
+  .navbar-origin .navbar-nav {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
   .navbar-origin .navbar-collapse {
     background-color: transparent;
     margin: 0px;
@@ -1795,8 +1809,15 @@ footer .company-mission {
   }
   .navbar-origin .navbar-collapse .nav-item,
   .navbar-origin .navbar-collapse .nav-item.dropdown {
+    padding: 20px;
+  }
+
+  /* whitelist languages with wider padding */
+  :lang(en) .navbar-origin .navbar-collapse .nav-item,
+  :lang(en) .navbar-origin .navbar-collapse .nav-item.dropdown {
     padding: 20px 30px;
   }
+
   .headshot-wrapper {
     height: 160px;
     width: 160px;
@@ -1838,6 +1859,14 @@ footer .company-mission {
   }
   .building-interest-section .partners.img-graphic {
     margin-top: 0px;
+  }
+}
+
+/* xl + */
+@media (min-width: 1200px) {
+  .navbar-origin .navbar-collapse .nav-item,
+  .navbar-origin .navbar-collapse .nav-item.dropdown {
+    padding: 20px 30px;
   }
 }
 
