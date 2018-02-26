@@ -43,29 +43,27 @@ $(function() {
 
 $(function(){
   // toggle button icons
-  $('.navbar-toggler').on('click', function (e) {
+  $('.navbar-toggler').on('click', function() {
     var target = $(this);
     var other = $('.navbar-toggler').not(this);
-    var icon = target.find('i');
-    var iconClass = 'fa-' + icon.data('icon');
 
     // attr value is a string, not bool
     if (target.attr('aria-expanded') === 'false') {
-      icon.addClass('fa-times').removeClass(iconClass);
+      target.find('.close-icon').show();
+      target.find(':not(.close-icon)').hide();
     } else {
-      icon.addClass(iconClass).removeClass('fa-times');
+      target.find('.close-icon').hide();
+      target.find(':not(.close-icon)').show();
     }
 
-    icon = other.find('i');
-    iconClass = 'fa-' + icon.data('icon');
-
-    if (icon.hasClass('fa-times')) {
-      icon.addClass(iconClass).removeClass('fa-times');
+    if (other.attr('aria-expanded') === 'true') {
+      other.find('.close-icon').hide();
+      other.find(':not(.close-icon)').show();
     }
   });
 
   // prevent simulataneous navbar menus
-  $('.navbar-origin .navbar-collapse').on('show.bs.collapse', function(e) {
+  $('.navbar-origin .navbar-collapse').on('show.bs.collapse', function() {
     // ensure that menu is not hidden
     $(this).removeClass('obscured');
     // hide immediately to disguise 'hide' transition
@@ -75,7 +73,7 @@ $(function(){
   });
 
   // ensure that hidden menus can be shown
-  $('.navbar-origin .navbar-collapse').on('hidden.bs.collapse', function(e) {
+  $('.navbar-origin .navbar-collapse').on('hidden.bs.collapse', function() {
     $('.navbar-origin .navbar-collapse').not('.show').removeClass('obscured');
   });
 });

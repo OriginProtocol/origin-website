@@ -26,10 +26,22 @@
       </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-icon="globe" data-target="#languageOptions" aria-controls="languageOptions" aria-expanded="false" aria-label="Toggle languages">
-      <i class="fa fa-globe"></i>
+      {% if navbar_dark==True %}
+      <img src="/static/img/globe-icon-light.svg" alt="Language Options" class="globe-icon" />
+      <img src="/static/img/close-icon-light.svg" alt="Collapse Menu" class="close-icon" />
+      {% else %}
+      <img src="/static/img/globe-icon-dark.svg" alt="Language Options" class="globe-icon" />
+      <img src="/static/img/close-icon-dark.svg" alt="Collapse Menu" class="close-icon" />
+      {% endif %}
     </button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-icon="bars" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fa fa-bars"></i>
+      {% if navbar_dark==True %}
+      <img src="/static/img/menu-icon-light.svg" alt="Navigation Menu" class="menu-icon" />
+      <img src="/static/img/close-icon-light.svg" alt="Collapse Menu" class="close-icon" />
+      {% else %}
+      <img src="/static/img/menu-icon-dark.svg" alt="Navigation Menu" class="menu-icon" />
+      <img src="/static/img/close-icon-dark.svg" alt="Collapse Menu" class="close-icon" />
+      {% endif %}
     </button>
     <div class="d-lg-none collapse navbar-collapse" id="languageOptions">
       <div class="container">
