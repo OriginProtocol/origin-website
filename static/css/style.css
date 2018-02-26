@@ -163,27 +163,147 @@ main.team-page {
   overflow-x: hidden;
 }
 
+#rtl .ml-auto,
+#rtl .mx-auto {
+  /* override Bootstrap _spacing.scss:46 */
+  margin-left: 0px !important;
+  margin-right: auto;
+}
+
 .navbar-origin {
+  position: relative;
   padding-bottom: 40px;
   padding-top: 20px;
 }
 
+.navbar-origin .mobile-background {
+  position: absolute;
+  height: calc(100% - 20px - 40px - 20px - 35px);
+  left: 0px;
+  top: 75px;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar-dark .mobile-background {
+  background-color: #111d28;
+}
+
+.navbar-light .mobile-background {
+  background-color: #dfe6ea;
+}
+
 .navbar-origin .nav-item {
   font-size: 0.875rem;
-  padding: 20px 30px;
   font-weight: 400;
 }
 
-.navbar-dark .nav-item>a {
-  color: #ffffff !important;
+.navbar-origin .navbar-brand {
+  flex: 1;
+  padding-top: 0px;
 }
 
 .navbar-light {
   background-color: #f7f9fb;
 }
 
-.navbar-light .nav-item a {
-  color: #6f8294;
+.navbar-origin .navbar-collapse {
+  margin: 20px -30px 0px;
+  padding: 0px 30px;
+  z-index: 2;
+}
+
+.navbar-origin .navbar-collapse.obscured {
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#rtl .navbar-origin .navbar-collapse .navbar-nav {
+  padding-right: 15px;
+}
+
+#ltr .navbar-origin .navbar-collapse .col-6 {
+  padding-left: 0px;
+}
+
+#rtl .navbar-origin .navbar-collapse .col-6 {
+  padding-right: 0px;
+}
+
+.navbar-origin .navbar-collapse .col-6:nth-of-type(1),
+.navbar-origin .navbar-collapse .col-6:nth-of-type(2),
+.navbar-origin .navbar-collapse .nav-item:nth-of-type(1) {
+  padding-top: 20px;
+}
+
+.navbar-origin .navbar-collapse .col-6:nth-last-of-type(1),
+.navbar-origin .navbar-collapse .col-6:nth-last-of-type(2),
+.navbar-origin .navbar-collapse .nav-item:nth-last-of-type(2) {
+  padding-bottom: 20px;
+}
+
+.navbar-origin .navbar-collapse .col-6 .nav-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-left: 0px;
+}
+
+.navbar-origin .navbar-collapse .col-6 .nav-link:active,
+.navbar-origin .navbar-collapse .col-6 .nav-link:hover,
+.navbar-origin .navbar-collapse .col-6 .nav-link.selected {
+  opacity: 0.75;
+}
+
+.navbar-origin .navbar-collapse .nav-item {
+  padding: 0px;
+}
+
+.navbar-origin .navbar-collapse .nav-item.dropdown {
+  padding: 0px;
+}
+
+.navbar-toggler {
+  cursor: pointer;
+  width: 44px;
+}
+
+.navbar-dark .navbar-toggler,
+.navbar-light .navbar-toggler {
+  border-width: 0;
+}
+
+.navbar-dark .nav-item .nav-link,
+.navbar-dark .navbar-collapse .col-6 .nav-link,
+.navbar-dark .navbar-toggler i {
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-toggler i:active,
+.navbar-dark .navbar-toggler i:hover {
+  color: #dfe6ea;
+}
+
+.navbar-light .nav-item .nav-link,
+.navbar-light .navbar-collapse .col-6 .nav-link {
+  color: #111d28;
+}
+
+.navbar-light .navbar-toggler i {
+  color: #98a7b4;
+}
+
+.navbar-light .navbar-collapse .col-6 .nav-link:active,
+.navbar-light .navbar-collapse .col-6 .nav-link:hover,
+.navbar-light .navbar-toggler i:active,
+.navbar-light .navbar-toggler i:hover,
+.navbar-light .nav-item .nav-link:active,
+.navbar-light .nav-item .nav-link:hover {
+  color: rgba(0, 0, 0, .7);
+}
+
+#rtl .dropdown-toggle::after {
+  margin: 0 0.255em 0 0;
 }
 
 .dropdown-menu {
@@ -204,7 +324,7 @@ main.team-page {
   color: #ffffff;
 }
 
-.language  .dropdown-item-selected {
+.language .dropdown-item-selected {
   text-transform: capitalize;
   width: 100%;
   color: black;
@@ -1634,6 +1754,27 @@ footer .company-mission {
 
 /* lg + */
 @media (min-width: 992px) {
+  /* override Bootstrap _navbar.scss:178 for second menu */
+  .navbar-expand-lg #languageOptions.navbar-collapse {
+    display: none !important;
+  }
+
+  .navbar-origin .navbar-collapse {
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    z-index: auto;
+  }
+  .navbar-light .nav-item .nav-link {
+    color: #6f8294;
+  }
+  .navbar-light .navbar-toggler i {
+    color: #6f8294;
+  }
+  .navbar-origin .navbar-collapse .nav-item,
+  .navbar-origin .navbar-collapse .nav-item.dropdown {
+    padding: 20px 30px;
+  }
   .headshot-wrapper {
     height: 160px;
     width: 160px;

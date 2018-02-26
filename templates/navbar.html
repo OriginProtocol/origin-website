@@ -1,13 +1,14 @@
 {% if navbar_dark==True %}
-<nav class="navbar navbar-expand-md navbar-origin navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-origin navbar-dark">
 {% else %}
-<nav class="navbar navbar-expand-md navbar-origin navbar-light">
+<nav class="navbar navbar-expand-lg navbar-origin navbar-light">
 {% endif %}
 
   {% if DOMAIN != "www.originprotocol.com" %}
   <div class="url-warning">{{ DOMAIN }}</div>
   {% endif %}
 
+  <div class="mobile-background d-lg-none"></div>
   <div class="container">
     <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
       <div class="logo-container">
@@ -24,9 +25,27 @@
         {% endif %}
       </div>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-icon="globe" data-target="#languageOptions" aria-controls="languageOptions" aria-expanded="false" aria-label="Toggle languages">
+      <i class="fa fa-globe"></i>
     </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-icon="bars" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="d-lg-none collapse navbar-collapse" id="languageOptions">
+      <div class="container">
+        <div class="row">
+          {% for language in AVAILABLE_LANGUAGES.items() %}
+          <div class="col-6">
+            {% if CURRENT_LANGUAGE == language[0] %}
+              <a class="nav-link selected">{{ language[1] }}</a>
+            {% else %}
+              <a class="nav-link" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
@@ -44,16 +63,16 @@
         <li class="nav-item">
           <a class="nav-link" href="https://medium.com/originprotocol/origin-demo-dapp-is-now-live-on-testnet-835ae201c58" target="_blank">{{ gettext("Demo") }}</a>
         </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
+        <li class="d-none d-lg-block nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
           <div class="dropdown-menu language">
-          {% for language in AVAILABLE_LANGUAGES.items() %}
+            {% for language in AVAILABLE_LANGUAGES.items() %}
               {% if CURRENT_LANGUAGE == language[0] %}
               <div class="dropdown-item-selected">{{ language[1] }}</div>
               {% else %}
               <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
               {% endif %}
-          {% endfor %}
+            {% endfor %}
           </div>
         </li>
       </ul>

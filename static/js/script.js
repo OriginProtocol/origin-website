@@ -40,3 +40,42 @@ $(function() {
     $("#desired_allocation_currency").val($(this).text());
   });
 });
+
+$(function(){
+  // toggle button icons
+  $('.navbar-toggler').on('click', function (e) {
+    var target = $(this);
+    var other = $('.navbar-toggler').not(this);
+    var icon = target.find('i');
+    var iconClass = 'fa-' + icon.data('icon');
+
+    // attr value is a string, not bool
+    if (target.attr('aria-expanded') === 'false') {
+      icon.addClass('fa-times').removeClass(iconClass);
+    } else {
+      icon.addClass(iconClass).removeClass('fa-times');
+    }
+
+    icon = other.find('i');
+    iconClass = 'fa-' + icon.data('icon');
+
+    if (icon.hasClass('fa-times')) {
+      icon.addClass(iconClass).removeClass('fa-times');
+    }
+  });
+
+  // prevent simulataneous navbar menus
+  $('.navbar-origin .navbar-collapse').on('show.bs.collapse', function(e) {
+    // ensure that menu is not hidden
+    $(this).removeClass('obscured');
+    // hide immediately to disguise 'hide' transition
+    $('.navbar-origin .navbar-collapse').not(this).addClass('obscured');
+    // will trigger transition
+    $('.navbar-origin .navbar-collapse').not(this).collapse('hide');
+  });
+
+  // ensure that hidden menus can be shown
+  $('.navbar-origin .navbar-collapse').on('hidden.bs.collapse', function(e) {
+    $('.navbar-origin .navbar-collapse').not('.show').removeClass('obscured');
+  });
+});
