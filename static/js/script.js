@@ -9,8 +9,7 @@ $("#mailing-list").submit(function(event) {
   event.preventDefault();
 });
 
-$("#presale").submit(function(event) {
-  event.preventDefault();
+function presaleFormSubmit(event) {
   $.post('/presale/join', $('form').serialize(), function(data) {
     if (data == "OK") {
       fbq('track', 'Lead');
@@ -18,12 +17,12 @@ $("#presale").submit(function(event) {
     }
     alertify.log(data, "default");
   },
-  'json');
-});
+  'json')
+}
 
-$("#build-on-origin").submit(function(event) {
-  event.preventDefault();
-  $.post('/build-on-origin/interest', $('form').serialize(), function(data) {
+function partnerFormSubmit(event) {
+  $.post('/partners/interest', $('form').serialize(), function(data) {
+
     if (data == "OK") {
       fbq('track', 'Lead');
       window.location = "/";
@@ -31,7 +30,7 @@ $("#build-on-origin").submit(function(event) {
     alertify.log(data, "default");
   },
   'json');
-});
+}
 
 
 $(function() {
@@ -39,5 +38,42 @@ $(function() {
     $("input[name='desired_allocation_currency']").val($(this).text());
     $("#desired_allocation_currency").text($(this).text());
     $("#desired_allocation_currency").val($(this).text());
+  });
+});
+
+$(function(){
+  // toggle button icons
+  $('.navbar-toggler').on('click', function() {
+    var target = $(this);
+    var other = $('.navbar-toggler').not(this);
+
+    // attr value is a string, not bool
+    if (target.attr('aria-expanded') === 'false') {
+      target.find('.close-icon').show();
+      target.find(':not(.close-icon)').hide();
+    } else {
+      target.find('.close-icon').hide();
+      target.find(':not(.close-icon)').show();
+    }
+
+    if (other.attr('aria-expanded') === 'true') {
+      other.find('.close-icon').hide();
+      other.find(':not(.close-icon)').show();
+    }
+  });
+
+  // prevent simulataneous navbar menus
+  $('.navbar-origin .navbar-collapse').on('show.bs.collapse', function() {
+    // ensure that menu is not hidden
+    $(this).removeClass('obscured');
+    // hide immediately to disguise 'hide' transition
+    $('.navbar-origin .navbar-collapse').not(this).addClass('obscured');
+    // will trigger transition
+    $('.navbar-origin .navbar-collapse').not(this).collapse('hide');
+  });
+
+  // ensure that hidden menus can be shown
+  $('.navbar-origin .navbar-collapse').on('hidden.bs.collapse', function() {
+    $('.navbar-origin .navbar-collapse').not('.show').removeClass('obscured');
   });
 });

@@ -12,6 +12,7 @@ class EmailList(db.Model):
 
 	email = db.Column(db.String(255), primary_key=True, autoincrement=False)
 	unsubscribed = db.Column(db.Boolean())
+	created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
 
 	def __str__(self):
 		return '%s' % (self.email)
@@ -29,6 +30,7 @@ class Presale(db.Model):
 	citizenship = db.Column(db.String(2))
 	sending_addr = db.Column(db.String(255))
 	note = db.Column(db.Text())
+	created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
 
 	def __str__(self):
 		return '%s' % (self.email)
@@ -63,6 +65,7 @@ class Interest(db.Model):
 	email = db.Column(db.String(255))
 	website = db.Column(db.String(255))
 	note = db.Column(db.Text())
+	created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
 
 	def __str__(self):
 		return '%s' % (self.email)

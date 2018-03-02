@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 
-{% block title %}{{gettext("The sharing economy without intermediaries: Origin Protocol Team")}}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
 
-{% block meta_description %}{{gettext("Origin Protocol - Team")}}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
 
 {% block content %}
 
 <main class="team-page">
-  {% include 'navbar.html' %}
-  <section class="team-header-section">
+  {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
+  <section class="header-section team-header-section">
     <div class="container foreground-content">
       <div class="row">
         <div class="col-12 col-md-6">
           <h1>
-            {{gettext("Our Team")}}
+            {{ gettext("Our Team") }}
           </h1>
         </div>
         <div class="col-12 col-md-6">
           <p>
-            {{gettext("Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!")}}
+            {{ gettext("Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!") }}
           </p>
         </div>
       </div>
@@ -27,7 +27,7 @@
   <section class="core-team-section">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-pane background-panes">
+        <div class="col-12 col-pane background-panes top-panes">
           <div class="row row-pane">
             <div class="col-4 col-pane">
               <div class="left-upper-pane">
@@ -38,12 +38,18 @@
               </div>
             </div>
           </div>
+          <div class="row row-pane">
+            <div class="col-12 col-pane">
+              <div class="core-team-bottom-pane">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="container foreground-content">
           <div class="row">
             <div class="col-12">
               <h2>
-                {{gettext("Core Team")}}
+                {{ gettext("Core Team") }}
               </h2>
               <div class="row">
                 <div class="col-12 col-md-6 col-xl-3">
@@ -52,14 +58,14 @@
                       <img src="/static/img/headshot-josh.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/joshuafraser">{{gettext("Josh Fraser")}}
+                      <a href="http://www.linkedin.com/in/joshuafraser" target="_blank">{{ gettext("Josh Fraser") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Cofounder")}}
+                      {{ gettext("Cofounder") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage.")}}
+                      {{ gettext("Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage.") }}
                     </div>
                   </div>
                 </div>
@@ -69,14 +75,14 @@
                       <img src="/static/img/headshot-matt.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/matthewliu">{{gettext("Matthew Liu")}}
+                      <a href="http://www.linkedin.com/in/matthewliu" target="_blank">{{ gettext("Matthew Liu") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Cofounder")}}
+                      {{ gettext("Cofounder") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford.")}}
+                      {{ gettext("Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford.") }}
                     </div>
                   </div>
                 </div>
@@ -86,14 +92,14 @@
                       <img src="/static/img/headshot-stan.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/wanderingstan">{{gettext("Stan James")}}
+                      <a href="http://www.linkedin.com/in/wanderingstan" target="_blank">{{ gettext("Stan James") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Senior Engineer")}}
+                      {{ gettext("Senior Engineer") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media).")}}
+                      {{ gettext("Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media).") }}
                     </div>
                   </div>
                 </div>
@@ -103,14 +109,14 @@
                       <img src="/static/img/headshot-andrew.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/andrewhyde">{{gettext("Andrew Hyde")}}
+                      <a href="http://www.linkedin.com/in/andrewhyde" target="_blank">{{ gettext("Andrew Hyde") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Community")}}
+                      {{ gettext("Community") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars.")}}
+                      {{ gettext("Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars.") }}
                     </div>
                   </div>
                 </div>
@@ -120,14 +126,14 @@
                       <img src="/static/img/headshot-coleman.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/coleman-maher-sf/">Coleman Maher
+                      <a href="https://www.linkedin.com/in/coleman-maher-sf/" target="_blank">Coleman Maher
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Partnerships")}}
+                      {{ gettext("Partnerships") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley.")}}
+                      {{ gettext("Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley.") }}
                     </div>
                   </div>
                 </div>
@@ -137,14 +143,14 @@
                       <img src="/static/img/headshot-jon.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/jonhearty/">{{gettext("Jon Hearty")}}
+                      <a href="https://www.linkedin.com/in/jonhearty/" target="_blank">{{ gettext("Jon Hearty") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Business Development")}}
+                      {{ gettext("Business Development") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO.")}}
+                      {{ gettext("Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO.") }}
                     </div>
                   </div>
                 </div>
@@ -162,7 +168,7 @@
           <div class="row">
             <div class="col-12">
               <h2>
-                {{gettext("Contributing Team and Advisors")}}
+                {{ gettext("Contributing Team and Advisors") }}
               </h2>
               <div class="row">
                 <div class="col-12 col-md-6 col-xl-3">
@@ -171,14 +177,14 @@
                       <img src="/static/img/headshot-aure.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/aure-gimon-8501041">{{gettext("Aure Gimon")}}
+                      <a href="http://www.linkedin.com/in/aure-gimon-8501041" target="_blank">{{ gettext("Aure Gimon") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Product Designer")}}
+                      {{ gettext("Product Designer") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups.")}}
+                      {{ gettext("Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups.") }}
                     </div>
                   </div>
                 </div>
@@ -188,14 +194,14 @@
                       <img src="/static/img/headshot-derek.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/derekhkan">{{gettext("Derek Kan")}}
+                      <a href="http://www.linkedin.com/in/derekhkan" target="_blank">{{ gettext("Derek Kan") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Evangelist")}}
+                      {{ gettext("Evangelist") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group.")}}
+                      {{ gettext("Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group.") }}
                     </div>
                   </div>
                 </div>
@@ -205,14 +211,14 @@
                       <img src="/static/img/headshot-saureen.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="http://www.linkedin.com/in/saureenshah">{{gettext("Saureen Shah")}}
+                      <a href="http://www.linkedin.com/in/saureenshah" target="_blank">{{ gettext("Saureen Shah") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Engineer/BD")}}
+                      {{ gettext("Engineer/BD") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube.")}}
+                      {{ gettext("Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube.") }}
                     </div>
                   </div>
                 </div>
@@ -222,14 +228,14 @@
                       <img src="/static/img/headshot-ryan.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/ryanangilly/">{{gettext("Ryan Angilly")}}
+                      <a href="https://www.linkedin.com/in/ryanangilly/" target="_blank">{{ gettext("Ryan Angilly") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Engineer")}}
+                      {{ gettext("Engineer") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL.")}}
+                      {{ gettext("Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL.") }}
                     </div>
                   </div>
                 </div>
@@ -239,14 +245,14 @@
                       <img src="/static/img/headshot-daniel.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.leancoder.com">{{gettext("Daniel Von Fange")}}
+                      <a href="https://www.leancoder.com" target="_blank">{{ gettext("Daniel Von Fange") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Engineer")}}
+                      {{ gettext("Engineer") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide.")}}
+                      {{ gettext("Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide.") }}
                     </div>
                   </div>
                 </div>
@@ -256,14 +262,14 @@
                       <img src="/static/img/headshot-addison.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/addisonhuegel/">{{gettext("Addison Huegel")}}
+                      <a href="https://www.linkedin.com/in/addisonhuegel/" target="_blank">{{ gettext("Addison Huegel") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Advisor/PR")}}
+                      {{ gettext("Advisor/PR") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1.")}}
+                      {{ gettext("Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1.") }}
                     </div>
                   </div>
                 </div>
@@ -273,14 +279,14 @@
                       <img src="/static/img/headshot-zing.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/zing-yang-3183162/">{{gettext("Zing Yang")}}
+                      <a href="https://www.linkedin.com/in/zing-yang-3183162/" target="_blank">{{ gettext("Zing Yang") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Advisor/Business Operations")}}
+                      {{ gettext("Advisor/Business Operations") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group.")}}
+                      {{ gettext("Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group.") }}
                     </div>
                   </div>
                 </div>
@@ -290,14 +296,14 @@
                       <img src="/static/img/headshot-melody.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/melody-he-497a5b25/">{{gettext("Melody He")}}
+                      <a href="https://www.linkedin.com/in/melody-he-497a5b25/" target="_blank">{{ gettext("Melody He") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Advisor/International BD")}}
+                      {{ gettext("Advisor/International BD") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins.")}}
+                      {{ gettext("Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins.") }}
                     </div>
                   </div>
                 </div>
@@ -307,14 +313,14 @@
                       <img src="/static/img/headshot-paul.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/veradittakit/">{{gettext("Paul Veradittakit")}}
+                      <a href="https://www.linkedin.com/in/veradittakit/" target="_blank">{{ gettext("Paul Veradittakit") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Advisor")}}
+                      {{ gettext("Advisor") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON.")}}
+                      {{ gettext("Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON.") }}
                     </div>
                   </div>
                 </div>
@@ -324,14 +330,14 @@
                       <img src="/static/img/headshot-joey.jpg" class="headshot">
                     </div>
                     <div class="name">
-                      <a href="https://www.linkedin.com/in/joeykrug/">{{gettext("Joey Krug")}}
+                      <a href="https://www.linkedin.com/in/joeykrug/" target="_blank">{{ gettext("Joey Krug") }}
                       </a>
                     </div>
                     <div class="title">
-                      {{gettext("Advisor")}}
+                      {{ gettext("Advisor") }}
                     </div>
                     <div class="bio">
-                      {{gettext("Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital.")}}
+                      {{ gettext("Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital.") }}
                     </div>
                   </div>
                 </div>
@@ -375,13 +381,13 @@
           <div class="row">
             <div class="col-12 offset-xl-1 col-xl-10">
               <h2>
-                {{gettext("Investors")}}
+                {{ gettext("Investors") }}
               </h2>
               <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                   <div class="investor">
                     <div class="logo-wrapper">
-                      <a href="https://www.panteracapital.com/">
+                      <a href="https://www.panteracapital.com/" target="_blank">
                         <img src="/static/img/pantera-logo.png" class="investor-logo">
                       </a>
                     </div>

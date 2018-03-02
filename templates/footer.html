@@ -9,101 +9,106 @@
             class="origin-logo">
         </div>
         <p class="company-mission">
-          {{gettext("Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network.")}}
+          {{ gettext("Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network.") }}
         </p>
         <p>
-          &copy; {{ now.year }} {{gettext("Origin Protocol, Inc.")}}
+          &copy; {{ now.year }} {{ gettext("Origin Protocol, Inc.") }}
         </p>
       </div>
       <div class="col-12 col-md-6">
         <div class="row">
           <div class="col-6 col-md-4">
             <div class="footer-header">
-              {{gettext("Documentation")}}
+              {{ gettext("Documentation") }}
             </div>
             <ul class="footer-links">
               <li class="footer-link">
-                <a href="{{'/%s/product-brief'% CURRENT_LANGUAGE}}">
-                  {{gettext("Product Brief")}}
+                <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Product Brief") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="{{'/%s/whitepaper'% CURRENT_LANGUAGE}}">
-                  {{gettext("Whitepaper")}}
+                <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Whitepaper") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://medium.com/originprotocol/origin-demo-dapp-is-now-live-on-testnet-835ae201c58">
-                  {{gettext("Demo DApp")}}
+                <a href="https://medium.com/originprotocol/origin-demo-dapp-is-now-live-on-testnet-835ae201c58" target="_blank">
+                  {{ gettext("Demo DApp") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://github.com/OriginProtocol">
-                  {{gettext("Github")}}
+                <a href="https://github.com/OriginProtocol" target="_blank">
+                  {{ gettext("Github") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="http://docs.originprotocol.com/">
-                  {{gettext("Docs")}}
+                <a href="http://docs.originprotocol.com/" target="_blank">
+                  {{ gettext("Docs") }}
                 </a>
               </li>
             </ul>
           </div>
           <div class="col-6 col-md-4">
             <div class="footer-header">
-              {{gettext("Community")}}
+              {{ gettext("Community") }}
             </div>
             <ul class="footer-links">
               <li class="footer-link">
-                <a href="https://slack.originprotocol.com/">
-                  {{gettext("Slack")}}
+                <a href="https://t.me/originprotocol" target="_blank">
+                  {{ gettext("Telegram") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://t.me/originprotocol">
-                  {{gettext("Telegram")}}
+                <a href="https://discord.gg/jyxpUSe" target="_blank">
+                  {{ gettext("Discord") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://medium.com/originprotocol">
-                  {{gettext("Medium")}}
+                <a href="https://medium.com/originprotocol" target="_blank">
+                  {{ gettext("Medium") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://twitter.com/originprotocol">
-                  {{gettext("Twitter")}}
+                <a href="https://twitter.com/originprotocol" target="_blank">
+                  {{ gettext("Twitter") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://www.facebook.com/originprotocol">
-                  {{gettext("Facebook")}}
+                <a href="https://www.facebook.com/originprotocol" target="_blank">
+                  {{ gettext("Facebook") }}
                 </a>
               </li>
             </ul>
           </div>
           <div class="col-6 col-md-4">
             <div class="footer-header">
-              {{gettext("Organization")}}
+              {{ gettext("Organization") }}
             </div>
             <ul class="footer-links">
               <li class="footer-link">
-                <a href="{{'/%s/team'% CURRENT_LANGUAGE}}">
-                  {{gettext("Team")}}
+                <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Team") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="{{'/%s/presale'% CURRENT_LANGUAGE}}">
-                  {{gettext("Presale")}}
+                <a href="{{ url_for('presale', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Presale") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="https://angel.co/originprotocol/jobs">
-                  {{gettext("Jobs (We're hiring!)")}}
+                <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Partners") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="https://angel.co/originprotocol/jobs" target="_blank">
+                  {{ gettext("Jobs (We're hiring!)") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="https://www.google.com/maps/place/845+Market+St+%23450a,+San+Francisco,+CA+94103" target="_blank">
-                  {{gettext("845 Market St, #450A<br>San Francisco, CA 94103")}}
+                  {{ gettext("845 Market St, #450A<br>San Francisco, CA 94103") }}
                 </a>
               </li>
               <li class="footer-link">
