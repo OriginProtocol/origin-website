@@ -7,7 +7,7 @@ from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
 import os
 from app import app
-from config import constants, universal
+from config import constants, universal, partner_details
 from logic.emails import mailing_list
 from util.misc import sort_language_constants, get_real_ip
 
@@ -166,6 +166,9 @@ def partners_interest():
     flash(feedback)
     return jsonify("OK")
 
+@app.context_processor
+def inject_partners():
+    return dict(partners_dict = partner_details.PARTNERS)
 
 @app.errorhandler(404)
 def page_not_found(e):
