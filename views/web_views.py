@@ -9,7 +9,7 @@ import os
 from app import app
 from config import constants, universal
 from logic.emails import mailing_list
-from util.misc import sort_language_constants
+from util.misc import sort_language_constants, get_real_ip
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -132,11 +132,16 @@ def build_on_origin():
 
 @app.route('/<lang_code>/discord')
 def discord():
-    return redirect('https://discord.gg/jyxpUSe', code=301)
+    return redirect(universal.DISCORD_URL, code=301)
+
+@app.route('/<lang_code>/telegram')
+def telegram():
+    return redirect(universal.TELEGRAM_URL, code=301)
 
 @app.route('/<lang_code>/partners')
 def partners():
     return render_template('partners.html')
+
 
 @app.route('/partners/interest', methods=['POST'])
 def partners_interest():
@@ -145,7 +150,7 @@ def partners_interest():
     email = request.form['email']
     website = request.form["website"]
     note = request.form["note"]
-    print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
+    ip_addr = get_real_ip()
     if not name:
         return jsonify(gettext("Please enter your name"))
     if not company_name:
@@ -154,9 +159,11 @@ def partners_interest():
         return jsonify(gettext("Please enter your email"))
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.partners_interest(name, company_name, email, website, note)
+    feedback = mailing_list.partners_interest(name, company_name, email,
+                                              website, note, ip_addr)
     flash(feedback)
     return jsonify("OK")
+
 
 @app.errorhandler(404)
 def page_not_found(e):
