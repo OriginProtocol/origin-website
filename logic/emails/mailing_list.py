@@ -105,7 +105,7 @@ def send_one_off(email_type):
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
 
-def partners_interest(name, company_name, email, website, note):
+def partners_interest(name, company_name, email, website, note, ip_addr):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return gettext('Please enter a valid email address')
@@ -120,6 +120,7 @@ def partners_interest(name, company_name, email, website, note):
         me.email = email
         me.website = website
         me.note = note
+        me.ip_addr = ip_addr
         db.session.add(me)
         db.session.commit()
     except Exception as e:
