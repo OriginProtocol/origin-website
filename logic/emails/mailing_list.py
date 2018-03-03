@@ -11,7 +11,7 @@ from flask_babel import gettext, Babel, Locale
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 
-def send_welcome(email):
+def send_welcome(email, ip_addr):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return gettext('Please enter a valid email address')
@@ -20,6 +20,7 @@ def send_welcome(email):
         me = db_models.EmailList()
         me.email = email
         me.unsubscribed = False
+        me.ip_addr = ip_addr
         db.session.add(me)
         db.session.commit()
     except:
@@ -29,7 +30,7 @@ def send_welcome(email):
 
     return gettext('Thanks for signing up!')
 
-def presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, ip_address):
+def presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, ip_addr):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return gettext('Please enter a valid email address')
@@ -45,6 +46,7 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
         me.citizenship = citizenship
         me.sending_addr = sending_addr
         me.note = note
+        me.ip_addr = ip_addr
         db.session.add(me)
         db.session.commit()
     except Exception as e:
@@ -70,7 +72,7 @@ def presale(full_name, email, accredited, entity_type, desired_allocation, desir
                     citizenship,
                     sending_addr,
                     note,
-                    ip_address)
+                    ip_addr)
 
     email_types.send_email_type('presale', DEFAULT_SENDER, email)
 

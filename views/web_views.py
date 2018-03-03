@@ -81,7 +81,8 @@ def product_brief():
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
     email = request.form['email']
-    feedback = mailing_list.send_welcome(email)
+    ip_addr = get_real_ip()
+    feedback = mailing_list.send_welcome(email, ip_addr)
     return jsonify(feedback)
 
 @app.route('/presale/join', methods=['POST'])
@@ -95,6 +96,7 @@ def join_presale():
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
+    ip_addr = get_real_ip()
     print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
     if not full_name:
         return jsonify(gettext("Please enter your name"))
