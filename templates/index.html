@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS.") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol") }}{% endblock %}
 
-{% block meta_description %}{{ gettext("Origin Protocol") }}{% endblock %}
+{% block meta_description %}{{ gettext("The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS.") }}{% endblock %}
 
 {% block content %}
 
@@ -69,14 +69,14 @@
               </p>
               <div class="btn-container">
                 <a href="/product-brief">
-                  <button class="product-brief-btn btn btn-primary">
+                  <button class="product-brief-btn btn btn-primary btn-min-size">
                     {{ gettext("Read Our Product Brief") }}
                   </button>
                 </a>
               </div>
               <div class="btn-container">
-                <a href="https://t.me/originprotocol" target="_blank">
-                  <button class="telegram-btn btn btn-outline-primary">
+                <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
+                  <button class="telegram-btn btn btn-outline-primary btn-min-size">
                     <i class='fab fa-telegram-plane'></i>
                     {{ gettext("Join Our Telegram") }}
                   </button>
@@ -102,7 +102,7 @@
               </p>
               <div class="btn-container">
                 <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">
-                  <button class="partners-btn btn btn-primary">
+                  <button class="partners-btn btn btn-primary btn-min-size">
                     {{ gettext("View All Partners") }}
                   </button>
                 </a>
@@ -183,14 +183,14 @@
           </p>
           <div class="btn-container demo-btn-container">
             <a href="https://demo.originprotocol.com" target="_blank">
-              <button class="btn btn-outline-primary">
+              <button class="btn btn-outline-primary btn-min-size">
                 {{ gettext("Try the Demo") }}
               </button>
             </a>
           </div>
           <div class="btn-container github-btn-container">
             <a href="https://github.com/OriginProtocol/demo-dapp" target="_blank">
-              <button class="btn btn-outline-primary">
+              <button class="btn btn-outline-primary btn-min-size">
                 <i class="fab fa-github"></i>
                 {{ gettext("View GitHub") }}
               </button>
@@ -212,7 +212,7 @@
           </p>
           <div class="btn-container">
             <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">
-              <button class="btn btn-primary">
+              <button class="btn btn-primary btn-min-size">
                 {{ gettext("Read the Whitepaper") }}
               </button>
             </a>
@@ -465,7 +465,7 @@
             <input id="email" type="email" name="email" class="form-control email-signup-input" placeholder="{{ gettext("Enter email") }}" />
           </div>
           <div class="btn-container">
-            <input type="submit" class="btn btn-primary" value="{{ gettext("Join the Community") }}">
+            <input type="submit" class="btn btn-primary btn-min-size" value="{{ gettext("Join the Community") }}">
             </form>
           </div>
           <div id='signup-result'></div>
@@ -474,7 +474,7 @@
       </div>
     </div>
   </section>
-<section class="press-section">
+  <section class="press-section">
     <div class="container foreground-content">
       <div class="row">
         <div class="col-12">
@@ -579,7 +579,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

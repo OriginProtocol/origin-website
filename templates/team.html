@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("The sharing economy without intermediaries: Origin Protocol Team") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
 
 {% block meta_description %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
 
 {% block content %}
 
 <main class="team-page">
-  {% include 'navbar.html' %}
-  <section class="team-header-section">
+  {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
+  <section class="header-section team-header-section">
     <div class="container foreground-content">
       <div class="row">
         <div class="col-12 col-md-6">
@@ -27,7 +27,7 @@
   <section class="core-team-section">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-pane background-panes">
+        <div class="col-12 col-pane background-panes top-panes">
           <div class="row row-pane">
             <div class="col-4 col-pane">
               <div class="left-upper-pane">
@@ -35,6 +35,12 @@
             </div>
             <div class="col-8 col-pane">
               <div class="right-upper-pane">
+              </div>
+            </div>
+          </div>
+          <div class="row row-pane">
+            <div class="col-12 col-pane">
+              <div class="core-team-bottom-pane">
               </div>
             </div>
           </div>

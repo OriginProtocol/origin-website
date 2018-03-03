@@ -9,7 +9,7 @@ import os
 from app import app
 from config import constants, universal, partner_details
 from logic.emails import mailing_list
-from util.misc import sort_language_constants
+from util.misc import sort_language_constants, get_real_ip
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -52,7 +52,6 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
-    flash('slack')
     return render_template('team.html')
 
 @app.route('/<lang_code>/presale')
@@ -64,25 +63,26 @@ def whitepaper():
     localized_filename = 'whitepaper_v4_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(whitepaper_path):
-        return app.send_static_file('docs/%s' % localized_filename)
+        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/%s' % localized_filename, code=302)
     else:
         # Default to English
-        return app.send_static_file('docs/whitepaper_v4.pdf')
+        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/whitepaper_v4.pdf', code=302)
 
 @app.route('/<lang_code>/product-brief')
 def product_brief():
     localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(product_brief_path):
-        return app.send_static_file('docs/%s' % localized_filename)
+        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/%s' % localized_filename, code=302)
     else:
         # Default to English
-        return app.send_static_file('docs/product_brief_v17.pdf')
+        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/product_brief_v17.pdf', code=302)
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
     email = request.form['email']
-    feedback = mailing_list.send_welcome(email)
+    ip_addr = get_real_ip()
+    feedback = mailing_list.send_welcome(email, ip_addr)
     return jsonify(feedback)
 
 @app.route('/presale/join', methods=['POST'])
@@ -96,6 +96,7 @@ def join_presale():
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
     note = request.form["note"]
+    ip_addr = get_real_ip()
     print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
     if not full_name:
         return jsonify(gettext("Please enter your name"))
@@ -131,9 +132,18 @@ def fullcontact_webhook():
 def build_on_origin():
     return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
+@app.route('/<lang_code>/discord')
+def discord():
+    return redirect(universal.DISCORD_URL, code=301)
+
+@app.route('/<lang_code>/telegram')
+def telegram():
+    return redirect(universal.TELEGRAM_URL, code=301)
+
 @app.route('/<lang_code>/partners')
 def partners():
     return render_template('partners.html')
+
 
 @app.route('/partners/interest', methods=['POST'])
 def partners_interest():
@@ -142,7 +152,7 @@ def partners_interest():
     email = request.form['email']
     website = request.form["website"]
     note = request.form["note"]
-    print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
+    ip_addr = get_real_ip()
     if not name:
         return jsonify(gettext("Please enter your name"))
     if not company_name:
@@ -151,7 +161,8 @@ def partners_interest():
         return jsonify(gettext("Please enter your email"))
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.partners_interest(name, company_name, email, website, note)
+    feedback = mailing_list.partners_interest(name, company_name, email,
+                                              website, note, ip_addr)
     flash(feedback)
     return jsonify("OK")
 

@@ -4,18 +4,18 @@
     {% for message in messages %}
       {% if message == "telegram" %}
         setTimeout(function() {
-          alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='https://t.me/originprotocol' target='_blank'><button class='telegram-btn btn btn-outline-primary'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</button></a></div>", "default", 0)
+          alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' target='_blank'><button class='telegram-btn btn btn-outline-primary btn-min-size'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</button></a></div>", "default", 0)
         }, 2000);
-      {% elif message == "slack" %}
+      {% elif message == "discord" %}
         setTimeout(function() {
-          alertify.log("{{ gettext("Want to contribute?") }}<div class='slack-btn-container'><a href='https://slack.originprotocol.com' target='_blank'><button class='slack-btn btn btn-outline-primary'><i class='fab fa-slack-hash'></i>{{ gettext("Join Our Slack") }}</button></a></div>", "default", 0)
+          alertify.log("{{ gettext("Want to contribute?") }}<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}' target='_blank'><button class='discord-btn btn btn-outline-primary btn-min-size'><i class='fab fa-discord'></i>{{ gettext("Join Our Discord") }}</button></a></div>", "default", 0)
         }, 2000);
       {% else %}
         alertify.log("{{ message }}", "default")
       {% endif %}
     {% endfor %}
     {% if CURRENT_LANGUAGE != "en" %}
-      alertify.log("Help improve this translation.<div class='slack-btn-container'><a href='https://originprotocol.slack.com/messages/C8UNGUVCN/' target='_blank'><button class='slack-btn btn btn-outline-primary'><i class='fab fa-slack-hash'></i>Join #translation on Slack</button></a></div>", "default", 0)
+      alertify.log("Help improve this translation.<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}' target='_blank'><button class='discord-btn btn btn-outline-primary btn-min-size'><i class='fab fa-discord'></i>Join #translation on Discord</button></a></div>", "default", 0)
     {% endif %}
 </script>
   {% endif %}

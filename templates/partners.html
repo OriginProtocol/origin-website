@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("The sharing economy without intermediaries: Build on Origin") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
 
 {% block meta_description %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
 
@@ -8,7 +8,7 @@
 
 <main class="build-page">
   {% include 'navbar.html' %}
-  <section class="build-header-section">
+  <section class="header-section build-header-section">
     <div class="container foreground-content">
       <div class="row">
         <div class="col-12 col-md-6">
@@ -17,9 +17,9 @@
           </h1>
         </div>
         <div class="col-12 col-md-6">
-          <div class="text-container">
+          <div class="indented text-container">
             <p>
-              {{ gettext("<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to join our mission.</strong>") }}
+              {{ gettext("<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>") }}
             </p>
           </div>
         </div>
@@ -87,6 +87,7 @@
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="build-on-origin-form">
+                <a name="join_our_mission"></a>
                 <h2>
                   {{ gettext("Join our mission!") }}
                 </h2>
@@ -123,7 +124,7 @@
                     {{ recaptcha('partners-interest', 'partnerFormSubmit') }}
                   </div>
                   <div class="btn-container">
-                    <input type="submit" class="btn btn-primary" value="{{ gettext('Become a Partner') }}">
+                    <input type="submit" class="btn btn-primary btn-min-size" value="{{ gettext('Become a Partner') }}">
                   </div>
                 </form>
               </div>
