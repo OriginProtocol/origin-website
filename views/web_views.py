@@ -132,7 +132,11 @@ def build_on_origin():
 
 @app.route('/<lang_code>/discord')
 def discord():
-    return redirect('https://discord.gg/jyxpUSe', code=301)
+    return redirect(universal.DISCORD_URL, code=301)
+
+@app.route('/<lang_code>/telegram')
+def telegram():
+    return redirect(universal.TELEGRAM_URL, code=301)
 
 @app.route('/<lang_code>/partners')
 def partners():
