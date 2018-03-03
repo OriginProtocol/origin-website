@@ -1,127 +1,152 @@
 PARTNERS = [
     {
     "name":"canya",
-    "logo":"/static/img/partners/canya.png",
-    "srcset":"/static/img/partners/canya@2x.png 2x,/static/img/partners/canya@3x.png 3x",
     "url":"https://canya.io/",
+    "desc":"CanYa is building a blockchain-powered \"marketplace of services\" with Origin Protocol for the gig economy and freelancing."
     },
-
     {  
     "name":"beetoken",
-    "logo":"/static/img/partners/beetoken.png",
-    "srcset":"/static/img/partners/beetoken@2x.png 2x,/static/img/partners/beetoken@3x.png 3x",
     "url":"https://www.beetoken.com/",
+    "desc":"Bee is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
     },
-
     {
     "name":"wetrust",
-    "logo":"/static/img/partners/wetrust.png",
     "url":"https://www.wetrust.io/",
+    "desc":"Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform."
+    },
+    {
+    "name":"storiqa",
+    "url":"https://crowdsale.storiqa.com/",
+    "desc":"Storiqa is building an ecommerce portal for small businesses to access a global market of cryptocurrency buyers on Origin Protocol."
     },
     {
     "name":"propy",
-    "logo":"/static/img/partners/propy-dark.png",
     "url":"https://propy.com/",
+    "desc":"Propy is building their Propy Property Management Platform to connect international real estate investors with local property managers using Origin Protocol."
     },
     {
     "name":"antiq-mall",
-    "logo":"/static/img/partners/antiq-mall.png",
-    "srcset":"/static/img/partners/antiq-mall@2x.png 2x,/static/img/partners/antiq-mall@3x.png 3x",
     "url":"https://antiqmall-ico.io/",
+    "desc":"AntiqMall is building an antiques and art objects marketplace on the blockchain using Origin Protocol."
     },
     {
     "name":"aworker",
-    "logo":"/static/img/partners/aworker-white.png",
-    "srcset":"/static/img/partners/aworker-white@2x.png 2x,/static/img/partners/aworker-white@3x.png 3x",
     "url":"https://aworker.io/",
+    "desc":"Aworker is building a next generation recruitment platform using Origin Protocol to disrupt the HR industry."
     },
     {
     "name":"acquaint",
-    "logo":"/static/img/partners/acquaint.png",
-    "srcset":"/static/img/partners/acquaint@2x.png 2x,/static/img/partners/acquaint@3x.png 3x",
     "url":"://acquaint.biz/",
+    "desc":"Acquaint is building a peer-to-peer real estate and asset trading platform on the blockchain using Origin Protocol."
     },
     {
     "name":"snagride",
-    "logo":"/static/img/partners/snagride.png",
-    "srcset":"/static/img/partners/snagride@2x.png 2x,/static/img/partners/snagride@3x.png 3x",
     "url":"https://www.snagride.com/",
+    "desc":"SnagRide is building a mid to long distance ride-sharing application on the blockchain using Origin Protocol."
     },
     {
     "name":"edgecoin",
-    "logo":"/static/img/partners/edge.png",
-    "srcset":"/static/img/partners/edge@2x.png 2x,/static/img/partners/edege@3x.png 3x",
     "url":"https://www.edgecoin.io/",
+    "desc":"Edgecoin is building a peer-to-peer education and e-learning platform using with blockchain-secured certificates and records on Origin Protocol."
     },
     {
     "name":"jolyy",
-    "logo":"/static/img/partners/jolyy.png",
-    "serset":"/static/img/partners/jolyy@2x.png 2x,/static/img/partners/jolyy@3x.png 3x",
     "url":"https://jolyy.com/",
+    "desc":"JOLYY is building a fair and low-cost beauty booking platform on the blockchain using Origin Protocol."
     },
     {
     "name":"blockfood",
-    "logo":"/static/img/partners/blockfood.svg",
     "url":"https://blockfood.io/",
+    "desc":"BlockFood is building a decentralized food ordering and delivery platform on Origin Protocol. BlockFood is a non-profit project from the Open Sharing Economy Foundation."
     },
     {
     "name":"galaxy-esolutions",
-    "logo":"/static/img/partners/galaxy.png",
-    "srcset":"/static/img/partners/galaxy@2x.png 2x,/static/img/partners/galaxy@3x.png 3x",
     "url":"https://galaxy-esolutions.com/",
+    "desc":"Galaxy eSolutions is disrupting the multi-billion dollar refurbished electronics and smartphone industry with its comprehensive platform built on Origin Protocol."
     },
     {
     "name":"thrivelabs",
-    "logo":"/static/img/partners/thrive-white.png",
-    "srcset":"/static/img/partners/thrive-white@2x.png 2x,/static/img/partners/thrive-white@3x.png 3x",
     "url":"https://www.ico.thrivelabs.io/",
+    "desc":"Thrive is building a blockchain-based premium advertising and data marketplace using Origin Protocol."
     },
     {
     "name":"mobotiq",
-    "logo":"/static/img/partners/mobotiq.png",
-    "srcset":"/static/img/partners/mobotiq@2x.png 2x,/static/img/partners/mobotiq@3x.png 3x",
     "url":"http://mobotiq.com/",
+    "desc":"Mobotiq is building a decentralized peer-to-peer mobility solution using Origin Protocol and powered by their autonomous pods."
     },
     {
     "name":"odem",
-    "logo":"/static/img/partners/odem-logo-sq-v-0-2.png",
-    "srcset":"/static/img/partners/odem-logo-sq-v-0-2@2x.png 2x,/static/img/partners/odem-logo-sq-v-0-2@3x.png 3x",
     "url":"https://odem.io/",
+    "desc":"ODEM is building an in-person education marketplace on the blockchain using Origin Protocol."
     },
     {
     "name":"brixby",
-    "logo":"/static/img/partners/brixby.png",
     "url":"https://www.brixby.io/",
+    "desc":"Brixby is building a peer-to-peer parking marketplace using Origin Protocol to enable businesses to efficiently monetize their unused real estate."
     },
     {
     "name":"hirematch",
-    "logo":"/static/img/partners/hirematch.png",
     "url":"https://hirematch.io/",
+    "desc":"HireMatch connects job seekers and employers using the blockchain and cryptocurrency with Origin Protocol."
     },
     {
     "name":"smartrefer",
-    "logo":"/static/img/partners/smartrefer.png",
     "url":"https://smartrefer.io/",
+    "desc":"SmartRefer is building a technology and diversity hiring marketplace powered by referrals with Origin Protocol."
     },
     {
     "name":"lotus",
-    "logo":"/static/img/partners/lotus.png",
     "url":"https://lotus.sh/",
+    "desc":"Lotus is building a decentralized blockchain-based travel agency on Origin Protocol."
     },
     {
     "name":"deco-network",
-    "logo":"/static/img/partners/deconet.jpg",
     "url":"https://deco.network/",
+    "desc":"Deconet is their code marketplace with Origin Protocol where developers get rewarded when their code is used."
     },
     {
     "name":"thegastronomie",
-    "logo":"/static/img/partners/gastronomie.png",
     "url":"https://thegastronomie.com/",
+    "desc":"The Gastronomie is a blockchain-enabled marketplace for high end culinary and cultural experiences built on Origin Protocol."
     },
     {
     "name":"workspace0x",
-    "logo":"/static/img/partners/workspace0x.png",
     "url":"https://workspace0x.com/",
+    "desc":"Workspace0x is a decentralized marketplace for co-working and shared spaces built on Origin Protocol."
     },
-
+    {
+    "name":"cashbag",
+    "url":"https://tokensale.cashbag.co/",
+    "desc":"CashBag is a global marketplace on the blockchain built using Origin Protocol that provides powerful rewards to consumers."
+    },
+    {
+    "name":"selena",
+    "url":"https://selena.id/",
+    "desc":"Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol."
+    },
+    {
+    "name":"fintechbloq",
+    "url":"http://fintechbloq.com/",
+    "desc":"Fintech Bloq is building their marketplace of blockchain and banking services on Origin Protocol."
+    },
+    {
+    "name":"deedcoin",
+    "url":"https://www.deedcoinlaunch.com/",
+    "desc":"Deedcoin is building a platform that provides an alternative to the MLS and 6% real estate commissions using Origin Protocol."
+    },
+    {
+    "name":"hirego",
+    "url":"http://hirego.io/",
+    "desc":"HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol."
+    },
+    {
+    "name":"craftr",
+    "url":"https://craftr.io/",
+    "desc":"CraftR is building their digital marketplace for programmers, designers, and musicians on Origin Protocol."
+    },
+    {
+    "name":"taskfair",
+    "url":"https://taskfair.com/",
+    "desc":"TaskFair is building their jobs marketplace on the blockchain using Origin Protocol."
+    },
 ]

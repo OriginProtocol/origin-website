@@ -46,17 +46,11 @@
             <div class="col-12">
               <div class="logos row justify-content-center">
                 {% for partner in partners_dict %}
-                    <div class="col-12 col-sm-6 col-md-2">
+                    <div class="col-12 col-sm-6 {% if loop.index is lessthan 6 %}col-md-2{% else %}col-md-1{% endif %}">
                       <div class="img-graphic">
                         <a href="{{ partner.url }}" target="_blank">
-                          {% if partner.srcset %}
-                          <img src="{{ partner.logo }}",
-                            srcset="{{ partner.srcset }}",
-                            class="{{'%s-logo wow fadeInUp' %partner.name }}">
-                          {% else %}
-                          <img src="{{ partner.logo }}"
-                            class="{{'%s-logo wow fadeInUp' %partner.name }}">
-                          {% endif %}
+                          <img src="/static/img/partners/{{ partner.name }}.png""
+                            class="{{'%s-logo wow fadeInUp' %partner.name }}" title="{{ partner.desc }}" data-toggle="tooltip">
                         </a>
                       </div>
                     </div>

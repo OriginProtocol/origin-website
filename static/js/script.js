@@ -77,3 +77,7 @@ $(function(){
     $('.navbar-origin .navbar-collapse').not('.show').removeClass('obscured');
   });
 });
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
