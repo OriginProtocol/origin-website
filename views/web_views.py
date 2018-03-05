@@ -181,6 +181,7 @@ def assets_all_javascript():
         "static/js/vendor-popper.min.js",
         "static/js/vendor-bootstrap.min.js",
         "static/js/alertify.js",
+        "static/js/d3.js",
         "static/js/script.js",
         "static/js/wow.min.js"
     ]), mimetype="application/javascript")

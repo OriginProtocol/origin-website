@@ -1,0 +1,106 @@
+<svg id="particles">
+</svg>
+
+{% block extra_scripts %}
+  <script>
+    // Design Variables
+    var horizontalSpacing = 104;
+    var verticalSpacing = 30;
+    var horizontalOffset = horizontalSpacing / 4;
+    var verticalOffset = verticalSpacing / 2;
+
+    var data = { dots: [] };
+
+    // https://raw.githubusercontent.com/jashkenas/underscore/95e007ed57be8927c4b6344dabb684d055fd89c9/underscore.js
+    function debounce(func, wait, immediate) {
+      var timeout, args, context, timestamp, result;
+
+      function now() {
+        return Date.now || function() {
+          return new Date().getTime();
+        };
+      }
+
+      var later = function() {
+        var last = now() - timestamp;
+
+        if (last < wait && last >= 0) {
+          timeout = setTimeout(later, wait - last);
+        } else {
+          timeout = null;
+          if (!immediate) {
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+          }
+        }
+      };
+
+      var debounced = function() {
+        context = this;
+        args = arguments;
+        timestamp = now();
+        var callNow = immediate && !timeout;
+        if (!timeout) timeout = setTimeout(later, wait);
+        if (callNow) {
+          result = func.apply(context, args);
+          context = args = null;
+        }
+
+        return result;
+      };
+
+      debounced.clear = function() {
+        clearTimeout(timeout);
+        timeout = context = args = null;
+      };
+
+      return debounced;
+    };
+
+    function build() {
+      data.dots = [];
+
+      d3.select('#particles').selectAll('circle').data(data.dots).exit().remove();
+
+      var container = document.getElementById('particles').parentElement;
+      var containerHeight = container.offsetHeight;
+      var containerWidth = container.offsetWidth;
+      var columnsCount = Math.floor((container.offsetWidth + horizontalOffset) / horizontalSpacing) + 1;
+      var rowsCount = Math.floor((container.offsetHeight + verticalOffset) / verticalSpacing) + 1;
+      var dotsCount = Math.floor(columnsCount * rowsCount);
+
+      for (var i = 0; i < dotsCount; i++) {
+        var column =  Math.floor(i % columnsCount);
+        var row = Math.floor(i / columnsCount);
+
+        data.dots.push({
+          cx: Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0),
+          cy: Math.floor(row * verticalSpacing) + verticalOffset
+        });
+      }
+
+      var dots = d3.select('#particles')
+        .attr('height', '100%')
+        .attr('width', '100%')
+        .selectAll('circle')
+          .data(data.dots);
+
+      dots.enter().append('circle')
+          .attr('cx', function(d) { return d.cx; })
+          .attr('cy', function(d) { return d.cy; })
+          .attr('fill', '#ebf0f3')
+          .attr('fill-opacity', 0)
+          .attr('r', 1)
+        .transition()
+          .duration(2000)
+          .attr('fill-opacity', 0.5);
+    }
+
+    var debouncedBuild = debounce(build, 400);
+
+    // there may be a better way to defer execution until dependencies are met
+    // but only run if included in a certain template
+    window.addEventListener('load', build);
+    window.addEventListener('resize', debouncedBuild);
+  </script>
+{% endblock %}

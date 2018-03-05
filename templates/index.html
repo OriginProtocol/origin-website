@@ -7,46 +7,51 @@
 {% block content %}
 
 <main class="landing-page">
-  {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
-  <section class="hero-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h1>
-            {{ gettext("The sharing economy without intermediaries") }}
-          </h1>
-          <p>
-            {{ gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS") }}
-          </p>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="img-graphic">
-            <img src="/static/img/hero-devices.png"
-              srcset="/static/img/hero-devices@2x.png 2x, /static/img/hero-devices@3x.png 3x"
-              class="hero-devices"
-              role="presentation" />
+  <div class="background-wrapper">
+    <div class="particles-container">
+      {% include 'particles.html' %}
+    </div>
+    {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
+    <section class="hero-section">
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h1>
+              {{ gettext("The sharing economy without intermediaries") }}
+            </h1>
+            <p>
+              {{ gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS") }}
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="img-graphic">
+              <img src="/static/img/hero-devices.png"
+                srcset="/static/img/hero-devices@2x.png 2x, /static/img/hero-devices@3x.png 3x"
+                class="hero-devices"
+                role="presentation" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="platform-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes top-panes">
-          <div class="row row-pane">
-            <div class="col-8 col-pane">
-              <div class="left-upper-pane">
+    </section>
+    <section class="platform-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-pane background-panes top-panes">
+            <div class="row row-pane">
+              <div class="col-8 col-pane">
+                <div class="left-upper-pane">
+                </div>
+              </div>
+              <div class="col-4 col-pane">
+                <div class="right-upper-pane">
+                </div>
               </div>
             </div>
-            <div class="col-4 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
-          </div>
-          <div class="row row-pane">
-            <div class="col-12 col-pane">
-              <div class="platform-bottom-pane">
+            <div class="row row-pane">
+              <div class="col-12 col-pane">
+                <div class="platform-bottom-pane">
+                </div>
               </div>
             </div>
           </div>
@@ -84,8 +89,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <section class="partners-section">
     <div class="container-fluid">
       <div class="row">
