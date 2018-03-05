@@ -1,4 +1,4 @@
-web: newrelic-admin run-program gunicorn main:app
+web: bin/start-nginx newrelic-admin run-program gunicorn -c nginx/gunicorn.conf main:app
 init: python tools/manage.py db init
 migrate: python tools/manage.py db migrate
 upgrade: python tools/manage.py db upgrade
