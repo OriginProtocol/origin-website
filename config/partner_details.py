@@ -4,7 +4,7 @@ PARTNERS = [
     "url":"https://canya.io/",
     "desc":"CanYa is building a blockchain-powered \"marketplace of services\" with Origin Protocol for the gig economy and freelancing."
     },
-    {  
+    {
     "name":"beetoken",
     "url":"https://www.beetoken.com/",
     "desc":"Bee is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
@@ -106,7 +106,7 @@ PARTNERS = [
     },
     {
     "name":"thegastronomie",
-    "url":"https://thegastronomie.com/",
+    "url":"http://token.thegastronomie.com",
     "desc":"The Gastronomie is a blockchain-enabled marketplace for high end culinary and cultural experiences built on Origin Protocol."
     },
     {
