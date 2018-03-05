@@ -1069,13 +1069,17 @@ footer .company-mission {
   margin-bottom: 40px;
 }
 
-.presale-form .form-group #desired_allocation_currency {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+.presale-form .form-group #desired_allocation {
+  min-width: unset;
 }
 
-#desired_allocation_currency {
-  min-width: 0;
+.presale-form .form-group .input-group .input-group-btn {
+  min-width: 75px;
+}
+
+.presale-form .form-group .input-group .input-group-btn #desired_allocation_currency {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Team page */
