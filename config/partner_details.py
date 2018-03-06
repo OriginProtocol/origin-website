@@ -149,4 +149,9 @@ PARTNERS = [
     "url":"https://taskfair.com/",
     "desc":"TaskFair is building their jobs marketplace on the blockchain using Origin Protocol."
     },
+    {
+    "name":"swipecrypto",
+    "url":"https://swipecrypto.com/",
+    "desc":"SwipeCrypto is building their app and data marketplace on the blockchain using Origin Protocol.com"
+    },    
 ]
