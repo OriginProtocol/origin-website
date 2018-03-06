@@ -20,6 +20,27 @@
     let svg;
     let loop;
 
+    // https://codereview.stackexchange.com/questions/47889/alternative-to-setinterval-and-settimeout
+    window.rafInterval = function(callback, delay) {
+      const { requestAnimationFrame } = window;
+      let start = Date.now();
+      let stop;
+
+      const intervalFunc = () => {
+        Date.now() - start < delay || (start += delay, callback());
+
+        stop || requestAnimationFrame(intervalFunc);
+      }
+
+      requestAnimationFrame(intervalFunc);
+
+      return {
+        clear: () => {
+          stop = 1;
+        },
+      }
+    }
+
     // https://raw.githubusercontent.com/jashkenas/underscore/95e007ed57be8927c4b6344dabb684d055fd89c9/underscore.js
     function debounce(func, wait, immediate) {
       var timeout, args, context, timestamp, result;
@@ -149,7 +170,7 @@
               .attr('fill-opacity', 0.5);
 
       setTimeout(() => {
-        loop = setInterval(() => {
+        loop = rafInterval(() => {
           addNode();
         }, 1000);
       }, 2000);
