@@ -185,6 +185,14 @@ main.team-page {
   width: 100%;
 }
 
+.particles-container svg .dot {
+  z-index: 2;
+}
+
+.particles-container svg .node {
+  z-index: 1;
+}
+
 #rtl .ml-auto,
 #rtl .mx-auto {
   /* override Bootstrap _spacing.scss:46 */
