@@ -152,6 +152,6 @@ PARTNERS = [
     {
     "name":"swipecrypto",
     "url":"https://swipecrypto.com/",
-    "desc":"SwipeCrypto is building their app and data marketplace on the blockchain using Origin Protocol.com"
+    "desc":"SwipeCrypto is building their app and data marketplace on the blockchain using Origin Protocol"
     },    
 ]
