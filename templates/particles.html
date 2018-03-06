@@ -4,6 +4,7 @@
   <script>
     // Design Variables
     const colors = { dots: '#ebf0f3', nodes: ['#6e3bea', '#26d198', '#1a82ff'] };
+    const opacity = { dots: { active: 1, inactive: 0.5 }};
     const horizontalSpacing = 104;
     const verticalSpacing = 30;
     const horizontalOffset = horizontalSpacing / 4;
@@ -87,21 +88,94 @@
       return debounced;
     };
 
-    const addNode = () => {
-      const dot = data.dots[Math.floor(Math.random() * data.dots.length)];
-      const unique = !data.nodes.find(n => n.cx === dot.cx && n.cy === dot.cy);
+    // build dot grid, initiate node generation
+    const build = () => {
+      // stop existing animation
+      if (loop) {
+        loop.clear();
+      }
 
+      svg = d3.select('#particles');
+      data = { connections: [], dots: [], nodes: [] };
+      
+      // remove existing drawing if window resized
+      svg.selectAll('defs').remove();
+      svg.selectAll('circle.dot').data(data.dots).exit().remove();
+      svg.selectAll('circle.node').data(data.nodes).exit().remove();
+      svg.selectAll('line.connection').data(data.connections).exit().remove();
+
+      container = document.getElementById('particles').parentElement;
+      containerHeight = container.offsetHeight;
+      ContainerWidth = container.offsetWidth;
+      columnsCount = Math.floor((container.offsetWidth + horizontalOffset) / horizontalSpacing) + 1;
+      rowsCount = Math.floor((container.offsetHeight + verticalOffset) / verticalSpacing) + 1;
+      dotsCount = Math.floor(columnsCount * rowsCount);
+
+      // matrix algorithm might be useful
+      for (var i = 0; i < dotsCount; i++) {
+        const column =  Math.floor(i % columnsCount);
+        const row = Math.floor(i / columnsCount);
+
+        data.dots.push({
+          cx: Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0),
+          cy: Math.floor(row * verticalSpacing) + verticalOffset,
+        });
+      }
+
+      // fill parent container
+      svg.attr('height', '100%').attr('width', '100%');
+
+      svg.selectAll('circle.dot').data(data.dots)
+          .enter().append('circle')
+            .classed('dot', true)
+              .attr('cx', d => d.cx)
+              .attr('cy', d => d.cy)
+              .attr('fill', colors.dots)
+              .attr('fill-opacity', 0)
+              .attr('r', 1)
+          .transition()
+            .duration(2000)
+              .attr('fill-opacity', opacity.dots.inactive);
+
+      setTimeout(() => {
+        loop = rafInterval(() => {
+          conditionallyAddNode();
+        }, 2000);
+      }, 2000);
+    };
+
+    const conditionallyAddNode = () => {
+      const index = Math.floor(Math.random() * data.dots.length);
+      const dot = data.dots[index];
+      const unique = !data.nodes.find(n => n.cx === dot.cx && n.cy === dot.cy);
+      const stroke = colors.nodes[Math.floor(Math.random() * colors.nodes.length)];
+
+      // add circle if space is empty, otherwise remove it
       if (unique) {
+        // color the dot to match
+        svg.selectAll('circle.dot').filter((d, i) => i === index)
+          .transition()
+            .duration(2000)
+              .attr('fill', stroke)
+              .attr('fill-opacity', opacity.dots.active);
+
         data.nodes.push({
           key: generateId(),
           cx: dot.cx,
           cy: dot.cy,
-          stroke: colors.nodes[Math.floor(Math.random() * colors.nodes.length)],
+          stroke,
         });
       } else {
         data.nodes = data.nodes.filter(n => n.cx !== dot.cx || n.cy !== dot.cy);
+
+        svg.selectAll('circle.dot').filter((d, i) => i === index)
+          .transition()
+            .duration(2000)
+              .attr('fill', colors.dots)
+              .attr('fill-opacity', opacity.dots.inactive);
       }
 
+      // append the circle
       svg.selectAll('circle.node').data(data.nodes, d => d.key)
         .enter().append('circle')
           .classed('node', true)
@@ -115,6 +189,7 @@
           .duration(2000)
             .attr('r', radius);
 
+      // remove the circle
       svg.selectAll('circle.node').data(data.nodes, d => d.key)
         .exit()
         .transition()
@@ -124,56 +199,6 @@
         .remove();
 
       manageNodeConnections(dot);
-    };
-
-    const build = () => {
-      if (loop) {
-        clearInterval(loop);
-      }
-
-      svg = d3.select('#particles');
-      data = { connections: [], dots: [], nodes: [] };
-      
-      svg.selectAll('circle.dot').data(data.dots).exit().remove();
-      svg.selectAll('circle.node').data(data.nodes).exit().remove();
-      svg.selectAll('line.connection').data(data.connections).exit().remove();
-
-      container = document.getElementById('particles').parentElement;
-      containerHeight = container.offsetHeight;
-      ContainerWidth = container.offsetWidth;
-      columnsCount = Math.floor((container.offsetWidth + horizontalOffset) / horizontalSpacing) + 1;
-      rowsCount = Math.floor((container.offsetHeight + verticalOffset) / verticalSpacing) + 1;
-      dotsCount = Math.floor(columnsCount * rowsCount);
-
-      for (var i = 0; i < dotsCount; i++) {
-        const column =  Math.floor(i % columnsCount);
-        const row = Math.floor(i / columnsCount);
-
-        data.dots.push({
-          cx: Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0),
-          cy: Math.floor(row * verticalSpacing) + verticalOffset,
-        });
-      }
-
-      svg.attr('height', '100%').attr('width', '100%');
-
-      svg.selectAll('circle.dot').data(data.dots)
-          .enter().append('circle')
-            .classed('dot', true)
-              .attr('cx', d => d.cx)
-              .attr('cy', d => d.cy)
-              .attr('fill', colors.dots)
-              .attr('fill-opacity', 0)
-              .attr('r', 1)
-          .transition()
-            .duration(2000)
-              .attr('fill-opacity', 0.5);
-
-      setTimeout(() => {
-        loop = rafInterval(() => {
-          addNode();
-        }, 1000);
-      }, 2000);
     };
 
     const connectNodes = (existing, added) => {
@@ -192,7 +217,7 @@
             ends.y1 = added.cy + radius;
             ends.y2 = existing.cy - radius;
           }
-        // angular
+        // angular (design does not allow for horizontal)
         } else {
           const h = Math.round(radius * 0.85);
           const v = Math.round(radius * 0.57);
@@ -247,9 +272,12 @@
       // perfectly vertical gradients do not work with gradientUnits: objectBoundingBox (default)
       // https://github.com/OriginProtocol/company-website/issues/2#issuecomment-359883885
       if (stroke.match(/0-0-(100-0|0-100)/)) {
+        // replace percentage positions with precise coordinate points
         stroke = stroke.replace(/-\d+-\d+-\d+-\d+/, `-${added.cx}-${existing.cx}-${added.cy}-${existing.cy}`);
 
+        // boolean !condition will nearly always pass
         if (!document.getElementById(stroke)) {
+          // vertical line gradients are generated on demand for every color/position combination
           const defs = d3.select('#particles > defs');
           const lg = defs.append('linearGradient')
             .attr('gradientUnits', 'userSpaceOnUse')
@@ -269,6 +297,7 @@
         }
       }
 
+      // unless stroke is a single color, convert it to a document id
       if (stroke.match('-')) {
         stroke = `url(#${stroke})`;
       }
@@ -294,6 +323,7 @@
 
     const disconnectNodes = dot => {
       data.connections = data.connections.filter(c => {
+        // multiple is a hack that catches all lines within appropriate proximity
         return (Math.abs(dot.cx - c.x1) >= radius * 2 || Math.abs(dot.cy - c.y1) >= radius * 2) &&
                (Math.abs(dot.cx - c.x2) >= radius * 2 || Math.abs(dot.cy - c.y2) >= radius * 2);
       });
@@ -313,6 +343,7 @@
       const defs = d3.select('#particles').append('defs');
       let combinedColors = [];
 
+      // find every possible color pair
       colors.nodes.forEach(c => {
         colors.nodes.filter(d => c !== d).forEach(d => {
           if (!combinedColors.find(col => col === `${c}-${d}`)) {
@@ -327,6 +358,7 @@
 
       let combinedPositions = [];
 
+      // find every possible gradient direction
       combinedColors.forEach(c => {
         // bottom-right-to-top-left
         combinedPositions.push({
@@ -365,7 +397,10 @@
         });
       });
 
+      // gradient definition required for every possible combination
       combinedPositions.forEach(p => {
+        const color1 = `#${p.id.slice(0, 6)}`;
+        const color2 = `#${p.id.slice(7, 13)}`;
         const lg = defs.append('linearGradient')
           .attr('id', p.id)
           .attr('x1', p.x1)
@@ -375,11 +410,11 @@
 
         lg.append('stop')
           .attr('offset', '0%')
-          .attr('stop-color', `#${p.id.slice(0, 6)}`);
+          .attr('stop-color', color1);
 
         lg.append('stop')
           .attr('offset', '100%')
-          .attr('stop-color', `#${p.id.slice(7, 13)}`);
+          .attr('stop-color', color2);
       });
     };
 
@@ -394,11 +429,12 @@
       return text;
     };
 
+    // add or remove lines connecting to the relevant point
     const manageNodeConnections = dot => {
       const added = data.nodes.find(n => dot.cx === n.cx && dot.cy === n.cy);
 
       if (added) {
-        const adjacentDots = [
+        const adjacentDotPositions = [
           { cx: dot.cx, cy: dot.cy - verticalSpacing * 2 },
           { cx: dot.cx + horizontalSpacing / 2, cy: dot.cy - verticalSpacing },
           { cx: dot.cx + horizontalSpacing / 2, cy: dot.cy + verticalSpacing },
@@ -407,8 +443,8 @@
           { cx: dot.cx - horizontalSpacing / 2, cy: dot.cy - verticalSpacing },
         ];
 
-        adjacentDots.forEach(d => {
-          const node = data.nodes.find(n => d.cx === n.cx && d.cy === n.cy);
+        adjacentDotPositions.forEach(pos => {
+          const node = data.nodes.find(n => pos.cx === n.cx && pos.cy === n.cy);
 
           if (node) {
             connectNodes(node, added);
