@@ -47,7 +47,6 @@ def robots():
 
 @app.route('/<lang_code>')
 def index():
-    flash('telegram')
     return render_template('index.html')
 
 @app.route('/<lang_code>/team')
