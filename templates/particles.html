@@ -13,9 +13,6 @@
 
     let containerHeight;
     let containerWidth;
-    let columnsCount;
-    let rowsCount;
-    let dotsCount;
     let svg;
     let loop;
     let data = { connections: [], dots: [], nodes: [] };
@@ -107,29 +104,41 @@
         return;
       }
 
+      // remove existing dots outside of container
+      if (loop && (newContainerHeight < containerHeight || newContainerWidth < containerWidth)) {
+        data.dots = data.dots.filter(d => d.cx < newContainerWidth && d.cy < newContainerHeight);
+      }
+
+      // first run or resize is positive
+      const newDotsNeeded = !loop || newContainerHeight > containerHeight || newContainerWidth > containerWidth;
+
       containerHeight = newContainerHeight;
       containerWidth = newContainerWidth;
 
-      columnsCount = Math.floor((containerWidth + horizontalOffset) / horizontalSpacing) + 1;
-      rowsCount = Math.floor((containerHeight + verticalOffset) / verticalSpacing) + 1;
-      dotsCount = Math.floor(columnsCount * rowsCount);
+      if (newDotsNeeded) {
+        const columnsCount = Math.floor((containerWidth + horizontalOffset) / horizontalSpacing) + 1;
+        const rowsCount = Math.floor((containerHeight + verticalOffset) / verticalSpacing) + 1;
+        const dotsCount = Math.floor(columnsCount * rowsCount);
 
-      // matrix algorithm might be useful
-      for (let i = 0; i < dotsCount; i++) {
-        const column =  Math.floor(i % columnsCount);
-        const row = Math.floor(i / columnsCount);
-        const cx = Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0);
-        const cy = Math.floor(row * verticalSpacing) + verticalOffset;
+        // matrix algorithm might be useful
+        for (let i = 0; i < dotsCount; i++) {
+          const column = Math.floor(i % columnsCount);
+          const row = Math.floor(i / columnsCount);
+          const cx = Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0);
+          const cy = Math.floor(row * verticalSpacing) + verticalOffset;
 
-        if (!data.dots.find(d => d.cx === cx && d.cy === cy)) {
-          data.dots.push({ cx, cy });
+          if (!data.dots.find(d => d.cx === cx && d.cy === cy)) {
+            const key = generateId();
+
+            data.dots.push({ cx, cy, key });
+          }
         }
       }
 
       // fill parent container
       svg.attr('height', '100%').attr('width', '100%');
 
-      svg.selectAll('circle.dot').data(data.dots)
+      svg.selectAll('circle.dot').data(data.dots, d => d.key)
           .enter().append('circle')
             .classed('dot', true)
               .attr('cx', d => d.cx)
@@ -140,6 +149,8 @@
           .transition()
             .duration(2000)
               .attr('fill-opacity', opacity.dots.inactive);
+
+      svg.selectAll('circle.dot').data(data.dots, d => d.key).exit().remove();
 
       // only on first run
       if (!loop) {
