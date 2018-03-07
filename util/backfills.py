@@ -1,10 +1,9 @@
 import os
+import argparse
 from app import app_config
 from config import constants
 
 from database import db, db_common, db_models
-
-#from app import app_config
 from flask import Flask
 from itertools import izip_longest
 from tasks import full_contact_request
@@ -22,21 +21,26 @@ flask_app.config.update(
 
 app_config.init_prod_app(flask_app)
 
-def backfill_presale():
+def backfill_presale(limit=100000):
     with flask_app.app_context():
-        # todo limit parsing
-        LIMIT = 100000
-        UNFILLED = """
+        unfilled = """
             SELECT DISTINCT presale.email
             FROM presale
                 LEFT JOIN fullcontact ON presale.email = fullcontact.email
             WHERE fullcontact.id IS NULL
-        """
-        result = db.engine.execute(UNFILLED)
+            LIMIT %d
+        """ % (limit)
+        result = db.engine.execute(unfilled)
 
-        # grouping
         for row in result:
-            print row
             full_contact_request(row[0])
 
-backfill_presale()
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Backfill missing data')
+
+    parser.add_argument('-l', '--limit', default=100000, type=int,
+                        help='number of rows it will attempt (default: find the max)')
+
+    args = parser.parse_args()
+
+    backfill_presale(args.limit)

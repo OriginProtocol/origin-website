@@ -2,10 +2,11 @@ import re
 
 from flask import jsonify, flash, redirect
 from database import db, db_common, db_models
-import pdb
 
 def fullcontact(email, response):
-    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+    if not re.match(
+        r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)",
+            email):
         return gettext('Please enter a valid email address')
 
     try:
@@ -17,17 +18,17 @@ def fullcontact(email, response):
             profiles = response['socialProfiles']
 
             for profile in profiles:
-                network = profile['typeId']
-                username = profile['username']
+                if 'typeId' in profile and 'username' in profile:
+                    network = profile['typeId']
+                    username = profile['username']
 
-                if network == 'angellist':
-                    me.angellist_handle = username
-                if network == 'github':
-                    me.githhub_handle = username
-                if network == 'twitter':
-                    me.twitter_handle = username
+                    if network == 'angellist':
+                        me.angellist_handle = username
+                    if network == 'github':
+                        me.githhub_handle = username
+                    if network == 'twitter':
+                        me.twitter_handle = username
 
-        #pdb.set_trace()
         db.session.add(me)
         db.session.commit()
     except Exception as e:
