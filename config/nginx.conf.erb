@@ -67,7 +67,7 @@ http {
 			proxy_pass http://app_server;
 			
 			# Only cache pages that have a language code already set
-			location ~ ^/[a-z][a-z](/.*)?$ {
+			location ~ ^/([a-z][a-z]|zh_Hans|zh_Hant)(/.*)?$ {
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 				proxy_set_header Host $http_host;
 				proxy_redirect off;
