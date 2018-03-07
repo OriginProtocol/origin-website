@@ -7,12 +7,15 @@
     const opacity = { dots: { active: 1, inactive: 0.2 }};
     const horizontalSpacing = 104;
     const verticalSpacing = 30;
-    const horizontalOffset = horizontalSpacing / 4;
-    const verticalOffset = verticalSpacing / 2;
+    const horizontalOffset = -horizontalSpacing * 0.25;
+    const verticalOffset = -verticalSpacing * 0.25;
     const radius = 7;
 
     let containerHeight;
     let containerWidth;
+    let columnsCount;
+    let rowsCount;
+    let dotsCount;
     let svg;
     let loop;
     let data = { connections: [], dots: [], nodes: [] };
@@ -85,6 +88,85 @@
       return debounced;
     };
 
+    // bootstrap prescribed design
+    const addPrescribedShapes = () => {
+      setTimeout(() => {
+        addShape(
+          getDotIndex(Math.floor(columnsCount * 0.4), 4),
+          [
+            { x: 0, y: 2 },
+            { x: 1, y: 1 },
+            { x: 2, y: 0 },
+          ]
+        );
+      }, 100);
+
+      setTimeout(() => {
+        addShape(
+          getDotIndex(Math.floor(columnsCount * 0.2), 7),
+          [
+            { x: 0, y: 2 },
+          ]
+        );
+      }, 200);
+
+      setTimeout(() => {
+        addShape(
+          getDotIndex(Math.floor(columnsCount * 0.63), 9),
+          [
+            { x: 0, y: 2 },
+            { x: 1, y: -1 },
+          ]
+        );
+      }, 300);
+
+      setTimeout(() => {
+        addShape(
+          getDotIndex(Math.floor(columnsCount * 0.95), 7),
+          [
+            { x: -1, y: 1 },
+            { x: 1, y: 1 },
+          ]
+        );
+      }, 400);
+
+      setTimeout(() => {
+        addShape(
+          getDotIndex(Math.floor(columnsCount * 0.35), 15),
+          [
+            { x: 0, y: 2 },
+            { x: 1, y: 1 },
+          ]
+        );
+      }, 500);
+
+      setTimeout(() => {
+        addShape(
+          getDotIndex(Math.floor(columnsCount * 0.2), 21),
+          [
+            { x: -2, y: 4 },
+            { x: 1, y: -1 },
+            { x: -1, y: 1 },
+            { x: -1, y: 3 },
+          ]
+        );
+      }, 600);
+    };
+
+    const addShape = (start, connections) => {
+      conditionallyAddNode(start);
+      const dot = data.dots[start];
+
+      connections.forEach((c, i) => {
+        setTimeout(() => {
+          const x = dot.cx + (c.x * horizontalSpacing / 2);
+          const y = dot.cy + (c.y * verticalSpacing);
+
+          conditionallyAddNode(data.dots.findIndex(d => d.cx === x && d.cy === y));
+        }, (i + 1) * 100);
+      });
+    };
+
     // build dot grid, initiate node generation
     const build = () => {
       // stop existing animation
@@ -116,9 +198,9 @@
       containerWidth = newContainerWidth;
 
       if (newDotsNeeded) {
-        const columnsCount = Math.floor((containerWidth + horizontalOffset) / horizontalSpacing) + 1;
-        const rowsCount = Math.floor((containerHeight + verticalOffset) / verticalSpacing) + 1;
-        const dotsCount = Math.floor(columnsCount * rowsCount);
+        columnsCount = Math.floor((containerWidth + horizontalOffset) / horizontalSpacing) + 1;
+        rowsCount = Math.floor((containerHeight + verticalOffset) / verticalSpacing) + 1;
+        dotsCount = Math.floor(columnsCount * rowsCount);
 
         // matrix algorithm might be useful
         for (let i = 0; i < dotsCount; i++) {
@@ -147,7 +229,7 @@
               .attr('fill-opacity', 0)
               .attr('r', 1)
           .transition()
-            .duration(2000)
+            .duration(1000)
               .attr('fill-opacity', opacity.dots.inactive);
 
       svg.selectAll('circle.dot').data(data.dots, d => d.key).exit().remove();
@@ -155,36 +237,8 @@
       // only on first run
       if (!loop) {
         setTimeout(() => {
-          // bootstrap prescribed design
-          let distances;
-          let index;
-          let x;
-          let y;
-
-          // ONE: left third of the window in the third row
-          x = containerWidth / 3;
-          y = verticalOffset + verticalSpacing * 3;
-          distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
-          index = distances.indexOf(Math.min.apply(null, distances));
-
-          conditionallyAddNode(index);
-
-          // TWO: just below ONE
-          x = containerWidth / 3;
-          y = verticalOffset + verticalSpacing * 5;
-          distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
-          index = distances.indexOf(Math.min.apply(null, distances));
-
-          conditionallyAddNode(index);
-
-          // THREE: right of and below ONE
-          x = containerWidth / 3 + horizontalSpacing / 2;
-          y = verticalOffset + verticalSpacing * 4;
-          distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
-          index = distances.indexOf(Math.min.apply(null, distances));
-
-          conditionallyAddNode(index);
-        }, 2000);
+          addPrescribedShapes();
+        }, 1000);
       }
 
       setTimeout(() => {
@@ -478,6 +532,13 @@
       }
 
       return text;
+    };
+
+    const getDotIndex = (column, row) => {
+      const x = (column - 1) * horizontalSpacing + horizontalOffset + (row % 2 ? 0 : horizontalSpacing / 2);
+      const y = (row - 1) * verticalSpacing + verticalOffset;
+
+      return data.dots.findIndex(d => d.cx === x && d.cy === y);
     };
 
     // add or remove lines connecting to the relevant point
