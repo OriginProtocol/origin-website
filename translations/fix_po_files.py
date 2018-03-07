@@ -17,7 +17,7 @@ for root, dirnames, filenames in os.walk('.'):
         except:
             continue
 
-        print language_code
+        print(language_code)
 
         f = open(pathname,"r+")
         d = f.readlines()

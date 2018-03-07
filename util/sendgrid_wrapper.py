@@ -4,10 +4,10 @@ import os
 
 # Use Redis to send mail only if env var present.
 if os.environ.get('REDIS_URL') is not None:
-    from tasks import send_email
+    from .tasks import send_email
 else:
     def send_email(body):
-        print "Email disabled."
+        print("Email disabled.")
         return
 
 class Email(object):

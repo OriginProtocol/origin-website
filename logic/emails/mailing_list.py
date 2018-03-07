@@ -99,11 +99,11 @@ def unsubscribe(email):
 def send_one_off(email_type):
     with db_utils.request_context():
         for e in db_models.Presale.query.all():
-            print e.email
+            print(e.email)
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
         for e in db_models.EmailList.query.all():
-            print e.email
+            print(e.email)
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
 

@@ -1,6 +1,12 @@
 from flask import Flask
 from flask_babel import Babel
-import urllib
+
+try:
+    import urllib.parse
+    quote = urllib.parse.quote
+except:
+    import urllib
+    quote = urllib.quote_plus
 
 from config import constants
 
@@ -14,4 +20,4 @@ app = MyFlask(__name__,
     template_folder=constants.TEMPLATE_ROOT,
     static_folder=constants.STATIC_ROOT)
 
-app.jinja_env.filters['quote_plus'] = lambda u: urllib.quote_plus(u)
+app.jinja_env.filters['quote_plus'] = lambda u: quote(u)
