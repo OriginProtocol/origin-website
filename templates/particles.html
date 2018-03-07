@@ -104,11 +104,13 @@
       svg.selectAll('circle.node').data(data.nodes).exit().remove();
       svg.selectAll('line.connection').data(data.connections).exit().remove();
 
+      generateGradients();
+
       container = document.getElementById('particles').parentElement;
       containerHeight = container.offsetHeight;
-      ContainerWidth = container.offsetWidth;
-      columnsCount = Math.floor((container.offsetWidth + horizontalOffset) / horizontalSpacing) + 1;
-      rowsCount = Math.floor((container.offsetHeight + verticalOffset) / verticalSpacing) + 1;
+      containerWidth = container.offsetWidth;
+      columnsCount = Math.floor((containerWidth + horizontalOffset) / horizontalSpacing) + 1;
+      rowsCount = Math.floor((containerHeight + verticalOffset) / verticalSpacing) + 1;
       dotsCount = Math.floor(columnsCount * rowsCount);
 
       // matrix algorithm might be useful
@@ -138,14 +140,45 @@
               .attr('fill-opacity', opacity.dots.inactive);
 
       setTimeout(() => {
+        // bootstrap prescribed design
+        let distances;
+        let index;
+        let x;
+        let y;
+
+        // ONE: left third of the window in the third row
+        x = containerWidth / 3;
+        y = verticalOffset + verticalSpacing * 3;
+        distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
+        index = distances.indexOf(Math.min.apply(null, distances));
+
+        conditionallyAddNode(index);
+
+        // TWO: just below ONE
+        x = containerWidth / 3;
+        y = verticalOffset + verticalSpacing * 5;
+        distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
+        index = distances.indexOf(Math.min.apply(null, distances));
+
+        conditionallyAddNode(index);
+
+        // THREE: right of and below ONE
+        x = containerWidth / 3 + horizontalSpacing / 2;
+        y = verticalOffset + verticalSpacing * 4;
+        distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
+        index = distances.indexOf(Math.min.apply(null, distances));
+
+        conditionallyAddNode(index);
+
+        // initiate randomness
         loop = rafInterval(() => {
           conditionallyAddNode();
         }, 2000);
       }, 2000);
     };
 
-    const conditionallyAddNode = () => {
-      const index = Math.floor(Math.random() * data.dots.length);
+    const conditionallyAddNode = atPosition => {
+      const index = atPosition || Math.floor(Math.random() * data.dots.length);
       const dot = data.dots[index];
       const unique = !data.nodes.find(n => n.cx === dot.cx && n.cy === dot.cy);
       const stroke = colors.nodes[Math.floor(Math.random() * colors.nodes.length)];
@@ -460,7 +493,6 @@
     // there may be a better way to defer execution until dependencies are met
     // but only run if included in a certain template
     window.addEventListener('load', build);
-    window.addEventListener('load', generateGradients);
     window.addEventListener('resize', debouncedBuild);
   </script>
 {% endblock %}
