@@ -23,6 +23,5 @@ fi
 cd $ENV_DIR
 
 export FLASK_APP=main.py
-export PYTHONPATH=/Users/alexhu/Projects/company-website/company-website
 
 echo "Using virtual environment $VIRTUAL_ENV with project path $PROJECTPATH."

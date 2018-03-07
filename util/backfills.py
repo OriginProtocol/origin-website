@@ -3,11 +3,9 @@ import argparse
 from app import app_config
 from config import constants
 
-from database import db, db_common, db_models
+from database import db
 from flask import Flask
-from itertools import izip_longest
 from tasks import full_contact_request
-import pdb
 
 from logic.emails import email_types
 

@@ -1,7 +1,6 @@
 import re
 
-from flask import jsonify, flash, redirect
-from database import db, db_common, db_models
+from database import db, db_models
 
 def fullcontact(email, response):
     if not re.match(

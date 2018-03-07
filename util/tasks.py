@@ -1,5 +1,4 @@
 import os
-import sys
 import sendgrid
 from app import app_config
 from celery import Celery
