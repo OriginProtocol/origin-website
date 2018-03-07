@@ -2,17 +2,7 @@
   {% if messages %}
     <script type='text/javascript'>
     {% for message in messages %}
-      {% if message == "telegram" %}
-        setTimeout(function() {
-          alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' target='_blank'><button class='telegram-btn btn btn-outline-primary btn-min-size'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</button></a></div>", "default", 0)
-        }, 2000);
-      {% elif message == "discord" %}
-        setTimeout(function() {
-          alertify.log("{{ gettext("Want to contribute?") }}<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}' target='_blank'><button class='discord-btn btn btn-outline-primary btn-min-size'><i class='fab fa-discord'></i>{{ gettext("Join Our Discord") }}</button></a></div>", "default", 0)
-        }, 2000);
-      {% else %}
         alertify.log("{{ message }}", "default")
-      {% endif %}
     {% endfor %}
     {% if CURRENT_LANGUAGE != "en" %}
       alertify.log("Help improve this translation.<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}' target='_blank'><button class='discord-btn btn btn-outline-primary btn-min-size'><i class='fab fa-discord'></i>Join #translation on Discord</button></a></div>", "default", 0)
