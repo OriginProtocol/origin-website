@@ -51,7 +51,7 @@ def send_email(body):
     sg_api.client.mail.send.post(request_body=body)
 
 
-@celery.task(rate_limit='100/m')
+@celery.task(rate_limit='300/m', max_retries=3)
 def full_contact_request(email):
     fc = FullContact(constants.FULLCONTACT_KEY)
     r = fc.person(email=email)
