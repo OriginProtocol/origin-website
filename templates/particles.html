@@ -11,8 +11,6 @@
     const verticalOffset = verticalSpacing / 2;
     const radius = 7;
 
-    let data;
-    let container;
     let containerHeight;
     let containerWidth;
     let columnsCount;
@@ -20,6 +18,8 @@
     let dotsCount;
     let svg;
     let loop;
+    let data = { connections: [], dots: [], nodes: [] };
+    let container = document.getElementById('particles').parentElement;
 
     // https://codereview.stackexchange.com/questions/47889/alternative-to-setinterval-and-settimeout
     window.rafInterval = function(callback, delay) {
@@ -96,32 +96,34 @@
       }
 
       svg = d3.select('#particles');
-      data = { connections: [], dots: [], nodes: [] };
-      
-      // remove existing drawing if window resized
-      svg.selectAll('defs').remove();
-      svg.selectAll('circle.dot').data(data.dots).exit().remove();
-      svg.selectAll('circle.node').data(data.nodes).exit().remove();
-      svg.selectAll('line.connection').data(data.connections).exit().remove();
 
       generateGradients();
 
-      container = document.getElementById('particles').parentElement;
-      containerHeight = container.offsetHeight;
-      containerWidth = container.offsetWidth;
+      let newContainerHeight = container.offsetHeight;
+      let newContainerWidth = container.offsetWidth;
+
+      // only build if dimensions have truly changed
+      if (newContainerHeight === containerHeight && newContainerWidth === containerWidth) {
+        return;
+      }
+
+      containerHeight = newContainerHeight;
+      containerWidth = newContainerWidth;
+
       columnsCount = Math.floor((containerWidth + horizontalOffset) / horizontalSpacing) + 1;
       rowsCount = Math.floor((containerHeight + verticalOffset) / verticalSpacing) + 1;
       dotsCount = Math.floor(columnsCount * rowsCount);
 
       // matrix algorithm might be useful
-      for (var i = 0; i < dotsCount; i++) {
+      for (let i = 0; i < dotsCount; i++) {
         const column =  Math.floor(i % columnsCount);
         const row = Math.floor(i / columnsCount);
+        const cx = Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0);
+        const cy = Math.floor(row * verticalSpacing) + verticalOffset;
 
-        data.dots.push({
-          cx: Math.floor(column * horizontalSpacing) + horizontalOffset + (row % 2 ? horizontalSpacing / 2 : 0),
-          cy: Math.floor(row * verticalSpacing) + verticalOffset,
-        });
+        if (!data.dots.find(d => d.cx === cx && d.cy === cy)) {
+          data.dots.push({ cx, cy });
+        }
       }
 
       // fill parent container
@@ -139,37 +141,42 @@
             .duration(2000)
               .attr('fill-opacity', opacity.dots.inactive);
 
+      // only on first run
+      if (!loop) {
+        setTimeout(() => {
+          // bootstrap prescribed design
+          let distances;
+          let index;
+          let x;
+          let y;
+
+          // ONE: left third of the window in the third row
+          x = containerWidth / 3;
+          y = verticalOffset + verticalSpacing * 3;
+          distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
+          index = distances.indexOf(Math.min.apply(null, distances));
+
+          conditionallyAddNode(index);
+
+          // TWO: just below ONE
+          x = containerWidth / 3;
+          y = verticalOffset + verticalSpacing * 5;
+          distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
+          index = distances.indexOf(Math.min.apply(null, distances));
+
+          conditionallyAddNode(index);
+
+          // THREE: right of and below ONE
+          x = containerWidth / 3 + horizontalSpacing / 2;
+          y = verticalOffset + verticalSpacing * 4;
+          distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
+          index = distances.indexOf(Math.min.apply(null, distances));
+
+          conditionallyAddNode(index);
+        }, 2000);
+      }
+
       setTimeout(() => {
-        // bootstrap prescribed design
-        let distances;
-        let index;
-        let x;
-        let y;
-
-        // ONE: left third of the window in the third row
-        x = containerWidth / 3;
-        y = verticalOffset + verticalSpacing * 3;
-        distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
-        index = distances.indexOf(Math.min.apply(null, distances));
-
-        conditionallyAddNode(index);
-
-        // TWO: just below ONE
-        x = containerWidth / 3;
-        y = verticalOffset + verticalSpacing * 5;
-        distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
-        index = distances.indexOf(Math.min.apply(null, distances));
-
-        conditionallyAddNode(index);
-
-        // THREE: right of and below ONE
-        x = containerWidth / 3 + horizontalSpacing / 2;
-        y = verticalOffset + verticalSpacing * 4;
-        distances = data.dots.map(d => Math.hypot(d.cx - x, d.cy - y));
-        index = distances.indexOf(Math.min.apply(null, distances));
-
-        conditionallyAddNode(index);
-
         // initiate randomness
         loop = rafInterval(() => {
           conditionallyAddNode();
