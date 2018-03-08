@@ -1,5 +1,9 @@
 from flask_babel import lazy_gettext
 
+# NOTE: Be sure to wrap any new partner descriptions with lazy_gettext()
+# so that the text can be translated. See the existing partner descriptions
+# as examples.
+
 PARTNERS = [
     {
     "name":"canya",
