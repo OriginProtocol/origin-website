@@ -76,3 +76,17 @@ class Interest(db.Model):
 
     def __str__(self):
         return '%s' % (self.email)
+
+class InvestorRating(db.Model):
+    __tablename__ = 'investorrating'
+
+    id = db.Column(db.Integer, primary_key=True)
+    address = db.Column(db.String(255), index=True, unique=True)
+    currency = db.Column(db.String(3), index=True)
+    dollar_days_held = db.Column(db.Float())
+    maximum_dollar_days = db.Column(db.Float())
+    holding_ratio = db.Column(db.Float())
+    eth_balance = db.Column(db.Float())
+    token_usd_balance = db.Column(db.Float())
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+    updated_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
