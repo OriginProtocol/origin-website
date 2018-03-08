@@ -26,6 +26,11 @@ PARTNERS = [
      "desc":lazy_gettext("Storiqa is building an ecommerce portal for small businesses to access a global market of cryptocurrency buyers on Origin Protocol.")
     },
     {
+    "name":"servishero",
+    "url":"https://servishero.com/",
+     "desc":lazy_gettext("ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol.")
+    },
+    {
     "name":"propy",
     "url":"https://propy.com/",
      "desc":lazy_gettext("Propy is building their Propy Property Management Platform to connect international real estate investors with local property managers using Origin Protocol.")
