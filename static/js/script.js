@@ -41,6 +41,7 @@ $(function() {
   });
 });
 
+// mobile navbar
 $(function(){
   // toggle button icons
   $('.navbar-toggler').on('click', function() {
@@ -79,5 +80,5 @@ $(function(){
 });
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 })

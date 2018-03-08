@@ -2,11 +2,11 @@
   {% if messages %}
     <script type='text/javascript'>
     {% for message in messages %}
-        alertify.log("{{ message }}", "default")
+        alertify.log("{{ message }}", "default");
     {% endfor %}
     {% if CURRENT_LANGUAGE != "en" %}
-      alertify.log("Help improve this translation.<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}' target='_blank'><button class='discord-btn btn btn-outline-primary btn-min-size'><i class='fab fa-discord'></i>Join #translation on Discord</button></a></div>", "default", 0)
+      alertify.log("Help improve this translation.<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}' target='_blank'><button class='discord-btn btn btn-primary btn-min-size'><i class='fab fa-discord'></i>Join #translation on Discord</button></a></div>", "default", 0);
     {% endif %}
-</script>
+    </script>
   {% endif %}
 {% endwith %}

@@ -45,16 +45,41 @@
           <div class="row">
             <div class="col-12">
               <div class="logos row justify-content-center">
-                {% for partner in partners_dict %}
-                    <div class="col-12 col-sm-6 {% if loop.index is lessthan 6 %}col-md-2{% else %}col-md-1{% endif %}">
-                      <div class="img-graphic">
-                        <a href="{{ partner.url }}" target="_blank">
-                          <img src="/static/img/partners/{{ partner.name }}.png""
-                            class="{{'%s-logo wow fadeInUp' %partner.name }}" title="{{ partner.desc }}" data-toggle="tooltip">
-                        </a>
-                      </div>
+                {% for partner in partners_dict[0:12] %}
+                  <div class="col-12 col-sm-6 col-md-2">
+                    <div class="img-graphic">
+                      <a href="{{ partner.url }}" target="_blank">
+                        <img src="/static/img/partners/{{ partner.name }}.png""
+                          class="{{'%s-logo wow fadeInUp' %partner.name }}" title="{{ partner.desc }}" data-toggle="tooltip">
+                      </a>
                     </div>
+                  </div>
                 {% endfor %}
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="collapse additional logos row justify-content-center" id="additionalLogos">
+                {% for partner in partners_dict[12:] %}
+                  <div class="col-12 col-sm-6 col-md-2">
+                    <div class="img-graphic">
+                      <a href="{{ partner.url }}" target="_blank">
+                        <img src="/static/img/partners/{{ partner.name }}.png""
+                          class="{{'%s-logo' %partner.name }}" title="{{ partner.desc }}" data-toggle="tooltip">
+                      </a>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-outline-primary toggle"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#additionalLogos"
+                  aria-expanded="false"
+                  aria-controls="additionalLogos">
+                  View <span class="amount"></span>
+                </button>
               </div>
             </div>
           </div>
@@ -78,10 +103,10 @@
     <div class="container-fluid">
       <div class="row">
         <div class="container foreground-content">
+          <a name="join_our_mission"></a>
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="build-on-origin-form">
-                <a name="join_our_mission"></a>
                 <h2>
                   {{ gettext("Join our mission!") }}
                 </h2>
@@ -142,4 +167,7 @@
 {% endblock %}
 
 {% block extra_scripts %}
+    <script type='text/javascript'>
+      alertify.log("<a href='#join_our_mission'><button class='btn btn-primary btn-min-size'>Join Our Mission</button></a>", "default", 0);
+    </script>
 {% endblock %}
