@@ -12,6 +12,11 @@ Setup a virtualenv
 virtualenv company-website && cd company-website
 ```
 
+Note: As of Feb 2018, Homebrew on MacOS defaults to Python 3. Therefore you'll need to specify Python 2.7
+```
+virtualenv --python=/usr/local/bin/python2 company-website && cd company-website
+```
+
 Clone
 ```
 git clone https://github.com/OriginProtocol/company-website.git && cd company-website
