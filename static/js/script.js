@@ -79,6 +79,19 @@ $(function(){
   });
 });
 
+// partners logos
+$(function() {
+  $('.collapse.logos').on('hidden.bs.collapse', function() {
+    $('.more').addClass('d-block').removeClass('d-none');
+    $('.less').addClass('d-none').removeClass('d-block');
+  });
+
+  $('.collapse.logos').on('shown.bs.collapse', function() {
+    $('.more').addClass('d-none').removeClass('d-block');
+    $('.less').addClass('d-block').removeClass('d-none');
+  });
+});
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 })
