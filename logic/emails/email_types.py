@@ -19,6 +19,9 @@ EMAILS = {
     'build_on_origin': {
         'subject': 'Thanks for your interest in Origin!'
     },
+    'march_2018_newsletter': {
+        'subject': 'News from Origin Protocol (March 2018)'
+    },
 }
 
 def send_email_type(email_type, from_email, to_email):
