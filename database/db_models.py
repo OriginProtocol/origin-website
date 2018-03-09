@@ -77,8 +77,8 @@ class Interest(db.Model):
     def __str__(self):
         return '%s' % (self.email)
 
-class InvestorRating(db.Model):
-    __tablename__ = 'investorrating'
+class AddressAnalytics(db.Model):
+    __tablename__ = 'address_analytics'
 
     id = db.Column(db.Integer, primary_key=True)
     address = db.Column(db.String(255), index=True, unique=True)
