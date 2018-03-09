@@ -24,7 +24,7 @@ def fullcontact(email, response):
                     if network == 'angellist':
                         me.angellist_handle = username
                     if network == 'github':
-                        me.github_handle = username
+                        me.githhub_handle = username
                     if network == 'twitter':
                         me.twitter_handle = username
 
