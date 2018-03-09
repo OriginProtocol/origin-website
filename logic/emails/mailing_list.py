@@ -98,11 +98,16 @@ def unsubscribe(email):
 
 def send_one_off(email_type):
     with db_utils.request_context():
+        # the message log takes care of deduping emails that may appear in multiple tables
         for e in db_models.Presale.query.all():
             print e.email
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
         for e in db_models.EmailList.query.all():
+            print e.email
+            email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
+
+        for e in db_models.Interest.query.all():
             print e.email
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
