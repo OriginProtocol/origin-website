@@ -180,10 +180,10 @@ def assets_all_javascript():
         "static/js/vendor-jquery-3.2.1.min.js",
         "static/js/vendor-popper.min.js",
         "static/js/vendor-bootstrap.min.js",
-        "static/js/alertify.js",
-        "static/js/d3.js",
-        "static/js/script.js",
-        "static/js/wow.min.js"
+        "static/js/vendor-alertify.js",
+        "static/js/vendor-d3.min.js",
+        "static/js/vendor-wow.min.js",
+        "static/js/script.js"
     ]), mimetype="application/javascript")
 
 @app.context_processor
