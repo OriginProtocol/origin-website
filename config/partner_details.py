@@ -36,6 +36,11 @@ PARTNERS = [
      "desc":lazy_gettext("Propy is building their Propy Property Management Platform to connect international real estate investors with local property managers using Origin Protocol.")
     },
     {
+    "name":"blocklancer",
+    "url":"https://blocklancer.net/",
+     "desc":lazy_gettext("Blocklancer is buidiling a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
+    },
+    {
     "name":"antiq-mall",
     "url":"https://antiqmall-ico.io/",
      "desc":lazy_gettext("AntiqMall is building an antiques and art objects marketplace on the blockchain using Origin Protocol.")
