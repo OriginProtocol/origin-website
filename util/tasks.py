@@ -60,7 +60,7 @@ def full_contact_request(email):
     if code == 200:
         logic.fullcontact.fullcontact.fullcontact(email, r.json())
     elif code == 202:
-        self.retry(countdown=randint(MIN_RETRY_TIME, MAX_RETRY_TIME))
+        full_contact_request.retry(countdown=randint(MIN_RETRY_TIME, MAX_RETRY_TIME))
     elif code == 404:
         logic.fullcontact.fullcontact.fullcontact(email, r.json())
     else:
