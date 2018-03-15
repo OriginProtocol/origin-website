@@ -17,7 +17,7 @@ for root, dirnames, filenames in os.walk('.'):
         except:
             continue
 
-        print language_code
+        print "%s:\t%s" % (language_code, pathname)
 
         f = open(pathname,"r+")
         d = f.readlines()
@@ -27,12 +27,18 @@ for root, dirnames, filenames in os.walk('.'):
             # Fix spaces in closing tags (Google Translator Toolkit does this)
             (line, subs) = re.subn(r'</ +', '</', line, flags=re.IGNORECASE)
             if subs > 0:
-                print ("-FIXED %s: `</ ` space" % language_code)
+                print ("  -FIXED %s: `</ ` space" % language_code)
 
+            # Fix lone % sybols
+            (line, subs) = re.subn(r'(?<!%)%(?!%)', '%%', line, flags=re.IGNORECASE)
+            if subs > 0:
+                print ("  -FIXED %s: `%%` --> `%%%%`" % language_code)
+
+            # Fix invalid empty language specification
             if line == '"Language: \\n"\n':
                 # Fix dumb issue  "Language:" header is present, but
                 # Doesn't specify the language
-                print ("-FIXED %s: `Langage: header`" % language_code)
+                print ("  -FIXED %s: `Langage: header`" % language_code)
                 line = '"Language: %s\\n"\n' % language_code
 
             f.write(line)
