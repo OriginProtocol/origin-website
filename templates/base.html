@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ CURRENT_LANGUAGE }}">
 <head>
-  {% for language in AVAILABLE_LANGUAGES.items() %}
-    <link rel="alternate" hreflang="{{ language[0] }}" href='{{ universal.BASE_URL }}/{{"%s"% language[0] }}' />
-  {% endfor %}
   {% block head %}
     <title>{% block title %}{% endblock %}</title>
     <meta charset="utf-8">
@@ -16,9 +13,13 @@
     <meta property="og:title" content="{{ gettext("Origin Protocol") }}"/>
     <meta property="og:description" content="{{ gettext("Origin Protocol enables the sharing economy on the blockchain") }}"/>
 
+    {% for language in AVAILABLE_LANGUAGES.items() %}
+      <link rel="alternate" hreflang="{{ language[0] }}" href='{{ universal.BASE_URL }}/{{"%s"% language[0] }}' />
+    {% endfor %}
+
     {% block styles %}
       {# The biggest delay to rendering the site is the google fonts, so we make sure it is the first to start loading #}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500|Poppins:200,300,400,500"/>  
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500%7CPoppins:200,300,400,500"/>  
       <link rel="stylesheet" href="/static/css/all_styles.css"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" media="all"/>
 
@@ -36,8 +37,6 @@
       {% block extra_styles %}
       {% endblock %}
     {% endblock %}
-
-
   {% endblock %}
 </head>
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
@@ -56,7 +55,7 @@
       {% endblock %}
     {% endblock %}
   {% endblock %}
-  <script type="text/javascript">
+  <script>
     /* Google Analytics */
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -86,15 +85,15 @@
     /* ]]> */
   </script>
 
-  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  <script src="//www.googleadservices.com/pagead/conversion.js">
   </script>
   <noscript>
   <div style="display:inline;">
-  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/825554032/?guid=ON&amp;script=0"/>
+  <img height="1" width="1" style="border-style:none;" alt="Google conversion" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/825554032/?guid=ON&amp;script=0"/>
   </div>
   </noscript>
 
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1637426076553052&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" alt="Facebook page view" src="https://www.facebook.com/tr?id=1637426076553052&ev=PageView&noscript=1"/></noscript>
   {% include 'flashes.html' %}
 </body>
 </html>
