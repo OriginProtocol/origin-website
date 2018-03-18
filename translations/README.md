@@ -50,7 +50,7 @@ The `.po` files are now ready for translation.
 
 ## Updating translations on website
 
-1. Download the new translation from Google Translator Toolkit. The file will be called `archive.zip` by default.
+1. Download the new translations from Google Translator Toolkit. The file will be called `archive.zip` by default. (Note, you must download 2 or more languages to get a `.zip` file.)
 
 2. In the `translations` directory, run:
 
