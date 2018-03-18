@@ -32,7 +32,7 @@ Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
 - `messages.po` files contain specific language translations.
 - `messages.mo` files are binary, compiled versions of the `.po` files and should never be edited directly.
 
-## Updating for new/edited English strings
+## Extract new/edited English strings for translation
 
 1. Search source files and extract strings into a file `messages.pot`
 
@@ -48,9 +48,9 @@ pybabel update -i messages.pot -d translations --no-wrap
 
 The `.po` files are now ready for translation.
 
-## Adding/updating translations
+## Updating translations on website
 
-1. Download the new translation from Google Translator Toolkit. The file will be called `archive.zip` by default.
+1. Download the new translations from Google Translator Toolkit. The file will be called `archive.zip` by default. (Note, you must download 2 or more languages to get a `.zip` file.)
 
 2. In the `translations` directory, run:
 
@@ -74,6 +74,11 @@ The `-f` flag is needed to force the compile, since downloads from Google transl
 
 Note: `.mo` files must committed in the repo in order for them to get on heroku.
 
+5. From repo root directory, run the website code to see new translations:
+
+```
+python main.py
+```
 
 ## Adding a new language
 
