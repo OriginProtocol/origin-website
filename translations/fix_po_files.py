@@ -22,31 +22,32 @@ for root, dirnames, filenames in os.walk('.'):
         f = open(pathname,"r+")
         d = f.readlines()
         f.seek(0)
-        for line in d:
+        for line_number, line in enumerate(d, 1):
 
-            # Checks only for translation content
+            # Fix spaces in closing tags (Google Translator Toolkit does this)
+            # It changes `</strong>` into `</ Strong>`
             if line.startswith("msgid") or line.startswith("msgstr"):
-
-                # Fix spaces in closing tags (Google Translator Toolkit does this)
                 (line, subs) = re.subn(r'</ +', '</', line, flags=re.IGNORECASE)
                 if subs > 0:
-                    print ("  -FIXED %s: `</ ` space" % language_code)
+                    print ("  -FIXED %s: `</ ` space line %d" % (language_code, line_number))
 
-                # Fix lone % symbols
+            # Fix lone `%` symbols -- they must be escaped as `%%`
+            if line.startswith("msgid") or line.startswith("msgstr"):
                 (line, subs) = re.subn(r'(?<!%)%(?!%)', '%%', line, flags=re.IGNORECASE)
                 if subs > 0:
-                    print ("  -FIXED %s: `%%` --> `%%%%`" % language_code)
+                    print ("  -FIXED %s: `%%` --> `%%%%` line %d" % (language_code, line_number))
 
-                # Fix unescaped @ symbols
+            # Fix unescaped `@` symbols. They must be escaped as `\@`, but only in msgid
+            if line.startswith("msgid"):
                 (line, subs) = re.subn(r'(?<!\\)@', '\\@', line, flags=re.IGNORECASE)
                 if subs > 0:
-                    print ("  -FIXED %s: `@` --> `\\@`" % language_code)
+                    print ("  -FIXED %s: `@` --> `\\@` line %d" % (language_code, line_number))
 
             # Fix invalid empty language specification
             if line == '"Language: \\n"\n':
                 # Fix dumb issue  "Language:" header is present, but
                 # Doesn't specify the language
-                print ("  -FIXED %s: `Langage: header`" % language_code)
+                print ("  -FIXED %s: `Langage: header` line line %d" % (language_code, line_number))
                 line = '"Language: %s\\n"\n' % language_code
 
             f.write(line)
