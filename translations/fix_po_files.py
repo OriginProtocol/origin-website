@@ -37,12 +37,6 @@ for root, dirnames, filenames in os.walk('.'):
                 if subs > 0:
                     print ("  -FIXED %s: `%%` --> `%%%%` line %d" % (language_code, line_number))
 
-            # Fix unescaped `@` symbols. They must be escaped as `\@`, but only in msgid
-            if line.startswith("msgid"):
-                (line, subs) = re.subn(r'(?<!\\)@', '\\@', line, flags=re.IGNORECASE)
-                if subs > 0:
-                    print ("  -FIXED %s: `@` --> `\\@` line %d" % (language_code, line_number))
-
             # Fix invalid empty language specification
             if line == '"Language: \\n"\n':
                 # Fix dumb issue  "Language:" header is present, but
