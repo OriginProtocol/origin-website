@@ -35,11 +35,13 @@ Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
 ## Updating for new/edited English strings
 
 1. Search source files and extract strings into a file `messages.pot`
+
 ```
 pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
 ```
 
 2. Update `.po` translations with new strings.
+
 ```
 pybabel update -i messages.pot -d translations --no-wrap
 ```
@@ -48,19 +50,32 @@ The `.po` files are now ready for translation.
 
 ## Adding/updating translations
 
-After downloading or manual edits to `.po` files, you must compile translations:
-```
-pybabel compile -f -d  translations
-```
-(The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy')
+1. Download the new translation from Google Translator Toolkit. The file will be called `archive.zip` by default.
 
-If you get an error `ValueError: expected only letters, got u''`, run the python script `fix_po_files.py`. This error is caused by a `.po` file containg an empty language header: `"Language: \n"`, where it should be e.g. `"Language: de\n"`
+2. In the `translations` directory, run:
 
-This step will generate compiled `.mo` files from each `.po`.  These binary files used to actaully render translated versions of the site.
+```
+python extract_po_files_from_gtt_zip.py ~/Downloads/archive.zip
+```
+This will grab the new `.po` files for each langauge, and copy them to the correct place. Note this will overwrite the existing `.po` files.
+
+3. Fix common errors:
+
+```
+python fix_po_files.py
+```
+
+4. Compile translations into `.mo` files:
+
+```
+pybabel compile -f -d  .
+```
+The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy'
 
 Note: `.mo` files must committed in the repo in order for them to get on heroku.
 
-## Add New language
+
+## Adding a new language
 
 ```
 pybabel init -i messages.pot -d translations -l <Language Code>
