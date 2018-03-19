@@ -19,6 +19,7 @@ class AppConfig(object):
 def init_app(app):
     db.init_app(app)
 
+
 def init_prod_app(app):
     app.config.from_object(__name__ + '.AppConfig')
     init_app(app)

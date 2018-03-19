@@ -19,7 +19,10 @@
     {% block styles %}
       {# The biggest delay to rendering the site is the google fonts, so we make sure it is the first to start loading #}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500|Poppins:200,300,400,500"/>  
-      <link rel="stylesheet" href="/static/css/all_styles.css"/>
+      {% assets "css_all" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+      {% endassets %}
+      
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" media="all"/>
 
       <!-- Favicons generated with https://realfavicongenerator.net/ -->
@@ -47,7 +50,9 @@
     {% endblock %}
 
     {% block scripts %}
-      <script src="/static/js/all_javascript.js"></script>
+      {% assets "js_all" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+      {% endassets %}
       <script>
       new WOW().init();
       </script>

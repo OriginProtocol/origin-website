@@ -165,25 +165,6 @@ def partners_interest():
     flash(feedback)
     return jsonify("OK")
 
-@app.route('/static/css/all_styles.css')
-def assets_all_styles():
-    return Response(concat_asset_files([
-        "static/css/vendor-bootstrap-4.0.0-beta2.css",
-        "static/css/style.css",
-        "static/css/alertify.css",
-        "static/css/animate.css"
-    ]), mimetype="text/css")
-
-@app.route('/static/js/all_javascript.js')
-def assets_all_javascript():
-    return Response(concat_asset_files([
-        "static/js/vendor-jquery-3.2.1.min.js",
-        "static/js/vendor-popper.min.js",
-        "static/js/vendor-bootstrap.min.js",
-        "static/js/alertify.js",
-        "static/js/script.js",
-        "static/js/wow.min.js"
-    ]), mimetype="application/javascript")
 
 @app.context_processor
 def inject_partners():
