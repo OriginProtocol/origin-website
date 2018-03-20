@@ -47,6 +47,16 @@ label {
   cursor: pointer;
 }
 
+.tooltip {
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.tooltip .tooltip-inner {
+  padding: 1.2rem;
+}
+
 .form-control {
   background-color: #ebf0f3;
   color: #98a7b4;
@@ -1255,15 +1265,36 @@ footer .company-mission {
   text-align: center;
 }
 
+.building-partners-section .logos.collapsing {
+  margin-bottom: calc(50px + 1.5rem);
+}
+
+.building-partners-section .logos.collapsing,
+.building-partners-section .logos.collapse.show {
+  display: flex;
+  padding-top: 0px;
+}
+
 .building-partners-section .logos .col-12 {
   align-items: center;
   display: flex;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .building-partners-section .logos .img-graphic img {
   max-height: 60px;
   max-width: 100%;
+}
+
+.building-partners-section .btn-container {
+  margin: auto;
+  text-align: center;
+}
+
+.building-partners-section .btn-container [data-toggle="collapse"] {
+  font-size: 1.125rem;
+  margin-bottom: 100px;
+  padding: 0.4rem 2.2rem;
 }
 
 .building-partners-section > div > .row {
@@ -1769,13 +1800,6 @@ footer .company-mission {
     left: 39%;
     top: 36%;
     width: 8%;
-  }
-
-  /* this should be replaced with a proper LESS/SASS override, i.e., @grid-columns: 10; */
-  .building-partners-section .logos .col-md-2 {
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%
   }
   .building-partners-section .logos .img-graphic img {
     max-width: 90%;

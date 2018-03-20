@@ -4,7 +4,7 @@ from flask import render_template
 from util import sendgrid_wrapper as sgw
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
-BCC_RECIPIENTS = [sgw.Email('founders@originprotocol.com', 'Founders')]
+# BCC_RECIPIENTS = [sgw.Email('founders@originprotocol.com', 'Founders')]
 
 EMAILS = {
     'welcome': {
@@ -18,6 +18,9 @@ EMAILS = {
     },
     'build_on_origin': {
         'subject': 'Thanks for your interest in Origin!'
+    },
+    'march_2018_newsletter': {
+        'subject': 'News from Origin Protocol (March 2018)'
     },
 }
 
@@ -66,7 +69,6 @@ def send_email_msg(from_email, to_email, msg_subject, msg_purpose,
                         subject=msg_subject,
                         body_text=msg_text,
                         body_html=msg_html,
-                        bccs=BCC_RECIPIENTS,
                         categories=categories)
 
             except Exception as e:

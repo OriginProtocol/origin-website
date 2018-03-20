@@ -17,12 +17,9 @@
     <meta property="og:description" content="{{ gettext("Origin Protocol enables the sharing economy on the blockchain") }}"/>
 
     {% block styles %}
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500"/>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500"/>
-      <link rel="stylesheet" href="/static/css/style.css"/>
-      <link rel="stylesheet" href="/static/css/alertify.css"/>
-      <link rel="stylesheet" href="/static/css/animate.css"/>
+      {# The biggest delay to rendering the site is the google fonts, so we make sure it is the first to start loading #}
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500|Poppins:200,300,400,500"/>  
+      <link rel="stylesheet" href="/static/css/all_styles.css"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" media="all"/>
 
       <!-- Favicons generated with https://realfavicongenerator.net/ -->
@@ -50,12 +47,7 @@
     {% endblock %}
 
     {% block scripts %}
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-      <script src="/static/js/alertify.js"></script>
-      <script src="/static/js/script.js"></script>
-      <script src="/static/js/wow.min.js"></script>
+      <script src="/static/js/all_javascript.js"></script>
       <script>
       new WOW().init();
       </script>

@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <h1>
-            {% trans %}The sharing economy without intermediaries{% endtrans %}
+            {{ gettext("The sharing economy without intermediaries") }}
           </h1>
           <p>
             {{ gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS") }}
@@ -252,7 +252,7 @@
             </div>
             <div class="col-12 col-md-5">
               <h2>
-                Features
+                {{ gettext("Features") }}
               </h2>
               <div class="row">
                 <div class="col-6">
@@ -375,7 +375,7 @@
       </div>
     </div>
   </section>
-  <section class="roadmap-section">
+  <section class="roadmap-section" id="roadmap">
     <div class="container-fluid">
       <div class="row">
         <div class="container foreground-content">
@@ -586,9 +586,9 @@
 
 {% block extra_scripts %}
   <script>
-      setTimeout(function() {
-        alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' target='_blank'><button class='telegram-btn btn btn-outline-primary btn-min-size'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</button></a></div>", "default", 0)
-      }, 2000);
+    setTimeout(function() {
+      alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' target='_blank'><button class='telegram-btn btn btn-primary btn-min-size'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</button></a></div>", "default", 0)
+    }, 2000);
   </script>
   <script>
     var cards = document.querySelectorAll('.partner-card');

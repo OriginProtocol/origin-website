@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: stan@originprotocol.com\n"
-"POT-Creation-Date: 2018-01-21 21:10-0700\n"
+"POT-Creation-Date: 2018-03-09 14:39-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ben Vibhagool <cvibhagool@gmail.com>\n"
 "Language: th\n"
@@ -18,131 +18,84 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.5.1\n"
 
-#: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:35
-#: logic/emails/mailing_list.py:96
+#: config/strings_to_translate.py:4
+msgid "Technology Partners"
+msgstr "หุ้นส่วนด้านเทคโนโลยี"
+
+#: config/strings_to_translate.py:5
+msgid "Building on Origin"
+msgstr "การสร้างพื้นฐานจาก Origin"
+
+#: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:36
+#: logic/emails/mailing_list.py:118
 msgid "Please enter a valid email address"
-msgstr "กรุณากรอกอีเมล์ที่ถูกต้อง"
+msgstr "กรุณากรอกอีเมล์ของท่าน"
 
-#: logic/emails/mailing_list.py:26
+#: logic/emails/mailing_list.py:27
 msgid "You are already signed up!"
-msgstr "คุณได้ลงทะเบียนไว้แล้ว"
+msgstr "คุณได้ลงทะเบียนเรียนร้อยแล้ว"
 
-#: logic/emails/mailing_list.py:30
+#: logic/emails/mailing_list.py:31
 msgid "Thanks for signing up!"
 msgstr "ขอบคุณที่ลงทะเบียน"
 
-#: logic/emails/mailing_list.py:52 logic/emails/mailing_list.py:112
+#: logic/emails/mailing_list.py:54 logic/emails/mailing_list.py:135
 msgid "Ooops! Something went wrong."
 msgstr "ขออภัย มีข้อผิดพลาดเกิดขึ้น"
 
-#: logic/emails/mailing_list.py:64 logic/emails/mailing_list.py:123
+#: logic/emails/mailing_list.py:81 logic/emails/mailing_list.py:146
 msgid "Thanks! We'll be in touch soon."
 msgstr "ขอบคุณ เราจะติดต่อคุณกลับไป"
 
-#: logic/emails/mailing_list.py:77
+#: logic/emails/mailing_list.py:94
 msgid "Ooops, something went wrong"
 msgstr "ขออภัย มีข้อผิดพลาดเกิดขึ้น"
 
-#: logic/emails/mailing_list.py:79
+#: logic/emails/mailing_list.py:96
 msgid "You have been unsubscribed"
 msgstr "คุณได้เลิกติดตามแล้ว"
 
-#: logic/emails/mailing_list.py:99
+#: logic/emails/mailing_list.py:121
 msgid "Please enter a valid website address"
 msgstr "กรุณากรอก website address ให้ถูกต้อง"
 
-#: templates/build_on_origin.html:3
-#, fuzzy
-msgid "The sharing economy without intermediaries: Build on Origin"
-msgstr "Sharing economy ที่เป็นอิสระจากคนกลาง: สร้างบน Origin"
+#: templates/404.html:16
+msgid "How did I get here?"
+msgstr "ฉันมาที่นี่ได้อย่างไร?"
 
-#: templates/build_on_origin.html:5
-#, fuzzy
-msgid "Origin Protocol - Build on Origin"
-msgstr "Origin Protocol - สร้างบน Origin"
+#: templates/404.html:22
+msgid "The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
+msgstr "เว็บที่คุณกำลังหาไม่ได้อยู่ที่นี่แล้ว อาจจะไม่เคยมีมาก่อน ไม่ว่าในกรณีใดก็ตามเราขอโทษจากใจ"
 
-#: templates/build_on_origin.html:16
-#, fuzzy
-msgid "Build on Origin"
-msgstr "สร้างบน Origin"
+#: templates/404.html:27 templates/404.html:35
+msgid "Go Home"
+msgstr "กลับหน้าหลัก"
 
-#: templates/build_on_origin.html:21
-msgid "<strong>Teams all over the world are building on Origin's protocols. We're looking for more amazing people to join our mission.</strong> Whether you're an existing blockchain company or a traditional marketplace thinking about the blockchain, we'd love to hear from you! Fill out the form below and we'll get back to you shortly."
-msgstr "<strong>Origin Protocol ได้รับการยอมรับอย่างแพร่หลายจากทีมนักพัฒนาทั่วโลก และยังมีที่ว่างสำหรับคุณเพื่อมาร่วมพันธกิจนี้ให้บรรลุเป้าหมายไปกับเรา</strong> ไม่ว่าคุณจะมีธุรกิจที่ใช้ blockchain อยู่แล้ว หรือเป็นธุรกิจที่ประสงค์จะนำ blockchain มาใช้ กรุณาแจ้งความต้องการของคุณให้เราทราบ! กรอกแบบฟอร์มนี้แล้วเราจะติดต่อกลับโดยเร็วที่สุด"
+#: templates/base.html:16 templates/index.html:3
+msgid "Origin Protocol"
+msgstr "Origin Protocol"
 
-#: templates/build_on_origin.html:66
-#, fuzzy
-msgid "Interested in building?"
-msgstr "สนใจที่จะสร้าง?"
-
-#: templates/build_on_origin.html:72 templates/build_on_origin.html:73
-#, fuzzy
-msgid "Name"
-msgstr "ชื่อ"
-
-#: templates/build_on_origin.html:77 templates/build_on_origin.html:78
-msgid "Company"
-msgstr "บริษัท"
-
-#: templates/build_on_origin.html:82 templates/build_on_origin.html:83
-#: templates/presale.html:77 templates/presale.html:78
-msgid "Email"
-msgstr "อีเมล์"
-
-#: templates/build_on_origin.html:87 templates/build_on_origin.html:88
-msgid "Website"
-msgstr "เว็บไซต์"
-
-#: templates/build_on_origin.html:92 templates/presale.html:397
-msgid "<strong>Anything else we should know?</strong> (optional)"
-msgstr "<strong>ข้อมูลอื่นๆที่คุณต้องการแจ้งให้เราทราบ?</strong> (ถ้ามี)"
-
-#: templates/build_on_origin.html:96 templates/presale.html:411
-msgid "Submit"
-msgstr "ตกลง"
-
-#: templates/flashes.html:7
-msgid "Make new friends!"
-msgstr "หาเพื่อนใหม่"
-
-#: templates/flashes.html:7
-msgid "Join Our Telegram"
-msgstr "คุยกันใน Telegram"
-
-#: templates/flashes.html:10
-msgid "Stay in touch?"
-msgstr "ต้องการรับข่าวสารจากเรา?"
-
-#: templates/flashes.html:10
-msgid "Join Our Mailing List"
-msgstr "ร่วมรับข้อมูลข่าวสารจากอีเมล"
-
-#: templates/flashes.html:14
-msgid "Want to contribute?"
-msgstr "ต้องการมีส่วนร่วมหรือไม่?"
-
-#: templates/flashes.html:14
-msgid "Join Our Slack"
-msgstr "คุยกันใน Slack"
+#: templates/base.html:17
+msgid "Origin Protocol enables the sharing economy on the blockchain"
+msgstr "Origin Protocol ช่วยให้การแบ่งปันระบบเศรษฐกิจบนบล็อคเชน"
 
 #: templates/footer.html:12
 msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network."
 msgstr "ที่ Origin เรากำลังสร้าง Sharing economy ให้แพร่หลาย กลุ่มผู้ซื้อผู้ขายทั้งหลายสามารถทำธุรกรรมโดยไม่ต้องผ่านคนกลาง เราต้องการลดค่าธรรมเนียม ทำลายกำแพง และกฎระเบียบต่างๆ และผู้เข้าร่วมพันธกิจนี้กับเราในช่วงก่อตั้งนี้จะได้รับผลตอบแทนที่คุ้มค่าจากเครือข่ายนี้"
 
 #: templates/footer.html:15
-msgid "Origin, Inc."
-msgstr "Origin, Inc"
+msgid "Origin Protocol, Inc."
+msgstr " บจก. ออริจิน โปรโตคอล"
 
 #: templates/footer.html:22
 msgid "Documentation"
-msgstr "อ้่างอิง"
+msgstr "เอกสาร"
 
-#: templates/footer.html:27 templates/navbar_dark.html:20
-#: templates/navbar_light.html:20
+#: templates/footer.html:27 templates/navbar.html:69
 msgid "Product Brief"
-msgstr "Product Brief"
+msgstr "ย่อสั้นเกี่ยวกับสินค้า"
 
 #: templates/footer.html:32
 msgid "Whitepaper"
@@ -160,17 +113,17 @@ msgstr "Github"
 msgid "Docs"
 msgstr "คู่มือ"
 
-#: templates/footer.html:54 templates/team.html:110
+#: templates/footer.html:54 templates/team.html:116
 msgid "Community"
 msgstr "ชุมชน"
 
 #: templates/footer.html:59
-msgid "Slack"
-msgstr "Slack"
-
-#: templates/footer.html:64
 msgid "Telegram"
 msgstr "Telegram"
+
+#: templates/footer.html:64
+msgid "Discord"
+msgstr "Discord"
 
 #: templates/footer.html:69
 msgid "Medium"
@@ -188,31 +141,29 @@ msgstr "Facebook"
 msgid "Organization"
 msgstr "องค์กร"
 
-#: templates/footer.html:91 templates/navbar_dark.html:23
-#: templates/navbar_light.html:23
+#: templates/footer.html:91 templates/navbar.html:72
 msgid "Team"
 msgstr "ทีม"
 
-#: templates/footer.html:96 templates/navbar_dark.html:17
-#: templates/navbar_light.html:17 templates/presale.html:16
+#: templates/footer.html:96 templates/navbar.html:66 templates/presale.html:16
 msgid "Presale"
 msgstr "Presale"
 
 #: templates/footer.html:101
+msgid "Partners"
+msgstr "พาร์ทเนอร์"
+
+#: templates/footer.html:106
 msgid "Jobs (We're hiring!)"
 msgstr "งาน (เรากำลังจ้าง!)"
 
-#: templates/footer.html:106
+#: templates/footer.html:111
 msgid "845 Market St, #450A<br>San Francisco, CA 94103"
-msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
-
-#: templates/index.html:3
-msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
-msgstr "Sharing economy ที่เป็นอิสระจากคนกลาง Origin เป็นระบบการในการสร้างตลาดซื้อขายสำหรับเศรษฐกิจแบบแบ่งปัน ผ่าน Ethereum blockchain และ IPFS"
+msgstr "845 Market St, 450A San Francisco, CA 94103"
 
 #: templates/index.html:5
-msgid "Origin Protocol"
-msgstr "Origin Protocol"
+msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
+msgstr "Sharing economy ที่เป็นอิสระจากคนกลาง. Origin Protocol เป็นระบบการในการสร้างตลาดซื้อขายสำหรับเศรษฐกิจแบบแบ่งปัน ผ่าน Ethereum blockchain และ IPFS"
 
 #: templates/index.html:16
 msgid "The sharing economy without intermediaries"
@@ -222,180 +173,314 @@ msgstr "Sharing economy ที่เป็นอิสระจากคนก�
 msgid "Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS"
 msgstr "Origin เป็นระบบสำหรับสร้าง marketplace แบบ sharing economy ใช้ Ethereum blockchain และ IPFS"
 
-#: templates/index.html:66
+#: templates/index.html:65
 msgid "The Origin platform"
-msgstr "แพลตฟอร์ม Origin"
+msgstr "แพลตฟอร์มของ Origin"
 
-#: templates/index.html:69
+#: templates/index.html:68
 msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
 msgstr "เราช่วยให้นักพัฒนาระบบและธุรกิจต่างๆสร้างตลาดบน blockchain แบบกระจายศูนย์ด้วย protocol ที่ใช้ง่าย ผู้ซื้อขายสามารถติดต่อค้นหากันได้เอง เลือกชมจากรายการ ทำการจองขอใช้ทรัพย์สินหรือบริการนั้นๆตามจำนวนเท่าที่ต้องการ หลังจากนั้นสามารถให้เรตติ้ง รีวิว และอื่นๆอีกมากมาย"
 
-#: templates/index.html:74
-msgid "Read the Product Brief"
-msgstr "อ่าน Product Brief"
+#: templates/index.html:73
+msgid "Read Our Product Brief"
+msgstr "อ่านบทสรุปผลิตภัณฑ์ของเรา"
 
-#: templates/index.html:96
-#, fuzzy
-msgid "Companies building on the Origin Protocol"
-msgstr "บริษัทที่กำลังสร้างบน Origin Protocol"
+#: templates/index.html:81 templates/index.html:590
+msgid "Join Our Telegram"
+msgstr "ร่วม Telegram ของเรา"
 
-#: templates/index.html:140
+#: templates/index.html:98
+msgid "Partners building on Origin"
+msgstr "การสร้างพาร์ทเนอร์เกี่ยวกับ Origin"
+
+#: templates/index.html:101
+msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
+msgstr "ทีมต่างๆทั่วโลกกำลังสร้างโปรโตคอลของ Origin แต่เรากำลังมองหาคนที่น่าอัศจรรย์มากขึ้นเพื่อเข้าร่วมภารกิจของเรา"
+
+#: templates/index.html:106
+msgid "View All Partners"
+msgstr "ดูพาร์ทเนอร์ทั้งหมด"
+
+#: templates/index.html:117
+msgid "Propy is building their property manager marketplace DApp with Origin Protocol."
+msgstr "Propy กำลังสร้างตลาดที่ ใช้ DApp กับ Origin Protocol"
+
+#: templates/index.html:124
+msgid "DApps built on Origin will be able to use WeTrust’s decentralized insurance protocols to protect users."
+msgstr "DApps ที่สร้างขึ้นจาก Origin Protocol จะสามารถใช้โปรโตคอลการประกันแบบกระจายอำนาจของ WeTrust เพื่อปกป้องผู้ใช้"
+
+#: templates/index.html:131
+msgid "Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
+msgstr "Bee Token กำลังสร้างเครือข่ายผู้ให้บริการฟรีและเครือข่ายแบบ peer-to-peer สำหรับคนกลางโดยใช้ Origin Protocol"
+
+#: templates/index.html:138
+msgid "CanYa is building their “marketplace of services” with Origin Protocol for the gig economy."
+msgstr "CanYa กำลังสร้าง "ตลาดบริการ" ด้วย Origin Protocol สำหรับ Gig Economy"
+
+#: templates/index.html:175
 msgid "Build your business on Origin"
 msgstr "สร้างธุรกิจของคุณบน Origin"
 
-#: templates/index.html:143
+#: templates/index.html:178
 #, fuzzy
 msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
 msgstr "Origin แพลตฟอร์มจะช่วยให้ท่านดำเนินธุรกิจบนอินเตอร์เนทแบบกระจายศูนย์ได้ง่ายๆ ไม่ว่าท่านจะให้บริการถ่ายภาพฟรีแลนซ์ ปล่อยเช่าอพาร์ตเมนท์ แบ่งปันจักรยานให้ใช้ หรือธุรกิจที่มีลักษณะเป็นเศรษฐกิจแบบแบ่งปันอื่นๆ"
 
-#: templates/index.html:143
+#: templates/index.html:178
 msgid "Get in touch to learn more."
 msgstr "ติดต่อเพื่อเรียนรู้เพิ่มเติม"
 
-#: templates/index.html:148
+#: templates/index.html:183
 msgid "Try the Demo"
 msgstr "ลองใช้ Demo"
 
-#: templates/index.html:155
-msgid "View Github"
-msgstr "ดู Github"
+#: templates/index.html:191
+msgid "View GitHub"
+msgstr "ดู GitHub"
 
-#: templates/index.html:168
+#: templates/index.html:204
 msgid "It's time to replace rent-seeking middlemen"
 msgstr "ถึงเวลาแล้วที่จะตัดพ่อค้าคนกลาง"
 
-#: templates/index.html:171
+#: templates/index.html:207
 #, python-format
 msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
 msgstr "ด้วยพลังของ Ethereum blockchain ที่ทำหน้าที่เป็นผู้ดำเนินการที่โปร่งใส ผู้ซื้อขายสินค้าและบริการสามารถได้รับส่วนแบ่ง 20-30%% ของค่าธรรมเนียมที่ปกติแล้วต้องจ่ายแก่คนกลางอย่าง Uber, Airbnb, Fiverr และ Getaround"
 
-#: templates/index.html:176
+#: templates/index.html:212
 msgid "Read the Whitepaper"
 msgstr "อ่าน Whitepaper"
 
-#: templates/index.html:230
+#: templates/index.html:255
+msgid "Features"
+msgstr "คุณลักษณะ/คุณสมบัติ"
+
+#: templates/index.html:266
 msgid "Smart contracts enable secure and reliable payments directly from one party to another"
 msgstr "Smart contract ช่วยให้สามารถชำระเงินได้อย่างปลอดภัยและเชื่อถือได้โดยตรงจากฝ่ายหนึ่งไปยังอีกฝ่ายหนึ่ง"
 
-#: templates/index.html:241
+#: templates/index.html:277
 msgid "Protocol schemas support hundreds of listing types, including custom verticals"
 msgstr "แบบแผนของ protocol รองรับธุรกิจสินค้าและบริการหลายประเภท รวมไปถึงหลายอย่างที่ต้องทำ ​custom"
 
-#: templates/index.html:252
+#: templates/index.html:288
 msgid "Open and shared data encourages innovation by developers and businesses"
 msgstr "ข้อมูลที่เปิดและแชร์ช่วยสนับสนุนนวัตกรรมโดยนักพัฒนาซอฟต์แวร์และธุรกิจต่างๆ"
 
-#: templates/index.html:263
+#: templates/index.html:299
 msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
 msgstr "Blockchain มีวิธีการยืนยันตัวบุคคลและการตรวจสอบชื่อเสียง ทำให้ผู้ใช้งานทั้งหมดมั่นใจในการประกอบกิจกรรมต่างๆ"
 
-#: templates/index.html:280
+#: templates/index.html:316
 msgid "Tech Stack"
 msgstr "Tech Stack"
 
-#: templates/index.html:349
+#: templates/index.html:385
 msgid "Roadmap"
 msgstr "แผนงาน"
 
-#: templates/index.html:355
+#: templates/index.html:391
 msgid "May 2017"
 msgstr "พฤษภาคม 2017"
 
-#: templates/index.html:357
+#: templates/index.html:393
 msgid "Idea conception and demo DApp development"
 msgstr "แนวคิดไอเดียและการพัฒนา demo DApp"
 
-#: templates/index.html:362
+#: templates/index.html:398
 msgid "September 2017"
 msgstr "กันยายน 2017"
 
-#: templates/index.html:364
+#: templates/index.html:400
 msgid "Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released"
 msgstr "เผยแพร่ Product Brief </a> และ <a href='/whitepaper'> Whitepaper </a> แล้ว"
 
-#: templates/index.html:369
+#: templates/index.html:405
 msgid "December 2017"
 msgstr "ธันวาคม 2017"
 
-#: templates/index.html:371
+#: templates/index.html:407
 msgid "Launch <a href='https://demo.originprotocol.com' target='_blank'>alpha</a> on Ethereum testnet"
 msgstr "เปิด <a href='https://demo.originprotocol.com' target='_blank'> alpha </a> บน Ethereum testnet"
 
-#: templates/index.html:376
-msgid "March 2018"
-msgstr "มีนาคม 2018"
+#: templates/index.html:412
+msgid "Q2 2018"
+msgstr "Q2 2018"
 
-#: templates/index.html:378
+#: templates/index.html:414
 msgid "Public beta and community sale"
 msgstr "Beta สำหรับสาธารณะและการขายให้ชุมชน"
 
-#: templates/index.html:383
+#: templates/index.html:419
 msgid "Q3 2018"
-msgstr "ไตรมาสที่ 3, 2018"
+msgstr "Q3 2018"
 
-#: templates/index.html:385
+#: templates/index.html:421
 msgid "Token distribution and launch of 3rd-party DApps"
 msgstr "การกระจาย Token และการเปิดตัว DApps จากนักพัฒนาภายนอก"
 
-#: templates/index.html:390
+#: templates/index.html:426
 msgid "2019"
 msgstr "2019"
 
-#: templates/index.html:392
+#: templates/index.html:428
 msgid "Fully decentralized services and governance"
 msgstr "ระบบการบริการและปกครองแบบกระจายศูนย์อย่างแท้จริง"
 
-#: templates/index.html:418
+#: templates/index.html:454
 msgid "Join us in building the sharing economy of tomorrow"
 msgstr "ร่วมกันสร้างเศรษฐกิจแบบ Sharing economy แห่งอนาคต"
 
-#: templates/index.html:421
+#: templates/index.html:457
 msgid "Sign up for our mailing list and be first to learn of any Origin news!"
 msgstr "อยากรู้ก่อนใคร สมัครรับข่าวสารจาก Origin!"
 
-#: templates/index.html:425
+#: templates/index.html:461
 #, fuzzy
 msgid "Enter email"
 msgstr "กรอกอีเมล์"
 
-#: templates/index.html:428
+#: templates/index.html:464
 msgid "Join the Community"
 msgstr "เข้าร่วม"
 
-#: templates/index.html:442
+#: templates/index.html:478
 msgid "Press"
 msgstr "สื่อ"
 
-#: templates/index.html:455
-msgid "If Airbnb were being started today, it would’ve been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
-msgstr "ถ้า Airbnb เพิ่งเกิดขึ้นวันนี้ Airbnb จะต้องใช้ blockchain แบบ peer-to-peer cooperative model อย่างแน่น่อน - Joey Krug, Augur"
+#: templates/index.html:490
+msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - @joeykrug re: @originprotocol"
+msgstr "ถ้า Airbnb เริ่มต้นขึ้นในวันนี้ก็คงจะเป็นแบบสหกรณ์แบบ peer-to-peer จาก blockchain - @joeykrug re: @originprotocol"
 
-#: templates/index.html:472
+#: templates/index.html:491
+msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
+msgstr "หาก Airbnb เริ่มต้นขึ้นในวันนี้ก็คงจะเป็นแบบสหกรณ์แบบเพียร์ถึงเพียร์โดยยึดตามบล็อกเกอร์เช่น Joey Krug, Augur"
+
+#: templates/index.html:506
+msgid "@originprotocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
+msgstr "@originprotocol เป็นชุดโปรโตคอล blockchain แบบโอเพนซอร์สสำหรับผู้ซื้อและผู้ขายบริการเช่นการแชร์รถหรือการแชร์ที่บ้านเพื่อทำธุรกรรมบนแพลตฟอร์มเว็บแบบกระจายอิสระ"
+
+#: templates/index.html:507
 msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
 msgstr "Origin Protocol เป็น blockchain protocol แบบ open-source สำหรับกลุ่มผู้ซื้อขายบริการ เช่น บริการแชร์ยานยนต์ หรือแชร์บ้าน โดยธุรกรรมทั้งหมดได้บันทึกไว้บน open web platform แบบกระจายศูนย์"
 
-#: templates/index.html:489
+#: templates/index.html:522
+msgid "@originprotocol hopes to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
+msgstr "@originprotocol หวังที่จะกระจายอำนาจในการแบ่งปันระบบเศรษฐกิจร่วมกับ Ethereum โดยการสร้างเครือข่ายแบบ peer-to-peer สำหรับการทำธุรกรรมโดยตรงสำหรับทุกอย่าง"
+
+#: templates/index.html:523
 msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
 msgstr "Origin ประสงค์ที่จะฉีกแนวคิดเดิมๆด้วยการกระจายศูนย์ระบบเศรษฐกิจแบบแบ่งปัน จากการใช้ Ethereum และ peer-to-peer เนทเวิร์ค เพื่อให้เกิดการประกอบธุรกรรมต่างๆได้โดยตรง"
 
-#: templates/index.html:506
+#: templates/index.html:538
+msgid "What if open-source software like @originprotocol can replace dozens of multi-million or even multi-billion dollar companies?"
+msgstr "เกิดอะไรขึ้นถ้าซอฟต์แวร์โอเพนซอร์สเช่น @originprotocol สามารถแทนที่ บริษัท หลายล้านหรือแม้แต่หลายพันล้านดอลลาร์ได้"
+
+#: templates/index.html:539
 msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
 msgstr "อะไรจะเกิดขึ้นถ้า open-source software สามารถนำไปใช้แทนกลุ่มบริษัทที่มีมูลค่าสูงเป็นหลายล้านหรือหลายพันล้านเหรียญ?"
 
-#: templates/navbar_dark.html:26 templates/navbar_light.html:26
+#: templates/index.html:554
+msgid "@originprotocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
+msgstr "@originprotocol ใช้ Ethereum Blockchain เพื่อช่วยผู้ซื้อและผู้ขายทำธุรกรรมในสภาพแวดล้อมแบบกระจายอำนาจโดยไม่มีตัวกลางแบบดั้งเดิม"
+
+#: templates/index.html:555
+msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
+msgstr "โปรโตคอลต้นทางใช้ Ethereum Blockchain เพื่อช่วยผู้ซื้อและผู้ขายทำธุรกรรมในสภาพแวดล้อมแบบกระจายอำนาจโดยไม่มีตัวกลางแบบดั้งเดิม"
+
+#: templates/index.html:570
+msgid "@originprotocol uses the Ethereum blockchain to enable buyers and sellers to interact with each other in an effective manner."
+msgstr "@originprotocol ใช้การบล็อกแบบ Ethereum เพื่อให้ผู้ซื้อและผู้ขายสามารถโต้ตอบกันได้อย่างมีประสิทธิภาพ"
+
+#: templates/index.html:571
+msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
+msgstr "โปรโตคอลต้นทางซึ่งใช้โครงสร้างบล็อกแบบละเอียดช่วยให้ผู้ซื้อและผู้ขายสามารถโต้ตอบกันได้อย่างมีประสิทธิภาพ"
+
+#: templates/index.html:590
+msgid "Make new friends!"
+msgstr "หาเพื่อนใหม่"
+
+#: templates/navbar.html:75
 msgid "Blog"
 msgstr "บล็อก"
 
-#: templates/navbar_dark.html:29 templates/navbar_light.html:29
+#: templates/navbar.html:78
 msgid "Demo"
-msgstr "Demo"
+msgstr "เดโม้"
 
-#: templates/presale.html:3
+#: templates/partners.html:3 templates/partners.html:5
 #, fuzzy
-msgid "The sharing economy without intermediaries: Origin Protocol Presale"
-msgstr "Sharing economy โดยไม่มีตัวกลาง: Origin Protocol Presale"
+msgid "Origin Protocol - Build on Origin"
+msgstr "Origin Protocol - สร้างบน Origin"
 
-#: templates/presale.html:5
+#: templates/partners.html:16
+#, fuzzy
+msgid "Build on Origin"
+msgstr "สร้างบน Origin"
+
+#: templates/partners.html:22
+msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
+msgstr "<strong> ทีมต่างๆทั่วโลกกำลังสร้างโครงการโดยใช้โปรโตคอลของ Origin เรากำลังมองหาคนที่น่าตื่นตาตื่นใจมากขึ้นในการ <a href='#join_our_mission'> เข้าร่วมภารกิจของเรา </a> </strong>"
+
+#: templates/partners.html:81
+msgid "View More"
+msgstr "ดูเพิ่มเติม"
+
+#: templates/partners.html:82
+msgid "View Less"
+msgstr "ดูน้อยลง"
+
+#: templates/partners.html:112
+msgid "Join our mission!"
+msgstr "เข้าร่วมภารกิจของเรา!"
+
+#: templates/partners.html:115
+msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
+msgstr "ไม่ว่าคุณจะเป็น บริษัท blockchain ที่มีอยู่หรือตลาดแบบดั้งเดิมที่คิดเกี่ยวกับเทคโนโลยี blockchain เรายินดีที่จะรับฟังจากคุณ กรอกแบบฟอร์มด้านล่างและเราจะติดต่อคุณกลับไปในไม่ช้า"
+
+#: templates/partners.html:119
+#, fuzzy
+msgid "Name"
+msgstr "ชื่อ"
+
+#: templates/partners.html:120
+msgid "Firstname Lastname"
+msgstr "ชื่อและนามสกุล"
+
+#: templates/partners.html:123
+msgid "Company"
+msgstr "บริษัท"
+
+#: templates/partners.html:124
+msgid "My Amazing Company"
+msgstr "บริษัทของฉัน"
+
+#: templates/partners.html:127 templates/presale.html:77
+#: templates/presale.html:78
+msgid "Email"
+msgstr "อีเมล์"
+
+#: templates/partners.html:128
+msgid "yourname@websitename.com"
+msgstr "yourname@websitename.com"
+
+#: templates/partners.html:131
+msgid "Website"
+msgstr "เว็บไซต์"
+
+#: templates/partners.html:132
+msgid "https://websitename.com"
+msgstr "https://websitename.com"
+
+#: templates/partners.html:135 templates/presale.html:395
+msgid "<strong>Anything else we should know?</strong> (optional)"
+msgstr "<strong>ข้อมูลอื่นๆที่คุณต้องการแจ้งให้เราทราบ?</strong> (ถ้ามี)"
+
+#: templates/partners.html:147
+msgid "Become a Partner"
+msgstr "ร่วมเป็นพาร์ทเนอร์"
+
+#: templates/presale.html:3 templates/presale.html:5
 #, fuzzy
 msgid "Origin Protocol - Presale"
 msgstr "Origin Protocol - Presale"
@@ -410,11 +495,11 @@ msgstr "สนใจที่จะร่วมลงทุน?"
 
 #: templates/presale.html:72 templates/presale.html:73
 msgid "Full Name"
-msgstr "ชื่อ นามสกุล"
+msgstr "ชื่อและนามสกุล"
 
 #: templates/presale.html:82
 msgid "Are you an accredited investor?"
-msgstr "คุณเป็น accredited investor หรือไม่?"
+msgstr "คุณเป็นผู้ลงทุนรายใหญ่ หรือไม่?"
 
 #: templates/presale.html:83
 msgid "Huh?"
@@ -457,25 +542,25 @@ msgstr "<strong>จำนวนจัดสรรที่ต้องการ<
 msgid "Citizenship"
 msgstr "สัญชาติ"
 
-#: templates/presale.html:392
+#: templates/presale.html:391
 msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
 msgstr "<strong>ETH หรือ BTC address ที่คุณต้องการส่งจาก</strong> (ถ้ามี)"
 
-#: templates/presale.html:402
+#: templates/presale.html:399
 msgid "Important notice"
 msgstr "ข้อควรทราบสำคัญ"
 
-#: templates/presale.html:405
+#: templates/presale.html:402
 msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
 msgstr " ฉันเข้าใจว่า presale นี้ถูกควบคุมและรับรองโดยกฎหมายและข้อบังคับเกี่ยวกับหลักทรัพย์ของประเทศสหรัฐอเมริกา และฉันยอมรับกว่าการส่งแบบฟอร์มนี้จะไม่มาพร้อมกับการรับประกันจำนวนจัดสรร ใดๆ"
 
-#: templates/team.html:3
-msgid "The sharing economy without intermediaries: Origin Protocol Team"
-msgstr "Sharing economy โดยไม่มีตัวกลาง: Origin Protocol Team"
+#: templates/presale.html:413
+msgid "Submit"
+msgstr "ตกลง"
 
-#: templates/team.html:5
+#: templates/team.html:3 templates/team.html:5
 msgid "Origin Protocol - Team"
-msgstr "Origin Protocol - ทีม"
+msgstr "ทีม Origin Protocol"
 
 #: templates/team.html:16
 msgid "Our Team"
@@ -485,214 +570,271 @@ msgstr "ทีมของเรา"
 msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
 msgstr "ทีมงาน Origin ประกอบด้วยกลุ่มบุคคลากรประเภท ผู้ประกอบการ วิศวกร และผู้เชี่ยวชาญด้าน blockchain ที่กระจายกันอยู่ในหลายพื้นที่ โดยมีพันธกิจร่วมกันเพื่อสร้างเศรษฐกิจแบบแบ่งปันกระจายศูนย์บนอินเตอร์เนท และเรากำลังมองหาผู้มากความสามารถมาร่วมงานกับเรา!"
 
-#: templates/team.html:46
+#: templates/team.html:52
 msgid "Core Team"
 msgstr "ทีมงานหลัก"
 
-#: templates/team.html:55
+#: templates/team.html:61
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:59 templates/team.html:76
+#: templates/team.html:65 templates/team.html:82
 msgid "Cofounder"
-msgstr "Cofounder"
+msgstr "ผู้ร่วมก่อตั้ง"
 
-#: templates/team.html:62
+#: templates/team.html:68
 msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "Josh เริ่มเขียนโปรแกรมตั้งแต่อายุ 10 ปี ก่อนที่จะมาก่อตั้ง Origin เขาเคยร่วมก่อตั้งบริษัทร่วมทุนอย่าง EventVue และ Torbit (ต่อมาถูก Walmart Labs ซื้อกิจการไป) &amp; Forage."
 
-#: templates/team.html:72
+#: templates/team.html:78
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:79
+#: templates/team.html:85
 msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "Matt เคยเป็น PM คนที่ 3 ที่ Youtube (ซึ่งต่อมาถูกขายให้แก่ Google) และเคยเป็น VP PM ที่ Qwiki (ต่อมาถูก Yahoo ซื้อกิจการไป) และ Bonobos (ต่อมาถูก Walmart ซื้อกิจการไป) Matt เรียนจบปริญญา MS และ BS จากมหาวิทยาลัย Stanford"
 
-#: templates/team.html:89
+#: templates/team.html:95
 msgid "Stan James"
 msgstr "Stan James"
 
-#: templates/team.html:93
+#: templates/team.html:99
 #, fuzzy
 msgid "Senior Engineer"
-msgstr "Senior Engineer"
+msgstr "วิศวกรอาวุโส"
 
-#: templates/team.html:96
+#: templates/team.html:102
 msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
 msgstr "Stan เป็นนักสถาปัตยกรรมซอฟท์แวร์ที่มีประสบการณ์อย่างสูงในด้านการออกแบบเกมส์และ machine learning ไม่นานมานี้เขาได้ก่อตั้ง Lijit Networks (ถูกขายต่อให้แก่ Federated Media)"
 
-#: templates/team.html:106
+#: templates/team.html:112
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:113
+#: templates/team.html:119
 msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
 msgstr "Andrew เป็นผู้ก่อตั้ง startups ดังๆอย่าง Startup Weekend และอีก 3 startup ก่อให้เกิดการตื่นตัวในประชากรทั่วโลกกว่า 12 ประเทศ และเขาเคยเป็นลูกจ้างคนแรกของ TechStars ด้วย"
 
-#: templates/team.html:127
+#: templates/team.html:133
 msgid "Partnerships"
-msgstr "Partnerships"
+msgstr "หุ้นส่วน"
 
-#: templates/team.html:130
+#: templates/team.html:136
 msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr "Coleman เป็นนักลงทุนใน cryptocurrency อย่างจริงจัง และเป็นนักธุรกิจอสังหาริมทรัพย์ ผู้บริหารทรัพย์สินของเขาที่ประกาศไว้ใน Airbnb เขาจบสาขาคณิตศาสตร์จาก Berkeley"
 
-#: templates/team.html:140
+#: templates/team.html:146
 msgid "Jon Hearty"
 msgstr "Jon Hearty"
 
-#: templates/team.html:144
+#: templates/team.html:150
 msgid "Business Development"
-msgstr "Business Development"
+msgstr "ผู้พัฒนาธุรกิจ"
 
-#: templates/team.html:147
+#: templates/team.html:153
 msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
 msgstr "Jon เป็นพนักงานคนที่ 10 ที่ Redbeacon (ถูกขายกิจการให้ The Home Depot) และเป็นลูกจ้างคนแรกที่ Datanyze โดยรับหน้าที่เป็นนักพัฒนาธุรกิจ และเติบโตจาก VP จนเป็น COO"
 
-#: templates/team.html:165
+#: templates/team.html:171
 msgid "Contributing Team and Advisors"
 msgstr "ทีมงาน และ ที่ปรึกษา"
 
-#: templates/team.html:174
+#: templates/team.html:180
 msgid "Aure Gimon"
 msgstr "Aure Gimon"
 
-#: templates/team.html:178
+#: templates/team.html:184
 msgid "Product Designer"
-msgstr "Product Designer"
+msgstr "นักออกแบบผลิตภัณฑ์"
 
-#: templates/team.html:181
+#: templates/team.html:187
 msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
 msgstr "Aure ชำนาญการในการออกแบบสินค้าให้ตรงใจผู้ใช้ เขาเคยทำหน้าที่นี้ให้กับแบรนด์ดังๆมากมาย (Nike, Sony, Virgin) และสตาร์ทอัพหลายๆแห่งใน Silicon Valley"
 
-#: templates/team.html:191
+#: templates/team.html:197
 msgid "Derek Kan"
 msgstr "Derek Kan"
 
-#: templates/team.html:195
+#: templates/team.html:201
 msgid "Evangelist"
 msgstr "นักเผยแพร่"
 
-#: templates/team.html:198
+#: templates/team.html:204
 msgid "Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group."
 msgstr "Derek เป็นผู้บริหารสินค้าที่ต้องการให้เป็นที่รู้จักในตลาดทั่วโลก และช่องทางสื่อโฆษณาสินค้าทางเทคโนโลยี เขาเคยเป็นนักบริหารชั้นนำให้แก่ GriupM และ Omnicom Media Group"
 
-#: templates/team.html:208
+#: templates/team.html:214
 msgid "Saureen Shah"
 msgstr "Saureen Shah"
 
-#: templates/team.html:212
+#: templates/team.html:218
 msgid "Engineer/BD"
-msgstr "วิศวกร / BD"
+msgstr "วิศวกรผลิตภัณฑ์"
 
-#: templates/team.html:215
+#: templates/team.html:221
 msgid "Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube."
 msgstr "Saureen เป็นนักลงทุนและนักธุรกิจที่มีไอเดียใหม่ๆตลอดเวลา เขาร่วมก่อตั้ง และเป็น CTO ของ InstaWork ซึ่งก่อตั้งตลาดของระบบ Sharing economy และเป็นนักพัฒนาซอฟท์แวร์คนที่ 10 ของ YouTube"
 
-#: templates/team.html:225
+#: templates/team.html:231
 msgid "Ryan Angilly"
 msgstr "Ryan Angilly"
 
-#: templates/team.html:229 templates/team.html:246
+#: templates/team.html:235 templates/team.html:252
 msgid "Engineer"
 msgstr "วิศวกร"
 
-#: templates/team.html:232
+#: templates/team.html:238
 msgid "Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL."
 msgstr "Ryan มีประสบการณ์กว่า 10 ปีในสายงานพัฒนาเว็บแอปพลิเคชั่นสำหรับผู้ใช้งาน B2B ที่สามารถรองรับกลุ่มผู้ใช้งานทุกขนาด เขาเป็นผู้ก่อตั้ง Ramen และ ChartURL"
 
-#: templates/team.html:242
+#: templates/team.html:248
 msgid "Daniel Von Fange"
 msgstr "Daniel Von Fange"
 
-#: templates/team.html:249
+#: templates/team.html:255
 msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
 msgstr "Daniel เป็นนักพัฒนาซอฟท์แวร์ที่เชี่ยวชาญหลายภาษาในทุกๆชั้นของ architecture เขาเคยทำงานกับโปรเจคที่ต้องใช้ภาษา assembly ในการออกแบบเพื่อติดตามการใช้เงินของ NGO ทั่วโลกเป็นจำนวนหลายพันล้านเหรียญ"
-#: templates/team.html:259
+
+#: templates/team.html:265
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:263
+#: templates/team.html:269
 msgid "Advisor/PR"
 msgstr "ที่ปรึกษา / ประชาสัมพันธ์"
 
-#: templates/team.html:266
+#: templates/team.html:272
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "Addison เป็นผู้เชี่ยวชาญในด้านการสื่อสารและการตลาด เขาเรียนจบสาขาฟิสิกส์จาก UC Berkeley และเคยร่วมงานกับ Ethereum Foundation และ DEVCON1"
 
-#: templates/team.html:276
+#: templates/team.html:282
 msgid "Zing Yang"
 msgstr "Zing Yang"
 
-#: templates/team.html:280
+#: templates/team.html:286
 msgid "Advisor/Business Operations"
 msgstr "ที่ปรึกษา / การดำเนินธุรกิจ"
 
-#: templates/team.html:283
+#: templates/team.html:289
 msgid "Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group."
 msgstr "Zing เป็นผู้ร่วมทุนและ EIR ที่ East Ventures เธอพกประสบการณ์กว่าสิบปีในการลงทุนและการบริหารธุรกิจจากการทำงานให้ Temasek Holdings และ Capital Group"
 
-#: templates/team.html:293
+#: templates/team.html:299
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:297
+#: templates/team.html:303
 msgid "Advisor/International BD"
-msgstr "ที่ปรึกษา / International BD"
+msgstr "ที่ปรึกษาเรื่องผลิตภัณฑ์"
 
-#: templates/team.html:300
+#: templates/team.html:306
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "Melody เป็นผู้ก่อตั้ง Spartan Group ซึ่งเป็นผู้ให้คำปรึกษาและการลงทุนด้วย blockchain เธอเป็นผู้ให้ทุนระยะตั้งตัวแก่ TenX และเป็นนักวางแผนให้แก่ Gifto และ Appcoins"
 
-#: templates/team.html:310
+#: templates/team.html:316
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/team.html:314 templates/team.html:331
+#: templates/team.html:320 templates/team.html:337
 msgid "Advisor"
 msgstr "ที่ปรึกษา"
 
-#: templates/team.html:317
+#: templates/team.html:323
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "Paul เป็นพาร์ทเนอร์กับ Pantera Capital และเป็นที่ปรึกษาให้แก่โปรเจคที่ประสบความสำเร็จอย่างมากต่างๆที่ใช้ cryptocurrency รวมถึง Orchid Labs, Enigma และ ICON"
 
-#: templates/team.html:327
+#: templates/team.html:333
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:334
+#: templates/team.html:340
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "Joey เป็นผู้ร่วมก่อตั้ง Augur ซึ่งเป็น prediction market และ oracle system แบบกระจายศูนย์แห่งแรกของโลก เขาเป็น Co-Chief Investment Officer ที่ Pantera Capital อีกด้วย"
 
-#: templates/team.html:378
+#: templates/team.html:384
 msgid "Investors"
 msgstr "นักลงทุน"
 
-#: views/web_views.py:62 views/web_views.py:106
+#: templates/warning.html:5
+msgid "<strong>Don't get Phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
+msgstr "<strong> อย่าพลาด! </strong> URL อย่างเป็นทางการสำหรับโปรโตคอล Origin คือ <strong> www.originprotocol.com </strong> โปรดบุ๊กมาร์กและระวัง URL ที่คล้ายกัน"
+
+#: views/web_views.py:101 views/web_views.py:156
 msgid "Please enter your name"
 msgstr "กรุณากรอกชื่อของคุณ"
 
-#: views/web_views.py:64 views/web_views.py:110
+#: views/web_views.py:103 views/web_views.py:160
 msgid "Please enter your email"
 msgstr "กรุณากรอกอีเมล์ของคุณ"
 
-#: views/web_views.py:66
+#: views/web_views.py:105
 msgid "An error occured"
 msgstr "ข้อผิดพลาดบางประการเกิดขึ้น"
 
-#: views/web_views.py:68
+#: views/web_views.py:107
 msgid "Please enter your desired allocation"
 msgstr "กรุณากรอกจำนวนจัดสรร ที่ต้องการ"
 
-#: views/web_views.py:70
+#: views/web_views.py:109
 msgid "Please agree to the important notice"
 msgstr "กรุณายินยอมรับหนังสือชี้แจงอันสำคัญ"
 
-#: views/web_views.py:108
+#: views/web_views.py:111 views/web_views.py:162
+msgid "Please prove you are not a robot."
+msgstr "โปรดพิสูจน์ว่าคุณไม่ใช่หุ่นยนต์"
+
+#: views/web_views.py:158
 msgid "Please enter your company name"
 msgstr "กรุณากรอกชื่อบริษัทของคุณ"
 
 #~ msgid "We'll be announcing our partners soon!"
 #~ msgstr "เราจะประกาศ partner ต่างๆในไม่ช้านี้"
+
+#~ msgid "The sharing economy without intermediaries: Build on Origin"
+#~ msgstr "Sharing economy ที่เป็นอิสระจากคนกลาง: สร้างบน Origin"
+
+#~ msgid "<strong>Teams all over the world are building on Origin's protocols. We're looking for more amazing people to join our mission.</strong> Whether you're an existing blockchain company or a traditional marketplace thinking about the blockchain, we'd love to hear from you! Fill out the form below and we'll get back to you shortly."
+#~ msgstr "<strong>Origin Protocol ได้รับการยอมรับอย่างแพร่หลายจากทีมนักพัฒนาทั่วโลก และยังมีที่ว่างสำหรับคุณเพื่อมาร่วมพันธกิจนี้ให้บรรลุเป้าหมายไปกับเรา</strong> ไม่ว่าคุณจะมีธุรกิจที่ใช้ blockchain อยู่แล้ว หรือเป็นธุรกิจที่ประสงค์จะนำ blockchain มาใช้ กรุณาแจ้งความต้องการของคุณให้เราทราบ! กรอกแบบฟอร์มนี้แล้วเราจะติดต่อกลับโดยเร็วที่สุด"
+
+#~ msgid "Interested in building?"
+#~ msgstr "สนใจที่จะสร้าง?"
+
+#~ msgid "Stay in touch?"
+#~ msgstr "ต้องการรับข่าวสารจากเรา?"
+
+#~ msgid "Join Our Mailing List"
+#~ msgstr "ร่วมรับข้อมูลข่าวสารจากอีเมล"
+
+#~ msgid "Want to contribute?"
+#~ msgstr "ต้องการมีส่วนร่วมหรือไม่?"
+
+#~ msgid "Join Our Slack"
+#~ msgstr "คุยกันใน Slack"
+
+#~ msgid "Origin, Inc."
+#~ msgstr "Origin, Inc"
+
+#~ msgid "Slack"
+#~ msgstr "Slack"
+
+#~ msgid "Read the Product Brief"
+#~ msgstr "อ่าน Product Brief"
+
+#~ msgid "Companies building on the Origin Protocol"
+#~ msgstr "บริษัทที่กำลังสร้างบน Origin Protocol"
+
+#~ msgid "View Github"
+#~ msgstr "ดู Github"
+
+#~ msgid "March 2018"
+#~ msgstr "มีนาคม 2018"
+
+#~ msgid "If Airbnb were being started today, it would’ve been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
+#~ msgstr "ถ้า Airbnb เพิ่งเกิดขึ้นวันนี้ Airbnb จะต้องใช้ blockchain แบบ peer-to-peer cooperative model อย่างแน่น่อน - Joey Krug, Augur"
+
+#~ msgid "The sharing economy without intermediaries: Origin Protocol Presale"
+#~ msgstr "Sharing economy โดยไม่มีตัวกลาง: Origin Protocol Presale"
+
+#~ msgid "The sharing economy without intermediaries: Origin Protocol Team"
+#~ msgstr "Sharing economy โดยไม่มีตัวกลาง: Origin Protocol Team"
 
