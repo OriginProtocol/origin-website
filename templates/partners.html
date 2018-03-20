@@ -49,8 +49,11 @@
                   <div class="col-12 col-sm-6 col-md-2">
                     <div class="img-graphic">
                       <a href="{{ partner.url }}" target="_blank">
-                        <img src="/static/img/partners/{{ partner.name }}.png""
-                          class="{{'%s-logo wow fadeInUp' %partner.name }}" title="{{ partner.desc }}" data-toggle="tooltip">
+                        <img src="/static/img/partners/{{ partner.name }}.png"
+                          class="{{'%s-logo wow fadeInUp' %partner.name }}"
+                          title="{{ partner.desc }}"
+                          data-toggle="tooltip"
+                          alt="{{ partner.name }} logo">
                       </a>
                     </div>
                   </div>
@@ -63,8 +66,11 @@
                   <div class="col-12 col-sm-6 col-md-2">
                     <div class="img-graphic">
                       <a href="{{ partner.url }}" target="_blank">
-                        <img src="/static/img/partners/{{ partner.name }}.png""
-                          class="{{'%s-logo' %partner.name }}" title="{{ partner.desc }}" data-toggle="tooltip">
+                        <img src="/static/img/partners/{{ partner.name }}.png"
+                          class="{{'%s-logo' %partner.name }}"
+                          title="{{ partner.desc }}"
+                          data-toggle="tooltip"
+                          alt="{{ partner.name }} logo">
                       </a>
                     </div>
                   </div>
@@ -104,7 +110,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="container foreground-content">
-          <a name="join_our_mission"></a>
+          <a id="join_our_mission"></a>
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="build-on-origin-form">
@@ -136,7 +142,7 @@
                   </div>
                   <div class="form-group flex">
                     <div class="flex-offset"></div>
-                    <textarea name="note" id="note" type="textarea" class="form-control"></textarea>
+                    <textarea name="note" id="note" class="form-control"></textarea>
                   </div>
                   <div class="form-group flex">
                     <div class="flex-offset"></div>
@@ -154,7 +160,8 @@
                 <img src="/static/img/partners-graphic.png"
                   srcset="/static/img/partners-graphic@2x.png 2x,
                   /static/img/partners-graphic@3x.png 3x"
-                  class="partners-graphic">
+                  class="partners-graphic"
+                  alt="partners">
               </div>
             </div>
           </div>
@@ -168,7 +175,7 @@
 {% endblock %}
 
 {% block extra_scripts %}
-    <script type='text/javascript'>
-      alertify.log("<a href='#join_our_mission'><button class='btn btn-primary btn-min-size'>Join Our Mission</button></a>", "default", 0);
+    <script>
+      alertify.log("<a href='#join_our_mission' role='button' class='btn btn-primary btn-min-size'>Join Our Mission</a>", "default", 0);
     </script>
 {% endblock %}

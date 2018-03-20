@@ -23,7 +23,8 @@
           <div class="img-graphic">
             <img src="/static/img/hero-devices.png"
               srcset="/static/img/hero-devices@2x.png 2x, /static/img/hero-devices@3x.png 3x"
-              class="hero-devices">
+              class="hero-devices"
+              role="presentation" />
           </div>
         </div>
       </div>
@@ -57,7 +58,8 @@
                 <img src="/static/img/platform-graphic.png"
                   srcset="/static/img/platform-graphic@2x.png 2x,
                   /static/img/platform-graphic@3x.png 3x"
-                  class="platform-graphic">
+                  class="platform-graphic"
+                  role="presentation" />
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -68,18 +70,14 @@
                 {{ gettext("We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more.") }}
               </p>
               <div class="btn-container">
-                <a href="/product-brief">
-                  <button class="product-brief-btn btn btn-primary btn-min-size">
-                    {{ gettext("Read Our Product Brief") }}
-                  </button>
+                <a href="/product-brief" role="button" class="product-brief-btn btn btn-primary btn-min-size">
+                  {{ gettext("Read Our Product Brief") }}
                 </a>
               </div>
               <div class="btn-container">
-                <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
-                  <button class="telegram-btn btn btn-outline-primary btn-min-size">
-                    <i class='fab fa-telegram-plane'></i>
-                    {{ gettext("Join Our Telegram") }}
-                  </button>
+                <a href="{{ universal.TELEGRAM_URL }}" role="button" class="telegram-btn btn btn-outline-primary btn-min-size" target="_blank">
+                  <i class='fab fa-telegram-plane'></i>
+                  {{ gettext("Join Our Telegram") }}
                 </a>
               </div>
             </div>
@@ -101,10 +99,8 @@
                 {{ gettext("Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission.") }}
               </p>
               <div class="btn-container">
-                <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">
-                  <button class="partners-btn btn btn-primary btn-min-size">
-                    {{ gettext("View All Partners") }}
-                  </button>
+                <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}" role="button" class="partners-btn btn btn-primary btn-min-size">
+                  {{ gettext("View All Partners") }}
                 </a>
               </div>
             </div>
@@ -112,28 +108,32 @@
               <div class="card-deck">
                 <div class="partner-card">
                   <img src="/static/img/partners/propy-dark.png"
-                    class="propy-logo">
+                    class="propy-logo"
+                    alt="Propy logo">
                   <p>
                     {{ gettext("Propy is building their property manager marketplace DApp with Origin Protocol.") }}
                   </p>
                 </div>
                 <div class="partner-card">
                   <img src="/static/img/partners/wetrust.png"
-                    class="wetrust-logo">
+                    class="wetrust-logo"
+                    alt="WeTrust logo">
                   <p>
                     {{ gettext("DApps built on Origin will be able to use WeTrust’s decentralized insurance protocols to protect users.") }}
                   </p>
                 </div>
                 <div class="partner-card next">
                   <img src="/static/img/partners/beetoken.png"
-                    class="beetoken-logo">
+                    class="beetoken-logo"
+                    alt="Bee Token logo">
                   <p>
                     {{ gettext("Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol.") }}
                   </p>
                 </div>
                 <div class="partner-card current">
                   <img src="/static/img/partners/canya.png"
-                    class="canya-logo">
+                    class="canya-logo"
+                    alt="Canya logo">
                   <p>
                     {{ gettext("CanYa is building their “marketplace of services” with Origin Protocol for the gig economy.") }}
                   </p>
@@ -167,7 +167,8 @@
             <img src="/static/img/video.png"
               srcset="/static/img/video@2x.png 2x,
                 /static/img/video@3x.png 3x"
-              class="video wow fadeInUp">
+              class="video wow fadeInUp"
+              alt="video">
           </div>
         </div>
         <div class="col-12 col-md-5">
@@ -178,18 +179,14 @@
             {{ gettext("Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web.") }} <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Get in touch to learn more.") }}</a>
           </p>
           <div class="btn-container demo-btn-container">
-            <a href="https://demo.originprotocol.com" target="_blank">
-              <button class="btn btn-outline-primary btn-min-size">
-                {{ gettext("Try the Demo") }}
-              </button>
+            <a href="https://demo.originprotocol.com" role="button" class="btn btn-outline-primary btn-min-size" target="_blank">
+              {{ gettext("Try the Demo") }}
             </a>
           </div>
           <div class="btn-container github-btn-container">
-            <a href="https://github.com/OriginProtocol/demo-dapp" target="_blank">
-              <button class="btn btn-outline-primary btn-min-size">
-                <i class="fab fa-github"></i>
-                {{ gettext("View GitHub") }}
-              </button>
+            <a href="https://github.com/OriginProtocol/demo-dapp" role="button" class="btn btn-outline-primary btn-min-size" target="_blank">
+              <i class="fab fa-github"></i>
+              {{ gettext("View GitHub") }}
             </a>
           </div>
         </div>
@@ -207,10 +204,8 @@
             {{ gettext("Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround.") }}
           </p>
           <div class="btn-container">
-            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">
-              <button class="btn btn-primary btn-min-size">
-                {{ gettext("Read the Whitepaper") }}
-              </button>
+            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
+              {{ gettext("Read the Whitepaper") }}
             </a>
           </div>
         </div>
@@ -219,7 +214,8 @@
             <img src="/static/img/middlemen-graphic.png"
               srcset="/static/img/middlemen-graphic@2x.png 2x,
                 /static/img/middlemen-graphic@3x.png 3x"
-              class="middlemen-graphic wow fadeInUp">
+              class="middlemen-graphic wow fadeInUp"
+              alt="middlemen">
           </div>
         </div>
       </div>
@@ -247,7 +243,8 @@
                 <img src="/static/img/features-graphic.png"
                   srcset="/static/img/features-graphic@2x.png 2x,
                   /static/img/features-graphic@3x.png 3x"
-                  class="features-graphic wow fadeInUp">
+                  class="features-graphic wow fadeInUp"
+                  alt="features">
               </div>
             </div>
             <div class="col-12 col-md-5">
@@ -260,7 +257,8 @@
                     <img src="/static/img/feature-1.png"
                     srcset="/static/img/feature-1@2x.png 2x,
                       /static/img/feature-1@3x.png 3x"
-                    class="feature-1">
+                    class="feature-1"
+                    role="presentation">
                   </div>
                   <p class="feature-description">
                     {{ gettext("Smart contracts enable secure and reliable payments directly from one party to another") }}
@@ -271,7 +269,8 @@
                     <img src="/static/img/feature-2.png"
                     srcset="/static/img/feature-2@2x.png 2x,
                       /static/img/feature-2@3x.png 3x"
-                    class="feature-2">
+                    class="feature-2"
+                    role="presentation">
                   </div>
                   <p class="feature-description">
                     {{ gettext("Protocol schemas support hundreds of listing types, including custom verticals") }}
@@ -282,7 +281,8 @@
                     <img src="/static/img/feature-3.png"
                     srcset="/static/img/feature-3@2x.png 2x,
                       /static/img/feature-3@3x.png 3x"
-                    class="feature-3">
+                    class="feature-3"
+                    role="presentation">
                   </div>
                   <p class="feature-description">
                     {{ gettext("Open and shared data encourages innovation by developers and businesses") }}
@@ -293,7 +293,8 @@
                     <img src="/static/img/feature-4.png"
                     srcset="/static/img/feature-4@2x.png 2x,
                       /static/img/feature-4@3x.png 3x"
-                    class="feature-4">
+                    class="feature-4"
+                    role="presentation">
                   </div>
                   <p class="feature-description">
                     {{ gettext("Identity verification and reputation data on the blockchain ensures safe, reputable partners") }}
@@ -321,7 +322,8 @@
                     <img src="/static/img/ethereum-logo.png"
                       srcset="/static/img/ethereum-logo@2x.png 2x,
                         /static/img/ethereum-logo@3x.png 3x"
-                      class="ethereum-logo">
+                      class="ethereum-logo"
+                      alt="Ethereum logo">
                   </div>
                 </div>
                 <div class="col-6">
@@ -329,7 +331,8 @@
                     <img src="/static/img/ipfs-logo.png"
                       srcset="/static/img/ipfs-logo@2x.png 2x,
                         /static/img/ipfs-logo@3x.png 3x"
-                      class="ipfs-logo">
+                      class="ipfs-logo"
+                      alt="IPFS logo">
                   </div>
                 </div>
                 <div class="col-6">
@@ -337,7 +340,8 @@
                     <img src="/static/img/x-logo.png"
                       srcset="/static/img/x-logo@2x.png 2x,
                         /static/img/x-logo@3x.png 3x"
-                      class="x-logo">
+                      class="x-logo"
+                      alt="X logo">
                   </div>
                 </div>
                 <div class="col-6">
@@ -345,7 +349,8 @@
                     <img src="/static/img/react-logo.png"
                       srcset="/static/img/react-logo@2x.png 2x,
                         /static/img/react-logo@3x.png 3x"
-                      class="react-logo">
+                      class="react-logo"
+                      alt="React logo">
                   </div>
                 </div>
               </div>
@@ -355,7 +360,8 @@
                 <img src="/static/img/tech-stack-graphic.png"
                   srcset="/static/img/tech-stack-graphic@2x.png 2x,
                   /static/img/tech-stack-graphic@3x.png 3x"
-                  class="tech-stack-graphic wow fadeInUp">
+                  class="tech-stack-graphic wow fadeInUp"
+                  alt="tech stack">
               </div>
             </div>
           </div>
@@ -451,19 +457,19 @@
       <div class="row">
         <div class="col-12">
           <h2>
-            <a name="mailinglist">{{ gettext("Join us in building the sharing economy of tomorrow") }}</a>
+            {{ gettext("Join us in building the sharing economy of tomorrow") }}
           </h2>
           <p>
             {{ gettext("Sign up for our mailing list and be first to learn of any Origin news!") }}
           </p>
-          <div class="form-group">
-            <form method="post" action="/mailing-list/join" id="mailing-list">
-            <input id="email" type="email" name="email" class="form-control email-signup-input" placeholder="{{ gettext("Enter email") }}" />
-          </div>
-          <div class="btn-container">
-            <input type="submit" class="btn btn-primary btn-min-size" value="{{ gettext("Join the Community") }}">
-            </form>
-          </div>
+          <form method="post" action="/mailing-list/join" id="mailing-list">
+            <div class="form-group">
+              <input id="email" type="email" name="email" class="form-control email-signup-input" placeholder="{{ gettext('Enter email') }}" />
+            </div>
+            <div class="btn-container">
+              <input type="submit" class="btn btn-primary btn-min-size" value="{{ gettext('Join the Community') }}" />
+            </div>
+          </form>
           <div id='signup-result'></div>
           <br>
         </div>
@@ -483,14 +489,14 @@
             <div class="press-mention">
               <div class="press-logo-wrapper">
                 <a href="https://www.coindesk.com/pantera-invests-3-million-sharing-economy-token-origin/" target="_blank">
-                  <img src="/static/img/press-coindesk.png"/>
+                  <img src="/static/img/press-coindesk.png" alt="Coindesk press" />
                 </a>
               </div>
               <div class="press-quote">
-                <a href="https://twitter.com/intent/tweet?text={{ gettext("If Airbnb were being started today, it would\'ve been a peer-to-peer cooperative model based on a blockchain - @joeykrug re: @originprotocol") | quote_plus }}" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text={{ gettext('If Airbnb were being started today, it would\'ve been a peer-to-peer cooperative model based on a blockchain - @joeykrug re: @originprotocol') | quote_plus }}" target="_blank">
                   {{ gettext("If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur") }}
                   &nbsp;
-                  <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -499,14 +505,14 @@
             <div class="press-mention">
               <div class="press-logo-wrapper">
                 <a href="https://bitcoinmagazine.com/articles/decentralizing-sharing-economy-blockchain-technology/" target="_blank">
-                  <img src="/static/img/press-btcmag.png"/>
+                  <img src="/static/img/press-btcmag.png" alt="BTC Magazine press" />
                 </a>
               </div>
               <div class="press-quote">
-                <a href="https://twitter.com/intent/tweet?text={{ gettext("@originprotocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform.") | quote_plus }}" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text={{ gettext('@originprotocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform.') | quote_plus }}" target="_blank">
                   {{ gettext("The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform.") }}
                   &nbsp;
-                  <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -515,14 +521,14 @@
             <div class="press-mention">
               <div class="press-logo-wrapper">
                 <a href="https://www.coindesk.com/tokens-investors-talking-boost-compound-pantera/" target="_blank">
-                  <img src="/static/img/press-coindesk.png"/>
+                  <img src="/static/img/press-coindesk.png" alt="Coindesk press" />
                 </a>
               </div>
               <div class="press-quote">
-                <a href="https://twitter.com/intent/tweet?text={{ gettext("@originprotocol hopes to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything.") | quote_plus }}" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text={{ gettext('@originprotocol hopes to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything.') | quote_plus }}" target="_blank">
                   {{ gettext("Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything.") }}
                   &nbsp;
-                  <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -531,14 +537,14 @@
             <div class="press-mention">
               <div class="press-logo-wrapper">
                 <a href="https://www.banklesstimes.com/2018/01/17/origin-protocol-using-blockchain-base-decentralized-sharing-economy/" target="_blank">
-                  <img src="/static/img/press-banklesstimes.png"/>
+                  <img src="/static/img/press-banklesstimes.png" alt="Bankless Times press" />
                 </a>
               </div>
               <div class="press-quote">
-                <a href="https://twitter.com/intent/tweet?text={{ gettext("What if open-source software like @originprotocol can replace dozens of multi-million or even multi-billion dollar companies?") | quote_plus }}" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text={{ gettext('What if open-source software like @originprotocol can replace dozens of multi-million or even multi-billion dollar companies?') | quote_plus }}" target="_blank">
                   {{ gettext("What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?") }}
                   &nbsp;
-                  <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -547,14 +553,14 @@
             <div class="press-mention">
               <div class="press-logo-wrapper">
                 <a href="https://cointelegraph.com/news/startup-to-give-beauty-industry-a-blockchain-facelift" target="_blank">
-                  <img src="/static/img/press-cointelegraph.png"/>
+                  <img src="/static/img/press-cointelegraph.png" alt="Coin Telegraph press" />
                 </a>
               </div>
               <div class="press-quote">
-                <a href="https://twitter.com/intent/tweet?text={{ gettext("@originprotocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries.") | quote_plus }}" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text={{ gettext('@originprotocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries.') | quote_plus }}" target="_blank">
                   {{ gettext("Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries.") }}
                   &nbsp;
-                  <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -563,14 +569,14 @@
             <div class="press-mention">
               <div class="press-logo-wrapper">
                 <a href="https://thenextweb.com/cryptocurrency/2018/02/05/beauty-and-the-blockchain-this-company-aims-do-decentralize-cosmetic-the-industry/" target="_blank">
-                  <img src="/static/img/press-tnw.png"/>
+                  <img src="/static/img/press-tnw.png" alt="TheNextWeb press" />
                 </a>
               </div>
               <div class="press-quote">
-                <a href="https://twitter.com/intent/tweet?text={{ gettext("@originprotocol uses the Ethereum blockchain to enable buyers and sellers to interact with each other in an effective manner.") | quote_plus }}" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text={{ gettext('@originprotocol uses the Ethereum blockchain to enable buyers and sellers to interact with each other in an effective manner.') | quote_plus }}" target="_blank">
                   {{ gettext("Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner.") }}
                   &nbsp;
-                  <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -587,7 +593,7 @@
 {% block extra_scripts %}
   <script>
     setTimeout(function() {
-      alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' target='_blank'><button class='telegram-btn btn btn-primary btn-min-size'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</button></a></div>", "default", 0)
+      alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' role='button' class='telegram-btn btn btn-primary btn-min-size' target='_blank'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</a></div>", "default", 0)
     }, 2000);
   </script>
   <script>
