@@ -32,35 +32,55 @@ Translated files live in `translations/<Language Code>/LC_MESSAGES/messages.po`.
 - `messages.po` files contain specific language translations.
 - `messages.mo` files are binary, compiled versions of the `.po` files and should never be edited directly.
 
-## Updating for new/edited English strings
+## Extract new/edited English strings for translation
 
 1. Search source files and extract strings into a file `messages.pot`
+
 ```
 pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
 ```
 
 2. Update `.po` translations with new strings.
+
 ```
 pybabel update -i messages.pot -d translations --no-wrap
 ```
 
 The `.po` files are now ready for translation.
 
-## Adding/updating translations
+## Updating translations on website
 
-After downloading or manual edits to `.po` files, you must compile translations:
+1. Download the new translations from Google Translator Toolkit. The file will be called `archive.zip` by default. (Note, you must download 2 or more languages to get a `.zip` file.)
+
+2. In the `translations` directory, run:
+
 ```
-pybabel compile -f -d  translations
+python extract_po_files_from_gtt_zip.py ~/Downloads/archive.zip
 ```
-(The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy')
+This will grab the new `.po` files for each langauge, and copy them to the correct place. Note this will overwrite the existing `.po` files.
 
-If you get an error `ValueError: expected only letters, got u''`, run the python script `fix_po_files.py`. This error is caused by a `.po` file containg an empty language header: `"Language: \n"`, where it should be e.g. `"Language: de\n"`
+3. Fix common errors:
 
-This step will generate compiled `.mo` files from each `.po`.  These binary files used to actaully render translated versions of the site.
+```
+python fix_po_files.py
+```
+
+4. Compile translations into `.mo` files:
+
+```
+pybabel compile -f -d  .
+```
+The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy'
 
 Note: `.mo` files must committed in the repo in order for them to get on heroku.
 
-## Add New language
+5. From repo root directory, run the website code to see new translations:
+
+```
+python main.py
+```
+
+## Adding a new language
 
 ```
 pybabel init -i messages.pot -d translations -l <Language Code>

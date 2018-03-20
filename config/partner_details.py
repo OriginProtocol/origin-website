@@ -4,11 +4,13 @@ from flask_babel import lazy_gettext
 # so that the text can be translated. See the existing partner descriptions
 # as examples.
 
+# NOTE: Quote marks in this text need to be replaced with the html code: &quot;
+# More fancy, left and right quotes may be used: &ldquo; and &rdquo;
 PARTNERS = [
     {
     "name":"canya",
     "url":"https://canya.io/",
-    "desc":lazy_gettext("CanYa is building a blockchain-powered \"marketplace of services\" with Origin Protocol for the gig economy and freelancing.")
+    "desc":lazy_gettext("CanYa is building a blockchain-powered &ldquo;marketplace of services&rdquo; with Origin Protocol for the gig economy and freelancing.")
     },
     {
     "name":"beetoken",
@@ -34,6 +36,11 @@ PARTNERS = [
     "name":"propy",
     "url":"https://propy.com/",
      "desc":lazy_gettext("Propy is building their Propy Property Management Platform to connect international real estate investors with local property managers using Origin Protocol.")
+    },
+    {
+    "name":"blocklancer",
+    "url":"https://blocklancer.net/",
+     "desc":lazy_gettext("Blocklancer is buidiling a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
     },
     {
     "name":"antiq-mall",
