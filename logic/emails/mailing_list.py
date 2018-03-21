@@ -108,7 +108,7 @@ def send_one_off(email_type):
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
         for e in db_models.Interest.query.all():
-            print e.email
+            print(e.email)
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
 
