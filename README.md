@@ -32,14 +32,64 @@ Install requirements
 pip install -r requirements.txt
 ```
 
+<<<<<<< HEAD
+### Optional but Recommended
+Installing redis is required to run background jobs via Celery.
+Right now, Celery is only being used to send emails. In the near
+future, however, we will be relying on Celery for additional
+functionality. In the spirit of keeping things backwards compatible,
+redis is not required as of this version, but it will be soon.
+
+Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+Install redis locally.
+
+On OSX you can use `brew` to install redis:
+```
+brew install redis
+```
+
+### Setting up the environment
+Create a file named `.env`  in this directory that looks something like this:
+
+    DEV_EMAIL = "foo@bar.com"
+    DEBUG = True
+
+    HOST = localhost
+    HTTPS = False
+
+    # Optional but recommended. If you use redis for other projects locally,
+    # make sure to use a unique database number if 8 is already being used.
+    # If you are not using redis, do not define this variable.
+    REDIS_URL = redis://127.0.0.1:6379/8
+
+    PROJECTPATH = "/"
+
+    FLASK_SECRET_KEY = putyoursupersecretkeyhere
+
+    DATABASE_URL = postgresql://localhost/origin
+
+    SENDGRID_API_KEY = putyoursupersecretkeyhere
+
+    TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
+    STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
+=======
 Rename the file `sample.env` to `.env`, and update env variables as desired.
 ```
 mv sample.env .env
 ```
+>>>>>>> 1acf4322168a9b679b68d40434aededa5a37cdfb
 
-Run it!
+## Run it!
+
+Without redis:
 ```
 python main.py
+```
+
+With redis:
+```
+heroku local
 ```
 
 Open browser to view
