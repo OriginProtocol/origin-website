@@ -36,4 +36,4 @@ for root, dirnames, filenames in os.walk('.'):
         new_pathname = os.path.join(destination_dir, new_file_name)
 
         copyfile(pathname, new_pathname)
-        print "%s --> %s" % (pathname, new_pathname)
+        print("%s --> %s" % (pathname, new_pathname))

@@ -17,7 +17,7 @@ babel = Babel(app)
 
 recaptcha = ReCaptcha(app=app)
 if not recaptcha.is_enabled:
-    print "Warning: recaptcha is not is_enabled"
+    print("Warning: recaptcha is not is_enabled")
 
 @app.before_request
 def beforeRequest():
@@ -122,9 +122,9 @@ def unsubscribe():
 
 @app.route('/webhook/fullcontact', methods=['GET','POST'])
 def fullcontact_webhook():
-    print 'POSTED!!'
-    print request.get_json()
-    print request.json
+    print('POSTED!!')
+    print(request.get_json())
+    print(request.json)
     return redirect('/', code=302)
 
 @app.route('/<lang_code>/build-on-origin')
