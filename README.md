@@ -47,6 +47,28 @@ open http://127.0.0.1:5000/
 
 **Problems?** Hit us up in the `engineering` channel on [Discord](https://www.originprotocol.com/discord) if you need help.
 
+## Run the Tests
+
+
+Throughout the development process and before committing or deploying, run:
+
+```bash
+pytest
+```
+
+Run individual test files simply as:
+
+```bash
+pytest path/to/test.py
+```
+
+Run a single test case, or an individual test, using:
+
+```bash
+pytest path/to/test.py::test_case_name
+```
+
+
 ## Localization
 See [translations](translations) directory. 
 
