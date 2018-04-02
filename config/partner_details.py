@@ -8,6 +8,11 @@ from flask_babel import lazy_gettext
 # More fancy, left and right quotes may be used: &ldquo; and &rdquo;
 PARTNERS = [
     {
+    "name":"servishero",
+    "url":"https://servishero.com/",
+     "desc":lazy_gettext("ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol.")
+    },
+    {
     "name":"canya",
     "url":"https://canya.io/",
     "desc":lazy_gettext("CanYa is building a blockchain-powered &ldquo;marketplace of services&rdquo; with Origin Protocol for the gig economy and freelancing.")
@@ -28,9 +33,9 @@ PARTNERS = [
      "desc":lazy_gettext("Storiqa is building an ecommerce portal for small businesses to access a global market of cryptocurrency buyers on Origin Protocol.")
     },
     {
-    "name":"servishero",
-    "url":"https://servishero.com/",
-     "desc":lazy_gettext("ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol.")
+    "name":"blocklancer",
+    "url":"https://blocklancer.net/",
+     "desc":lazy_gettext("Blocklancer is buidiling a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
     },
     {
     "name":"propy",
@@ -38,34 +43,24 @@ PARTNERS = [
      "desc":lazy_gettext("Propy is building their Propy Property Management Platform to connect international real estate investors with local property managers using Origin Protocol.")
     },
     {
-    "name":"blocklancer",
-    "url":"https://blocklancer.net/",
-     "desc":lazy_gettext("Blocklancer is buidiling a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
+    "name":"deco-network",
+    "url":"https://deco.network/",
+     "desc":lazy_gettext("Deconet is their code marketplace with Origin Protocol where developers get rewarded when their code is used.")
     },
     {
-    "name":"antiq-mall",
-    "url":"https://antiqmall-ico.io/",
-     "desc":lazy_gettext("AntiqMall is building an antiques and art objects marketplace on the blockchain using Origin Protocol.")
+    "name":"hirego",
+    "url":"http://hirego.io/",
+     "desc":lazy_gettext("HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol.")
     },
     {
-    "name":"aworker",
-    "url":"https://aworker.io/",
-     "desc":lazy_gettext("Aworker is building a next generation recruitment platform using Origin Protocol to disrupt the HR industry.")
+    "name":"pinprotocol",
+    "url":"https://pinprotoco.io/",
+     "desc":lazy_gettext("The decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
     },
     {
-    "name":"acquaint",
-    "url":"://acquaint.biz/",
-     "desc":lazy_gettext("Acquaint is building a peer-to-peer real estate and asset trading platform on the blockchain using Origin Protocol.")
-    },
-    {
-    "name":"snagride",
-    "url":"https://www.snagride.com/",
-     "desc":lazy_gettext("SnagRide is building a mid to long distance ride-sharing application on the blockchain using Origin Protocol.")
-    },
-    {
-    "name":"edgecoin",
-    "url":"https://www.edgecoin.io/",
-     "desc":lazy_gettext("Edgecoin is building a peer-to-peer education and e-learning platform using with blockchain-secured certificates and records on Origin Protocol.")
+    "name":"selena",
+    "url":"https://selena.id/",
+     "desc":lazy_gettext("Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol.")
     },
     {
     "name":"jolyy",
@@ -73,9 +68,34 @@ PARTNERS = [
      "desc":lazy_gettext("JOLYY is building a fair and low-cost beauty booking platform on the blockchain using Origin Protocol.")
     },
     {
+    "name":"antiq-mall",
+    "url":"https://antiqmall-ico.io/",
+     "desc":lazy_gettext("AntiqMall is building an antiques and art objects marketplace on the blockchain using Origin Protocol.")
+    },
+    {
     "name":"blockfood",
     "url":"https://blockfood.io/",
      "desc":lazy_gettext("BlockFood is building a decentralized food ordering and delivery platform on Origin Protocol. BlockFood is a non-profit project from the Open Sharing Economy Foundation.")
+    },
+    {
+    "name":"snagride",
+    "url":"https://www.snagride.com/",
+     "desc":lazy_gettext("SnagRide is building a mid to long distance ride-sharing application on the blockchain using Origin Protocol.")
+    },
+    {
+    "name":"aworker",
+    "url":"https://aworker.io/",
+     "desc":lazy_gettext("Aworker is building a next generation recruitment platform using Origin Protocol to disrupt the HR industry.")
+    },
+    {
+    "name":"property2chain",
+    "url":"https://www.property2chain.io/",
+     "desc":lazy_gettext("Property2chain is building a peer-to-peer real estate and asset trading platform on the blockchain using Origin Protocol.")
+    },
+    {
+    "name":"edgecoin",
+    "url":"https://www.edgecoin.io/",
+     "desc":lazy_gettext("Edgecoin is building a peer-to-peer education and e-learning platform using with blockchain-secured certificates and records on Origin Protocol.")
     },
     {
     "name":"galaxy-esolutions",
@@ -118,11 +138,6 @@ PARTNERS = [
      "desc":lazy_gettext("Lotus is building a decentralized blockchain-based travel agency on Origin Protocol.")
     },
     {
-    "name":"deco-network",
-    "url":"https://deco.network/",
-     "desc":lazy_gettext("Deconet is their code marketplace with Origin Protocol where developers get rewarded when their code is used.")
-    },
-    {
     "name":"thegastronomie",
     "url":"http://token.thegastronomie.com",
      "desc":lazy_gettext("The Gastronomie is a blockchain-enabled marketplace for high end culinary and cultural experiences built on Origin Protocol.")
@@ -138,11 +153,6 @@ PARTNERS = [
      "desc":lazy_gettext("CashBag is a global marketplace on the blockchain built using Origin Protocol that provides powerful rewards to consumers.")
     },
     {
-    "name":"selena",
-    "url":"https://selena.id/",
-     "desc":lazy_gettext("Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol.")
-    },
-    {
     "name":"fintechbloq",
     "url":"http://fintechbloq.com/",
      "desc":lazy_gettext("Fintech Bloq is building their marketplace of blockchain and banking services on Origin Protocol.")
@@ -151,11 +161,6 @@ PARTNERS = [
     "name":"deedcoin",
     "url":"https://www.deedcoinlaunch.com/",
      "desc":lazy_gettext("Deedcoin is building a platform that provides an alternative to the MLS and 6% real estate commissions using Origin Protocol.")
-    },
-    {
-    "name":"hirego",
-    "url":"http://hirego.io/",
-     "desc":lazy_gettext("HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol.")
     },
     {
     "name":"craftr",
@@ -171,5 +176,10 @@ PARTNERS = [
     "name":"swipecrypto",
     "url":"https://swipecrypto.com/",
      "desc":lazy_gettext("SwipeCrypto is building their app and data marketplace on the blockchain using Origin Protocol")
+    },
+    {
+    "name":"immvrse",
+    "url":"https://immvr.se/",
+     "desc":lazy_gettext("ImmVRse is building their marketplace for virtual reality content on Origin Protocol.")
     },
 ]
