@@ -53,6 +53,11 @@ PARTNERS = [
      "desc":lazy_gettext("HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol.")
     },
     {
+    "name":"pinprotocol",
+    "url":"https://pinprotoco.io/",
+     "desc":lazy_gettext("The decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
+    },
+    {
     "name":"selena",
     "url":"https://selena.id/",
      "desc":lazy_gettext("Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol.")
@@ -171,5 +176,10 @@ PARTNERS = [
     "name":"swipecrypto",
     "url":"https://swipecrypto.com/",
      "desc":lazy_gettext("SwipeCrypto is building their app and data marketplace on the blockchain using Origin Protocol")
+    },
+    {
+    "name":"immvrse",
+    "url":"https://immvr.se/",
+     "desc":lazy_gettext("ImmVRse is building their marketplace for virtual reality content on Origin Protocol.")
     },
 ]
