@@ -7,160 +7,167 @@
 {% block content %}
 
 <main class="team-page">
-  {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
-  <section class="header-section team-header-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h1>
-            {{ gettext("Our Team") }}
-          </h1>
-        </div>
-        <div class="col-12 col-md-6">
-          <p>
-            {{ gettext("Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!") }}
-          </p>
-        </div>
-      </div>
+  <div class="background-wrapper">
+    {% with theme_dark=True %}
+    <div class="particles-container">
+      {% include 'particles.html' %}
     </div>
-  </section>
-  <section class="core-team-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes top-panes">
-          <div class="row row-pane">
-            <div class="col-4 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-8 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
+    {% include 'navbar.html' %}
+    {% endwith %}
+    <section class="header-section team-header-section">
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h1>
+              {{ gettext("Our Team") }}
+            </h1>
           </div>
-          <div class="row row-pane">
-            <div class="col-12 col-pane">
-              <div class="core-team-bottom-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12">
-              <h2>
-                {{ gettext("Core Team") }}
-              </h2>
-              <div class="row">
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
-                    <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-josh.jpg" class="headshot">
-                    </div>
-                    <div class="name">
-                      <a href="http://www.linkedin.com/in/joshuafraser" target="_blank">{{ gettext("Josh Fraser") }}
-                      </a>
-                    </div>
-                    <div class="title">
-                      {{ gettext("Cofounder") }}
-                    </div>
-                    <div class="bio">
-                      {{ gettext("Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage.") }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
-                    <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-matt.jpg" class="headshot">
-                    </div>
-                    <div class="name">
-                      <a href="http://www.linkedin.com/in/matthewliu" target="_blank">{{ gettext("Matthew Liu") }}
-                      </a>
-                    </div>
-                    <div class="title">
-                      {{ gettext("Cofounder") }}
-                    </div>
-                    <div class="bio">
-                      {{ gettext("Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford.") }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
-                    <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-stan.jpg" class="headshot">
-                    </div>
-                    <div class="name">
-                      <a href="http://www.linkedin.com/in/wanderingstan" target="_blank">{{ gettext("Stan James") }}
-                      </a>
-                    </div>
-                    <div class="title">
-                      {{ gettext("Senior Engineer") }}
-                    </div>
-                    <div class="bio">
-                      {{ gettext("Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media).") }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
-                    <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-andrew.jpg" class="headshot">
-                    </div>
-                    <div class="name">
-                      <a href="http://www.linkedin.com/in/andrewhyde" target="_blank">{{ gettext("Andrew Hyde") }}
-                      </a>
-                    </div>
-                    <div class="title">
-                      {{ gettext("Community") }}
-                    </div>
-                    <div class="bio">
-                      {{ gettext("Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars.") }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
-                    <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-coleman.jpg" class="headshot">
-                    </div>
-                    <div class="name">
-                      <a href="https://www.linkedin.com/in/coleman-maher-sf/" target="_blank">Coleman Maher
-                      </a>
-                    </div>
-                    <div class="title">
-                      {{ gettext("Partnerships") }}
-                    </div>
-                    <div class="bio">
-                      {{ gettext("Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley.") }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
-                    <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-jon.jpg" class="headshot">
-                    </div>
-                    <div class="name">
-                      <a href="https://www.linkedin.com/in/jonhearty/" target="_blank">{{ gettext("Jon Hearty") }}
-                      </a>
-                    </div>
-                    <div class="title">
-                      {{ gettext("Business Development") }}
-                    </div>
-                    <div class="bio">
-                      {{ gettext("Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO.") }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-12 col-md-6">
+            <p>
+              {{ gettext("Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!") }}
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="core-team-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-pane background-panes top-panes">
+            <div class="row row-pane">
+              <div class="col-4 col-pane">
+                <div class="left-upper-pane">
+                </div>
+              </div>
+              <div class="col-8 col-pane">
+                <div class="right-upper-pane">
+                </div>
+              </div>
+            </div>
+            <div class="row row-pane">
+              <div class="col-12 col-pane">
+                <div class="core-team-bottom-pane">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container foreground-content">
+            <div class="row">
+              <div class="col-12">
+                <h2>
+                  {{ gettext("Core Team") }}
+                </h2>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-josh.jpg" class="headshot" alt="Josh Fraser headshot">
+                      </div>
+                      <div class="name">
+                        <a href="http://www.linkedin.com/in/joshuafraser" target="_blank">{{ gettext("Josh Fraser") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Cofounder") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage.") }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-matt.jpg" class="headshot" alt="Matthew Liu headshot">
+                      </div>
+                      <div class="name">
+                        <a href="http://www.linkedin.com/in/matthewliu" target="_blank">{{ gettext("Matthew Liu") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Cofounder") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford.") }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-stan.jpg" class="headshot" alt="Stan James headshot">
+                      </div>
+                      <div class="name">
+                        <a href="http://www.linkedin.com/in/wanderingstan" target="_blank">{{ gettext("Stan James") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Senior Engineer") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media).") }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-andrew.jpg" class="headshot" alt="Andrew Hyde headshot">
+                      </div>
+                      <div class="name">
+                        <a href="http://www.linkedin.com/in/andrewhyde" target="_blank">{{ gettext("Andrew Hyde") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Community") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars.") }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-coleman.jpg" class="headshot" alt="Coleman Maher headshot">
+                      </div>
+                      <div class="name">
+                        <a href="https://www.linkedin.com/in/coleman-maher-sf/" target="_blank">Coleman Maher
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Partnerships") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley.") }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-jon.jpg" class="headshot" alt="Jon Hearty headshot">
+                      </div>
+                      <div class="name">
+                        <a href="https://www.linkedin.com/in/jonhearty/" target="_blank">{{ gettext("Jon Hearty") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Business Development") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO.") }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <section class="contributing-team-section">
     <div class="container-fluid">
       <div class="row">
@@ -174,7 +181,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-aure.jpg" class="headshot">
+                      <img src="/static/img/headshot-aure.jpg" class="headshot" alt="Aure Gimon headshot">
                     </div>
                     <div class="name">
                       <a href="http://www.linkedin.com/in/aure-gimon-8501041" target="_blank">{{ gettext("Aure Gimon") }}
@@ -191,7 +198,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-derek.jpg" class="headshot">
+                      <img src="/static/img/headshot-derek.jpg" class="headshot" alt="Derek Kan headshot">
                     </div>
                     <div class="name">
                       <a href="http://www.linkedin.com/in/derekhkan" target="_blank">{{ gettext("Derek Kan") }}
@@ -208,7 +215,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-saureen.jpg" class="headshot">
+                      <img src="/static/img/headshot-saureen.jpg" class="headshot" alt="Saureen Shah headshot">
                     </div>
                     <div class="name">
                       <a href="http://www.linkedin.com/in/saureenshah" target="_blank">{{ gettext("Saureen Shah") }}
@@ -225,7 +232,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-ryan.jpg" class="headshot">
+                      <img src="/static/img/headshot-ryan.jpg" class="headshot" alt="Ryan Angilly headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.linkedin.com/in/ryanangilly/" target="_blank">{{ gettext("Ryan Angilly") }}
@@ -242,7 +249,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-daniel.jpg" class="headshot">
+                      <img src="/static/img/headshot-daniel.jpg" class="headshot" alt="Daniel Von Fange headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.leancoder.com" target="_blank">{{ gettext("Daniel Von Fange") }}
@@ -259,7 +266,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-addison.jpg" class="headshot">
+                      <img src="/static/img/headshot-addison.jpg" class="headshot" alt="Addison Huegel headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.linkedin.com/in/addisonhuegel/" target="_blank">{{ gettext("Addison Huegel") }}
@@ -276,7 +283,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-zing.jpg" class="headshot">
+                      <img src="/static/img/headshot-zing.jpg" class="headshot" alt="Zing Yang headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.linkedin.com/in/zing-yang-3183162/" target="_blank">{{ gettext("Zing Yang") }}
@@ -293,7 +300,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-melody.jpg" class="headshot">
+                      <img src="/static/img/headshot-melody.jpg" class="headshot" alt="Melody He headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.linkedin.com/in/melody-he-497a5b25/" target="_blank">{{ gettext("Melody He") }}
@@ -310,7 +317,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-paul.jpg" class="headshot">
+                      <img src="/static/img/headshot-paul.jpg" class="headshot" alt="Paul Veradittakit headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.linkedin.com/in/veradittakit/" target="_blank">{{ gettext("Paul Veradittakit") }}
@@ -327,7 +334,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
-                      <img src="/static/img/headshot-joey.jpg" class="headshot">
+                      <img src="/static/img/headshot-joey.jpg" class="headshot" alt="Joey Krug headshot">
                     </div>
                     <div class="name">
                       <a href="https://www.linkedin.com/in/joeykrug/" target="_blank">{{ gettext("Joey Krug") }}
@@ -388,7 +395,7 @@
                   <div class="investor">
                     <div class="logo-wrapper">
                       <a href="https://www.panteracapital.com/" target="_blank">
-                        <img src="/static/img/pantera-logo.png" class="investor-logo">
+                        <img src="/static/img/pantera-logo.png" class="investor-logo" alt="Pantera logo">
                       </a>
                     </div>
                   </div>

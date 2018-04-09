@@ -122,36 +122,36 @@ a:hover {
   opacity: 0.15;
   position: fixed;
   z-index: 99999;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.0rem;
   border-radius: 30px;
 }
 
-.warning-section {
+.warning {
   display: flex;
   background-color: #111d28;
   color: #ffffff;
 }
 
-.warning-section .img-container {
+.warning .img-container {
   flex-grow: 1;
   margin: 10px 0 10px 20px;
   padding-top: 10px;
   text-align: right;
 }
 
-#rtl .warning-section .img-container {
+#rtl .warning .img-container {
   text-align: left;
   margin: 10px 20px 10px 0;
 }
 
-.warning-section p {
+.warning p {
   flex-grow: 1;
-  font-size: 1rem;
+  font-size: 1.0rem;
   margin: 20px 20px 20px 10px;
   text-align: left;
 }
 
-#rtl .warning-section p {
+#rtl .warning p {
   margin: 20px 10px 20px 20px;
   text-align: right;
 }
@@ -164,13 +164,37 @@ a:hover {
   font-weight: 200;
 }
 
+footer,
+section {
+  position: relative;
+}
+
+nav {
+  z-index: 1;
+}
+
 main.landing-page,
 main.team-page {
   position: relative;
   background-color: #2e3f53;
-  background-image: url("/static/img/dot-grid.svg");
-  background-position: center top;
-  overflow-x: hidden;
+}
+
+.background-wrapper {
+  position: relative;
+}
+
+.particles-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.particles-container svg .dot {
+  z-index: 2;
+}
+
+.particles-container svg .node {
+  z-index: 1;
 }
 
 #rtl .ml-auto,
@@ -200,7 +224,7 @@ main.team-page {
   left: 0px;
   top: 75px;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar-dark .mobile-background {
@@ -227,7 +251,7 @@ main.team-page {
 .navbar-origin .navbar-collapse {
   margin: 20px -30px 0px;
   padding: 0px 30px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .navbar-origin .navbar-collapse.obscured {
@@ -1022,9 +1046,12 @@ footer .company-mission {
 }
 
 .email-section form {
-  display: inline-block;
   position: relative;
   top: 2px;
+}
+
+.email-section form .btn {
+  display: block;
 }
 
 .email-section .foreground-content {
@@ -1077,6 +1104,11 @@ footer .company-mission {
 
 .presale-form .form-group {
   margin-bottom: 40px;
+}
+
+.presale-form .form-group p {
+  font-size: 1.0rem;
+  margin-bottom: 0.5rem;
 }
 
 .presale-form .form-group #desired_allocation {
@@ -1332,6 +1364,10 @@ footer .company-mission {
   text-align: right;
 }
 
+#rtl .building-interest-section .btn-container {
+  text-align: left;
+}
+
 .building-interest-section .partners.img-graphic {
   margin: 120px auto 0px;
 }
@@ -1485,6 +1521,9 @@ footer .company-mission {
   .email-section h2 {
     margin-top: 60px;
   }
+  .email-section input {
+    max-width: 100%;
+  }
   .build-header-section {
     padding-bottom: 120px;
   }
@@ -1516,7 +1555,6 @@ footer .company-mission {
   .email-section h2 {
     margin-top: 60px;
   }
-  .email-section form,
   .email-section .form-group {
     max-width: 324px;
     width: 100%;

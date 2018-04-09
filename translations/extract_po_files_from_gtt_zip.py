@@ -30,10 +30,10 @@ for root, dirnames, filenames in os.walk(extract_dir):
         except:
             continue
 
-        print "Language: %s" % (language_code)
+        print("Language: %s" % (language_code))
 
         dest_po_file =  os.path.join(".", language_code, "LC_MESSAGES", "messages.po")
 
-        print "  %s\n  --> %s" % (pathname, dest_po_file)
+        print("  %s\n  --> %s" % (pathname, dest_po_file))
 
         call(["cp", pathname, dest_po_file])

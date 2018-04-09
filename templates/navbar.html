@@ -1,4 +1,4 @@
-{% if navbar_dark==True %}
+{% if theme_dark==True %}
 <nav class="navbar navbar-expand-lg navbar-origin navbar-dark">
 {% else %}
 <nav class="navbar navbar-expand-lg navbar-origin navbar-light">
@@ -13,36 +13,38 @@
     <div class="brand-container">
       <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
         <div class="logo-container">
-          {% if navbar_dark==True %}
+          {% if theme_dark==True %}
           <img src="/static/img/origin-logo.png"
             srcset="/static/img/origin-logo@2x.png 2x,
               /static/img/origin-logo@3x.png 3x"
-            class="origin-logo">
+            class="origin-logo"
+            alt="Origin Protocol logo">
           {% else %}
           <img src="/static/img/origin-logo-dark.png"
             srcset="/static/img/origin-logo-dark@2x.png 2x,
               /static/img/origin-logo-dark@3x.png 3x"
-            class="origin-logo">
+            class="origin-logo"
+            alt="Origin Protocol logo">
           {% endif %}
         </div>
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#languageOptions" aria-controls="languageOptions" aria-expanded="false" aria-label="Toggle languages">
-      {% if navbar_dark==True %}
-      <img src="/static/img/globe-icon-light.svg" alt="Language Options" class="globe-icon" />
-      <img src="/static/img/close-icon-light.svg" alt="Collapse Menu" class="close-icon" />
+      {% if theme_dark==True %}
+      <img src="/static/img/globe-icon-light.svg" alt="language options" class="globe-icon" />
+      <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
       {% else %}
-      <img src="/static/img/globe-icon-dark.svg" alt="Language Options" class="globe-icon" />
-      <img src="/static/img/close-icon-dark.svg" alt="Collapse Menu" class="close-icon" />
+      <img src="/static/img/globe-icon-dark.svg" alt="language options" class="globe-icon" />
+      <img src="/static/img/close-icon-dark.svg" alt="collapse menu" class="close-icon" />
       {% endif %}
     </button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      {% if navbar_dark==True %}
-      <img src="/static/img/menu-icon-light.svg" alt="Navigation Menu" class="menu-icon" />
-      <img src="/static/img/close-icon-light.svg" alt="Collapse Menu" class="close-icon" />
+      {% if theme_dark==True %}
+      <img src="/static/img/menu-icon-light.svg" alt="navigation menu" class="menu-icon" />
+      <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
       {% else %}
-      <img src="/static/img/menu-icon-dark.svg" alt="Navigation Menu" class="menu-icon" />
-      <img src="/static/img/close-icon-dark.svg" alt="Collapse Menu" class="close-icon" />
+      <img src="/static/img/menu-icon-dark.svg" alt="navigation menu" class="menu-icon" />
+      <img src="/static/img/close-icon-dark.svg" alt="collapse menu" class="close-icon" />
       {% endif %}
     </button>
     <div class="d-lg-none collapse navbar-collapse" id="languageOptions">

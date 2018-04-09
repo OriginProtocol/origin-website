@@ -17,7 +17,7 @@ for root, dirnames, filenames in os.walk('.'):
         except:
             continue
 
-        print "%s:\t%s" % (language_code, pathname)
+        print ("%s:\t%s" % (language_code, pathname))
 
         f = open(pathname,"r+")
         d = f.readlines()

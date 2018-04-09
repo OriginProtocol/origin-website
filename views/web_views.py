@@ -17,7 +17,7 @@ babel = Babel(app)
 
 recaptcha = ReCaptcha(app=app)
 if not recaptcha.is_enabled:
-    print "Warning: recaptcha is not is_enabled"
+    print("Warning: recaptcha is not is_enabled")
 
 @app.before_request
 def beforeRequest():
@@ -122,9 +122,9 @@ def unsubscribe():
 
 @app.route('/webhook/fullcontact', methods=['GET','POST'])
 def fullcontact_webhook():
-    print 'POSTED!!'
-    print request.get_json()
-    print request.json
+    print('POSTED!!')
+    print(request.get_json())
+    print(request.json)
     return redirect('/', code=302)
 
 @app.route('/<lang_code>/build-on-origin')
@@ -180,9 +180,10 @@ def assets_all_javascript():
         "static/js/vendor-jquery-3.2.1.min.js",
         "static/js/vendor-popper.min.js",
         "static/js/vendor-bootstrap.min.js",
-        "static/js/alertify.js",
-        "static/js/script.js",
-        "static/js/wow.min.js"
+        "static/js/vendor-alertify.js",
+        "static/js/vendor-d3.min.js",
+        "static/js/vendor-wow.min.js",
+        "static/js/script.js"
     ]), mimetype="application/javascript")
 
 @app.context_processor

@@ -3,6 +3,11 @@ import logging
 from config import constants
 from database import db
 
+from raven.contrib.flask import Sentry
+
+sentry = Sentry()
+
+
 class AppConfig(object):
     SECRET_KEY = constants.FLASK_SECRET_KEY
     CSRF_ENABLED = True
@@ -19,9 +24,17 @@ class AppConfig(object):
 def init_app(app):
     db.init_app(app)
 
+
+def init_sentry(app):
+    if constants.SENTRY_DSN:
+        sentry.init_app(app,
+                        dsn=constants.SENTRY_DSN)
+
+
 def init_prod_app(app):
     app.config.from_object(__name__ + '.AppConfig')
     init_app(app)
+    init_sentry(app)
 
     log_formatter = logging.Formatter(
         '%(asctime)s %(levelname)s [in %(pathname)s:%(lineno)d]: %(message)s')
