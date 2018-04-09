@@ -7,85 +7,92 @@
 {% block content %}
 
 <main class="landing-page">
-  {% with navbar_dark=True %}{% include 'navbar.html' %}{% endwith %}
-  <section class="hero-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h1>
-            {{ gettext("The sharing economy without intermediaries") }}
-          </h1>
-          <p>
-            {{ gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS") }}
-          </p>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="img-graphic">
-            <img src="/static/img/hero-devices.png"
-              srcset="/static/img/hero-devices@2x.png 2x, /static/img/hero-devices@3x.png 3x"
-              class="hero-devices"
-              role="presentation" />
-          </div>
-        </div>
-      </div>
+  <div class="background-wrapper">
+    {% with theme_dark=True %}
+    <div class="particles-container">
+      {% include 'particles.html' %}
     </div>
-  </section>
-  <section class="platform-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes top-panes">
-          <div class="row row-pane">
-            <div class="col-8 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-4 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
+    {% include 'navbar.html' %}
+    {% endwith %}
+    <section class="hero-section">
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h1>
+              {{ gettext("The sharing economy without intermediaries") }}
+            </h1>
+            <p>
+              {{ gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS") }}
+            </p>
           </div>
-          <div class="row row-pane">
-            <div class="col-12 col-pane">
-              <div class="platform-bottom-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="img-graphic">
-                <img src="/static/img/platform-graphic.png"
-                  srcset="/static/img/platform-graphic@2x.png 2x,
-                  /static/img/platform-graphic@3x.png 3x"
-                  class="platform-graphic"
-                  role="presentation" />
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <h2>
-                {{ gettext("The Origin platform") }}
-              </h2>
-              <p>
-                {{ gettext("We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more.") }}
-              </p>
-              <div class="btn-container">
-                <a href="/product-brief" role="button" class="product-brief-btn btn btn-primary btn-min-size">
-                  {{ gettext("Read Our Product Brief") }}
-                </a>
-              </div>
-              <div class="btn-container">
-                <a href="{{ universal.TELEGRAM_URL }}" role="button" class="telegram-btn btn btn-outline-primary btn-min-size" target="_blank">
-                  <i class='fab fa-telegram-plane'></i>
-                  {{ gettext("Join Our Telegram") }}
-                </a>
-              </div>
+          <div class="col-12 col-md-6">
+            <div class="img-graphic">
+              <img src="/static/img/hero-devices.png"
+                srcset="/static/img/hero-devices@2x.png 2x, /static/img/hero-devices@3x.png 3x"
+                class="hero-devices"
+                role="presentation" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="platform-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-pane background-panes top-panes">
+            <div class="row row-pane">
+              <div class="col-8 col-pane">
+                <div class="left-upper-pane">
+                </div>
+              </div>
+              <div class="col-4 col-pane">
+                <div class="right-upper-pane">
+                </div>
+              </div>
+            </div>
+            <div class="row row-pane">
+              <div class="col-12 col-pane">
+                <div class="platform-bottom-pane">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container foreground-content">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="img-graphic">
+                  <img src="/static/img/platform-graphic.png"
+                    srcset="/static/img/platform-graphic@2x.png 2x,
+                    /static/img/platform-graphic@3x.png 3x"
+                    class="platform-graphic"
+                    role="presentation" />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <h2>
+                  {{ gettext("The Origin platform") }}
+                </h2>
+                <p>
+                  {{ gettext("We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more.") }}
+                </p>
+                <div class="btn-container">
+                  <a href="/product-brief" role="button" class="product-brief-btn btn btn-primary btn-min-size">
+                    {{ gettext("Read Our Product Brief") }}
+                  </a>
+                </div>
+                <div class="btn-container">
+                  <a href="{{ universal.TELEGRAM_URL }}" role="button" class="telegram-btn btn btn-outline-primary btn-min-size" target="_blank">
+                    <i class='fab fa-telegram-plane'></i>
+                    {{ gettext("Join Our Telegram") }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <section class="partners-section">
     <div class="container-fluid">
       <div class="row">

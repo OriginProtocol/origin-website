@@ -1,4 +1,4 @@
-{% if navbar_dark==True %}
+{% if theme_dark==True %}
 <nav class="navbar navbar-expand-lg navbar-origin navbar-dark">
 {% else %}
 <nav class="navbar navbar-expand-lg navbar-origin navbar-light">
@@ -13,7 +13,7 @@
     <div class="brand-container">
       <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
         <div class="logo-container">
-          {% if navbar_dark==True %}
+          {% if theme_dark==True %}
           <img src="/static/img/origin-logo.png"
             srcset="/static/img/origin-logo@2x.png 2x,
               /static/img/origin-logo@3x.png 3x"
@@ -30,7 +30,7 @@
       </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#languageOptions" aria-controls="languageOptions" aria-expanded="false" aria-label="Toggle languages">
-      {% if navbar_dark==True %}
+      {% if theme_dark==True %}
       <img src="/static/img/globe-icon-light.svg" alt="language options" class="globe-icon" />
       <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
       {% else %}
@@ -39,7 +39,7 @@
       {% endif %}
     </button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      {% if navbar_dark==True %}
+      {% if theme_dark==True %}
       <img src="/static/img/menu-icon-light.svg" alt="navigation menu" class="menu-icon" />
       <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
       {% else %}
