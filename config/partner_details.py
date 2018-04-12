@@ -88,6 +88,11 @@ PARTNERS = [
      "desc":lazy_gettext("Aworker is building a next generation recruitment platform using Origin Protocol to disrupt the HR industry.")
     },
     {
+    "name":"chasyr",
+    "url":"https://www.chasyr.com/",
+     "desc":lazy_gettext("Chasyr is building a fair ride sharing marketplace that better serves riders and drivers on Origin Protocol.")
+    },
+    {
     "name":"property2chain",
     "url":"https://www.property2chain.io/",
      "desc":lazy_gettext("Property2chain is building a peer-to-peer real estate and asset trading platform on the blockchain using Origin Protocol.")
@@ -181,5 +186,20 @@ PARTNERS = [
     "name":"immvrse",
     "url":"https://immvr.se/",
      "desc":lazy_gettext("ImmVRse is building their virtual reality content marketplace on Origin Protocol.")
+    },
+    {
+    "name":"akaiito",
+    "url":"https://akaiito.io/home/",
+     "desc":lazy_gettext("Akaiito is utilizing Origin Protocol's technology in their marketplace and sharing economy platform.")
+    },
+    {
+    "name":"populstay",
+    "url":"https://www.populstay.com/",
+     "desc":lazy_gettext("Populstay is building their decentralized vacation home rental and home sharing platform using Origin Protocol.")
+    },
+    {
+    "name":"libertylance",
+    "url":"https://libertylance.io/",
+     "desc":lazy_gettext("LibertyLance is building their decentralized and self-regulating freelancing platform on Origin Protocol.")
     },
 ]
