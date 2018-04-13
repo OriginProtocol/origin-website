@@ -1,26 +1,25 @@
 # Localization
 
-## Status 2018-01-31
+## Status 2018-04-12
 
-| Code | Language | Translator(s) | Status |
-| ---- | -------- | ------------- | ------ |
-| ar | Arabic | m.alqattan | 🚧 In Progress |
-| cs | Czech | Daosta | 🚧 In Progress |
-| de | German | Filip | ✅ Complete |
-| el | Greek | Tasso | ✅ Complete |
-| es | Spanish | funk | ✅ Complete |
-| fr | French | Bastien |  ✅ Complete |
-| he | Hebrew | | | |
-| hr | Croatian | Filip | ✅ Complete |
-| it | Italian | funk |  ✅ Complete |
-| ja | Japanese | | | |
-| ko | Korean | stellayujinlee |  🚧 In Progress |
-| nl | Dutch | Yasinz | ✅ Complete |
-| pt | Portugese | | | |
-| ru | Russian | Alex K | ✅ Complete |
-| th | Thai | Ben V / @cvibhagool | ✅ Complete |
-| zh_Hans | Chinese (Simplified) | Anson | ✅ Complete |
-| zh_Hant | Chinese (Traditional) | Anson | ✅ Complete |
+| Code | Language | Status |
+| ---- | -------- | ------ |
+| ar | Arabic | 🚧 Partial |
+| de | German | ✅ Complete |
+| el | Greek  | ✅ Complete |
+| es | Spanish | ✅ Complete |
+| fr | French |  ✅ Complete |
+| he | Hebrew | |
+| hr | Croatian | ✅ Complete |
+| it | Italian |  ✅ Complete |
+| ja | Japanese | ✅ Complete |
+| ko | Korean |  ✅ Complete |
+| nl | Dutch | ✅ Complete |
+| pt | Portugese | ✅ Complete |
+| ru | Russian | ✅ Complete |
+| th | Thai | ✅ Complete |
+| zh_Hans | Chinese (Simplified) | ✅ Complete |
+| zh_Hant | Chinese (Traditional) | ✅ Complete |
 
 ## Implementation
 
