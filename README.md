@@ -47,7 +47,7 @@ open http://127.0.0.1:5000/
 **Problems?** Hit us up in the `engineering` channel on [Discord](https://www.originprotocol.com/discord) if you need help.
 
 ## Localization
-See README in `translations` directory
+See [translations](translations) directory. 
 
 ## Database changes
 
