@@ -1,0 +1,61 @@
+{
+  "name": "Origin Protocol website",
+  "description": "Dev website for originprotocol.com",
+  "website": "https://www.originprotocol.com/",
+  "repository": "https://github.com/OriginProtocol/company-website",
+  "logo": "https://avatars1.githubusercontent.com/u/30638653",
+  "success_url": "/",
+  "env": {
+    "FLASK_SECRET_KEY": {
+      "description": "A secret key used by Flask",
+      "generator": "secret",
+      "required": true
+    },
+    "PROJECTPATH": {
+      "description": "The root directory for the app. You don't need to change this.",
+      "value": "/app",
+      "required": true
+    },
+    "HOST": {
+      "description": "Replace `app-name` with the app-name chosen above:",
+      "value": "app-name.herokuapp.com",
+      "required": true
+    },
+    "SENDGRID_API_KEY": {
+      "description": "Sendgrid key if you want to be able to send emails",
+      "required": false
+    },
+    "DEV_EMAIL": {
+      "description": "Email address to receive notification emails",
+      "required": false
+    },
+    "RECAPTCHA_SITE_KEY": {
+      "description": "To enable recaptcha, request keys from https://www.google.com/recaptcha/admin",
+      "required": false
+    },
+    "RECAPTCHA_SECRET_KEY": {
+      "description": "To enable recaptcha, request keys from https://www.google.com/recaptcha/admin",
+      "required": false
+    }
+  },
+  "formation": [{
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }],
+  "addons": [{
+      "plan": "heroku-postgresql:hobby-dev"
+    },
+    {
+      "plan": "heroku-redis:hobby-dev"
+    }
+  ],
+  "buildpacks": [{
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nginx"
+    }
+  ]
+}
