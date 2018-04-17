@@ -9,11 +9,6 @@ _Note: This site is set up differently from typical virtualenv/flask application
 
 Setup a virtualenv
 ```
-virtualenv company-website && cd company-website
-```
-
-Note: As of Feb 2018, Homebrew on MacOS defaults to Python 3. Therefore you'll need to specify Python 2.7
-```
 virtualenv --python=/usr/local/bin/python2 company-website && cd company-website
 ```
 
@@ -65,16 +60,24 @@ To enable recaptcha, add the following environment variables to `.env`
 
 You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
 
-## Dev Deployment on Heroku
+## Development
 
-To deploy a dev copy of the site on Heroku, you'll follow the normal steps you would to deploy on Heroku, with two additional steps.
+To deploy a development copy of the site on Heroku, just choose which branch you would like to use and follow the instructions: 
 
-After the normal setup and linking, you'll need to ensure the site uses both the python and the nginx backend:
+`Master` branch (stable):
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/master)
+
+`Develop` branch (active development):
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/develop)
+
+We use both the python and the nginx buildpacks:
 
 	heroku buildpacks:set heroku/python
 	heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nginx
 
-As a minium, you must set these three Heroku config variables:
+As a minium, you must set these 3 config variables:
 
 |Config          |Value|
 |----------------|------|
@@ -83,5 +86,9 @@ As a minium, you must set these three Heroku config variables:
 |HOST            |(domain name of your dev heroku app)|
 
 There are more optional config variables you can set. See [sample.env](sample.env) for a full list.
+
+## Contributing
+
+We'd love to have you join us and contribute to this project. Please join our [#engineering channel on Discord](http://www.originprotocol.com/discord) and read our [guidelines on contributing](http://docs.originprotocol.com/#contributing) to get started.
 
 
