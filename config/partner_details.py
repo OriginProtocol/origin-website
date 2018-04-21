@@ -18,9 +18,9 @@ PARTNERS = [
     "desc":lazy_gettext("CanYa is building a blockchain-powered &ldquo;marketplace of services&rdquo; with Origin Protocol for the gig economy and freelancing.")
     },
     {
-    "name":"beetoken",
-    "url":"https://www.beetoken.com/",
-     "desc":lazy_gettext("Bee is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol.")
+    "name":"kozaza",
+    "url":"https://www.kozaza.com/",
+     "desc":lazy_gettext("Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol.")
     },
     {
     "name":"wetrust",
@@ -36,6 +36,11 @@ PARTNERS = [
     "name":"blocklancer",
     "url":"https://blocklancer.net/",
      "desc":lazy_gettext("Blocklancer is buidiling a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
+    },
+    {
+    "name":"beetoken",
+    "url":"https://www.beetoken.com/",
+     "desc":lazy_gettext("Bee is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol.")
     },
     {
     "name":"propy",
