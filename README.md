@@ -75,7 +75,6 @@ Heroku will prompt you to set config variables. At a minium, you must set these 
 |Config          |Value|
 |----------------|------|
 |FLASK_SECRET_KEY|(make something up)|
-|PROJECTPATH     |/app|
 |HOST            |(domain name of your dev heroku app)|
 
 See [sample.env](sample.env) for a full list of other optional config variables.
