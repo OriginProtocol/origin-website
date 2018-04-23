@@ -67,7 +67,7 @@ Heroku will prompt you to set config variables. At a minium, you must set these 
 |FLASK_SECRET_KEY|(make something up)|
 |HOST            |(domain name of your dev heroku app)|
 
-See [sample.env](sample.env) for a full list of other optional config variables. You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
+See [sample.env](sample.env) for a full list of other optional config variables. You can [get Recaptcha keys from Google](https://www.google.com/recaptcha/admin).
 
 We use both the python and the nginx buildpacks:
 
