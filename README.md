@@ -7,7 +7,6 @@ Official website for Origin Protocol
 This is a Flask app with the source code for [www.originprotocol.com](https://www.originprotocol.com). The code is all `Python 2.7` with `Postgres` for the database (basically just for the mailing list). The database is not required to be configured if you're just working on the website.
 
 ## Installing
-_Note: This site is set up differently from typical virtualenv/flask applications._
 
 Setup a virtualenv
 ```
@@ -53,15 +52,6 @@ See [translations](translations) directory.
 
 We use [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) to handle database revisions. If you make changes to the database, use `flask db migrate` to generate the required migration file and then `flask db upgrade` to implement and test your changes on your local database before committing.
 
-## Recaptcha
-
-To enable recaptcha, add the following environment variables to `.env`
-
-    RECAPTCHA_SITE_KEY = "<YOUR SITE KEY>"
-    RECAPTCHA_SECRET_KEY = "<YOUR SECRET KEY>"
-
-You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
-
 ## Heroku Deploy
 
 To deploy a development copy of the site on Heroku, just choose which branch you would like to use and follow the instructions: 
@@ -70,21 +60,19 @@ To deploy a development copy of the site on Heroku, just choose which branch you
 |---------|----------|
 | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/develop) | 
 
-Heroku will prompt you to set config variables. At a minium, you must set these three:
+Heroku will prompt you to set config variables. At a minium, you must set these two:
 
 |Config          |Value|
 |----------------|------|
 |FLASK_SECRET_KEY|(make something up)|
 |HOST            |(domain name of your dev heroku app)|
 
-See [sample.env](sample.env) for a full list of other optional config variables.
-
+See [sample.env](sample.env) for a full list of other optional config variables. You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
 
 We use both the python and the nginx buildpacks:
 
 	heroku buildpacks:set heroku/python
 	heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nginx
-
 
 ## Contributing
 
