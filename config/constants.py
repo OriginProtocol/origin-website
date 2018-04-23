@@ -13,7 +13,7 @@ DEBUG = dotenv.get('DEBUG', default=False)
 HOST = dotenv.get('HOST')
 HTTPS = dotenv.get('HTTPS', default=True)
 
-PROJECTPATH = dotenv.get('PROJECTPATH')
+PROJECTPATH = os.environ.get('HOME') or os.getcwd()
 
 FLASK_SECRET_KEY = dotenv.get('FLASK_SECRET_KEY')
 

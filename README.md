@@ -1,3 +1,5 @@
+![origin_github_banner](https://user-images.githubusercontent.com/673455/37314301-f8db9a90-2618-11e8-8fee-b44f38febf38.png)
+
 # originprotocol.com
 
 Official website for Origin Protocol
@@ -45,7 +47,7 @@ open http://127.0.0.1:5000/
 **Problems?** Hit us up in the `engineering` channel on [Discord](https://www.originprotocol.com/discord) if you need help.
 
 ## Localization
-See README in `translations` directory
+See [translations](translations) directory. 
 
 ## Database changes
 
@@ -60,32 +62,29 @@ To enable recaptcha, add the following environment variables to `.env`
 
 You can get Recaptcha keys here: https://www.google.com/recaptcha/admin
 
-## Development
+## Heroku Deploy
 
 To deploy a development copy of the site on Heroku, just choose which branch you would like to use and follow the instructions: 
 
-`Master` branch (stable):
+| `Master` branch <br>(stable) | `Develop` branch<br> (active development) | 
+|---------|----------|
+| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/develop) | 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/master)
+Heroku will prompt you to set config variables. At a minium, you must set these three:
 
-`Develop` branch (active development):
+|Config          |Value|
+|----------------|------|
+|FLASK_SECRET_KEY|(make something up)|
+|HOST            |(domain name of your dev heroku app)|
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/develop)
+See [sample.env](sample.env) for a full list of other optional config variables.
+
 
 We use both the python and the nginx buildpacks:
 
 	heroku buildpacks:set heroku/python
 	heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nginx
 
-As a minium, you must set these 3 config variables:
-
-|Config          |Value|
-|----------------|------|
-|FLASK_SECRET_KEY|(make something up)|
-|PROJECTPATH     |/app|
-|HOST            |(domain name of your dev heroku app)|
-
-There are more optional config variables you can set. See [sample.env](sample.env) for a full list.
 
 ## Contributing
 
