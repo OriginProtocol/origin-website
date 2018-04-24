@@ -43,6 +43,11 @@ p {
   margin: 20px auto;
 }
 
+a:not([href]):not([tabindex]) {
+  color: #007bff;
+  cursor: pointer;
+}
+
 label {
   cursor: pointer;
 }
