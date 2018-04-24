@@ -75,8 +75,7 @@
                   <input name="email" id="email" type="email" class="form-control" placeholder="{{ gettext("Email") }}" />
                 </div>
                 <div class="form-group">
-                  <p><strong>{{ gettext("Are you an accredited investor?") }}</strong>&nbsp;(<a id="huh" href="javascript:alertify.log(document.getElementById('accredited_popup').innerText)">{{ gettext("Huh?") }}</a>)</p>
-                  <div style="display:none" id="accredited_popup">{{ gettext("An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)") }}</div>
+                  <p><strong>{{ gettext("Are you an accredited investor?") }}</strong>&nbsp;(<a id="huh" data-toggle="tooltip" title="{{ gettext("An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)") }}">{{ gettext("Huh?") }}</a>)</p>
                   <div class="form-check form-check-inline">
                     <label class="form-check-label">
                       <input class="form-check-input" type="radio" name="accredited" id="accredited_yes" value="1" checked="checked" /> <strong>{{ gettext("Yes") }}</strong>
