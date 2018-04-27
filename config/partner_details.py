@@ -23,6 +23,11 @@ PARTNERS = [
      "desc":lazy_gettext("Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol.")
     },
     {
+    "name":"spin",
+    "url":"https://www.spin.pm/",
+     "desc":lazy_gettext("Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US.")
+    },
+    {
     "name":"wetrust",
     "url":"https://www.wetrust.io/",
      "desc":lazy_gettext("Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform.")
