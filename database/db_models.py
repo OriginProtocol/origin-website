@@ -1,6 +1,7 @@
 
 from decimal import *
 
+from sqlalchemy import event
 from sqlalchemy.orm import deferred
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import JSONB
@@ -50,6 +51,7 @@ class FullContact(db.Model):
     angellist_handle = db.Column(db.String(255))
     twitter_handle = db.Column(db.String(255))
 
+
 class MessageLog(db.Model):
     __tablename__ = 'message_log'
 
@@ -76,3 +78,12 @@ class Interest(db.Model):
 
     def __str__(self):
         return '%s' % (self.email)
+
+
+@event.listens_for(Presale, 'after_insert')
+@event.listens_for(Interest, 'after_insert')
+def _subscribe_email_list(mapper, connection, target):
+    from util.tasks import subscribe_email_list
+    payload = {"email": target.email,
+               "ip_addr": target.ip_addr}
+    subscribe_email_list.delay(**payload)

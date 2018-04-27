@@ -85,10 +85,10 @@ def unsubscribe(email):
         return 'Please enter a valid email address'
 
     try:
-        me = db_models.EmailList.query \
-            .filter(db_models.EmailList.email == email).first()
-        me.unsubscribed = True
-        db.session.commit()
+        me = db_models.EmailList.query.filter_by(email=email).first()
+        if me:
+            me.unsubscribed = True
+            db.session.commit()
     except Exception as e:
         print (e)
         return gettext('Ooops, something went wrong')
@@ -99,16 +99,8 @@ def unsubscribe(email):
 def send_one_off(email_type):
     with db_utils.request_context():
         # the message log takes care of deduping emails that may appear in multiple tables
-        for e in db_models.Presale.query.all():
-            print(e.email)
-            email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
-
-        for e in db_models.EmailList.query.all():
-            print(e.email)
-            email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
-
-        for e in db_models.Interest.query.all():
-            print(e.email)
+        for e in db_models.EmailList.query.filter_by(unsubscribed=False):
+            print e.email
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
 
