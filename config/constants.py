@@ -13,7 +13,14 @@ DEBUG = dotenv.get('DEBUG', default=False)
 HOST = dotenv.get('HOST')
 HTTPS = dotenv.get('HTTPS', default=True)
 
-PROJECTPATH = os.environ.get('HOME') or os.getcwd()
+# set the root directory
+if (os.path.exists('/etc/heroku')):
+    PROJECTPATH = os.environ.get('HOME')
+else:
+    PROJECTPATH = os.environ.get('PROJECTPATH') or os.getcwd()
+
+print os.environ.get('HOME')
+PROJECTPATH = os.getcwd()
 
 FLASK_SECRET_KEY = dotenv.get('FLASK_SECRET_KEY')
 
