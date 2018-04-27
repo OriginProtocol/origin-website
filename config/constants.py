@@ -19,9 +19,6 @@ if (os.path.exists('/etc/heroku')):
 else:
     PROJECTPATH = os.environ.get('PROJECTPATH') or os.getcwd()
 
-print os.environ.get('HOME')
-PROJECTPATH = os.getcwd()
-
 FLASK_SECRET_KEY = dotenv.get('FLASK_SECRET_KEY')
 
 APP_LOG_FILENAME = os.path.join(PROJECTPATH, 'app.log')
