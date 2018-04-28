@@ -67,7 +67,13 @@ Run a single test case, or an individual test, using:
 ```bash
 pytest path/to/test.py::test_case_name
 ```
+## Running locally with Celery
 
+We use [celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running background tasks (mostly just sending emails). To get this working on your local machine, you'll want to make sure:
+
+ - Your .env has `CELERY_DEBUG: False`
+ - Redis is installed and running: `redis-server`
+ - An active celery worker is running: `celery -A util.tasks worker`
 
 ## Localization
 See [translations](translations) directory. 
