@@ -10,10 +10,18 @@
             alt="Origin Protocol logo">
         </div>
         <p class="company-mission">
-          {{ gettext("Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network.") }}
+          {{ gettext("Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, promoting free and transparent commerce, and giving early participants in the community a stake in the network.") }}
         </p>
         <p>
-          &copy; {{ now.year }} {{ gettext("Origin Protocol, Inc.") }}
+          &copy; {{ now.year }} {{ gettext("Origin Protocol, Inc.") }}  &bull;
+          <a href="{{ url_for('privacy', lang_code=CURRENT_LANGUAGE) }}">
+            {{ gettext("Privacy") }}
+          </a>
+          &bull;
+          <a href="{{ url_for('tos', lang_code=CURRENT_LANGUAGE) }}">
+            {{ gettext("Terms of Service") }}
+          </a>
+
         </p>
       </div>
       <div class="col-12 col-md-6">
@@ -73,6 +81,11 @@
               <li class="footer-link">
                 <a href="https://twitter.com/originprotocol" target="_blank">
                   {{ gettext("Twitter") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="https://instagram.com/originprotocol" target="_blank">
+                  {{ gettext("Instagram") }}
                 </a>
               </li>
               <li class="footer-link">

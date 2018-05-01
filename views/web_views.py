@@ -143,6 +143,13 @@ def telegram():
 def partners():
     return render_template('partners.html')
 
+@app.route('/<lang_code>/privacy')
+def privacy():
+    return render_template('privacy.html')
+
+@app.route('/<lang_code>/tos')
+def tos():
+    return render_template('tos.html')
 
 @app.route('/partners/interest', methods=['POST'])
 def partners_interest():

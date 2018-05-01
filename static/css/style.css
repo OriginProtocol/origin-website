@@ -529,6 +529,14 @@ main.team-page {
   min-height: 522px;
 }
 
+footer a {
+  color:#fff;
+}
+footer a:hover {
+  color:#fff;
+  opacity: 0.75;
+}
+
 footer .logo-container {
   margin: 40px auto;
 }
@@ -1128,6 +1136,37 @@ footer .company-mission {
 .presale-form .form-group .input-group .input-group-btn #desired_allocation_currency {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+/* Terms of Service & Privacy Policy */
+
+.tos {
+  counter-reset: section;
+}
+.tos h4, .privacy h4 {
+  margin-top: 1em;
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+.tos h4:before {
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+.tos ol {
+  counter-reset: clause;
+  list-style: none outside none;
+}
+.tos ol li {
+  margin-top: 1em;
+  counter-increment: clause;
+  margin-bottom: 1em;
+}
+.tos ol li:before {
+  font-weight:bold;
+  content: counter(section) "." counters(clause, ".") ". ";
+}
+.tos ol li ol li:before {
+  content: "(" counter(clause, lower-alpha) ") ";
 }
 
 /* Team page */
