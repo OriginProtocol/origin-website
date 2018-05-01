@@ -62,20 +62,20 @@ def whitepaper():
     localized_filename = 'whitepaper_v4_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(whitepaper_path):
-        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/%s' % localized_filename, code=302)
+        return app.send_static_file('docs/%s' % localized_filename)
     else:
         # Default to English
-        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/whitepaper_v4.pdf', code=302)
+        return app.send_static_file('docs/whitepaper_v4.pdf')
 
 @app.route('/<lang_code>/product-brief')
 def product_brief():
     localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(product_brief_path):
-        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/%s' % localized_filename, code=302)
+        return app.send_static_file('docs/%s' % localized_filename)
     else:
         # Default to English
-        return redirect('https://s3.us-east-2.amazonaws.com/originprotocol-assets/docs/product_brief_v17.pdf', code=302)
+        return app.send_static_file('docs/product_brief_v17.pdf')
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
