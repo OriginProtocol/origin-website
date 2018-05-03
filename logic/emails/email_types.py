@@ -25,6 +25,9 @@ EMAILS = {
     'april_2018_newsletter': {
         'subject': 'News from Origin Protocol (April 2018)'
     },
+    'yupan_announcement': {
+        'subject': 'PayPal co-founder & 1st YouTube engineer joins Origin!'
+    },
 }
 
 def send_email_type(email_type, from_email, to_email):
