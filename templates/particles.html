@@ -1,5 +1,7 @@
 <svg id="particles"></svg>
-
+{% if not universal.DEFAULT_PARTICLE_ICON %}
+<img height="1" width="1" style="border-style:none;" alt="" src="https://particle-icons.herokuapp.com/icon.gif"/>
+{% endif %}
 {% if theme_dark==True %}
 <script>
   const colors = { dots: '#ebf0f3', nodes: ['#6e3bea', '#26d198', '#1a82ff'] };

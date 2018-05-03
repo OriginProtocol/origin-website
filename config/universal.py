@@ -4,7 +4,6 @@ try:
 except:
     import urllib
     quote = urllib.quote_plus
-    
 
 
 from . import constants
@@ -28,3 +27,4 @@ TWITTER_URL = 'https://twitter.com/originprotocol'
 FACEBOOK_URL = 'https://www.facebook.com/originprotocol'
 
 DEFAULT_SHARE_MSG = quote('Check out ' + BUSINESS_NAME + ', an exciting blockchain project that will decentralize the sharing economy.')
+DEFAULT_PARTICLE_ICON = constants.DEFAULT_PARTICLE_ICON
