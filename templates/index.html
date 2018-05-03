@@ -76,7 +76,7 @@
                   {{ gettext("We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more.") }}
                 </p>
                 <div class="btn-container">
-                  <a href="/product-brief" role="button" class="product-brief-btn btn btn-primary btn-min-size">
+                  <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}" role="button" class="product-brief-btn btn btn-primary btn-min-size">
                     {{ gettext("Read Our Product Brief") }}
                   </a>
                 </div>
