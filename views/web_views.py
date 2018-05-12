@@ -1,15 +1,17 @@
 from collections import OrderedDict
 from datetime import datetime
-
-from flask import (jsonify, redirect, render_template,
-                   request, flash, g, url_for, Response)
-from flask_babel import gettext, Babel, Locale
-from flask_recaptcha import ReCaptcha
 import os
+
 from app import app
 from config import constants, universal, partner_details
+from flask import (jsonify, redirect, render_template,
+                   request, flash, g, url_for, Response, stream_with_context)
+from flask_babel import gettext, Babel, Locale
+from flask_recaptcha import ReCaptcha
 from logic.emails import mailing_list
+import requests
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
+
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -193,6 +195,21 @@ def assets_all_javascript():
         "static/js/script.js"
     ]), mimetype="application/javascript")
 
+@app.route('/origin-js/origin-v<version>.js', methods=['GET'])
+def serve_origin_js(version):
+
+    # temporary hack
+    # should really do this w/ NGINX or serve from a proper CDN
+
+    # serves up:
+    # https://github.com/OriginProtocol/origin-js/releases/download/v0.5.10/origin.js
+    # when you visit:
+    # https://code.originprotocol.com/origin-js/origin-v0.5.10.js
+
+    url = "https://github.com/OriginProtocol/origin-js/releases/download/v%s/origin.js" % version
+    req = requests.get(url, stream=True)
+    return Response(stream_with_context(req.iter_content(chunk_size=2048)), content_type="text/javascript")
+
 @app.context_processor
 def inject_partners():
     return dict(partners_dict = partner_details.PARTNERS)
@@ -209,7 +226,6 @@ def get_locale():
 @app.context_processor
 def inject():
     return {'now': datetime.utcnow(), 'universal':universal}
-
 
 @app.context_processor
 def inject_conf_var():
