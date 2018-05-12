@@ -41,6 +41,16 @@ http {
 
 	server {
 		listen <%= ENV["PORT"] %>;
+		server_name code.originprotocol.com;
+		keepalive_timeout 5;
+
+		location ^/origin-js/origin-v(.*).js {
+			proxy_pass https://github.com/OriginProtocol/origin-js/releases/download/v$1/origin.js;
+		}
+	}
+
+	server {
+		listen <%= ENV["PORT"] %>;
 		server_name _;
 		keepalive_timeout 5;
 
