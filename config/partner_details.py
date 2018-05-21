@@ -33,6 +33,11 @@ PARTNERS = [
      "desc":lazy_gettext("Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform.")
     },
     {
+    "name":"nucypher",
+    "url":"https://www.nucypher.com/blockchain/",
+     "desc":lazy_gettext("Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform.")
+    },
+    {
     "name":"storiqa",
     "url":"https://crowdsale.storiqa.com/",
      "desc":lazy_gettext("Storiqa is building an ecommerce portal for small businesses to access a global market of cryptocurrency buyers on Origin Protocol.")
