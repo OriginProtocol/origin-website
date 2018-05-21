@@ -63,8 +63,8 @@ PARTNERS = [
      "desc":lazy_gettext("HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol.")
     },
     {
-    "name":"pinprotocol",
-    "url":"https://pinprotocol.io/",
+    "name":"layerprotocol",
+    "url":"https://layerprotocol.com/",
      "desc":lazy_gettext("The decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
     },
     {
