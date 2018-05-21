@@ -65,7 +65,7 @@ PARTNERS = [
     {
     "name":"layerprotocol",
     "url":"https://layerprotocol.com/",
-     "desc":lazy_gettext("The decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
+     "desc":lazy_gettext("Layer Protocol is the decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
     },
     {
     "name":"selena",
