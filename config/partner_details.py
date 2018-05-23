@@ -33,6 +33,11 @@ PARTNERS = [
      "desc":lazy_gettext("Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform.")
     },
     {
+    "name":"nucypher",
+    "url":"https://www.nucypher.com/blockchain/",
+     "desc":lazy_gettext("Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform.")
+    },
+    {
     "name":"storiqa",
     "url":"https://crowdsale.storiqa.com/",
      "desc":lazy_gettext("Storiqa is building an ecommerce portal for small businesses to access a global market of cryptocurrency buyers on Origin Protocol.")
@@ -63,9 +68,9 @@ PARTNERS = [
      "desc":lazy_gettext("HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol.")
     },
     {
-    "name":"pinprotocol",
-    "url":"https://pinprotocol.io/",
-     "desc":lazy_gettext("The decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
+    "name":"layerprotocol",
+    "url":"https://layerprotocol.com/",
+     "desc":lazy_gettext("Layer Protocol is the decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
     },
     {
     "name":"selena",
