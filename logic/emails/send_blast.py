@@ -2,4 +2,4 @@ from logic.emails import mailing_list
 from tools import db_utils
 
 with db_utils.request_context():
-    mailing_list.send_one_off("yupan_announcement")
+    mailing_list.send_one_off("may_2018_newsletter")
