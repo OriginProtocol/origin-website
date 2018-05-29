@@ -217,4 +217,9 @@ PARTNERS = [
     "url":"https://libertylance.io/",
      "desc":lazy_gettext("LibertyLance is building their decentralized and self-regulating freelancing platform on Origin Protocol.")
     },
+    {
+    "name":"wificoin",
+    "url":"https://www.wificoin.co/",
+     "desc":lazy_gettext("Wificoin is building a marketplace for existing WiFi networks to provide internet access as an open public utility using Origin Protocol.")
+    },
 ]
