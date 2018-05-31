@@ -53,8 +53,8 @@ def apple_app_site_association():
 
 @app.route('/mobile/<link_code>')
 @app.route('/mobile')
-def mobile():
-    return render_template('mobile.html')
+def mobile(link_code=None):
+    return render_template('mobile.html', link_code=link_code)
 
 @app.route('/<lang_code>')
 def index():

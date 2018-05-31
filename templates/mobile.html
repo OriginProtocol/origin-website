@@ -9,7 +9,16 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <p>
+          <div class="general-panel">
           Look for our mobile apps in the apple app and google play store. Coming soon...
+          </div>
+          {% if link_code %}
+            <div class="ios-panel">
+            Looks like you are attempting to process an origin transaction on the origin app
+            <button role="button" class="btn btn-primary btn-min-size copy-get-app">Copy code &amp; Get our app from the app store</button>
+            </div>
+          {% else %}
+          {% endif %}
           </p>
         </div>
       </div>
@@ -19,4 +28,35 @@
 </main>
 {% endblock %}
 {% block extra_scripts %}
+<script src="/static/js/clipboard-polyfill.js"></script>
+<script>
+$(function() {
+  var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  if (iOS)
+  {
+    {% if link_code %}
+    $(".general-panel").hide();
+    $(".ios-panel").show();
+    $(".copy-get-app").click(function() {
+      clipboard.writeText("orgw:{{link_code}}").then(function(){
+        window.open("https://itunes.apple.com/us/app/apple-store")
+      },function(err){
+        console.log("copy failed");
+      });
+    });
+    {% else %}
+      window.location = "https://itunes.apple.com/us/app/apple-store";
+    {% endif %}
+  }
+  else
+  {
+    $(".ios-panel").hide();
+  }
+});
+</script>
+{% endblock %}
+{% block extra_styles %}
+<style>
+.ios-panel {display:none}
+</style>
 {% endblock %}
