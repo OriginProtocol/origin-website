@@ -418,7 +418,7 @@
                   <div class="when">
                     {{ gettext("September 2017") }}
                   </div>
-                  <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released") }}
+                    {{ gettext("<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released", whitepaper=url_for('whitepaper', lang_code=CURRENT_LANGUAGE) ,product_brief=url_for('product_brief', lang_code=CURRENT_LANGUAGE))}}
                 </div>
                 <div class="col-md-2 col-xs-12 blue-to-purple">
                   <div class="blue-circle"></div>
