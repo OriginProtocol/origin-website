@@ -47,6 +47,15 @@ def root():
 def robots():
     return app.send_static_file('files/robots.txt')
 
+@app.route('/apple-app-site-association')
+def apple_app_site_association():
+    return app.send_static_file('files/apple-app-site-association.json')
+
+@app.route('/mobile/<link_code>')
+@app.route('/mobile')
+def mobile():
+    return render_template('mobile.html')
+
 @app.route('/<lang_code>')
 def index():
     return render_template('index.html')

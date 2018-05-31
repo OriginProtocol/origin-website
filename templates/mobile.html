@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
+{% block content %}
+  <main class="landing-page">
+    {% include 'navbar.html' %}
+    <section class="header-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p>
+          Look for our mobile apps in the apple app and google play store. Coming soon...
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+{% include 'footer.html' %}
+</main>
+{% endblock %}
+{% block extra_scripts %}
+{% endblock %}
