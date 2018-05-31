@@ -584,16 +584,6 @@ footer .company-mission {
   margin-right: 0px;
 }
 
-.logo-wrapper {
-  text-align: center;
-  width: 200px;
-  margin: 20px auto;
-}
-
-.logo-wrapper img {
-  height: 100%;
-}
-
 /* Alertify */
 .alertify-log {
   padding: 20px;
@@ -1175,6 +1165,7 @@ footer .company-mission {
 
 /* Team page */
 
+.investor,
 .team-member {
   margin: 20px;
 }
@@ -1329,8 +1320,17 @@ footer .company-mission {
   margin: 140px auto 40px auto;
 }
 
-.investor {
-  margin: 30px;
+.investors-section .logos {
+  padding-top: 0;
+}
+
+.investors-section .logos .d-flex {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.investors-section .logos .img-graphic img {
+  max-height: unset;
 }
 
 /* Partners page */
@@ -1353,28 +1353,28 @@ footer .company-mission {
   background-color: #f7f9fb;
 }
 
-.building-partners-section .logos {
+.logos {
   padding-top: 120px;
   text-align: center;
 }
 
-.building-partners-section .logos.collapsing {
+.logos.collapsing {
   margin-bottom: calc(50px + 1.5rem);
 }
 
-.building-partners-section .logos.collapsing,
-.building-partners-section .logos.collapse.show {
+.logos.collapsing,
+.logos.collapse.show {
   display: flex;
   padding-top: 0px;
 }
 
-.building-partners-section .logos .col-12 {
+.logos .col-12 {
   align-items: center;
   display: flex;
   padding-bottom: 100px;
 }
 
-.building-partners-section .logos .img-graphic img {
+.logos .img-graphic img {
   max-height: 60px;
   max-width: 100%;
 }
@@ -1444,7 +1444,7 @@ footer .company-mission {
   height: 100px;
 }
 
-.building-partners-section .logos .img-graphic .spin-logo {
+.logos .img-graphic .spin-logo {
   max-height: 36px;
 }
 
@@ -1595,10 +1595,10 @@ footer .company-mission {
   .building-partners-section .bottom-panes {
     bottom: 0px;
   }
-  .building-partners-section .logos {
+  .logos {
     padding-top: 100px;
   }
-  .building-partners-section .logos .img-graphic {
+  .logos .img-graphic {
     max-width: 200px;
   }
 }
@@ -1668,7 +1668,7 @@ footer .company-mission {
   .build-header-section {
     padding-bottom: 80px;
   }
-  .building-partners-section .logos {
+  .logos {
     padding-top: 100px;
   }
 }
@@ -1904,7 +1904,7 @@ footer .company-mission {
     top: 36%;
     width: 8%;
   }
-  .building-partners-section .logos .img-graphic img {
+  .logos .img-graphic img {
     max-width: 90%;
   }
 }
