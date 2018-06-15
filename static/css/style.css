@@ -116,7 +116,6 @@ a:hover {
   background-color: #512d62;
   color: white;
   font-family: 'Open-Sans', sans-serif;
-  min-height: 100px;
 }
 
 .announcement h1,
@@ -143,15 +142,28 @@ a:hover {
 }
 
 .announcement .container {
-  padding-bottom: 30px;
-  padding-top: 30px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.announcement .container div {
+  margin-right: auto;
 }
 
 .announcement .img-container {
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   height: 40px;
-  margin-right: 30px;
-  padding-right: 30px;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.announcement .message {
+  margin-bottom: 20px;
+}
+
+.registration-alert {
+  margin-bottom: 20px;
 }
 
 .registration-alert header {
@@ -170,6 +182,7 @@ a:hover {
   border-bottom: 9px solid transparent;
   border-left: 12px solid #cc7cbc;
   border-top: 9px solid transparent;
+  display: none;
   height: 0;
   margin: 0 20px;
   width: 0;
@@ -178,6 +191,7 @@ a:hover {
 .registration-button {
   background-color: #ee99dc;
   color: black;
+  display: block;
   font-weight: bold;
   height: 40px;
   line-height: 40px;
@@ -1756,6 +1770,35 @@ footer .company-mission {
 
 /* md + */
 @media (min-width: 768px) {
+  .announcement .container {
+    flex-direction: row;
+  }
+  .announcement .container div {
+    margin-right: unset;
+  }
+  .announcement .container .img-container {
+    border-bottom: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 20px 0 0;
+    padding: 0 20px 0 0;
+    width: 200px;
+  }
+  .announcement .message {
+    margin-bottom: 0;
+  }
+  .registration-alert {
+    margin-bottom: 0;
+    margin-left: auto;
+    min-width: 200px;
+    text-align: right;
+  }
+  .registration-button {
+    margin-bottom: 0;
+  }
+  .announcement .link-container {
+    margin-left: auto;
+    padding-top: 10px;
+  }
   .navbar-origin .navbar-collapse .col-md-4:nth-of-type(3) {
     padding-top: 20px;
   }
@@ -1992,6 +2035,22 @@ footer .company-mission {
 
 /* lg + */
 @media (min-width: 992px) {
+  .announcement .container .img-container {
+    margin-right: 30px;
+    padding-right: 30px;
+  }
+  .announcement .container .registration-arrow {
+    display: block;
+    margin: 0 20px;
+  }
+  .registration-alert {
+    min-width: unset;
+  }
+  .announcement .link-container {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
   /* override Bootstrap _navbar.scss:178 for second menu */
   .navbar-expand-lg #languageOptions.navbar-collapse {
     display: none !important;
