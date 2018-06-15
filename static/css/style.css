@@ -112,6 +112,88 @@ a:hover {
   text-decoration: none;
 }
 
+.announcement {
+  background-color: #512d62;
+  color: white;
+  font-family: 'Open-Sans', sans-serif;
+  min-height: 100px;
+}
+
+.announcement h1,
+.announcement h2 {
+  font-family: 'Open-Sans', sans-serif;
+  margin: 0;
+}
+
+.announcement h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.announcement h2 {
+  font-size: 0.625rem;
+}
+
+.announcement .subdued {
+  color: #ee99dc;
+}
+
+.announcement strong {
+  font-weight: 600;
+}
+
+.announcement .container {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.announcement .img-container {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  height: 40px;
+  margin-right: 30px;
+  padding-right: 30px;
+}
+
+.registration-alert header {
+  color: #ee99dc;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
+.registration-alert .countdown {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.registration-arrow {
+  border-bottom: 9px solid transparent;
+  border-left: 12px solid #cc7cbc;
+  border-top: 9px solid transparent;
+  height: 0;
+  margin: 0 20px;
+  width: 0;
+}
+
+.registration-button {
+  background-color: #ee99dc;
+  color: black;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 165px;
+}
+
+.registration-button:hover {
+  background-color: #a0639f;
+  color: black;
+  transition: background-color .15s ease-in-out,
+              border-color .15s ease-in-out,
+              box-shadow .15s ease-in-out;
+}
+
 .url-warning {
   display: block;
   font-size: 1.125rem;
