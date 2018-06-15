@@ -92,6 +92,7 @@ $(function() {
   });
 });
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-})
+// show html content in tooltip
+$('a[data-toggle="tooltip"]').tooltip({
+  html: true
+});
