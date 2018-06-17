@@ -144,8 +144,8 @@ a:hover {
 
 .announcement .container {
   flex-direction: column;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .announcement .container div {
@@ -1627,7 +1627,8 @@ footer .company-mission {
   }
   .navbar,
   footer .container,
-  .foreground-content {
+  .foreground-content,
+  .announcement .container {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1701,6 +1702,11 @@ footer .company-mission {
 
 /* sm + */
 @media (min-width: 576px) {
+  .announcement .container,
+  .navbar {
+    margin: auto;
+    max-width: 540px;
+  }
   .navbar-origin .nav-item {
     font-size: 1.125rem;
   }
@@ -1726,7 +1732,8 @@ footer .company-mission {
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar,
   footer .container,
-  .foreground-content {
+  .foreground-content,
+  .announcement .container {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -1787,6 +1794,10 @@ footer .company-mission {
   .announcement .message {
     margin-bottom: 0;
   }
+  .announcement .container,
+  .navbar {
+    max-width: 720px;
+  }
   .registration-alert {
     margin-bottom: 0;
     margin-left: auto;
@@ -1805,7 +1816,8 @@ footer .company-mission {
   }
   .navbar,
   footer .container,
-  .foreground-content {
+  .foreground-content,
+  .announcement .container {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -2036,6 +2048,10 @@ footer .company-mission {
 
 /* lg + */
 @media (min-width: 992px) {
+  .announcement .container,
+  .navbar {
+    max-width: 960px;
+  }
   .announcement .container .img-container {
     margin-right: 30px;
     padding-right: 30px;
@@ -2050,6 +2066,10 @@ footer .company-mission {
   .announcement .link-container {
     margin-left: 0;
     padding-top: 0;
+  }
+  .navbar .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* override Bootstrap _navbar.scss:178 for second menu */
@@ -2136,6 +2156,10 @@ footer .company-mission {
 
 /* xl + */
 @media (min-width: 1200px) {
+  .announcement .container,
+  .navbar {
+    max-width: 1140px;
+  }
   .navbar-origin .navbar-collapse .nav-item,
   .navbar-origin .navbar-collapse .nav-item.dropdown {
     padding: 20px 30px;
