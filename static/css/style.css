@@ -282,6 +282,10 @@ main.team-page {
   background-color: #2e3f53;
 }
 
+main.landing-page > .background-wrapper {
+  margin-bottom: -160px;
+}
+
 .background-wrapper {
   position: relative;
 }
@@ -700,12 +704,7 @@ footer .company-mission {
 /* Index Page */
 
 .hero-section {
-  margin-top: -160px;
   z-index: 2;
-}
-
-.hero-section .foreground-content {
-  top: 160px;
 }
 
 .hero-section h1 {
@@ -718,6 +717,7 @@ footer .company-mission {
 }
 
 .platform-section {
+  top: -160px;
   z-index: 1;
 }
 
