@@ -148,8 +148,13 @@ a:hover {
   padding-top: 30px;
 }
 
-.announcement .container div {
+.announcement .container > div {
   margin-right: auto;
+}
+
+#rtl .announcement .container > div {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .announcement .img-container {
@@ -161,6 +166,11 @@ a:hover {
 
 .announcement .message {
   margin-bottom: 20px;
+  margin-right: auto;
+}
+
+#rtl .announcement .message {
+  margin-left: auto;
 }
 
 .registration-alert {
@@ -187,6 +197,11 @@ a:hover {
   height: 0;
   margin: 0 20px;
   width: 0;
+}
+
+#rtl .registration-arrow {
+  border-left: 0;
+  border-right: 12px solid #cc7cbc;
 }
 
 .registration-button {
@@ -1791,6 +1806,12 @@ footer .company-mission {
     padding: 0 20px 0 0;
     width: 200px;
   }
+  #rtl .announcement .container .img-container {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 0;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 20px;
+  }
   .announcement .message {
     margin-bottom: 0;
   }
@@ -1804,12 +1825,21 @@ footer .company-mission {
     min-width: 200px;
     text-align: right;
   }
+  #rtl .registration-alert {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
   .registration-button {
     margin-bottom: 0;
   }
   .announcement .link-container {
     margin-left: auto;
     padding-top: 10px;
+  }
+  #rtl .announcement .link-container {
+    margin-left: 0;
+    margin-right: auto;
   }
   .navbar-origin .navbar-collapse .col-md-4:nth-of-type(3) {
     padding-top: 20px;
@@ -2066,6 +2096,10 @@ footer .company-mission {
   .announcement .link-container {
     margin-left: 0;
     padding-top: 0;
+  }
+  #rtl .announcement .link-container {
+    margin-left: 0;
+    margin-right: 0;
   }
   .navbar .container {
     padding-left: 0;
