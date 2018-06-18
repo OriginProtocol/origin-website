@@ -1,18 +1,18 @@
 <div id="announcement" class="announcement">
   <div class="d-flex flex-wrap align-items-center container justify-content-between">
-    <a href="https://www.coinlist.co/origin">
-      <div class="img-container d-flex align-items-center">
+    <div class="img-container d-flex align-items-center order-md-0">
+      <a href="https://www.coinlist.co/origin">
         <img src="/static/img/coinlist-logo.png"
         srcset="/static/img/coinlist-logo@2x.png 2x, /static/img/coinlist-logo@3x.png 3x"
         role="presentation" />
-      </div>
-    </a>
-    <div class="message">
-      <h1>CoinList <span class="subdued">Round</span></h1>
-      <h2><strong>Register today!</strong> $1,000 minimum. Availability limited. <a href="https://medium.com/originprotocol/origins-next-funding-round-now-live-on-coinlist-147096f6a906">Learn more.</a></h2>
+      </a>
     </div>
-    <div class="registration-alert">
-      <header>Registration Ends In</header>
+    <div class="message order-md-2 order-lg-1">
+      <h1>CoinList <span class="subdued">Round</span></h1>
+      <h2><strong>{{ gettext("Register today!") }}</strong> {{ gettext("$1,000 minimum.") }} {{ gettext("Availability limited.") }} <a href="https://medium.com/originprotocol/origins-next-funding-round-now-live-on-coinlist-147096f6a906" target="_blank" class="d-lg-block d-xl-inline">{{ gettext("Learn more.") }}</a></h2>
+    </div>
+    <div class="registration-alert order-md-1 order-lg-2">
+      <header>{{ gettext("Registration Ends In") }}</header>
       <div id="countdown">
         <span class="days"></span>d
         <span class="hours"></span>h
@@ -20,10 +20,10 @@
         <span class="seconds"></span>s
       </div>
     </div>
-    <div class="registration-arrow">
+    <div class="registration-arrow order-md-3">
     </div>
-    <div class="link-container">
-      <a href="http://coinlist.co/origin" target="_blank" class="registration-button">Register Now</a>
+    <div class="link-container order-md-4">
+      <a href="http://coinlist.co/origin" target="_blank" class="registration-button">{{ gettext("Register Now") }}</a>
     </div>
   </div>
 </div>
