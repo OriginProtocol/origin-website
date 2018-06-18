@@ -1,10 +1,12 @@
-<div class="announcement">
+<div id="announcement" class="announcement" style="display: none">
   <div class="d-flex flex-wrap align-items-center container justify-content-between">
-    <div class="img-container d-flex align-items-center">
-      <img src="/static/img/coinlist-logo.png"
+    <a href="https://www.coinlist.co/origin">
+      <div class="img-container d-flex align-items-center">
+        <img src="/static/img/coinlist-logo.png"
         srcset="/static/img/coinlist-logo@2x.png 2x, /static/img/coinlist-logo@3x.png 3x"
         role="presentation" />
-    </div>
+      </div>
+    </a>
     <div class="message">
       <h1>CoinList <span class="subdued">Round</span></h1>
       <h2><strong>Register today!</strong> $1,000 minimum. Availability limited.</h2>
@@ -27,45 +29,53 @@
 </div>
 
 {% block extra_scripts %}
-  <script>
-    const timeRemaining = (end) => {
-      const total = Date.parse(end) - Date.parse(new Date());
-      const seconds = Math.floor((total / 1000) % 60);
-      const minutes = Math.floor((total / 1000 / 60) % 60);
-      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-      const days = Math.floor(total / (1000 * 60 * 60 * 24));
+<script type="text/javascript">
 
-      return { total, days, hours, minutes, seconds };
+  const timeRemaining = (end) => {
+    const total = Date.parse(end) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+    return { total, days, hours, minutes, seconds };
+  }
+
+  const initTimer = (id, end) => {
+
+    start = new Date('2018-06-18T13:00:00.000Z');
+
+    const clock = document.getElementById(id);
+    const daysEl = clock.querySelector('.days');
+    const hoursEl = clock.querySelector('.hours');
+    const minutesEl = clock.querySelector('.minutes');
+    const secondsEl = clock.querySelector('.seconds');
+
+    if (Date.now() > start) {
+      document.getElementById('announcement').style['display'] = "block";
     }
+    
+    const update = () => {
+      const t = timeRemaining(end);
 
-    const initTimer = (id, end) => {
-      const clock = document.getElementById(id);
-      const daysEl = clock.querySelector('.days');
-      const hoursEl = clock.querySelector('.hours');
-      const minutesEl = clock.querySelector('.minutes');
-      const secondsEl = clock.querySelector('.seconds');
+      daysEl.innerHTML = t.days;
+      hoursEl.innerHTML = (`0${t.hours}`).slice(-2);
+      minutesEl.innerHTML = (`0${t.minutes}`).slice(-2);
+      secondsEl.innerHTML = (`0${t.seconds}`).slice(-2);
 
-      const update = () => {
-        const t = timeRemaining(end);
-
-        daysEl.innerHTML = t.days;
-        hoursEl.innerHTML = (`0${t.hours}`).slice(-2);
-        minutesEl.innerHTML = (`0${t.minutes}`).slice(-2);
-        secondsEl.innerHTML = (`0${t.seconds}`).slice(-2);
-
-        if (t.total <= 0) {
-          clearInterval(int);
-        }
+      if (t.total <= 0) {
+        clearInterval(int);
       }
-
-      update();
-
-      const int = setInterval(update, 1000);
     }
+
+    const int = setInterval(update, 1000);
+
+    update();
+  }
 
     // end of day (PDT) on June 27, 2018
     const deadline = new Date('2018-06-28T06:59:59.999Z');
 
     initTimer('countdown', deadline);
   </script>
-{% endblock %}
+  {% endblock %}
