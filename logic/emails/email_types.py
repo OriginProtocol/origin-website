@@ -30,6 +30,9 @@ EMAILS = {
     },
     'may_2018_newsletter': {
         'subject': 'Tech update and newly released demo DApp!'
+    },
+    'coinlist_announcement': {
+        'subject': 'Register for Origin\'s CoinList Round today'
     }
 }
 
