@@ -149,11 +149,13 @@ a:hover {
 
 .announcement .container {
   flex-direction: column;
+  margin-bottom: -20px !important;
   padding-bottom: 30px;
   padding-top: 30px;
 }
 
-.announcement .container > div {
+.announcement .container > * {
+  margin-bottom: 20px !important;
   margin-right: auto;
 }
 
@@ -1828,7 +1830,6 @@ footer .company-mission {
   }
   .announcement .link-container {
     margin-left: auto;
-    padding-top: 10px;
   }
   #rtl .announcement .link-container {
     margin-left: 0;
@@ -2104,9 +2105,13 @@ footer .company-mission {
     margin-left: 0;
     padding-top: 0;
   }
-  #rtl .announcement .link-container {
+  #rtl .announcement .container > .link-container {
     margin-left: 0;
     margin-right: 0;
+  }
+  #rtl .announcement .container > .registration-alert,
+  #rtl .announcement .container > .registration-arrow {
+    margin-left: 20px;
   }
   .navbar .container {
     padding-left: 0;
