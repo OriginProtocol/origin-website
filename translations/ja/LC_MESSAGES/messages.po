@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  0.3\n"
 "Report-Msgid-Bugs-To: stan@originprotocol.com\n"
-"POT-Creation-Date: 2018-03-09 14:39-0700\n"
+"POT-Creation-Date: 2018-06-18 10:12-0700\n"
 "PO-Revision-Date: 2018-01-20 13:29-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -30,7 +30,7 @@ msgid "Building on Origin"
 msgstr "Originを開発する"
 
 #: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:36
-#: logic/emails/mailing_list.py:118
+#: logic/emails/mailing_list.py:110
 msgid "Please enter a valid email address"
 msgstr "有効なメールアドレスを入力してください"
 
@@ -42,11 +42,11 @@ msgstr "すでに登録されています"
 msgid "Thanks for signing up!"
 msgstr "ご登録ありがとうございます"
 
-#: logic/emails/mailing_list.py:54 logic/emails/mailing_list.py:135
+#: logic/emails/mailing_list.py:54 logic/emails/mailing_list.py:127
 msgid "Ooops! Something went wrong."
 msgstr "エラーが起きました"
 
-#: logic/emails/mailing_list.py:81 logic/emails/mailing_list.py:146
+#: logic/emails/mailing_list.py:81 logic/emails/mailing_list.py:138
 msgid "Thanks! We'll be in touch soon."
 msgstr "ありがとうございます"
 
@@ -58,7 +58,7 @@ msgstr "エラーが起きました"
 msgid "You have been unsubscribed"
 msgstr "すでに購読が解除されています"
 
-#: logic/emails/mailing_list.py:121
+#: logic/emails/mailing_list.py:113
 msgid "Please enter a valid website address"
 msgstr "有効なURLを入力してください"
 
@@ -70,95 +70,214 @@ msgstr "どのようにOriginを知りましたか？"
 msgid "The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
 msgstr "申し訳ありませんが、お探しいているページは存在しておりません。"
 
-#: templates/404.html:27 templates/404.html:35
+#: templates/404.html:26 templates/404.html:32
 msgid "Go Home"
 msgstr "トップに戻る"
 
-#: templates/base.html:16 templates/index.html:3
+#: templates/announcement.html:11
+msgid "CoinList <span class=\"subdued\">Round</span>"
+msgstr "CoinList <span class = \ "subdued \">ラウンド</span>"
+
+#: templates/announcement.html:12
+msgid "Register today!"
+msgstr "今日登録する！"
+
+#: templates/announcement.html:12
+msgid "$1,000 minimum."
+msgstr "最低1,000ドル。"
+
+#: templates/announcement.html:12
+msgid "Availability limited."
+msgstr "可用性に限りがある。"
+
+#: templates/announcement.html:12
+msgid "Learn more."
+msgstr "もっと詳しく知る。"
+
+#: templates/announcement.html:15
+msgid "Registration Ends In"
+msgstr "登録終了"
+
+#: templates/announcement.html:26
+msgid "Register Now"
+msgstr "今すぐ登録"
+
+#: templates/base.html:13 templates/index.html:3
 msgid "Origin Protocol"
 msgstr "Origin Protocol"
 
-#: templates/base.html:17
+#: templates/base.html:14
 msgid "Origin Protocol enables the sharing economy on the blockchain"
 msgstr "Origin Protocolはブロックチェーン上でシェアリングエコノミーを実現します"
 
-#: templates/footer.html:12
-msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network."
-msgstr "Originは明日のシェアリングエコノミーを構築しています。買い手と売り手は仲介人なしで取引することができるようになります。私たちは、取引手数料の引き下げ、検閲と規制の緩和、コミュニティ内の早期参加者によるネットワークへの関与が成功の鍵だと確信しています"
+#: templates/developers.html:2 templates/developers.html:3
+msgid "Origin Protocol - Developers"
+msgstr "原点プロトコル - 開発者"
 
-#: templates/footer.html:15
+#: templates/developers.html:14 templates/index.html:22
+msgid "The sharing economy without intermediaries"
+msgstr "仲介者がいないシェアリングエコノミー"
+
+#: templates/developers.html:17 templates/index.html:25
+msgid "Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS"
+msgstr "OriginはEthereumブロックチェーンとIPFSを使って、シェアリングエコノミーのマーケットプレイスを作り出すためのプロトコルです"
+
+#: templates/developers.html:65 templates/index.html:73
+msgid "The Origin platform"
+msgstr "Origin Platform"
+
+#: templates/developers.html:68 templates/index.html:76
+msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
+msgstr "私たちは、開発者と企業がブロックチェーン上に分散したマーケットプレイスを構築する権限を与えます。私たちの議定書では、資産やサービスを部分的に使用するためのリスティングの作成と管理が簡単です。バイヤーと売り手はお互いを発見したり、リストをブラウズしたり、予約をしたり、評価やレビューなどを残すことができます。"
+
+#: templates/developers.html:72 templates/index.html:80
+msgid "Read Our Product Brief"
+msgstr "サービス概要を読む"
+
+#: templates/developers.html:78 templates/index.html:86
+#: templates/index.html:636
+msgid "Join Our Telegram"
+msgstr "Telegramに参加する"
+
+#: templates/developers.html:94 templates/index.html:103
+msgid "Partners building on Origin"
+msgstr "Originにサービスを構築しているパートナー"
+
+#: templates/developers.html:97 templates/index.html:106
+msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
+msgstr "世界中のチームがOriginのプロトコルに基づいてサービスを構築していますが、私たちの使命に共感し参加してくれる、もっとたくさんの素晴らしい人を探しています"
+
+#: templates/developers.html:101 templates/index.html:110
+msgid "View All Partners"
+msgstr "すべてのパートナーを見る"
+
+#: templates/developers.html:140 templates/index.html:191
+msgid "Build your business on Origin"
+msgstr "Originでビジネスを構築する"
+
+#: templates/developers.html:143 templates/index.html:194
+msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
+msgstr "フリーランスの写真家、アパート所有者、バイクサプライヤー、既存のシェアリングエコノミービジネスなど、Originは分散したウェブでのビジネスを容易にします。"
+
+#: templates/developers.html:143 templates/index.html:194
+msgid "Get in touch to learn more."
+msgstr "詳細に関してはお気軽にお問い合わせください。"
+
+#: templates/developers.html:147 templates/index.html:198
+msgid "Try the Demo"
+msgstr "デモを試す"
+
+#: templates/developers.html:153 templates/index.html:204
+msgid "View GitHub"
+msgstr "GitHubを見る"
+
+#: templates/developers.html:165 templates/index.html:216
+msgid "It's time to replace rent-seeking middlemen"
+msgstr "仲介者をなくす時です"
+
+#: templates/developers.html:168 templates/index.html:219
+#, python-format
+msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
+msgstr "Ethereumブロックチェーンの力を活用して、商品は中立的な第三者として機能する、安全で透過的なシステムによって管理されます。買い手と売り手は、Uber、Airbnb、Fiverr、Getaroundのような企業が現在取っている20〜30 %%の取引手数料をシェアします。"
+
+#: templates/developers.html:172 templates/index.html:223
+msgid "Read the Whitepaper"
+msgstr "ホワイトペーパーを読む"
+
+#: templates/footer.html:13
+msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, promoting free and transparent commerce, and giving early participants in the community a stake in the network."
+msgstr "起源は明日の共有経済を構築しています。バイヤーと売り手は、賃借希望の仲介人なしで取引することができます。私たちは、取引手数料を引き下げ、自由で透明な商取引を促進し、コミュニティの早期参加者にネットワークの賭けを与えることを信じています。"
+
+#: templates/footer.html:16
 msgid "Origin Protocol, Inc."
 msgstr "Origin Protocol, Inc."
 
-#: templates/footer.html:22
+#: templates/footer.html:18
+msgid "Privacy"
+msgstr "プライバシー"
+
+#: templates/footer.html:22 templates/tos.html:12
+msgid "Terms of Service"
+msgstr "利用規約"
+
+#: templates/footer.html:31
 msgid "Documentation"
 msgstr "ドキュメント"
 
-#: templates/footer.html:27 templates/navbar.html:69
+#: templates/footer.html:36 templates/navbar.html:71
 msgid "Product Brief"
 msgstr "サービス概要"
 
-#: templates/footer.html:32
+#: templates/footer.html:41
 msgid "Whitepaper"
 msgstr "ホワイトペーパー"
 
-#: templates/footer.html:37
+#: templates/footer.html:46
 msgid "Demo DApp"
 msgstr "デモDApp"
 
-#: templates/footer.html:42
+#: templates/footer.html:51
 msgid "Github"
 msgstr "Github"
 
-#: templates/footer.html:47
+#: templates/footer.html:56
 msgid "Docs"
 msgstr "ドキュメント"
 
-#: templates/footer.html:54 templates/team.html:116
+#: templates/footer.html:63 templates/team.html:122 templates/team.html:327
+#: templates/team.html:344 templates/team.html:361 templates/team.html:378
 msgid "Community"
 msgstr "コミュニティ"
 
-#: templates/footer.html:59
+#: templates/footer.html:68
 msgid "Telegram"
 msgstr "Telegram"
 
-#: templates/footer.html:64
+#: templates/footer.html:73
 msgid "Discord"
 msgstr "Discord"
 
-#: templates/footer.html:69
+#: templates/footer.html:78
 msgid "Medium"
 msgstr "Medium"
 
-#: templates/footer.html:74
+#: templates/footer.html:83
+msgid "Reddit"
+msgstr "Reddit"
+
+#: templates/footer.html:88
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:79
+#: templates/footer.html:93
+msgid "Instagram"
+msgstr "インスタグラム"
+
+#: templates/footer.html:98
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:86
+#: templates/footer.html:105
 msgid "Organization"
 msgstr "オーガニゼーション"
 
-#: templates/footer.html:91 templates/navbar.html:72
+#: templates/footer.html:110 templates/navbar.html:74
 msgid "Team"
 msgstr "チーム"
 
-#: templates/footer.html:96 templates/navbar.html:66 templates/presale.html:16
+#: templates/footer.html:115 templates/navbar.html:68 templates/presale.html:16
 msgid "Presale"
 msgstr "プレセール"
 
-#: templates/footer.html:101
+#: templates/footer.html:120
 msgid "Partners"
 msgstr "パートナー"
 
-#: templates/footer.html:106
+#: templates/footer.html:125
 msgid "Jobs (We're hiring!)"
 msgstr "求人(絶賛採用中)"
 
-#: templates/footer.html:111
+#: templates/footer.html:130
 msgid "845 Market St, #450A<br>San Francisco, CA 94103"
 msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
 
@@ -166,244 +285,176 @@ msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "仲介者がいないシェアリングエコノミー。 OriginはEthereumブロックチェーンとIPFSを使用してシェアリングエコノミーを構築するプロトコルです。"
 
-#: templates/index.html:16
-msgid "The sharing economy without intermediaries"
-msgstr "仲介者がいないシェアリングエコノミー"
-
-#: templates/index.html:19
-msgid "Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS"
-msgstr "OriginはEthereumブロックチェーンとIPFSを使って、シェアリングエコノミーのマーケットプレイスを作り出すためのプロトコルです"
-
-#: templates/index.html:65
-msgid "The Origin platform"
-msgstr "Origin Platform"
-
-#: templates/index.html:68
-msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
-msgstr "私たちは、開発者と企業がブロックチェーン上に分散したマーケットプレイスを構築する権限を与えます。私たちの議定書では、資産やサービスを部分的に使用するためのリスティングの作成と管理が簡単です。バイヤーと売り手はお互いを発見したり、リストをブラウズしたり、予約をしたり、評価やレビューなどを残すことができます。"
-
-#: templates/index.html:73
-msgid "Read Our Product Brief"
-msgstr "サービス概要を読む"
-
-#: templates/index.html:81 templates/index.html:590
-msgid "Join Our Telegram"
-msgstr "Telegramに参加する"
-
-#: templates/index.html:98
-msgid "Partners building on Origin"
-msgstr "Originにサービスを構築しているパートナー"
-
-#: templates/index.html:101
-msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
-msgstr "世界中のチームがOriginのプロトコルに基づいてサービスを構築していますが、私たちの使命に共感し参加してくれる、もっとたくさんの素晴らしい人を探しています"
-
-#: templates/index.html:106
-msgid "View All Partners"
-msgstr "すべてのパートナーを見る"
-
-#: templates/index.html:117
-msgid "Propy is building their property manager marketplace DApp with Origin Protocol."
-msgstr "Propyは財産管理市場のDAppをOrigin Protocol上に構築しています。"
-
-#: templates/index.html:124
-msgid "DApps built on Origin will be able to use WeTrust’s decentralized insurance protocols to protect users."
-msgstr "Originで構築されたDAppsは、ユーザーを保護するためにWeTrustの分散型保険プロトコルを使用することができます。"
-
-#: templates/index.html:131
+#: templates/index.html:121
 msgid "Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
 msgstr "Bee Tokenは、Origin Protocolを使用して分散Web上のホストとゲストの仲介者をなくし、ピアツーピアネットワークを構築しようとしています。"
 
-#: templates/index.html:138
+#: templates/index.html:129
+msgid "Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US."
+msgstr "スピンは、米国内の50以上の市場で、電子スクーター、電子自転車、自転車を借りるパーソナルモビリティプラットフォームです。"
+
+#: templates/index.html:137
+msgid "Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol."
+msgstr "Kozazaは、オリジンプロトコルを使用して、ホームシェアリングと伝統的なホームステイネットワークをブロックチェーンに構築しています。"
+
+#: templates/index.html:145
 msgid "CanYa is building their “marketplace of services” with Origin Protocol for the gig economy."
 msgstr "CanYaは、Origin Protocolでギグエコノミーの「サービス市場」を構築しています。"
 
-#: templates/index.html:175
-msgid "Build your business on Origin"
-msgstr "Originでビジネスを構築する"
+#: templates/index.html:153
+msgid "ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol."
+msgstr "ServisHeroは、発展途上国の労働者が原産地の議定書に基づいて権限を与えるサービス市場を構築しています。"
 
-#: templates/index.html:178
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
-msgstr "フリーランスの写真家、アパート所有者、バイクサプライヤー、既存のシェアリングエコノミービジネスなど、Originは分散したウェブでのビジネスを容易にします。"
-
-#: templates/index.html:178
-msgid "Get in touch to learn more."
-msgstr "詳細に関してはお気軽にお問い合わせください。"
-
-#: templates/index.html:183
-msgid "Try the Demo"
-msgstr "デモを試す"
-
-#: templates/index.html:191
-msgid "View GitHub"
-msgstr "GitHubを見る"
-
-#: templates/index.html:204
-msgid "It's time to replace rent-seeking middlemen"
-msgstr "仲介者をなくす時です"
-
-#: templates/index.html:207
-#, python-format
-msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "Ethereumブロックチェーンの力を活用して、商品は中立的な第三者として機能する、安全で透過的なシステムによって管理されます。買い手と売り手は、Uber、Airbnb、Fiverr、Getaroundのような企業が現在取っている20〜30 %%の取引手数料をシェアします。"
-
-#: templates/index.html:212
-msgid "Read the Whitepaper"
-msgstr "ホワイトペーパーを読む"
-
-#: templates/index.html:255
+#: templates/index.html:267
 msgid "Features"
 msgstr "機能"
 
-#: templates/index.html:266
+#: templates/index.html:279
 msgid "Smart contracts enable secure and reliable payments directly from one party to another"
 msgstr "スマート契約はである当事者から別の当事者に安全かつ信頼できる支払いを直接行うことができます"
 
-#: templates/index.html:277
+#: templates/index.html:291
 msgid "Protocol schemas support hundreds of listing types, including custom verticals"
 msgstr "プロトコルスキーマは、カスタム業界を含む何百ものリスティングタイプをサポートしています"
 
-#: templates/index.html:288
+#: templates/index.html:303
 msgid "Open and shared data encourages innovation by developers and businesses"
 msgstr "オープンで共有されたデータは、開発者や企業による革新を促進する"
 
-#: templates/index.html:299
+#: templates/index.html:315
 msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
 msgstr "ブロックチェーンのアイデンティティ検証とレピュテーションデータにより、安全で評判の高いパートナーが確保されます"
 
-#: templates/index.html:316
+#: templates/index.html:332
 msgid "Tech Stack"
 msgstr "選定技術"
 
-#: templates/index.html:385
+#: templates/index.html:406
 msgid "Roadmap"
 msgstr "ロードマップ"
 
-#: templates/index.html:391
+#: templates/index.html:412
 msgid "May 2017"
 msgstr "2017年5月"
 
-#: templates/index.html:393
+#: templates/index.html:414
 msgid "Idea conception and demo DApp development"
 msgstr "アイデアの概念とデモのDApp開発"
 
-#: templates/index.html:398
+#: templates/index.html:419
 msgid "September 2017"
 msgstr "2017年9月"
 
-#: templates/index.html:400
-msgid "Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released"
-msgstr "サービス概要</a>と<a href='/whitepaper'>ホワイトペーパー</a>をリリース"
+#: templates/index.html:421
+#, python-format
+msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
+msgstr "<a href=' %% (product_brief)s'>製品概要</a>と<a href=' %% (whitepaper)s'>ホワイトペーパー</a>をリリース"
 
-#: templates/index.html:405
+#: templates/index.html:426
 msgid "December 2017"
 msgstr "2017年12月"
 
-#: templates/index.html:407
+#: templates/index.html:428
 msgid "Launch <a href='https://demo.originprotocol.com' target='_blank'>alpha</a> on Ethereum testnet"
 msgstr "Ethereum testnetで<a href='https://demo.originprotocol.com' target='_blank'> alpha </a>をリリースする"
 
-#: templates/index.html:412
+#: templates/index.html:433
 msgid "Q2 2018"
 msgstr "2018年第3四半期"
 
-#: templates/index.html:414
+#: templates/index.html:435
 msgid "Public beta and community sale"
 msgstr "パブリックベータとコミュニティへのトークンセール"
 
-#: templates/index.html:419
+#: templates/index.html:440
 msgid "Q3 2018"
 msgstr "2018年第3四半期"
 
-#: templates/index.html:421
+#: templates/index.html:442
 msgid "Token distribution and launch of 3rd-party DApps"
 msgstr "トークンの配布とサードパーティーDAppsの立ち上げ"
 
-#: templates/index.html:426
+#: templates/index.html:447
 msgid "2019"
 msgstr "2019"
 
-#: templates/index.html:428
+#: templates/index.html:449
 msgid "Fully decentralized services and governance"
 msgstr "完全に分散されたサービスとガバナンス"
 
-#: templates/index.html:454
+#: templates/index.html:475
 msgid "Join us in building the sharing economy of tomorrow"
 msgstr "未来のシェリングエコノミーを作り出しましょう！"
 
-#: templates/index.html:457
+#: templates/index.html:478
 msgid "Sign up for our mailing list and be first to learn of any Origin news!"
 msgstr "私たちのメーリングリストに登録して、Originのニュースを一番に知りましょう！"
 
-#: templates/index.html:461
+#: templates/index.html:482
 msgid "Enter email"
 msgstr "メールアドレスを入力"
 
-#: templates/index.html:464
+#: templates/index.html:485
 msgid "Join the Community"
 msgstr "◆ コミュニティに参加する"
 
-#: templates/index.html:478
+#: templates/index.html:499
 msgid "Press"
 msgstr "広報"
 
-#: templates/index.html:490
-msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - @joeykrug re: @originprotocol"
-msgstr "もしAirbnbが今日始まっていれば、それはブロックチェーンに基づいたピアツーピア協調モデルだっただろう。@joeykrug re：@originprotocol"
-
-#: templates/index.html:491
+#: templates/index.html:510
 msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
 msgstr "Airbnbが今日開始されていれば、それはブロックチェーンに基づいたピアツーピア協調モデルであったでしょう -  Joey Krug、Augur"
 
-#: templates/index.html:506
-msgid "@originprotocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
-msgstr "@originprotocolは、カーシェアリングやホームシェアリングなどのサービスのバイヤーとセラーが分散型のオープンなWebプラットフォーム上で取引するためのオープンソースのブロックチェーンプロトコルです。"
-
-#: templates/index.html:507
-msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
-msgstr "Origin Protocolはカーシェアリングやホームシェアリングなどのサービスのバイヤーとセラーが分散型のオープンなWebプラットフォーム上で取引するためのオープンソースのブロックチェーンプロトコルです。"
-
 #: templates/index.html:522
-msgid "@originprotocol hopes to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
-msgstr "@originprotocolは、どんなものでも直接取引することができるように、ピアツーピアネットワークを構築することで、Ethereumと今のシェアリングエコノミーを分散化したいと考えています。"
+msgid "Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers"
+msgstr "Origin Protocolは、ピアツーピアブロックチェーンプラットフォームのために2800万ドルを要しています。土地売却燃料の資金調達約45社が顧客としてコミットしている"
 
-#: templates/index.html:523
-msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
-msgstr "Origin Protocolはどんなものでも直接取引することができるように、ピアツーピアネットワークを構築することで、Ethereumと今のシェアリングエコノミーを分散化できるように信じています。"
+#: templates/index.html:534
+msgid "Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain."
+msgstr "Originは、開発者と企業が分散した共有経済市場をブロックチェーン上に構築するための一連のプロトコルを作成することを目指しています。"
 
-#: templates/index.html:538
-msgid "What if open-source software like @originprotocol can replace dozens of multi-million or even multi-billion dollar companies?"
-msgstr "もし@originprotocolのようなオープンソースのソフトウェアが数十億ドルの企業や数百億ドルの企業に取って代わることができたらどうだろうか？"
-
-#: templates/index.html:539
-msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
-msgstr "オープンソースソフトウェアが数十億ドルの企業や数十億ドルの企業に取って代わることができたらどうなるでしょうか？"
-
-#: templates/index.html:554
-msgid "@originprotocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
-msgstr "@ originprotocolは、Ethereum Blockchainを使用して、バイヤーと売り手が分散された環境の中、仲介者なしで取引しやすいようにします。"
-
-#: templates/index.html:555
-msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
-msgstr "Origin Protocolは、Ethereum Blockchainを使用して、買い手と売り手が伝統的な仲介者なしで分散環境で取引することを支援します。"
-
-#: templates/index.html:570
-msgid "@originprotocol uses the Ethereum blockchain to enable buyers and sellers to interact with each other in an effective manner."
-msgstr "@originprotocolは、買い手と売り手が効果的な方法で相互にやり取りできるように、Ethereumブロックチェーンを使用します。"
-
-#: templates/index.html:571
+#: templates/index.html:546
 msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
 msgstr "Ethereum Blockchainを使用するOrigin Protocolは、買い手と売り手が効果的に相互にやりとりすることを可能にします。"
 
-#: templates/index.html:590
+#: templates/index.html:558
+msgid "A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy."
+msgstr "仲介なしで（料金なしで）ユーザー間の取引を可能にする分散型デジタルレジャーは、共有経済におけるユーザーエクスペリエンスを再構築する予定です。"
+
+#: templates/index.html:570
+msgid "It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too."
+msgstr "それは、ユートピアと完全革命的に聞こえる：慈悲深い社会的企業と非営利団体が消費者に権限を与え、彼らにプライバシー権を与えようとする世界。"
+
+#: templates/index.html:582
+msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
+msgstr "Origin Protocolは、Ethereum Blockchainを使用して、買い手と売り手が伝統的な仲介者なしで分散環境で取引することを支援します。"
+
+#: templates/index.html:594
+msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
+msgstr "Origin Protocolはどんなものでも直接取引することができるように、ピアツーピアネットワークを構築することで、Ethereumと今のシェアリングエコノミーを分散化できるように信じています。"
+
+#: templates/index.html:607
+msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
+msgstr "オープンソースソフトウェアが数十億ドルの企業や数十億ドルの企業に取って代わることができたらどうなるでしょうか？"
+
+#: templates/index.html:619
+msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
+msgstr "Origin Protocolはカーシェアリングやホームシェアリングなどのサービスのバイヤーとセラーが分散型のオープンなWebプラットフォーム上で取引するためのオープンソースのブロックチェーンプロトコルです。"
+
+#: templates/index.html:636
 msgid "Make new friends!"
 msgstr "新しい友達を作る！"
 
-#: templates/navbar.html:75
+#: templates/mobile.html:2 templates/mobile.html:3
+msgid "Origin Protocol - Mobile"
+msgstr "原点プロトコル - モバイル"
+
+#: templates/navbar.html:77
 msgid "Blog"
 msgstr "ブログ"
 
-#: templates/navbar.html:78
+#: templates/navbar.html:80
 msgid "Demo"
 msgstr "デモ"
 
@@ -419,64 +470,65 @@ msgstr "Originにサービスを構築する"
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong>世界中のチームがOriginのプロトコルを使ってプロジェクトを開発しています。 <a href='join_our_mission'>私たちの使命に共感し参加してくれる</a>もっとたくさんの素晴らしい人を探しています。</strong>"
 
-#: templates/partners.html:81
+#: templates/partners.html:87
 msgid "View More"
 msgstr "もっと見る"
 
-#: templates/partners.html:82
+#: templates/partners.html:88
 msgid "View Less"
 msgstr "もっと見る"
 
-#: templates/partners.html:112
+#: templates/partners.html:118
 msgid "Join our mission!"
 msgstr "私たちの使命に参加する"
 
-#: templates/partners.html:115
+#: templates/partners.html:121
 msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
 msgstr "既存のブロックチェーン企業でも、ブロックチェーン技術を考えている伝統的な市場でも、皆様の声をお聞きしたいと思います。以下のフォームに記入してください。さて、お返事させていただきます。"
 
-#: templates/partners.html:119
+#: templates/partners.html:125
 msgid "Name"
 msgstr "名前"
 
-#: templates/partners.html:120
+#: templates/partners.html:126
 msgid "Firstname Lastname"
 msgstr "名 、姓*"
 
-#: templates/partners.html:123
+#: templates/partners.html:129
 msgid "Company"
 msgstr "会社"
 
-#: templates/partners.html:124
+#: templates/partners.html:130
 msgid "My Amazing Company"
 msgstr "私の驚くべき会社"
 
-#: templates/partners.html:127 templates/presale.html:77
-#: templates/presale.html:78
+#: templates/partners.html:133 templates/presale.html:74
+#: templates/presale.html:75
 msgid "Email"
 msgstr "メール"
 
-#: templates/partners.html:128
+#: templates/partners.html:134
 msgid "yourname@websitename.com"
 msgstr "yourname@websitename.com"
 
-#: templates/partners.html:131
+#: templates/partners.html:137
 msgid "Website"
 msgstr "ウェブサイト"
 
-#: templates/partners.html:132
+#: templates/partners.html:138
 msgid "https://websitename.com"
 msgstr "https://websitename.com"
 
-#: templates/partners.html:135 templates/presale.html:395
+#: templates/partners.html:141 templates/presale.html:384
 msgid "<strong>Anything else we should know?</strong> (optional)"
 msgstr "<strong>その他知っておくべきことは何か？</strong>（オプション）"
 
-#: templates/partners.html:147
+#: templates/partners.html:153
 msgid "Become a Partner"
 msgstr "パートナーになる"
 
-#: templates/presale.html:3 templates/presale.html:5
+#: templates/presale.html:3 templates/presale.html:5 templates/privacy.html:2
+#: templates/privacy.html:3 templates/tos.html:2 templates/tos.html:3
 msgid "Origin Protocol - Presale"
 msgstr "オリジンプロトコル - プリセール"
 
@@ -488,295 +540,372 @@ msgstr "<strong> Origin presaleの正確な日付と詳細はまだ発表され�
 msgid "Interested in contributing?"
 msgstr "貢献に興味がありますか？"
 
-#: templates/presale.html:72 templates/presale.html:73
+#: templates/presale.html:70 templates/presale.html:71
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: templates/presale.html:82
+#: templates/presale.html:78
 msgid "Are you an accredited investor?"
 msgstr "あなたは認定された投資家ですか？"
 
-#: templates/presale.html:83
-msgid "Huh?"
-msgstr "ふぁ？"
-
-#: templates/presale.html:84
+#: templates/presale.html:78
 msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
 msgstr "認定された投資家は、少なくとも1億ドル以上の純資産を持っていなければなりません。また、過去2年間に毎年最低20万ドルの収入が必要です（結婚した場合は30万ドルの収入）。"
 
-#: templates/presale.html:88
+#: templates/presale.html:78
+msgid "Huh?"
+msgstr "ふぁ？"
+
+#: templates/presale.html:81
 msgid "Yes"
 msgstr "はい"
 
-#: templates/presale.html:93
+#: templates/presale.html:86
 msgid "No"
 msgstr "いいえ"
 
-#: templates/presale.html:99
+#: templates/presale.html:91
 msgid "What type of entity do you represent?"
 msgstr "どんな種類のエンティティを表現していますか？"
 
-#: templates/presale.html:103
+#: templates/presale.html:94
 msgid "Individual"
 msgstr "個人"
 
-#: templates/presale.html:108
+#: templates/presale.html:99
 msgid "Syndicate"
 msgstr "シンジケート"
 
-#: templates/presale.html:113
+#: templates/presale.html:104
 msgid "Professional Fund"
 msgstr "専門ファンド"
 
-#: templates/presale.html:120
+#: templates/presale.html:110
 msgid "<strong>Desired allocation</strong>"
 msgstr "<strong>希望の割り当て</strong>"
 
-#: templates/presale.html:137
+#: templates/presale.html:126
 msgid "Citizenship"
 msgstr "市民権"
 
-#: templates/presale.html:391
+#: templates/presale.html:380
 msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
 msgstr "<strong>送信予定のETHまたはBTC住所</strong>（オプション）"
 
-#: templates/presale.html:399
+#: templates/presale.html:388
 msgid "Important notice"
 msgstr "重要なお知らせ"
 
-#: templates/presale.html:402
+#: templates/presale.html:391
 msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
 msgstr "プレアールは米国の規制および証券法の対象となり、このフォームを提出することは配分の保証ではないことを理解しています。"
 
-#: templates/presale.html:413
+#: templates/presale.html:400
 msgid "Submit"
 msgstr "送信"
+
+#: templates/privacy.html:12
+msgid "Privacy Policy"
+msgstr "個人情報保護方針"
 
 #: templates/team.html:3 templates/team.html:5
 msgid "Origin Protocol - Team"
 msgstr "オリジンプロトコル - チーム"
 
-#: templates/team.html:16
+#: templates/team.html:22
 msgid "Our Team"
 msgstr "当社のチーム"
 
-#: templates/team.html:21
+#: templates/team.html:27
 msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
 msgstr "Originは分散起業家、エンジニア、ブロックチェーンの専門家からなるチームです。私たちの使命は、分散したウェブ上で経済を共有できるようにすることです。私たちは雇っている！"
 
-#: templates/team.html:52
+#: templates/team.html:58
 msgid "Core Team"
 msgstr "コアチーム"
 
-#: templates/team.html:61
+#: templates/team.html:67
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:65 templates/team.html:82
+#: templates/team.html:71 templates/team.html:88
 msgid "Cofounder"
 msgstr "共同 - 創設者"
 
-#: templates/team.html:68
+#: templates/team.html:74
 msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "Joshは10歳でコーディングを開始しました。Originになる前に、彼は3つの他のベンチャー支援企業（EventVue、Torbit（Walmart Labsによって買収）＆amp;飼料。"
 
-#: templates/team.html:78
+#: templates/team.html:84
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:85
+#: templates/team.html:91
 msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "MattはYouTube（Googleが買収）で3番目のPMで、Qwiki（Yahooで買収）とBonobos（Walmartで買収）でPM副社長を務めました。スタンフォード出身のMSとBSを抱えています。"
 
-#: templates/team.html:95
+#: templates/team.html:101
 msgid "Stan James"
 msgstr "Stan James"
 
-#: templates/team.html:99
+#: templates/team.html:105 templates/team.html:190
 msgid "Senior Engineer"
 msgstr "シニアエンジニア"
 
-#: templates/team.html:102
+#: templates/team.html:108
 msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
 msgstr "Stanは、ゲームデザインや機械学習の経験が豊富なソフトウェアアーキテクトです。以前は、Lijit Networks（Federated Mediaが買収）を設立しました。"
 
-#: templates/team.html:112
+#: templates/team.html:118
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:119
+#: templates/team.html:125
 msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
 msgstr "AndrewはStartup Weekendを含む4つの新興企業の創始者であり、数十の国々にまたがるグローバルコミュニティを構築しています。彼はTechStarsで従業員1番だった。"
 
-#: templates/team.html:133
+#: templates/team.html:139
 msgid "Partnerships"
 msgstr "パートナーシップ"
 
-#: templates/team.html:136
+#: templates/team.html:142
 msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr "Colemanは、複数のAirbnbプロパティを所有し、管理するアクティブな暗号侵害投資家で、不動産起業家です。彼はバークレーで数学を学んだ。"
 
-#: templates/team.html:146
+#: templates/team.html:152
 msgid "Jon Hearty"
 msgstr "Jon Hearty"
 
-#: templates/team.html:150
+#: templates/team.html:156
 msgid "Business Development"
 msgstr "ビジネス開発"
 
-#: templates/team.html:153
+#: templates/team.html:159
 msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
 msgstr "JonはRedbeacon（The Home Depotが買収）で10回目の雇用、Datanyzeでの1回目の雇用で成長の副社長からCOOまでの複数のビジネス開発職に就いていました。"
 
-#: templates/team.html:171
-msgid "Contributing Team and Advisors"
-msgstr "寄付チームとアドバイザー"
+#: templates/team.html:169
+msgid "Yu Pan"
+msgstr "ゆうパン"
 
-#: templates/team.html:180
-msgid "Aure Gimon"
-msgstr "Aure Gimon"
+#: templates/team.html:173
+msgid "R&D Engineer"
+msgstr "R＆Dエンジニア"
 
-#: templates/team.html:184
-msgid "Product Designer"
-msgstr "プロダクトデザイナー"
+#: templates/team.html:176
+msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate."
+msgstr "Yu Pan氏は、PayPalの6人の創立チームメンバーの1人であり、YouTubeの1人目の従業員でした。彼は元Google社員で、Kiwi Crateの共同設立者です。"
 
-#: templates/team.html:187
-msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
-msgstr "Aureは、ユーザーを楽しませる製品の製作に深い経験を持っています。彼はトップブランド（Nike、Sony、Virgin）とシリコンバレーの新興企業の経験をデザインしています。"
+#: templates/team.html:186
+msgid "Cuong Do"
+msgstr "Cuong Do"
 
-#: templates/team.html:197
-msgid "Derek Kan"
-msgstr "Derek Kan"
+#: templates/team.html:193
+msgid "Cuong Do was the former head of Dropbox NYC Engineering. Before that, Cuong was one of the early team members at PayPal and worked alongside Yu Pan and Matt at YouTube."
+msgstr "Cuong Doは、Dropbox NYC Engineeringの元ヘッドでした。その前に、CuongはPayPalのチームメンバーの一人で、YouTubeのYu PanとMattと共に働いていました。"
 
-#: templates/team.html:201
-msgid "Evangelist"
-msgstr "福音宣明者"
+#: templates/team.html:203
+msgid "Micah Alcorn"
+msgstr "ミカ・アルコーン"
 
-#: templates/team.html:204
-msgid "Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group."
-msgstr "Derekは、グローバルマーケティングおよび広告テクノロジーのビジネスラインを構築したプロダクトエグゼクティブです。彼はGroupMとOmnicom Media Groupでリーダーシップを発揮しています。"
-
-#: templates/team.html:214
-msgid "Saureen Shah"
-msgstr "Saureen Shah"
-
-#: templates/team.html:218
-msgid "Engineer/BD"
-msgstr "エンジニア/ BD"
-
-#: templates/team.html:221
-msgid "Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube."
-msgstr "Saureenは連続起業家と投資家です。同氏は、経済市場のInstaWorkとYouTubeのソフトウェアエンジニア10人を共有する共同創設者でありCTOでした。"
-
-#: templates/team.html:231
-msgid "Ryan Angilly"
-msgstr "Ryan Angilly"
-
-#: templates/team.html:235 templates/team.html:252
+#: templates/team.html:207 templates/team.html:224 templates/team.html:276
+#: templates/team.html:293 templates/team.html:310
 msgid "Engineer"
 msgstr "エンジニア"
 
-#: templates/team.html:238
-msgid "Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL."
-msgstr "ライアンは、コンシューマー向けWebアプリケーションと高度にスケーラブルなB2B APIの構築と運用を10年以上経験しています。彼はラーメンとChartURLの創設者です。"
+#: templates/team.html:210
+msgid "Micah has been a commercial real estate broker for over a decade while developing software along the way. He is the technical cofounder of WellAttended, a bootstrapped box office management platform."
+msgstr "Micahは10年以上にわたり商業用不動産ブローカーであり、途中でソフトウェアを開発しています。彼は、ブートストラップされたボックスオフィス管理プラットフォームのWellAttendedの技術共同創設者です。"
 
-#: templates/team.html:248
+#: templates/team.html:220
+msgid "Tyler Yasaka"
+msgstr "タイラー・ヤサカ"
+
+#: templates/team.html:227
+msgid "Tyler is a full stack developer and blockchain enthusiast. He is a recent college graduate who has helped build an ecommerce platform in the auto recycling industry."
+msgstr "タイラーは完全なスタック開発者でブロックチェーン愛好家です。彼は最近の大学卒で、自動車リサイクル業界でeコマースプラットフォームを構築してきました。"
+
+#: templates/team.html:246
+msgid "Extended Team"
+msgstr "拡張チーム"
+
+#: templates/team.html:255
+msgid "Aure Gimon"
+msgstr "Aure Gimon"
+
+#: templates/team.html:259
+msgid "Product Designer"
+msgstr "プロダクトデザイナー"
+
+#: templates/team.html:262
+msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
+msgstr "Aureは、ユーザーを楽しませる製品の製作に深い経験を持っています。彼はトップブランド（Nike、Sony、Virgin）とシリコンバレーの新興企業の経験をデザインしています。"
+
+#: templates/team.html:272
 msgid "Daniel Von Fange"
 msgstr "Daniel Von Fange"
 
-#: templates/team.html:255
+#: templates/team.html:279
 msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
 msgstr "Danielは、多国語の開発者のフルスタックです。彼は組立プログラミングから建築システムまでのプロジェクトに取り組んでおり、世界中の何十億ドルものNGOが費やしています。"
 
-#: templates/team.html:265
+#: templates/team.html:289
+msgid "Gagandeep Singh"
+msgstr "ガガンデップ・シン"
+
+#: templates/team.html:296
+msgid "Gagan is a full stack developer with over 4 years of experience working with several early stage startups. He has expertise in building scalable enterprise-grade applications."
+msgstr "Gaganは、いくつかの初期段階のスタートアップで4年以上の経験を積んだ完全なスタック開発者です。彼はスケーラブルなエンタープライズグレードのアプリケーションを構築する専門知識を持っています。"
+
+#: templates/team.html:306
+msgid "Nick Poulden"
+msgstr "ニックPoulden"
+
+#: templates/team.html:313
+msgid "Nick founded his first company while still at college in the UK, later moving to Silicon Valley to work as a UI Architect for multiple organizations, small and large."
+msgstr "Nickは英国の大学に留学中に初めての会社を設立し、後にシリコンバレーに移り、小規模から大規模の複数の組織のUIアーキテクトとして働きました。"
+
+#: templates/team.html:323
+msgid "Kath Brandon"
+msgstr "キャス・ブランデン"
+
+#: templates/team.html:330
+msgid "Kath has over 30 years of recruiting experience and spent 9 years in operations at Apple. She has also volunteered with Ignite Boulder, The Humane Society, adult literacy programs and the Alzheimer's Association."
+msgstr "Kathは30年以上の募集経験を持ち、Appleで9年間働いています。彼女はまた、Ignite Boulder、ヒューマンソサイエティ、成人識字プログラム、およびアルツハイマー協会にボランティアを行いました。"
+
+#: templates/team.html:340
+msgid "Dave Craige"
+msgstr "デイブクレイジー"
+
+#: templates/team.html:347
+msgid "Dave is a serial entrepreneur whose last startup was acquired in 2016.  He runs private communities for cryptocurrency investors and startup founders. He consults with two nonprofit organizations."
+msgstr "Daveは、2016年に最後のスタートアップが取得された連続起業家です。彼は暗号侵害投資家とスタートアップの創業者のためにプライベートコミュニティを運営しています。彼は2つの非営利団体と相談します。"
+
+#: templates/team.html:357
+msgid "Mijbel AlQattan"
+msgstr "Mijbel AlQattan"
+
+#: templates/team.html:364
+msgid "Mijbel has over 12 years of experience in venture and consulting. His interests are primarily in data science and machine learning. Mijbel graduated from Virginia Tech in computer engineering and holds a CFA."
+msgstr "Mijbelはベンチャーとコンサルティングで12年以上の経験を持っています。彼の興味は、主にデータサイエンスと機械学習です。 MijbelはVirginia Techをコンピューターエンジニアリングで卒業し、CFAを取得しました。"
+
+#: templates/team.html:374
+msgid "Andrei Munteanu"
+msgstr "アンドレイ・ムンテアヌ"
+
+#: templates/team.html:381
+msgid "Andrei is the co-founder at Cowork Timisoara and an active startup community leader. He runs a NGO which supports young entrepreneurs in Romania through programs like Startup Weekend, Startup Survivor, and Startup Coffee."
+msgstr "Andreiは、Cowork Timisoaraの共同設立者であり、活発なスタートアップコミュニティのリーダーです。彼は、Startup Weekend、Startup Survivor、Startup Coffeeなどのプログラムを通じて、ルーマニアの若い起業家を支援するNGOを運営しています。"
+
+#: templates/team.html:399
+msgid "Advisors"
+msgstr "顧問"
+
+#: templates/team.html:408
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:269
+#: templates/team.html:412
 msgid "Advisor/PR"
 msgstr "アドバイザー/ PR"
 
-#: templates/team.html:272
+#: templates/team.html:415
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "AddisonはUC Berkeleyの物理学の学位を持つコミュニケーションとマーケティングのスペシャリストです。以前はEthereum FoundationとDEVCON1で働いていました。"
 
-#: templates/team.html:282
-msgid "Zing Yang"
-msgstr "Zing Yang"
-
-#: templates/team.html:286
-msgid "Advisor/Business Operations"
-msgstr "顧問/事業運営"
-
-#: templates/team.html:289
-msgid "Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group."
-msgstr "ZingはEast Venturesのベンチャー・パートナーとEIRでした。テマセク・ホールディングスとキャピタル・グループで働いた経験があり、10年以上の投資経験と経験を持っています。"
-
-#: templates/team.html:299
+#: templates/team.html:425
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:303
+#: templates/team.html:429
 msgid "Advisor/International BD"
 msgstr "アドバイザー/国際BD"
 
-#: templates/team.html:306
+#: templates/team.html:432
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "メロディーは、ブロックチェーンの諮問と投資基金であるSpartan Groupの創設者です。彼女はTenXの初期投資家で、GiftoとAppcoinsの戦略アドバイザーでした。"
 
-#: templates/team.html:316
+#: templates/team.html:442
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/team.html:320 templates/team.html:337
+#: templates/team.html:446 templates/team.html:463
 msgid "Advisor"
 msgstr "アドバイザ"
 
-#: templates/team.html:323
+#: templates/team.html:449
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "PaulはPantera Capitalのパートナーです。 Orchid Labs、Enigma、ICONなど、いくつかの成功した暗号化プロジェクトの顧問も務めています。"
 
-#: templates/team.html:333
+#: templates/team.html:459
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:340
+#: templates/team.html:466
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "Joeyは、世界で初めての分散型予測市場とオラクルシステムであるAugurの共同設立者です。彼はPantera CapitalのCo-Chief Investment Officerです。"
 
-#: templates/team.html:384
-msgid "Investors"
-msgstr "投資家"
+#: templates/team.html:510
+msgid "Investment Funds"
+msgstr "投資信託"
+
+#: templates/team.html:710
+msgid "Individual Investors"
+msgstr "個人投資家"
+
+#: templates/team.html:719
+msgid "Steve Jang"
+msgstr "スティーブ・チャン"
+
+#: templates/team.html:729
+msgid "Xiahong Lin"
+msgstr "Lin Xiahong"
+
+#: templates/team.html:739
+msgid "Alexis Ohanian"
+msgstr "アレクシス・オハナン"
+
+#: templates/team.html:749
+msgid "Gil Penchina"
+msgstr "ギルペンキナ"
+
+#: templates/team.html:759
+msgid "Kamal Ravikant"
+msgstr "カマルラビカント"
+
+#: templates/team.html:769
+msgid "Garry Tan"
+msgstr "ギャリータン"
 
 #: templates/warning.html:5
 msgid "<strong>Don't get Phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
 msgstr "<strong>フィッシングをしないでください！</strong>オリジンプロトコルの公式URLは<strong> www.originprotocol.com </strong>のみです。ブックマークして同様の見た目のURLに注意してください。"
 
-#: views/web_views.py:101 views/web_views.py:156
+#: views/web_views.py:112 views/web_views.py:174
 msgid "Please enter your name"
 msgstr "名前を入力してください"
 
-#: views/web_views.py:103 views/web_views.py:160
+#: views/web_views.py:114 views/web_views.py:178
 msgid "Please enter your email"
 msgstr "メールを入力してください。"
 
-#: views/web_views.py:105
+#: views/web_views.py:116
 msgid "An error occured"
 msgstr "エラーが発生した"
 
-#: views/web_views.py:107
+#: views/web_views.py:118
 msgid "Please enter your desired allocation"
 msgstr "ご希望の割り当てを入力してください"
 
-#: views/web_views.py:109
+#: views/web_views.py:120
 msgid "Please agree to the important notice"
 msgstr "重要な通知に同意してください"
 
-#: views/web_views.py:111 views/web_views.py:162
+#: views/web_views.py:122 views/web_views.py:180
 msgid "Please prove you are not a robot."
 msgstr "あなたがロボットではないことを証明してください。"
 
-#: views/web_views.py:158
+#: views/web_views.py:176
 msgid "Please enter your company name"
 msgstr "あなたの会社名を入力してください"
 
@@ -827,4 +956,73 @@ msgstr "あなたの会社名を入力してください"
 
 #~ msgid "The sharing economy without intermediaries: Origin Protocol Team"
 #~ msgstr "仲介なしの共有経済：Origin Protocol Team"
+
+#~ msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, reducing censorship and regulation, and giving early participants in the community a stake in the network."
+#~ msgstr "Originは明日のシェアリングエコノミーを構築しています。買い手と売り手は仲介人なしで取引することができるようになります。私たちは、取引手数料の引き下げ、検閲と規制の緩和、コミュニティ内の早期参加者によるネットワークへの関与が成功の鍵だと確信しています"
+
+#~ msgid "Propy is building their property manager marketplace DApp with Origin Protocol."
+#~ msgstr "Propyは財産管理市場のDAppをOrigin Protocol上に構築しています。"
+
+#~ msgid "DApps built on Origin will be able to use WeTrust’s decentralized insurance protocols to protect users."
+#~ msgstr "Originで構築されたDAppsは、ユーザーを保護するためにWeTrustの分散型保険プロトコルを使用することができます。"
+
+#~ msgid "Product Brief</a> and <a href='/whitepaper'>Whitepaper</a> released"
+#~ msgstr "サービス概要</a>と<a href='/whitepaper'>ホワイトペーパー</a>をリリース"
+
+#~ msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - @joeykrug re: @originprotocol"
+#~ msgstr "もしAirbnbが今日始まっていれば、それはブロックチェーンに基づいたピアツーピア協調モデルだっただろう。@joeykrug re：@originprotocol"
+
+#~ msgid "@originprotocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
+#~ msgstr "@originprotocolは、カーシェアリングやホームシェアリングなどのサービスのバイヤーとセラーが分散型のオープンなWebプラットフォーム上で取引するためのオープンソースのブロックチェーンプロトコルです。"
+
+#~ msgid "@originprotocol hopes to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
+#~ msgstr "@originprotocolは、どんなものでも直接取引することができるように、ピアツーピアネットワークを構築することで、Ethereumと今のシェアリングエコノミーを分散化したいと考えています。"
+
+#~ msgid "What if open-source software like @originprotocol can replace dozens of multi-million or even multi-billion dollar companies?"
+#~ msgstr "もし@originprotocolのようなオープンソースのソフトウェアが数十億ドルの企業や数百億ドルの企業に取って代わることができたらどうだろうか？"
+
+#~ msgid "@originprotocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
+#~ msgstr "@ originprotocolは、Ethereum Blockchainを使用して、バイヤーと売り手が分散された環境の中、仲介者なしで取引しやすいようにします。"
+
+#~ msgid "@originprotocol uses the Ethereum blockchain to enable buyers and sellers to interact with each other in an effective manner."
+#~ msgstr "@originprotocolは、買い手と売り手が効果的な方法で相互にやり取りできるように、Ethereumブロックチェーンを使用します。"
+
+#~ msgid "Contributing Team and Advisors"
+#~ msgstr "寄付チームとアドバイザー"
+
+#~ msgid "Derek Kan"
+#~ msgstr "Derek Kan"
+
+#~ msgid "Evangelist"
+#~ msgstr "福音宣明者"
+
+#~ msgid "Derek is a product executive that has built global marketing and ad technology business lines. He's held leadership positions at GroupM and Omnicom Media Group."
+#~ msgstr "Derekは、グローバルマーケティングおよび広告テクノロジーのビジネスラインを構築したプロダクトエグゼクティブです。彼はGroupMとOmnicom Media Groupでリーダーシップを発揮しています。"
+
+#~ msgid "Saureen Shah"
+#~ msgstr "Saureen Shah"
+
+#~ msgid "Engineer/BD"
+#~ msgstr "エンジニア/ BD"
+
+#~ msgid "Saureen is a serial entrepreneur and investor. He was cofounder and CTO of sharing economy marketplace InstaWork and 10th software engineer at YouTube."
+#~ msgstr "Saureenは連続起業家と投資家です。同氏は、経済市場のInstaWorkとYouTubeのソフトウェアエンジニア10人を共有する共同創設者でありCTOでした。"
+
+#~ msgid "Ryan Angilly"
+#~ msgstr "Ryan Angilly"
+
+#~ msgid "Ryan has 10+ years experience building and operating consumer-facing web applications and highly scalable B2B APIs. He is founder of Ramen and ChartURL."
+#~ msgstr "ライアンは、コンシューマー向けWebアプリケーションと高度にスケーラブルなB2B APIの構築と運用を10年以上経験しています。彼はラーメンとChartURLの創設者です。"
+
+#~ msgid "Zing Yang"
+#~ msgstr "Zing Yang"
+
+#~ msgid "Advisor/Business Operations"
+#~ msgstr "顧問/事業運営"
+
+#~ msgid "Zing was Venture Partner and EIR at East Ventures. She has over a decade of investment and deal experience, having worked at Temasek Holdings and Capital Group."
+#~ msgstr "ZingはEast Venturesのベンチャー・パートナーとEIRでした。テマセク・ホールディングスとキャピタル・グループで働いた経験があり、10年以上の投資経験と経験を持っています。"
+
+#~ msgid "Investors"
+#~ msgstr "投資家"
 
