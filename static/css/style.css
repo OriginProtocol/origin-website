@@ -137,6 +137,10 @@ a:hover {
   color: #ffffff;
 }
 
+.warning-light {
+  background-color: #2e3f53;
+}
+
 .warning .img-container {
   flex-grow: 1;
   margin: 10px 0 10px 20px;
@@ -179,8 +183,8 @@ nav {
   z-index: 9;
 }
 
-main.landing-page,
-main.team-page {
+.landing-page,
+.team-page {
   position: relative;
   background-color: #2e3f53;
 }
@@ -1517,6 +1521,77 @@ footer .company-mission {
   left: 36%;
   top: 20%;
   width: 20%;
+}
+
+/* Developers page */
+
+.developers-page,
+.developers-page .left-lower-pane,
+.developers-page .left-upper-pane,
+.developers-page .right-lower-pane,
+.developers-page .right-upper-pane {
+  background-color: #111d28;
+  color: #ffffff;
+}
+
+.developers-page h1 {
+  font-weight: 300;
+}
+
+.developers-page h2 {
+  margin-bottom: 2rem;
+}
+
+.developers-page .introduction-section {
+  z-index: 1;
+}
+
+.developers-page .img-graphic {
+  min-height: 300px;
+}
+
+.developers-page .introduction-section p {
+  border-left: 1px solid #98a7b4;
+  padding-left: 30px;
+}
+
+.developers-page .plane-section {
+  background-color: #2e3f53;
+}
+
+.developers-page .plane-section a:not(.btn) {
+  font-weight: normal;
+}
+
+.developers-page .plane-section a:not(.btn):hover {
+  color: #1a82ff;
+  text-decoration: underline;
+}
+
+.developers-page section:nth-of-type(2) {
+  margin-top: -100px;
+}
+
+.developers-page section:nth-of-type(2) .foreground-content {
+  padding-top: 200px;
+}
+
+.developers-page section:nth-of-type(3) .foreground-content {
+  padding-bottom: 200px;
+}
+
+.developers-page .resources-section {
+  padding-bottom: 100px;
+}
+
+.developers-page .resources-section h3,
+.developers-page .resources-section p {
+  font-size: 0.875rem;
+}
+
+.developers-page .resources-section h3 {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* xs */

@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% with theme_light=True %}
+  {% include 'warning.html' %}
+{% endwith %}
+{% block title %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
+{% block content %}
+<main class="developers-page">
+  {% with theme_dark=True %}
+  {% include 'navbar.html' %}
+  {% endwith %}
+  <section class="introduction-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <h1>
+            {{ gettext("Why Origin?") }}
+          </h1>
+          <p>
+            {{ gettext("Origin is empowering developers and businesses to build decentralized marketplaces on the blockchain, which will allow buyers and sellers to meet and transact without requiring any trusted intermediaries. Achieving this visionary goal requires contributions from a growing community of contributors; And <strong>we need your help</strong>.") }}
+          </p>
+        </div>
+        <div class="col-12 col-md-7">
+          <div class="img-graphic d-flex justify-content-center">
+            <img src="/static/img/computer-icon.svg"
+              role="presentation" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plane-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-pane background-panes top-panes">
+          <div class="row row-pane">
+            <div class="col-8 col-pane">
+              <div class="left-upper-pane">
+              </div>
+            </div>
+            <div class="col-4 col-pane">
+              <div class="right-upper-pane">
+              </div>
+            </div>
+          </div>
+          <div class="row row-pane">
+            <div class="col-12 col-pane">
+              <div class="platform-bottom-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-6 d-flex align-items-center order-2 order-md-1">
+              <div class="img-graphic">
+                <img src="/static/img/building-icon.svg"
+                  role="presentation">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2">
+              <h2>
+                {{ gettext("What are we building?") }}
+              </h2>
+              <p>
+                <strong>Origin.js - </strong>
+                {{ gettext("a library of Javascript code and Ethereum smart contracts which allow anyone to create decentralized marketplaces by calling simple API methods") }}
+              </p>
+              <p>
+                <strong>Origin DApp - </strong>
+                {{ gettext("an example decentralized application that shows how easy it is to create create and purchase listings, leave reviews, check identity, and more") }}
+              </p>
+              <p>
+                <strong>Origin Bridge Server - </strong>
+                {{ gettext("an endpoint enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, identity attestations, and notifications") }}
+              </p>
+              <div class="btn-container">
+                <a href="https://github.com/OriginProtocol/" role="button" target="_blank" class="repos-btn btn btn-primary btn-min-size">
+                  {{ gettext("Visit Repositories") }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plane-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h2>
+                {{ gettext("How can I get involved?") }}
+              </h2>
+              <p>{{ gettext("Our company is built upon a culture of radical inclusion and transparency. Everyone is welcome to participate in our open engineering process and our conversations, which are public by default.") }}</p>
+              <p>
+                <strong>#1</strong>&nbsp;
+                {{ gettext('<a href="{{ universal.DISCORD_URL }}" target="_blank">Join our public Discord</a> and introduce yourself in the #engineering channel.') }}
+              </p>
+              <p>
+                <strong>#2</strong>&nbsp;
+                {{ gettext('Find an open issue on our <a href="https://github.com/orgs/OriginProtocol/projects/2" target="_blank">GitHub project board</a> and get your first pull request merged today.') }}
+              </p>
+              <div class="btn-container">
+                <a href="http://docs.originprotocol.com/#contributing" role="button" target="_blank" class="contributing-btn btn btn-primary btn-min-size">
+                  {{ gettext("More About Contributing") }}
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="img-graphic">
+                <img src="/static/img/people-icon.svg"
+                  role="presentation">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
+          <div class="row row-pane align-items-end">
+            <div class="col-3 col-pane">
+              <div class="left-lower-pane">
+              </div>
+            </div>
+            <div class="col-9 col-pane">
+              <div class="right-lower-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resources-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            {{ gettext("Resources") }}
+          </h2>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>
+            {{ gettext("Documentation") }}
+          </h3>
+          <p>
+            {{ gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.") }}
+          </p>
+          <div class="btn-container">
+            <a href="http://docs.originprotocol.com/" role="button" class="docs-btn btn btn-outline-primary btn-min-size" target="_blank">
+              <i class='fas fa-book'></i>
+              {{ gettext("View The Docs") }}
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>
+            {{ gettext("Weekly Engineering Call") }}
+          </h3>
+          <p>
+            {{ gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.") }}
+          </p>
+          <div class="btn-container">
+            <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2llYjc1MDA1aXVhbzZnYWRmbWhjbmRvcmRfMjAxODA2MTNUMjAwMDAwWiBvcmlnaW5wcm90b2NvbC5jb21fcXY1NWNvNmd2bTN2c3Y3OW9iNXFsZjVhaWtAZw&tmsrc=originprotocol.com_qv55co6gvm3vsv79ob5qlf5aik%40group.calendar.google.com&scp=ALL" role="button" class="engineering-call-btn btn btn-outline-primary btn-min-size" target="_blank">
+              <i class='far fa-calendar-alt'></i>
+              {{ gettext("Add To Calendar") }}
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>
+            {{ gettext("Discord") }}
+          </h3>
+          <p>
+            {{ gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.") }}
+          </p>
+          <div class="btn-container">
+            <a href="{{ universal.DISCORD_URL }}" role="button" class="discord-btn btn btn-outline-primary btn-min-size" target="_blank">
+              <i class='fab fa-discord'></i>
+              {{ gettext("Join Our Discord") }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</main>
+{% endblock %}
+{% block extra_scripts %}
+{% endblock %}
