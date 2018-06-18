@@ -1,4 +1,4 @@
-<div id="announcement" class="announcement" style="display: none">
+<div id="announcement" class="announcement">
   <div class="d-flex flex-wrap align-items-center container justify-content-between">
     <a href="https://www.coinlist.co/origin">
       <div class="img-container d-flex align-items-center">
@@ -9,7 +9,7 @@
     </a>
     <div class="message">
       <h1>CoinList <span class="subdued">Round</span></h1>
-      <h2><strong>Register today!</strong> $1,000 minimum. Availability limited.</h2>
+      <h2><strong>Register today!</strong> $1,000 minimum. Availability limited. <a href="https://medium.com/originprotocol/origins-next-funding-round-now-live-on-coinlist-147096f6a906">Learn more.</a></h2>
     </div>
     <div class="registration-alert">
       <header>Registration Ends In</header>
@@ -43,17 +43,11 @@
 
   const initTimer = (id, end) => {
 
-    start = new Date('2018-06-18T13:00:00.000Z');
-
     const clock = document.getElementById(id);
     const daysEl = clock.querySelector('.days');
     const hoursEl = clock.querySelector('.hours');
     const minutesEl = clock.querySelector('.minutes');
     const secondsEl = clock.querySelector('.seconds');
-
-    if (Date.now() > start) {
-      document.getElementById('announcement').style['display'] = "block";
-    }
     
     const update = () => {
       const t = timeRemaining(end);
