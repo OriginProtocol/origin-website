@@ -45,7 +45,7 @@ PARTNERS = [
     {
     "name":"blocklancer",
     "url":"https://blocklancer.net/",
-     "desc":lazy_gettext("Blocklancer is buidiling a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
+     "desc":lazy_gettext("Blocklancer is building a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
     },
     {
     "name":"beetoken",
