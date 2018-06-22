@@ -177,7 +177,7 @@ section {
   z-index: 0;
 }
 
-.span-link {
+a:not([href]):not([tabindex]).span-link {
   color: #ffffff;
   cursor: pointer; 
 }
