@@ -23,6 +23,7 @@
         <div class="col-12 col-md-7">
           <div class="img-graphic d-flex justify-content-center">
             <img src="/static/img/computer-icon.svg"
+              class="computer"
               role="presentation" />
           </div>
         </div>
@@ -55,6 +56,7 @@
             <div class="col-12 col-md-6 d-flex align-items-center order-2 order-md-1">
               <div class="img-graphic">
                 <img src="/static/img/building-icon.svg"
+                  class="boxes"
                   role="presentation">
               </div>
             </div>
@@ -76,6 +78,7 @@
               </p>
               <div class="btn-container">
                 <a href="https://github.com/OriginProtocol/" role="button" target="_blank" class="repos-btn btn btn-primary btn-min-size">
+                  <i class='fab fa-github'></i>
                   {{ gettext("Visit Repositories") }}
                 </a>
               </div>
@@ -112,6 +115,7 @@
             <div class="col-12 col-md-6 d-flex align-items-center">
               <div class="img-graphic">
                 <img src="/static/img/people-icon.svg"
+                  class="people"
                   role="presentation">
               </div>
             </div>
@@ -145,7 +149,7 @@
             {{ gettext("Documentation") }}
           </h3>
           <p>
-            {{ gettext("Read our docs to learn about the fundamental components of Origin and how we interact wth the Ethereum blockchain. Our docs will provide you with the resources you need to get started using our API to build your own marketplace with ease.") }}
+            {{ gettext("Our docs describe <a href='http://docs.originprotocol.com/#contributing'>how to contribute</a>, <a href='http://docs.originprotocol.com/#getting-started'>using Origin.js in your project</a>, Origin's overall <a href='http://docs.originprotocol.com/#architecture'>architecture</a>, and much more.") }}
           </p>
           <div class="btn-container">
             <a href="http://docs.originprotocol.com/" role="button" class="docs-btn btn btn-outline-primary btn-min-size" target="_blank">
@@ -159,7 +163,7 @@
             {{ gettext("Weekly Engineering Call") }}
           </h3>
           <p>
-            {{ gettext("Tune in to our ")}}<a href="https://meet.google.com/pws-cgyd-tqp">Google Hangout</a> {{ gettext(" every Wednesday at 1PM PT, where our team and other contributors get to sync up and go over sprint objectives, discuss critical technological decisions, and divvy up work amongst the team.") }}
+            {{ gettext("Tune in to our public <a href='https://meet.google.com/pws-cgyd-tqp'>Google Hangout</a> every Wednesday at 1PM PT, where we provide updates on our engineering progress and discuss upcoming features.") }}
           </p>
           <div class="btn-container">
             <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2llYjc1MDA1aXVhbzZnYWRmbWhjbmRvcmRfMjAxODA2MTNUMjAwMDAwWiBvcmlnaW5wcm90b2NvbC5jb21fcXY1NWNvNmd2bTN2c3Y3OW9iNXFsZjVhaWtAZw&tmsrc=originprotocol.com_qv55co6gvm3vsv79ob5qlf5aik%40group.calendar.google.com&scp=ALL" role="button" class="engineering-call-btn btn btn-outline-primary btn-min-size" target="_blank">
@@ -173,7 +177,7 @@
             {{ gettext("Discord") }}
           </h3>
           <p>
-            {{ gettext("Join our discord group (and specifically the #engineering channel) to communicate and interact with us and our open source community. We welcome all newcomers to introduce themselves, ask us questions, and report any bugs or incidents here.") }}
+            {{ gettext("Join our public discord group (and specifically the #engineering channel) to become involved and contribute to our open source community.") }}
           </p>
           <div class="btn-container">
             <a href="{{ universal.DISCORD_URL }}" role="button" class="discord-btn btn btn-outline-primary btn-min-size" target="_blank">
