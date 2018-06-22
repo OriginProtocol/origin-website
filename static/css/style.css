@@ -1550,9 +1550,26 @@ footer .company-mission {
   min-height: 300px;
 }
 
+#rtl .developers-page .computer,
+#rtl .developers-page .people {
+  -moz-transform: scalex(-1);
+  -o-transform: scalex(-1);
+  -webkit-transform: scalex(-1);
+  transform: scalex(-1);
+  filter: FlipH;
+  -ms-filter: 'FlipH';
+}
+
 .developers-page .introduction-section p {
   border-left: 1px solid #98a7b4;
   padding-left: 30px;
+}
+
+#rtl .developers-page .introduction-section p {
+  border-left: 0;
+  border-right: 1px solid #98a7b4;
+  padding-left: 0;
+  padding-right: 30px;
 }
 
 .developers-page .plane-section {
