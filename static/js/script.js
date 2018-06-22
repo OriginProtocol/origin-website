@@ -93,6 +93,6 @@ $(function() {
 });
 
 // show html content in tooltip
-$('a[data-toggle="tooltip"]').tooltip({
+$('[data-toggle="tooltip"]').tooltip({
   html: true
 });
