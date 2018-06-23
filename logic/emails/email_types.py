@@ -33,6 +33,9 @@ EMAILS = {
     },
     'coinlist_announcement': {
         'subject': 'Register for Origin\'s CoinList Round today'
+    },
+    'coinlist_reminder': {
+        'subject': 'Registration ending soon for Origin\'s CoinList round'
     }
 }
 
