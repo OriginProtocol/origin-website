@@ -92,7 +92,7 @@ Edit `config/constants.py` and add the language-code under `LANGUAGES`
 
 ### Test
 
-In the `company-website` directory, run:
+In the `origin-website` directory, run:
 ```
 python main.py
 ```
@@ -102,7 +102,7 @@ And you should see the new language on the site.
 
 If you get this error:
 ```
-  File "/Users/stan/Documents/Origin/company-website/lib/python2.7/site-packages/babel/messages/pofile.py", line 147, in _add_message
+  File "/Users/stan/Documents/Origin/origin-website/lib/python2.7/site-packages/babel/messages/pofile.py", line 147, in _add_message
     string = self.translations[0][1].denormalize()
 IndexError: list index out of range
 ```

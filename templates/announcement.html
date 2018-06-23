@@ -1,0 +1,75 @@
+<div id="announcement" class="announcement">
+  <div class="d-flex flex-wrap align-items-center container justify-content-between">
+    <div class="img-container d-flex align-items-center order-md-0">
+      <a href="https://www.coinlist.co/origin">
+        <img src="/static/img/coinlist-logo.png"
+        srcset="/static/img/coinlist-logo@2x.png 2x, /static/img/coinlist-logo@3x.png 3x"
+        role="presentation" />
+      </a>
+    </div>
+    <div class="message order-md-2 order-lg-1">
+      <h1>CoinList <span class="subdued">Round</span></h1>
+      <h2><strong>{{ gettext("Register today!") }}</strong> {{ gettext("$1,000 minimum.") }} {{ gettext("Availability limited.") }} <a href="https://medium.com/originprotocol/origins-next-funding-round-now-live-on-coinlist-147096f6a906" target="_blank" class="d-lg-block d-xl-inline">{{ gettext("Learn more.") }}</a></h2>
+    </div>
+    <div class="registration-alert order-md-1 order-lg-2">
+      <header>{{ gettext("Registration Ends In") }}</header>
+      <div id="countdown">
+        <span class="days"></span>d
+        <span class="hours"></span>h
+        <span class="minutes"></span>m
+        <span class="seconds"></span>s
+      </div>
+    </div>
+    <div class="registration-arrow order-md-3">
+    </div>
+    <div class="link-container order-md-4">
+      <a href="http://coinlist.co/origin" target="_blank" class="registration-button">{{ gettext("Register Now") }}</a>
+    </div>
+  </div>
+</div>
+
+{% block extra_scripts %}
+<script type="text/javascript">
+
+  const timeRemaining = (end) => {
+    const total = Date.parse(end) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+    return { total, days, hours, minutes, seconds };
+  }
+
+  const initTimer = (id, end) => {
+
+    const clock = document.getElementById(id);
+    const daysEl = clock.querySelector('.days');
+    const hoursEl = clock.querySelector('.hours');
+    const minutesEl = clock.querySelector('.minutes');
+    const secondsEl = clock.querySelector('.seconds');
+    
+    const update = () => {
+      const t = timeRemaining(end);
+
+      daysEl.innerHTML = t.days;
+      hoursEl.innerHTML = (`0${t.hours}`).slice(-2);
+      minutesEl.innerHTML = (`0${t.minutes}`).slice(-2);
+      secondsEl.innerHTML = (`0${t.seconds}`).slice(-2);
+
+      if (t.total <= 0) {
+        clearInterval(int);
+      }
+    }
+
+    const int = setInterval(update, 1000);
+
+    update();
+  }
+
+    // end of day (PDT) on June 27, 2018
+    const deadline = new Date('2018-06-28T06:59:59.999Z');
+
+    initTimer('countdown', deadline);
+  </script>
+  {% endblock %}

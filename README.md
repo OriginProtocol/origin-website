@@ -12,12 +12,12 @@ This is a Flask app with the source code for [www.originprotocol.com](https://ww
 
 Setup a virtualenv
 ```
-virtualenv --python=/usr/local/bin/python2 company-website && cd company-website
+virtualenv --python=/usr/local/bin/python2 origin-website && cd origin-website
 ```
 
 Clone
 ```
-git clone https://github.com/OriginProtocol/company-website.git && cd company-website
+git clone https://github.com/OriginProtocol/origin-website.git && cd origin-website
 ```
 
 Enter virtual environment
@@ -88,7 +88,7 @@ To deploy a development copy of the site on Heroku, just choose which branch you
 
 | `Master` branch <br>(stable) | `Develop` branch<br> (active development) | 
 |---------|----------|
-| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/company-website/tree/develop) | 
+| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/develop) | 
 
 Heroku will prompt you to set config variables. At a minium, you must set these two:
 
