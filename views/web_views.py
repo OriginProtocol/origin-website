@@ -70,13 +70,13 @@ def presale():
 
 @app.route('/<lang_code>/whitepaper')
 def whitepaper():
-    localized_filename = 'whitepaper_v4_%s.pdf' % g.current_lang.lower()
+    localized_filename = 'whitepaper_v5_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(whitepaper_path):
         return app.send_static_file('docs/%s' % localized_filename)
     else:
         # Default to English
-        return app.send_static_file('docs/whitepaper_v4.pdf')
+        return app.send_static_file('docs/whitepaper_v5.pdf')
 
 @app.route('/<lang_code>/product-brief')
 def product_brief():
