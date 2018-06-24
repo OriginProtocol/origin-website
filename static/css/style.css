@@ -1252,6 +1252,10 @@ footer .company-mission {
 
 /* Presale page */
 
+.presale-page {
+  background-color: #f7f9fb;
+}
+
 .presale-form .form-group {
   margin-bottom: 40px;
 }
@@ -1476,6 +1480,15 @@ footer .company-mission {
 }
 
 /* Partners page */
+
+.build-page {
+  /* hack the background so that we don't have to invert the background panes */
+  background: rgb(247,249,251);
+  background: -moz-linear-gradient(180deg, rgba(247,249,251,1) 243px, rgba(255,255,255,1) 243px);
+  background: -webkit-linear-gradient(180deg, rgba(247,249,251,1) 243px, rgba(255,255,255,1) 243px);
+  background: linear-gradient(180deg, rgba(247,249,251,1) 243px, rgba(255,255,255,1) 243px);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f9fb",endColorstr="#ffffff",GradientType=1);
+}
 
 .build-header-section {
   background-color: #f7f9fb;
