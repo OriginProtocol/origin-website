@@ -142,6 +142,10 @@ def fullcontact_webhook():
 def build_on_origin():
     return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
+@app.route('/<lang_code>/developers')
+def developers():
+    return render_template('developers.html')
+
 @app.route('/<lang_code>/discord')
 def discord():
     return redirect(universal.DISCORD_URL, code=301)

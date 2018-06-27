@@ -1,4 +1,8 @@
-<div class="warning">
+{% if theme_light==True %}
+<div class="warning warning-light">
+{% else %}
+<div class="warning warning-dark">
+{% endif %}
   <div class="img-container">
     <img src="/static/img/phishing-icon.svg" alt="phishing icon" />
   </div>

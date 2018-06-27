@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
+<!-- temporarily hide warning -->
+{#% include 'warning.html' %#}
+
 {% block title %}{{ gettext("Origin Protocol - Presale") }}{% endblock %}
+
 {% block meta_description %}{{ gettext("Origin Protocol - Presale") }}{% endblock %}
+
 {% block content %}
   <main class="presale-page">
     {% include 'navbar.html' %}

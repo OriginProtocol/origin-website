@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% with theme_light=True %}
+<!-- temporarily hide warning -->
+  {#% include 'warning.html' %#}
+{% endwith %}
+{% block title %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
+{% block content %}
+<main class="developers-page">
+  {% with theme_dark=True %}
+  {% include 'navbar.html' %}
+  {% endwith %}
+  <section class="introduction-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <h1>Origin For Developers</h1>
+          <p>Origin is empowering developers to build decentralized marketplaces on the blockchain, which will allow buyers and sellers to meet and transact without requiring any trusted intermediaries. Achieving this visionary goal requires contributions from a growing community of developers; And <strong>we need your help</strong>.</p>
+        </div>
+        <div class="col-12 col-md-7">
+          <div class="img-graphic d-flex justify-content-center">
+            <img src="/static/img/computer-icon.svg"
+              class="computer"
+              role="presentation" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plane-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-pane background-panes top-panes">
+          <div class="row row-pane">
+            <div class="col-8 col-pane">
+              <div class="left-upper-pane">
+              </div>
+            </div>
+            <div class="col-4 col-pane">
+              <div class="right-upper-pane">
+              </div>
+            </div>
+          </div>
+          <div class="row row-pane">
+            <div class="col-12 col-pane">
+              <div class="platform-bottom-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-6 d-flex align-items-center order-2 order-md-1">
+              <div class="img-graphic">
+                <img src="/static/img/building-icon.svg"
+                  class="boxes"
+                  role="presentation">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2">
+              <h2>What We Are Building</h2>
+              <p>
+                <strong><a href="https://github.com/OriginProtocol/origin-js" target="blank">Origin.js</a> - </strong>
+                a library of Javascript code and Ethereum smart contracts which allow anyone to create decentralized marketplaces by calling simple API methods
+              </p>
+              <p>
+                <strong><a href="https://github.com/OriginProtocol/origin-dapp" target="blank">Origin DApp</a> - </strong>
+                an example decentralized application that shows how easy it is to create and purchase listings, leave reviews, check identity, and more
+              </p>
+              <p>
+                <strong><a href="https://github.com/OriginProtocol/origin-bridge" target="blank">Origin Bridge Server</a> - </strong>
+                an endpoint enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, identity attestations, and notifications
+              </p>
+              <div class="btn-container">
+                <a href="https://github.com/OriginProtocol/" role="button" target="_blank" class="repos-btn btn btn-primary btn-min-size">
+                  <i class='fab fa-github'></i>
+                  Visit Repositories
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plane-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h2>How To Get Involved</h2>
+              <p>Our company is built upon a culture of radical inclusion and transparency. Everyone is welcome to participate in our open-source engineering process and our product discussions, which are public by default.</p>
+              <p>
+                <strong>#1</strong>&nbsp;
+                <a href="{{universal.discord_url}}" target="_blank">Join our public Discord</a> and introduce yourself in the #engineering channel
+              </p>
+              <p>
+                <strong>#2</strong>&nbsp;
+                Find an open issue on our <a href="https://github.com/orgs/OriginProtocol/projects/2" target="_blank">GitHub project board</a> and get your first pull request merged today.
+              </p>
+              <div class="badges">
+                <a href="https://github.com/orgs/OriginProtocol/projects/2?card_filter_query=label%3A%22good+first+issue%22" target="_blank">
+                  <span class="badge badge-light">good first issue</span>
+                </a>
+                <a href="https://github.com/orgs/OriginProtocol/projects/2?card_filter_query=label%3Asolidity" target="_blank">
+                  <span class="badge badge-success">solidity</span>
+                </a>
+                <a href="https://github.com/orgs/OriginProtocol/projects/2?card_filter_query=label%3Ajavascript" target="_blank">
+                  <span class="badge badge-primary">javascript</span>
+                </a>
+                <a href="https://github.com/orgs/OriginProtocol/projects/2?card_filter_query=label%3Apython" target="_blank">
+                  <span class="badge badge-info">python</span>
+                </a>
+                <a href="https://github.com/orgs/OriginProtocol/projects/2?card_filter_query=label%3A%22html%2Fcss%22" target="_blank">
+                  <span class="badge badge-dark">html/css</span>
+                </a>
+              </div>
+              <div class="btn-container">
+                <a href="http://docs.originprotocol.com/#contributing" role="button" target="_blank" class="contributing-btn btn btn-primary btn-min-size">
+                  <i class='fas fa-hands-helping'></i>
+                  More About Contributing
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="img-graphic">
+                <img src="/static/img/people-icon.svg"
+                  class="people"
+                  role="presentation">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
+          <div class="row row-pane align-items-end">
+            <div class="col-3 col-pane">
+              <div class="left-lower-pane">
+              </div>
+            </div>
+            <div class="col-9 col-pane">
+              <div class="right-lower-pane">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resources-section">
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12">
+          <h2>Resources</h2>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h3>Documentation</h3>
+          <p>
+            Our docs describe <a href="http://docs.originprotocol.com/#contributing" target="_blank">how to contribute</a>, <a href="http://docs.originprotocol.com/#getting-started" target="_blank">using Origin.js in your project</a>, Origin's overall <a href="http://docs.originprotocol.com/#architecture" target="_blank">architecture</a>, and much more.
+          </p>
+          <div class="btn-container">
+            <a href="http://docs.originprotocol.com/" role="button" class="docs-btn btn btn-outline-primary btn-min-size" target="_blank">
+              <i class='fas fa-book'></i>
+              View The Docs
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h3>Weekly Engineering Call
+          </h3>
+          <p>
+            Tune in to our public <a href="https://meet.google.com/pws-cgyd-tqp" target="_blank">Google Hangout</a> every Wednesday at 1PM PT, where we provide updates on our engineering progress and discuss upcoming features.
+          </p>
+          <div class="btn-container">
+            <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2llYjc1MDA1aXVhbzZnYWRmbWhjbmRvcmRfMjAxODA2MTNUMjAwMDAwWiBvcmlnaW5wcm90b2NvbC5jb21fcXY1NWNvNmd2bTN2c3Y3OW9iNXFsZjVhaWtAZw&tmsrc=originprotocol.com_qv55co6gvm3vsv79ob5qlf5aik%40group.calendar.google.com&scp=ALL" role="button" class="engineering-call-btn btn btn-outline-primary btn-min-size" target="_blank">
+              <i class='fab fa-google'></i>
+              Add To Calendar
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h3>Discord</h3>
+          <p>Join our public Discord group (and specifically the #engineering channel) to become involved and contribute to our open source community.</p>
+          <div class="btn-container">
+            <a href="{{ universal.DISCORD_URL }}" role="button" class="discord-btn btn btn-outline-primary btn-min-size" target="_blank">
+              <i class='fab fa-discord'></i>
+              Join Our Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</main>
+{% endblock %}
+{% block extra_scripts %}
+{% endblock %}

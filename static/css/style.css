@@ -98,6 +98,26 @@ textarea.form-control {
   margin: 0px 0px 0px 0.5rem;
 }
 
+.badge-dark {
+  background-color: #000;
+}
+
+.badge-info {
+  background-color: #6e3bea;
+}
+
+.badge-light {
+  background-color: #fff;
+}
+
+.badge-primary {
+  background-color: #1a82ff;
+}
+
+.badge-success {
+  background-color: #26d198;
+}
+
 textarea.form-control {
   height: 68px;
 }
@@ -237,8 +257,8 @@ a:hover {
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
   margin: 10px auto;
-  color: black;
-  background-color: #ffffff;
+  color: #000;
+  background-color: #fff;
   position: absolute;
   top: 0px;
   left: 10px;
@@ -253,7 +273,11 @@ a:hover {
 .warning {
   display: flex;
   background-color: #111d28;
-  color: #ffffff;
+  color: #fff;
+}
+
+.warning-light {
+  background-color: #2e3f53;
 }
 
 .warning .img-container {
@@ -298,8 +322,8 @@ nav {
   z-index: 9;
 }
 
-main.landing-page,
-main.team-page {
+.landing-page,
+.team-page {
   position: relative;
   background-color: #2e3f53;
 }
@@ -459,7 +483,7 @@ main.landing-page > .background-wrapper {
 .navbar-dark .nav-item .nav-link,
 .navbar-dark .navbar-collapse .col-6 .nav-link,
 .navbar-dark .navbar-toggler i {
-  color: #ffffff;
+  color: #fff;
 }
 
 .navbar-dark .navbar-toggler i:active,
@@ -504,13 +528,13 @@ main.landing-page > .background-wrapper {
 
 .language .dropdown-item:hover {
   background-color: #007bff;
-  color: #ffffff;
+  color: #fff;
 }
 
 .language .dropdown-item-selected {
   text-transform: capitalize;
   width: 100%;
-  color: black;
+  color: #000;
   padding: .25rem 1.5rem;
 }
 
@@ -554,7 +578,7 @@ main.landing-page > .background-wrapper {
 
 .core-team-bottom-pane,
 .platform-bottom-pane {
-  background-color: #ffffff;
+  background-color: #fff;
   flex: 1;
 }
 
@@ -665,13 +689,13 @@ footer .logo-container {
 }
 
 footer p {
-  color: #ffffff;
+  color: #fff;
   font-size: 0.75rem;
 }
 
 footer .footer-header {
   margin: 40px auto 15px auto;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
   font-size: 0.875rem;
 }
@@ -691,7 +715,7 @@ footer .footer-link {
 }
 
 footer .footer-link a {
-  color: #ffffff;
+  color: #fff;
 }
 
 footer .logo-container {
@@ -731,11 +755,11 @@ footer .company-mission {
 
 .hero-section h1 {
   font-weight: 200;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-section p {
-  color: #ffffff;
+  color: #fff;
 }
 
 .platform-section {
@@ -764,7 +788,7 @@ footer .company-mission {
 .platform-section .right-upper-pane {
   position: relative;
   flex: 1;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .platform-section .left-upper-pane {
@@ -801,11 +825,11 @@ footer .company-mission {
 
 .features-section {
   position: relative;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .partners-section {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .partners-section .bottom-panes .row-pane {
@@ -851,7 +875,7 @@ footer .company-mission {
 
   background-color: #6f8294;
   border-radius: 6px;
-  color: #ffffff;
+  color: #fff;
   height: 188px;
   left: 20px;
   max-width: calc(100% - 40px);
@@ -1017,7 +1041,7 @@ footer .company-mission {
 }
 
 .technology-section {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .technology-section .img-technology {
@@ -1158,7 +1182,7 @@ footer .company-mission {
 }
 
 .roadmap-section .right-lower-pane {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .email-signup-input {
@@ -1169,7 +1193,7 @@ footer .company-mission {
 }
 
 .email-section {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .email-section form {
@@ -1227,6 +1251,10 @@ footer .company-mission {
 }
 
 /* Presale page */
+
+.presale-page {
+  background-color: #f7f9fb;
+}
 
 .presale-form .form-group {
   margin-bottom: 40px;
@@ -1323,7 +1351,7 @@ footer .company-mission {
 
 .team-header-section {
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
 }
 
 .core-team-section > div > .row {
@@ -1347,7 +1375,7 @@ footer .company-mission {
 .core-team-section .right-upper-pane {
   position: relative;
   flex: 1;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .core-team-section .left-upper-pane {
@@ -1382,7 +1410,7 @@ footer .company-mission {
 }
 
 .contributing-team-section {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .contributing-team-section h2 {
@@ -1394,7 +1422,7 @@ footer .company-mission {
 }
 
 .advisor-team-section {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .advisor-team-section .foreground-content {
@@ -1416,7 +1444,7 @@ footer .company-mission {
 }
 
 .investors-section {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .investors-section > div > .row {
@@ -1452,6 +1480,15 @@ footer .company-mission {
 }
 
 /* Partners page */
+
+.build-page {
+  /* hack the background so that we don't have to invert the background panes */
+  background: rgb(247,249,251);
+  background: -moz-linear-gradient(180deg, rgba(247,249,251,1) 243px, rgba(255,255,255,1) 243px);
+  background: -webkit-linear-gradient(180deg, rgba(247,249,251,1) 243px, rgba(255,255,255,1) 243px);
+  background: linear-gradient(180deg, rgba(247,249,251,1) 243px, rgba(255,255,255,1) 243px);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f9fb",endColorstr="#ffffff",GradientType=1);
+}
 
 .build-header-section {
   background-color: #f7f9fb;
@@ -1524,7 +1561,7 @@ footer .company-mission {
 .building-interest-section .build-on-origin-form {
   background-color: #111d28;
   border-radius: 10px;
-  color: #ffffff;
+  color: #fff;
   margin: auto;
   max-width: 560px;
   padding: 47px 43px 41px;
@@ -1636,6 +1673,102 @@ footer .company-mission {
   left: 36%;
   top: 20%;
   width: 20%;
+}
+
+/* Developers page */
+
+.developers-page,
+.developers-page .left-lower-pane,
+.developers-page .left-upper-pane,
+.developers-page .right-lower-pane,
+.developers-page .right-upper-pane {
+  background-color: #111d28;
+  color: #fff;
+}
+
+.developers-page h1 {
+  font-weight: 300;
+}
+
+.developers-page h2 {
+  margin-bottom: 2rem;
+}
+
+.developers-page .introduction-section {
+  z-index: 1;
+}
+
+.developers-page .img-graphic {
+  min-height: 300px;
+}
+
+#rtl .developers-page .computer,
+#rtl .developers-page .people {
+  -moz-transform: scalex(-1);
+  -o-transform: scalex(-1);
+  -webkit-transform: scalex(-1);
+  transform: scalex(-1);
+  filter: FlipH;
+  -ms-filter: 'FlipH';
+}
+
+.developers-page .introduction-section p {
+  border-left: 1px solid #98a7b4;
+  padding-left: 30px;
+}
+
+#rtl .developers-page .introduction-section p {
+  border-left: 0;
+  border-right: 1px solid #98a7b4;
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.developers-page .plane-section {
+  background-color: #2e3f53;
+}
+
+.developers-page .plane-section a:not(.badge):not(.btn) {
+  font-weight: normal;
+}
+
+.developers-page .plane-section a:not(.badge):not(.btn):hover {
+  color: #1a82ff;
+  text-decoration: underline;
+}
+
+.developers-page section:nth-of-type(2) {
+  margin-top: -100px;
+}
+
+.developers-page section:nth-of-type(2) .foreground-content {
+  padding-top: 200px;
+}
+
+.developers-page section:nth-of-type(3) .foreground-content {
+  padding-bottom: 200px;
+}
+
+.developers-page .resources-section {
+  padding-bottom: 100px;
+}
+
+.developers-page .resources-section h3,
+.developers-page .resources-section p {
+  font-size: 0.875rem;
+}
+
+.developers-page .resources-section h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.developers-page .badge {
+  margin-bottom: 4px;
+}
+
+.developers-page .badge:hover {
+  text-decoration: underline;
 }
 
 /* xs */
