@@ -217,7 +217,7 @@ a:hover {
   line-height: 1;
 }
 
-.registration-arrow {
+#registration-arrow {
   border-bottom: 9px solid transparent;
   border-left: 12px solid #cc7cbc;
   border-top: 9px solid transparent;
@@ -227,7 +227,7 @@ a:hover {
   width: 0;
 }
 
-#rtl .registration-arrow {
+#rtl #registration-arrow {
   border-left: 0;
   border-right: 12px solid #cc7cbc;
 }
@@ -2222,7 +2222,7 @@ footer .company-mission {
     margin: 0 0 0 20px;
     padding: 0 0 0 20px;
   }
-  .announcement .container .registration-arrow {
+  .announcement .container #registration-arrow {
     display: block;
     margin: 0 20px;
   }
@@ -2242,7 +2242,7 @@ footer .company-mission {
     margin-right: 0;
   }
   #rtl .announcement .container > .registration-alert,
-  #rtl .announcement .container > .registration-arrow {
+  #rtl .announcement .container > #registration-arrow {
     margin-left: 20px;
   }
   .navbar .container {
