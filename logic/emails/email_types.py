@@ -38,7 +38,7 @@ EMAILS = {
         'subject': 'Registration ending soon for Origin\'s CoinList round'
     },
     'coinlist_investment_period': {
-        'subject': 'Investment Period Has Started For Origin\'s CoinList Round'
+        'subject': 'Investment period has started for Origin\'s CoinList round'
     }
 }
 
