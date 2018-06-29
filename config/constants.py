@@ -47,6 +47,7 @@ LANGUAGES = [
     'en',
     'es',
     'fr',
+    'fil',
     'it',
     'ja',
     'ko',
@@ -60,6 +61,7 @@ LANGUAGES = [
     'he',
     'hr',
     'nl',
+    'vi'
 ]
 
 # LANGUAGES = {
