@@ -1,7 +1,7 @@
 <footer class="dark-footer">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-5 col-lg-6">
         <div class="logo-container">
           <img src="/static/img/origin-logo.png"
             srcset="/static/img/origin-logo@2x.png 2x,
@@ -24,9 +24,9 @@
 
         </p>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7 col-lg-6">
         <div class="row">
-          <div class="col-6 col-md-4">
+          <div class="col-6 col-lg-3">
             <div class="footer-header">
               {{ gettext("Documentation") }}
             </div>
@@ -58,49 +58,62 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-6 col-lg-3">
             <div class="footer-header">
               {{ gettext("Community") }}
             </div>
             <ul class="footer-links">
               <li class="footer-link">
                 <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
-                  {{ gettext("Telegram") }}
+                  <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="{{ universal.DISCORD_URL }}" target="_blank">
-                  {{ gettext("Discord") }}
+                  <i class="fab fa-discord"></i> {{ gettext("Discord") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="https://medium.com/originprotocol" target="_blank">
-                  {{ gettext("Medium") }}
+                  <i class="fab fa-medium"></i> {{ gettext("Medium") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="https://www.reddit.com/r/originprotocol/" target="_blank">
-                  {{ gettext("Reddit") }}
+                  <i class="fab fa-reddit"></i> {{ gettext("Reddit") }}
                 </a>
               </li>
               <li class="footer-link">
+                <a class="span-link" data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-wechat-qr.png' />"><i class="fab fa-weixin"></i> {{ gettext("WeChat") }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="footer-header">Social</div>
+            <ul class="footer-links">
+              <li class="footer-link">
                 <a href="https://twitter.com/originprotocol" target="_blank">
-                  {{ gettext("Twitter") }}
+                  <i class="fab fa-twitter-square"></i> {{ gettext("Twitter") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="https://instagram.com/originprotocol" target="_blank">
-                  {{ gettext("Instagram") }}
+                  <i class="fab fa-instagram"></i> {{ gettext("Instagram") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="https://www.facebook.com/originprotocol" target="_blank">
-                  {{ gettext("Facebook") }}
+                  <i class="fab fa-facebook-square"></i> {{ gettext("Facebook") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="http://www.youtube.com/c/originprotocol" target="_blank">
+                  <i class="fab fa-youtube"></i> {{ gettext("Youtube") }}
                 </a>
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-6 col-lg-3">
             <div class="footer-header">
               {{ gettext("Organization") }}
             </div>

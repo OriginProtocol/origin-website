@@ -60,7 +60,9 @@ label {
 
 .tooltip .tooltip-inner {
   padding: 1.2rem;
+  max-width: 250px;
 }
+
 
 .form-control {
   background-color: #ebf0f3;
@@ -316,6 +318,11 @@ footer,
 section {
   position: relative;
   z-index: 0;
+}
+
+a:not([href]):not([tabindex]).span-link {
+  color: #ffffff;
+  cursor: pointer; 
 }
 
 nav {
