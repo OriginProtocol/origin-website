@@ -45,26 +45,19 @@ pybabel extract -F babel.cfg -o messages.pot --input-dirs=. --no-wrap
 pybabel update -i messages.pot -d translations --no-wrap
 ```
 
-The `.po` files are now ready for translation.
+When the `.po` files are pushed to any branch in the GitHub repo, they will be synced automatically with Crowdin for translation.
 
 ## Updating translations on website
 
-1. Download the new translations from Google Translator Toolkit. The file will be called `archive.zip` by default. (Note, you must download 2 or more languages to get a `.zip` file.)
+1. Look at the GitHub PR called "New Crowdin translations" which is generated and maintained automatically by Crowdin. This PR will always contain the latest `.po` files from our translators. Manually copy and paste whatever `.po` files you want from that PR and place the files in the `LC_MESSAGES` directory for the appropriate language.
 
-2. In the `translations` directory, run:
-
-```
-python extract_po_files_from_gtt_zip.py ~/Downloads/archive.zip
-```
-This will grab the new `.po` files for each langauge, and copy them to the correct place. Note this will overwrite the existing `.po` files.
-
-3. Fix common errors:
+2. Fix common errors:
 
 ```
 python fix_po_files.py
 ```
 
-4. Compile translations into `.mo` files:
+3. Compile translations into `.mo` files:
 
 ```
 pybabel compile -f -d  .
@@ -73,7 +66,7 @@ The `-f` flag is needed to force the compile, since downloads from Google transl
 
 Note: `.mo` files must committed in the repo in order for them to get on heroku.
 
-5. From repo root directory, run the website code to see new translations:
+4. From repo root directory, run the website code to see new translations:
 
 ```
 python main.py
