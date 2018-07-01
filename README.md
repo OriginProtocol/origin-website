@@ -2,6 +2,8 @@
 
 ![origin_license](https://img.shields.io/badge/license-MIT-6e3bea.svg?style=flat-square&colorA=111d28)
 
+Head to https://www.originprotocol.com/developers to learn more about what we're building and how to get involved.
+
 # originprotocol.com
 
 Official website for Origin Protocol
