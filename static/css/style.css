@@ -1693,6 +1693,24 @@ footer .company-mission {
   color: #fff;
 }
 
+.developers-page a:not([role=button]) {
+  color: #458efe;
+}
+
+.developers-page a:not(.badge):not(.btn):hover {
+  color: #0056b3;
+}
+
+.developers-page .btn-outline-primary {
+  border-color: #458efe;
+  color: #458efe;
+}
+
+.developers-page .btn-outline-primary:hover {
+  background-color: #458efe;
+  color: white;
+}
+
 .developers-page h1 {
   font-weight: 300;
 }
@@ -1737,10 +1755,6 @@ footer .company-mission {
 
 .developers-page .plane-section a:not(.badge):not(.btn) {
   font-weight: normal;
-}
-
-.developers-page .plane-section a:not(.badge):not(.btn):hover {
-  color: #0056b3;
 }
 
 .developers-page section:nth-of-type(2) {
