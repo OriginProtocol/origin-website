@@ -235,6 +235,6 @@ PARTNERS = [
     {
     "name":"crowdvilla",
     "url":"https://www.crowdvilla.io/",
-     "desc":lazy_gettext("Crowd Villa is building a decentralized platform for crowd owned vacation properties using Origin Protocol.")
+     "desc":lazy_gettext("Crowdvilla is building a decentralized platform for crowd owned vacation properties using Origin Protocol.")
     },
 ]
