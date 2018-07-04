@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% with theme_light=True %}
-<!-- temporarily hide warning -->
-  {#% include 'warning.html' %#}
+  {% include 'warning.html' %}
 {% endwith %}
 {% block title %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
 {% block meta_description %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
