@@ -1771,17 +1771,24 @@ footer .company-mission {
 }
 
 .header-text .header-link {
-  visibility: hidden;
   margin-left: -1.25em;
   padding-right: .25em;
+}
+
+.header-text .header-link i {
+  visibility: hidden;
   -webkit-transition: opacity 0.2s ease-in-out 0.1s;
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
   -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}  
+}
 
-.header-text:hover .header-link {
+.header-text:hover .header-link i {
   visibility: visible;
-} 
+}
+
+.header-link:hover i {
+  visibility: visible;
+}
 
 /* xs */
 @media (max-width: 575px) {
