@@ -1770,23 +1770,18 @@ footer .company-mission {
   text-decoration: underline;
 }
 
-.header-link {
-  position: absolute;
-  left: -0.7em;
-  opacity: 0;
+.header-text .header-link {
+  visibility: hidden;
+  margin-left: -1.25em;
+  padding-right: .25em;
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  -moz-transition: opacity 0.2s ease-in-out 0.1s;
+  -ms-transition: opacity 0.2s ease-in-out 0.1s;
+}  
 
-  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
-  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
-  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
-}
-
-h2:hover .header-link,
-h3:hover .header-link,
-h4:hover .header-link,
-h5:hover .header-link,
-h6:hover .header-link {
-  opacity: 1;
-}
+.header-text:hover .header-link {
+  visibility: visible;
+} 
 
 /* xs */
 @media (max-width: 575px) {
