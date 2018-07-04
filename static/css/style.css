@@ -134,125 +134,6 @@ a:hover {
   text-decoration: none;
 }
 
-.announcement {
-  background-color: #512d62;
-  border-bottom: 4px solid #222B37;
-  color: white;
-  font-family: 'Open-Sans', sans-serif;
-}
-
-.announcement h1,
-.announcement h2 {
-  font-family: 'Open-Sans', sans-serif;
-  margin: 0;
-}
-
-.announcement a:not(.registration-button) {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.announcement h1 {
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-
-.announcement h2 {
-  font-size: 0.625rem;
-}
-
-.announcement .subdued {
-  color: #ee99dc;
-}
-
-.announcement strong {
-  font-weight: 600;
-}
-
-.announcement .container {
-  flex-direction: column;
-  margin-bottom: -20px !important;
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-
-.announcement .container > * {
-  margin-bottom: 20px !important;
-  margin-right: auto;
-}
-
-#rtl .announcement .container > div {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.announcement .img-container {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 20px 0;
-}
-
-.announcement .message {
-  margin-bottom: 20px;
-  margin-right: auto;
-  max-width: 300px;
-}
-
-#rtl .announcement .message {
-  margin-left: auto;
-}
-
-.registration-alert {
-  margin-bottom: 20px;
-}
-
-.registration-alert header {
-  color: #ee99dc;
-  font-size: 0.625rem;
-  text-transform: uppercase;
-}
-
-.registration-alert #countdown {
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-#registration-arrow {
-  border-bottom: 9px solid transparent;
-  border-left: 12px solid #cc7cbc;
-  border-top: 9px solid transparent;
-  display: none;
-  height: 0;
-  margin: 0 20px;
-  width: 0;
-}
-
-#rtl #registration-arrow {
-  border-left: 0;
-  border-right: 12px solid #cc7cbc;
-}
-
-.registration-button {
-  background-color: #ee99dc;
-  color: black;
-  display: block;
-  font-weight: bold;
-  line-height: 40px;
-  padding: 0 20px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.registration-button:hover {
-  background-color: #a0639f;
-  color: black;
-  transition: background-color .15s ease-in-out,
-              border-color .15s ease-in-out,
-              box-shadow .15s ease-in-out;
-}
-
 .url-warning {
   display: block;
   font-size: 1.125rem;
@@ -1802,8 +1683,7 @@ footer .company-mission {
   }
   .navbar,
   footer .container,
-  .foreground-content,
-  .announcement .container {
+  .foreground-content {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1877,7 +1757,6 @@ footer .company-mission {
 
 /* sm + */
 @media (min-width: 576px) {
-  .announcement .container,
   .navbar {
     margin: auto;
     max-width: 540px;
@@ -1907,8 +1786,7 @@ footer .company-mission {
 @media (min-width: 576px) and (max-width: 767px) {
   .navbar,
   footer .container,
-  .foreground-content,
-  .announcement .container {
+  .foreground-content {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -1953,48 +1831,15 @@ footer .company-mission {
 
 /* md + */
 @media (min-width: 768px) {
-  .announcement .container {
-    flex-direction: row;
-  }
-  .announcement .message {
-    margin-bottom: 0;
-  }
-  .announcement .container,
   .navbar {
     max-width: 720px;
-  }
-  .announcement .container > .registration-alert {
-    margin-bottom: 0;
-    margin-left: auto;
-    min-width: 200px;
-    text-align: right;
-  }
-  #rtl .registration-alert {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-  .announcement .container > .registration-alert,
-  .announcement .container > .link-container {
-    margin-right: 0;
-  }
-  .registration-button {
-    margin-bottom: 0;
-  }
-  .announcement .link-container {
-    margin-left: auto;
-  }
-  #rtl .announcement .link-container {
-    margin-left: 0;
-    margin-right: auto;
   }
   .navbar-origin .navbar-collapse .col-md-4:nth-of-type(3) {
     padding-top: 20px;
   }
   .navbar,
   footer .container,
-  .foreground-content,
-  .announcement .container {
+  .foreground-content {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -2225,46 +2070,8 @@ footer .company-mission {
 
 /* lg + */
 @media (min-width: 992px) {
-  .announcement .container,
   .navbar {
     max-width: 960px;
-  }
-  .announcement .container .img-container {
-    border-bottom: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    margin-bottom: 0;
-    margin-right: 30px;
-    padding-right: 30px;
-    width: 200px;
-  }
-  #rtl .announcement .container .img-container {
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 0;
-    margin: 0 0 0 20px;
-    padding: 0 0 0 20px;
-  }
-  .announcement .container #registration-arrow {
-    display: block;
-    margin: 0 20px;
-  }
-  .announcement .container > .registration-alert {
-    margin-left: auto;
-    margin-right: 0;
-  }
-  .registration-alert {
-    min-width: unset;
-  }
-  .announcement .link-container {
-    margin-left: 0;
-    padding-top: 0;
-  }
-  #rtl .announcement .container > .link-container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #rtl .announcement .container > .registration-alert,
-  #rtl .announcement .container > #registration-arrow {
-    margin-left: 20px;
   }
   .navbar .container {
     padding-left: 0;
@@ -2355,13 +2162,6 @@ footer .company-mission {
 
 /* xl + */
 @media (min-width: 1200px) {
-  .announcement .container > .registration-alert {
-    margin-right: unset;
-  }
-  .announcement .container > .link-container {
-    margin-right: unset;
-  }
-  .announcement .container,
   .navbar {
     max-width: 1140px;
   }
