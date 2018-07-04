@@ -47,6 +47,11 @@
                 </a>
               </li>
               <li class="footer-link">
+                <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Developers") }}
+                </a>
+              </li>
+              <li class="footer-link">
                 <a href="https://github.com/OriginProtocol" target="_blank">
                   {{ gettext("Github") }}
                 </a>
@@ -134,13 +139,8 @@
                 </a>
               </li>
               <li class="footer-link">
-                <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Developers") }}
-                </a>
-              </li>
-              <li class="footer-link">
                 <a href="https://angel.co/originprotocol/jobs" target="_blank">
-                  {{ gettext("Jobs (We're hiring!)") }}
+                  {{ gettext("Jobs") }}
                 </a>
               </li>
               <li class="footer-link">
