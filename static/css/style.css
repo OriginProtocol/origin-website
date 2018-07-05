@@ -1770,25 +1770,7 @@ footer .company-mission {
   text-decoration: underline;
 }
 
-/*.header-text .header-link {
-  visibility: hidden;
-  position: absolute;
-  font-size: 15px;
-  top: 1.5em;
-  left: -.5em;
-  padding-right: 1.5em;
-  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
-  -moz-transition: opacity 0.2s ease-in-out 0.1s;
-  -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}  
-
-.header-text:hover .header-link {
-  visibility: visible;
-} */
-
-
-/* old css */
-.header-text .header-link {
+.header-text .header-link i {
   visibility: hidden;
   margin-left: -1.25em;
   padding-right: .25em;
@@ -1796,11 +1778,15 @@ footer .company-mission {
   -webkit-transition: opacity 0.2s ease-in-out 0.1s;
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
   -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}  
+}
 
-.header-text:hover .header-link {
+.header-text:hover .header-link i {
   visibility: visible;
-} 
+}
+
+.header-link:hover i {
+  visibility: visible;
+}
 
 /* xs */
 @media (max-width: 575px) {
