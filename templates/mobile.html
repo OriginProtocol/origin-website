@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
-{% include 'warning.html' %}
 
 {% block title %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
 {% block meta_description %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
 {% block content %}
+
+  {% include 'warning.html' %}
+
   <main class="landing-page">
     {% include 'navbar.html' %}
     <section class="header-section">
