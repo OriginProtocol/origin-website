@@ -1793,6 +1793,20 @@ footer .company-mission {
   visibility: visible;
 }
 
+#rtl .header-link {
+  padding-left: 0;
+  padding-right: 1em;
+  margin-left: 0;
+  margin-right: -1em;
+}
+
+#rtl .header-text .header-link i {
+  margin-left: 0;
+  margin-right: -1.5em;
+  padding-left: .5em;
+  padding-right: 0;
+}
+
 /* xs */
 @media (max-width: 575px) {
   .btn,
