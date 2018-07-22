@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+This file handles asyncronous tasks.
+Tasks are performed using Celery (http://www.celeryproject.org/)
+Task functions are at bottom of file, and decorated with `@celery.task()`
+"""
+
 import os
 import sendgrid
 from celery import Celery
