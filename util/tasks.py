@@ -10,9 +10,9 @@ import sendgrid
 from celery import Celery
 from config import constants
 from flask import Flask
-from database import db
-
+from database import db, db_models
 from database.db_models import EmailList
+from fullcontact import FullContact
 
 
 def make_celery(app):
@@ -68,3 +68,54 @@ def subscribe_email_list(**kwargs):
                                  ip_addr=ip_addr,
                                  unsubscribed=False))
         db.session.commit()
+
+
+@celery.task(rate_limit='300/m', max_retries=3)
+def full_contact_request(email):
+    """ Request fullcontact info based on email """
+
+    print('Looking up %s' % email)
+    flask_app.logger.info('Looking up %s', email)
+
+    fc = FullContact(constants.FULLCONTACT_KEY)
+    r = fc.person(email=email)
+
+    MIN_RETRY_SECS = 300
+    MAX_RETRY_SECS = 600
+
+    code = int(r.status_code)
+    if (code == 200) or (code == 404):
+        # Success or not found
+
+        contact_json = r.json()
+        fc_row = db_models.FullContact()
+        fc_row.email = email
+        fc_row.fullcontact_response = contact_json
+
+        print(contact_json)
+
+        if 'socialProfiles' in contact_json:
+            print ("We have socialProfiles")
+            profiles = contact_json['socialProfiles']
+            for profile in profiles:
+                print profile
+                if 'typeId' in profile and 'username' in profile:
+                    network = profile['typeId']
+                    username = profile['username']
+                    if network == 'angellist':
+                        fc_row.angellist_handle = username
+                    if network == 'github':
+                        fc_row.github_handle = username
+                    if network == 'twitter':
+                        fc_row.twitter_handle = username
+        db.session.add(fc_row)
+        db.session.commit()
+
+
+    elif code == 202:
+        # We're requesting too quickly, randomly back off
+        self.retry(countdown=randint(MIN_RETRY_SECS, MAX_RETRY_SECS))
+    else:
+        flask_app.logger.fatal("FullContact request %s with status code %s",
+                               email, r.status_code)
+        flask_app.logger.fatal(r.json())
