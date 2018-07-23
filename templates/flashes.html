@@ -1,6 +1,6 @@
 <script type='text/javascript'>
 
-  /* promote Wechat for Chinese, Kakao for Korea and Telegram everywhere else */
+  /* promote Wechat for Chinese, Kakao for Korean and Telegram everywhere else */
   {% if CURRENT_LANGUAGE == "zh_Hant" or CURRENT_LANGUAGE == "zh_Hans" %}
 
     setTimeout(function() {
@@ -24,7 +24,7 @@
   {% with messages = get_flashed_messages() %}
     {% if messages %}
       {% for message in messages %}
-          alertify.log("{{ message }}", "default");
+        alertify.log("{{ message }}", "default");
       {% endfor %}
     {% endif %}
   {% endwith %}
