@@ -89,8 +89,8 @@ def full_contact_request(email):
     code = int(r.status_code)
     if (code == 200) or (code == 404):
         # Success or not found
-        # (We "not found" results in db too, so that we know we tried
-        # and to move on to next email.)
+        # (We log "not found" results in db too, so that we know
+        # we tried and can move on to next email.)
         contact_json = r.json()
         fc_row = db_models.FullContact()
         fc_row.email = email
