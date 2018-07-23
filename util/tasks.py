@@ -74,7 +74,10 @@ def subscribe_email_list(**kwargs):
 def full_contact_request(email):
     """ Request fullcontact info based on email """
 
-    print('Looking up %s' % email)
+    if (constants.FULLCONTACT_KEY is None):
+        flask_app.logger.fatal("constants.FULLCONTACT_KEY is not set.")
+        return
+
     flask_app.logger.info('Looking up %s', email)
 
     fc = FullContact(constants.FULLCONTACT_KEY)
@@ -86,19 +89,16 @@ def full_contact_request(email):
     code = int(r.status_code)
     if (code == 200) or (code == 404):
         # Success or not found
-
+        # (We "not found" results in db too, so that we know we tried
+        # and to move on to next email.)
         contact_json = r.json()
         fc_row = db_models.FullContact()
         fc_row.email = email
         fc_row.fullcontact_response = contact_json
 
-        print(contact_json)
-
         if 'socialProfiles' in contact_json:
-            print ("We have socialProfiles")
             profiles = contact_json['socialProfiles']
             for profile in profiles:
-                print profile
                 if 'typeId' in profile and 'username' in profile:
                     network = profile['typeId']
                     username = profile['username']
@@ -108,13 +108,15 @@ def full_contact_request(email):
                         fc_row.github_handle = username
                     if network == 'twitter':
                         fc_row.twitter_handle = username
+        flask_app.logger.info('%s logged in successfully', email)
         db.session.add(fc_row)
         db.session.commit()
-
-
+    elif code == 403:
+        # Key fail
+        flask_app.logger.fatal("constants.FULLCONTACT_KEY is not set or is invalid.")
     elif code == 202:
         # We're requesting too quickly, randomly back off
-        self.retry(countdown=randint(MIN_RETRY_SECS, MAX_RETRY_SECS))
+        full_contact_request.retry(countdown=randint(MIN_RETRY_SECS, MAX_RETRY_SECS))
     else:
         flask_app.logger.fatal("FullContact request %s with status code %s",
                                email, r.status_code)
