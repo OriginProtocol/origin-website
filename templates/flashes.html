@@ -1,12 +1,33 @@
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <script type='text/javascript'>
-    {% for message in messages %}
-        alertify.log("{{ message }}", "default");
-    {% endfor %}
-    {% if CURRENT_LANGUAGE != "en" %}
-      alertify.log("Help improve this translation.<div class='discord-btn-container'><a href='{{ universal.DISCORD_URL }}'  role='button' class='discord-btn btn btn-primary btn-min-size' target='_blank'><i class='fab fa-discord'></i>Join #translation on Discord</a></div>", "default", 0);
-    {% endif %}
-    </script>
+<script type='text/javascript'>
+
+  /* promote Wechat for Chinese, Kakao for Korean and Telegram everywhere else */
+  {% if CURRENT_LANGUAGE == "zh_Hant" or CURRENT_LANGUAGE == "zh_Hans" %}
+
+    setTimeout(function() {
+      alertify.log("<img src='/static/img/origin-wechat-qr.png' /><br><br><i class='fab fa-weixin'></i> {{ gettext('Join Our WeChat') }}</a>", "default", 0)
+    }, 2000);
+
+  {% elif CURRENT_LANGUAGE == "ko" %}
+
+    setTimeout(function() {
+      alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='https://pf.kakao.com/_qTxeYC' role='button' class='telegram-btn btn btn-primary btn-min-size' target='_blank'><i class='fas fa-comment'></i>{{ gettext("Join Our KakaoTalk") }}</a></div>", "default", 0)
+    }, 2000);
+
+  {% else %}
+
+    setTimeout(function() {
+      alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='{{ universal.TELEGRAM_URL }}' role='button' class='telegram-btn btn btn-primary btn-min-size' target='_blank'><i class='fab fa-telegram-plane'></i>{{ gettext("Join Our Telegram") }}</a></div>", "default", 0)
+    }, 2000);
+
   {% endif %}
-{% endwith %}
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        alertify.log("{{ message }}", "default");
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+</script>
+
