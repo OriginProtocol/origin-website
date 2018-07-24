@@ -8,12 +8,17 @@ Task functions are at bottom of file, and decorated with `@celery.task()`
 import os
 import sendgrid
 from celery import Celery
+from celery.utils.log import get_task_logger
 from config import constants
 from flask import Flask
 from database import db, db_models
 from database.db_models import EmailList
 from fullcontact import FullContact
 from random import randint
+from sqlalchemy.exc import IntegrityError
+
+# Get logger for tasks
+logger = get_task_logger(__name__)
 
 def make_celery(app):
     celery = Celery(app.import_name, backend=os.environ['REDIS_URL'],
@@ -51,7 +56,7 @@ celery = make_celery(flask_app)
 
 @celery.task()
 def send_email(body):
-    flask_app.logger.fatal("Sending email from Celery...")
+    logger.fatal("Sending email from Celery...")
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     sg_api.client.mail.send.post(request_body=body)
 
@@ -70,15 +75,15 @@ def subscribe_email_list(**kwargs):
         db.session.commit()
 
 
-@celery.task(rate_limit='300/m', max_retries=3, name='tasks.full_contact_request')
+@celery.task(rate_limit='200/m', max_retries=3, name='tasks.full_contact_request')
 def full_contact_request(email):
     """ Request fullcontact info based on email """
 
     if (constants.FULLCONTACT_KEY is None):
-        flask_app.logger.fatal("constants.FULLCONTACT_KEY is not set.")
+        logger.fatal("constants.FULLCONTACT_KEY is not set.")
         return
 
-    flask_app.logger.info('Looking up %s', email)
+    logger.info('Looking up %s', email)
 
     fc = FullContact(constants.FULLCONTACT_KEY)
     r = fc.person(email=email)
@@ -108,17 +113,20 @@ def full_contact_request(email):
                         fc_row.github_handle = username
                     if network == 'twitter':
                         fc_row.twitter_handle = username
-        flask_app.logger.info('%s logged in successfully', email)
-        db.session.add(fc_row)
-        db.session.commit()
+        try:
+            db.session.add(fc_row)
+            db.session.commit()
+            logger.info('Email %s  recorded to fullcontact', email)
+        except IntegrityError as e:
+            logger.warning("Email %s has already been entered in FullContact table.", email)
     elif code == 403:
         # Key fail
-        flask_app.logger.fatal("constants.FULLCONTACT_KEY is not set or is invalid.")
+        logger.fatal("constants.FULLCONTACT_KEY is not set or is invalid.")
     elif code == 202:
         # We're requesting too quickly, randomly back off
-        flask_app.logger.info("Throttled by FullContact. Retrying after random delay.")
+        logger.warning("Throttled by FullContact. Retrying after random delay.")
         full_contact_request.retry(countdown=randint(MIN_RETRY_SECS, MAX_RETRY_SECS))
     else:
-        flask_app.logger.fatal("FullContact request %s with status code %s",
+        logger.fatal("FullContact request %s with status code %s",
                                email, r.status_code)
-        flask_app.logger.fatal(r.json())
+        logger.fatal(r.json())

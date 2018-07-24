@@ -7,6 +7,7 @@ catch us up.
 """
 
 import os
+import sys
 import argparse
 from app import app_config
 from config import constants
@@ -42,15 +43,24 @@ def backfill_fullcontact(limit=100000):
         result = db.engine.execute(unfilled)
 
         for row in result:
+            print ("Creating task for email: %s" % row[0])
             tasks.full_contact_request.delay(row[0])
 
 
 if __name__ == '__main__':
+
     parser = argparse.ArgumentParser(description='Backfill missing fullcontact data on emails from presale table.')
 
     parser.add_argument('-l', '--limit', default=100000, type=int,
                         help='number of rows it will attempt (default: find the max)')
 
     args = parser.parse_args()
+
+    if ('REDIS_URL' not in os.environ):
+        sys.exit("REDIS_URL is not set.")
+    if ('FULLCONTACT_KEY' not in os.environ):
+        sys.exit("FULLCONTACT_KEY is not set.")
+    if ('DATABASE_URL' not in os.environ):
+        sys.exit("DATABASE_URL is not set.")
 
     backfill_fullcontact(args.limit)
