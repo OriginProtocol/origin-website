@@ -13,7 +13,7 @@ from flask import Flask
 from database import db, db_models
 from database.db_models import EmailList
 from fullcontact import FullContact
-
+from random import randint
 
 def make_celery(app):
     celery = Celery(app.import_name, backend=os.environ['REDIS_URL'],
@@ -70,7 +70,7 @@ def subscribe_email_list(**kwargs):
         db.session.commit()
 
 
-@celery.task(rate_limit='300/m', max_retries=3)
+@celery.task(rate_limit='300/m', max_retries=3, name='tasks.full_contact_request')
 def full_contact_request(email):
     """ Request fullcontact info based on email """
 
@@ -83,7 +83,7 @@ def full_contact_request(email):
     fc = FullContact(constants.FULLCONTACT_KEY)
     r = fc.person(email=email)
 
-    MIN_RETRY_SECS = 300
+    MIN_RETRY_SECS = 10
     MAX_RETRY_SECS = 600
 
     code = int(r.status_code)
@@ -116,6 +116,7 @@ def full_contact_request(email):
         flask_app.logger.fatal("constants.FULLCONTACT_KEY is not set or is invalid.")
     elif code == 202:
         # We're requesting too quickly, randomly back off
+        flask_app.logger.info("Throttled by FullContact. Retrying after random delay.")
         full_contact_request.retry(countdown=randint(MIN_RETRY_SECS, MAX_RETRY_SECS))
     else:
         flask_app.logger.fatal("FullContact request %s with status code %s",

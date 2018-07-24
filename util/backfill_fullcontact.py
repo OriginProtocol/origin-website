@@ -13,7 +13,6 @@ from config import constants
 
 from database import db
 from flask import Flask
-from tasks import full_contact_request
 
 from logic.emails import email_types
 
@@ -27,8 +26,11 @@ flask_app.config.update(
 
 app_config.init_prod_app(flask_app)
 
+import tasks
+
 def backfill_fullcontact(limit=100000):
     with flask_app.app_context():
+
         # Find users for whom we have no fullcontact info
         unfilled = """
             SELECT DISTINCT presale.email
@@ -40,7 +42,7 @@ def backfill_fullcontact(limit=100000):
         result = db.engine.execute(unfilled)
 
         for row in result:
-            full_contact_request(row[0])
+            tasks.full_contact_request.delay(row[0])
 
 
 if __name__ == '__main__':
