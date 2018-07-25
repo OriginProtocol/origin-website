@@ -75,7 +75,7 @@ def subscribe_email_list(**kwargs):
         db.session.commit()
 
 
-@celery.task(rate_limit='200/m', max_retries=3, name='tasks.full_contact_request')
+@celery.task(rate_limit='30/m', max_retries=3, name='tasks.full_contact_request')
 def full_contact_request(email):
     """ Request fullcontact info based on email """
 
@@ -124,8 +124,9 @@ def full_contact_request(email):
         logger.fatal("constants.FULLCONTACT_KEY is not set or is invalid.")
     elif code == 202:
         # We're requesting too quickly, randomly back off
-        logger.warning("Throttled by FullContact. Retrying after random delay.")
-        full_contact_request.retry(countdown=randint(MIN_RETRY_SECS, MAX_RETRY_SECS))
+        delay = randint(MIN_RETRY_SECS, MAX_RETRY_SECS)
+        logger.warning("Throttled by FullContact. Retrying after random delay of %d" % delay)
+        full_contact_request.retry(countdown=delay)
     else:
         logger.fatal("FullContact request %s with status code %s",
                                email, r.status_code)

@@ -4,6 +4,9 @@ This file "backfills" fullcontact information.
 Ordinarily fullcontact info is retrieved at the time user info is entered,
 but we have a lot of preexisting data. This one-time script will
 catch us up.
+
+Example:
+    python util/backfill_fullcontact.py -l 10
 """
 
 import os
