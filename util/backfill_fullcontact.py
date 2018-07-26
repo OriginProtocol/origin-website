@@ -2,23 +2,22 @@
 """
 This file "backfills" fullcontact information.
 Ordinarily fullcontact info is retrieved at the time user info is entered,
-but we have a lot of preexisting data. This one-time script will
-catch us up.
+but we have a lot of preexisting data. This one-time script will catch us up.
 
 Example to process next 10 emails:
     python util/backfill_fullcontact.py -l 10
 
-Start Redis:
+Setup and useful tools:
+
+Start Redis in own tab:
     redis-server
 
-Start Celery:
+Start Celery in own tab:
     celery -A util.tasks worker
 
-Purge all pending tasks:
+To purge all pending tasks:
+    # Stop celery worker first
     celery -A util.tasks purge
-
-Set default Redis URL:
-    export REDIS_URL="redis://localhost:6379/0"
 
 If testing locally, origin-box may be using the default redis port.
 Fix by using different port:
