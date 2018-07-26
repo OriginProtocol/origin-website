@@ -5,8 +5,30 @@ Ordinarily fullcontact info is retrieved at the time user info is entered,
 but we have a lot of preexisting data. This one-time script will
 catch us up.
 
-Example:
+Example to process next 10 emails:
     python util/backfill_fullcontact.py -l 10
+
+Start Redis:
+    redis-server
+
+Start Celery:
+    celery -A util.tasks worker
+
+Purge all pending tasks:
+    celery -A util.tasks purge
+
+Set default Redis URL:
+    export REDIS_URL="redis://localhost:6379/0"
+
+If testing locally, origin-box may be using the default redis port.
+Fix by using different port:
+    redis-server --port 6380
+    export REDIS_URL="redis://localhost:6380/0"
+
+Celery Flower is useful GUI for monitoring:
+    pip install flower
+    flower -A util.tasks --port=5555
+    open 127.0.0.1:5555
 """
 
 import os
