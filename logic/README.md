@@ -1,3 +1,3 @@
 # Logic
 
-This dir contains logic for dealing with special non-website things like email and 3rd party services.
+This dir should contain any custom logic that we write for the site (including data enrichment, email campaigns, etc). 
