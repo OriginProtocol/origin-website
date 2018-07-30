@@ -28,6 +28,13 @@ Celery Flower is useful GUI for monitoring:
     pip install flower
     flower -A util.tasks --port=5555
     open 127.0.0.1:5555
+
+SQL to count emails left to process:
+    SELECT COUNT(DISTINCT presale.email)
+    FROM presale
+        LEFT JOIN fullcontact ON presale.email = fullcontact.email
+    WHERE fullcontact.id IS NULL
+
 """
 
 import os

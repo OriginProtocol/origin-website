@@ -75,7 +75,10 @@ def subscribe_email_list(**kwargs):
         db.session.commit()
 
 
-@celery.task(rate_limit='30/m', max_retries=3, name='tasks.full_contact_request')
+@celery.task(
+    rate_limit=os.environ.get('FULLCONTACT_RATE_LIMIT', '30/m'),
+    max_retries=3,
+    name='tasks.full_contact_request')
 def full_contact_request(email):
     """ Request fullcontact info based on email """
 
