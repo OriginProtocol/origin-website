@@ -29,7 +29,7 @@ PARTNERS = [
     },
     {
     "name":"wehome",
-    "url":"https://wehome.foundation/",
+    "url":"http://wehome.foundation/",
      "desc":lazy_gettext("Wehome is Kozaza's decentralized homesharing platform of the future built on Origin Protocol.")
     },
     {
