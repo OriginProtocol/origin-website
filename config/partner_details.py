@@ -18,14 +18,19 @@ PARTNERS = [
     "desc":lazy_gettext("CanYa is building a blockchain-powered &ldquo;marketplace of services&rdquo; with Origin Protocol for the gig economy and freelancing.")
     },
     {
+    "name":"spin",
+    "url":"https://www.spin.pm/",
+     "desc":lazy_gettext("Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US.")
+    },
+    {
     "name":"kozaza",
     "url":"https://www.kozaza.com/",
      "desc":lazy_gettext("Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol.")
     },
     {
-    "name":"spin",
-    "url":"https://www.spin.pm/",
-     "desc":lazy_gettext("Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US.")
+    "name":"wehome",
+    "url":"http://wehome.foundation/",
+     "desc":lazy_gettext("Wehome is Kozaza's decentralized homesharing platform of the future built on Origin Protocol.")
     },
     {
     "name":"wetrust",
@@ -154,7 +159,7 @@ PARTNERS = [
     },
     {
     "name":"lotus",
-    "url":"https://lotus.sh/",
+    "url":"#",
      "desc":lazy_gettext("Lotus is building a decentralized blockchain-based travel agency on Origin Protocol.")
     },
     {
@@ -174,7 +179,7 @@ PARTNERS = [
     },
     {
     "name":"fintechbloq",
-    "url":"http://fintechbloq.com/",
+    "url":"#",
      "desc":lazy_gettext("Fintech Bloq is building their marketplace of blockchain and banking services on Origin Protocol.")
     },
     {
@@ -221,5 +226,15 @@ PARTNERS = [
     "name":"wificoin",
     "url":"https://www.wificoin.co/",
      "desc":lazy_gettext("Wificoin is building a marketplace for existing WiFi networks to provide internet access as an open public utility using Origin Protocol.")
+    },
+        {
+    "name":"collabprotocol",
+    "url":"https://www.collabprotocol.com/",
+     "desc":lazy_gettext("Collab is building a blockchain enabled marketplace for influencer marketing on Origin Protocol.")
+    },
+    {
+    "name":"crowdvilla",
+    "url":"https://www.crowdvilla.io/",
+     "desc":lazy_gettext("Crowdvilla is building a decentralized platform for crowd owned vacation properties using Origin Protocol.")
     },
 ]
