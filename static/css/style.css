@@ -203,7 +203,7 @@ section {
 
 a:not([href]):not([tabindex]).span-link {
   color: #ffffff;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 nav {
@@ -1314,7 +1314,7 @@ footer .company-mission {
 }
 
 .advisor-team-section .foreground-content {
-  margin-bottom: 131px;
+  margin-bottom: 0px;
 }
 
 .advisor-team-section h2 {
@@ -1352,6 +1352,9 @@ footer .company-mission {
 
 .investors-section h2 {
   margin: 140px auto 40px auto;
+}
+.investors-section h2:first-of-type {
+  margin-top: 0px;
 }
 
 .investors-section .logos {
@@ -2015,7 +2018,7 @@ footer .company-mission {
     margin-top: 120px;
   }
   .advisor-team-section .foreground-content {
-    margin-bottom: 300px;
+    margin-bottom: 0px;
   }
   .filler-section {
     height: 0px;
@@ -2025,6 +2028,9 @@ footer .company-mission {
   }
   .investors-section h2 {
     margin-top: 180px;
+  }
+  .investors-section h2:first-of-type {
+    margin-top: 0px;
   }
   .consensys {
     position: relative;
@@ -2131,7 +2137,7 @@ footer .company-mission {
     margin-top: 200px;
   }
   .advisor-team-section .foreground-content {
-    margin-bottom: 360px;
+    margin-bottom: 0px;
   }
   .social-links {
     padding-top: 200px;
