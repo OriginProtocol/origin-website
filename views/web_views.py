@@ -7,7 +7,7 @@ from config import constants, universal, partner_details
 from flask import (jsonify, redirect, render_template,
                    request, flash, g, url_for, Response, stream_with_context)
 from flask_babel import gettext, Babel, Locale
-from flask_recaptcha import ReCaptcha
+from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 import requests
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
