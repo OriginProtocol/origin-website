@@ -81,19 +81,26 @@ class ReCaptcha(object):
             return """
                 <div id="{ELEMENT_ID}"></div>
                 <script>
-                  var recaptchaCallback = function(token) {{
-                    // reCAPTCHA has been processed
+                  var setRecaptchaToken = function() {{
                     var captcha = document.getElementById("{ELEMENT_ID}"),
                         fields = captcha.getElementsByTagName('textarea');
                     if(!fields.length) return;
                     // Add the reCAPTCHA token to the form
                     fields[0].value = grecaptcha.getResponse(recaptchaId);
+                  }};
+
+                  var getRecaptchaToken = function() {{
+                    var captcha = document.getElementById("{ELEMENT_ID}"),
+                        fields = captcha.getElementsByTagName('textarea');
+                    return fields[0].value
+                  }};
+
+                  var recaptchaCallback = function(token) {{
+                    setRecaptchaToken();
+                    // reCAPTCHA has been processed
                     if({CALLBACK}) {{
                       {CALLBACK}();
                     }}
-                    // Reset the reCAPTCHA in case form submission was not
-                    // successful, e.g. server side validation failure
-                    grecaptcha.reset();
                   }};
 
                   var recaptchaOnloadCallback = function() {{
@@ -109,7 +116,13 @@ class ReCaptcha(object):
                   var formElement = document.getElementById("{FORM_ID}")
                   formElement.addEventListener("submit", function(event) {{
                     event.preventDefault();
-                    grecaptcha.execute(recaptchaId);
+                    var recaptchaToken = getRecaptchaToken();
+                    if (recaptchaToken) {{
+                        // reCAPTCHA token already set, fine to proceed
+                        {CALLBACK}();
+                    }} else {{
+                        grecaptcha.execute(recaptchaId);
+                    }}
                   }});
                 </script>
 
