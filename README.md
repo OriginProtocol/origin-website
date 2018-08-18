@@ -71,14 +71,16 @@ pytest path/to/test.py::test_case_name
 ```
 ## Running locally with Celery
 
-We use [celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running background tasks (mostly just sending emails). To get this working on your local machine, you'll want to make sure:
+We use [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running background tasks (mostly just sending emails). To get this working on your local machine, you'll want to make sure:
 
  - Your .env has `CELERY_DEBUG: False`
  - Redis is installed and running: `redis-server`
- - An active celery worker is running: `celery -A util.tasks worker`
+ - An active Celery worker is running: `celery --loglevel=INFO -A util.tasks worker`
+
+ [Celery Flower](http://flower.readthedocs.io/en/latest/install.html#usage) is useful for monitoring tasks: `flower -A util.tasks --port=5555`
 
 ## Localization
-See [translations](translations) directory. 
+See [translations](translations) directory.
 
 ## Database changes
 
@@ -86,11 +88,11 @@ We use [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) to handl
 
 ## Heroku Deploy
 
-To deploy a development copy of the site on Heroku, just choose which branch you would like to use and follow the instructions: 
+To deploy a development copy of the site on Heroku, just choose which branch you would like to use and follow the instructions:
 
-| `Master` branch <br>(stable) | `Develop` branch<br> (active development) | 
+| `Master` branch <br>(stable) | `Develop` branch<br> (active development) |
 |---------|----------|
-| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/develop) | 
+| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/develop) |
 
 Heroku will prompt you to set config variables. At a minium, you must set these two:
 
