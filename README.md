@@ -90,9 +90,9 @@ We use [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) to handl
 
 To deploy a development copy of the site on Heroku, just choose which branch you would like to use and follow the instructions:
 
-| `Master` branch <br>(stable) | `Develop` branch<br> (active development) |
+| `stable` branch <br>(v1.11.1) | `master` branch<br> (active development) |
 |---------|----------|
-| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/master) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/develop) |
+| [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/stable) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/originprotocol/origin-website/tree/master) |
 
 Heroku will prompt you to set config variables. At a minium, you must set these two:
 
