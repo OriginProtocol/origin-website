@@ -10,6 +10,7 @@ from flask_babel import gettext, Babel, Locale
 from flask_recaptcha import ReCaptcha
 from logic.emails import mailing_list
 import requests
+from database import db_models
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 
 
@@ -62,7 +63,8 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
-    return render_template('team.html')
+    contributors = db_models.Contributor.query.all()
+    return render_template('team.html', contributors=contributors)
 
 @app.route('/<lang_code>/presale')
 def presale():

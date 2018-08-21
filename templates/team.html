@@ -300,11 +300,11 @@
           <div class="row">
             <div class="col-12">
               <h2>
-                {{ gettext("Extended Team") }}
+                {{ gettext("Community") }}
               </h2>
               <div class="row">
-                <div class="col-12 col-md-6 col-xl-3">
-                  <div class="team-member">
+                <!-- <div class="col-12 col-md-6 col-xl-3"> -->
+                  <!-- <div class="team-member">
                     <div class="headshot-wrapper">
                       <img src="/static/img/headshot-aure.jpg" class="headshot" alt="Aure Gimon headshot">
                     </div>
@@ -370,7 +370,7 @@
                       {{ gettext("Nick founded his first company while still at college in the UK, later moving to Silicon Valley to work as a UI Architect for multiple organizations, small and large.") }}
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-12 col-md-6 col-xl-3">
                   <div class="team-member">
                     <div class="headshot-wrapper">
@@ -523,6 +523,31 @@
                     {{ gettext("Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital.") }}
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h2>
+                {{ gettext("Open-source Contributors") }}
+              </h2>
+              <div class="row">
+
+                {% for contributor in contributors %}
+
+                {% if contributor.avatar %}
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                  <div class="team-member">
+                    <div class="headshot-wrapper-small">
+                      <a href="https://github.com/{{ contributor.username }}" target="_blank">
+                        <img src="{{ contributor.avatar }}" class="headshot" alt="{{ contributor.username }}" title="{{ contributor.username }}">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+
+                {% endfor %}
               </div>
             </div>
           </div>
