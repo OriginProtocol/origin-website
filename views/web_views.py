@@ -63,8 +63,22 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
+    # fetch our list of contributors from the DB
     contributors = db_models.Contributor.query.all()
-    return render_template('team.html', contributors=contributors)
+
+    # manually add aure until he gets his first PR in
+    aure = db_models.Contributor()
+    aure.username = 'auregimon'
+    aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
+    contributors = [aure] + contributors
+
+    # community team
+    community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
+                 {'avatar':'dave', 'url': 'https://twitter.com/davecraige', 'name':'Dave Craig'},
+                 {'avatar':'andrei','url': 'https://www.linkedin.com/in/andreicosminmunteanu/', 'name':'Andrei Munteanu'},
+                 {'avatar':'mijbel', 'url': 'https://twitter.com/mijbelf', 'name':'Mijbel AlQattan' },
+                 {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' }]
+    return render_template('team.html', contributors=contributors, community=community)
 
 @app.route('/<lang_code>/presale')
 def presale():
