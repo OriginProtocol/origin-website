@@ -32,7 +32,7 @@
       "required": false
     },
     "GITHUB_KEY": {
-      "description": "If you want to fetch our Github contributors for the team page",
+      "description": "If you want to fetch our Github contributors for team page",
       "required": false
     }
   },
@@ -51,6 +51,6 @@
     }
   ],
   "scripts": {
-    "postdeploy": "python tools/manage.py db upgradepython tools/manage.py db upgrade; python logic/scripts/fetch_github_stats.py"
+    "postdeploy": "python tools/manage.py db upgrade; python logic/scripts/fetch_github_stats.py"
   }
 }
