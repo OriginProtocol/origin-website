@@ -51,6 +51,6 @@
     }
   ],
   "scripts": {
-    "postdeploy": "python tools/manage.py db upgrade"
+    "postdeploy": "python tools/manage.py db upgradepython tools/manage.py db upgrade; python logic/scripts/fetch_github_stats.py"
   }
 }
