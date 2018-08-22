@@ -534,20 +534,19 @@
               <div class="row">
 
                 {% for contributor in contributors %}
-
-                {% if contributor.avatar %}
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
-                  <div class="team-member">
-                    <div class="headshot-wrapper-small">
-                      <a href="https://github.com/{{ contributor.username }}" target="_blank">
-                        <img src="{{ contributor.avatar }}" class="headshot" alt="{{ contributor.username }}" title="{{ contributor.username }}">
-                      </a>
+                  {% if contributor.avatar %}
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                      <div class="team-member">
+                        <div class="headshot-wrapper-small">
+                          <a href="https://github.com/{{ contributor.username }}" target="_blank">
+                            <img src="{{ contributor.avatar }}" class="headshot" alt="{{ contributor.username }}" title="{{ contributor.username }}">
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                {% endif %}
-
+                  {% endif %}
                 {% endfor %}
+                
               </div>
             </div>
           </div>
