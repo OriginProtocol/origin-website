@@ -237,4 +237,9 @@ PARTNERS = [
     "url":"https://www.crowdvilla.io/",
      "desc":lazy_gettext("Crowdvilla is building a decentralized platform for crowd owned vacation properties using Origin Protocol.")
     },
+    {
+    "name":"trips",
+    "url":"https://tripscommunity.com/",
+     "desc":lazy_gettext("Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol.")
+    } 
 ]
