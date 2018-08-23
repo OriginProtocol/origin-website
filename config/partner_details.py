@@ -241,5 +241,10 @@ PARTNERS = [
     "name":"trips",
     "url":"https://tripscommunity.com/",
      "desc":lazy_gettext("Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol.")
+    }, 
+    {
+    "name":"tenzorum",
+    "url":"https://tenzorum.org/",
+     "desc":lazy_gettext("Tenzorum is building a marketplace for transaction fees using Origin Protocol.")
     } 
 ]
