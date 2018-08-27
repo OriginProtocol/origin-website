@@ -30,6 +30,10 @@
     },
     "RECAPTCHA_SECRET_KEY": {
       "required": false
+    },
+    "GITHUB_KEY": {
+      "description": "If you want to fetch our Github contributors for team page",
+      "required": false
     }
   },
   "addons": [{
@@ -47,6 +51,6 @@
     }
   ],
   "scripts": {
-    "postdeploy": "python tools/manage.py db upgrade"
+    "postdeploy": "python tools/manage.py db upgrade; python logic/scripts/fetch_github_stats.py"
   }
 }

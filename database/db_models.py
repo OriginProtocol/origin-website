@@ -80,6 +80,18 @@ class Interest(db.Model):
         return '%s' % (self.email)
 
 
+class Contributor(db.Model):
+    __tablename__ = 'contributor'
+
+    username = db.Column(db.String(255), primary_key=True, autoincrement=False)
+    commits = db.Column(db.Integer())
+    avatar = db.Column(db.String(255))
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+
+    def __str__(self):
+        return '%s' % (self.username)
+
+
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')
 def _subscribe_email_list(mapper, connection, target):

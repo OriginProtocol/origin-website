@@ -10,6 +10,7 @@ from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 import requests
+from database import db_models
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 
 
@@ -62,7 +63,28 @@ def index():
 
 @app.route('/<lang_code>/team')
 def team():
-    return render_template('team.html')
+    # fetch our list of contributors from the DB
+    contributors = db_models.Contributor.query.all()
+
+    # manually add aure until he gets his first PR in
+    aure = db_models.Contributor()
+    aure.username = 'auregimon'
+    aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
+    contributors = [aure] + contributors
+
+    # community team
+    community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
+                 {'avatar':'dave', 'url': 'https://twitter.com/davecraige', 'name':'Dave Craig'},
+                 {'avatar':'andrei','url': 'https://www.linkedin.com/in/andreicosminmunteanu/', 'name':'Andrei Munteanu'},
+                 {'avatar':'mijbel', 'url': 'https://twitter.com/mijbelf', 'name':'Mijbel AlQattan' },
+                 {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' },
+                 {'avatar':'russell', 'url': 'https://twitter.com/_russellduncan_', 'name':'Russell Duncan' },
+                 {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
+                 {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
+                 {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
+                 {'avatar':'camillia', 'url': 'https://www.linkedin.com/in/camillia-lu/', 'name':'Camillia Lu' },
+                 {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' },]
+    return render_template('team.html', contributors=contributors, community=community)
 
 @app.route('/<lang_code>/presale')
 def presale():

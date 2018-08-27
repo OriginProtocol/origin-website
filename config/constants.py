@@ -39,6 +39,8 @@ RECAPTCHA_SIZE = dotenv.get('RECAPTCHA_SIZE', default="invisible")
 
 SENTRY_DSN = dotenv.get('SENTRY_DSN')
 
+GITHUB_KEY = dotenv.get('GITHUB_KEY')
+
 # Language option constants
 
 LANGUAGES = [
