@@ -77,7 +77,13 @@ def team():
                  {'avatar':'dave', 'url': 'https://twitter.com/davecraige', 'name':'Dave Craig'},
                  {'avatar':'andrei','url': 'https://www.linkedin.com/in/andreicosminmunteanu/', 'name':'Andrei Munteanu'},
                  {'avatar':'mijbel', 'url': 'https://twitter.com/mijbelf', 'name':'Mijbel AlQattan' },
-                 {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' }]
+                 {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' },
+                 {'avatar':'russell', 'url': 'https://twitter.com/_russellduncan_', 'name':'Russell Duncan' },
+                 {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
+                 {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
+                 {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
+                 {'avatar':'camillia', 'url': 'https://www.linkedin.com/in/camillia-lu/', 'name':'Camillia Lu' },
+                 {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' },]
     return render_template('team.html', contributors=contributors, community=community)
 
 @app.route('/<lang_code>/presale')
