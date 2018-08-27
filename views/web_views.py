@@ -67,10 +67,10 @@ def team():
     contributors = db_models.Contributor.query.all()
 
     # manually add aure until he gets his first PR in
-    aure = db_models.Contributor()
-    aure.username = 'auregimon'
-    aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
-    contributors = [aure] + contributors
+    # aure = db_models.Contributor()
+    # aure.username = 'auregimon'
+    # aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
+    # contributors = [aure] + contributors
 
     # community team
     community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
