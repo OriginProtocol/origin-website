@@ -246,5 +246,10 @@ PARTNERS = [
     "name":"tenzorum",
     "url":"https://tenzorum.org/",
      "desc":lazy_gettext("Tenzorum is building a marketplace for transaction fees using Origin Protocol.")
-    } 
+    },
+    {
+    "name":"pocketinns",
+    "url":"https://pocketinns.io/",
+     "desc":lazy_gettext("Pocketinns is building a decentralized blockchain based community marketplace ecosystem using Origin Protocol.")
+    }
 ]
