@@ -67,9 +67,9 @@ def team():
     contributors = db_models.Contributor.query.all()
 
     # manually add aure until he gets his first PR in
-    # aure = db_models.Contributor()
-    # aure.username = 'auregimon'
-    # aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
+    aure = db_models.Contributor()
+    aure.username = 'auregimon'
+    aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
     # contributors = [aure] + contributors
 
     # community team
@@ -84,7 +84,7 @@ def team():
                  {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
                  {'avatar':'camillia', 'url': 'https://www.linkedin.com/in/camillia-lu/', 'name':'Camillia Lu' },
                  {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
-    return render_template('team.html', contributors=contributors, community=community)
+    return render_template('team.html', contributors=[aure] + contributors, community=community)
 
 @app.route('/<lang_code>/presale')
 def presale():
