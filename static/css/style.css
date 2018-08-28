@@ -1366,7 +1366,7 @@ footer .company-mission {
 }
 
 .investors-section h2 {
-  margin: 140px auto 40px auto;
+  margin: 80px auto 40px auto;
 }
 
 .investors-section .logos {
@@ -1691,8 +1691,7 @@ footer .company-mission {
   padding-left: 1em;
   margin-left: -1em;
 }
-
-.header-text .header-link i {
+ .header-text .header-link i {
   visibility: hidden;
   margin-left: -1.5em;
   padding-right: .5em;
@@ -1701,23 +1700,19 @@ footer .company-mission {
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
   -ms-transition: opacity 0.2s ease-in-out 0.1s;
 }
-
-.header-text:hover .header-link i {
+ .header-text:hover .header-link i {
   visibility: visible;
 }
-
-.header-link:hover i {
+ .header-link:hover i {
   visibility: visible;
 }
-
-#rtl .header-link {
+ #rtl .header-link {
   padding-left: 0;
   padding-right: 1em;
   margin-left: 0;
   margin-right: -1em;
 }
-
-#rtl .header-text .header-link i {
+ #rtl .header-text .header-link i {
   margin-left: 0;
   margin-right: -1.5em;
   padding-left: .5em;
@@ -1804,6 +1799,13 @@ footer .company-mission {
   }
   .logos .img-graphic {
     max-width: 200px;
+  }
+}
+
+/* sm - md only */
+@media (max-width: 767px) {
+  .investors-section h2:first-of-type {
+    margin: 0px auto 40px auto;
   }
 }
 
