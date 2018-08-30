@@ -83,9 +83,9 @@ PARTNERS = [
      "desc":lazy_gettext("Layer Protocol is the decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
     },
     {
-    "name":"selena",
-    "url":"https://selena.id/",
-     "desc":lazy_gettext("Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol.")
+    "name":"scidex",
+    "url":"https://www.scidex.co/",
+     "desc":lazy_gettext("SciDex is builing their marketspace for smart contracts and data using Origin Protocol.")
     },
     {
     "name":"jolyy",
@@ -256,5 +256,10 @@ PARTNERS = [
     "name":"pocketinns",
     "url":"https://pocketinns.io/",
      "desc":lazy_gettext("Pocketinns is building a decentralized blockchain based community marketplace ecosystem using Origin Protocol.")
+    },
+    {
+    "name":"selena",
+    "url":"https://selena.id/",
+     "desc":lazy_gettext("Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol.")
     }
 ]
