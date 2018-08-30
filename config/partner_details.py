@@ -43,7 +43,7 @@ PARTNERS = [
      "desc":lazy_gettext("Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform.")
     },
     {
-    "name":"metaplsplus",
+    "name":"metapsplus",
     "url":"http://www.metaps-plus.com/",
      "desc":lazy_gettext("Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol.")
     },
