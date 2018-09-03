@@ -261,5 +261,10 @@ PARTNERS = [
     "name":"selena",
     "url":"https://selena.id/",
      "desc":lazy_gettext("Selena is a peer-to-peer marketplace for travel and leisure activities. Selena is building their DApp using Origin Protocol.")
+    },
+    {
+    "name":"sharo",
+    "url":"https://sharo.io/",
+     "desc":lazy_gettext("shAro technologies is building their community based vehicle sharing platform on Origin Protocol.")
     }
 ]
