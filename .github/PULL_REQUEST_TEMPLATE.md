@@ -3,7 +3,7 @@ First pull request? Read our [guide to contributing](https://docs.originprotocol
 ### Checklist:
 
 - [ ] Test your work and double check you didn't break anything
-- [ ] Update the README, if neccessary
+- [ ] Update the README, if necessary
 
 ### Description:
 
