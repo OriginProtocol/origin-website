@@ -23,9 +23,9 @@ PARTNERS = [
      "desc":lazy_gettext("Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US.")
     },
     {
-    "name":"kozaza",
-    "url":"https://www.kozaza.com/",
-     "desc":lazy_gettext("Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol.")
+    "name":"circle",
+    "url":"https://usdc.circle.com/",
+     "desc":lazy_gettext("Circle's USDC stablecoin is proudly supported by Origin Protocol.")
     },
     {
     "name":"wehome",
