@@ -266,5 +266,10 @@ PARTNERS = [
     "name":"sharo",
     "url":"https://sharo.io/",
      "desc":lazy_gettext("shAro technologies is building their community based vehicle sharing platform on Origin Protocol.")
+    },
+    {
+    "name":"wiji",
+    "url":"https://wiji.io/",
+     "desc":lazy_gettext("wiji is building their community powered marketplace for trusted goods on Origin Protocol.")
     }
 ]
