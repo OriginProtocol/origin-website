@@ -12,9 +12,13 @@ from .factories import PresaleFactory, InterestFactory
 
 fake = Faker()
 
-
-def test_root_returns_302(client):
+def test_root_with_default_langs_returns_200(client):
     res = client.get(url_for('root'))
+    assert res.status_code == 200
+
+
+def test_root_without_default_lang_returns_302(client):
+    res = client.get(url_for('root'), headers={"Accept-Language": "fr"}   )
     assert res.status_code == 302
 
 
