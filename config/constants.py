@@ -43,6 +43,8 @@ GITHUB_KEY = dotenv.get('GITHUB_KEY')
 
 # Language option constants
 
+DEFAULT_LANGUAGES = ['en', 'en_US', 'en_GB']
+
 LANGUAGES = [
     'ar',
     'de',
