@@ -546,17 +546,17 @@ main.landing-page > .background-wrapper {
   cursor: pointer;
 }
 
-.img-graphic {
+/*.img-graphic {
   margin: 0px auto;
   text-align: center;
-  max-width: 320px;
+  max-width: 450px;
 }
 
 .img-graphic img {
   max-width: 100%;
   object-fit: contain;
   position: relative;
-}
+}*/
 
 .dark-footer {
   background-color: #2e3f53;
@@ -648,6 +648,10 @@ footer .company-mission {
 
 .hero-section p {
   color: #fff;
+}
+
+.embed-responsive {
+  border:8px solid #111d28;
 }
 
 .platform-section {
@@ -1118,8 +1122,13 @@ footer .company-mission {
   margin: 60px 0px 40px 0px;
 }
 
+.press-section .embed-responsive {
+  margin-bottom: 30px;
+}
+
 .press-mention {
   margin: 20px;
+  margin-top:50px;
 }
 
 .press-logo-wrapper {
@@ -1136,6 +1145,19 @@ footer .company-mission {
   text-align: center;
   font-weight: 400;
   font-style: italic;
+}
+
+.carousel-indicators li {
+  background-color: #dfe6ea;
+  width:16px;
+  height:16px;
+  border-radius: 8px;
+  margin:0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.carousel-indicators li.active {
+  background-color: #2e3f53;
 }
 
 /* Presale page */
@@ -1726,6 +1748,9 @@ footer .company-mission {
 
 /* xs */
 @media (max-width: 575px) {
+  .carousel-item {
+    height:850px;
+  }
   .btn,
   .btn-container,
   form,
@@ -1836,6 +1861,9 @@ footer .company-mission {
 
 /* sm - md */
 @media (min-width: 576px) and (max-width: 767px) {
+  .carousel-item {
+    height:750px;
+  }
   .navbar,
   footer .container,
   .foreground-content {
@@ -1883,6 +1911,9 @@ footer .company-mission {
 
 /* md + */
 @media (min-width: 768px) {
+  .carousel-item {
+    height:450px;
+  }
   .navbar {
     max-width: 720px;
   }
@@ -2119,6 +2150,9 @@ footer .company-mission {
 
 /* lg + */
 @media (min-width: 992px) {
+  .carousel-item {
+    height:380px;
+  }
   .navbar {
     max-width: 960px;
   }

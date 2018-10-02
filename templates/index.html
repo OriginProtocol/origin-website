@@ -21,18 +21,23 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <h1>
-              {{ gettext("The sharing economy without intermediaries") }}
+              {{ gettext("Decentralized marketplaces on the blockchain") }}
             </h1>
             <p>
-              {{ gettext("Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS") }}
+              {{ gettext("Origin is a protocol for creating peer-to-peer marketplaces using the Ethereum blockchain and IPFS") }}
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              
             </p>
           </div>
           <div class="col-12 col-md-6">
+            <!-- htOEbXSGm7s -->
             <div class="img-graphic">
-              <img src="/static/img/hero-devices.png"
-                srcset="/static/img/hero-devices@2x.png 2x, /static/img/hero-devices@3x.png 3x"
-                class="hero-devices"
-                role="presentation" />
+              <div class="embed-responsive embed-responsive-16by9 hero-devices">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/69IiccddsOQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -64,10 +69,10 @@
               <div class="col-12 col-md-6">
                 <div class="img-graphic">
                   <img src="/static/img/platform-graphic.png"
-                    srcset="/static/img/platform-graphic@2x.png 2x,
-                    /static/img/platform-graphic@3x.png 3x"
-                    class="platform-graphic"
-                    role="presentation" />
+                  srcset="/static/img/platform-graphic@2x.png 2x,
+                  /static/img/platform-graphic@3x.png 3x"
+                  class="platform-graphic"
+                  role="presentation" />
                 </div>
               </div>
               <div class="col-12 col-md-6">
@@ -117,40 +122,40 @@
               <div class="card-deck">
                 <div class="partner-card">
                   <img src="/static/img/partners/beetoken.png"
-                    class="beetoken-logo"
-                    alt="Bee Token logo">
+                  class="beetoken-logo"
+                  alt="Bee Token logo">
                   <p>
                     {{ gettext("Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol.") }}
                   </p>
                 </div>
                 <div class="partner-card">
                   <img src="/static/img/partners/spin-light.png"
-                    class="spin-logo"
-                    alt="Spin logo">
+                  class="spin-logo"
+                  alt="Spin logo">
                   <p>
                     {{ gettext("Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US.") }}
                   </p>
                 </div>
                 <div class="partner-card">
                   <img src="/static/img/partners/kozaza.png"
-                    class="kozaza-logo"
-                    alt="Kozaza logo">
+                  class="kozaza-logo"
+                  alt="Kozaza logo">
                   <p>
                     {{ gettext("Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol.") }}
                   </p>
                 </div>
                 <div class="partner-card next">
                   <img src="/static/img/partners/canya.png"
-                    class="canya-logo"
-                    alt="Canya logo">
+                  class="canya-logo"
+                  alt="Canya logo">
                   <p>
                     {{ gettext("CanYa is building their “marketplace of services” with Origin Protocol for the gig economy.") }}
                   </p>
                 </div>
                 <div class="partner-card current">
                   <img src="/static/img/partners/servishero-light.svg"
-                    class="servishero-logo"
-                    alt="ServisHero logo">
+                  class="servishero-logo"
+                  alt="ServisHero logo">
                   <p>
                     {{ gettext("ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol.") }}
                   </p>
@@ -180,425 +185,473 @@
     <div class="container foreground-content">
       <div class="row">
         <div class="col-12 col-md-5">
-          <div class="img-graphic">
-            <img src="/static/img/video.png"
-              srcset="/static/img/video@2x.png 2x,
-                /static/img/video@3x.png 3x"
-              class="video wow fadeInUp"
-              alt="video">
-          </div>
+<!--         <div class="img-graphic">
+          <img src="/static/img/video.png"
+          srcset="/static/img/video@2x.png 2x,
+          /static/img/video@3x.png 3x"
+          class="video wow fadeInUp"
+          alt="video">
+        </div> -->
+        <div class="embed-responsive embed-responsive-16by9" style='margin-top:-100px;'>
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/htOEbXSGm7s?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <div class="col-12 col-md-5">
-          <h2>
-            {{ gettext("Build your business on Origin") }}
-          </h2>
-          <p>
-            {{ gettext("Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web.") }} <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Get in touch to learn more.") }}</a>
-          </p>
-          <div class="btn-container demo-btn-container">
-            <a href="https://demo.originprotocol.com" role="button" class="btn btn-outline-primary btn-min-size" target="_blank">
-              {{ gettext("Try the Demo") }}
-            </a>
-          </div>
-          <div class="btn-container github-btn-container">
-            <a href="https://github.com/OriginProtocol/demo-dapp" role="button" class="btn btn-outline-primary btn-min-size" target="_blank">
-              <i class="fab fa-github"></i>
-              {{ gettext("View GitHub") }}
-            </a>
-          </div>
+      </div>
+      <div class="col-12 col-md-5">
+        <h2>
+          {{ gettext("Build your business on Origin") }}
+        </h2>
+        <p>
+          {{ gettext("Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web.") }} <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Get in touch to learn more.") }}</a>
+        </p>
+        <div class="btn-container demo-btn-container">
+          <a href="https://dapp.originprotocol.com" role="button" class="btn btn-primary btn-min-size" target="_blank">
+            {{ gettext("Try the DApp") }}
+          </a>
+        </div>
+        <div class="btn-container github-btn-container">
+          <a href="https://github.com/OriginProtocol/demo-dapp" role="button" class="btn btn-outline-primary btn-min-size" target="_blank">
+            <i class="fab fa-github"></i>
+            {{ gettext("View GitHub") }}
+          </a>
         </div>
       </div>
     </div>
-  </section>
-  <section class="middlemen-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h2>
-            {{ gettext("It's time to replace rent-seeking middlemen") }}
-          </h2>
-          <p>
-            {{ gettext("Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround.") }}
-          </p>
-          <div class="btn-container">
-            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
-              {{ gettext("Read the Whitepaper") }}
-            </a>
-          </div>
+  </div>
+</section>
+<section class="middlemen-section">
+  <div class="container foreground-content">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h2>
+          {{ gettext("It's time to replace rent-seeking middlemen") }}
+        </h2>
+        <p>
+          {{ gettext("Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround.") }}
+        </p>
+        <div class="btn-container">
+          <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
+            {{ gettext("Read the Whitepaper") }}
+          </a>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="img-graphic">
-            <img src="/static/img/middlemen-graphic.png"
-              srcset="/static/img/middlemen-graphic@2x.png 2x,
-                /static/img/middlemen-graphic@3x.png 3x"
-              class="middlemen-graphic wow fadeInUp"
-              alt="middlemen">
-          </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="img-graphic">
+          <img src="/static/img/middlemen-graphic.png"
+          srcset="/static/img/middlemen-graphic@2x.png 2x,
+          /static/img/middlemen-graphic@3x.png 3x"
+          class="middlemen-graphic wow fadeInUp"
+          alt="middlemen">
         </div>
       </div>
     </div>
-  </section>
-  <section class="features-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes top-panes">
-          <div class="row row-pane">
-            <div class="col-8 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-4 col-pane">
-              <div class="right-upper-pane">
-              </div>
+  </div>
+</section>
+<section class="features-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-pane background-panes top-panes">
+        <div class="row row-pane">
+          <div class="col-8 col-pane">
+            <div class="left-upper-pane">
             </div>
           </div>
-        </div>
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12 col-md-7">
-              <div class="img-graphic">
-                <img src="/static/img/features-graphic.png"
-                  srcset="/static/img/features-graphic@2x.png 2x,
-                  /static/img/features-graphic@3x.png 3x"
-                  class="features-graphic wow fadeInUp"
-                  alt="features">
-              </div>
-            </div>
-            <div class="col-12 col-md-5">
-              <h2>
-                {{ gettext("Features") }}
-              </h2>
-              <div class="row">
-                <div class="col-6">
-                  <div class="img-feature">
-                    <img src="/static/img/feature-1.png"
-                    srcset="/static/img/feature-1@2x.png 2x,
-                      /static/img/feature-1@3x.png 3x"
-                    class="feature-1"
-                    role="presentation">
-                  </div>
-                  <p class="feature-description">
-                    {{ gettext("Smart contracts enable secure and reliable payments directly from one party to another") }}
-                  </p>
-                </div>
-                <div class="col-6">
-                  <div class="img-feature">
-                    <img src="/static/img/feature-2.png"
-                    srcset="/static/img/feature-2@2x.png 2x,
-                      /static/img/feature-2@3x.png 3x"
-                    class="feature-2"
-                    role="presentation">
-                  </div>
-                  <p class="feature-description">
-                    {{ gettext("Protocol schemas support hundreds of listing types, including custom verticals") }}
-                  </p>
-                </div>
-                <div class="col-6">
-                  <div class="img-feature">
-                    <img src="/static/img/feature-3.png"
-                    srcset="/static/img/feature-3@2x.png 2x,
-                      /static/img/feature-3@3x.png 3x"
-                    class="feature-3"
-                    role="presentation">
-                  </div>
-                  <p class="feature-description">
-                    {{ gettext("Open and shared data encourages innovation by developers and businesses") }}
-                  </p>
-                </div>
-                <div class="col-6">
-                  <div class="img-feature">
-                    <img src="/static/img/feature-4.png"
-                    srcset="/static/img/feature-4@2x.png 2x,
-                      /static/img/feature-4@3x.png 3x"
-                    class="feature-4"
-                    role="presentation">
-                  </div>
-                  <p class="feature-description">
-                    {{ gettext("Identity verification and reputation data on the blockchain ensures safe, reputable partners") }}
-                  </p>
-                </div>
-              </div>
+          <div class="col-4 col-pane">
+            <div class="right-upper-pane">
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="technology-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12 col-md-7">
-              <h2>
-                {{ gettext("Tech Stack") }}
-              </h2>
-              <div class="row">
-                <div class="col-6">
-                  <div class="img-technology">
-                    <img src="/static/img/ethereum-logo.png"
-                      srcset="/static/img/ethereum-logo@2x.png 2x,
-                        /static/img/ethereum-logo@3x.png 3x"
-                      class="ethereum-logo"
-                      alt="Ethereum logo">
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="img-technology">
-                    <img src="/static/img/ipfs-logo.png"
-                      srcset="/static/img/ipfs-logo@2x.png 2x,
-                        /static/img/ipfs-logo@3x.png 3x"
-                      class="ipfs-logo"
-                      alt="IPFS logo">
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="img-technology">
-                    <img src="/static/img/x-logo.png"
-                      srcset="/static/img/x-logo@2x.png 2x,
-                        /static/img/x-logo@3x.png 3x"
-                      class="x-logo"
-                      alt="X logo">
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="img-technology">
-                    <img src="/static/img/react-logo.png"
-                      srcset="/static/img/react-logo@2x.png 2x,
-                        /static/img/react-logo@3x.png 3x"
-                      class="react-logo"
-                      alt="React logo">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-5">
-              <div class="img-graphic">
-                <img src="/static/img/tech-stack-graphic.png"
-                  srcset="/static/img/tech-stack-graphic@2x.png 2x,
-                  /static/img/tech-stack-graphic@3x.png 3x"
-                  class="tech-stack-graphic wow fadeInUp"
-                  alt="tech stack">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
-          <div class="row row-pane align-items-end">
-            <div class="col-3 col-pane">
-              <div class="left-lower-pane">
-              </div>
-            </div>
-            <div class="col-9 col-pane">
-              <div class="right-lower-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="roadmap-section" id="roadmap">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12">
-              <h2>
-                {{ gettext("Roadmap") }}
-              </h2>
-              <div class="row roadmap">
-                <div class="col-md-2 col-xs-12 grey-to-green">
-                  <div class="green-circle invisible"></div>
-                  <div class="when">
-                    {{ gettext("May 2017") }}
-                  </div>
-                  {{ gettext("Idea conception and early development") }}
-                </div>
-                <div class="col-md-2 col-xs-12 green-to-blue">
-                  <div class="green-circle"></div>
-                  <div class="when">
-                    {{ gettext("September 2017") }}
-                  </div>
-                    {{ gettext("<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released", whitepaper=url_for('whitepaper', lang_code=CURRENT_LANGUAGE) ,product_brief=url_for('product_brief', lang_code=CURRENT_LANGUAGE))}}
-                </div>
-                <div class="col-md-2 col-xs-12 blue-to-purple">
-                  <div class="blue-circle"></div>
-                  <div class="when">
-                    {{ gettext("December 2017") }}
-                  </div>
-                  {{ gettext("Launch <a href='https://demo.originprotocol.com' target='_blank'>alpha</a> on Ethereum testnet") }}
-                </div>
-                <div class="col-md-2 col-xs-12 purple-to-green">
-                  <div class="purple-circle"></div>
-                  <div class="when">
-                    {{ gettext("Q2 2018") }}
-                  </div>
-                  {{ gettext("Launch <a href='https://demo.originprotocol.com' target='_blank'>beta</a> on Ethereum testnet") }}
-                </div>
-                <div class="col-md-2 col-xs-12 green-to-blue">
-                  <div class="green-circle"></div>
-                  <div class="when">
-                    {{ gettext("Q3 2018") }}
-                  </div>
-                  {{ gettext("Platform readiness and mainnet launch") }}
-                </div>
-                <div class="col-md-2 col-xs-12 blue-to-grey">
-                  <div class="blue-circle"></div>
-                  <div class="when">
-                    {{ gettext("2019") }}
-                  </div>
-                  {{ gettext("3rd-parties expected to launch DApps") }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
-          <div class="row row-pane align-items-end">
-            <div class="col-10 col-pane">
-              <div class="left-lower-pane">
-              </div>
-            </div>
-            <div class="col-2 col-pane">
-              <div class="right-lower-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="email-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12">
-          <h2>
-            {{ gettext("Join us in building the sharing economy of tomorrow") }}
-          </h2>
-          <p>
-            {{ gettext("Sign up for our mailing list and be first to learn of any Origin news!") }}
-          </p>
-          <form method="post" action="/mailing-list/join" id="mailing-list">
-            <div class="form-group">
-              <input id="email" type="email" name="email" class="form-control email-signup-input" placeholder="{{ gettext('Enter email') }}" />
-            </div>
-            <div class="btn-container">
-              <input type="submit" class="btn btn-primary btn-min-size" value="{{ gettext('Join the Community') }}" />
-            </div>
-          </form>
-          <div id='signup-result'></div>
-          <br>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="press-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12">
-          <h2>
-            {{ gettext("Press") }}
-          </h2>
-        </div>
+      <div class="container foreground-content">
         <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://www.coindesk.com/pantera-invests-3-million-sharing-economy-token-origin/" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-coindesk.png" alt="Coindesk press" />
-                </div>
-                <div class="press-quote">
-                  {{ gettext("If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur") }}
-                </div>
-              </a>
+          <div class="col-12 col-md-7">
+            <div class="img-graphic">
+              <img src="/static/img/features-graphic.png"
+              srcset="/static/img/features-graphic@2x.png 2x,
+              /static/img/features-graphic@3x.png 3x"
+              class="features-graphic wow fadeInUp"
+              alt="features">
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://www.wsj.com/articles/origin-protocol-nabs-28-million-for-peer-to-peer-blockchain-platform-1524700028" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-wsj.png" alt="Wall Street Journal press" />
+          <div class="col-12 col-md-5">
+            <h2>
+              {{ gettext("Features") }}
+            </h2>
+            <div class="row">
+              <div class="col-6">
+                <div class="img-feature">
+                  <img src="/static/img/feature-1.png"
+                  srcset="/static/img/feature-1@2x.png 2x,
+                  /static/img/feature-1@3x.png 3x"
+                  class="feature-1"
+                  role="presentation">
                 </div>
-                <div class="press-quote">
-                  {{ gettext("Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers") }}
+                <p class="feature-description">
+                  {{ gettext("Smart contracts enable secure and reliable payments directly from one party to another") }}
+                </p>
+              </div>
+              <div class="col-6">
+                <div class="img-feature">
+                  <img src="/static/img/feature-2.png"
+                  srcset="/static/img/feature-2@2x.png 2x,
+                  /static/img/feature-2@3x.png 3x"
+                  class="feature-2"
+                  role="presentation">
                 </div>
-              </a>
+                <p class="feature-description">
+                  {{ gettext("Protocol schemas support hundreds of listing types, including custom verticals") }}
+                </p>
+              </div>
+              <div class="col-6">
+                <div class="img-feature">
+                  <img src="/static/img/feature-3.png"
+                  srcset="/static/img/feature-3@2x.png 2x,
+                  /static/img/feature-3@3x.png 3x"
+                  class="feature-3"
+                  role="presentation">
+                </div>
+                <p class="feature-description">
+                  {{ gettext("Open and shared data encourages innovation by developers and businesses") }}
+                </p>
+              </div>
+              <div class="col-6">
+                <div class="img-feature">
+                  <img src="/static/img/feature-4.png"
+                  srcset="/static/img/feature-4@2x.png 2x,
+                  /static/img/feature-4@3x.png 3x"
+                  class="feature-4"
+                  role="presentation">
+                </div>
+                <p class="feature-description">
+                  {{ gettext("Identity verification and reputation data on the blockchain ensures safe, reputable partners") }}
+                </p>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://www.nasdaq.com/article/blockchain-solutions-are-changing-the-sharing-economy-cm965635" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-nasdaq.png" alt="Nasdaq press" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="technology-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12 col-md-7">
+            <h2>
+              {{ gettext("Tech Stack") }}
+            </h2>
+            <div class="row">
+              <div class="col-6">
+                <div class="img-technology">
+                  <img src="/static/img/ethereum-logo.png"
+                  srcset="/static/img/ethereum-logo@2x.png 2x,
+                  /static/img/ethereum-logo@3x.png 3x"
+                  class="ethereum-logo"
+                  alt="Ethereum logo">
                 </div>
-                <div class="press-quote">
-                  {{ gettext("Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain.") }}
+              </div>
+              <div class="col-6">
+                <div class="img-technology">
+                  <img src="/static/img/ipfs-logo.png"
+                  srcset="/static/img/ipfs-logo@2x.png 2x,
+                  /static/img/ipfs-logo@3x.png 3x"
+                  class="ipfs-logo"
+                  alt="IPFS logo">
                 </div>
-              </a>
+              </div>
+              <div class="col-6">
+                <div class="img-technology">
+                  <img src="/static/img/x-logo.png"
+                  srcset="/static/img/x-logo@2x.png 2x,
+                  /static/img/x-logo@3x.png 3x"
+                  class="x-logo"
+                  alt="X logo">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="img-technology">
+                  <img src="/static/img/react-logo.png"
+                  srcset="/static/img/react-logo@2x.png 2x,
+                  /static/img/react-logo@3x.png 3x"
+                  class="react-logo"
+                  alt="React logo">
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://thenextweb.com/cryptocurrency/2018/02/05/beauty-and-the-blockchain-this-company-aims-do-decentralize-cosmetic-the-industry/" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-tnw.png" alt="TheNextWeb press" />
-                </div>
-                <div class="press-quote">
-                  {{ gettext("Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner.") }}
-                </div>
-              </a>
+          <div class="col-12 col-md-5">
+            <div class="img-graphic">
+              <img src="/static/img/tech-stack-graphic.png"
+              srcset="/static/img/tech-stack-graphic@2x.png 2x,
+              /static/img/tech-stack-graphic@3x.png 3x"
+              class="tech-stack-graphic wow fadeInUp"
+              alt="tech stack">
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://www.fastcompany.com/40578033/five-ways-blockchain-could-disrupt-the-sharing-economys-disrupters" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-fastcompany.png" alt="Fast Company press" />
-                </div>
-                <div class="press-quote">
-                  {{ gettext("A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy.") }}
-                </div>
-              </a>
+        </div>
+      </div>
+      <div class="col-12 col-pane background-panes bottom-panes offset-panes">
+        <div class="row row-pane align-items-end">
+          <div class="col-3 col-pane">
+            <div class="left-lower-pane">
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://motherboard.vice.com/en_us/article/j5aj3y/how-the-blockchain-will-change-uber-lyft-peer-to-peer-transportation-startups" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-vice.png" alt="Vice press" />
-                </div>
-                <div class="press-quote">
-                  {{ gettext("It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too.") }}
-                </div>
-              </a>
+          <div class="col-9 col-pane">
+            <div class="right-lower-pane">
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://cointelegraph.com/news/startup-to-give-beauty-industry-a-blockchain-facelift" target="_blank">
-                <div class="press-logo-wrapper">              
-                  <img src="/static/img/press-cointelegraph.png" alt="Coin Telegraph press" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="roadmap-section" id="roadmap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12">
+            <h2>
+              {{ gettext("Roadmap") }}
+            </h2>
+            <div class="row roadmap">
+              <div class="col-md-2 col-xs-12 grey-to-green">
+                <div class="green-circle invisible"></div>
+                <div class="when">
+                  {{ gettext("May 2017") }}
                 </div>
-                <div class="press-quote">
-                  {{ gettext("Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries.") }}
+                {{ gettext("Idea conception and early development") }}
+              </div>
+              <div class="col-md-2 col-xs-12 green-to-blue">
+                <div class="green-circle"></div>
+                <div class="when">
+                  {{ gettext("September 2017") }}
                 </div>
-              </a>
+                {{ gettext("<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released", whitepaper=url_for('whitepaper', lang_code=CURRENT_LANGUAGE) ,product_brief=url_for('product_brief', lang_code=CURRENT_LANGUAGE))}}
+              </div>
+              <div class="col-md-2 col-xs-12 blue-to-purple">
+                <div class="blue-circle"></div>
+                <div class="when">
+                  {{ gettext("December 2017") }}
+                </div>
+                {{ gettext("Launch alpha on Ethereum testnet") }}
+              </div>
+              <div class="col-md-2 col-xs-12 purple-to-green">
+                <div class="purple-circle"></div>
+                <div class="when">
+                  {{ gettext("Q2 2018") }}
+                </div>
+                {{ gettext("Launch beta on Ethereum testnet") }}
+              </div>
+              <div class="col-md-2 col-xs-12 green-to-blue">
+                <div class="green-circle"></div>
+                <div class="when">
+                  {{ gettext("Q3 2018") }}
+                </div>
+                {{ gettext("Platform readiness and mainnet launch") }}
+              </div>
+              <div class="col-md-2 col-xs-12 blue-to-grey">
+                <div class="blue-circle"></div>
+                <div class="when">
+                  {{ gettext("2019") }}
+                </div>
+                {{ gettext("3rd-parties expected to launch DApps") }}
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://www.wired.it/economia/finanza/2018/05/29/blockchain-airbnb/" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-wired.png" alt="Wired press" />
-                </div>
-                <div class="press-quote">
-                  {{ gettext("Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet.") }}
-                </div>
-              </a>
+        </div>
+      </div>
+      <div class="col-12 col-pane background-panes bottom-panes offset-panes">
+        <div class="row row-pane align-items-end">
+          <div class="col-10 col-pane">
+            <div class="left-lower-pane">
             </div>
           </div>
-          <!-- // Happy to include Bankless times, but need a format that scales better
+          <div class="col-2 col-pane">
+            <div class="right-lower-pane">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="email-section">
+  <div class="container foreground-content">
+    <div class="row">
+      <div class="col-12">
+        <h2>
+          {{ gettext("Join us in building the sharing economy of tomorrow") }}
+        </h2>
+        <p>
+          {{ gettext("Sign up for our mailing list and be first to learn of any Origin news!") }}
+        </p>
+        <form method="post" action="/mailing-list/join" id="mailing-list">
+          <div class="form-group">
+            <input id="email" type="email" name="email" class="form-control email-signup-input" placeholder="{{ gettext('Enter email') }}" />
+          </div>
+          <div class="btn-container">
+            <input type="submit" class="btn btn-primary btn-min-size" value="{{ gettext('Join the Community') }}" />
+          </div>
+        </form>
+        <div id='signup-result'></div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="press-section">
+  <div class="container foreground-content">
+    <div class="row">
+      <div class="col-12">
+        <h2>
+          {{ gettext("Press") }}
+        </h2>
+      </div>
+      <div class="col-12">
+        <div class="col-12 col-md-8 offset-md-2">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/e70bvBw1oOo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div id="press-carousel" class="col-12 carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+          <li data-target="#press-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#press-carousel" data-slide-to="1"></li>
+          <li data-target="#press-carousel" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="press-mention">
+                  <a href="https://www.coindesk.com/pantera-invests-3-million-sharing-economy-token-origin/" target="_blank">
+                    <div class="press-logo-wrapper">
+                      <img src="/static/img/press-coindesk.png" alt="Coindesk press" />
+                    </div>
+                    <div class="press-quote">
+                      {{ gettext("If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur") }}
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="press-mention">
+                  <a href="https://www.wsj.com/articles/origin-protocol-nabs-28-million-for-peer-to-peer-blockchain-platform-1524700028" target="_blank">
+                    <div class="press-logo-wrapper">
+                      <img src="/static/img/press-wsj.png" alt="Wall Street Journal press" />
+                    </div>
+                    <div class="press-quote">
+                      {{ gettext("Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers") }}
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="press-mention">
+                  <a href="https://www.nasdaq.com/article/blockchain-solutions-are-changing-the-sharing-economy-cm965635" target="_blank">
+                    <div class="press-logo-wrapper">
+                      <img src="/static/img/press-nasdaq.png" alt="Nasdaq press" />
+                    </div>
+                    <div class="press-quote">
+                      {{ gettext("Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain.") }}
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="carousel-item">
+           <div class="row">
+
+            <div class="col-12 col-md-4">
+              <div class="press-mention">
+                <a href="https://thenextweb.com/cryptocurrency/2018/02/05/beauty-and-the-blockchain-this-company-aims-do-decentralize-cosmetic-the-industry/" target="_blank">
+                  <div class="press-logo-wrapper">
+                    <img src="/static/img/press-tnw.png" alt="TheNextWeb press" />
+                  </div>
+                  <div class="press-quote">
+                    {{ gettext("Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner.") }}
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="press-mention">
+                <a href="https://www.fastcompany.com/40578033/five-ways-blockchain-could-disrupt-the-sharing-economys-disrupters" target="_blank">
+                  <div class="press-logo-wrapper">
+                    <img src="/static/img/press-fastcompany.png" alt="Fast Company press" />
+                  </div>
+                  <div class="press-quote">
+                    {{ gettext("A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy.") }}
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="press-mention">
+                <a href="https://motherboard.vice.com/en_us/article/j5aj3y/how-the-blockchain-will-change-uber-lyft-peer-to-peer-transportation-startups" target="_blank">
+                  <div class="press-logo-wrapper">
+                    <img src="/static/img/press-vice.png" alt="Vice press" />
+                  </div>
+                  <div class="press-quote">
+                    {{ gettext("It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too.") }}
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+
+          <div class="row">
+
+            <div class="col-12 col-md-4">
+              <div class="press-mention">
+                <a href="https://cointelegraph.com/news/startup-to-give-beauty-industry-a-blockchain-facelift" target="_blank">
+                  <div class="press-logo-wrapper">              
+                    <img src="/static/img/press-cointelegraph.png" alt="Coin Telegraph press" />
+                  </div>
+                  <div class="press-quote">
+                    {{ gettext("Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries.") }}
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="press-mention">
+                <a href="https://www.wired.it/economia/finanza/2018/05/29/blockchain-airbnb/" target="_blank">
+                  <div class="press-logo-wrapper">
+                    <img src="/static/img/press-wired.png" alt="Wired press" />
+                  </div>
+                  <div class="press-quote">
+                    {{ gettext("Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet.") }}
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="press-mention">
+                <a href="https://bitcoinmagazine.com/articles/decentralizing-sharing-economy-blockchain-technology/" target="_blank">
+                  <div class="press-logo-wrapper">
+                    <img src="/static/img/press-btcmag.png" alt="BTC Magazine press" />
+                  </div>
+                  <div class="press-quote">
+                    {{ gettext("The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform.") }}
+                  </div>
+                </a>
+              </div>
+            </div>
+              <!-- // Happy to include Bankless times, but need a format that scales better
           <div class="col-12 col-md-4">
             <div class="press-mention">
               <a href="https://www.banklesstimes.com/2018/01/17/origin-protocol-using-blockchain-base-decentralized-sharing-economy/" target="_blank">
@@ -611,33 +664,30 @@
               </a>
             </div>
           </div> -->
-          <div class="col-12 col-md-4">
-            <div class="press-mention">
-              <a href="https://bitcoinmagazine.com/articles/decentralizing-sharing-economy-blockchain-technology/" target="_blank">
-                <div class="press-logo-wrapper">
-                  <img src="/static/img/press-btcmag.png" alt="BTC Magazine press" />
-                </div>
-                <div class="press-quote">
-                  {{ gettext("The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform.") }}
-                </div>
-              </a>
-            </div>
-          </div>
+
         </div>
+
       </div>
     </div>
-  </section>
-  {% include 'footer.html' %}
+
+  </div>
+
+</div>
+</section>
+{% include 'footer.html' %}
 </main>
 
 {% endblock %}
 
 {% block extra_scripts %}
-  <script>
-    var cards = document.querySelectorAll('.partner-card');
-    var interval;
+<script type="text/javascript">
 
-    function advance() {
+  $('.carousel').carousel();
+
+  var cards = document.querySelectorAll('.partner-card');
+  var interval;
+
+  function advance() {
       // increment each element's position and conditionally change its class
       for (var i = 0; i < cards.length; i++) {
         var el = cards[i];
@@ -650,14 +700,14 @@
 
         switch(newPos) {
           case max:
-            classes.add('current')
-            classes.remove('next')
-            break;
+          classes.add('current')
+          classes.remove('next')
+          break;
           case max - 1:
-            classes.add('next')
-            break;
+          classes.add('next')
+          break;
           case 0:
-            classes.remove('current')
+          classes.remove('current')
         }
       }
     }
@@ -690,4 +740,4 @@
     // start
     initAutoAdvance();
   </script>
-{% endblock %}
+  {% endblock %}
