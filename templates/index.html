@@ -6,6 +6,18 @@
 
 {% block content %}
 
+<div class="mainnet-modal">
+  <div class="btn-container">
+    <a href="https://dapp.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
+      {{ gettext("Launch DApp") }}
+    </a>
+  </div>
+  <img src="/static/img/close-button.png"
+  srcset="/static/img/close-button@2x.png 2x,
+  /static/img/close-button@3x.png 3x"
+  class="close-button">
+</div>
+
 {% include 'warning.html' %}
 
 <main class="landing-page">
@@ -678,6 +690,10 @@
 
 {% block extra_scripts %}
 <script type="text/javascript">
+
+  $(".close-button").click(function() {
+    $(".mainnet-modal").hide();
+  })
 
   $('.carousel').carousel();
 
