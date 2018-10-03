@@ -81,8 +81,7 @@ def team():
                  {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
                  {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
                  {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
-                 {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' },
-                 {'avatar':'soyoung', 'url': 'https://www.linkedin.com/in/so-young-choi-30514769/', 'name':'So Young Choi' }]
+                 {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
     return render_template('team.html', contributors=[aure] + contributors, community=community)
 
 @app.route('/<lang_code>/presale')
