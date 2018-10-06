@@ -285,6 +285,25 @@
                     </div>
                   </div>
 
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-mila.jpg" class="headshot" alt="Mila Choi headshot">
+                      </div>
+                      <div class="name">
+                        <a href="https://www.linkedin.com/in/so-young-mila-choi-30514769/" target="_blank">{{ gettext("Mila Choi") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Korea Community") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam.") }}
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
             </div>
@@ -383,15 +402,15 @@
             <div class="row">
 
               {% for person in community %}
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
-                  <div class="team-member">
-                    <div class="headshot-wrapper-small">
-                      <a href="{{ person.url }}" target="_blank">
-                        <img src="/static/img/headshot-{{ person.avatar }}.jpg" class="headshot" alt="{{ person.name }}" title="{{ person.name }}">
-                      </a>
-                    </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="team-member">
+                  <div class="headshot-wrapper-small">
+                    <a href="{{ person.url }}" target="_blank">
+                      <img src="/static/img/headshot-{{ person.avatar }}.jpg" class="headshot" alt="{{ person.name }}" title="{{ person.name }}">
+                    </a>
                   </div>
                 </div>
+              </div>
               {% endfor %}
 
             </div>
@@ -406,17 +425,17 @@
             <div class="row">
 
               {% for person in contributors %}
-                {% if person.avatar %}
-                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
-                    <div class="team-member">
-                      <div class="headshot-wrapper-small">
-                        <a href="https://github.com/{{ person.username }}" target="_blank">
-                          <img src="{{ person.avatar }}" class="headshot" alt="{{ person.username }}" title="{{ person.username }}">
-                        </a>
-                      </div>
-                    </div>
+              {% if person.avatar %}
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="team-member">
+                  <div class="headshot-wrapper-small">
+                    <a href="https://github.com/{{ person.username }}" target="_blank">
+                      <img src="{{ person.avatar }}" class="headshot" alt="{{ person.username }}" title="{{ person.username }}">
+                    </a>
                   </div>
-                {% endif %}
+                </div>
+              </div>
+              {% endif %}
               {% endfor %}
 
             </div>
