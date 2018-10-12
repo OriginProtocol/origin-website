@@ -375,7 +375,7 @@
         let stroke = added.stroke === existing.stroke ? added.stroke : getGradient();
 
         // perfectly vertical gradients do not work with gradientUnits: objectBoundingBox (default)
-        // https://github.com/OriginProtocol/company-website/issues/2#issuecomment-359883885
+        // https://github.com/OriginProtocol/origin-website/issues/2#issuecomment-359883885
         if (stroke.match(/0-0-(100-0|0-100)/)) {
           // replace percentage positions with precise coordinate points
           stroke = stroke.replace(/-\d+-\d+-\d+-\d+/, `-${added.cx}-${existing.cx}-${added.cy}-${existing.cy}`);
