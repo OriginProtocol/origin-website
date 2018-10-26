@@ -19,9 +19,7 @@ sites = []
 #     'sub_selector': 'title',
 # })
 
-
-
-######## Working
+####### Working
 
 sites.append({
     'name': 'youtube',
@@ -57,6 +55,12 @@ sites.append({
     'selector': 'div.tgme_page_extra',
 })
 
+sites.append({
+    'name': 'naver',
+    'url': 'https://section.blog.naver.com/connect/ViewMoreFollowers.nhn?blogId=originprotocol&widgetSeq=1',
+    'selector': 'div.bg_main > div.container > div > div.content_box > div > div > p > strong',
+})
+
 def count_without_text(string):
     return int(filter(str.isdigit, string))
 
@@ -84,7 +88,6 @@ def follower_count(site, html):
 
 def get_html(site):
     raw_html = app_request.simple_get(site['url'])
-
     if raw_html is not None:
         return BeautifulSoup(raw_html, 'html.parser')
     else:
