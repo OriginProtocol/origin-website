@@ -19,6 +19,11 @@ sites = []
 #     'sub_selector': 'title',
 # })
 
+# sites.append({
+#     'name': 'telegram',
+#     'url': 'http://t.me/originprotocol',
+#     'selector': 'div.tgme_page_extra',
+# })
 
 ######## Working
 
@@ -47,14 +52,17 @@ sites.append({
     'name': 'facebook',
     'url': 'https://www.facebook.com/originprotocol',
     'selector': 'clearfix _ikh',
-    'sub_selector': 'div._4bl9 div',
+    'sub_selector': '_4bl9',
 })
+
+def count_without_text(string):
+    return int(filter(str.isdigit, string))
 
 def facebook_user_count(site, html):
     follower_section = html.find(class_=site['selector'])
-    count_section = follower_section.find(class_='_4bl9')
+    count_section = follower_section.find(class_=site['sub_selector'])
     count_with_text = count_section.div.text.encode("ascii")
-    count = int(filter(str.isdigit, count_with_text))
+    count = count_without_text(count_with_text)
     site['count'] = count
 
 def instagram_user_count(site, html):
@@ -70,7 +78,7 @@ def twitter_user_count(site, html):
 def user_count(site, html):
     select = html.select(site['selector'])[0]
     subscribed = select.text.encode("ascii")
-    site['count'] = subscribed
+    site['count'] = count_without_text(subscribed)
 
 def get_html(site):
     raw_html = app_request.simple_get(site['url'])
