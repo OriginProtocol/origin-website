@@ -19,11 +19,7 @@ sites = []
 #     'sub_selector': 'title',
 # })
 
-# sites.append({
-#     'name': 'telegram',
-#     'url': 'http://t.me/originprotocol',
-#     'selector': 'div.tgme_page_extra',
-# })
+
 
 ######## Working
 
@@ -53,6 +49,12 @@ sites.append({
     'url': 'https://www.facebook.com/originprotocol',
     'selector': 'clearfix _ikh',
     'sub_selector': '_4bl9',
+})
+
+sites.append({
+    'name': 'telegram',
+    'url': 'http://t.me/originprotocol',
+    'selector': 'div.tgme_page_extra',
 })
 
 def count_without_text(string):
