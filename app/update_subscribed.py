@@ -58,24 +58,24 @@ sites.append({
 def count_without_text(string):
     return int(filter(str.isdigit, string))
 
-def facebook_user_count(site, html):
+def facebook_follower_count(site, html):
     follower_section = html.find(class_=site['selector'])
     count_section = follower_section.find(class_=site['sub_selector'])
     count_with_text = count_section.div.text.encode("ascii")
     count = count_without_text(count_with_text)
     site['count'] = count
 
-def instagram_user_count(site, html):
+def instagram_follower_count(site, html):
     follower_section = html.find(class_=site['selector'])
     count = follower_section['title']
     site['count'] = count.text.encode("ascii")
 
-def twitter_user_count(site, html):
+def twitter_follower_count(site, html):
     follower_section = html.find(href=site['href'])
     count = follower_section.find(class_=site['selector'])[site['sub_selector']]
     site['count'] = count.encode("ascii")
 
-def user_count(site, html):
+def follower_count(site, html):
     select = html.select(site['selector'])[0]
     subscribed = select.text.encode("ascii")
     site['count'] = count_without_text(subscribed)
@@ -92,11 +92,11 @@ for site in sites:
     html = get_html(site)
 
     if site['name'] is 'twitter':
-        twitter_user_count(site, html)
+        twitter_follower_count(site, html)
     elif site['name'] is 'instagram':
-        instagram_user_count(site, html)
+        instagram_follower_count(site, html)
     elif site['name'] is 'facebook':
-        facebook_user_count(site, html)
+        facebook_follower_count(site, html)
     else:
-        user_count(site, html)
+        follower_count(site, html)
     print(sites)
