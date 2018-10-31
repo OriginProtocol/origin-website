@@ -12,10 +12,68 @@ from celery.utils.log import get_task_logger
 from config import constants
 from flask import Flask
 from database import db, db_models
-from database.db_models import EmailList
+from database.db_models import EmailList, SocialPlatform
 from fullcontact import FullContact
 from random import randint
 from sqlalchemy.exc import IntegrityError
+from app import update_subscribed
+from tools import db_utils
+from sqlalchemy.orm.attributes import flag_modified
+
+sites = []
+
+sites.append({
+    'name': 'Telegram',
+    'url': 'http://t.me/originprotocol',
+    'selector': 'div.tgme_page_extra',
+})
+
+sites.append({
+    'name': 'Telegram (Korean)',
+    'url': 'https://t.me/originprotocolkorea',
+    'selector': 'div.tgme_page_extra',
+})
+
+sites.append({
+    'name': 'Reddit',
+    'url': 'https://old.reddit.com/r/originprotocol/',
+    'selector': 'span.number',
+})
+sites.append({
+    'name': 'Twitter',
+    'url': 'https://twitter.com/originprotocol/',
+    'selector': 'ul > li.ProfileNav-item.ProfileNav-item--following > a > span.ProfileNav-value'
+})
+sites.append({
+    'name': 'Facebook',
+    'url': 'https://www.facebook.com/originprotocol',
+    'selector': '.clearfix ._ikh div._4bl9',
+})
+sites.append({
+    'name': 'Youtube',
+    'url': 'https://www.youtube.com/c/originprotocol',
+    'selector': 'span.subscribed',
+})
+sites.append({
+    'name': 'Naver',
+    'url': 'https://section.blog.naver.com/connect/ViewMoreFollowers.nhn?blogId=originprotocol&widgetSeq=1',
+    'selector': 'div.bg_main > div.container > div > div.content_box > div > div > p > strong',
+})
+sites.append({
+    'name': 'KaKao plus friends',
+    'url': 'https://pf.kakao.com/_qTxeYC',
+    'selector': 'span.num_count',
+})
+sites.append({
+    'name': 'Tencent/QQ video',
+    'url': 'http://v.qq.com/vplus/c2564ca8e81c0debabe3c6c6aff3832c',
+    'selector': '.user_count_play span.count_num',
+})
+sites.append({
+    'name': 'Youku',
+    'url': 'http://i.youku.com/originprotocol',
+    'selector': 'div.user-state > ul > li.vnum em',
+})
 
 # Get logger for tasks
 logger = get_task_logger(__name__)
@@ -53,13 +111,15 @@ flask_app.config.update(
 db.init_app(flask_app)
 celery = make_celery(flask_app)
 
+@celery.on_after_configure.connect
+def setup_periodic_tasks(sender, **kwargs):
+    sender.add_periodic_task(60.0, update_subscribed_count.s(), name='add every 60')
 
 @celery.task()
 def send_email(body):
     logger.fatal("Sending email from Celery...")
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     sg_api.client.mail.send.post(request_body=body)
-
 
 @celery.task()
 def subscribe_email_list(**kwargs):
@@ -73,7 +133,6 @@ def subscribe_email_list(**kwargs):
                                  ip_addr=ip_addr,
                                  unsubscribed=False))
         db.session.commit()
-
 
 @celery.task(
     rate_limit=os.environ.get('FULLCONTACT_RATE_LIMIT', '30/m'),
@@ -134,3 +193,47 @@ def full_contact_request(email):
         logger.fatal("FullContact request %s with status code %s",
                                email, r.status_code)
         logger.fatal(r.json())
+
+@celery.task
+def update_subscribed_count():
+    with db_utils.request_context():
+        platforms = SocialPlatform.query.all()
+        for platform in platforms:
+            try:
+                updated_count = update_subscribed.update_subscribed(platform)
+                if updated_count is None:
+                    pass
+                else:
+                    print("I AM AN UPDATED PLATFORM", updated_count)
+                    platform.subscribed_count = updated_count
+                    flag_modified(platform, "subscribed_count")
+                    db.session.merge(platform)
+                    db.session.flush()
+                    db.session.commit()
+
+            except Exception as e:
+                print("I AM ERRORING SILENTLY")
+                logger.warning("Problem SocialPlatform", platform)
+                db.session.rollback()
+            finally:
+                db.session.close()
+
+@celery.task
+def save_social_platforms():
+    with db_utils.request_context():
+        for site in sites:
+            platform = db_models.SocialPlatform()
+            platform.name = site['name']
+            platform.url = site['url']
+            platform.selector = site['selector']
+
+            try:
+                db.session.add(platform)
+                db.session.flush()
+                db.session.commit()
+                logger.info('Platform %s  added to social platform', platform)
+            except IntegrityError as e:
+                logger.warning("Platform %s has already been added to SocialPlatform table.", platform)
+                db.session.rollback()
+            finally:
+                db.session.close()
