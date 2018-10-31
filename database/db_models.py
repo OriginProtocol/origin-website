@@ -91,6 +91,15 @@ class Contributor(db.Model):
     def __str__(self):
         return '%s' % (self.username)
 
+class SocialPlatform(db.Model):
+    __tablename__ = 'social_platform'
+    name = db.Column(db.String(255), primary_key=True, autoincrement=False)
+    url = db.Column(db.String(255))
+    selector = db.Column(db.String(255))
+    subscribed_count = db.Column(db.Integer())
+
+    def __str__(self):
+        return '%s' % (self.name)
 
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')
