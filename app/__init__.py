@@ -23,11 +23,5 @@ app = MyFlask(__name__,
     template_folder=constants.TEMPLATE_ROOT,
     static_folder=constants.STATIC_ROOT)
 
-limiter = Limiter(
-    app,
-    key_func=get_remote_address,
-    default_limits=["300 per day", "100 per hour"]
-)
-
 # `.encode('utf8')` will not be needed for python 3
 app.jinja_env.filters['quote_plus'] = lambda u: quote(u.encode('utf8'))
