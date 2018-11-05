@@ -1,38 +1,33 @@
 from bs4 import BeautifulSoup
 from tools import db_utils
 import json
-from app import app_request
+from requests import get
+from requests.exceptions import RequestException
+from contextlib import closing
 
-def get_count_from_json(site, response):
-    site_name = site.name.encode('ascii')
-    if site_name == 'Medium':
-        prefix = '])}while(1);</x>'
-        response_json = json.loads(response.replace(prefix, ''))
-        return response_json['payload']['collection']['metadata']['followerCount']
+def get_content(url):
+    headers = {'User-agent': 'Test Bot'}
 
-def is_html(resp):
-    if resp is None:
-        return False
-    content_type = resp.headers['content-type']
+    try:
+        with closing(get(url, headers=headers, stream=True)) as resp:
+            if resp.status_code == 200:
+                return resp.content
+            else:
+                return None
 
-    return (resp.status_code == 200 and 'html' in content_type)
+    except RequestException as e:
+        print('Error during requests to {0} : {1}'.format(url, str(e)))
+        return None
 
-def parse_html(url, response):
-    if response is None:
+def parse_html(url, content):
+    if True:
+        return BeautifulSoup(content, 'html.parser')
+    else:
         print "No html for " + url
-        return ''
-    else:
-        return BeautifulSoup(response, 'html.parser')
-
-def get_html(site):
-    raw_html = app_request.simple_get(site.url.encode("ascii"))
-    if raw_html is not None:
-        print("....Converting raw html to a BeautifulSoup")
-        return BeautifulSoup(raw_html, 'html.parser')
-    else:
         return ''
 
 def count_without_text(string):
+    # need to handle if there are no numbers
     return int(filter(str.isdigit, string))
 
 def get_count_from_html(site, html):
@@ -46,8 +41,24 @@ def get_count_from_html(site, html):
         print("Error fetching follower count for", site.name.encode("ascii"))
         return 0
 
+def get_count_from_json(site, content):
+    site_name = site.name.encode('ascii')
+    if site_name == 'Medium':
+        prefix = '])}while(1);</x>'
+        content_json = json.loads(content.replace(prefix, ''))
+        return content_json['payload']['collection']['metadata']['followerCount']
 
 def update_subscribed(platform):
     with db_utils.request_context():
-        html = get_html(platform)
-        return get_count_from_html(platform, html)
+        url = platform.url.encode('ascii')
+        content = get_content(url)
+
+        try:
+            if platform.json:
+                return get_count_from_json(platform, content)
+            else:
+                html = BeautifulSoup(content, 'html.parser')
+                return get_count_from_html(platform, html)
+        except Exception as e:
+            print(str(e))
+            return 0

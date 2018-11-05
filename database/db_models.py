@@ -97,7 +97,7 @@ class SocialPlatform(db.Model):
     url = db.Column(db.String(255))
     selector = db.Column(db.String(255))
     subscribed_count = db.Column(db.Integer())
-    json = db.Column(db.Boolean(), default=False)
+    json = db.Column(db.Boolean())
 
     def __str__(self):
         return '%s' % (self.name)

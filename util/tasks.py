@@ -26,60 +26,72 @@ sites.append({
     'name': 'Telegram',
     'url': 'http://t.me/originprotocol',
     'selector': 'div.tgme_page_extra',
+    'json': False
 })
 sites.append({
     'name': 'Telegram (Korean)',
     'url': 'https://t.me/originprotocolkorea',
     'selector': 'div.tgme_page_extra',
+    'json': False
 })
 sites.append({
     'name': 'Reddit',
     'url': 'https://old.reddit.com/r/originprotocol/',
     'selector': 'span.number',
+    'json': False
 })
 sites.append({
     'name': 'Twitter',
     'url': 'https://twitter.com/originprotocol/',
-    'selector': 'ul > li.ProfileNav-item.ProfileNav-item--following > a > span.ProfileNav-value'
+    'selector': 'ul > li.ProfileNav-item.ProfileNav-item--following > a > span.ProfileNav-value',
+    'json': False
 })
 sites.append({
     'name': 'Facebook',
     'url': 'https://www.facebook.com/originprotocol',
     'selector': '.clearfix ._ikh div._4bl9',
+    'json': False
 })
 sites.append({
     'name': 'Youtube',
     'url': 'https://www.youtube.com/c/originprotocol',
     'selector': 'span.subscribed',
+    'json': False
 })
 sites.append({
     'name': 'Naver',
     'url': 'https://section.blog.naver.com/connect/ViewMoreFollowers.nhn?blogId=originprotocol&widgetSeq=1',
     'selector': 'div.bg_main > div.container > div > div.content_box > div > div > p > strong',
+    'json': False
 })
 sites.append({
     'name': 'KaKao plus friends',
     'url': 'https://pf.kakao.com/_qTxeYC',
     'selector': 'span.num_count',
+    'json': False
 })
 sites.append({
     'name': 'Tencent/QQ video',
     'url': 'http://v.qq.com/vplus/c2564ca8e81c0debabe3c6c6aff3832c',
     'selector': '.user_count_play span.count_num',
+    'json': False
 })
 sites.append({
     'name': 'Youku',
     'url': 'http://i.youku.com/originprotocol',
     'selector': 'div.user-state > ul > li.vnum em',
+    'json': False
 })
 sites.append({
     'name': 'Weibo',
     'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=TAB&is_hot=1#place',
     'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
+    'json': False
 })
 sites.append({
     'name': 'Medium',
     'url': 'https://medium.com/originprotocol?format=json',
+    'selector': '',
     'json': True,
 })
 
@@ -88,6 +100,7 @@ sites.append({
     'name': 'Steemit',
     'url': 'https://steemit.com/@originprotocol',
     'selector': 'div.UserProfile__stats > span:nth-of-type(1) > a',
+    'json': False
 })
 
 # Get logger for tasks
@@ -242,6 +255,7 @@ def save_social_platforms():
             platform.name = site['name']
             platform.url = site['url']
             platform.selector = site['selector']
+            platform.json = site['json']
 
             try:
                 db.session.add(platform)
