@@ -27,13 +27,11 @@ sites.append({
     'url': 'http://t.me/originprotocol',
     'selector': 'div.tgme_page_extra',
 })
-
 sites.append({
     'name': 'Telegram (Korean)',
     'url': 'https://t.me/originprotocolkorea',
     'selector': 'div.tgme_page_extra',
 })
-
 sites.append({
     'name': 'Reddit',
     'url': 'https://old.reddit.com/r/originprotocol/',
@@ -74,6 +72,23 @@ sites.append({
     'url': 'http://i.youku.com/originprotocol',
     'selector': 'div.user-state > ul > li.vnum em',
 })
+sites.append({
+    'name': 'Weibo',
+    'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=TAB&is_hot=1#place',
+    'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
+})
+sites.append({
+    'name': 'Medium',
+    'url': 'https://medium.com/originprotocol?format=json',
+    'json': True,
+})
+
+# This shows no followers
+sites.append({
+    'name': 'Steemit',
+    'url': 'https://steemit.com/@originprotocol',
+    'selector': 'div.UserProfile__stats > span:nth-of-type(1) > a',
+})
 
 # Get logger for tasks
 logger = get_task_logger(__name__)
@@ -113,7 +128,8 @@ celery = make_celery(flask_app)
 
 @celery.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(60.0, update_subscribed_count.s(), name='add every 60')
+    sender.add_periodic_task(60.0, update_subscribed_count.s(), name='update follower counts every 60')
+    # sender.add_periodic_task(10.0, save_social_platforms.s(), name='add every 10')
 
 @celery.task()
 def send_email(body):
