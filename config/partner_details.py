@@ -271,5 +271,10 @@ PARTNERS = [
     "name":"wiji",
     "url":"https://wiji.io/",
      "desc":lazy_gettext("wiji is building their community powered marketplace for trusted goods on Origin Protocol.")
+    },
+    {
+    "name":"blockbase",
+    "url":"https://block-base.co/",
+     "desc":lazy_gettext("BlockBase is a blockchain technology consultancy working with many companies on many different blockchain use cases and plan on utilizing Origin Protocol.")
     }
 ]
