@@ -53,13 +53,11 @@ flask_app.config.update(
 db.init_app(flask_app)
 celery = make_celery(flask_app)
 
-
 @celery.task()
 def send_email(body):
     logger.fatal("Sending email from Celery...")
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     sg_api.client.mail.send.post(request_body=body)
-
 
 @celery.task()
 def subscribe_email_list(**kwargs):
@@ -73,7 +71,6 @@ def subscribe_email_list(**kwargs):
                                  ip_addr=ip_addr,
                                  unsubscribed=False))
         db.session.commit()
-
 
 @celery.task(
     rate_limit=os.environ.get('FULLCONTACT_RATE_LIMIT', '30/m'),
