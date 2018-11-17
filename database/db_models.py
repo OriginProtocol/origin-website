@@ -91,6 +91,15 @@ class Contributor(db.Model):
     def __str__(self):
         return '%s' % (self.username)
 
+class SocialStat(db.Model):
+    __tablename__ = 'social_stat'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(255), index=True)
+    timestamp = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+    subscribed_count = db.Column(db.Integer())
+
+    def __str__(self):
+        return '%s' % (self.name)
 
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')
