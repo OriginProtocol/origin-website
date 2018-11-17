@@ -12,96 +12,12 @@ from celery.utils.log import get_task_logger
 from config import constants
 from flask import Flask
 from database import db, db_models
-from database.db_models import EmailList, SocialPlatform
+from database.db_models import EmailList
 from fullcontact import FullContact
 from random import randint
 from sqlalchemy.exc import IntegrityError
-from app import update_subscribed
 from tools import db_utils
 from sqlalchemy.orm.attributes import flag_modified
-
-sites = []
-
-sites.append({
-    'name': 'Telegram',
-    'url': 'http://t.me/originprotocol',
-    'selector': 'div.tgme_page_extra',
-    'json': False
-})
-sites.append({
-    'name': 'Telegram (Korean)',
-    'url': 'https://t.me/originprotocolkorea',
-    'selector': 'div.tgme_page_extra',
-    'json': False
-})
-sites.append({
-    'name': 'Reddit',
-    'url': 'https://old.reddit.com/r/originprotocol/',
-    'selector': 'span.number',
-    'json': False
-})
-sites.append({
-    'name': 'Twitter',
-    'url': 'https://twitter.com/originprotocol/',
-    'selector': 'ul > li.ProfileNav-item.ProfileNav-item--following > a > span.ProfileNav-value',
-    'json': False
-})
-sites.append({
-    'name': 'Facebook',
-    'url': 'https://www.facebook.com/originprotocol',
-    'selector': '.clearfix ._ikh div._4bl9',
-    'json': False
-})
-sites.append({
-    'name': 'Youtube',
-    'url': 'https://www.youtube.com/c/originprotocol',
-    'selector': 'span.subscribed',
-    'json': False
-})
-sites.append({
-    'name': 'Naver',
-    'url': 'https://section.blog.naver.com/connect/ViewMoreFollowers.nhn?blogId=originprotocol&widgetSeq=1',
-    'selector': 'div.bg_main > div.container > div > div.content_box > div > div > p > strong',
-    'json': False
-})
-sites.append({
-    'name': 'KaKao plus friends',
-    'url': 'https://pf.kakao.com/_qTxeYC',
-    'selector': 'span.num_count',
-    'json': False
-})
-sites.append({
-    'name': 'Tencent/QQ video',
-    'url': 'http://v.qq.com/vplus/c2564ca8e81c0debabe3c6c6aff3832c',
-    'selector': '.user_count_play span.count_num',
-    'json': False
-})
-sites.append({
-    'name': 'Youku',
-    'url': 'http://i.youku.com/originprotocol',
-    'selector': 'div.user-state > ul > li.vnum em',
-    'json': False
-})
-sites.append({
-    'name': 'Weibo',
-    'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=TAB&is_hot=1#place',
-    'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
-    'json': False
-})
-sites.append({
-    'name': 'Medium',
-    'url': 'https://medium.com/originprotocol?format=json',
-    'selector': '',
-    'json': True,
-})
-
-# This shows no followers
-sites.append({
-    'name': 'Steemit',
-    'url': 'https://steemit.com/@originprotocol',
-    'selector': 'div.UserProfile__stats > span:nth-of-type(1) > a',
-    'json': False
-})
 
 # Get logger for tasks
 logger = get_task_logger(__name__)
@@ -222,48 +138,3 @@ def full_contact_request(email):
         logger.fatal("FullContact request %s with status code %s",
                                email, r.status_code)
         logger.fatal(r.json())
-
-@celery.task
-def update_subscribed_count():
-    with db_utils.request_context():
-        platforms = SocialPlatform.query.all()
-        for platform in platforms:
-            try:
-                updated_count = update_subscribed.update_subscribed(platform)
-                if updated_count is None:
-                    pass
-                else:
-                    print("I AM AN UPDATED PLATFORM", updated_count)
-                    platform.subscribed_count = updated_count
-                    flag_modified(platform, "subscribed_count")
-                    db.session.merge(platform)
-                    db.session.flush()
-                    db.session.commit()
-
-            except Exception as e:
-                print("I AM ERRORING SILENTLY")
-                logger.warning("Problem SocialPlatform", platform)
-                db.session.rollback()
-            finally:
-                db.session.close()
-
-@celery.task
-def save_social_platforms():
-    with db_utils.request_context():
-        for site in sites:
-            platform = db_models.SocialPlatform()
-            platform.name = site['name']
-            platform.url = site['url']
-            platform.selector = site['selector']
-            platform.json = site['json']
-
-            try:
-                db.session.add(platform)
-                db.session.flush()
-                db.session.commit()
-                logger.info('Platform %s  added to social platform', platform)
-            except IntegrityError as e:
-                logger.warning("Platform %s has already been added to SocialPlatform table.", platform)
-                db.session.rollback()
-            finally:
-                db.session.close()

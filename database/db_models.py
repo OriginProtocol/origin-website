@@ -91,13 +91,12 @@ class Contributor(db.Model):
     def __str__(self):
         return '%s' % (self.username)
 
-class SocialPlatform(db.Model):
-    __tablename__ = 'social_platform'
-    name = db.Column(db.String(255), primary_key=True, autoincrement=False)
-    url = db.Column(db.String(255))
-    selector = db.Column(db.String(255))
+class SocialStat(db.Model):
+    __tablename__ = 'social_stat'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(255), index=True)
+    timestamp = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
     subscribed_count = db.Column(db.Integer())
-    json = db.Column(db.Boolean())
 
     def __str__(self):
         return '%s' % (self.name)
