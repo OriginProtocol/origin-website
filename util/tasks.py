@@ -16,8 +16,6 @@ from database.db_models import EmailList
 from fullcontact import FullContact
 from random import randint
 from sqlalchemy.exc import IntegrityError
-from tools import db_utils
-from sqlalchemy.orm.attributes import flag_modified
 
 # Get logger for tasks
 logger = get_task_logger(__name__)
@@ -54,11 +52,6 @@ flask_app.config.update(
 
 db.init_app(flask_app)
 celery = make_celery(flask_app)
-
-@celery.on_after_configure.connect
-def setup_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(60.0, update_subscribed_count.s(), name='update follower counts every 60')
-    # sender.add_periodic_task(10.0, save_social_platforms.s(), name='add every 10')
 
 @celery.task()
 def send_email(body):
