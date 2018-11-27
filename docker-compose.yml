@@ -1,0 +1,59 @@
+version: "3"
+
+volumes:
+  pg_data:
+
+services:
+  postgres:
+    image: postgres:10.0
+    container_name: postgres
+    restart: always
+    # Data persistence, comment out the following two lines to disable
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=origin
+      - POSTGRES_PASSWORD=origin
+      - POSTGRES_DB=origin_website
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    sysctls:
+      - net.core.somaxconn=4096
+
+  web:
+    container_name: origin-website
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: origin-website
+    volumes:
+      - ./:/app
+      - ./docker.env:/app/.env
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=/app/main.py
+    command: "python /app/main.py"
+
+  celery:
+    container_name: celery
+    image: origin-website
+    user: nobody
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./:/app
+      - ./docker.env:/app/.env
+    environment:
+      - FLASK_APP=/app/main.py
+    command:
+      >
+      /bin/bash -c "/usr/local/bin/watchmedo auto-restart -d . -p '*.py' -i '*.pyc' --recursive --
+      celery -A util.tasks worker --loglevel=INFO"
