@@ -35,9 +35,11 @@ http {
 	upstream app_server {
 		server unix:/tmp/nginx.socket fail_timeout=0;
 	}
-	
+
 	proxy_cache_path /tmp/cache levels=1:2 keys_zone=my_cache:10m max_size=200m
 	                 inactive=120m use_temp_path=off;
+
+        limit_req_zone $binary_remote_addr zone=flask:10m rate=10r/s;
 
 	server {
 		listen <%= ENV["PORT"] %>;
@@ -53,7 +55,7 @@ http {
 			proxy_set_header Host $http_host;
 			proxy_redirect off;
 			proxy_pass http://app_server;
-			
+
 			proxy_cache my_cache;
 			proxy_cache_valid 200 120m;
 			add_header X-Proxy-Cache $upstream_cache_status;
@@ -64,7 +66,7 @@ http {
 			alias /app/static/;
 			expires 20m;
 			add_header Cache-Control public;
-			
+
 			gzip on;
 			gzip_disable "msie6";
 			gzip_vary on;
@@ -77,11 +79,12 @@ http {
 		}
 
 		location / {
+                        limit_rez zone=flask burst=20;
 			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 			proxy_set_header Host $http_host;
 			proxy_redirect off;
 			proxy_pass http://app_server;
-			
+
 
 			# Cache proxied pages that have a language code
 			location ~ ^/([a-z][a-z]|zh_Hans|zh_Hant)(/.*)?$ {
@@ -89,11 +92,11 @@ http {
 				proxy_set_header Host $http_host;
 				proxy_redirect off;
 				proxy_pass http://app_server;
-				
+
 				proxy_cache my_cache;
 				proxy_cache_valid 200 120m;
 				# No caching if the user has session data (for example  an upcoming flash message)
-				proxy_cache_bypass $cookie_SESSION; 
+				proxy_cache_bypass $cookie_SESSION;
 				add_header X-Proxy-Cache $upstream_cache_status;
 			}
 		}
