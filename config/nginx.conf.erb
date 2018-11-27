@@ -39,7 +39,7 @@ http {
 	proxy_cache_path /tmp/cache levels=1:2 keys_zone=my_cache:10m max_size=200m
 	                 inactive=120m use_temp_path=off;
 
-        limit_req_zone $binary_remote_addr zone=flask:10m rate=10r/s;
+	limit_req_zone $binary_remote_addr zone=flask:10m rate=10r/s;
 
 	server {
 		listen <%= ENV["PORT"] %>;
@@ -79,7 +79,7 @@ http {
 		}
 
 		location / {
-                        limit_rez zone=flask burst=20;
+			limit_req zone=flask burst=20;
 			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 			proxy_set_header Host $http_host;
 			proxy_redirect off;
