@@ -79,6 +79,31 @@ We use [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running b
 
  [Celery Flower](http://flower.readthedocs.io/en/latest/install.html#usage) is useful for monitoring tasks: `flower -A util.tasks --port=5555`
 
+## Running locally with Docker Compose
+
+You can run the website in combination with a local PostgreSQL, Redis and Celery using [Docker Compose](https://docs.docker.com/compose/).
+
+### System Requirements
+
+- [Docker](https://docs.docker.com/install/overview/) **version 18 or greater**:
+`docker --version`
+- [Docker Compose](https://docs.docker.com/compose/) **For Mac and Windows docker-compose should be part of desktop Docker installs**:
+`docker-compose --version`
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git):
+`git --version`
+- Unix-based system (OSX or Linux) needed to run the bash scripts
+
+### Getting Started
+
+1. Clone the repository
+
+`git clone https://github.com/OriginProtocol/origin-website
+cd origin-website`
+
+2. From the root of the repository run `docker-compose up`. The first time this command runs it will take some time to complete due to the initial building of the containers.
+
+When this completes you should be able to access the website at `http://localhost:5000`.
+
 ## Localization
 See [translations](translations) directory.
 
