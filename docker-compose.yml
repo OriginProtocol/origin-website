@@ -23,7 +23,7 @@ services:
     sysctls:
       - net.core.somaxconn=4096
 
-  web:
+  origin-website:
     container_name: origin-website
     build:
       context: .
