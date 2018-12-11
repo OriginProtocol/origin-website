@@ -190,6 +190,10 @@ def privacy():
 def tos():
     return render_template('tos.html')
 
+@app.route('/<lang_code>/aup')
+def aup():
+    return render_template('aup.html')
+
 @app.route('/partners/interest', methods=['POST'])
 def partners_interest():
     name = request.form['name']
