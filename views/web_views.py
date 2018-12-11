@@ -73,11 +73,11 @@ def team():
 
     # community team
     community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
-                 {'avatar':'dave', 'url': 'https://twitter.com/davecraige', 'name':'Dave Craig'},
-                 {'avatar':'andrei','url': 'https://www.linkedin.com/in/andreicosminmunteanu/', 'name':'Andrei Munteanu'},
-                 {'avatar':'mijbel', 'url': 'https://twitter.com/mijbelf', 'name':'Mijbel AlQattan' },
-                 {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' },
-                 {'avatar':'russell', 'url': 'https://twitter.com/_russellduncan_', 'name':'Russell Duncan' },
+                 # {'avatar':'dave', 'url': 'https://twitter.com/davecraige', 'name':'Dave Craig'},
+                 # {'avatar':'andrei','url': 'https://www.linkedin.com/in/andreicosminmunteanu/', 'name':'Andrei Munteanu'},
+                 # {'avatar':'mijbel', 'url': 'https://twitter.com/mijbelf', 'name':'Mijbel AlQattan' },
+                 # {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' },
+                 # {'avatar':'russell', 'url': 'https://twitter.com/_russellduncan_', 'name':'Russell Duncan' },
                  {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
                  {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
                  {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
