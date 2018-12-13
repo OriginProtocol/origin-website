@@ -1,5 +1,6 @@
 from contextlib import closing
 import json
+import os
 
 from bs4 import BeautifulSoup
 from database import db, db_models
@@ -93,20 +94,6 @@ sites.append({
 })
 
 
-def simple_get(url):
-    try:
-        with closing(requests.get(url, headers=headers, stream=True)) as resp:
-            if is_html(resp):
-                return resp.content
-            else:
-                print "No html for " + url
-                return None
-
-    except RequestException as e:
-        error = 'Error during requests to {0} : {1}'.format(url, str(e))
-        print(error)
-        return None
-
 def is_html(resp):
     if resp is None:
         return False
@@ -116,7 +103,12 @@ def is_html(resp):
 
 def get_content(url):
     try:
-        with closing(requests.get(url, headers=headers, stream=True)) as resp:
+        proxy_url = os.environ.get('PROXY_URL', None)
+        proxies = {}
+        if proxy_url:
+            proxies['http'] = proxy_url
+            proxies['https'] = proxy_url
+        with closing(requests.get(url, headers=headers, proxies=proxies, stream=True)) as resp:
             if resp.status_code == 200:
                 return resp.content
             else:
