@@ -312,7 +312,7 @@ def oauth2callback():
       'scopes': credentials.scopes
   }
 
-  return redirect(url_for('index'))
+  return redirect('youtube')
 
 def channels_list_by_username(client, **kwargs):
   response = client.channels().list(
