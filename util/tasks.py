@@ -36,6 +36,7 @@ def make_celery(app):
     return celery
 
 flask_app = Flask(__name__)
+flask_app.secret_key = 'REPLACE ME - this value is here as a placeholder.'
 
 
 # TODO: (Gzing) - A lot of celery configuration level stuff can be moved to app_config

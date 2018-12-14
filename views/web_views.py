@@ -5,7 +5,8 @@ import os
 from app import app
 from config import constants, universal, partner_details
 from flask import (jsonify, redirect, render_template,
-                   request, flash, g, url_for, Response, stream_with_context)
+                   request, flash, g, url_for, Response,
+                   stream_with_context, Flask, session, json)
 from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
@@ -13,6 +14,9 @@ import requests
 from database import db_models
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
+import googleapiclient.discovery
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -117,7 +121,7 @@ def join_mailing_list():
 
 @app.route('/vk577', methods=['GET'])
 def vk577():
-    return jsonify('Temporaily posting as requested for claiming @originprotocol on vk.com: VK577')    
+    return jsonify('Temporaily posting as requested for claiming @originprotocol on vk.com: VK577')
 
 @app.route('/presale/join', methods=['POST'])
 def join_presale():
@@ -250,6 +254,72 @@ def serve_origin_js(version):
     url = "https://github.com/OriginProtocol/origin-js/releases/download/v%s/origin.js" % version
     req = requests.get(url, stream=True)
     return Response(stream_with_context(req.iter_content(chunk_size=2048)), content_type="text/javascript")
+
+SITE_ROOT = os.path.join(os.path.dirname(__file__), '..')
+CLIENT_SECRETS_FILE = os.path.join(SITE_ROOT, "logic/scripts", "client_secret.json")
+
+SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
+API_SERVICE_NAME = 'youtube'
+API_VERSION = 'v3'
+
+@app.route('/youtube')
+def youtube():
+  if 'credentials' not in session:
+    return redirect('authorize')
+
+  credentials = google.oauth2.credentials.Credentials(
+      **session['credentials'])
+
+  client = googleapiclient.discovery.build(
+      API_SERVICE_NAME, API_VERSION, credentials=credentials)
+
+  return channels_list_by_username(client,
+    part='snippet,contentDetails,statistics',
+    forUsername='GoogleDevelopers')
+
+
+@app.route('/authorize')
+def authorize():
+  flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
+      CLIENT_SECRETS_FILE, scopes=SCOPES)
+  flow.redirect_uri = url_for('oauth2callback', _external=True)
+  authorization_url, state = flow.authorization_url(
+      access_type='offline',
+      include_granted_scopes='true')
+
+  session['state'] = state
+
+  return redirect(authorization_url)
+
+
+@app.route('/oauth2callback')
+def oauth2callback():
+  state = session['state']
+  flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
+      CLIENT_SECRETS_FILE, scopes=SCOPES, state=state)
+  flow.redirect_uri = url_for('oauth2callback', _external=True)
+
+  authorization_response = request.url
+  flow.fetch_token(authorization_response=authorization_response)
+
+  credentials = flow.credentials
+  session['credentials'] = {
+      'token': credentials.token,
+      'refresh_token': credentials.refresh_token,
+      'token_uri': credentials.token_uri,
+      'client_id': credentials.client_id,
+      'client_secret': credentials.client_secret,
+      'scopes': credentials.scopes
+  }
+
+  return redirect(url_for('index'))
+
+def channels_list_by_username(client, **kwargs):
+  response = client.channels().list(
+    **kwargs
+  ).execute()
+
+  return jsonify(**response)
 
 @app.context_processor
 def inject_partners():
