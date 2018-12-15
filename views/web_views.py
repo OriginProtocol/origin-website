@@ -1,17 +1,19 @@
 from collections import OrderedDict
 from datetime import datetime
 import os
+import dotenv
 
 from app import app
 from config import constants, universal, partner_details
 from flask import (jsonify, redirect, render_template,
                    request, flash, g, url_for, Response,
-                   stream_with_context, Flask, session, json)
+                   stream_with_context, session)
 from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 import requests
-from database import db_models
+from database import db, db_models
+
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 
 import google.oauth2.credentials
@@ -273,12 +275,13 @@ def youtube():
   client = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
 
+  channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
   return channels_list_by_username(client,
     part='snippet,contentDetails,statistics',
-    id='UCWBnhxKZ52wXtf0BPzckITQ')
+    id=channel_id)
 
 
-@app.route('/authorize')
+@app.route('/youtube/authorize')
 def authorize():
   flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
       CLIENT_SECRETS_FILE, scopes=SCOPES)
@@ -292,7 +295,7 @@ def authorize():
   return redirect(authorization_url)
 
 
-@app.route('/oauth2callback')
+@app.route('/youtube/oauth2callback')
 def oauth2callback():
   state = session['state']
   flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
@@ -318,6 +321,17 @@ def channels_list_by_username(client, **kwargs):
   response = client.channels().list(
     **kwargs
   ).execute()
+
+  #save subscriberCount to db
+  statistics = response['items'][0]['statistics']
+  updated_count = statistics['subscriberCount'].encode('ascii')
+  print("Updating stats for Youtube: " + str(updated_count))
+
+  stat = db_models.SocialStat()
+  stat.name = 'Youtube'
+  stat.subscribed_count = updated_count
+  db.session.add(stat)
+  db.session.commit()
 
   return jsonify(**response)
 

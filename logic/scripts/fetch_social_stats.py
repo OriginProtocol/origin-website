@@ -1,5 +1,7 @@
 from contextlib import closing
 import json
+import dotenv
+import webbrowser
 
 from bs4 import BeautifulSoup
 from database import db, db_models
@@ -51,12 +53,6 @@ sites.append({
     'json': False
 })
 sites.append({
-    'name': 'Youtube',
-    'url': 'https://www.youtube.com/c/originprotocol',
-    'selector': 'span.subscribed',
-    'json': False
-})
-sites.append({
     'name': 'Naver',
     'url': 'https://section.blog.naver.com/connect/ViewMoreFollowers.nhn?blogId=originprotocol&widgetSeq=1',
     'selector': 'div.bg_main > div.container > div > div.content_box > div > div > p > strong',
@@ -80,12 +76,12 @@ sites.append({
     'selector': 'div.user-state > ul > li.vnum em',
     'json': False
 })
-sites.append({
-    'name': 'Weibo',
-    'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=TAB&is_hot=1#place',
-    'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
-    'json': False
-})
+# sites.append({
+#     'name': 'Weibo',
+#     'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=TAB&is_hot=1#place',
+#     'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
+#     'json': False
+# })
 sites.append({
     'name': 'Medium',
     'url': 'https://medium.com/originprotocol?format=json',
@@ -182,5 +178,9 @@ def update_subscribed_count():
         db.session.add(stat)
     db.session.commit()
 
+def update_youtube_count():
+    webbrowser.open(dotenv.get('YOUTUBE_URL'))
+
 with db_utils.request_context():
     update_subscribed_count()
+    update_youtube_count()
