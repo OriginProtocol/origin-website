@@ -133,8 +133,10 @@ def get_count_from_html(site, html):
         return count_without_text(count_with_text)
 
     except Exception as e:
-        print("Error fetching follower count for", site['name'].encode("ascii"))
-        return 0
+        message = "Error fetching follower count for", site['name'].encode("ascii")
+        print(message)
+
+        return { 'error': message }
 
 def get_count_from_json(site, content):
     site_name = site['name'].encode('ascii')
@@ -163,16 +165,16 @@ def update_subscribed(site):
             return get_count_from_html(site, html)
     except Exception as e:
         print(str(e))
-        return 0
 
 def update_subscribed_count():
     for site in sites:
         updated_count = update_subscribed(site)
-        print("Updating stats for " + site['name'] + ": " + str(updated_count))
-        stat = db_models.SocialStat()
-        stat.name = site['name']
-        stat.subscribed_count = updated_count
-        db.session.add(stat)
+        if 'error' not in updated_count.keys():
+            print("Updating stats for " + site['name'] + ": " + str(updated_count))
+            stat = db_models.SocialStat()
+            stat.name = site['name']
+            stat.subscribed_count = updated_count
+            db.session.add(stat)
     db.session.commit()
 
 with db_utils.request_context():
