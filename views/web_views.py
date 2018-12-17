@@ -4,6 +4,8 @@ import os
 import dotenv
 
 from app import app
+from database import db, db_models
+
 from config import constants, universal, partner_details
 from flask import (jsonify, redirect, render_template,
                    request, flash, g, url_for, Response,
@@ -257,11 +259,10 @@ def serve_origin_js(version):
     req = requests.get(url, stream=True)
     return Response(stream_with_context(req.iter_content(chunk_size=2048)), content_type="text/javascript")
 
-channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
 YOUTUBE_CONFIG = {
   "web":
   {
-    "client_id": channel_id,
+    "client_id": dotenv.get('YOUTUBE_CLIENT_ID'),
     "project_id": dotenv.get('YOUTUBE_PROJECT_ID'),
     "auth_uri":"https://accounts.google.com/o/oauth2/auth",
     "token_uri":"https://www.googleapis.com/oauth2/v3/token",
@@ -277,16 +278,26 @@ API_VERSION = 'v3'
 
 @app.route('/youtube')
 def youtube():
-  if 'credentials' not in session:
+  youtube_credentials = db_models.YoutubeCredentials.query.first()
+
+  if youtube_credentials.__str__() == 'None':
     return redirect('/youtube/authorize')
 
-  credentials = google.oauth2.credentials.Credentials(
-      **session['credentials'])
+  session_credentials = {
+    "token": youtube_credentials.token,
+    "token_uri": youtube_credentials.token_uri,
+    "refresh_token": youtube_credentials.refresh_token,
+    "client_id": dotenv.get('YOUTUBE_CLIENT_ID'),
+    "client_secret": dotenv.get('YOUTUBE_CLIENT_SECRET'),
+    "scopes": SCOPES
+  }
+  credentials = google.oauth2.credentials.Credentials(**session_credentials)
 
   client = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
+  channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
 
-  return channels_list_by_username(client,
+  return get_channel_info(client,
     part='snippet,contentDetails,statistics',
     id=channel_id)
 
@@ -294,7 +305,7 @@ def youtube():
 @app.route('/youtube/authorize')
 def authorize():
   flow = google_auth_oauthlib.flow.Flow.from_client_config(
-      client_config=YOUTUBE_CONFIG, scopes=SCOPES)
+      client_config=str(YOUTUBE_CONFIG), scopes=SCOPES)
   flow.redirect_uri = url_for('oauth2callback', _external=True)
   authorization_url, state = flow.authorization_url(
       access_type='offline',
@@ -316,21 +327,19 @@ def oauth2callback():
   flow.fetch_token(authorization_response=authorization_response)
 
   credentials = flow.credentials
-  session['credentials'] = {
-      'token': credentials.token,
-      'refresh_token': credentials.refresh_token,
-      'token_uri': credentials.token_uri,
-      'client_id': credentials.client_id,
-      'client_secret': credentials.client_secret,
-      'scopes': credentials.scopes
-  }
+
+  youtube_credentials = db_models.YoutubeCredentials()
+  youtube_credentials.token = credentials.token
+  youtube_credentials.token_uri = credentials.token_uri
+  youtube_credentials.refresh_token = credentials.refresh_token
+
+  db.session.add(youtube_credentials)
+  db.session.commit()
 
   return redirect('youtube')
 
-def channels_list_by_username(client, **kwargs):
-  response = client.channels().list(
-    **kwargs
-  ).execute()
+def get_channel_info(client, **kwargs):
+  response = client.channels().list(**kwargs).execute()
 
   statistics = response['items'][0]['statistics']
   updated_count = statistics['subscriberCount'].encode('ascii')
@@ -341,12 +350,6 @@ def channels_list_by_username(client, **kwargs):
   stat.subscribed_count = updated_count
   db.session.add(stat)
   db.session.commit()
-
-  return clear_credentials()
-
-def clear_credentials():
-  if 'credentials' in session:
-    del session['credentials']
 
   return redirect(url_for('index', lang_code=get_locale()))
 

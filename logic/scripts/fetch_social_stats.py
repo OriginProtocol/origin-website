@@ -11,6 +11,10 @@ from sqlalchemy.exc import IntegrityError
 from tools import db_utils
 from util import tasks
 
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
+import googleapiclient.discovery
+
 headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
 sites = []
@@ -179,7 +183,42 @@ def update_subscribed_count():
     db.session.commit()
 
 def update_youtube_count():
-    webbrowser.open(dotenv.get('YOUTUBE_URL'))
+  SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
+  API_SERVICE_NAME = 'youtube'
+  API_VERSION = 'v3'
+  youtube_credentials = db_models.YoutubeCredentials.query.first()
+
+  if youtube_credentials.__str__() == 'None':
+    return
+
+  session_credentials = {
+    "token": youtube_credentials.token,
+    "token_uri": youtube_credentials.token_uri,
+    "refresh_token": youtube_credentials.refresh_token,
+    "client_id": dotenv.get('YOUTUBE_CLIENT_ID'),
+    "client_secret": dotenv.get('YOUTUBE_CLIENT_SECRET'),
+    "scopes": SCOPES
+  }
+  credentials = google.oauth2.credentials.Credentials(**session_credentials)
+
+  client = googleapiclient.discovery.build(
+      API_SERVICE_NAME, API_VERSION, credentials=credentials)
+  channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
+
+  return get_channel_info(client, part='snippet,contentDetails,statistics', id=channel_id)
+
+def get_channel_info(client, **kwargs):
+  response = client.channels().list(**kwargs).execute()
+
+  statistics = response['items'][0]['statistics']
+  updated_count = statistics['subscriberCount'].encode('ascii')
+  print("Updating stats for Youtube: " + str(updated_count))
+
+  stat = db_models.SocialStat()
+  stat.name = 'Youtube'
+  stat.subscribed_count = updated_count
+  db.session.add(stat)
+  db.session.commit()
 
 with db_utils.request_context():
     update_subscribed_count()

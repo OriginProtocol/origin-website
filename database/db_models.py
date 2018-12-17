@@ -101,6 +101,16 @@ class SocialStat(db.Model):
     def __str__(self):
         return '%s' % (self.name)
 
+
+class YoutubeCredentials(db.Model):
+    __tablename__ = 'youtube_credentials'
+    token = db.Column(db.String(255), primary_key=True, index=True)
+    refresh_token = db.Column(db.String(255), index=True)
+    token_uri = db.Column(db.String(255), index=True)
+
+    def __str__(self):
+        return '%s' % (self.token)
+
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')
 def _subscribe_email_list(mapper, connection, target):
