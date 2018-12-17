@@ -267,7 +267,7 @@ API_VERSION = 'v3'
 @app.route('/youtube')
 def youtube():
   if 'credentials' not in session:
-    return redirect('authorize')
+    return redirect('/youtube/authorize')
 
   credentials = google.oauth2.credentials.Credentials(
       **session['credentials'])
@@ -322,7 +322,6 @@ def channels_list_by_username(client, **kwargs):
     **kwargs
   ).execute()
 
-  #save subscriberCount to db
   statistics = response['items'][0]['statistics']
   updated_count = statistics['subscriberCount'].encode('ascii')
   print("Updating stats for Youtube: " + str(updated_count))
@@ -333,7 +332,13 @@ def channels_list_by_username(client, **kwargs):
   db.session.add(stat)
   db.session.commit()
 
-  return jsonify(**response)
+  return clear_credentials()
+
+def clear_credentials():
+  if 'credentials' in session:
+    del session['credentials']
+
+  return redirect(url_for('index', lang_code=get_locale()))
 
 @app.context_processor
 def inject_partners():
