@@ -257,8 +257,19 @@ def serve_origin_js(version):
     req = requests.get(url, stream=True)
     return Response(stream_with_context(req.iter_content(chunk_size=2048)), content_type="text/javascript")
 
-SITE_ROOT = os.path.join(os.path.dirname(__file__), '..')
-CLIENT_SECRETS_FILE = os.path.join(SITE_ROOT, "logic/scripts", "client_secret.json")
+channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
+YOUTUBE_CONFIG = {
+  "web":
+  {
+    "client_id": channel_id,
+    "project_id": dotenv.get('YOUTUBE_PROJECT_ID'),
+    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://www.googleapis.com/oauth2/v3/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": dotenv.get('YOUTUBE_CLIENT_SECRET'),
+    "redirect_uris":[dotenv.get('YOUTUBE_REDIRECT_URL')]
+  }
+}
 
 SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
 API_SERVICE_NAME = 'youtube'
@@ -275,7 +286,6 @@ def youtube():
   client = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
 
-  channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
   return channels_list_by_username(client,
     part='snippet,contentDetails,statistics',
     id=channel_id)
@@ -283,8 +293,8 @@ def youtube():
 
 @app.route('/youtube/authorize')
 def authorize():
-  flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-      CLIENT_SECRETS_FILE, scopes=SCOPES)
+  flow = google_auth_oauthlib.flow.Flow.from_client_config(
+      client_config=YOUTUBE_CONFIG, scopes=SCOPES)
   flow.redirect_uri = url_for('oauth2callback', _external=True)
   authorization_url, state = flow.authorization_url(
       access_type='offline',
@@ -298,8 +308,8 @@ def authorize():
 @app.route('/youtube/oauth2callback')
 def oauth2callback():
   state = session['state']
-  flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-      CLIENT_SECRETS_FILE, scopes=SCOPES, state=state)
+  flow = google_auth_oauthlib.flow.Flow.from_client_config(
+      client_config=YOUTUBE_CONFIG, scopes=SCOPES, state=state)
   flow.redirect_uri = url_for('oauth2callback', _external=True)
 
   authorization_response = request.url
