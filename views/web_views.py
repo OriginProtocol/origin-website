@@ -1,7 +1,6 @@
 from collections import OrderedDict
 from datetime import datetime
 import os
-import dotenv
 
 from app import app
 from database import db, db_models
@@ -262,13 +261,13 @@ def serve_origin_js(version):
 YOUTUBE_CONFIG = {
   "web":
   {
-    "client_id": dotenv.get('YOUTUBE_CLIENT_ID'),
-    "project_id": dotenv.get('YOUTUBE_PROJECT_ID'),
+    "client_id": constants.YOUTUBE_CLIENT_ID,
+    "project_id": constants.YOUTUBE_PROJECT_ID,
     "auth_uri":"https://accounts.google.com/o/oauth2/auth",
     "token_uri":"https://www.googleapis.com/oauth2/v3/token",
     "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret": dotenv.get('YOUTUBE_CLIENT_SECRET'),
-    "redirect_uris":[dotenv.get('YOUTUBE_REDIRECT_URL')]
+    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
+    "redirect_uris":[constants.YOUTUBE_REDIRECT_URL]
   }
 }
 
@@ -287,15 +286,15 @@ def youtube():
     "token": youtube_credentials.token,
     "token_uri": youtube_credentials.token_uri,
     "refresh_token": youtube_credentials.refresh_token,
-    "client_id": dotenv.get('YOUTUBE_CLIENT_ID'),
-    "client_secret": dotenv.get('YOUTUBE_CLIENT_SECRET'),
+    "client_id": constants.YOUTUBE_CLIENT_ID,
+    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
     "scopes": SCOPES
   }
   credentials = google.oauth2.credentials.Credentials(**session_credentials)
 
   client = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
-  channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
+  channel_id = constants.YOUTUBE_CHANNEL_ID
 
   return get_channel_info(client,
     part='snippet,contentDetails,statistics',

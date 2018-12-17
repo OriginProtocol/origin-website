@@ -1,6 +1,5 @@
 from contextlib import closing
 import json
-import dotenv
 import webbrowser
 
 from bs4 import BeautifulSoup
@@ -10,6 +9,7 @@ from requests.exceptions import RequestException
 from sqlalchemy.exc import IntegrityError
 from tools import db_utils
 from util import tasks
+from config import constants
 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
@@ -195,15 +195,15 @@ def update_youtube_count():
     "token": youtube_credentials.token,
     "token_uri": youtube_credentials.token_uri,
     "refresh_token": youtube_credentials.refresh_token,
-    "client_id": dotenv.get('YOUTUBE_CLIENT_ID'),
-    "client_secret": dotenv.get('YOUTUBE_CLIENT_SECRET'),
+    "client_id": constants.YOUTUBE_CLIENT_ID,
+    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
     "scopes": SCOPES
   }
   credentials = google.oauth2.credentials.Credentials(**session_credentials)
 
   client = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
-  channel_id = dotenv.get('YOUTUBE_CHANNEL_ID')
+  channel_id = constants.YOUTUBE_CHANNEL_ID
 
   return get_channel_info(client, part='snippet,contentDetails,statistics', id=channel_id)
 
