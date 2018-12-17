@@ -1,7 +1,10 @@
 from contextlib import closing
 import json
+import time
 
 from bs4 import BeautifulSoup
+from selenium import webdriver
+
 from database import db, db_models
 import requests
 from requests.exceptions import RequestException
@@ -12,15 +15,13 @@ from util import tasks
 headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
 sites = []
-# This shows no followers
-# sites.append({
-#     'name': 'Steemit',
-#     'url': 'https://steemit.com/@originprotocol',
-#     # 'selector': 'div.UserProfile__stats > span:nth-of-type(1) > a',
-#     'selector': '.UserProfile__stats a',
-#     'json': False
-# })
 
+sites.append({
+    'name': 'Steemit',
+    'url': 'https://steemit.com/@originprotocol',
+    'selector': '.UserProfile__stats a',
+    'json': False
+})
 sites.append({
     'name': 'Twitter',
     'url': 'https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=originprotocol',
@@ -82,7 +83,7 @@ sites.append({
 })
 sites.append({
     'name': 'Weibo',
-    'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=TAB&is_hot=1#place',
+    'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=data&is_hot=1#place',
     'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
     'json': False
 })
@@ -92,21 +93,6 @@ sites.append({
     'json': True,
 })
 
-
-def simple_get(url):
-    try:
-        with closing(requests.get(url, headers=headers, stream=True)) as resp:
-            if is_html(resp):
-                return resp.content
-            else:
-                print "No html for " + url
-                return None
-
-    except RequestException as e:
-        error = 'Error during requests to {0} : {1}'.format(url, str(e))
-        print(error)
-        return None
-
 def is_html(resp):
     if resp is None:
         return False
@@ -114,24 +100,26 @@ def is_html(resp):
 
     return (resp.status_code == 200 and 'html' in content_type)
 
-def get_content(url):
-    try:
-        with closing(requests.get(url, headers=headers, stream=True)) as resp:
-            if resp.status_code == 200:
-                return resp.content
-            else:
-                return None
+def get_content(url, use_selenuium = False):
+    if use_selenuium is True:
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        browser = webdriver.Chrome(chrome_options=options)
+        browser.get(url)
+        time.sleep(10)
 
-    except RequestException as e:
-        print('Error during requests to {0} : {1}'.format(url, str(e)))
-        return None
-
-def parse_html(url, content):
-    if True:
-        return BeautifulSoup(content, 'html.parser')
+        return browser.page_source
     else:
-        print "No html for " + url
-        return ''
+        try:
+            with closing(requests.get(url, headers=headers, stream=True)) as resp:
+                if resp.status_code == 200:
+                    return resp.content
+                else:
+                    return None
+
+        except RequestException as e:
+            print('Error during requests to {0} : {1}'.format(url, str(e)))
+            return None
 
 def count_without_text(string):
     # need to handle if there are no numbers
@@ -160,7 +148,12 @@ def get_count_from_json(site, content):
 
 def update_subscribed(site):
     url = site['url'].encode('ascii')
-    content = get_content(url)
+    site_name = site['name'].encode('ascii')
+
+    if site_name == 'Steemit' or site_name == 'Weibo':
+        content = get_content(url, True)
+    else:
+        content = get_content(url)
 
     try:
         if site['json']:
