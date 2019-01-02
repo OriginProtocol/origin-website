@@ -55,7 +55,8 @@ def apple_app_site_association():
 @app.route('/mobile/<link_code>')
 @app.route('/mobile')
 def mobile(link_code=None):
-    return render_template('mobile.html', link_code=link_code)
+    role = request.args.get('role')
+    return render_template('mobile.html', link_code=link_code, role=role)
 
 @app.route('/<lang_code>')
 def index():
@@ -117,7 +118,7 @@ def join_mailing_list():
 
 @app.route('/vk577', methods=['GET'])
 def vk577():
-    return jsonify('Temporaily posting as requested for claiming @originprotocol on vk.com: VK577')    
+    return jsonify('Temporaily posting as requested for claiming @originprotocol on vk.com: VK577')
 
 @app.route('/presale/join', methods=['POST'])
 def join_presale():
