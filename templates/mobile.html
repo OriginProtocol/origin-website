@@ -16,16 +16,27 @@
             </div>
             {% if link_code %}
               <div class="ios-panel">
-                <p class="message">
-                  Get the <span class="wallet">Origin Wallet</span> to start selling on Origin.
-                </p>
-                <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
-                <div class="image-container">
-                  {% if role == 'seller' %}
+                {% if role == 'seller' %}
+                  <p class="message">
+                    Get the <span class="wallet">Origin Wallet</span> to start selling on Origin.
+                  </p>
+                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                  <div class="image-container">
                     <img src="/static/img/eth-pile.svg" alt="ethereum coins" />
-                  {% elif role == 'buyer' %}
+                  </div>
+                {% elif role == 'buyer' %}
+                  <p class="message">
+                    Get the <span class="wallet">Origin Wallet</span> to complete your transaction.
+                  </p>
+                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                  <div class="image-container">
                     <img src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
+                  </div>
                   {% else %}
+                    <p class="message">
+                      Get the <span class="wallet">Origin Wallet</span> to buy or sell on Origin.
+                    </p>
+                    <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
                   {% endif %}
                 </div>
               </div>
