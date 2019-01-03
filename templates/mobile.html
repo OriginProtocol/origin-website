@@ -3,7 +3,6 @@
 {% block title %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
 {% block meta_description %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
 {% block content %}
-
   <main class="landing-page">
     {% include 'navbar.html' %}
     <section class="header-section {{ 'mobile' if 'mobile' in request.path }}">
@@ -12,7 +11,7 @@
           <div class="col-12 col-md-6">
             <p>
               <div class="general-panel">
-                Origin Wallet is not yet available for Android. Please visit <a href="https://github.com/OriginProtocol/origin/issues/1150">https://github.com/OriginProtocol/origin/issues/1150</a> and let us know if we should make this happen.
+                Origin Wallet is not yet available for Android. Please visit <a href="https://github.com/OriginProtocol/origin/issues/1150" class="android-link">https://github.com/OriginProtocol/origin/issues/1150</a> and let us know if we should make this happen.
               </div>
               {% if link_code %}
                 <div class="ios-panel">
@@ -40,6 +39,12 @@
                   {% endif %}
                 </div>
               {% else %}
+                <div class="ios-panel">
+                  <p class="message">
+                    Get the <span class="wallet">Origin Wallet</span> to buy or sell on Origin.
+                  </p>
+                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                </div>
               {% endif %}
             </p>
           </div>
@@ -50,35 +55,35 @@
   </main>
 {% endblock %}
 {% block extra_scripts %}
-<script src="/static/js/clipboard-polyfill.js"></script>
-<script>
-$(function() {
-  var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-  if (iOS)
-  {
-    {% if link_code %}
-    $(".general-panel").hide();
-    $(".ios-panel").show();
-    $(".copy-get-app").click(function() {
-      clipboard.writeText("orgw:{{link_code}}").then(function(){
-        window.open("https://itunes.apple.com/us/app/apple-store")
-      },function(err){
-        console.log("copy failed");
-      });
+  <script src="/static/js/clipboard-polyfill.js"></script>
+  <script>
+    $(function() {
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+      if (iOS) {
+        $(".general-panel").hide();
+        $(".ios-panel").show();
+
+        {% if link_code %}
+          $(".copy-get-app").click(function() {
+            clipboard.writeText("orgw:{{link_code}}").then(function() {
+              window.open("https://itunes.apple.com/us/app/apple-store")
+            }, function(err) {
+              console.log("copy failed");
+            });
+          });
+        {% else %}
+          window.location = "https://itunes.apple.com/us/app/apple-store";
+        {% endif %}
+      } else {
+        $(".ios-panel").hide();
+      }
     });
-    {% else %}
-      window.location = "https://itunes.apple.com/us/app/apple-store";
-    {% endif %}
-  }
-  else
-  {
-    $(".ios-panel").hide();
-  }
-});
-</script>
+  </script>
 {% endblock %}
 {% block extra_styles %}
-<style>
-.ios-panel {display:none}
-</style>
+  <style>
+    .ios-panel { display: none; }
+    .android-link { word-break: break-all; }
+  </style>
 {% endblock %}
