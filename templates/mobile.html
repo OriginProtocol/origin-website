@@ -7,31 +7,31 @@
   <main class="landing-page">
     {% include 'navbar.html' %}
     <section class="header-section {{ 'mobile' if 'mobile' in request.path }}">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <p>
-            <div class="general-panel">
-              Look for our mobile app in the google play store. Coming soon...
-            </div>
-            {% if link_code %}
-              <div class="ios-panel">
-                {% if role == 'seller' %}
-                  <p class="message">
-                    Get the <span class="wallet">Origin Wallet</span> to start selling on Origin.
-                  </p>
-                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
-                  <div class="image-container">
-                    <img src="/static/img/eth-pile.svg" alt="ethereum coins" />
-                  </div>
-                {% elif role == 'buyer' %}
-                  <p class="message">
-                    Get the <span class="wallet">Origin Wallet</span> to complete your transaction.
-                  </p>
-                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
-                  <div class="image-container">
-                    <img src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
-                  </div>
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p>
+              <div class="general-panel">
+                Look for our mobile app in the google play store. Coming soon...
+              </div>
+              {% if link_code %}
+                <div class="ios-panel">
+                  {% if role == 'seller' %}
+                    <p class="message">
+                      Get the <span class="wallet">Origin Wallet</span> to start selling on Origin.
+                    </p>
+                    <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                    <div class="image-container">
+                      <img src="/static/img/eth-pile.svg" alt="ethereum coins" />
+                    </div>
+                  {% elif role == 'buyer' %}
+                    <p class="message">
+                      Get the <span class="wallet">Origin Wallet</span> to complete your transaction.
+                    </p>
+                    <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                    <div class="image-container">
+                      <img src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
+                    </div>
                   {% else %}
                     <p class="message">
                       Get the <span class="wallet">Origin Wallet</span> to buy or sell on Origin.
@@ -39,7 +39,6 @@
                     <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
                   {% endif %}
                 </div>
-              </div>
               {% else %}
               {% endif %}
             </p>
