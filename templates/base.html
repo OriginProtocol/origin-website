@@ -103,6 +103,8 @@
   </noscript>
 
   <noscript><img height="1" width="1" style="display:none" role="presentation" src="https://www.facebook.com/tr?id=1637426076553052&ev=PageView&noscript=1"/></noscript>
-  {% include 'flashes.html' %}
+  {% if 'mobile' not in request.path %}
+    {% include 'flashes.html' %}
+  {% endif %}
 </body>
 </html>

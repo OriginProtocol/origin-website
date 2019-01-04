@@ -153,6 +153,10 @@ a:hover {
   border-radius: 30px;
 }
 
+.url-warning.mobile {
+  display: none;
+}
+
 .warning {
   display: flex;
   background-color: #111d28;
@@ -195,6 +199,10 @@ a:hover {
   font-weight: 200;
 }
 
+.header-section.mobile {
+  background-color: #f7f8f8;
+}
+
 footer,
 section {
   position: relative;
@@ -218,6 +226,46 @@ nav {
 
 main.landing-page > .background-wrapper {
   margin-bottom: -160px;
+}
+
+.landing-page .image-container {
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.landing-page .ios-panel {
+  text-align: center;
+}
+
+.landing-page .ios-panel .copy-get-app,
+ .loading-page .general-panel {
+  margin-bottom: 90px;
+}
+
+.landing-page .general-panel {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.landing-page .ios-panel .wallet,
+.landing-page .ios-panel .message {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: -0.28px;
+}
+
+.landing-page .ios-panel .message {
+  font-weight: 300px;
+  padding-top: 20px;
+  width: 85%;
+}
+
+.landing-page .ios-panel .wallet {
+  font-weight: 500;
+}
+
+.landing-page .ios-panel .copy-get-app {
+  font-size: 1.25rem;
 }
 
 .background-wrapper {
@@ -255,6 +303,10 @@ main.landing-page > .background-wrapper {
   flex-grow: 1;
 }
 
+.navbar-origin .brand-container.mobile {
+  margin-top: 15px;
+}
+
 .navbar-origin .logo-container {
   width: 100px;
 }
@@ -266,6 +318,12 @@ main.landing-page > .background-wrapper {
   top: 75px;
   width: 100%;
   z-index: 2;
+}
+
+.navbar-origin.mobile {
+  background-color: white;
+  text-align: center;
+  height: 40px;
 }
 
 .navbar-dark .mobile-background {
@@ -728,7 +786,7 @@ footer .company-mission {
   }
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .mainnet-modal h2 {
     font-size: 57px;
     line-height: 57px;

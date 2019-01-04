@@ -3,64 +3,78 @@
 {% block title %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
 {% block meta_description %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
 {% block content %}
-
-  {% include 'warning.html' %}
-
   <main class="landing-page">
     {% include 'navbar.html' %}
-    <section class="header-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <p>
-          <div class="general-panel">
-          Look for our mobile apps in the apple app and google play store. Coming soon...
+    <section class="header-section {{ 'mobile' if 'mobile' in request.path }}">
+      <div class="container foreground-content">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p>
+              <div class="general-panel">
+                Origin Wallet is not yet available for Android. Please visit <a href="https://github.com/OriginProtocol/origin/issues/1150" class="android-link">https://github.com/OriginProtocol/origin/issues/1150</a> and let us know if we should make this happen.
+              </div>
+              <div class="ios-panel">
+                {% if role == 'seller' %}
+                  <p class="message">
+                    Get the <span class="wallet">Origin Wallet</span> to start selling on Origin.
+                  </p>
+                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                  <div class="image-container">
+                    <img src="/static/img/eth-pile.svg" alt="ethereum coins" />
+                  </div>
+                {% elif role == 'buyer' %}
+                  <p class="message">
+                    Get the <span class="wallet">Origin Wallet</span> to complete your purchase.
+                  </p>
+                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                  <div class="image-container">
+                    <img src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
+                  </div>
+                {% else %}
+                  <p class="message">
+                    Get the <span class="wallet">Origin Wallet</span> to buy or sell on Origin.
+                  </p>
+                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
+                {% endif %}
+              </div>
+            </p>
           </div>
-          {% if link_code %}
-            <div class="ios-panel">
-            Looks like you are attempting to process an origin transaction on the origin app
-            <button role="button" class="btn btn-primary btn-min-size copy-get-app">Copy code &amp; Get our app from the app store</button>
-            </div>
-          {% else %}
-          {% endif %}
-          </p>
         </div>
       </div>
-    </div>
     </section>
-{% include 'footer.html' %}
-</main>
+    {% include 'footer.html' %}
+  </main>
 {% endblock %}
 {% block extra_scripts %}
-<script src="/static/js/clipboard-polyfill.js"></script>
-<script>
-$(function() {
-  var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-  if (iOS)
-  {
-    {% if link_code %}
-    $(".general-panel").hide();
-    $(".ios-panel").show();
-    $(".copy-get-app").click(function() {
-      clipboard.writeText("orgw:{{link_code}}").then(function(){
-        window.open("https://itunes.apple.com/us/app/apple-store")
-      },function(err){
-        console.log("copy failed");
-      });
+  <script src="/static/js/clipboard-polyfill.js"></script>
+  <script>
+    $(function() {
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+      if (iOS) {
+        $(".general-panel").hide();
+        $(".ios-panel").show();
+
+        {% if link_code %}
+          $(".copy-get-app").click(function() {
+            clipboard.writeText("orgw:{{link_code}}").then(function() {
+              window.open("https://itunes.apple.com/us/app/apple-store")
+            }, function(err) {
+              console.log("copy failed");
+            });
+          });
+        {% else %}
+          window.location = "https://itunes.apple.com/us/app/apple-store";
+        {% endif %}
+      } else {
+        $(".ios-panel").hide();
+      }
     });
-    {% else %}
-      window.location = "https://itunes.apple.com/us/app/apple-store";
-    {% endif %}
-  }
-  else
-  {
-    $(".ios-panel").hide();
-  }
-});
-</script>
+  </script>
 {% endblock %}
 {% block extra_styles %}
-<style>
-.ios-panel {display:none}
-</style>
+  <style>
+    .ios-panel { display: none; }
+    .android-link { word-break: break-all; }
+  </style>
 {% endblock %}
