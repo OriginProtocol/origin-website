@@ -3,7 +3,6 @@ import json
 import time
 
 from bs4 import BeautifulSoup
-from selenium import webdriver
 
 from database import db, db_models
 import requests
@@ -100,14 +99,8 @@ sites.append({
 })
 sites.append({
     'name': 'Weibo',
-    'url': 'https://www.weibo.com/p/1005056598839228/home?from=page_100505&mod=data&is_hot=1#place',
-    'selector': '#Pl_Core_T8CustomTriColumn__3 > div > div > div > table > tbody > tr > td:nth-of-type(2) > a > strong',
-    'json': False
-})
-sites.append({
-    'name': 'Medium',
-    'url': 'https://medium.com/originprotocol?format=json',
-    'json': True,
+    'url': 'https://m.weibo.cn/api/container/getIndex?type=uid&value=6598839228&containerid=1005056598839228',
+    'json': True
 })
 
 def is_html(resp):
@@ -129,26 +122,17 @@ def get_steemit_content(url):
         print('Error during requests to {0} : {1}'.format(url, str(e)))
         return None
 
-def get_content(url, use_selenuium = False):
-    if use_selenuium is True:
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-        browser = webdriver.Chrome(chrome_options=options)
-        browser.get(url)
-        time.sleep(10)
+def get_content(url):
+    try:
+        with closing(requests.get(url, headers=headers, stream=True)) as resp:
+            if resp.status_code == 200:
+                return resp.content
+            else:
+                return None
 
-        return browser.page_source
-    else:
-        try:
-            with closing(requests.get(url, headers=headers, stream=True)) as resp:
-                if resp.status_code == 200:
-                    return resp.content
-                else:
-                    return None
-
-        except RequestException as e:
-            print('Error during requests to {0} : {1}'.format(url, str(e)))
-            return None
+    except RequestException as e:
+        print('Error during requests to {0} : {1}'.format(url, str(e)))
+        return None
 
 def count_without_text(string):
     # need to handle if there are no numbers
@@ -180,14 +164,15 @@ def get_count_from_json(site, content):
         content_json = json.loads(content)
         followers = [d['follower'] for d in content_json['result'] if 'follower' in d]
         return len(followers)
+    if site_name == 'Weibo':
+        content_json = json.loads(content)
+        return content_json['data']['userInfo']['followers_count']
 
 def update_subscribed(site):
     url = site['url'].encode('ascii')
     site_name = site['name'].encode('ascii')
 
-    if site_name == 'Weibo':
-        content = get_content(url, True)
-    elif site_name == 'Steemit':
+    if site_name == 'Steemit':
         content = get_steemit_content(url)
     else:
         content = get_content(url)
