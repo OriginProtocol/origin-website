@@ -14,6 +14,23 @@ from util import tasks
 
 headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
+steemit_headers = {
+    'authority': 'api.steemit.com',
+    'method': 'POST',
+    'path': '/',
+    'scheme': 'https',
+    'accept': 'application/json, text/plain, */*',
+    'content-type': 'application/json',
+    'referer': 'https://steemit.com/@originprotocol',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+}
+steemit_data = {
+    'id': 1,
+    'jsonrpc': '2.0',
+    'method': 'call',
+    'params': ['follow_api', 'get_followers', ['originprotocol', '', 'blog', 1000]],
+}
+
 sites = []
 
 sites.append({
@@ -100,6 +117,18 @@ def is_html(resp):
 
     return (resp.status_code == 200 and 'html' in content_type)
 
+def get_steemit_content(url):
+    try:
+        with closing(requests.post(url, headers=steemit_headers, data=json.dumps(steemit_data))) as resp:
+            if resp.status_code == 200:
+                return resp.content
+            else:
+                return None
+
+    except RequestException as e:
+        print('Error during requests to {0} : {1}'.format(url, str(e)))
+        return None
+
 def get_content(url, use_selenuium = False):
     if use_selenuium is True:
         options = webdriver.ChromeOptions()
@@ -147,13 +176,19 @@ def get_count_from_json(site, content):
         prefix = '])}while(1);</x>'
         content_json = json.loads(content.replace(prefix, ''))
         return content_json['payload']['collection']['metadata']['followerCount']
+    if site_name == 'Steemit':
+        content_json = json.loads(content)
+        followers = [d['follower'] for d in content_json['result'] if 'follower' in d]
+        return len(followers)
 
 def update_subscribed(site):
     url = site['url'].encode('ascii')
     site_name = site['name'].encode('ascii')
 
-    if site_name == 'Steemit' or site_name == 'Weibo':
+    if site_name == 'Weibo':
         content = get_content(url, True)
+    elif site_name == 'Steemit':
+        content = get_steemit_content(url)
     else:
         content = get_content(url)
 
@@ -169,7 +204,7 @@ def update_subscribed(site):
 def update_subscribed_count():
     for site in sites:
         updated_count = update_subscribed(site)
-        if 'error' not in updated_count.keys():
+        if isinstance(updated_count, int):
             print("Updating stats for " + site['name'] + ": " + str(updated_count))
             stat = db_models.SocialStat()
             stat.name = site['name']
