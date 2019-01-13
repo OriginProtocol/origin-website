@@ -23,6 +23,20 @@ app_config.init_prod_app(app)
 migrate = Migrate(app, db)
 
 if __name__ == '__main__':
+
+    # speeds up development by auto-restarting the server when templates change
+    if constants.DEBUG:
+        extra_dirs = ['templates',]
+        extra_files = extra_dirs[:]
+        for extra_dir in extra_dirs:
+            for dirname, dirs, files in os.walk(extra_dir):
+                for filename in files:
+                    filename = os.path.join(dirname, filename)
+                    if os.path.isfile(filename):
+                        extra_files.append(filename)
+    else:
+        extra_files=None
+
     app.debug = constants.DEBUG
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, threaded=True)
+    app.run(host='0.0.0.0', port=port, threaded=True, extra_files=extra_files)
