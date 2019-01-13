@@ -1734,12 +1734,14 @@ footer .company-mission {
 }
 
 /* creator page */
+
+/* impact graphic section */
 .creator-header {
   background-color: #111d28;
   color: #fff;
 }
 .creator-impact-graphic {
-  background-image:url('/static/img/creator-header-bg.png');
+  background-image:url('/static/img/creator-impact.png');
   min-height:692px;
   background-size:contain;
   background-repeat: no-repeat;
@@ -1750,6 +1752,38 @@ footer .company-mission {
   font-size:3rem;
 
 }
+
+/* verticals  section */
+.creator-verticals-graphic {
+  margin:30px 0px;
+  background-image:url('/static/img/creator-verticals.png');
+  min-height:346px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: bottom left; 
+}
+
+.creator-verticals-bullet {
+  min-height:66px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  margin-bottom:20px;
+}
+.creator-verticals-bullet b, .creator-verticals-bullet p {
+  font-size:1.25rem;
+  margin:5px 0px 5px 80px;
+}
+.creator-verticals .blue-cube {
+  background-image:url('/static/img/creator-blue-cube.png');
+}
+.creator-verticals .purple-cube {
+  background-image:url('/static/img/creator-purple-cube.png');
+}
+.creator-verticals .green-cube {
+  background-image:url('/static/img/creator-green-cube.png');
+}
+
 .creator-bottom-cta {
   background-color:#1a82ff;
   color:#fff;
