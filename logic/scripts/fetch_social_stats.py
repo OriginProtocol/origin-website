@@ -1,6 +1,5 @@
 from contextlib import closing
 import json
-import time
 
 from bs4 import BeautifulSoup
 
@@ -52,7 +51,7 @@ def get_discord_members():
                 return None
 
     except RequestException as e:
-        print('Error during requests to {0} : {1}'.format('guilds', str(e)))
+        print('Error during requests to {0} : {1}'.format(url, str(e)))
         return None
 
 sites.append({
