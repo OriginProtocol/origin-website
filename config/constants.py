@@ -41,6 +41,9 @@ SENTRY_DSN = dotenv.get('SENTRY_DSN')
 
 GITHUB_KEY = dotenv.get('GITHUB_KEY')
 
+DISCORD_BOT_TOKEN = dotenv.get('DISCORD_BOT_TOKEN')
+DISCORD_GUILD_ID = dotenv.get('DISCORD_GUILD_ID')
+
 # Language option constants
 
 LANGUAGES = [

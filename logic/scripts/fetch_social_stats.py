@@ -10,6 +10,7 @@ from requests.exceptions import RequestException
 from sqlalchemy.exc import IntegrityError
 from tools import db_utils
 from util import tasks
+from config import constants
 
 headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
@@ -32,75 +33,106 @@ steemit_data = {
 
 sites = []
 
+API_ENDPOINT = 'https://discordapp.com/api/v6'
+
+def get_discord_members():
+    discord_credentials = db_models.DiscordCredentials.query.first()
+    headers = {
+        "Authorization":"Bot {}".format(constants.DISCORD_BOT_TOKEN),
+        "User-Agent":"Origin Bot (https://originprotocol.com, v0.1)",
+        "Content-Type": "application/json"
+    }
+    url = "{0}/guilds/{1}/members".format(API_ENDPOINT, constants.DISCORD_GUILD_ID)
+
+    try:
+        with closing(requests.get(url, headers=headers)) as resp:
+            if resp.status_code == 200:
+                return len(json.loads(resp.content))
+            else:
+                return None
+
+    except RequestException as e:
+        print('Error during requests to {0} : {1}'.format('guilds', str(e)))
+        return None
+
 sites.append({
     'name': 'Steemit',
-    'url': 'https://steemit.com/@originprotocol',
-    'selector': '.UserProfile__stats a',
-    'json': False
+    'url': 'https://api.steemit.com/',
+    'json': True,
 })
 sites.append({
     'name': 'Twitter',
     'url': 'https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=originprotocol',
-    'json': True
+    'json': True,
 })
 sites.append({
     'name': 'Telegram',
     'url': 'http://t.me/originprotocol',
     'selector': 'div.tgme_page_extra',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Telegram (Korean)',
     'url': 'https://t.me/originprotocolkorea',
     'selector': 'div.tgme_page_extra',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Reddit',
     'url': 'https://old.reddit.com/r/originprotocol/',
     'selector': 'span.number',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Facebook',
     'url': 'https://www.facebook.com/originprotocol',
     'selector': '.clearfix ._ikh div._4bl9',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Youtube',
     'url': 'https://www.youtube.com/c/originprotocol',
     'selector': 'span.subscribed',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Naver',
     'url': 'https://section.blog.naver.com/connect/ViewMoreFollowers.nhn?blogId=originprotocol&widgetSeq=1',
     'selector': 'div.bg_main > div.container > div > div.content_box > div > div > p > strong',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'KaKao plus friends',
     'url': 'https://pf.kakao.com/_qTxeYC',
     'selector': 'span.num_count',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Tencent/QQ video',
     'url': 'http://v.qq.com/vplus/c2564ca8e81c0debabe3c6c6aff3832c',
     'selector': '.user_count_play span.count_num',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Youku',
     'url': 'http://i.youku.com/originprotocol',
     'selector': 'div.user-state > ul > li.vnum em',
-    'json': False
+    'json': False,
 })
 sites.append({
     'name': 'Weibo',
     'url': 'https://m.weibo.cn/api/container/getIndex?type=uid&value=6598839228&containerid=1005056598839228',
-    'json': True
+    'json': True,
+})
+sites.append({
+    'name': 'Medium',
+    'url': 'https://medium.com/originprotocol?format=json',
+    'json': True,
+})
+sites.append({
+    'name': 'Discord',
+    'url': '',
+    'json': False,
 })
 
 def is_html(resp):
@@ -174,6 +206,8 @@ def update_subscribed(site):
 
     if site_name == 'Steemit':
         content = get_steemit_content(url)
+    elif site_name == 'Discord':
+        return get_discord_members()
     else:
         content = get_content(url)
 
