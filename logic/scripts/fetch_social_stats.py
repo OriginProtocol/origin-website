@@ -35,7 +35,6 @@ sites = []
 API_ENDPOINT = 'https://discordapp.com/api/v6'
 
 def get_discord_members():
-    discord_credentials = db_models.DiscordCredentials.query.first()
     headers = {
         "Authorization":"Bot {}".format(constants.DISCORD_BOT_TOKEN),
         "User-Agent":"Origin Bot (https://originprotocol.com, v0.1)",
