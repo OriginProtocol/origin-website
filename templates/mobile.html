@@ -58,13 +58,13 @@
         {% if link_code %}
           $(".copy-get-app").click(function() {
             clipboard.writeText("orgw:{{link_code}}").then(function() {
-              window.open("https://itunes.apple.com/us/app/apple-store")
+              window.open("https://itunes.apple.com/app/origin-wallet/id1446091928")
             }, function(err) {
               console.log("copy failed");
             });
           });
         {% else %}
-          window.location = "https://itunes.apple.com/us/app/apple-store";
+          window.location = "https://itunes.apple.com/app/origin-wallet/id1446091928";
         {% endif %}
       } else {
         $(".ios-panel").hide();
