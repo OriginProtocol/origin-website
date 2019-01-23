@@ -12,17 +12,18 @@
     {% include 'navbar.html' %}
     {% endwith %}  
 
-    <div class="creator-impact-graphic">
-      <div class="container foreground-content">
-
-        <div class="row">
-          <div class="col-12 col-md-5">
-            <h1>{{ gettext("Build your<br>peer-to-peer<br>marketplace") }}</h1>
-            <h4>{{ gettext("Blockchain enabled.<br>No code required.<br>100%% free to operate.") }}</h4>
-            <div class="btn-container">
-              <a href="https://creator.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
-                {{ gettext("Get Started") }}
-              </a>
+    <div class="creator-wrapper">
+      <div class="creator-hero-graphic">
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <h1>{{ gettext("Build your<br>peer-to-peer<br>marketplace") }}</h1>
+              <h4>{{ gettext("Blockchain enabled.<br>No code required.<br>100%% free to operate.") }}</h4>
+              <div class="btn-container">
+                <a href="https://creator.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
+                  {{ gettext("Get Started") }}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -38,67 +39,189 @@
         </div>
       </div>
     </div>
-    <div class="creator-verticals-graphic">
-
-      <div class="row">
-        <div class="col-12 offset-md-5 col-md-5">
+    <div class="creator-wrapper">
+      <div class="creator-verticals-graphic">
+        <div class="container foreground-content">
           <div class="row">
-            <div class="col-7 creator-verticals-bullet blue-cube">
-            <b>{{ gettext("Sharing economy") }}</b>
-            <p>{{ gettext("Create a marketplace for homesharing, carsharing, contractor or home services.") }}</p>
-          </div>
-          <div class="col-7 creator-verticals-bullet purple-cube">
-            <b>{{ gettext("Ecommerce") }}</b>
-            <p>{{ gettext("Enable buyers and sellers to transact across hundreds of categories") }}</p>
-          </div>
-          <div class="col-7 creator-verticals-bullet green-cube">
-            <b>{{ gettext("Local marketsplaces") }}</b>
-            <p>{{ gettext("Build a better Craigslist or Airbnb for your country or city quickly and easily") }}</p>
+            <div class="col-12 offset-md-5 col-md-7">
+              <div class="row">
+                <div class="col-12">
+
+                  <div class="media">
+                    <img class="media-object" /static/img/creator-blue-cube.png" srcset="/static/img/creator-blue-cube@2x.png 2x, /static/img/creator-blue-cube@3x.png 3x">
+                    <div class="media-body">
+                      <b class="media-heading">{{ gettext("Sharing economy") }}</b>
+                      <p>{{ gettext("Create a marketplace for homesharing, carsharing, contractor or home services.") }}</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img class="media-object" /static/img/creator-purple-cube.png" srcset="/static/img/creator-purple-cube@2x.png 2x, /static/img/creator-purple-cube@3x.png 3x">
+                    <div class="media-body">
+                      <b class="media-heading">{{ gettext("Ecommerce") }}</b>
+                      <p>{{ gettext("Enable buyers and sellers to transact across hundreds of categories.") }}</p>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <img class="media-object" /static/img/creator-green-cube.png" srcset="/static/img/creator-green-cube@2x.png 2x, /static/img/creator-green-cube@3x.png 3x">
+                    <div class="media-body">
+                      <b class="media-heading">{{ gettext("Local marketsplaces") }}</b>
+                      <p>{{ gettext("Build a better Craigslist or Airbnb for your country or city quickly and easily.") }}</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-  </section>
 
-  <div class="container foreground-content">
-    <div class="row">
-      <div class="col-12">
-        <h1>{{ gettext("Earn Origin tokens, etc") }}</h1>
+    </section>
+
+    <section class="reasons">
+      <div class="row no-gutters">
+        <div class="col-12 col-sm-6">
+          <!-- left column -->
+          <div class="blue-coins left-graphic d-none d-sm-block"></div>
+
+          <div class="run-business light clearfix">
+            <div class="inner-box float-right">
+              <h1>{{ gettext("Run a decentralized & <span class='purple'>censorship-resistant business</span>") }}</h1>
+              <p>{{ gettext("Build a marketplace that can't be shut down by anyone...including us.") }}</p>
+            </div>
+          </div>
+          <div class="green-coins left-graphic d-none d-sm-block"></div>
+          <div class="bootstrap-marketplace light clearfix">
+            <div class="inner-box float-right">
+              <h1>{{ gettext("Bootstrap your <span class='red'>marketplace</span>") }}</h1>
+              <p>{{ gettext("Tap into our shared data layer that gives you existing users and inventory from other marketplaces.") }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <!-- right column -->
+          <div class="earn-tokens dark">
+            <div class="inner-box">
+              <h1>{{ gettext("Earn <span class='blue'>Origin tokens</span>") }}</h1>
+              <p>{{ gettext("List goods and services from Origin’s existing base of sellers. Earn Origin token commissions from sellers looking to reach a wider audience on your marketplace.") }}</p>
+              <a href="https://creator.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
+                {{ gettext("Get Started") }}
+              </a>
+            </div>
+          </div>
+          <div class="purple-censorship right-graphic d-none d-sm-block"></div>
+          <div class="borderless-payments dark">
+            <div class="inner-box">
+              <h1>{{ gettext("Harness the power of <span class='green'>borderless and permissionless payments</span>") }}</h1>
+              <p>{{ gettext("Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box.") }}</p>
+            </div>
+          </div>
+          <div class="red-boxes right-graphic d-none d-sm-block"></div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="container foreground-content">
-    <div class="row">
-      <div class="col-12">
-        <h1>{{ gettext("Features") }}</h1>
+    <section class='creator-features'>
+      <div class="container foreground-content">
+       <div class="row">
+        <div class="col-12 col-sm-5">
+          <h1>{{ gettext("Features") }}</h1>
+        </div>
+        <div class="col-12 col-sm-7">
+          <br><br>
+          <p>{{ gettext("Something here about these features and can be long") }}</p>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <section class='creator-bottom-cta'>
-    <div class="container text-center">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 offset-md-5 col-md-7">
+          <div class="row">
 
-          <h2>{{ gettext("Get started for free today") }}</h2>
-          <div>
-            <a href="https://creator.originprotocol.com" role="button" class="btn btn-outline-white btn-min-size">
-              {{ gettext("Get Started") }}
-            </a>
+            <div class="media col-6">
+              <img class="media-object" src="/static/img/identity-icon.png" srcset="/static/img/identity-icon@2x.png 2x, /static/img/identity-icon@3x.png 3x">
+              <div class="media-body">
+                <b class="media-heading">{{ gettext("Identity") }}</b>
+                <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+              </div>
+            </div>
+
+            <div class="media col-6">
+             <img class="media-object" src="/static/img/notifications-icon.png" srcset="/static/img/notifications-icon@2x.png 2x, /static/img/notifications-icon@3x.png 3x">
+             <div class="media-body">
+              <b class="media-heading">{{ gettext("Notifications") }}</b>
+              <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+            </div>
           </div>
 
-          {{ gettext("Have questions?") }} <a href="mailto:support@originprotocol.com">{{ gettext("Get in touch") }}</a>
+          <div class="media col-6">
+            <img class="media-object" src="/static/img/listing-icon.png" srcset="/static/img/listing-icon@2x.png 2x, /static/img/listing-icon@3x.png 3x">
+            <div class="media-body">
+              <b class="media-heading">{{ gettext("Listing Types") }}</b>
+              <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+            </div>
+          </div>
 
+          <div class="media col-6">
+            <img class="media-object" src="/static/img/escrow-icon.png" srcset="/static/img/escrow-icon@2x.png 2x, /static/img/escrow-icon@3x.png 3x">
+            <div class="media-body">
+              <b class="media-heading">{{ gettext("Escrow") }}</b>
+              <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+            </div>
+          </div>
+
+          <div class="media col-6">
+            <img class="media-object" src="/static/img/messaging-icon.png" srcset="/static/img/messaging-icon@2x.png 2x, /static/img/messaging-icon@3x.png 3x">
+            <div class="media-body">
+              <b class="media-heading">{{ gettext("Decentralized Messaging") }}</b>
+              <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+            </div>
+          </div>
+
+          <div class="media col-6">
+           <img class="media-object" src="/static/img/arbitration-icon.png" srcset="/static/img/arbitration-icon@2x.png 2x, /static/img/arbitration-icon@3x.png 3x">
+           <div class="media-body">
+            <b class="media-heading">{{ gettext("Arbitration") }}</b>
+            <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+          </div>
         </div>
+
+        <div class="media col-6">
+          <img class="media-object" src="/static/img/ethereum-icon.png" srcset="/static/img/ethereum-icon@2x.png 2x, /static/img/ethereum-icon@3x.png 3x">
+          <div class="media-body">
+            <b class="media-heading">{{ gettext("Ethereum & IPFS") }}</b>
+            <p>{{ gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy") }}</p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</div>
+</section>
 
-  {% with theme_dark=False %}
-  {% include 'footer.html' %}
-  {% endwith %}  
+<section class='creator-bottom-cta'>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-12">
+
+        <h2>{{ gettext("Get started for free today") }}</h2>
+        <div>
+          <a href="https://creator.originprotocol.com" role="button" class="btn btn-outline-white btn-min-size">
+            {{ gettext("Get Started") }}
+          </a>
+        </div>
+
+        {{ gettext("Have questions?") }} <a href="mailto:support@originprotocol.com">{{ gettext("Get in touch") }}</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% with theme_dark=False %}
+{% include 'footer.html' %}
+{% endwith %}  
 </section>
 {% endblock %}
 {% block extra_scripts %}
