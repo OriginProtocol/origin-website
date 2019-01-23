@@ -1752,12 +1752,15 @@ main.landing-page > .background-wrapper {
 
 /* verticals section */
 .creator-verticals-graphic {
-  margin:30px 0px;
-  background-image:url('/static/img/creator-verticals.png');
-  min-height:346px;
+  background-image:url('/static/img/marketplace-screenshots-graphic@3x.png');
   background-size:contain;
   background-repeat: no-repeat;
-  background-position: bottom left; 
+  background-position:left center;
+  min-height:346px;
+  margin-bottom:100px;
+}
+.creator-verticals, .creator-verticals h1 {
+  margin-bottom:60px;
 }
 
 .creator-verticals .media {
@@ -1773,10 +1776,10 @@ main.landing-page > .background-wrapper {
 .reasons .inner-box {
   text-align:left;
   max-width:720px;
-  padding:120px;
+  padding:30px;
 }
 .reasons .dark, .reasons .light {
-  height:500px;
+  min-height:500px;
   width:100%;
   margin:0;
 }
@@ -1829,13 +1832,27 @@ main.landing-page > .background-wrapper {
   background-color:#ff1a1a;
   background-image:url("/static/img/red-boxes.svg");
 }
-
+.reasons .earn-tokens .inner-box {
+  padding-top:90px;
+}
+.reasons .borderless-payments .inner-box {
+  padding-top:70px;
+}
 
 /* features section */
 .creator-features {
   background-color:#2e3f53;
-  padding-bottom:40px;
+  padding:40px 0px 80px;
 }
+.creator-features-graphic {
+  background-image:url('/static/img/features-graphic@3x.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:left center;
+  min-height:357px;
+  margin-bottom:40px;
+}
+
 .creator-features .media {
   margin-bottom:30px;
 }
@@ -2148,6 +2165,9 @@ main.landing-page > .background-wrapper {
     min-height:692px;
     background-position: bottom right;
   }
+  .reasons .inner-box {
+    padding:50px;
+  }
 }
 
 /* sm - md */
@@ -2447,6 +2467,9 @@ main.landing-page > .background-wrapper {
   .creator-hero-graphic {
     background-position:500px 0px;
     min-height:640px;
+  }
+  .reasons .inner-box {
+    padding:100px;
   }
 }
 
