@@ -195,6 +195,10 @@ def tos():
 def aup():
     return render_template('aup.html')
 
+@app.route('/<lang_code>/creator')
+def creator():
+    return render_template('creator.html')
+
 @app.route('/partners/interest', methods=['POST'])
 def partners_interest():
     name = request.form['name']
