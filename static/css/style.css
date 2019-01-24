@@ -1736,7 +1736,6 @@ main.landing-page > .background-wrapper {
 /* creator page */
 
 /* hero section */
-
 .creator-header {
   background-color: #111d28;
   color: #fff;
@@ -1748,6 +1747,7 @@ main.landing-page > .background-wrapper {
 }
 .creator-hero-graphic h1 {
   font-size:3rem;
+  line-height:3.75rem;
 }
 
 /* verticals section */
@@ -1780,6 +1780,8 @@ main.landing-page > .background-wrapper {
 }
 .reasons .dark, .reasons .light {
   min-height:500px;
+  max-height:500px;
+  overflow:hidden;
   width:100%;
   margin:0;
 }
@@ -1833,7 +1835,7 @@ main.landing-page > .background-wrapper {
   background-image:url("/static/img/red-boxes.svg");
 }
 .reasons .earn-tokens .inner-box {
-  padding-top:90px;
+  padding-top:80px;
 }
 .reasons .borderless-payments .inner-box {
   padding-top:70px;
@@ -2469,7 +2471,7 @@ main.landing-page > .background-wrapper {
     min-height:640px;
   }
   .reasons .inner-box {
-    padding:100px;
+    padding:30px;
   }
 }
 
@@ -2575,6 +2577,9 @@ main.landing-page > .background-wrapper {
     /* 8 col equals 1140 which is the standard container width. */
     max-width:1710px; 
     margin:auto;
+  }
+  .reasons .inner-box {
+    padding:100px;
   }
 }
 
