@@ -1794,6 +1794,7 @@ footer .company-mission {
 }
 .creator-hero-graphic h1 {
   font-size: 3rem;
+  line-height: 3.75rem;
 }
 
 /* verticals section */
@@ -1826,6 +1827,7 @@ footer .company-mission {
 }
 .reasons .dark, .reasons .light {
   min-height: 500px;
+  max-height: 500px;
   width: 100%;
   margin: 0;
 }
@@ -1911,8 +1913,8 @@ footer .company-mission {
 }
 .creator-features img {
   margin-right: 20px;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .creator-bottom-cta {
@@ -2513,7 +2515,7 @@ footer .company-mission {
     min-height: 640px;
   }
   .reasons .inner-box {
-    padding: 100px;
+    padding: 50px;
   }
 }
 
@@ -2620,6 +2622,9 @@ footer .company-mission {
     max-width: 1710px; 
     margin: auto;
   }
+  .reasons .inner-box {
+    padding: 50px;
+  }
 }
 
 /* xl + */
@@ -2633,6 +2638,9 @@ footer .company-mission {
   }
   .technology-section .container-fluid > .row {
     padding-bottom: 200px;
+  }
+  .reasons .inner-box {
+    padding: 100px;
   }
 }
 
