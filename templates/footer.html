@@ -54,6 +54,11 @@
                 </a>
               </li>
               <li class="footer-link">
+                <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Creator") }}
+                </a>
+              </li>
+              <li class="footer-link">
                 <a href="https://dapp.originprotocol.com" target="_blank">
                   {{ gettext("DApp") }}
                 </a>
