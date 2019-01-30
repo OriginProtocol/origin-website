@@ -85,9 +85,15 @@ def team():
                  {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
     return render_template('team.html', contributors=[aure] + contributors, community=community)
 
+
+
 @app.route('/<lang_code>/presale')
 def presale():
-    return render_template('presale.html')
+    return redirect('/tokens', code=302)
+
+@app.route('/<lang_code>/tokens')
+def tokens():   
+    return render_template('tokens.html')
 
 @app.route('/<lang_code>/whitepaper')
 def whitepaper():
