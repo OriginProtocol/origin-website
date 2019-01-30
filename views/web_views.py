@@ -181,6 +181,10 @@ def developers():
 def discord():
     return redirect(universal.DISCORD_URL, code=301)
 
+@app.route('/<lang_code>/ios')
+def ios():
+    return redirect(universal.IOS_URL, code=301)
+
 @app.route('/<lang_code>/telegram')
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
