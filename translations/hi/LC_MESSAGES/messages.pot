@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 10:12-0700\n"
-"PO-Revision-Date: 2018-08-22 16:34\n"
+"POT-Creation-Date: 2019-01-29 12:55-0800\n"
+"PO-Revision-Date: 2019-01-30 22:42\n"
 "Last-Translator: OriginProtocol <coleman@originprotocol.com>\n"
 "Language-Team: Hindi\n"
 "MIME-Version: 1.0\n"
@@ -58,549 +58,652 @@ msgstr "आपकी सदस्यता रद्द हो चुकी ह�
 msgid "Please enter a valid website address"
 msgstr "कृपया एक वैध वेबसाइट पता दर्ज करें"
 
-#: templates/404.html:16
+#: templates/404.html:18
 msgid "How did I get here?"
 msgstr "मैं यहाँ कैसे आया?"
 
-#: templates/404.html:22
+#: templates/404.html:24
 msgid "The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
 msgstr "जिस पृष्ठ को आप ढूंढ रहे हैं वह अब यहां नहीं है, शायद यह पहले स्थान पर कभी नहीं था। किसी भी मामले में, अगर हम हैं तो हम ईमानदारी से क्षमा चाहते हैं और यदि आप हैं तो हम आपको क्षमा कर सकते हैं :)"
 
-#: templates/404.html:26 templates/404.html:32
+#: templates/404.html:28 templates/404.html:34
 msgid "Go Home"
 msgstr "घर जाओ"
 
-#: templates/announcement.html:11
-msgid "CoinList <span class=\"subdued\">Round</span>"
-msgstr "सिक्कालिस्ट <span class=\"subdued\">राउंड</span>"
+#: templates/aup.html:3 templates/aup.html:5
+msgid "Origin Protocol - Marketplace Acceptable Use Policy"
+msgstr ""
 
-#: templates/announcement.html:12
-msgid "Register today!"
-msgstr "आज पंजीकृत करें!"
+#: templates/aup.html:18
+msgid "Marketplace Acceptable Use Policy"
+msgstr ""
 
-#: templates/announcement.html:12
-msgid "$1,000 minimum."
-msgstr "$ 1,000 न्यूनतम।"
-
-#: templates/announcement.html:12
-msgid "Availability limited."
-msgstr "उपलब्धता सीमित"
-
-#: templates/announcement.html:12
-msgid "Learn more."
-msgstr "और अधिक जानें।"
-
-#: templates/announcement.html:15
-msgid "Registration Ends In"
-msgstr "पंजीकरण समाप्त होता है"
-
-#: templates/announcement.html:26
-msgid "Register Now"
-msgstr "अभी पंजीकरण करें"
-
-#: templates/base.html:13 templates/index.html:3
+#: templates/base.html:15 templates/index.html:3
 msgid "Origin Protocol"
 msgstr "उत्पत्ति प्रोटोकॉल"
 
-#: templates/base.html:14
-msgid "Origin Protocol enables the sharing economy on the blockchain"
-msgstr "उत्पत्ति प्रोटोकॉल ब्लॉकचैन पर साझा अर्थव्यवस्था को सक्षम बनाता है"
+#: templates/base.html:16
+msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
+msgstr ""
+
+#: templates/creator.html:3 templates/creator.html:5
+msgid "Origin Protocol - Creator"
+msgstr ""
+
+#: templates/creator.html:20
+msgid "Build your<br>peer-to-peer<br>marketplace"
+msgstr ""
+
+#: templates/creator.html:21
+#, python-format
+msgid "Blockchain enabled.<br>No code required.<br>100%% free to operate."
+msgstr ""
+
+#: templates/creator.html:24 templates/creator.html:100
+#: templates/creator.html:223
+msgid "Get Started"
+msgstr ""
+
+#: templates/creator.html:38
+msgid "Launch your decentralized goods or services marketplace today"
+msgstr ""
+
+#: templates/creator.html:52
+msgid "Sharing economy"
+msgstr ""
+
+#: templates/creator.html:53
+msgid "Create a marketplace for homesharing, carsharing, contractor, or home services."
+msgstr ""
+
+#: templates/creator.html:60
+msgid "Ecommerce"
+msgstr ""
+
+#: templates/creator.html:61
+msgid "Enable buyers and sellers to transact across hundreds of categories."
+msgstr ""
+
+#: templates/creator.html:68
+msgid "Local marketplaces"
+msgstr ""
+
+#: templates/creator.html:69
+msgid "Build a better Craigslist or Airbnb for your country or city quickly and easily."
+msgstr ""
+
+#: templates/creator.html:88
+msgid "Run a decentralized & <span class='purple'>censorship-resistant business</span>"
+msgstr ""
+
+#: templates/creator.html:89
+msgid "Build a marketplace that can't be shut down by anyone...including us."
+msgstr ""
+
+#: templates/creator.html:96
+msgid "Earn <span class='blue'>Origin tokens</span>"
+msgstr ""
+
+#: templates/creator.html:97
+msgid "List goods and services from Origin’s existing base of sellers. Earn Origin token commissions from sellers looking to reach a wider audience on your marketplace."
+msgstr ""
+
+#: templates/creator.html:113
+msgid "Bootstrap your <span class='red'>marketplace</span>"
+msgstr ""
+
+#: templates/creator.html:114
+msgid "Tap into our shared data layer that gives you existing users and inventory from other marketplaces."
+msgstr ""
+
+#: templates/creator.html:122
+msgid "Harness the power of <span class='green'>borderless and permissionless payments</span>"
+msgstr ""
+
+#: templates/creator.html:123
+msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
+msgstr ""
+
+#: templates/creator.html:135 templates/index.html:274
+msgid "Features"
+msgstr "विशेषताएं"
+
+#: templates/creator.html:149
+msgid "Identity"
+msgstr ""
+
+#: templates/creator.html:150
+msgid "Self-soverign identity puts users in control of their own data"
+msgstr ""
+
+#: templates/creator.html:157
+msgid "Notifications"
+msgstr ""
+
+#: templates/creator.html:158
+msgid "Alerts for new messages or transactions on the marketplace"
+msgstr ""
+
+#: templates/creator.html:165
+msgid "Flexible Listings"
+msgstr ""
+
+#: templates/creator.html:166
+msgid "Sell new or used goods and rent your products or services"
+msgstr ""
+
+#: templates/creator.html:173
+msgid "Escrow"
+msgstr ""
+
+#: templates/creator.html:174
+msgid "Funds are safely escrowed until both parties are happy with a transaction"
+msgstr ""
+
+#: templates/creator.html:181
+msgid "Messaging"
+msgstr ""
+
+#: templates/creator.html:182
+msgid "Decentralized, encrypted end-to-end, fast, fre, and auditable"
+msgstr ""
+
+#: templates/creator.html:189
+msgid "Arbitration"
+msgstr ""
+
+#: templates/creator.html:190
+msgid "Arbitration features will allow you to resolve disputes"
+msgstr ""
+
+#: templates/creator.html:197
+msgid "Ethereum & IPFS"
+msgstr ""
+
+#: templates/creator.html:198
+msgid "Built on a decentralized web3 stack"
+msgstr ""
+
+#: templates/creator.html:205
+msgid "Multi-device"
+msgstr ""
+
+#: templates/creator.html:206
+msgid "Your marketplace looks great on mobile, tablet, and desktop"
+msgstr ""
+
+#: templates/creator.html:220
+msgid "Get started for free today"
+msgstr ""
+
+#: templates/creator.html:227
+msgid "Have questions?"
+msgstr ""
+
+#: templates/creator.html:227
+msgid "Get in touch"
+msgstr ""
 
 #: templates/developers.html:2 templates/developers.html:3
 msgid "Origin Protocol - Developers"
 msgstr "उत्पत्ति प्रोटोकॉल - डेवलपर्स"
 
-#: templates/developers.html:14 templates/index.html:22
-msgid "The sharing economy without intermediaries"
-msgstr "मध्यस्थों के बिना साझा अर्थव्यवस्था"
+#: templates/flashes.html:4
+msgid "New!"
+msgstr ""
 
-#: templates/developers.html:17 templates/index.html:25
-msgid "Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS"
-msgstr "उत्पत्ति एथेरियम ब्लॉकचेन और आईपीएफएस का उपयोग कर शेयरिंग इकोनॉमी मार्केटप्लेस बनाने के लिए एक प्रोटोकॉल है"
+#: templates/flashes.html:4
+msgid "Create your own<br>decentralized marketplace."
+msgstr ""
 
-#: templates/developers.html:65 templates/index.html:73
-msgid "The Origin platform"
-msgstr "मूल मंच"
+#: templates/flashes.html:4
+msgid "Try It Now"
+msgstr ""
 
-#: templates/developers.html:68 templates/index.html:76
-msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
-msgstr "हम ब्लॉकचेन पर विकेन्द्रीकृत बाजारों का निर्माण करने के लिए डेवलपर्स और व्यवसायों को सशक्त बनाते हैं। हमारा प्रोटोकॉल संपत्तियों और सेवाओं के आंशिक उपयोग के लिए लिस्टिंग बनाने और प्रबंधित करना आसान बनाता है। खरीदारों और विक्रेता एक दूसरे को खोज सकते हैं, लिस्टिंग ब्राउज़ कर सकते हैं, बुकिंग कर सकते हैं, रेटिंग और समीक्षा छोड़ सकते हैं, और भी बहुत कुछ।"
+#: templates/footer.html:25
+msgid "Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network."
+msgstr ""
 
-#: templates/developers.html:72 templates/index.html:80
-msgid "Read Our Product Brief"
-msgstr "हमारे उत्पाद संक्षिप्त पढ़ें"
-
-#: templates/developers.html:78 templates/index.html:86
-#: templates/index.html:636
-msgid "Join Our Telegram"
-msgstr "हमारे टेलीग्राम में शामिल हों"
-
-#: templates/developers.html:94 templates/index.html:103
-msgid "Partners building on Origin"
-msgstr "उत्पत्ति पर पार्टनर्स बिल्डिंग"
-
-#: templates/developers.html:97 templates/index.html:106
-msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
-msgstr "दुनिया भर में टीम मूल के प्रोटोकॉल पर निर्माण कर रही हैं, लेकिन हम अपने मिशन में शामिल होने के लिए और अधिक अद्भुत लोगों की तलाश में हैं।"
-
-#: templates/developers.html:101 templates/index.html:110
-msgid "View All Partners"
-msgstr "सभी पार्टनर देखें"
-
-#: templates/developers.html:140 templates/index.html:191
-msgid "Build your business on Origin"
-msgstr "उत्पत्ति पर अपना व्यवसाय बनाएं"
-
-#: templates/developers.html:143 templates/index.html:194
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
-msgstr "चाहे आप एक स्वतंत्र फोटोग्राफर, अपार्टमेंट मालिक, बिकेशयर आपूर्तिकर्ता, या मौजूदा साझाकरण अर्थव्यवस्था व्यवसाय हैं, उत्पत्ति विकेन्द्रीकृत वेब पर व्यवसाय करना आसान बनाता है।"
-
-#: templates/developers.html:143 templates/index.html:194
-msgid "Get in touch to learn more."
-msgstr "अधिक जानने के लिए संपर्क में रहें।"
-
-#: templates/developers.html:147 templates/index.html:198
-msgid "Try the Demo"
-msgstr "डेमो आज़माएं"
-
-#: templates/developers.html:153 templates/index.html:204
-msgid "View GitHub"
-msgstr "गिटहब देखें"
-
-#: templates/developers.html:165 templates/index.html:216
-msgid "It's time to replace rent-seeking middlemen"
-msgstr "किराए पर लेने वाले मध्यस्थों को बदलने का समय है"
-
-#: templates/developers.html:168 templates/index.html:219
-#, python-format
-msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "एथेरियम ब्लॉकचेन की शक्ति को मजबूत करने, लिस्टिंग को एक सुरक्षित और पारदर्शी प्रणाली के माध्यम से प्रबंधित किया जाता है जो एक तटस्थ तीसरे पक्ष के रूप में कार्य करता है। खरीदारों और विक्रेता 20-30%% लेनदेन शुल्क साझा करते हैं जो वर्तमान में उबेर, एयरबेंब, फिवरर और गेटारॉउंड जैसी कंपनियों के पास जाते हैं।"
-
-#: templates/developers.html:172 templates/index.html:223
-msgid "Read the Whitepaper"
-msgstr "व्हाइटपेपर पढ़ें"
-
-#: templates/footer.html:13
-msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, promoting free and transparent commerce, and giving early participants in the community a stake in the network."
-msgstr "उत्पत्ति कल की साझा अर्थव्यवस्था का निर्माण कर रही है। खरीदारों और विक्रेता किराए पर लेने वाले मध्यस्थों के बिना लेनदेन करने में सक्षम होंगे। हम लेनदेन शुल्क को कम करने, मुक्त और पारदर्शी वाणिज्य को बढ़ावा देने और समुदाय में शुरुआती प्रतिभागियों को नेटवर्क में हिस्सेदारी देने में विश्वास करते हैं।"
-
-#: templates/footer.html:16
+#: templates/footer.html:28
 msgid "Origin Protocol, Inc."
 msgstr "उत्पत्ति प्रोटोकॉल, इंक"
 
-#: templates/footer.html:18
+#: templates/footer.html:30
 msgid "Privacy"
 msgstr "एकांत"
 
-#: templates/footer.html:22 templates/tos.html:12
+#: templates/footer.html:34 templates/tos.html:18
 msgid "Terms of Service"
 msgstr "सेवा की शर्तें"
 
-#: templates/footer.html:31
-msgid "Documentation"
-msgstr "प्रलेखन"
+#: templates/footer.html:43
+msgid "Products"
+msgstr ""
 
-#: templates/footer.html:36 templates/navbar.html:71
-msgid "Product Brief"
-msgstr "उत्पाद संक्षिप्त"
+#: templates/footer.html:48 templates/navbar.html:72
+msgid "Marketplace Creator"
+msgstr ""
 
-#: templates/footer.html:41
-msgid "Whitepaper"
-msgstr "सफ़ेद कागज"
+#: templates/footer.html:53
+msgid "Marketplace DApp"
+msgstr ""
 
-#: templates/footer.html:46
-msgid "Demo DApp"
-msgstr "डेमो डीएपी"
+#: templates/footer.html:58
+msgid "Mobile Wallet (iOS)"
+msgstr ""
 
-#: templates/footer.html:51
-msgid "Github"
-msgstr "Github"
+#: templates/footer.html:65
+msgid "Resources"
+msgstr ""
 
-#: templates/footer.html:56
+#: templates/footer.html:70
+msgid "Developers"
+msgstr ""
+
+#: templates/footer.html:75 templates/index.html:211
+msgid "GitHub"
+msgstr ""
+
+#: templates/footer.html:80
 msgid "Docs"
 msgstr "डॉक्स"
 
-#: templates/footer.html:63 templates/team.html:122 templates/team.html:327
-#: templates/team.html:344 templates/team.html:361 templates/team.html:378
-msgid "Community"
-msgstr "समुदाय"
+#: templates/footer.html:85 templates/navbar.html:76
+msgid "Product Brief"
+msgstr "उत्पाद संक्षिप्त"
 
-#: templates/footer.html:68
-msgid "Telegram"
-msgstr "तार"
+#: templates/footer.html:90
+msgid "Whitepaper"
+msgstr "सफ़ेद कागज"
 
-#: templates/footer.html:73
-msgid "Discord"
-msgstr "कलह"
-
-#: templates/footer.html:78
-msgid "Medium"
-msgstr "मध्यम"
-
-#: templates/footer.html:83
-msgid "Reddit"
-msgstr "रेडिट"
-
-#: templates/footer.html:88
-msgid "Twitter"
-msgstr "ट्विटर"
-
-#: templates/footer.html:93
-msgid "Instagram"
-msgstr "इंस्टाग्राम"
-
-#: templates/footer.html:98
-msgid "Facebook"
-msgstr "फेसबुक"
-
-#: templates/footer.html:105
+#: templates/footer.html:97
 msgid "Organization"
 msgstr "संगठन"
 
-#: templates/footer.html:110 templates/navbar.html:74
+#: templates/footer.html:102 templates/navbar.html:80
 msgid "Team"
 msgstr "टीम"
 
-#: templates/footer.html:115 templates/navbar.html:68 templates/presale.html:16
-msgid "Presale"
-msgstr "presale"
+#: templates/footer.html:107 templates/navbar.html:69 templates/tokens.html:18
+msgid "Tokens"
+msgstr ""
 
-#: templates/footer.html:120
+#: templates/footer.html:112
 msgid "Partners"
 msgstr "भागीदारों"
 
-#: templates/footer.html:125
-msgid "Jobs (We're hiring!)"
-msgstr "नौकरियां (हम भर्ती कर रहे हैं!)"
+#: templates/footer.html:117
+msgid "Meetups"
+msgstr ""
 
-#: templates/footer.html:130
-msgid "845 Market St, #450A<br>San Francisco, CA 94103"
-msgstr "845 मार्केट सेंट, # 450 ए<br>सैन फ्रांसिस्को, सीए 94103"
+#: templates/footer.html:122
+msgid "Jobs"
+msgstr ""
+
+#: templates/footer.html:129 templates/team.html:422 templates/team.html:436
+msgid "Community"
+msgstr "समुदाय"
+
+#: templates/footer.html:134
+msgid "Discord"
+msgstr "कलह"
+
+#: templates/footer.html:139
+msgid "Telegram"
+msgstr "तार"
+
+#: templates/footer.html:144
+msgid "Reddit"
+msgstr "रेडिट"
+
+#: templates/footer.html:148
+msgid "WeChat"
+msgstr ""
+
+#: templates/footer.html:151
+msgid "Weibo"
+msgstr ""
+
+#: templates/footer.html:160
+msgid "Twitter"
+msgstr "ट्विटर"
+
+#: templates/footer.html:165
+msgid "Instagram"
+msgstr "इंस्टाग्राम"
+
+#: templates/footer.html:170
+msgid "Facebook"
+msgstr "फेसबुक"
+
+#: templates/footer.html:175
+msgid "Medium"
+msgstr "मध्यम"
+
+#: templates/footer.html:180
+msgid "Youtube"
+msgstr ""
 
 #: templates/index.html:5
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "मध्यस्थों के बिना साझा अर्थव्यवस्था। उत्पत्ति एथेरियम ब्लॉकचेन और आईपीएफएस का उपयोग कर शेयरिंग इकोनॉमी मार्केटप्लेस बनाने के लिए एक प्रोटोकॉल है।"
 
-#: templates/index.html:121
+#: templates/index.html:24
+msgid "Decentralized marketplaces on the blockchain"
+msgstr ""
+
+#: templates/index.html:27
+msgid "Origin is a protocol for creating peer-to-peer marketplaces<br>using the Ethereum blockchain and IPFS"
+msgstr ""
+
+#: templates/index.html:77
+msgid "The Origin platform"
+msgstr "मूल मंच"
+
+#: templates/index.html:80
+msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
+msgstr "हम ब्लॉकचेन पर विकेन्द्रीकृत बाजारों का निर्माण करने के लिए डेवलपर्स और व्यवसायों को सशक्त बनाते हैं। हमारा प्रोटोकॉल संपत्तियों और सेवाओं के आंशिक उपयोग के लिए लिस्टिंग बनाने और प्रबंधित करना आसान बनाता है। खरीदारों और विक्रेता एक दूसरे को खोज सकते हैं, लिस्टिंग ब्राउज़ कर सकते हैं, बुकिंग कर सकते हैं, रेटिंग और समीक्षा छोड़ सकते हैं, और भी बहुत कुछ।"
+
+#: templates/index.html:84
+msgid "Try the DApp"
+msgstr ""
+
+#: templates/index.html:90
+msgid "Join Our Discord"
+msgstr ""
+
+#: templates/index.html:107
+msgid "Partners building on Origin"
+msgstr "उत्पत्ति पर पार्टनर्स बिल्डिंग"
+
+#: templates/index.html:110
+msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
+msgstr "दुनिया भर में टीम मूल के प्रोटोकॉल पर निर्माण कर रही हैं, लेकिन हम अपने मिशन में शामिल होने के लिए और अधिक अद्भुत लोगों की तलाश में हैं।"
+
+#: templates/index.html:114
+msgid "View All Partners"
+msgstr "सभी पार्टनर देखें"
+
+#: templates/index.html:125
 msgid "Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
 msgstr "मधुमक्खी टोकन मूल प्रोटोकॉल का उपयोग करके विकेन्द्रीकृत वेब पर मेजबानों और मेहमानों के एक बिचौल मुक्त, पीयर-टू-पीयर नेटवर्क का निर्माण कर रहा है।"
 
-#: templates/index.html:129
+#: templates/index.html:133
 msgid "Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US."
 msgstr "स्पिन एक अग्रणी व्यक्तिगत गतिशीलता मंच है जो अमेरिका में 50 से अधिक बाजारों में ई-स्कूटर, ई-बाइक और बाइक किराए पर लेता है।"
 
-#: templates/index.html:137
+#: templates/index.html:141
 msgid "Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol."
 msgstr "कोजाजा मूल प्रोटोकॉल का उपयोग करके ब्लॉकचेन पर अपने होमेशरींग और पारंपरिक होमस्टे नेटवर्क का निर्माण कर रहा है।"
 
-#: templates/index.html:145
+#: templates/index.html:149
 msgid "CanYa is building their “marketplace of services” with Origin Protocol for the gig economy."
 msgstr "कैन्या गगन अर्थव्यवस्था के लिए मूल प्रोटोकॉल के साथ अपने \"सेवाओं का बाजार\" बना रहा है।"
 
-#: templates/index.html:153
+#: templates/index.html:157
 msgid "ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol."
 msgstr "ServisHero अपनी सेवाओं के बाजार का निर्माण कर रहा है जो विकास प्रोटोकॉल पर विकासशील देशों में श्रमिकों को शक्ति प्रदान करता है।"
 
-#: templates/index.html:267
-msgid "Features"
-msgstr "विशेषताएं"
+#: templates/index.html:198
+msgid "Build your business on Origin"
+msgstr "उत्पत्ति पर अपना व्यवसाय बनाएं"
 
-#: templates/index.html:279
+#: templates/index.html:201
+msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
+msgstr "चाहे आप एक स्वतंत्र फोटोग्राफर, अपार्टमेंट मालिक, बिकेशयर आपूर्तिकर्ता, या मौजूदा साझाकरण अर्थव्यवस्था व्यवसाय हैं, उत्पत्ति विकेन्द्रीकृत वेब पर व्यवसाय करना आसान बनाता है।"
+
+#: templates/index.html:201
+msgid "Get in touch to learn more."
+msgstr "अधिक जानने के लिए संपर्क में रहें।"
+
+#: templates/index.html:205
+msgid "Create Your Marketplace"
+msgstr ""
+
+#: templates/index.html:223
+msgid "It's time to replace rent-seeking middlemen"
+msgstr "किराए पर लेने वाले मध्यस्थों को बदलने का समय है"
+
+#: templates/index.html:226
+#, python-format
+msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
+msgstr "एथेरियम ब्लॉकचेन की शक्ति को मजबूत करने, लिस्टिंग को एक सुरक्षित और पारदर्शी प्रणाली के माध्यम से प्रबंधित किया जाता है जो एक तटस्थ तीसरे पक्ष के रूप में कार्य करता है। खरीदारों और विक्रेता 20-30%% लेनदेन शुल्क साझा करते हैं जो वर्तमान में उबेर, एयरबेंब, फिवरर और गेटारॉउंड जैसी कंपनियों के पास जाते हैं।"
+
+#: templates/index.html:230
+msgid "Read the Product Brief"
+msgstr ""
+
+#: templates/index.html:285
 msgid "Smart contracts enable secure and reliable payments directly from one party to another"
 msgstr "स्मार्ट अनुबंध सीधे एक पार्टी से दूसरे पक्ष में सुरक्षित और भरोसेमंद भुगतान सक्षम करते हैं"
 
-#: templates/index.html:291
+#: templates/index.html:296
 msgid "Protocol schemas support hundreds of listing types, including custom verticals"
 msgstr "प्रोटोकॉल स्कीमा कस्टम वर्टिकल सहित सैकड़ों लिस्टिंग प्रकारों का समर्थन करते हैं"
 
-#: templates/index.html:303
+#: templates/index.html:307
 msgid "Open and shared data encourages innovation by developers and businesses"
 msgstr "खुला और साझा डेटा डेवलपर्स और व्यवसायों द्वारा नवाचार को प्रोत्साहित करता है"
 
-#: templates/index.html:315
+#: templates/index.html:318
 msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
 msgstr "ब्लॉकचेन पर पहचान सत्यापन और प्रतिष्ठा डेटा सुरक्षित, प्रतिष्ठित भागीदारों को सुनिश्चित करता है"
 
-#: templates/index.html:332
+#: templates/index.html:335
 msgid "Tech Stack"
 msgstr "टेक स्टैक"
 
-#: templates/index.html:406
+#: templates/index.html:409
 msgid "Roadmap"
 msgstr "रोडमैप"
 
-#: templates/index.html:412
+#: templates/index.html:415
 msgid "May 2017"
 msgstr "मई 2017"
 
-#: templates/index.html:414
-msgid "Idea conception and demo DApp development"
-msgstr "आइडिया अवधारणा और डेमो डीएपी विकास"
+#: templates/index.html:417
+msgid "Idea conception and early development"
+msgstr ""
 
-#: templates/index.html:419
+#: templates/index.html:422
 msgid "September 2017"
 msgstr "सितंबर 2017"
 
-#: templates/index.html:421
+#: templates/index.html:424
 #, python-format
 msgid "<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released"
 msgstr "<a href='%(product_brief)s'>उत्पाद संक्षिप्त</a> और <a href='%(whitepaper)s'>व्हाइटपेपर</a> जारी किया गया"
 
-#: templates/index.html:426
+#: templates/index.html:429
 msgid "December 2017"
 msgstr "दिसंबर 2017"
 
-#: templates/index.html:428
-msgid "Launch <a href='https://demo.originprotocol.com' target='_blank'>alpha</a> on Ethereum testnet"
-msgstr "Ethereum testnet पर <a href='https://demo.originprotocol.com' target='_blank'>अल्फा</a> लॉन्च करें"
+#: templates/index.html:431
+msgid "Launch alpha on Ethereum testnet"
+msgstr ""
 
-#: templates/index.html:433
+#: templates/index.html:436
 msgid "Q2 2018"
 msgstr "क्यू 2 2018"
 
-#: templates/index.html:435
-msgid "Public beta and community sale"
-msgstr "सार्वजनिक बीटा और सामुदायिक बिक्री"
+#: templates/index.html:438
+msgid "Launch beta on Ethereum testnet"
+msgstr ""
 
-#: templates/index.html:440
+#: templates/index.html:443
 msgid "Q3 2018"
 msgstr "क्यू 3 2018"
 
-#: templates/index.html:442
-msgid "Token distribution and launch of 3rd-party DApps"
-msgstr "तीसरे पक्ष के डीएपीपीएस का टोकन वितरण और लॉन्च"
+#: templates/index.html:445
+msgid "Platform readiness and mainnet launch"
+msgstr ""
 
-#: templates/index.html:447
+#: templates/index.html:450
 msgid "2019"
 msgstr "2019"
 
-#: templates/index.html:449
-msgid "Fully decentralized services and governance"
-msgstr "पूरी तरह से विकेन्द्रीकृत सेवाओं और शासन"
+#: templates/index.html:452
+msgid "3rd-parties expected to launch DApps"
+msgstr ""
 
-#: templates/index.html:475
+#: templates/index.html:478
 msgid "Join us in building the sharing economy of tomorrow"
 msgstr "कल की साझा अर्थव्यवस्था बनाने में हमसे जुड़ें"
 
-#: templates/index.html:478
+#: templates/index.html:481
 msgid "Sign up for our mailing list and be first to learn of any Origin news!"
 msgstr "हमारी मेलिंग सूची के लिए साइन अप करें और किसी भी मूल समाचार के बारे में जानने के लिए पहले बनें!"
 
-#: templates/index.html:482
+#: templates/index.html:485
 msgid "Enter email"
 msgstr "ईमेल दर्ज करें"
 
-#: templates/index.html:485
+#: templates/index.html:488
 msgid "Join the Community"
 msgstr "समुदाय में शामिल हों"
 
-#: templates/index.html:499
+#: templates/index.html:502
 msgid "Press"
 msgstr "दबाएँ"
 
-#: templates/index.html:510
+#: templates/index.html:534
 msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
 msgstr "अगर एयरबैब आज शुरू किया जा रहा था, तो यह एक ब्लॉकचेन पर आधारित एक सहकर्मी-सह-सहकर्मी सहकारी मॉडल होगा - जोय क्रुग, Augur"
 
-#: templates/index.html:522
+#: templates/index.html:546
 msgid "Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers"
 msgstr "मूल प्रोटोकॉल पीयर-टू-पीयर ब्लॉकचेन प्लेटफ़ॉर्म के लिए $ 28 मिलियन का भुगतान करता है। टोकन बिक्री ईंधन वित्त पोषण दौर; लगभग 45 कंपनियां ग्राहकों के रूप में प्रतिबद्ध हैं"
 
-#: templates/index.html:534
+#: templates/index.html:558
 msgid "Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain."
 msgstr "उत्पत्ति का उद्देश्य प्रोटोकॉल का एक सेट बनाना है जो डेवलपर्स और व्यवसायों को एक ब्लॉकचेन पर एक विकेन्द्रीकृत साझाकरण अर्थव्यवस्था बाजार बनाने की अनुमति देता है।"
 
-#: templates/index.html:546
+#: templates/index.html:576
 msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
 msgstr "उत्पत्ति प्रोटोकॉल, जो ईथरियम ब्लॉकचेन का उपयोग करता है, खरीदारों और विक्रेताओं को प्रभावी ढंग से एक दूसरे के साथ बातचीत करने में सक्षम बनाता है।"
 
-#: templates/index.html:558
+#: templates/index.html:588
 msgid "A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy."
 msgstr "एक विकेन्द्रीकृत डिजिटल लेजर जो मध्यस्थ (और इसके फीस के बिना) के बीच लेनदेन की अनुमति देता है, साझा करने वाली अर्थव्यवस्था में उपयोगकर्ता अनुभव को पुन: पेश करने के लिए तैयार है।"
 
-#: templates/index.html:570
+#: templates/index.html:600
 msgid "It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too."
 msgstr "यह उष्णकटिबंधीय और नीच क्रांतिकारी लगता है: उदार सामाजिक उद्यमों और गैर-लाभकारी संगठनों की दुनिया जो उपभोक्ताओं को सशक्त बनाने और उन्हें अपने गोपनीयता अधिकार वापस देने की मांग करती है, और शायद उन्हें कुछ पैसे भी बचा सकती है।"
 
-#: templates/index.html:582
+#: templates/index.html:619
 msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
 msgstr "मूल प्रोटोकॉल पारंपरिक मध्यस्थों के बिना विकेन्द्रीकृत वातावरण में खरीदारों और विक्रेताओं को लेनदेन करने में मदद करने के लिए एथेरियम ब्लॉकचेन का उपयोग करता है।"
 
-#: templates/index.html:594
-msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
-msgstr "मूल रूप से कुछ भी के लिए सीधे लेनदेन के लिए एक पीयर-टू-पीयर नेटवर्क बनाकर उत्पत्ति के साथ साझाकरण अर्थव्यवस्था को विकेन्द्रीकृत करने की उम्मीद है।"
+#: templates/index.html:631
+msgid "Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet."
+msgstr ""
 
-#: templates/index.html:607
-msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
-msgstr "क्या होगा यदि ओपन-सोर्स सॉफ़्टवेयर दर्जनों बहु-मिलियन या यहां तक ​​कि बहु अरब डॉलर की कंपनियों को प्रतिस्थापित कर सकता है?"
-
-#: templates/index.html:619
+#: templates/index.html:643
 msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
 msgstr "ओरिजिन प्रोटोकॉल एक विकेन्द्रीकृत, खुले वेब प्लेटफ़ॉर्म पर लेनदेन करने के लिए कार-शेयरिंग या होम-शेयरिंग जैसी सेवाओं के खरीदारों और विक्रेताओं के लिए ओपन-सोर्स ब्लॉकचेन प्रोटोकॉल का एक सेट है।"
 
-#: templates/index.html:636
-msgid "Make new friends!"
-msgstr "नए दोस्त बनाओ!"
+#: templates/index.html:661
+msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
+msgstr "क्या होगा यदि ओपन-सोर्स सॉफ़्टवेयर दर्जनों बहु-मिलियन या यहां तक ​​कि बहु अरब डॉलर की कंपनियों को प्रतिस्थापित कर सकता है?"
 
-#: templates/mobile.html:2 templates/mobile.html:3
+#: templates/index.html:674
+msgid "Origin Protocol offers an entire blockchain-based platform to allow anyone to create their own property-sharing business."
+msgstr ""
+
+#: templates/index.html:687
+msgid "Origin Protocol, a blockchain project building a decentralized marketplace, has rolled out a peer-to-peer messaging application built on top of ethereum."
+msgstr ""
+
+#: templates/index.html:700
+msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
+msgstr ""
+
+#: templates/mobile.html:3 templates/mobile.html:4
 msgid "Origin Protocol - Mobile"
 msgstr "उत्पत्ति प्रोटोकॉल - मोबाइल"
 
-#: templates/navbar.html:77
+#: templates/navbar.html:83
 msgid "Blog"
 msgstr "ब्लॉग"
 
-#: templates/navbar.html:80
-msgid "Demo"
-msgstr "डेमो"
+#: templates/navbar.html:86
+msgid "DApp"
+msgstr ""
 
 #: templates/partners.html:3 templates/partners.html:5
 msgid "Origin Protocol - Build on Origin"
 msgstr "उत्पत्ति प्रोटोकॉल - उत्पत्ति पर बनाएँ"
 
-#: templates/partners.html:16
+#: templates/partners.html:18
 msgid "Build on Origin"
 msgstr "उत्पत्ति पर बनाएँ"
 
-#: templates/partners.html:22
+#: templates/partners.html:24
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong>दुनिया भर में टीम मूल के प्रोटोकॉल का उपयोग कर अपनी परियोजनाओं का निर्माण कर रहे हैं। हम करने के लिए और अधिक अद्भुत लोगों के लिए देख रहे हैं <a href='#join_our_mission'>हमारे मिशन में शामिल होने के</a>।</strong>"
 
-#: templates/partners.html:87
+#: templates/partners.html:89
 msgid "View More"
 msgstr "और देखो"
 
-#: templates/partners.html:88
+#: templates/partners.html:90
 msgid "View Less"
 msgstr "कम देखें"
 
-#: templates/partners.html:118
+#: templates/partners.html:120
 msgid "Join our mission!"
 msgstr "हमारे मिशन में शामिल हों!"
 
-#: templates/partners.html:121
+#: templates/partners.html:123
 msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
 msgstr "चाहे आप मौजूदा ब्लॉकचेन कंपनी हों या पारंपरिक बाजार में ब्लॉकचेन तकनीक के बारे में सोच रहे हों, हम आपको सुनना पसंद करेंगे। नीचे दिए गए फॉर्म को भरें और हम जल्द ही आपसे संपर्क करेंगे।"
 
-#: templates/partners.html:125
+#: templates/partners.html:127
 msgid "Name"
 msgstr "नाम"
 
-#: templates/partners.html:126
+#: templates/partners.html:128
 msgid "Firstname Lastname"
 msgstr "प्रथम नाम अंतिम नाम"
 
-#: templates/partners.html:129
+#: templates/partners.html:131
 msgid "Company"
 msgstr "कंपनी"
 
-#: templates/partners.html:130
+#: templates/partners.html:132
 msgid "My Amazing Company"
 msgstr "मेरी अद्भुत कंपनी"
 
-#: templates/partners.html:133 templates/presale.html:74
-#: templates/presale.html:75
+#: templates/partners.html:135 templates/tokens.html:76
+#: templates/tokens.html:77
 msgid "Email"
 msgstr "ईमेल"
 
-#: templates/partners.html:134
+#: templates/partners.html:136
 msgid "yourname@websitename.com"
 msgstr "yourname@websitename.com"
 
-#: templates/partners.html:137
+#: templates/partners.html:139
 msgid "Website"
 msgstr "वेबसाइट"
 
-#: templates/partners.html:138
+#: templates/partners.html:140
 msgid "https://websitename.com"
 msgstr "https://websitename.com"
 
-#: templates/partners.html:141 templates/presale.html:384
+#: templates/partners.html:143 templates/tokens.html:386
 msgid "<strong>Anything else we should know?</strong> (optional)"
 msgstr "<strong>हमें और कुछ और पता होना चाहिए?</strong> (वैकल्पिक)"
 
-#: templates/partners.html:153
+#: templates/partners.html:155
 msgid "Become a Partner"
 msgstr "भागीदार बनें"
 
-#: templates/presale.html:3 templates/presale.html:5 templates/privacy.html:2
-#: templates/privacy.html:3 templates/tos.html:2 templates/tos.html:3
-msgid "Origin Protocol - Presale"
-msgstr "उत्पत्ति प्रोटोकॉल - प्रेसेले"
+#: templates/privacy.html:3 templates/privacy.html:5
+msgid "Origin Protocol - Privacy Policy"
+msgstr ""
 
-#: templates/presale.html:21
-msgid "<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced."
-msgstr "<strong>मूल प्रेसील की सटीक तारीख और विवरण अभी तक घोषित नहीं किए गए हैं।</strong> अगर आप मूल प्रेसीड में भाग लेने में रूचि रखते हैं तो कृपया इस फॉर्म को भरें और अपडेट करना चाहते हैं क्योंकि अधिक जानकारी घोषित की गई है।"
-
-#: templates/presale.html:66
-msgid "Interested in contributing?"
-msgstr "योगदान में रुचि रखते हैं?"
-
-#: templates/presale.html:70 templates/presale.html:71
-msgid "Full Name"
-msgstr "पूरा नाम"
-
-#: templates/presale.html:78
-msgid "Are you an accredited investor?"
-msgstr "क्या आप एक मान्यता प्राप्त निवेशक हैं?"
-
-#: templates/presale.html:78
-msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
-msgstr "एक मान्यता प्राप्त निवेशक के पास कम से कम $ 1,000,000 का शुद्ध मूल्य होना चाहिए, किसी के प्राथमिक निवास के मूल्य को छोड़कर, या पिछले दो वर्षों से प्रत्येक वर्ष कम से कम $ 200,000 आय (या $ 300,000 संयुक्त आय अगर शादी हो।)"
-
-#: templates/presale.html:78
-msgid "Huh?"
-msgstr "है ना?"
-
-#: templates/presale.html:81
-msgid "Yes"
-msgstr "हाँ"
-
-#: templates/presale.html:86
-msgid "No"
-msgstr "नहीं"
-
-#: templates/presale.html:91
-msgid "What type of entity do you represent?"
-msgstr "आप किस प्रकार की इकाई का प्रतिनिधित्व करते हैं?"
-
-#: templates/presale.html:94
-msgid "Individual"
-msgstr "व्यक्ति"
-
-#: templates/presale.html:99
-msgid "Syndicate"
-msgstr "सिंडीकेट"
-
-#: templates/presale.html:104
-msgid "Professional Fund"
-msgstr "व्यावसायिक निधि"
-
-#: templates/presale.html:110
-msgid "<strong>Desired allocation</strong>"
-msgstr "<strong>वांछित आवंटन</strong>"
-
-#: templates/presale.html:126
-msgid "Citizenship"
-msgstr "नागरिकता"
-
-#: templates/presale.html:380
-msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
-msgstr "<strong>ईटीएच या बीटीसी पता आप से भेजने की योजना है?</strong> (वैकल्पिक)"
-
-#: templates/presale.html:388
-msgid "Important notice"
-msgstr "महत्वपूर्ण सूचना"
-
-#: templates/presale.html:391
-msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
-msgstr " मैं समझता हूं कि प्रेसील संयुक्त राज्य के नियमों और प्रतिभूतियों कानूनों के अधीन होगा और यह फॉर्म जमा करने की आवंटन की गारंटी नहीं है।"
-
-#: templates/presale.html:400
-msgid "Submit"
-msgstr "जमा करें"
-
-#: templates/privacy.html:12
+#: templates/privacy.html:18
 msgid "Privacy Policy"
 msgstr "गोपनीयता नीति"
 
@@ -608,300 +711,376 @@ msgstr "गोपनीयता नीति"
 msgid "Origin Protocol - Team"
 msgstr "उत्पत्ति प्रोटोकॉल - टीम"
 
-#: templates/team.html:22
+#: templates/team.html:24
 msgid "Our Team"
 msgstr "हमारी टीम"
 
-#: templates/team.html:27
+#: templates/team.html:29
 msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
 msgstr "उत्पत्ति वितरित उद्यमियों, इंजीनियरों और ब्लॉकचेन विशेषज्ञों की एक टीम है। हमारा मिशन विकेन्द्रीकृत वेब पर साझा अर्थव्यवस्था को सक्षम करना है। हम नौकरी पर रख रहे हैं!"
 
-#: templates/team.html:58
+#: templates/team.html:60
 msgid "Core Team"
 msgstr "कोर टीम"
 
-#: templates/team.html:67
+#: templates/team.html:69
 msgid "Josh Fraser"
 msgstr "जोश फ्रेज़र"
 
-#: templates/team.html:71 templates/team.html:88
+#: templates/team.html:73 templates/team.html:90
 msgid "Cofounder"
 msgstr "सह-संस्थापक"
 
-#: templates/team.html:74
+#: templates/team.html:76
 msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "जोश ने 10 साल की उम्र में कोडिंग शुरू कर दी। उत्पत्ति से पहले, उन्होंने तीन अन्य उद्यम समर्थित कंपनियों की सह-स्थापना की: इवेंटव्यू, टोरबिट (वॉलमार्ट लैब्स द्वारा अधिग्रहित) &amp; फोरेज।"
 
-#: templates/team.html:84
+#: templates/team.html:86
 msgid "Matthew Liu"
 msgstr "मैथ्यू लियू"
 
-#: templates/team.html:91
+#: templates/team.html:93
 msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "मैट यूट्यूब (Google द्वारा अधिग्रहित) और वीपी पीएम क्यूकी (याहू द्वारा अधिग्रहित) और बोनोबोस (वॉलमार्ट द्वारा अधिग्रहित) में तीसरा पीएम था। उनके पास स्टैनफोर्ड से एमएस और बीएस है।"
 
-#: templates/team.html:101
+#: templates/team.html:103
 msgid "Stan James"
 msgstr "स्टेन जेम्स"
 
-#: templates/team.html:105 templates/team.html:190
+#: templates/team.html:107 templates/team.html:175 templates/team.html:228
+#: templates/team.html:318
 msgid "Senior Engineer"
 msgstr "वरिष्ठ इंजीनियर"
 
-#: templates/team.html:108
-msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
-msgstr "स्टेन गेम डिज़ाइन और मशीन लर्निंग में गहरे अनुभव के साथ एक सॉफ्टवेयर आर्किटेक्ट है। पहले, उन्होंने लिजीट नेटवर्क की स्थापना की (संघीय मीडिया द्वारा अधिग्रहित)।"
+#: templates/team.html:110
+msgid "Stan is a software architect with patents in decentralized trust, game design, computer vision, and robotics. Previously, he founded Lijit Networks (acquired by Federated Media)."
+msgstr ""
 
-#: templates/team.html:118
-msgid "Andrew Hyde"
-msgstr "एंड्रयू हाइड"
-
-#: templates/team.html:125
-msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
-msgstr "एंड्रयू स्टार्टअप वीकएंड समेत चार स्टार्टअप के संस्थापक थे, और उन्होंने दर्जनों देशों में वैश्विक समुदायों का निर्माण किया है। वह टेकस्टार पर कर्मचारी नंबर 1 था।"
-
-#: templates/team.html:139
+#: templates/team.html:124
 msgid "Partnerships"
 msgstr "भागीदारी"
 
-#: templates/team.html:142
+#: templates/team.html:127
 msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr "कोलमन एक सक्रिय क्रिप्टोकुरेंसी निवेशक और रियल एस्टेट उद्यमी है, जो कई एयरबैन गुणों का स्वामित्व और प्रबंधन करता है। उन्होंने बर्कले में गणित का अध्ययन किया।"
 
-#: templates/team.html:152
+#: templates/team.html:137
 msgid "Jon Hearty"
 msgstr "जॉन हार्दिक"
 
-#: templates/team.html:156
+#: templates/team.html:141
 msgid "Business Development"
 msgstr "व्यापार विकास"
 
-#: templates/team.html:159
+#: templates/team.html:144
 msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
 msgstr "जॉन रेडबीकॉन (द होम डिपो द्वारा अधिग्रहित) में 10 वां किराया था और डेटनीज़ में पहला किराया था जहां उन्होंने विकास के वीपी से सीओओ तक कई व्यावसायिक विकास भूमिकाओं में कार्य किया था।"
 
-#: templates/team.html:169
+#: templates/team.html:154
 msgid "Yu Pan"
 msgstr "यू पैन"
 
-#: templates/team.html:173
+#: templates/team.html:158
 msgid "R&D Engineer"
 msgstr "आर एंड डी अभियंता"
 
-#: templates/team.html:176
+#: templates/team.html:161
 msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate."
 msgstr "यू पैन पेपैल के 6 संस्थापक टीम के सदस्यों में से एक था और यूट्यूब में पहला कर्मचारी था। वह एक पूर्व Google कर्मचारी और कीवी क्रेट के सह-संस्थापक हैं।"
 
-#: templates/team.html:186
+#: templates/team.html:171
 msgid "Cuong Do"
 msgstr "कुओंग डू"
 
-#: templates/team.html:193
+#: templates/team.html:178
 msgid "Cuong Do was the former head of Dropbox NYC Engineering. Before that, Cuong was one of the early team members at PayPal and worked alongside Yu Pan and Matt at YouTube."
 msgstr "कुओंग डो ड्रॉपबॉक्स एनवाईसी इंजीनियरिंग के पूर्व प्रमुख थे। इससे पहले, क्यूओंग पेपैल के शुरुआती टीम के सदस्यों में से एक था और यूट्यूब में यू पैन और मैट के साथ काम करता था।"
 
-#: templates/team.html:203
+#: templates/team.html:188
 msgid "Micah Alcorn"
 msgstr "मीका अल्कोर्न"
 
-#: templates/team.html:207 templates/team.html:224 templates/team.html:276
-#: templates/team.html:293 templates/team.html:310
+#: templates/team.html:192 templates/team.html:282
 msgid "Engineer"
 msgstr "इंजीनियर"
 
+#: templates/team.html:195
+msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
+msgstr ""
+
+#: templates/team.html:206
+msgid "Kay Yoo"
+msgstr ""
+
 #: templates/team.html:210
-msgid "Micah has been a commercial real estate broker for over a decade while developing software along the way. He is the technical cofounder of WellAttended, a bootstrapped box office management platform."
-msgstr "रास्ते में सॉफ्टवेयर विकसित करते समय मीका एक दशक से अधिक के लिए एक वाणिज्यिक अचल संपत्ति दलाल रहा है। वह WellAttended, बूटस्ट्रैप बॉक्स ऑफिस प्रबंधन मंच का तकनीकी कोफाउंडर है।"
+msgid "Finance & Operations"
+msgstr ""
 
-#: templates/team.html:220
-msgid "Tyler Yasaka"
-msgstr "टायलर यासाका"
+#: templates/team.html:213
+msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
+msgstr ""
 
-#: templates/team.html:227
-msgid "Tyler is a full stack developer and blockchain enthusiast. He is a recent college graduate who has helped build an ecommerce platform in the auto recycling industry."
-msgstr "टायलर एक पूर्ण स्टैक डेवलपर और ब्लॉकचेन उत्साही है। वह हाल ही में कॉलेज के स्नातक हैं जिन्होंने ऑटो रीसाइक्लिंग उद्योग में ईकॉमर्स मंच बनाने में मदद की है।"
+#: templates/team.html:224
+msgid "Franck Chastagnol"
+msgstr ""
+
+#: templates/team.html:231
+msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
+msgstr ""
+
+#: templates/team.html:242
+msgid "Austin Virts"
+msgstr ""
 
 #: templates/team.html:246
-msgid "Extended Team"
-msgstr "विस्तारित टीम"
+msgid "Marketing"
+msgstr ""
 
-#: templates/team.html:255
-msgid "Aure Gimon"
-msgstr "Aure Gimon"
+#: templates/team.html:249
+msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
+msgstr ""
 
-#: templates/team.html:259
-msgid "Product Designer"
-msgstr "उत्पाद रचिता"
+#: templates/team.html:260
+msgid "Mila Choi"
+msgstr ""
 
-#: templates/team.html:262
-msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
-msgstr "Aure के उत्पादों को क्राफ्ट करने में गहरा अनुभव है जो उपयोगकर्ताओं को प्रसन्न करता है। उन्होंने शीर्ष ब्रांड (नाइकी, सोनी, वर्जिन) और सिलिकॉन घाटी स्टार्टअप के साथ अनुभव डिजाइन किए हैं।"
+#: templates/team.html:264
+msgid "Korea Community"
+msgstr ""
 
-#: templates/team.html:272
-msgid "Daniel Von Fange"
-msgstr "डैनियल वॉन फेंग"
+#: templates/team.html:267
+msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
+msgstr ""
 
-#: templates/team.html:279
-msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
-msgstr "डैनियल एक पूर्ण ढेर, बहुभाषी डेवलपर है। उन्होंने दुनिया भर में अरबों डॉलर के एनजीओ व्यय को ट्रैक करने वाले असेंबली प्रोग्रामिंग से आर्किटेक्चरिंग सिस्टम तक परियोजनाओं पर काम किया है।"
+#: templates/team.html:278
+msgid "Tom Linton"
+msgstr ""
 
-#: templates/team.html:289
-msgid "Gagandeep Singh"
-msgstr "गगनदीप सिंह"
+#: templates/team.html:285
+msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
+msgstr ""
 
 #: templates/team.html:296
-msgid "Gagan is a full stack developer with over 4 years of experience working with several early stage startups. He has expertise in building scalable enterprise-grade applications."
-msgstr "गगन एक पूर्ण स्टैक डेवलपर है जो कई शुरुआती चरण स्टार्टअप के साथ काम करने के 4 वर्षों से अधिक अनुभव के साथ है। स्केलेबल एंटरप्राइज़-ग्रेड अनुप्रयोगों के निर्माण में उनकी विशेषज्ञता है।"
+msgid "Anna Wang"
+msgstr ""
 
-#: templates/team.html:306
+#: templates/team.html:300
+msgid "China Community"
+msgstr ""
+
+#: templates/team.html:303
+msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
+msgstr ""
+
+#: templates/team.html:314
 msgid "Nick Poulden"
 msgstr "निक पॉल्डेन"
 
-#: templates/team.html:313
-msgid "Nick founded his first company while still at college in the UK, later moving to Silicon Valley to work as a UI Architect for multiple organizations, small and large."
-msgstr "निक ने यूके में कॉलेज में रहते हुए अपनी पहली कंपनी की स्थापना की, बाद में सिलिकॉन घाटी में कई संगठनों के लिए यूआई आर्किटेक्ट के रूप में काम करने के लिए आगे बढ़े, छोटे और बड़े।"
+#: templates/team.html:321
+msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
+msgstr ""
 
-#: templates/team.html:323
-msgid "Kath Brandon"
-msgstr "कैथ ब्रैंडन"
-
-#: templates/team.html:330
-msgid "Kath has over 30 years of recruiting experience and spent 9 years in operations at Apple. She has also volunteered with Ignite Boulder, The Humane Society, adult literacy programs and the Alzheimer's Association."
-msgstr "काठ में भर्ती अनुभव के 30 से अधिक वर्षों का अनुभव है और ऐप्पल में ऑपरेशन में 9 साल बिताए हैं। उन्होंने इग्नाइट बोल्डर, द ह्यूमेन सोसाइटी, वयस्क साक्षरता कार्यक्रम और अल्जाइमर एसोसिएशन के साथ भी स्वयंसेवा किया है।"
-
-#: templates/team.html:340
-msgid "Dave Craige"
-msgstr "डेव क्रेगे"
-
-#: templates/team.html:347
-msgid "Dave is a serial entrepreneur whose last startup was acquired in 2016.  He runs private communities for cryptocurrency investors and startup founders. He consults with two nonprofit organizations."
-msgstr "डेव एक धारावाहिक उद्यमी है जिसका अंतिम स्टार्टअप 2016 में हासिल किया गया था। वह क्रिप्टोकुरेंसी निवेशकों और स्टार्टअप संस्थापकों के लिए निजी समुदायों को चलाता है। वह दो गैर-लाभकारी संगठनों के साथ मिलकर काम करता है।"
-
-#: templates/team.html:357
-msgid "Mijbel AlQattan"
-msgstr "मिजबेल अलकाटन"
-
-#: templates/team.html:364
-msgid "Mijbel has over 12 years of experience in venture and consulting. His interests are primarily in data science and machine learning. Mijbel graduated from Virginia Tech in computer engineering and holds a CFA."
-msgstr "मिजबेल उद्यम और परामर्श में 12 से अधिक वर्षों का अनुभव है। उनकी रूचि मुख्य रूप से डेटा विज्ञान और मशीन सीखने में हैं। मिजबेल ने कंप्यूटर इंजीनियरिंग में वर्जीनिया टेक से स्नातक की उपाधि प्राप्त की और एक सीएफए रखा।"
-
-#: templates/team.html:374
-msgid "Andrei Munteanu"
-msgstr "आंद्रेई मुन्तेनु"
-
-#: templates/team.html:381
-msgid "Andrei is the co-founder at Cowork Timisoara and an active startup community leader. He runs a NGO which supports young entrepreneurs in Romania through programs like Startup Weekend, Startup Survivor, and Startup Coffee."
-msgstr "आंद्रेई कॉर्क टिमिसोरा में सह-संस्थापक और एक सक्रिय स्टार्टअप समुदाय नेता है। वह एक गैर सरकारी संगठन चलाता है जो स्टार्टअप सप्ताहांत, स्टार्टअप उत्तरजीवी और स्टार्टअप कॉफी जैसे कार्यक्रमों के माध्यम से रोमानिया में युवा उद्यमियों का समर्थन करता है।"
-
-#: templates/team.html:399
+#: templates/team.html:341
 msgid "Advisors"
 msgstr "सलाहकार"
 
-#: templates/team.html:408
+#: templates/team.html:350
 msgid "Addison Huegel"
 msgstr "एडिसन ह्यूजेल"
 
-#: templates/team.html:412
+#: templates/team.html:354
 msgid "Advisor/PR"
 msgstr "सलाहकार / पीआर"
 
-#: templates/team.html:415
+#: templates/team.html:357
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "एडिसन यूसी बर्कले से भौतिकी में डिग्री के साथ एक संचार और विपणन विशेषज्ञ है। उन्होंने पहले एथेरियम फाउंडेशन और डेवीओएन 1 के साथ काम किया था।"
 
-#: templates/team.html:425
+#: templates/team.html:367
 msgid "Melody He"
 msgstr "मेलोडी हे"
 
-#: templates/team.html:429
+#: templates/team.html:371
 msgid "Advisor/International BD"
 msgstr "सलाहकार / अंतर्राष्ट्रीय बीडी"
 
-#: templates/team.html:432
+#: templates/team.html:374
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "मेलोडी स्पार्टन ग्रुप, एक ब्लॉकचेन सलाहकार और निवेश निधि का संस्थापक है। वह टेनेक्स में शुरुआती निवेशक और गिफ्टो और एपकोइन्स के रणनीतिक सलाहकार थे।"
 
-#: templates/team.html:442
+#: templates/team.html:384
 msgid "Paul Veradittakit"
 msgstr "पॉल Veradittakit"
 
-#: templates/team.html:446 templates/team.html:463
+#: templates/team.html:388 templates/team.html:405
 msgid "Advisor"
 msgstr "सलाहकार"
 
-#: templates/team.html:449
+#: templates/team.html:391
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "पॉल पैन्टेरा कैपिटल में एक साथी है। वह आर्किड लैब्स, इनिग्मा और आईसीओएन सहित कई अत्यधिक सफल क्रिप्टोकुरेंसी परियोजनाओं के सलाहकार भी हैं।"
 
-#: templates/team.html:459
+#: templates/team.html:401
 msgid "Joey Krug"
 msgstr "जॉय क्रुग"
 
-#: templates/team.html:466
+#: templates/team.html:408
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "जोय दुनिया के पहले विकेन्द्रीकृत भविष्यवाणी बाजार और ओरेकल प्रणाली, ऑगुर के सह-संस्थापक हैं। वह पैन्टेरा कैपिटल में एक सह-मुख्य निवेश अधिकारी हैं।"
 
-#: templates/team.html:510
+#: templates/team.html:418
+msgid "Andrew Hyde"
+msgstr "एंड्रयू हाइड"
+
+#: templates/team.html:425
+msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
+msgstr "एंड्रयू स्टार्टअप वीकएंड समेत चार स्टार्टअप के संस्थापक थे, और उन्होंने दर्जनों देशों में वैश्विक समुदायों का निर्माण किया है। वह टेकस्टार पर कर्मचारी नंबर 1 था।"
+
+#: templates/team.html:459
+msgid "Open-source Contributors"
+msgstr ""
+
+#: templates/team.html:517
 msgid "Investment Funds"
 msgstr "निवेशित राशि"
 
-#: templates/team.html:710
+#: templates/team.html:735
 msgid "Individual Investors"
 msgstr "व्यक्तिगत निवेशक"
 
-#: templates/team.html:719
+#: templates/team.html:744
 msgid "Steve Jang"
 msgstr "स्टीव जांग"
 
-#: templates/team.html:729
+#: templates/team.html:754
 msgid "Xiahong Lin"
 msgstr "ज़ियाओंग लिन"
 
-#: templates/team.html:739
+#: templates/team.html:764
 msgid "Alexis Ohanian"
 msgstr "एलेक्सिस ओहैनियन"
 
-#: templates/team.html:749
+#: templates/team.html:774
 msgid "Gil Penchina"
 msgstr "गिल पेनचिना"
 
-#: templates/team.html:759
+#: templates/team.html:784
 msgid "Kamal Ravikant"
 msgstr "कमल रविकांत"
 
-#: templates/team.html:769
+#: templates/team.html:794
 msgid "Garry Tan"
 msgstr "गैरी टैन"
 
-#: templates/warning.html:5
-msgid "<strong>Don't get Phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
-msgstr "<strong>फिश मत बनो!</strong> ओरिजिनल प्रोटोकॉल के लिए एकमात्र आधिकारिक यूआरएल <strong>www.originprotocol.com</strong>। कृपया बुकमार्क करें और समान दिखने वाले यूआरएल से सावधान रहें।"
+#: templates/tokens.html:3 templates/tokens.html:5
+msgid "Origin Protocol - Tokens"
+msgstr ""
 
-#: views/web_views.py:112 views/web_views.py:174
+#: templates/tokens.html:23
+msgid "<strong>Origin tokens are not currently available for purchase.</strong><br> Please fill out this form if you are interested in participating in any future tokens sales and would like to be updated as more details are announced."
+msgstr ""
+
+#: templates/tokens.html:68
+msgid "Interested in Origin tokens?"
+msgstr ""
+
+#: templates/tokens.html:72 templates/tokens.html:73
+msgid "Full Name"
+msgstr "पूरा नाम"
+
+#: templates/tokens.html:80
+msgid "Are you an accredited investor?"
+msgstr "क्या आप एक मान्यता प्राप्त निवेशक हैं?"
+
+#: templates/tokens.html:80
+msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
+msgstr "एक मान्यता प्राप्त निवेशक के पास कम से कम $ 1,000,000 का शुद्ध मूल्य होना चाहिए, किसी के प्राथमिक निवास के मूल्य को छोड़कर, या पिछले दो वर्षों से प्रत्येक वर्ष कम से कम $ 200,000 आय (या $ 300,000 संयुक्त आय अगर शादी हो।)"
+
+#: templates/tokens.html:80
+msgid "Huh?"
+msgstr "है ना?"
+
+#: templates/tokens.html:83
+msgid "Yes"
+msgstr "हाँ"
+
+#: templates/tokens.html:88
+msgid "No"
+msgstr "नहीं"
+
+#: templates/tokens.html:93
+msgid "What type of entity do you represent?"
+msgstr "आप किस प्रकार की इकाई का प्रतिनिधित्व करते हैं?"
+
+#: templates/tokens.html:96
+msgid "Individual"
+msgstr "व्यक्ति"
+
+#: templates/tokens.html:101
+msgid "Syndicate"
+msgstr "सिंडीकेट"
+
+#: templates/tokens.html:106
+msgid "Professional Fund"
+msgstr "व्यावसायिक निधि"
+
+#: templates/tokens.html:112
+msgid "<strong>Desired allocation</strong>"
+msgstr "<strong>वांछित आवंटन</strong>"
+
+#: templates/tokens.html:128
+msgid "Citizenship"
+msgstr "नागरिकता"
+
+#: templates/tokens.html:382
+msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
+msgstr "<strong>ईटीएच या बीटीसी पता आप से भेजने की योजना है?</strong> (वैकल्पिक)"
+
+#: templates/tokens.html:390
+msgid "Important notice"
+msgstr "महत्वपूर्ण सूचना"
+
+#: templates/tokens.html:393
+msgid " I understand any token sales will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
+msgstr ""
+
+#: templates/tokens.html:402
+msgid "Submit"
+msgstr "जमा करें"
+
+#: templates/tos.html:3 templates/tos.html:5
+msgid "Origin Protocol - Terms of Service"
+msgstr ""
+
+#: templates/warning.html:9
+msgid "<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
+msgstr ""
+
+#: views/web_views.py:143 views/web_views.py:217
 msgid "Please enter your name"
 msgstr "अपना नाम दर्ज करें"
 
-#: views/web_views.py:114 views/web_views.py:178
+#: views/web_views.py:145 views/web_views.py:221
 msgid "Please enter your email"
 msgstr "अपना ईमेल दर्ज करें"
 
-#: views/web_views.py:116
+#: views/web_views.py:147
 msgid "An error occured"
 msgstr "एक त्रुटि हुई"
 
-#: views/web_views.py:118
+#: views/web_views.py:149
 msgid "Please enter your desired allocation"
 msgstr "कृपया अपना वांछित आवंटन दर्ज करें"
 
-#: views/web_views.py:120
+#: views/web_views.py:151
 msgid "Please agree to the important notice"
 msgstr "कृपया महत्वपूर्ण सूचना से सहमत हों"
 
-#: views/web_views.py:122 views/web_views.py:180
+#: views/web_views.py:153 views/web_views.py:223
 msgid "Please prove you are not a robot."
 msgstr "कृपया साबित करें कि आप रोबोट नहीं हैं।"
 
-#: views/web_views.py:176
+#: views/web_views.py:219
 msgid "Please enter your company name"
 msgstr "कृपया अपनी कंपनी का नाम दर्ज करें"
 
