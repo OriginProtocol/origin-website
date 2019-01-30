@@ -120,6 +120,7 @@ def join_mailing_list():
     email = request.form['email']
     ip_addr = get_real_ip()
     feedback = mailing_list.send_welcome(email, ip_addr)
+    mailing_list.add_sendgrid_contact(email)
     return jsonify(feedback)
 
 @app.route('/vk577', methods=['GET'])
@@ -152,6 +153,7 @@ def join_presale():
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
+    mailing_list.add_sendgrid_contact(email, full_name, citizenship)
     flash(feedback)
     return jsonify("OK")
 
@@ -159,6 +161,7 @@ def join_presale():
 def unsubscribe():
     email = request.args.get("email")
     feedback = mailing_list.unsubscribe(email)
+    mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
     return redirect('/', code=302)
 
@@ -223,6 +226,7 @@ def partners_interest():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.partners_interest(name, company_name, email,
                                               website, note, ip_addr)
+    mailing_list.add_sendgrid_contact(email,name)
     flash(feedback)
     return jsonify("OK")
 
