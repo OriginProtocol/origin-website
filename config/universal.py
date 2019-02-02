@@ -25,6 +25,7 @@ DISCORD_URL = 'https://discord.gg/jyxpUSe'
 TELEGRAM_URL = 'https://t.me/originprotocol'
 TWITTER_URL = 'https://twitter.com/originprotocol'
 FACEBOOK_URL = 'https://www.facebook.com/originprotocol'
+IOS_URL = 'https://itunes.apple.com/app/origin-wallet/id1446091928'
 
 DEFAULT_SHARE_MSG = quote('Check out ' + BUSINESS_NAME + ', an exciting blockchain project that will decentralize the sharing economy.')
 DEFAULT_PARTICLE_ICON = constants.DEFAULT_PARTICLE_ICON
