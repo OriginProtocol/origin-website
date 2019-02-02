@@ -1,15 +1,53 @@
+import json
 import re
 
-from flask import jsonify, flash, redirect
-
+from config import constants
 from config import universal
 from database import db, db_common, db_models
-from logic.emails import email_types
-from util import sendgrid_wrapper as sgw
-from tools import db_utils
+from flask import jsonify, flash, redirect
 from flask_babel import gettext, Babel, Locale
+from logic.emails import email_types
+from nameparser import HumanName
+import sendgrid
+from tools import db_utils
+from util import sendgrid_wrapper as sgw
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
+
+# we use our own database as the final source of truth for our mailing list
+# but we sync email signups and unsubscribes to sendgrid for convenience
+
+def add_sendgrid_contact(email, full_name=None, citizenship=None):
+    try:
+        # pytest.skip("avoid making remote calls")
+        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        first_name = last_name = None
+        if full_name:
+            name = HumanName(full_name)
+            first_name = name.first
+            last_name = name.last
+
+        data = [{
+            "email": email,
+            "first_name": first_name,
+            "last_name": last_name,
+            "country_code": citizenship
+        }]
+        response = sg_api.client.contactdb.recipients.post(request_body=data)
+    except:
+        return False
+
+def unsubscribe_sendgrid_contact(email):
+    try:
+        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        unsubscribe_group = 51716 # Universal unsubscribe group
+
+        data = {
+            "recipient_emails": [email]
+        }
+        response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
+    except:
+        return False
 
 def send_welcome(email, ip_addr):
 
@@ -87,6 +125,7 @@ def unsubscribe(email):
     try:
         me = db_models.EmailList.query.filter_by(email=email).first()
         if me:
+            # mark DB as unsubscribed in our DB
             me.unsubscribed = True
             db.session.commit()
     except Exception as e:
