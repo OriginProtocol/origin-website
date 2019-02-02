@@ -15,7 +15,7 @@ fake = Faker()
 
 def test_root_returns_302(client):
     res = client.get(url_for('root'))
-    assert res.status_code == 302
+    assert res.status_code == 200
 
 
 def test_index_returns_200(client):

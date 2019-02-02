@@ -42,7 +42,7 @@ def beforeRequest():
 
 @app.route('/')
 def root():
-    return redirect(url_for('index', lang_code=get_locale()))
+    return render_template('index.html')
 
 @app.route('/robots.txt')
 def robots():
