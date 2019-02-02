@@ -1,13 +1,14 @@
 import json
 import re
 
-from config import universal
 from config import constants
+from config import universal
 from database import db, db_common, db_models
 from flask import jsonify, flash, redirect
 from flask_babel import gettext, Babel, Locale
 from logic.emails import email_types
 from nameparser import HumanName
+import pytest
 import sendgrid
 from tools import db_utils
 from util import sendgrid_wrapper as sgw
@@ -18,6 +19,7 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 # but we sync email signups and unsubscribes to sendgrid for convenience
 
 def add_sendgrid_contact(email, full_name=None, citizenship=None):
+    pytest.skip("avoid making remote calls")
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     first_name = last_name = None
     if full_name:
@@ -34,6 +36,7 @@ def add_sendgrid_contact(email, full_name=None, citizenship=None):
     response = sg_api.client.contactdb.recipients.post(request_body=data)
 
 def unsubscribe_sendgrid_contact(email):
+    pytest.skip("avoid making remote calls")
     sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
     unsubscribe_group = 51716 # Universal unsubscribe group
 
