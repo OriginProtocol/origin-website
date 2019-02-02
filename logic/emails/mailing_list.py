@@ -8,7 +8,6 @@ from flask import jsonify, flash, redirect
 from flask_babel import gettext, Babel, Locale
 from logic.emails import email_types
 from nameparser import HumanName
-import pytest
 import sendgrid
 from tools import db_utils
 from util import sendgrid_wrapper as sgw
@@ -19,31 +18,36 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 # but we sync email signups and unsubscribes to sendgrid for convenience
 
 def add_sendgrid_contact(email, full_name=None, citizenship=None):
-    pytest.skip("avoid making remote calls")
-    sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
-    first_name = last_name = None
-    if full_name:
-        name = HumanName(full_name)
-        first_name = name.first
-        last_name = name.last
+    try:
+        # pytest.skip("avoid making remote calls")
+        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        first_name = last_name = None
+        if full_name:
+            name = HumanName(full_name)
+            first_name = name.first
+            last_name = name.last
 
-    data = [{
-        "email": email,
-        "first_name": first_name,
-        "last_name": last_name,
-        "country_code": citizenship
-    }]
-    response = sg_api.client.contactdb.recipients.post(request_body=data)
+        data = [{
+            "email": email,
+            "first_name": first_name,
+            "last_name": last_name,
+            "country_code": citizenship
+        }]
+        response = sg_api.client.contactdb.recipients.post(request_body=data)
+    except:
+        return False
 
 def unsubscribe_sendgrid_contact(email):
-    pytest.skip("avoid making remote calls")
-    sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
-    unsubscribe_group = 51716 # Universal unsubscribe group
+    try:
+        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        unsubscribe_group = 51716 # Universal unsubscribe group
 
-    data = {
-        "recipient_emails": [email]
-    }
-    response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
+        data = {
+            "recipient_emails": [email]
+        }
+        response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
+    except:
+        return False
 
 def send_welcome(email, ip_addr):
 
