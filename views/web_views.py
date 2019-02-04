@@ -304,7 +304,7 @@ def youtube():
 @app.route('/youtube/authorize')
 def authorize():
   flow = google_auth_oauthlib.flow.Flow.from_client_config(
-      client_config=str(YOUTUBE_CONFIG), scopes=SCOPES)
+      client_config=YOUTUBE_CONFIG, scopes=SCOPES)
   flow.redirect_uri = url_for('oauth2callback', _external=True)
   authorization_url, state = flow.authorization_url(
       access_type='offline',
