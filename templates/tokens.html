@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("Origin Protocol - Presale") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Tokens") }}{% endblock %}
 
-{% block meta_description %}{{ gettext("Origin Protocol - Presale") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Tokens") }}{% endblock %}
 
 {% block content %}
 
@@ -15,12 +15,12 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <h1>
-            {{ gettext("Presale") }}
+            {{ gettext("Tokens") }}
           </h1>
         </div>
         <div class="col-12 col-md-6">
           <p>
-            {{ gettext("<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced.") }}
+            {{ gettext("<strong>Origin tokens are not currently available for purchase.</strong><br> Please fill out this form if you are interested in participating in any future tokens sales and would like to be updated as more details are announced.") }}
           </p>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <div class="row presale-form">
             <div class="col-12 offset-xl-1 col-xl-5">
               <h2>
-                {{ gettext("Interested in contributing?") }}
+                {{ gettext("Interested in Origin tokens?") }}
               </h2>
               <form method="post" action="/presale/join" id="presale">
                 <div class="form-group">
@@ -390,7 +390,7 @@
                   <label><strong>{{ gettext("Important notice") }}</strong></label>
                  <div class="form-check form-check-inline">
                    <label for="confirm" class="form-check-label">
-                     <input name="confirm" class="form-check-input" type="checkbox" id="confirm" value="1" />{{ gettext(" I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.") }}
+                     <input name="confirm" class="form-check-input" type="checkbox" id="confirm" value="1" />{{ gettext(" I understand any token sales will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.") }}
                    </label>
                  </div>
                 </div>

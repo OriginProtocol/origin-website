@@ -1,16 +1,16 @@
 {% if theme_dark==True %}
 <nav class="navbar navbar-expand-lg navbar-origin navbar-dark">
 {% else %}
-<nav class="navbar navbar-expand-lg navbar-origin navbar-light">
+<nav class="navbar navbar-expand-lg navbar-origin navbar-light {{ 'mobile' if 'mobile' in request.path }}">
 {% endif %}
 
   {% if DOMAIN != "www.originprotocol.com" %}
-  <div class="url-warning">{{ DOMAIN }}</div>
+  <div class="url-warning {{ 'mobile' if 'mobile' in request.path }}">{{ DOMAIN }}</div>
   {% endif %}
 
   <div class="mobile-background d-lg-none"></div>
   <div class="container">
-    <div class="brand-container">
+    <div class="brand-container {{ 'mobile' if 'mobile' in request.path }}">
       <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
         <div class="logo-container">
           {% if theme_dark==True %}
@@ -29,71 +29,76 @@
         </div>
       </a>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#languageOptions" aria-controls="languageOptions" aria-expanded="false" aria-label="Toggle languages">
-      {% if theme_dark==True %}
-      <img src="/static/img/globe-icon-light.svg" alt="language options" class="globe-icon" />
-      <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
-      {% else %}
-      <img src="/static/img/globe-icon-dark.svg" alt="language options" class="globe-icon" />
-      <img src="/static/img/close-icon-dark.svg" alt="collapse menu" class="close-icon" />
-      {% endif %}
-    </button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      {% if theme_dark==True %}
-      <img src="/static/img/menu-icon-light.svg" alt="navigation menu" class="menu-icon" />
-      <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
-      {% else %}
-      <img src="/static/img/menu-icon-dark.svg" alt="navigation menu" class="menu-icon" />
-      <img src="/static/img/close-icon-dark.svg" alt="collapse menu" class="close-icon" />
-      {% endif %}
-    </button>
-    <div class="d-lg-none collapse navbar-collapse" id="languageOptions">
-      <div class="container">
-        <div class="row">
-          {% for language in AVAILABLE_LANGUAGES.items() %}
-          <div class="col-6 col-md-4">
-            {% if CURRENT_LANGUAGE == language[0] %}
-              <a class="nav-link selected">{{ language[1] }}</a>
-            {% else %}
-              <a class="nav-link" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('presale', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Presale") }}</a>
-        </li>
-        <!--         
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}" target="_blank">{{ gettext("Product Brief") }}</a>
-        </li> 
-        -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://medium.com/originprotocol" target="_blank">{{ gettext("Blog") }}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://dapp.originprotocol.com" target="_blank">{{ gettext("DApp") }}</a>
-        </li>
-        <li class="d-none d-lg-block nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
-          <div class="dropdown-menu language">
+    {% if 'mobile' not in request.path %}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#languageOptions" aria-controls="languageOptions" aria-expanded="false" aria-label="Toggle languages">
+        {% if theme_dark==True %}
+        <img src="/static/img/globe-icon-light.svg" alt="language options" class="globe-icon" />
+        <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
+        {% else %}
+        <img src="/static/img/globe-icon-dark.svg" alt="language options" class="globe-icon" />
+        <img src="/static/img/close-icon-dark.svg" alt="collapse menu" class="close-icon" />
+        {% endif %}
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        {% if theme_dark==True %}
+        <img src="/static/img/menu-icon-light.svg" alt="navigation menu" class="menu-icon" />
+        <img src="/static/img/close-icon-light.svg" alt="collapse menu" class="close-icon" />
+        {% else %}
+        <img src="/static/img/menu-icon-dark.svg" alt="navigation menu" class="menu-icon" />
+        <img src="/static/img/close-icon-dark.svg" alt="collapse menu" class="close-icon" />
+        {% endif %}
+      </button>
+      <div class="d-lg-none collapse navbar-collapse" id="languageOptions">
+        <div class="container">
+          <div class="row">
             {% for language in AVAILABLE_LANGUAGES.items() %}
+            <div class="col-6 col-md-4">
               {% if CURRENT_LANGUAGE == language[0] %}
-              <div class="dropdown-item-selected">{{ language[1] }}</div>
+                <a class="nav-link selected">{{ language[1] }}</a>
               {% else %}
-              <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
+                <a class="nav-link" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
               {% endif %}
+            </div>
             {% endfor %}
           </div>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('tokens', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Tokens") }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Marketplace Creator") }}</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}" target="_blank">{{ gettext("Product Brief") }}</a>
+          </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://medium.com/originprotocol" target="_blank">{{ gettext("Blog") }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dapp.originprotocol.com" target="_blank">{{ gettext("DApp") }}</a>
+          </li>
+          <li class="d-none d-lg-block nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
+            <div class="dropdown-menu language">
+              {% for language in AVAILABLE_LANGUAGES.items() %}
+                {% if CURRENT_LANGUAGE == language[0] %}
+                <div class="dropdown-item-selected">{{ language[1] }}</div>
+                {% else %}
+                <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </li>
+        </ul>
+      </div>
+    {% endif %}
   </div>
 </nav>

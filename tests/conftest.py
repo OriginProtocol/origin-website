@@ -85,3 +85,15 @@ def mock_send_message(app):
     patcher = patch('util.sendgrid_wrapper.send_message', return_value=True)
     yield patcher.start()
     patcher.stop()
+
+@pytest.yield_fixture(scope='function')
+def mock_subscribe(app):
+    patcher = patch('logic.emails.mailing_list.add_sendgrid_contact', return_value=True)
+    yield patcher.start()
+    patcher.stop()
+
+@pytest.yield_fixture(scope='function')
+def mock_subscribe(app):
+    patcher = patch('logic.emails.mailing_list.unsubscribe_sendgrid_contact', return_value=True)
+    yield patcher.start()
+    patcher.stop()

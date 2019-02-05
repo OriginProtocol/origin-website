@@ -1,25 +1,8 @@
 <script type='text/javascript'>
 
-  /* promote Wechat for Chinese, Kakao for Korean and Telegram everywhere else */
-  {% if CURRENT_LANGUAGE == "zh_Hant" or CURRENT_LANGUAGE == "zh_Hans" %}
-
-    setTimeout(function() {
-      alertify.log("<img src='/static/img/origin-wechat-qr.png' /><br><br><i class='fab fa-weixin'></i> {{ gettext('Join Our WeChat') }}</a>", "default", 0)
-    }, 2000);
-
-  {% elif CURRENT_LANGUAGE == "ko" %}
-
-    setTimeout(function() {
-      alertify.log("{{ gettext("Make new friends!") }}<div class='telegram-btn-container'><a href='https://pf.kakao.com/_qTxeYC' role='button' class='telegram-btn btn btn-primary btn-min-size' target='_blank'><i class='fas fa-comment'></i>{{ gettext("Join Our KakaoTalk") }}</a></div>", "default", 0)
-    }, 2000);
-
-  {% else %}
-
-    setTimeout(function() {
-      alertify.log("<div class='telegram-btn-container'><a href='https://dapp.originprotocol.com' role='button' class='telegram-btn btn btn-primary btn-min-size' target='_blank'><i class='fab fa-telegram-plane'></i>{{ gettext("Try the Beta DApp") }}</a></div>", "default", 0)
-    }, 2000);
-
-  {% endif %}
+  setTimeout(function() {
+    alertify.log("<div class='telegram-btn-container'><strong>{{ gettext("New!") }}</strong> {{ gettext("Create your own<br>decentralized marketplace.") }}<br><br><a href='/creator' role='button' class='telegram-btn btn btn-primary btn-min-size'>{{ gettext("Try It Now") }}</a></div>", "default", 0)
+  }, 2000);
 
   {% with messages = get_flashed_messages() %}
     {% if messages %}
