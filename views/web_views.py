@@ -13,7 +13,6 @@ from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 import requests
-from database import db, db_models
 
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 
