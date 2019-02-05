@@ -98,7 +98,7 @@ def presale():
     return redirect('/tokens', code=302)
 
 @app.route('/<lang_code>/tokens')
-def tokens():   
+def tokens():
     return render_template('tokens.html')
 
 @app.route('/<lang_code>/whitepaper')
@@ -281,43 +281,22 @@ YOUTUBE_CONFIG = {
   {
     "client_id": constants.YOUTUBE_CLIENT_ID,
     "project_id": constants.YOUTUBE_PROJECT_ID,
-    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
-    "token_uri":"https://www.googleapis.com/oauth2/v3/token",
-    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
     "client_secret": constants.YOUTUBE_CLIENT_SECRET,
     "redirect_uris":[constants.YOUTUBE_REDIRECT_URL]
   }
 }
 
 SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
-API_SERVICE_NAME = 'youtube'
-API_VERSION = 'v3'
 
 @app.route('/youtube')
 def youtube():
-  youtube_credentials = db_models.YoutubeCredentials.query.first()
-
-  if youtube_credentials.__str__() == 'None':
+  if not (constants.YOUTUBE_TOKEN and constants.YOUTUBE_REFRESH_TOKEN):
     return redirect('/youtube/authorize')
 
-  session_credentials = {
-    "token": youtube_credentials.token,
-    "token_uri": youtube_credentials.token_uri,
-    "refresh_token": youtube_credentials.refresh_token,
-    "client_id": constants.YOUTUBE_CLIENT_ID,
-    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
-    "scopes": SCOPES
-  }
-  credentials = google.oauth2.credentials.Credentials(**session_credentials)
-
-  client = googleapiclient.discovery.build(
-      API_SERVICE_NAME, API_VERSION, credentials=credentials)
-  channel_id = constants.YOUTUBE_CHANNEL_ID
-
-  return get_channel_info(client,
-    part='snippet,contentDetails,statistics',
-    id=channel_id)
-
+  return redirect(url_for('index', lang_code=get_locale()))
 
 @app.route('/youtube/authorize')
 def authorize():
@@ -343,17 +322,13 @@ def oauth2callback():
   authorization_response = request.url
   flow.fetch_token(authorization_response=authorization_response)
 
+  #save the token and refresh_token in the credentials as environment variables
   credentials = flow.credentials
 
-  youtube_credentials = db_models.YoutubeCredentials()
-  youtube_credentials.token = credentials.token
-  youtube_credentials.token_uri = credentials.token_uri
-  youtube_credentials.refresh_token = credentials.refresh_token
+  print("YOUTUBE TOKEN", credentials.token)
+  print("YOUTUBE REFRESH_TOKEN", credentials.refresh_token)
 
-  db.session.add(youtube_credentials)
-  db.session.commit()
-
-  return redirect('youtube')
+  return redirect(url_for('index', lang_code=get_locale()))
 
 def get_channel_info(client, **kwargs):
   response = client.channels().list(**kwargs).execute()

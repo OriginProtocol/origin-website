@@ -232,15 +232,14 @@ def update_youtube_count():
   SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
   API_SERVICE_NAME = 'youtube'
   API_VERSION = 'v3'
-  youtube_credentials = db_models.YoutubeCredentials.query.first()
 
-  if youtube_credentials.__str__() == 'None':
+  if not (constants.YOUTUBE_TOKEN and constants.YOUTUBE_REFRESH_TOKEN):
     return
 
   session_credentials = {
-    "token": youtube_credentials.token,
-    "token_uri": youtube_credentials.token_uri,
-    "refresh_token": youtube_credentials.refresh_token,
+    "token": constants.YOUTUBE_TOKEN,
+    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+    "refresh_token": constants.YOUTUBE_REFRESH_TOKEN,
     "client_id": constants.YOUTUBE_CLIENT_ID,
     "client_secret": constants.YOUTUBE_CLIENT_SECRET,
     "scopes": SCOPES
