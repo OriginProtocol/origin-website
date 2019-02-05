@@ -117,11 +117,15 @@ def product_brief():
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
-    email = request.form['email']
-    ip_addr = get_real_ip()
-    feedback = mailing_list.send_welcome(email, ip_addr)
-    mailing_list.add_sendgrid_contact(email)
-    return jsonify(feedback)
+    if 'email' in request.form:
+        email = request.form['email']
+        dapp_user = request.form['dapp_user'] if 'dapp_user' in request.form else None
+        ip_addr = get_real_ip()
+        feedback = mailing_list.send_welcome(email, ip_addr)
+        mailing_list.add_sendgrid_contact(email=email, dapp_user=dapp_user)
+        return jsonify(feedback)
+    else:
+        return jsonify("Missing email")
 
 @app.route('/vk577', methods=['GET'])
 def vk577():
