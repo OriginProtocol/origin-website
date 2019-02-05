@@ -17,7 +17,7 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 # we use our own database as the final source of truth for our mailing list
 # but we sync email signups and unsubscribes to sendgrid for convenience
 
-def add_sendgrid_contact(email, full_name=None, citizenship=None):
+def add_sendgrid_contact(email, full_name=None, citizenship=None, dapp_user=None):
     try:
         # pytest.skip("avoid making remote calls")
         sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
@@ -31,7 +31,8 @@ def add_sendgrid_contact(email, full_name=None, citizenship=None):
             "email": email,
             "first_name": first_name,
             "last_name": last_name,
-            "country_code": citizenship
+            "country_code": citizenship,
+            "dapp_user": dapp_user
         }]
         response = sg_api.client.contactdb.recipients.post(request_body=data)
     except:
