@@ -276,5 +276,10 @@ PARTNERS = [
     "name":"blockbase",
     "url":"https://block-base.co/",
      "desc":lazy_gettext("BlockBase is a blockchain technology consultancy working with many companies on many different blockchain use cases and plan on utilizing Origin Protocol.")
+    },
+    {
+    "name":"veloxchain",
+    "url":"https://veloxchain.io/",
+     "desc":lazy_gettext("VeloxChain will utilize Origin Protocol's libraries to build the VeloxBiz platform, a marketplace platform for mobility solutions.")
     }
 ]

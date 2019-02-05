@@ -61,7 +61,8 @@ def apple_app_site_association():
 @app.route('/mobile/<link_code>')
 @app.route('/mobile')
 def mobile(link_code=None):
-    return render_template('mobile.html', link_code=link_code)
+    role = request.args.get('role')
+    return render_template('mobile.html', link_code=link_code, role=role)
 
 @app.route('/<lang_code>')
 def index():
@@ -90,9 +91,15 @@ def team():
                  {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
     return render_template('team.html', contributors=[aure] + contributors, community=community)
 
+
+
 @app.route('/<lang_code>/presale')
 def presale():
-    return render_template('presale.html')
+    return redirect('/tokens', code=302)
+
+@app.route('/<lang_code>/tokens')
+def tokens():   
+    return render_template('tokens.html')
 
 @app.route('/<lang_code>/whitepaper')
 def whitepaper():
@@ -119,6 +126,7 @@ def join_mailing_list():
     email = request.form['email']
     ip_addr = get_real_ip()
     feedback = mailing_list.send_welcome(email, ip_addr)
+    mailing_list.add_sendgrid_contact(email)
     return jsonify(feedback)
 
 @app.route('/vk577', methods=['GET'])
@@ -151,6 +159,7 @@ def join_presale():
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
+    mailing_list.add_sendgrid_contact(email, full_name, citizenship)
     flash(feedback)
     return jsonify("OK")
 
@@ -158,6 +167,7 @@ def join_presale():
 def unsubscribe():
     email = request.args.get("email")
     feedback = mailing_list.unsubscribe(email)
+    mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
     return redirect('/', code=302)
 
@@ -180,6 +190,10 @@ def developers():
 def discord():
     return redirect(universal.DISCORD_URL, code=301)
 
+@app.route('/<lang_code>/ios')
+def ios():
+    return redirect(universal.IOS_URL, code=301)
+
 @app.route('/<lang_code>/telegram')
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
@@ -200,6 +214,10 @@ def tos():
 def aup():
     return render_template('aup.html')
 
+@app.route('/<lang_code>/creator')
+def creator():
+    return render_template('creator.html')
+
 @app.route('/partners/interest', methods=['POST'])
 def partners_interest():
     name = request.form['name']
@@ -218,6 +236,7 @@ def partners_interest():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.partners_interest(name, company_name, email,
                                               website, note, ip_addr)
+    mailing_list.add_sendgrid_contact(email,name)
     flash(feedback)
     return jsonify("OK")
 
@@ -303,7 +322,7 @@ def youtube():
 @app.route('/youtube/authorize')
 def authorize():
   flow = google_auth_oauthlib.flow.Flow.from_client_config(
-      client_config=str(YOUTUBE_CONFIG), scopes=SCOPES)
+      client_config=YOUTUBE_CONFIG, scopes=SCOPES)
   flow.redirect_uri = url_for('oauth2callback', _external=True)
   authorization_url, state = flow.authorization_url(
       access_type='offline',

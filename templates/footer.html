@@ -1,16 +1,28 @@
+{% if theme_dark==False %}
+<footer class="light-footer">
+{% else %}
 <footer class="dark-footer">
+{% endif %}
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-5 col-lg-6">
+      <div class="col-12 col-md-5 col-lg-4">
         <div class="logo-container">
-          <img src="/static/img/origin-logo.png"
+          {% if theme_dark==False %}
+            <img src="/static/img/origin-logo-dark.png"
+            srcset="/static/img/origin-logo-dark@2x.png 2x,
+              /static/img/origin-logo-dark@3x.png 3x"
+            class="origin-logo"
+            alt="Origin Protocol logo">
+          {% else %} 
+            <img src="/static/img/origin-logo.png"
             srcset="/static/img/origin-logo@2x.png 2x,
               /static/img/origin-logo@3x.png 3x"
             class="origin-logo"
             alt="Origin Protocol logo">
+          {% endif %}
         </div>
         <p class="company-mission">
-          {{ gettext("Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, promoting free and transparent commerce, and giving early participants in the community a stake in the network.") }}
+          {{ gettext("Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network.") }}
         </p>
         <p>
           &copy; {{ now.year }} {{ gettext("Origin Protocol, Inc.") }}  &bull;
@@ -24,28 +36,35 @@
 
         </p>
       </div>
-      <div class="col-12 col-md-7 col-lg-6">
+      <div class="col-12 col-md-7 col-lg-8">
         <div class="row">
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="footer-header">
-              {{ gettext("Resources") }}
+              {{ gettext("Products") }}
             </div>
             <ul class="footer-links">
               <li class="footer-link">
-                <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Product Brief") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Whitepaper") }}
+                <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Marketplace Creator") }}
                 </a>
               </li>
               <li class="footer-link">
                 <a href="https://dapp.originprotocol.com" target="_blank">
-                  {{ gettext("DApp") }}
+                  {{ gettext("Marketplace DApp") }}
                 </a>
               </li>
+              <li class="footer-link">
+                <a href="https://itunes.apple.com/us/app/origin-wallet/id1446091928?mt=8" target="_blank">
+                  {{ gettext("Mobile Wallet (iOS)") }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="footer-header">
+              {{ gettext("Resources") }}
+            </div>
+            <ul class="footer-links">
               <li class="footer-link">
                 <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">
                   {{ gettext("Developers") }}
@@ -61,21 +80,68 @@
                   {{ gettext("Docs") }}
                 </a>
               </li>
+              <li class="footer-link">
+                <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Product Brief") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Whitepaper") }}
+                </a>
+              </li>
             </ul>
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="footer-header">
+              {{ gettext("Organization") }}
+            </div>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Team") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="{{ url_for('tokens', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Tokens") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">
+                  {{ gettext("Partners") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="https://store.originprotocol.com">
+                  {{ gettext("Store") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="https://www.eventbrite.com/o/origin-protocol-17702006678" target="_blank">
+                  {{ gettext("Meetups") }}
+                </a>
+              </li>
+              <li class="footer-link">
+                <a href="https://angel.co/originprotocol/jobs" target="_blank">
+                  {{ gettext("Jobs") }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="footer-header">
               {{ gettext("Community") }}
             </div>
             <ul class="footer-links">
               <li class="footer-link">
-                <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
-                  <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
+                <a href="{{ universal.DISCORD_URL }}" target="_blank">
+                  <i class="fab fa-discord"></i> {{ gettext("Discord") }}
                 </a>
               </li>
               <li class="footer-link">
-                <a href="{{ universal.DISCORD_URL }}" target="_blank">
-                  <i class="fab fa-discord"></i> {{ gettext("Discord") }}
+                <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
+                  <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
                 </a>
               </li>
               <li class="footer-link">
@@ -84,19 +150,14 @@
                 </a>
               </li>
               <li class="footer-link">
-                <a class="span-link" data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-wechat-qr.png' />"><i class="fab fa-weixin"></i> {{ gettext("WeChat") }}</a>
+                <a data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-wechat-qr.png' />"><i class="fab fa-weixin"></i> {{ gettext("WeChat") }}</a>
               </li>
               <li class="footer-link">
-                <a class="span-link" data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-weibo-qr.png' />"><i class="fab fa-weibo"></i> {{ gettext("Weibo") }}</a>
-              </li>
-              <li class="footer-link">
-                <a href="https://open.kakao.com/o/ganyghS" target="_blank">
-                  <i class="fas fa-comment"></i> {{ gettext("KakaoTalk") }}
-                </a>
+                <a data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-weibo-qr.png' />"><i class="fab fa-weibo"></i> {{ gettext("Weibo") }}</a>
               </li>
             </ul>
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="footer-header">Social</div>
             <ul class="footer-links">
               <li class="footer-link">
@@ -122,38 +183,6 @@
               <li class="footer-link">
                 <a href="http://www.youtube.com/c/originprotocol" target="_blank">
                   <i class="fab fa-youtube"></i> {{ gettext("Youtube") }}
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="footer-header">
-              {{ gettext("Organization") }}
-            </div>
-            <ul class="footer-links">
-              <li class="footer-link">
-                <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Team") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{ url_for('presale', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Presale") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Partners") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://www.eventbrite.com/o/origin-protocol-17702006678" target="_blank">
-                  {{ gettext("Meetups") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://angel.co/originprotocol/jobs" target="_blank">
-                  {{ gettext("Jobs") }}
                 </a>
               </li>
             </ul>

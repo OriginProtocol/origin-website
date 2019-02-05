@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ gettext("Origin Protocol - Creator") }}{% endblock %}
+
+{% block meta_description %}{{ gettext("Origin Protocol - Creator") }}{% endblock %}
+
+{% block content %}
+
+<main>
+  <section class="creator-header">
+    {% with theme_dark=True %}
+    {% include 'navbar.html' %}
+    {% endwith %}  
+
+    <div class="creator-wrapper">
+      <div class="creator-hero-graphic">
+        <div class="container foreground-content">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <h1>{{ gettext("Build your<br>peer-to-peer<br>marketplace") }}</h1>
+              <h4>{{ gettext("Blockchain enabled.<br>No code required.<br>100%% free to operate.") }}</h4>
+              <div class="btn-container">
+                <a href="https://creator.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
+                  {{ gettext("Get Started") }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='creator-verticals'>
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-sm-8">
+          <h1>{{ gettext("Launch your decentralized goods or services marketplace today") }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="creator-wrapper">
+      <div class="row">
+        <div class="col-12 col-md-5 creator-verticals-graphic"></div>
+        <div class="col-12 col-md-7 col-xl-5">
+          <div class="container foreground-content">
+            <div class="row">
+
+              <div class="media col-12">
+                <img class="media-object" /static/img/blue-cube.png" srcset="/static/img/blue-cube@2x.png 2x, /static/img/blue-cube@3x.png 3x">
+                <div class="media-body">
+                  <b class="media-heading">{{ gettext("Sharing economy") }}</b>
+                  <p>{{ gettext("Create a marketplace for homesharing, carsharing, contractor, or home services.") }}</p>
+                </div>
+              </div>
+
+              <div class="media col-12">
+                <img class="media-object" /static/img/purple-cube.png" srcset="/static/img/purple-cube@2x.png 2x, /static/img/purple-cube@3x.png 3x">
+                <div class="media-body">
+                  <b class="media-heading">{{ gettext("Ecommerce") }}</b>
+                  <p>{{ gettext("Enable buyers and sellers to transact across hundreds of categories.") }}</p>
+                </div>
+              </div>
+
+              <div class="media col-12">
+                <img class="media-object" /static/img/green-cube.png" srcset="/static/img/green-cube@2x.png 2x, /static/img/green-cube@3x.png 3x">
+                <div class="media-body">
+                  <b class="media-heading">{{ gettext("Local marketplaces") }}</b>
+                  <p>{{ gettext("Build a better Craigslist or Airbnb for your country or city quickly and easily.") }}</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reasons">
+    <div class="row no-gutters d-flex">
+      <div class="col-12 col-md-6 order-2 order-md-1">
+        <!-- left column -->
+        <div class="blue-coins left-graphic d-none d-md-block"></div>
+
+        <div class="run-business light clearfix">
+          <div class="inner-box float-right">
+            <h1>{{ gettext("Run a decentralized & <span class='purple'>censorship-resistant business</span>") }}</h1>
+            <p>{{ gettext("Build a marketplace that can't be shut down by anyone...including us.") }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 order-1 order-md-2">
+        <div class="earn-tokens dark">
+          <div class="inner-box">
+            <h1>{{ gettext("Earn <span class='blue'>Origin tokens</span>") }}</h1>
+            <p>{{ gettext("List goods and services from Origin’s existing base of sellers. Earn Origin token commissions from sellers looking to reach a wider audience on your marketplace.") }}</p>
+            <br>
+            <a href="https://creator.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
+              {{ gettext("Get Started") }}
+            </a>
+          </div>
+        </div>
+        <div class="purple-censorship right-graphic d-none d-md-block"></div>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <!-- left column -->
+      <div class="col-12 col-md-6 order-2 order-md-1">
+        <div class="green-coins left-graphic d-none d-md-block"></div>
+        <div class="bootstrap-marketplace light clearfix">
+          <div class="inner-box float-right">
+            <h1>{{ gettext("Bootstrap your <span class='red'>marketplace</span>") }}</h1>
+            <p>{{ gettext("Tap into our shared data layer that gives you existing users and inventory from other marketplaces.") }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 order-1 order-md-2">
+        <!-- right column -->
+        <div class="borderless-payments dark">
+          <div class="inner-box">
+            <h1>{{ gettext("Harness the power of <span class='green'>borderless and permissionless payments</span>") }}</h1>
+            <p>{{ gettext("Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box.") }}</p>
+          </div>
+        </div>
+        <div class="red-boxes right-graphic d-none d-md-block"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class='creator-features'>
+    <div class="container foreground-content">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h1>{{ gettext("Features") }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="creator-wrapper">
+      <div class="row">
+        <div class="col-12 col-md-5 creator-features-graphic"></div>
+        <div class="col-12 col-md-7 col-xl-5">
+          <div class="container foreground-content">
+            <div class="row">
+
+              <div class="media col-12 col-sm-6">
+                <img class="media-object" src="/static/img/identity-icon.png" srcset="/static/img/identity-icon@2x.png 2x, /static/img/identity-icon@3x.png 3x">
+                <div class="media-body">
+                  <b class="media-heading">{{ gettext("Identity") }}</b>
+                  <p>{{ gettext("Self-soverign identity puts users in control of their own data") }}</p>
+                </div>
+              </div>
+
+              <div class="media col-12 col-sm-6">
+               <img class="media-object" src="/static/img/notifications-icon.png" srcset="/static/img/notifications-icon@2x.png 2x, /static/img/notifications-icon@3x.png 3x">
+               <div class="media-body">
+                <b class="media-heading">{{ gettext("Notifications") }}</b>
+                <p>{{ gettext("Alerts for new messages or transactions on the marketplace") }}</p>
+              </div>
+            </div>
+
+            <div class="media col-12 col-sm-6">
+              <img class="media-object" src="/static/img/listing-icon.png" srcset="/static/img/listing-icon@2x.png 2x, /static/img/listing-icon@3x.png 3x">
+              <div class="media-body">
+                <b class="media-heading">{{ gettext("Flexible Listings") }}</b>
+                <p>{{ gettext("Sell new or used goods and rent your products or services") }}</p>
+              </div>
+            </div>
+
+            <div class="media col-12 col-sm-6">
+              <img class="media-object" src="/static/img/escrow-icon.png" srcset="/static/img/escrow-icon@2x.png 2x, /static/img/escrow-icon@3x.png 3x">
+              <div class="media-body">
+                <b class="media-heading">{{ gettext("Escrow") }}</b>
+                <p>{{ gettext("Funds are safely escrowed until both parties are happy with a transaction") }}</p>
+              </div>
+            </div>
+
+            <div class="media col-12 col-sm-6">
+              <img class="media-object" src="/static/img/messaging-icon.png" srcset="/static/img/messaging-icon@2x.png 2x, /static/img/messaging-icon@3x.png 3x">
+              <div class="media-body">
+                <b class="media-heading">{{ gettext("Messaging") }}</b>
+                <p>{{ gettext("Decentralized, encrypted end-to-end, fast, free, and auditable") }}</p>
+              </div>
+            </div>
+
+            <div class="media col-12 col-sm-6">
+             <img class="media-object" src="/static/img/arbitration-icon.png" srcset="/static/img/arbitration-icon@2x.png 2x, /static/img/arbitration-icon@3x.png 3x">
+             <div class="media-body">
+              <b class="media-heading">{{ gettext("Arbitration") }}</b>
+              <p>{{ gettext("Arbitration features will allow you to resolve disputes") }}</p>
+            </div>
+          </div>
+
+          <div class="media col-12 col-sm-6">
+            <img class="media-object" src="/static/img/ethereum-icon.png" srcset="/static/img/ethereum-icon@2x.png 2x, /static/img/ethereum-icon@3x.png 3x">
+            <div class="media-body">
+              <b class="media-heading">{{ gettext("Ethereum & IPFS") }}</b>
+              <p>{{ gettext("Built on a decentralized web3 stack") }}</p>
+            </div>
+          </div>
+
+          <div class="media col-12 col-sm-6">
+            <img class="media-object" src="/static/img/responsive-icon.png" srcset="/static/img/responsive-icon@2x.png 2x, /static/img/responsive-icon@3x.png 3x">
+            <div class="media-body">
+              <b class="media-heading">{{ gettext("Multi-device") }}</b>
+              <p>{{ gettext("Your marketplace looks great on mobile, tablet, and desktop") }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='creator-bottom-cta'>
+    <div class="container text-center">
+      <div class="row">
+        <div class="offset-2 col-8">
+
+          <h2>{{ gettext("Get started for free today") }}</h2>
+          <div>
+            <a href="https://creator.originprotocol.com" role="button" class="btn btn-outline-white btn-min-size">
+              {{ gettext("Get Started") }}
+            </a>
+          </div>
+
+          {{ gettext("Have questions?") }} <a href="mailto:support@originprotocol.com">{{ gettext("Get in touch") }}</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% with theme_dark=False %}
+  {% include 'footer.html' %}
+  {% endwith %}  
+</section>
+{% endblock %}
+{% block extra_scripts %}
+{% endblock %}

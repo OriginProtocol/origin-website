@@ -6,27 +6,6 @@
 
 {% block content %}
 
-<div class="mainnet-modal">
-  <div class="btn-container">
-    <h2>{{ gettext("We're on") }}</h2>
-    <h1>{{ gettext("MAINNET") }}</h1>
-    <h3>{{ gettext("Buy and sell without intermediaries") }}</h3>
-    <br>
-    <a href="https://dapp.originprotocol.com" role="button" class="btn btn-primary btn-min-size">
-      {{ gettext("Try the Beta DApp") }}
-    </a>
-    <p><a href="#" class="close-link">Continue to website</a>
-      <img src="/static/img/triangle.png"
-      srcset="/static/img/triangle@2x.png 2x,
-      /static/img/triangle@3x.png 3x">
-    </p>
-  </div>
-  <img src="/static/img/close-button.png"
-  srcset="/static/img/close-button@2x.png 2x,
-  /static/img/close-button@3x.png 3x"
-  class="close-button">
-</div>
-
 {% include 'warning.html' %}
 
 <main class="landing-page">
@@ -101,14 +80,14 @@
                   {{ gettext("We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more.") }}
                 </p>
                 <div class="btn-container">
-                  <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}" role="button" class="product-brief-btn btn btn-primary btn-min-size">
-                    {{ gettext("Read Our Product Brief") }}
+                  <a href="https://dapp.originprotocol.com" role="button" class="product-brief-btn btn btn-primary btn-min-size" target="_blank">
+                    {{ gettext("Try the DApp") }}
                   </a>
                 </div>
                 <div class="btn-container">
-                  <a href="{{ universal.TELEGRAM_URL }}" role="button" class="telegram-btn btn btn-outline-primary btn-min-size" target="_blank">
-                    <i class='fab fa-telegram-plane'></i>
-                    {{ gettext("Join Our Telegram") }}
+                  <a href="{{ universal.DISCORD_URL }}" role="button" class="telegram-btn btn btn-outline-primary btn-min-size" target="_blank">
+                    <i class='fab fa-discord'></i>
+                    {{ gettext("Join Our Discord") }}
                   </a>
                 </div>
               </div>
@@ -222,16 +201,16 @@
           {{ gettext("Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web.") }} <a href="{{ url_for('partners', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Get in touch to learn more.") }}</a>
         </p>
         <div class="btn-container demo-btn-container">
-          <a href="https://dapp.originprotocol.com" role="button" class="btn btn-primary btn-min-size" target="_blank">
-            {{ gettext("Try the DApp") }}
+          <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size" target="_blank">
+            {{ gettext("Create Your Marketplace") }}
           </a>
         </div>
-        <div class="btn-container github-btn-container">
+        <!-- <div class="btn-container github-btn-container">
           <a href="https://github.com/OriginProtocol" role="button" class="btn btn-outline-primary btn-min-size" target="_blank">
             <i class="fab fa-github"></i>
-            {{ gettext("View GitHub") }}
+            {{ gettext("GitHub") }}
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -247,8 +226,8 @@
           {{ gettext("Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround.") }}
         </p>
         <div class="btn-container">
-          <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
-            {{ gettext("Read the Whitepaper") }}
+          <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
+            {{ gettext("Read the Product Brief") }}
           </a>
         </div>
       </div>
@@ -297,10 +276,9 @@
             <div class="row">
               <div class="col-6">
                 <div class="img-feature">
-                  <img src="/static/img/feature-1.png"
-                  srcset="/static/img/feature-1@2x.png 2x,
-                  /static/img/feature-1@3x.png 3x"
-                  class="feature-1"
+                  <img src="/static/img/blue-cube.png"
+                  srcset="/static/img/blue-cube@2x.png 2x,
+                  /static/img/blue-cube@3x.png 3x"
                   role="presentation">
                 </div>
                 <p class="feature-description">
@@ -309,10 +287,9 @@
               </div>
               <div class="col-6">
                 <div class="img-feature">
-                  <img src="/static/img/feature-2.png"
-                  srcset="/static/img/feature-2@2x.png 2x,
-                  /static/img/feature-2@3x.png 3x"
-                  class="feature-2"
+                  <img src="/static/img/purple-cube.png"
+                  srcset="/static/img/purple-cube@2x.png 2x,
+                  /static/img/purple-cube@3x.png 3x"
                   role="presentation">
                 </div>
                 <p class="feature-description">
@@ -321,10 +298,9 @@
               </div>
               <div class="col-6">
                 <div class="img-feature">
-                  <img src="/static/img/feature-3.png"
-                  srcset="/static/img/feature-3@2x.png 2x,
-                  /static/img/feature-3@3x.png 3x"
-                  class="feature-3"
+                  <img src="/static/img/dark-cube.png"
+                  srcset="/static/img/dark-cube@2x.png 2x,
+                  /static/img/dark-cube@3x.png 3x"
                   role="presentation">
                 </div>
                 <p class="feature-description">
@@ -333,10 +309,9 @@
               </div>
               <div class="col-6">
                 <div class="img-feature">
-                  <img src="/static/img/feature-4.png"
-                  srcset="/static/img/feature-4@2x.png 2x,
-                  /static/img/feature-4@3x.png 3x"
-                  class="feature-4"
+                  <img src="/static/img/green-cube.png"
+                  srcset="/static/img/green-cube@2x.png 2x,
+                  /static/img/green-cube@3x.png 3x"
                   role="presentation">
                 </div>
                 <p class="feature-description">
@@ -702,7 +677,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <!-- <div class="col-12 col-md-4">
             <div class="press-mention">
               <a href="https://www.coindesk.com/sharing-economy-platform-origin-raises-28m-in-saft-sale/" target="_blank">
                 <div class="press-logo-wrapper">
@@ -710,6 +685,19 @@
                 </div>
                 <div class="press-quote">
                   {{ gettext("Origin Protocol, a blockchain project building a decentralized marketplace, has rolled out a peer-to-peer messaging application built on top of ethereum.") }}
+                </div>
+              </a>
+            </div>
+          </div> -->
+
+          <div class="col-12 col-md-4">
+            <div class="press-mention">
+              <a href="https://www.forbes.com/sites/leslieankney/2019/01/21/why-these-innovators-left-facebook-google-and-more-for-crypto/#6716c1a75a06" target="_blank">
+                <div class="press-logo-wrapper">
+                  <img src="/static/img/press-forbes.png" alt="Forbes" />
+                </div>
+                <div class="press-quote">
+                  {{ gettext("We want to create a future where buyers and sellers can transact in the wild by using neutral tools that don't favor either party.") }}
                 </div>
               </a>
             </div>
