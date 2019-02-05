@@ -31,6 +31,7 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 mock==2.0.0
+nameparser==1.0.2
 newrelic
 path.py==10.5
 pathlib2==2.3.0
@@ -39,6 +40,9 @@ pexpect==4.3.1
 # https://github.com/tk0miya/testing.postgresql/issues/28
 pg8000<1.13.0
 pickleshare==0.7.4
+# pg8000 removes python 2.7 support in 1.13
+# https://github.com/tk0miya/testing.postgresql/issues/28
+pg8000<1.13.0
 prompt-toolkit==1.0.15
 psycopg2==2.7.3.2
 ptyprocess==0.5.2

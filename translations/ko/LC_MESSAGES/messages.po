@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: stan@originprotocol.com\n"
-"POT-Creation-Date: 2018-06-18 10:12-0700\n"
+"POT-Creation-Date: 2019-01-29 12:55-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -61,556 +61,657 @@ msgstr "구독 취소되었습니다."
 msgid "Please enter a valid website address"
 msgstr "올바른 웹 사이트 주소를 입력하십시오."
 
-#: templates/404.html:16
+#: templates/404.html:18
 msgid "How did I get here?"
 msgstr "내가 어떻게 여길 왔었지?"
 
-#: templates/404.html:22
+#: templates/404.html:24
 msgid "The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
 msgstr "찾고있는 페이지가 더 이상 존재하지 않습니다. 처음부터 여기에 없었을 수도 있습니다.  그 어떤 경우라도 . 우리의 잘못이라면 진심으로 사죄드립니다. 당신의 잘못이라면 용서해드리겠습니다."
 
-#: templates/404.html:26 templates/404.html:32
+#: templates/404.html:28 templates/404.html:34
 msgid "Go Home"
 msgstr "홈으로 돌아가기"
 
-#: templates/announcement.html:11
-msgid "CoinList <span class=\"subdued\">Round</span>"
-msgstr "CoinList <span class = \ "subdued \"> 라운드 </span>"
+#: templates/aup.html:3 templates/aup.html:5
+msgid "Origin Protocol - Marketplace Acceptable Use Policy"
+msgstr ""
 
-#: templates/announcement.html:12
-msgid "Register today!"
-msgstr "오늘 등록하십시오!"
+#: templates/aup.html:18
+msgid "Marketplace Acceptable Use Policy"
+msgstr ""
 
-#: templates/announcement.html:12
-msgid "$1,000 minimum."
-msgstr "최저 $ 1,000"
-
-#: templates/announcement.html:12
-msgid "Availability limited."
-msgstr "가용성 제한."
-
-#: templates/announcement.html:12
-msgid "Learn more."
-msgstr "자세히 알아보기."
-
-#: templates/announcement.html:15
-msgid "Registration Ends In"
-msgstr "등록 종료"
-
-#: templates/announcement.html:26
-msgid "Register Now"
-msgstr "지금 등록하세요"
-
-#: templates/base.html:13 templates/index.html:3
+#: templates/base.html:15 templates/index.html:3
 msgid "Origin Protocol"
 msgstr "Origin 프로토콜"
 
-#: templates/base.html:14
-msgid "Origin Protocol enables the sharing economy on the blockchain"
-msgstr "Origin Protocol을 사용하면 블록 체인위에서의 경제적 자원의 공유가 가능해집니다."
+#: templates/base.html:16
+msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
+msgstr ""
+
+#: templates/creator.html:3 templates/creator.html:5
+msgid "Origin Protocol - Creator"
+msgstr ""
+
+#: templates/creator.html:20
+msgid "Build your<br>peer-to-peer<br>marketplace"
+msgstr ""
+
+#: templates/creator.html:21
+#, python-format
+msgid "Blockchain enabled.<br>No code required.<br>100%% free to operate."
+msgstr ""
+
+#: templates/creator.html:24 templates/creator.html:100
+#: templates/creator.html:223
+msgid "Get Started"
+msgstr ""
+
+#: templates/creator.html:38
+msgid "Launch your decentralized goods or services marketplace today"
+msgstr ""
+
+#: templates/creator.html:52
+msgid "Sharing economy"
+msgstr ""
+
+#: templates/creator.html:53
+msgid "Create a marketplace for homesharing, carsharing, contractor, or home services."
+msgstr ""
+
+#: templates/creator.html:60
+msgid "Ecommerce"
+msgstr ""
+
+#: templates/creator.html:61
+msgid "Enable buyers and sellers to transact across hundreds of categories."
+msgstr ""
+
+#: templates/creator.html:68
+msgid "Local marketplaces"
+msgstr ""
+
+#: templates/creator.html:69
+msgid "Build a better Craigslist or Airbnb for your country or city quickly and easily."
+msgstr ""
+
+#: templates/creator.html:88
+msgid "Run a decentralized & <span class='purple'>censorship-resistant business</span>"
+msgstr ""
+
+#: templates/creator.html:89
+msgid "Build a marketplace that can't be shut down by anyone...including us."
+msgstr ""
+
+#: templates/creator.html:96
+msgid "Earn <span class='blue'>Origin tokens</span>"
+msgstr ""
+
+#: templates/creator.html:97
+msgid "List goods and services from Origin’s existing base of sellers. Earn Origin token commissions from sellers looking to reach a wider audience on your marketplace."
+msgstr ""
+
+#: templates/creator.html:113
+msgid "Bootstrap your <span class='red'>marketplace</span>"
+msgstr ""
+
+#: templates/creator.html:114
+msgid "Tap into our shared data layer that gives you existing users and inventory from other marketplaces."
+msgstr ""
+
+#: templates/creator.html:122
+msgid "Harness the power of <span class='green'>borderless and permissionless payments</span>"
+msgstr ""
+
+#: templates/creator.html:123
+msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
+msgstr ""
+
+#: templates/creator.html:135 templates/index.html:274
+msgid "Features"
+msgstr "특징"
+
+#: templates/creator.html:149
+msgid "Identity"
+msgstr ""
+
+#: templates/creator.html:150
+msgid "Self-soverign identity puts users in control of their own data"
+msgstr ""
+
+#: templates/creator.html:157
+msgid "Notifications"
+msgstr ""
+
+#: templates/creator.html:158
+msgid "Alerts for new messages or transactions on the marketplace"
+msgstr ""
+
+#: templates/creator.html:165
+msgid "Flexible Listings"
+msgstr ""
+
+#: templates/creator.html:166
+msgid "Sell new or used goods and rent your products or services"
+msgstr ""
+
+#: templates/creator.html:173
+msgid "Escrow"
+msgstr ""
+
+#: templates/creator.html:174
+msgid "Funds are safely escrowed until both parties are happy with a transaction"
+msgstr ""
+
+#: templates/creator.html:181
+msgid "Messaging"
+msgstr ""
+
+#: templates/creator.html:182
+msgid "Decentralized, encrypted end-to-end, fast, fre, and auditable"
+msgstr ""
+
+#: templates/creator.html:189
+msgid "Arbitration"
+msgstr ""
+
+#: templates/creator.html:190
+msgid "Arbitration features will allow you to resolve disputes"
+msgstr ""
+
+#: templates/creator.html:197
+msgid "Ethereum & IPFS"
+msgstr ""
+
+#: templates/creator.html:198
+msgid "Built on a decentralized web3 stack"
+msgstr ""
+
+#: templates/creator.html:205
+msgid "Multi-device"
+msgstr ""
+
+#: templates/creator.html:206
+msgid "Your marketplace looks great on mobile, tablet, and desktop"
+msgstr ""
+
+#: templates/creator.html:220
+msgid "Get started for free today"
+msgstr ""
+
+#: templates/creator.html:227
+msgid "Have questions?"
+msgstr ""
+
+#: templates/creator.html:227
+msgid "Get in touch"
+msgstr ""
 
 #: templates/developers.html:2 templates/developers.html:3
 msgid "Origin Protocol - Developers"
 msgstr "원산지 프로토콜 - 개발자"
 
-#: templates/developers.html:14 templates/index.html:22
-msgid "The sharing economy without intermediaries"
-msgstr "중간인없는 경제 공유"
+#: templates/flashes.html:4
+msgid "New!"
+msgstr ""
 
-#: templates/developers.html:17 templates/index.html:25
-msgid "Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS"
-msgstr "Origin은 Ehterum 블록체인과 IPFS위에서 공유 경제 시장을 만드는 프로토콜입니다."
+#: templates/flashes.html:4
+msgid "Create your own<br>decentralized marketplace."
+msgstr ""
 
-#: templates/developers.html:65 templates/index.html:73
-msgid "The Origin platform"
-msgstr "Origin 플랫폼"
+#: templates/flashes.html:4
+msgid "Try It Now"
+msgstr ""
 
-#: templates/developers.html:68 templates/index.html:76
-msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
-msgstr "우리는 개발자와 기업이 블록 체인위의 분산화된 시장을 구축하도록 권한을 부여합니다. 우리의 프로토콜은 자산과 서비스의 부분적인 사용을위한 리스팅(listing)을 쉽게 만들고 관리 할 수있게 해줍니다. 구매자와 판매자는 서로를 찾고, 목록을 검색하고, 예약을하고, 평가와 리뷰 등을 남길 수 있습니다."
+#: templates/footer.html:25
+msgid "Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network."
+msgstr ""
 
-#: templates/developers.html:72 templates/index.html:80
-msgid "Read Our Product Brief"
-msgstr "회사의 제품 개요 읽기"
-
-#: templates/developers.html:78 templates/index.html:86
-#: templates/index.html:636
-msgid "Join Our Telegram"
-msgstr "우리의 텔레그램에 가입하십시오."
-
-#: templates/developers.html:94 templates/index.html:103
-msgid "Partners building on Origin"
-msgstr "Origin 기반으로하는 파트너"
-
-#: templates/developers.html:97 templates/index.html:106
-msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
-msgstr "전 세계에 뻗어있는 팀이 Origin 프로토콜을 기반으로 만들고 있지만 우리는 더욱 능력있는 사람들이 우리의 목표에 동참 할 수있는 방안을 찾고 있습니다."
-
-#: templates/developers.html:101 templates/index.html:110
-msgid "View All Partners"
-msgstr "모든 파트너보기"
-
-#: templates/developers.html:140 templates/index.html:191
-msgid "Build your business on Origin"
-msgstr "Origin에서 비즈니스 구축"
-
-#: templates/developers.html:143 templates/index.html:194
-#, fuzzy
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
-msgstr "Origin은 프리랜서 사진 작가, 아파트 소유주, 자전거 대여 공급 업체 또는 존재하는 모든 공유 경제 비즈니스 업체를 모두 분산화된 웹에서 쉽게 비즈니스를 수행하게 할 수 있습니다. "
-
-#: templates/developers.html:143 templates/index.html:194
-msgid "Get in touch to learn more."
-msgstr "자세히 알아 보려면 연락하세요."
-
-#: templates/developers.html:147 templates/index.html:198
-msgid "Try the Demo"
-msgstr "데모 사용해보기"
-
-#: templates/developers.html:153 templates/index.html:204
-msgid "View GitHub"
-msgstr "Github 보기"
-
-#: templates/developers.html:165 templates/index.html:216
-msgid "It's time to replace rent-seeking middlemen"
-msgstr "중개료만 찾고있는 중간인을 바꿔야할 시간입니다."
-
-#: templates/developers.html:168 templates/index.html:219
-#, python-format
-msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "Ethereum 블록 체인 기술을 이용하여 목록은 중립적인 제 3 자 역할을하는 안전하고 투명한 시스템을 통해 관리됩니다. 구매자와 판매자는 현재 Uber, Airbnb, Fiverr 및 Getaround와 같은 회사에가는 20-30 %% 거래 수수료를 나누게 될 것입니다."
-
-#: templates/developers.html:172 templates/index.html:223
-msgid "Read the Whitepaper"
-msgstr "백서 읽기"
-
-#: templates/footer.html:13
-msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, promoting free and transparent commerce, and giving early participants in the community a stake in the network."
-msgstr "근원은 내일의 공유 경제를 건설하고 있습니다. 구매자와 판매자는 임대료를 찾는 중개인없이 거래 할 수 있습니다. 우리는 거래 수수료를 낮추고, 자유롭고 투명한 상거래를 촉진하며, 지역 사회 초기 참가자들에게 네트워크의 지분을 제공하는 것을 믿습니다."
-
-#: templates/footer.html:16
+#: templates/footer.html:28
 msgid "Origin Protocol, Inc."
 msgstr " Origin Protocol, Inc."
 
-#: templates/footer.html:18
+#: templates/footer.html:30
 msgid "Privacy"
 msgstr "은둔"
 
-#: templates/footer.html:22 templates/tos.html:12
+#: templates/footer.html:34 templates/tos.html:18
 msgid "Terms of Service"
 msgstr "서비스 약관"
 
-#: templates/footer.html:31
-msgid "Documentation"
-msgstr "문서"
+#: templates/footer.html:43
+msgid "Products"
+msgstr ""
 
-#: templates/footer.html:36 templates/navbar.html:71
-msgid "Product Brief"
-msgstr "제품 업무"
+#: templates/footer.html:48 templates/navbar.html:72
+msgid "Marketplace Creator"
+msgstr ""
 
-#: templates/footer.html:41
-msgid "Whitepaper"
-msgstr "백서"
+#: templates/footer.html:53
+msgid "Marketplace DApp"
+msgstr ""
 
-#: templates/footer.html:46
-msgid "Demo DApp"
-msgstr "데모 DApp"
+#: templates/footer.html:58
+msgid "Mobile Wallet (iOS)"
+msgstr ""
 
-#: templates/footer.html:51
-msgid "Github"
-msgstr "Github"
+#: templates/footer.html:65
+msgid "Resources"
+msgstr ""
 
-#: templates/footer.html:56
+#: templates/footer.html:70
+msgid "Developers"
+msgstr ""
+
+#: templates/footer.html:75 templates/index.html:211
+msgid "GitHub"
+msgstr ""
+
+#: templates/footer.html:80
 msgid "Docs"
 msgstr "문서 도구"
 
-#: templates/footer.html:63 templates/team.html:122 templates/team.html:327
-#: templates/team.html:344 templates/team.html:361 templates/team.html:378
-msgid "Community"
-msgstr "커뮤니티"
+#: templates/footer.html:85 templates/navbar.html:76
+msgid "Product Brief"
+msgstr "제품 업무"
 
-#: templates/footer.html:68
-msgid "Telegram"
-msgstr "텔레그램"
+#: templates/footer.html:90
+msgid "Whitepaper"
+msgstr "백서"
 
-#: templates/footer.html:73
-msgid "Discord"
-msgstr "디스코드"
-
-#: templates/footer.html:78
-msgid "Medium"
-msgstr "미디엄"
-
-#: templates/footer.html:83
-msgid "Reddit"
-msgstr "Reddit"
-
-#: templates/footer.html:88
-msgid "Twitter"
-msgstr "트위터"
-
-#: templates/footer.html:93
-msgid "Instagram"
-msgstr "인스 타 그램"
-
-#: templates/footer.html:98
-msgid "Facebook"
-msgstr "페이스북"
-
-#: templates/footer.html:105
+#: templates/footer.html:97
 msgid "Organization"
 msgstr "조직"
 
-#: templates/footer.html:110 templates/navbar.html:74
+#: templates/footer.html:102 templates/navbar.html:80
 msgid "Team"
 msgstr "팀"
 
-#: templates/footer.html:115 templates/navbar.html:68 templates/presale.html:16
-msgid "Presale"
-msgstr "사전 판매"
+#: templates/footer.html:107 templates/navbar.html:69 templates/tokens.html:18
+msgid "Tokens"
+msgstr ""
 
-#: templates/footer.html:120
+#: templates/footer.html:112
 msgid "Partners"
 msgstr "파트너사"
 
-#: templates/footer.html:125
-msgid "Jobs (We're hiring!)"
-msgstr "채용 정보 (채용 예정)"
+#: templates/footer.html:117
+msgid "Meetups"
+msgstr ""
 
-#: templates/footer.html:130
-msgid "845 Market St, #450A<br>San Francisco, CA 94103"
-msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
+#: templates/footer.html:122
+msgid "Jobs"
+msgstr ""
+
+#: templates/footer.html:129 templates/team.html:422 templates/team.html:436
+msgid "Community"
+msgstr "커뮤니티"
+
+#: templates/footer.html:134
+msgid "Discord"
+msgstr "디스코드"
+
+#: templates/footer.html:139
+msgid "Telegram"
+msgstr "텔레그램"
+
+#: templates/footer.html:144
+msgid "Reddit"
+msgstr "Reddit"
+
+#: templates/footer.html:148
+msgid "WeChat"
+msgstr ""
+
+#: templates/footer.html:151
+msgid "Weibo"
+msgstr ""
+
+#: templates/footer.html:160
+msgid "Twitter"
+msgstr "트위터"
+
+#: templates/footer.html:165
+msgid "Instagram"
+msgstr "인스 타 그램"
+
+#: templates/footer.html:170
+msgid "Facebook"
+msgstr "페이스북"
+
+#: templates/footer.html:175
+msgid "Medium"
+msgstr "미디엄"
+
+#: templates/footer.html:180
+msgid "Youtube"
+msgstr ""
 
 #: templates/index.html:5
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "중간인없는 경제 공유. Origin은 Ethereum 블록 체인 및 IPFS를 위에서 공유 경제 마켓을 만들기 위한 프로토콜입니다"
 
-#: templates/index.html:121
+#: templates/index.html:24
+msgid "Decentralized marketplaces on the blockchain"
+msgstr ""
+
+#: templates/index.html:27
+msgid "Origin is a protocol for creating peer-to-peer marketplaces<br>using the Ethereum blockchain and IPFS"
+msgstr ""
+
+#: templates/index.html:77
+msgid "The Origin platform"
+msgstr "Origin 플랫폼"
+
+#: templates/index.html:80
+msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
+msgstr "우리는 개발자와 기업이 블록 체인위의 분산화된 시장을 구축하도록 권한을 부여합니다. 우리의 프로토콜은 자산과 서비스의 부분적인 사용을위한 리스팅(listing)을 쉽게 만들고 관리 할 수있게 해줍니다. 구매자와 판매자는 서로를 찾고, 목록을 검색하고, 예약을하고, 평가와 리뷰 등을 남길 수 있습니다."
+
+#: templates/index.html:84
+msgid "Try the DApp"
+msgstr ""
+
+#: templates/index.html:90
+msgid "Join Our Discord"
+msgstr ""
+
+#: templates/index.html:107
+msgid "Partners building on Origin"
+msgstr "Origin 기반으로하는 파트너"
+
+#: templates/index.html:110
+msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
+msgstr "전 세계에 뻗어있는 팀이 Origin 프로토콜을 기반으로 만들고 있지만 우리는 더욱 능력있는 사람들이 우리의 목표에 동참 할 수있는 방안을 찾고 있습니다."
+
+#: templates/index.html:114
+msgid "View All Partners"
+msgstr "모든 파트너보기"
+
+#: templates/index.html:125
 msgid "Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
 msgstr "Bee Token은 Origin 프로토콜을 사용하여 분산화 된 웹에 호스트 및 게스트의 중간인 없는  P2P네트워크를 구축하고 있습니다."
 
-#: templates/index.html:129
+#: templates/index.html:133
 msgid "Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US."
 msgstr "Spin은 미국 내 50 개가 넘는 시장에서 전자 스쿠터, 전자 자전거 및 자전거를 임대하는 선도적 인 개인 이동성 플랫폼입니다."
 
-#: templates/index.html:137
+#: templates/index.html:141
 msgid "Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol."
 msgstr "Kozaza는 원점 프로토콜을 사용하여 홈 체인 및 전통 홈스테이 네트워크를 블록 체인에 구축하고 있습니다."
 
-#: templates/index.html:145
+#: templates/index.html:149
 msgid "CanYa is building their “marketplace of services” with Origin Protocol for the gig economy."
 msgstr "CanYa는 gig 경제를위한 그들의 마켓플레이스 서비스를 오리진 프로토콜 (Origin Protocol)을 통해 구축하고 있습니다."
 
-#: templates/index.html:153
+#: templates/index.html:157
 msgid "ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol."
 msgstr "ServisHero는 원산지 프로토콜 (Origin Protocol)에 따라 개발 도상국의 근로자에게 힘을 실어주는 서비스 시장을 구축하고 있습니다."
 
-#: templates/index.html:267
-msgid "Features"
-msgstr "특징"
+#: templates/index.html:198
+msgid "Build your business on Origin"
+msgstr "Origin에서 비즈니스 구축"
 
-#: templates/index.html:279
+#: templates/index.html:201
+#, fuzzy
+msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
+msgstr "Origin은 프리랜서 사진 작가, 아파트 소유주, 자전거 대여 공급 업체 또는 존재하는 모든 공유 경제 비즈니스 업체를 모두 분산화된 웹에서 쉽게 비즈니스를 수행하게 할 수 있습니다. "
+
+#: templates/index.html:201
+msgid "Get in touch to learn more."
+msgstr "자세히 알아 보려면 연락하세요."
+
+#: templates/index.html:205
+msgid "Create Your Marketplace"
+msgstr ""
+
+#: templates/index.html:223
+msgid "It's time to replace rent-seeking middlemen"
+msgstr "중개료만 찾고있는 중간인을 바꿔야할 시간입니다."
+
+#: templates/index.html:226
+#, python-format
+msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
+msgstr "Ethereum 블록 체인 기술을 이용하여 목록은 중립적인 제 3 자 역할을하는 안전하고 투명한 시스템을 통해 관리됩니다. 구매자와 판매자는 현재 Uber, Airbnb, Fiverr 및 Getaround와 같은 회사에가는 20-30 %% 거래 수수료를 나누게 될 것입니다."
+
+#: templates/index.html:230
+msgid "Read the Product Brief"
+msgstr ""
+
+#: templates/index.html:285
 msgid "Smart contracts enable secure and reliable payments directly from one party to another"
 msgstr "스마트 계약(Smart contracts)를 통해 한 당사자가 다른 당사자에게 직접 안전하고 신뢰가능한 지불을 할 수 있습니다."
 
-#: templates/index.html:291
+#: templates/index.html:296
 msgid "Protocol schemas support hundreds of listing types, including custom verticals"
 msgstr "프로토콜 개요는 맞춤 카테고리를 포함하여 수백 가지 목록 유형을 지원합니다."
 
-#: templates/index.html:303
+#: templates/index.html:307
 msgid "Open and shared data encourages innovation by developers and businesses"
 msgstr "개방적이고 공유 된 데이터는 개발자와 기업의 혁신을 촉진합니다."
 
-#: templates/index.html:315
+#: templates/index.html:318
 msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
 msgstr "블록 체인을 이용한 신원 확인 및  정보는 안전하고, 신뢰성 있는 파트너를 보장합니다."
 
-#: templates/index.html:332
+#: templates/index.html:335
 msgid "Tech Stack"
 msgstr "기술 스택"
 
-#: templates/index.html:406
+#: templates/index.html:409
 msgid "Roadmap"
 msgstr "로드맵"
 
-#: templates/index.html:412
+#: templates/index.html:415
 msgid "May 2017"
 msgstr "2017 년 5 월"
 
-#: templates/index.html:414
-msgid "Idea conception and demo DApp development"
-msgstr "아이디어 컨셉 및 DApp 개발"
+#: templates/index.html:417
+msgid "Idea conception and early development"
+msgstr ""
 
-#: templates/index.html:419
+#: templates/index.html:422
 msgid "September 2017"
 msgstr "2017 년 9 월"
 
-#: templates/index.html:421
+#: templates/index.html:424
 #, python-format
-msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
-msgstr "<a href=' %% (product_brief)s'> 제품 개요 </a> 및 <a는 href=' %% (whitepaper)s'> 백서 </a>를 발표"
+msgid "<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released"
+msgstr ""
 
-#: templates/index.html:426
+#: templates/index.html:429
 msgid "December 2017"
 msgstr "2017 년 12 월"
 
-#: templates/index.html:428
-msgid "Launch <a href='https://demo.originprotocol.com' target='_blank'>alpha</a> on Ethereum testnet"
-msgstr "Ethereum testnet에서 <a href='https://demo.originprotocol.com' target='_blank'> 알파 </a>테스트 시작"
+#: templates/index.html:431
+msgid "Launch alpha on Ethereum testnet"
+msgstr ""
 
-#: templates/index.html:433
+#: templates/index.html:436
 msgid "Q2 2018"
 msgstr "2018년 2분기"
 
-#: templates/index.html:435
-msgid "Public beta and community sale"
-msgstr "공개 베타 및 공개 세일"
+#: templates/index.html:438
+msgid "Launch beta on Ethereum testnet"
+msgstr ""
 
-#: templates/index.html:440
+#: templates/index.html:443
 msgid "Q3 2018"
 msgstr "2018 년 3 분기"
 
-#: templates/index.html:442
-msgid "Token distribution and launch of 3rd-party DApps"
-msgstr "토큰 배분 및 제 3 자 DApp 출시"
+#: templates/index.html:445
+msgid "Platform readiness and mainnet launch"
+msgstr ""
 
-#: templates/index.html:447
+#: templates/index.html:450
 msgid "2019"
 msgstr "2019 년"
 
-#: templates/index.html:449
-msgid "Fully decentralized services and governance"
-msgstr "완전 분산 서비스 및 거버넌스"
+#: templates/index.html:452
+msgid "3rd-parties expected to launch DApps"
+msgstr ""
 
-#: templates/index.html:475
+#: templates/index.html:478
 msgid "Join us in building the sharing economy of tomorrow"
 msgstr "우리와 내일의 공유 경제 만들기에 함께하십시오."
 
-#: templates/index.html:478
+#: templates/index.html:481
 msgid "Sign up for our mailing list and be first to learn of any Origin news!"
 msgstr "우리의 메일 리스트에 가입하고 모든 Origin 뉴스를 먼저 받아보십시오."
 
-#: templates/index.html:482
+#: templates/index.html:485
 #, fuzzy
 msgid "Enter email"
 msgstr "이메일"
 
-#: templates/index.html:485
+#: templates/index.html:488
 msgid "Join the Community"
 msgstr "커뮤니티에 가입하세요."
 
-#: templates/index.html:499
+#: templates/index.html:502
 msgid "Press"
 msgstr "기사"
 
-#: templates/index.html:510
+#: templates/index.html:534
 msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
 msgstr "Airbnb가 오늘 시작 되었다면 블록 체인을 기반으로 한 P2P 협업 모델이었을 것입니다 - Joey Krug, Augur"
 
-#: templates/index.html:522
+#: templates/index.html:546
 msgid "Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers"
 msgstr "Origin Protocol은 피어 투 피어 블록 체인 플랫폼에 2,800 만 달러를 제공합니다. 토큰 판매 연료 라운드 자금; 약 45 개의 회사가 고객으로 헌신했습니다."
 
-#: templates/index.html:534
+#: templates/index.html:558
 msgid "Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain."
 msgstr "Origin은 개발자와 기업이 블록 체인에서 분산 된 경제 경제 마켓 플레이스를 구축 할 수 있도록 일련의 프로토콜을 만드는 것을 목표로합니다."
 
-#: templates/index.html:546
+#: templates/index.html:576
 msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
 msgstr "ethereum blockchain을 사용하는 Origin Protocol은 구매자와 판매자가 효과적인 방식으로 거래할 수 있게합니다."
 
-#: templates/index.html:558
+#: templates/index.html:588
 msgid "A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy."
 msgstr "중개자없이 (그리고 수수료없이) 사용자간에 트랜잭션을 허용하는 분산 디지털 원장은 공유 경제에서 사용자 경험을 재발견 할 준비가되어 있습니다."
 
-#: templates/index.html:570
+#: templates/index.html:600
 msgid "It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too."
 msgstr "그것은 utopic하고 완전히 혁신적인 소리 : 자비로운 사회적 기업과 비영리 단체의 힘을 소비자에게 권한을 부여하고 그들에게 그들의 개인 정보 보호 권리를 돌려주고, 어쩌면 그들에게 돈을 저축하려고하는 세계."
 
-#: templates/index.html:582
+#: templates/index.html:619
 msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
 msgstr "Origin Protocol은 Ethereum Blockchain을 사용하여 구매자와 판매자가 기존의 중간인없는 분산화된 환경에서 거래 할 수 있도록 지원합니다."
 
-#: templates/index.html:594
-msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
-msgstr "Origin은 Ethereum을 이용한 공유 경제의 분산화를 원하면서, 무엇이든 직접 처리 할 수있는 P2P 네트워크를 만들고자 합니다."
+#: templates/index.html:631
+msgid "Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet."
+msgstr ""
 
-#: templates/index.html:607
-msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
-msgstr "오픈 소스 소프트웨어가 수십만 달러 또는 수십억 달러의 기업을 대체 할 수 있다면 어떨까요?"
-
-#: templates/index.html:619
+#: templates/index.html:643
 msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
 msgstr "Origin Protocol은  분산화된 오픈 웹 플랫폼에서 거래하는 카 쉐어링 또는 홈 쉐어링과 같은 서비스의 구매자와 판매자를위한 오픈 소스 블록 체인 프로토콜 입니다."
 
-#: templates/index.html:636
-msgid "Make new friends!"
-msgstr "새로운 친구들을 만드십시오!"
+#: templates/index.html:661
+msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
+msgstr "오픈 소스 소프트웨어가 수십만 달러 또는 수십억 달러의 기업을 대체 할 수 있다면 어떨까요?"
 
-#: templates/mobile.html:2 templates/mobile.html:3
+#: templates/index.html:674
+msgid "Origin Protocol offers an entire blockchain-based platform to allow anyone to create their own property-sharing business."
+msgstr ""
+
+#: templates/index.html:687
+msgid "Origin Protocol, a blockchain project building a decentralized marketplace, has rolled out a peer-to-peer messaging application built on top of ethereum."
+msgstr ""
+
+#: templates/index.html:700
+msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
+msgstr ""
+
+#: templates/mobile.html:3 templates/mobile.html:4
 msgid "Origin Protocol - Mobile"
 msgstr "원산지 프로토콜 - 모바일"
 
-#: templates/navbar.html:77
+#: templates/navbar.html:83
 msgid "Blog"
 msgstr "블로그 "
 
-#: templates/navbar.html:80
-msgid "Demo"
-msgstr "데모"
+#: templates/navbar.html:86
+msgid "DApp"
+msgstr ""
 
 #: templates/partners.html:3 templates/partners.html:5
 #, fuzzy
 msgid "Origin Protocol - Build on Origin"
 msgstr "Origin 프로토콜 - 팀"
 
-#: templates/partners.html:16
+#: templates/partners.html:18
 #, fuzzy
 msgid "Build on Origin"
 msgstr "Origin에서 비즈니스 구축"
 
-#: templates/partners.html:22
+#: templates/partners.html:24
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong> 전세계에 뻗어있는 우리의 팀은 Origin의 프로토콜을 사용하여 프로젝트를 만들고 있습니다. 우리는 저희 목표에 함께할 능력있는 인재들을 찾고 있습니다.<a href='join_our_mission'> 우리의 목표에 함께 하십시오 </a></strong>"
 
-#: templates/partners.html:87
+#: templates/partners.html:89
 msgid "View More"
 msgstr "더보기"
 
-#: templates/partners.html:88
+#: templates/partners.html:90
 msgid "View Less"
 msgstr "줄이기"
 
-#: templates/partners.html:118
+#: templates/partners.html:120
 msgid "Join our mission!"
 msgstr "우리와 함께 하십시오!"
 
-#: templates/partners.html:121
+#: templates/partners.html:123
 msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
 msgstr "블록 체인 기술에 대해 생각하고있는 기존의 블록 체인 회사 든 ,기존의 시장이든 관계없이 모든 여러분의 의견을 듣고 싶습니다. 아래 양식을 작성해 주십시오. 연락 드리겠습니다."
 
-#: templates/partners.html:125
+#: templates/partners.html:127
 #, fuzzy
 msgid "Name"
 msgstr "성명"
 
-#: templates/partners.html:126
+#: templates/partners.html:128
 msgid "Firstname Lastname"
 msgstr "이름(Firstname) 성(Lastname)"
 
-#: templates/partners.html:129
+#: templates/partners.html:131
 msgid "Company"
 msgstr "회사"
 
-#: templates/partners.html:130
+#: templates/partners.html:132
 msgid "My Amazing Company"
 msgstr "나의 대단한 회사"
 
-#: templates/partners.html:133 templates/presale.html:74
-#: templates/presale.html:75
+#: templates/partners.html:135 templates/tokens.html:76
+#: templates/tokens.html:77
 msgid "Email"
 msgstr "이메일"
 
-#: templates/partners.html:134
+#: templates/partners.html:136
 msgid "yourname@websitename.com"
 msgstr "yourname@websitename.com"
 
-#: templates/partners.html:137
+#: templates/partners.html:139
 msgid "Website"
 msgstr "웹사이트"
 
-#: templates/partners.html:138
+#: templates/partners.html:140
 msgid "https://websitename.com"
 msgstr "https://websitename.com"
 
-#: templates/partners.html:141 templates/presale.html:384
+#: templates/partners.html:143 templates/tokens.html:386
 msgid "<strong>Anything else we should know?</strong> (optional)"
 msgstr "<strong> 우리가 알아야 할 사항이 있습니까? </strong> (선택 사항)"
 
-#: templates/partners.html:153
+#: templates/partners.html:155
 msgid "Become a Partner"
 msgstr "우리 회사의 파트너가 되십시오."
 
-#: templates/presale.html:3 templates/presale.html:5 templates/privacy.html:2
-#: templates/privacy.html:3 templates/tos.html:2 templates/tos.html:3
-#, fuzzy
-msgid "Origin Protocol - Presale"
-msgstr "Origin 프로토콜 - 사전판매"
+#: templates/privacy.html:3 templates/privacy.html:5
+msgid "Origin Protocol - Privacy Policy"
+msgstr ""
 
-#: templates/presale.html:21
-msgid "<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced."
-msgstr "<strong> Origin presale의 정확한 날짜 및 세부 정보는 아직 발표되지 않았습니다. </strong> Origin presale에 참여하고 더 자세한 내용을 받아보고 싶다면이 양식을 작성해 주십시오."
-
-#: templates/presale.html:66
-msgid "Interested in contributing?"
-msgstr "투자에 관심이 있으십니까?"
-
-#: templates/presale.html:70 templates/presale.html:71
-msgid "Full Name"
-msgstr "성명(Full name)"
-
-#: templates/presale.html:78
-msgid "Are you an accredited investor?"
-msgstr "공인 투자자입니까?"
-
-#: templates/presale.html:78
-msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
-msgstr "공인 투자자는 1 차 주거지의 가치를 제외하고 적어도 $ 1,000,000의 순 가치가 있어야하며 지난 2 년 동안 매년 최소 20 만 달러의 소득이 있어야합니다 (혼인한 경우 합산하여 30만 달러)."
-
-#: templates/presale.html:78
-msgid "Huh?"
-msgstr "응?"
-
-#: templates/presale.html:81
-msgid "Yes"
-msgstr "맞습니다."
-
-#: templates/presale.html:86
-msgid "No"
-msgstr "아닙니다."
-
-#: templates/presale.html:91
-msgid "What type of entity do you represent?"
-msgstr "어떤 유형의 단체를 대표하고 계십니까?"
-
-#: templates/presale.html:94
-msgid "Individual"
-msgstr "개인"
-
-#: templates/presale.html:99
-msgid "Syndicate"
-msgstr "연합체"
-
-#: templates/presale.html:104
-msgid "Professional Fund"
-msgstr "전문 기금"
-
-#: templates/presale.html:110
-#, fuzzy
-msgid "<strong>Desired allocation</strong>"
-msgstr "<strong> 원하는 투자금액</strong> "
-
-#: templates/presale.html:126
-msgid "Citizenship"
-msgstr "시민권"
-
-#: templates/presale.html:380
-msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
-msgstr "<strong> 보내려는 ETH 또는 BTC 주소를 적어주십시오? </strong> (선택 사항)"
-
-#: templates/presale.html:388
-msgid "Important notice"
-msgstr "중요 공지"
-
-#: templates/presale.html:391
-msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
-msgstr " 프리 세일은 미국 규정 및 증권법의 적용을받으며이 양식을 제출하는 것은 배분을 보장 받지 못한다는 것을 알고 있습니다."
-
-#: templates/presale.html:400
-msgid "Submit"
-msgstr "등록"
-
-#: templates/privacy.html:12
+#: templates/privacy.html:18
 msgid "Privacy Policy"
 msgstr "개인 정보 정책"
 
@@ -618,301 +719,378 @@ msgstr "개인 정보 정책"
 msgid "Origin Protocol - Team"
 msgstr "Origin 프로토콜 - 팀"
 
-#: templates/team.html:22
+#: templates/team.html:24
 msgid "Our Team"
 msgstr "자사 팀 소개"
 
-#: templates/team.html:27
+#: templates/team.html:29
 msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
 msgstr "Origin은 분산 된 기업가, 엔지니어 및 블록 체인 전문가로 구성된 팀입니다. 우리의 목표는 분산 된 웹에서 공유 경제를 이루어 내는 것입니다. 고용은 아직 끝나지 않았습니다!"
 
-#: templates/team.html:58
+#: templates/team.html:60
 msgid "Core Team"
 msgstr "핵심 팀 "
 
-#: templates/team.html:67
+#: templates/team.html:69
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:71 templates/team.html:88
+#: templates/team.html:73 templates/team.html:90
 msgid "Cofounder"
 msgstr "공동창립자"
 
-#: templates/team.html:74
+#: templates/team.html:76
 msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "Josh는 10 세에 코딩을 시작했습니다. Origin에 입사하기 전, 3개의  벤처 자금 지원 기업인 EventVue, Torbit (Walmart Labs 인수) & amp; Forage를 공동설립하엿습니다."
 
-#: templates/team.html:84
+#: templates/team.html:86
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:91
+#: templates/team.html:93
 msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "Matt은 YouTube (Google 인수)의 제 3번째 PM이었고, Qwiki (Yahoo가 인수)와 Bonobos (Walmart가 인수)의 PM이었습니다. 또한 스탠포드 대학에서 석사와 학사 학위를 받았습니다."
 
-#: templates/team.html:101
+#: templates/team.html:103
 msgid "Stan James"
 msgstr "Stan James"
 
-#: templates/team.html:105 templates/team.html:190
+#: templates/team.html:107 templates/team.html:175 templates/team.html:228
+#: templates/team.html:318
 #, fuzzy
 msgid "Senior Engineer"
 msgstr "수석 엔지니어"
 
-#: templates/team.html:108
-msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
-msgstr "Stan은 게임 디자인 및 기계 학습에 오랜 경력을 가진 소프트웨어 아키텍터입니다. 이전에는 Lijit Networks (Federated Media에서 인수됨)를 설립했습니다."
+#: templates/team.html:110
+msgid "Stan is a software architect with patents in decentralized trust, game design, computer vision, and robotics. Previously, he founded Lijit Networks (acquired by Federated Media)."
+msgstr ""
 
-#: templates/team.html:118
-msgid "Andrew Hyde"
-msgstr "Andrew Hyde"
-
-#: templates/team.html:125
-msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
-msgstr "Andrew는 Startup Weekend를 비롯한 4 개의 신생 기업을 만들어 냇으며 수십 개국에 걸쳐 글로벌 커뮤니티를 만들었습니다. 또한 TechStars에서 최우수직원으로 근무한 경력이  있습니다."
-
-#: templates/team.html:139
+#: templates/team.html:124
 msgid "Partnerships"
 msgstr "파트너쉽"
 
-#: templates/team.html:142
+#: templates/team.html:127
 msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr "Coleman은 많은 Airbnb의  자산을 소유하고 관리하는 적극적인 cryptocurrency 투자자이자 부동산 사업가입니다. 또한 버클리에서 수학을 공부했습니다."
 
-#: templates/team.html:152
+#: templates/team.html:137
 msgid "Jon Hearty"
 msgstr "Jon Hearty"
 
-#: templates/team.html:156
+#: templates/team.html:141
 msgid "Business Development"
 msgstr "비즈니스 개발"
 
-#: templates/team.html:159
+#: templates/team.html:144
 msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
 msgstr "Jon은 Redbeacon (The Home Depot에 인수 됨)의10 번째 고용자엿고,  Datanyze에 1 번째로 고용되여  VP에서 COO까지 다양한 비즈니스 개발 역할을 담당했습니다."
 
-#: templates/team.html:169
+#: templates/team.html:154
 msgid "Yu Pan"
 msgstr "유팬"
 
-#: templates/team.html:173
+#: templates/team.html:158
 msgid "R&D Engineer"
 msgstr "R & D 엔지니어"
 
-#: templates/team.html:176
+#: templates/team.html:161
 msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate."
 msgstr "Yu Pan은 PayPal의 창립 멤버 6 명 중 한 명으로 YouTube의 1 번째 직원이었습니다. 그는 키위 크레이트 (Kiwi Crate)의 전직 Google 직원이자 공동 창립자입니다."
 
-#: templates/team.html:186
+#: templates/team.html:171
 msgid "Cuong Do"
 msgstr "쿠옹 마"
 
-#: templates/team.html:193
+#: templates/team.html:178
 msgid "Cuong Do was the former head of Dropbox NYC Engineering. Before that, Cuong was one of the early team members at PayPal and worked alongside Yu Pan and Matt at YouTube."
 msgstr "Cuong Do는 Dropbox NYC Engineering의 전 책임자였습니다. 그 전에 Cuong은 PayPal의 초기 팀원 중 한 명이었으며 YouTube의 Yu Pan 및 Matt와 함께 작업했습니다."
 
-#: templates/team.html:203
+#: templates/team.html:188
 msgid "Micah Alcorn"
 msgstr "미카 알콘"
 
-#: templates/team.html:207 templates/team.html:224 templates/team.html:276
-#: templates/team.html:293 templates/team.html:310
+#: templates/team.html:192 templates/team.html:282
 msgid "Engineer"
 msgstr "엔지니어"
 
+#: templates/team.html:195
+msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
+msgstr ""
+
+#: templates/team.html:206
+msgid "Kay Yoo"
+msgstr ""
+
 #: templates/team.html:210
-msgid "Micah has been a commercial real estate broker for over a decade while developing software along the way. He is the technical cofounder of WellAttended, a bootstrapped box office management platform."
-msgstr "Micah는 10 년 이상 상업용 부동산 중개인으로 일해 왔으며 그 과정에서 소프트웨어를 개발했습니다. 그는 WellAttended의 기술 공동 창립자이며, 부트 스트랩 된 박스 오피스 관리 플랫폼입니다."
+msgid "Finance & Operations"
+msgstr ""
 
-#: templates/team.html:220
-msgid "Tyler Yasaka"
-msgstr "타일러 야 사카"
+#: templates/team.html:213
+msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
+msgstr ""
 
-#: templates/team.html:227
-msgid "Tyler is a full stack developer and blockchain enthusiast. He is a recent college graduate who has helped build an ecommerce platform in the auto recycling industry."
-msgstr "Tyler는 완전한 스택 개발자이자 블록 체인 애호가입니다. 그는 최근 대학 졸업생으로 자동차 재활용 산업에서 전자 상거래 플랫폼을 구축하는 것을 도왔습니다."
+#: templates/team.html:224
+msgid "Franck Chastagnol"
+msgstr ""
+
+#: templates/team.html:231
+msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
+msgstr ""
+
+#: templates/team.html:242
+msgid "Austin Virts"
+msgstr ""
 
 #: templates/team.html:246
-msgid "Extended Team"
-msgstr "확장 팀"
+msgid "Marketing"
+msgstr ""
 
-#: templates/team.html:255
-msgid "Aure Gimon"
-msgstr "Aure Gimon"
+#: templates/team.html:249
+msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
+msgstr ""
 
-#: templates/team.html:259
-msgid "Product Designer"
-msgstr "제품 디자이너"
+#: templates/team.html:260
+msgid "Mila Choi"
+msgstr ""
 
-#: templates/team.html:262
-msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
-msgstr "Aure는 사용자를 만족하게 하는 제품 제작에 오랜 경력을 쌓아 왔습니다. 그는 톱 브랜드 (나이키, 소니, 버진) 및 실리콘 밸리 신생 기업의 디자인을 맡은 경력이 있습니다."
+#: templates/team.html:264
+msgid "Korea Community"
+msgstr ""
 
-#: templates/team.html:272
-msgid "Daniel Von Fange"
-msgstr "Daniel Von Fange"
+#: templates/team.html:267
+msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
+msgstr ""
 
-#: templates/team.html:279
-msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
-msgstr "Daniel은 다개국어가 가능한 풀 스택 개발자로. 어셈블리 프로그래밍에서 건축 시스템에 이르기까지 전세계에서 수십억 달러의 NGO 지출을 추적하는 프로젝트에 참여한 경력이 있습니다."
+#: templates/team.html:278
+msgid "Tom Linton"
+msgstr ""
 
-#: templates/team.html:289
-msgid "Gagandeep Singh"
-msgstr "가간데프 싱"
+#: templates/team.html:285
+msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
+msgstr ""
 
 #: templates/team.html:296
-msgid "Gagan is a full stack developer with over 4 years of experience working with several early stage startups. He has expertise in building scalable enterprise-grade applications."
-msgstr "Gagan은 4 년 넘게 초기 몇 개의 초기 신생 업체와 함께 일한 경험 많은 스택 개발자입니다. 그는 확장 가능한 엔터프라이즈 급 응용 프로그램을 구축 할 수있는 전문 지식을 갖추고 있습니다."
+msgid "Anna Wang"
+msgstr ""
 
-#: templates/team.html:306
+#: templates/team.html:300
+msgid "China Community"
+msgstr ""
+
+#: templates/team.html:303
+msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
+msgstr ""
+
+#: templates/team.html:314
 msgid "Nick Poulden"
 msgstr "닉 Poulden"
 
-#: templates/team.html:313
-msgid "Nick founded his first company while still at college in the UK, later moving to Silicon Valley to work as a UI Architect for multiple organizations, small and large."
-msgstr "Nick은 영국에있는 대학에서 처음으로 회사를 설립 한 후 실리콘 밸리로 이동하여 크고 작은 여러 조직의 UI 아키텍트로 일했습니다."
+#: templates/team.html:321
+msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
+msgstr ""
 
-#: templates/team.html:323
-msgid "Kath Brandon"
-msgstr "캐스 브랜든"
-
-#: templates/team.html:330
-msgid "Kath has over 30 years of recruiting experience and spent 9 years in operations at Apple. She has also volunteered with Ignite Boulder, The Humane Society, adult literacy programs and the Alzheimer's Association."
-msgstr "Kath는 30 년 이상의 경력을 쌓았으며 Apple에서 9 년간 일했습니다. 그녀는 또한 Ignite Boulder, Humane Society, 성인 문맹 퇴치 프로그램 및 알츠하이머 병 협회 (Alzheimer 's Association)에 자원했습니다."
-
-#: templates/team.html:340
-msgid "Dave Craige"
-msgstr "데이브 크레이지"
-
-#: templates/team.html:347
-msgid "Dave is a serial entrepreneur whose last startup was acquired in 2016.  He runs private communities for cryptocurrency investors and startup founders. He consults with two nonprofit organizations."
-msgstr "Dave는 2016 년에 마지막으로 벤처 기업을 인수 한 일련의 기업가입니다. 그는 cryptocurrency 투자자 및 창업자를 위해 개인 커뮤니티를 운영합니다. 그는 비영리 단체 두 곳과상의합니다."
-
-#: templates/team.html:357
-msgid "Mijbel AlQattan"
-msgstr "Mijbel AlQattan"
-
-#: templates/team.html:364
-msgid "Mijbel has over 12 years of experience in venture and consulting. His interests are primarily in data science and machine learning. Mijbel graduated from Virginia Tech in computer engineering and holds a CFA."
-msgstr "Mijbel은 벤처 및 컨설팅 분야에서 12 년 이상의 경력을 쌓았습니다. 그의 관심은 주로 데이터 과학 및 기계 학습에 있습니다. Mijbel은 Virginia Tech에서 컴퓨터 공학을 전공하고 CFA를 보유하고 있습니다."
-
-#: templates/team.html:374
-msgid "Andrei Munteanu"
-msgstr "안드레이 문테 아누"
-
-#: templates/team.html:381
-msgid "Andrei is the co-founder at Cowork Timisoara and an active startup community leader. He runs a NGO which supports young entrepreneurs in Romania through programs like Startup Weekend, Startup Survivor, and Startup Coffee."
-msgstr "Andrei는 Cowork Timisoara의 공동 설립자이자 적극적인 창업 커뮤니티 리더입니다. 그는 Startup Weekend, Startup Survivor, Startup Coffee와 같은 프로그램을 통해 루마니아의 젊은 기업가를 지원하는 NGO를 운영합니다."
-
-#: templates/team.html:399
+#: templates/team.html:341
 msgid "Advisors"
 msgstr "고문"
 
-#: templates/team.html:408
+#: templates/team.html:350
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:412
+#: templates/team.html:354
 msgid "Advisor/PR"
 msgstr "투자고문 / 홍보"
 
-#: templates/team.html:415
+#: templates/team.html:357
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "Addison은 UC Berkeley에서 물리학 학위를 소지 한 커뮤니케이션 및 마케팅 전문가로 이전에는 Ethereum Foundation과 DEVCON1에서 근무경력하였습니다."
 
-#: templates/team.html:425
+#: templates/team.html:367
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:429
+#: templates/team.html:371
 msgid "Advisor/International BD"
 msgstr "투자고문 / 국제 BD"
 
-#: templates/team.html:432
+#: templates/team.html:374
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "Melody는 블록 체인 자문 및 투자 기금 인 Spartan Group의 설립자로  TenX의 초기 투자자이자 Gifto 및 Appcoins의 전략 고문이었습니다."
 
-#: templates/team.html:442
+#: templates/team.html:384
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittaki"
 
-#: templates/team.html:446 templates/team.html:463
+#: templates/team.html:388 templates/team.html:405
 msgid "Advisor"
 msgstr "투자 고문"
 
-#: templates/team.html:449
+#: templates/team.html:391
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "Paul 은  Pantera Capital의 파트너로. 성공적인 가상통화(cryptocurrency) 프로젝트들(Orchid Labs, Enigma, ICON) 의 고문을 담당하였습니다."
 
-#: templates/team.html:459
+#: templates/team.html:401
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:466
+#: templates/team.html:408
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "Joey 는 첫번째 분산화된 예측시장인 Augur의 공동 창립자이며 또한 Pantera Capital의 공동 최고 투자 책임자입니다."
 
-#: templates/team.html:510
+#: templates/team.html:418
+msgid "Andrew Hyde"
+msgstr "Andrew Hyde"
+
+#: templates/team.html:425
+msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
+msgstr "Andrew는 Startup Weekend를 비롯한 4 개의 신생 기업을 만들어 냇으며 수십 개국에 걸쳐 글로벌 커뮤니티를 만들었습니다. 또한 TechStars에서 최우수직원으로 근무한 경력이  있습니다."
+
+#: templates/team.html:459
+msgid "Open-source Contributors"
+msgstr ""
+
+#: templates/team.html:517
 msgid "Investment Funds"
 msgstr "투자 자금"
 
-#: templates/team.html:710
+#: templates/team.html:735
 msgid "Individual Investors"
 msgstr "개인 투자자"
 
-#: templates/team.html:719
+#: templates/team.html:744
 msgid "Steve Jang"
 msgstr "장 스티브"
 
-#: templates/team.html:729
+#: templates/team.html:754
 msgid "Xiahong Lin"
 msgstr "린 샤아 홍"
 
-#: templates/team.html:739
+#: templates/team.html:764
 msgid "Alexis Ohanian"
 msgstr "알렉시스 오하니 안"
 
-#: templates/team.html:749
+#: templates/team.html:774
 msgid "Gil Penchina"
 msgstr "길 펜치 나"
 
-#: templates/team.html:759
+#: templates/team.html:784
 msgid "Kamal Ravikant"
 msgstr "카말 라비 칸트"
 
-#: templates/team.html:769
+#: templates/team.html:794
 msgid "Garry Tan"
 msgstr "개리 탄"
 
-#: templates/warning.html:5
-msgid "<strong>Don't get Phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
-msgstr "<strong> 피싱을 당하지 마십시오! </strong> Origin 프로토콜의 유일한 공식 URL은 <strong> www.originprotocol.com </strong>입니다. 부디 즐겨찾기를 하시고 유사한 주소에 주의하여 주십시오"
+#: templates/tokens.html:3 templates/tokens.html:5
+msgid "Origin Protocol - Tokens"
+msgstr ""
 
-#: views/web_views.py:112 views/web_views.py:174
+#: templates/tokens.html:23
+msgid "<strong>Origin tokens are not currently available for purchase.</strong><br> Please fill out this form if you are interested in participating in any future tokens sales and would like to be updated as more details are announced."
+msgstr ""
+
+#: templates/tokens.html:68
+msgid "Interested in Origin tokens?"
+msgstr ""
+
+#: templates/tokens.html:72 templates/tokens.html:73
+msgid "Full Name"
+msgstr "성명(Full name)"
+
+#: templates/tokens.html:80
+msgid "Are you an accredited investor?"
+msgstr "공인 투자자입니까?"
+
+#: templates/tokens.html:80
+msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
+msgstr "공인 투자자는 1 차 주거지의 가치를 제외하고 적어도 $ 1,000,000의 순 가치가 있어야하며 지난 2 년 동안 매년 최소 20 만 달러의 소득이 있어야합니다 (혼인한 경우 합산하여 30만 달러)."
+
+#: templates/tokens.html:80
+msgid "Huh?"
+msgstr "응?"
+
+#: templates/tokens.html:83
+msgid "Yes"
+msgstr "맞습니다."
+
+#: templates/tokens.html:88
+msgid "No"
+msgstr "아닙니다."
+
+#: templates/tokens.html:93
+msgid "What type of entity do you represent?"
+msgstr "어떤 유형의 단체를 대표하고 계십니까?"
+
+#: templates/tokens.html:96
+msgid "Individual"
+msgstr "개인"
+
+#: templates/tokens.html:101
+msgid "Syndicate"
+msgstr "연합체"
+
+#: templates/tokens.html:106
+msgid "Professional Fund"
+msgstr "전문 기금"
+
+#: templates/tokens.html:112
+#, fuzzy
+msgid "<strong>Desired allocation</strong>"
+msgstr "<strong> 원하는 투자금액</strong> "
+
+#: templates/tokens.html:128
+msgid "Citizenship"
+msgstr "시민권"
+
+#: templates/tokens.html:382
+msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
+msgstr "<strong> 보내려는 ETH 또는 BTC 주소를 적어주십시오? </strong> (선택 사항)"
+
+#: templates/tokens.html:390
+msgid "Important notice"
+msgstr "중요 공지"
+
+#: templates/tokens.html:393
+msgid " I understand any token sales will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
+msgstr ""
+
+#: templates/tokens.html:402
+msgid "Submit"
+msgstr "등록"
+
+#: templates/tos.html:3 templates/tos.html:5
+msgid "Origin Protocol - Terms of Service"
+msgstr ""
+
+#: templates/warning.html:9
+msgid "<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
+msgstr ""
+
+#: views/web_views.py:143 views/web_views.py:217
 msgid "Please enter your name"
 msgstr "귀하의 이름을 입력해주십시오."
 
-#: views/web_views.py:114 views/web_views.py:178
+#: views/web_views.py:145 views/web_views.py:221
 msgid "Please enter your email"
 msgstr "귀하의 이메일을 입력해주십시오."
 
-#: views/web_views.py:116
+#: views/web_views.py:147
 msgid "An error occured"
 msgstr "오류가 발생했습니다."
 
-#: views/web_views.py:118
+#: views/web_views.py:149
 msgid "Please enter your desired allocation"
 msgstr "원하는 투자금액을 입력해주십시오."
 
-#: views/web_views.py:120
+#: views/web_views.py:151
 msgid "Please agree to the important notice"
 msgstr "중요한 통지에 동의해주십시오."
 
-#: views/web_views.py:122 views/web_views.py:180
+#: views/web_views.py:153 views/web_views.py:223
 msgid "Please prove you are not a robot."
 msgstr "당신이 로봇이 아니라는 것을 증명해주십시오."
 
-#: views/web_views.py:176
+#: views/web_views.py:219
 msgid "Please enter your company name"
 msgstr "귀하의 회사명을 입력해주십시오."
 
@@ -1035,4 +1213,178 @@ msgstr "귀하의 회사명을 입력해주십시오."
 
 #~ msgid "Investors"
 #~ msgstr "투자자"
+
+#~ msgid "CoinList <span class=\"subdued\">Round</span>"
+#~ msgstr "CoinList <span class = \\ \"subdued \"> 라운드 </span>"
+
+#~ msgid "Register today!"
+#~ msgstr "오늘 등록하십시오!"
+
+#~ msgid "$1,000 minimum."
+#~ msgstr "최저 $ 1,000"
+
+#~ msgid "Availability limited."
+#~ msgstr "가용성 제한."
+
+#~ msgid "Learn more."
+#~ msgstr "자세히 알아보기."
+
+#~ msgid "Registration Ends In"
+#~ msgstr "등록 종료"
+
+#~ msgid "Register Now"
+#~ msgstr "지금 등록하세요"
+
+#~ msgid "Origin Protocol enables the sharing economy on the blockchain"
+#~ msgstr "Origin Protocol을 사용하면 블록 체인위에서의 경제적 자원의 공유가 가능해집니다."
+
+#~ msgid "The sharing economy without intermediaries"
+#~ msgstr "중간인없는 경제 공유"
+
+#~ msgid "Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS"
+#~ msgstr "Origin은 Ehterum 블록체인과 IPFS위에서 공유 경제 시장을 만드는 프로토콜입니다."
+
+#~ msgid "Read Our Product Brief"
+#~ msgstr "회사의 제품 개요 읽기"
+
+#~ msgid "Join Our Telegram"
+#~ msgstr "우리의 텔레그램에 가입하십시오."
+
+#~ msgid "Try the Demo"
+#~ msgstr "데모 사용해보기"
+
+#~ msgid "View GitHub"
+#~ msgstr "Github 보기"
+
+#~ msgid "Read the Whitepaper"
+#~ msgstr "백서 읽기"
+
+#~ msgid "Origin is building the sharing economy of tomorrow. Buyers and sellers will be able to transact without rent-seeking middlemen. We believe in lowering transaction fees, promoting free and transparent commerce, and giving early participants in the community a stake in the network."
+#~ msgstr "근원은 내일의 공유 경제를 건설하고 있습니다. 구매자와 판매자는 임대료를 찾는 중개인없이 거래 할 수 있습니다. 우리는 거래 수수료를 낮추고, 자유롭고 투명한 상거래를 촉진하며, 지역 사회 초기 참가자들에게 네트워크의 지분을 제공하는 것을 믿습니다."
+
+#~ msgid "Documentation"
+#~ msgstr "문서"
+
+#~ msgid "Demo DApp"
+#~ msgstr "데모 DApp"
+
+#~ msgid "Github"
+#~ msgstr "Github"
+
+#~ msgid "Presale"
+#~ msgstr "사전 판매"
+
+#~ msgid "Jobs (We're hiring!)"
+#~ msgstr "채용 정보 (채용 예정)"
+
+#~ msgid "845 Market St, #450A<br>San Francisco, CA 94103"
+#~ msgstr "845 Market St, #450A<br>San Francisco, CA 94103"
+
+#~ msgid "Idea conception and demo DApp development"
+#~ msgstr "아이디어 컨셉 및 DApp 개발"
+
+#~ msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
+#~ msgstr "<a href=' %% (product_brief)s'> 제품 개요 </a> 및 <a는 href=' %% (whitepaper)s'> 백서 </a>를 발표"
+
+#~ msgid "Launch <a href='https://demo.originprotocol.com' target='_blank'>alpha</a> on Ethereum testnet"
+#~ msgstr "Ethereum testnet에서 <a href='https://demo.originprotocol.com' target='_blank'> 알파 </a>테스트 시작"
+
+#~ msgid "Public beta and community sale"
+#~ msgstr "공개 베타 및 공개 세일"
+
+#~ msgid "Token distribution and launch of 3rd-party DApps"
+#~ msgstr "토큰 배분 및 제 3 자 DApp 출시"
+
+#~ msgid "Fully decentralized services and governance"
+#~ msgstr "완전 분산 서비스 및 거버넌스"
+
+#~ msgid "Origin wants to change that, hoping to decentralize the sharing economy with Ethereum by creating a peer-to-peer network for transacting directly for just about anything."
+#~ msgstr "Origin은 Ethereum을 이용한 공유 경제의 분산화를 원하면서, 무엇이든 직접 처리 할 수있는 P2P 네트워크를 만들고자 합니다."
+
+#~ msgid "Make new friends!"
+#~ msgstr "새로운 친구들을 만드십시오!"
+
+#~ msgid "Demo"
+#~ msgstr "데모"
+
+#~ msgid "Origin Protocol - Presale"
+#~ msgstr "Origin 프로토콜 - 사전판매"
+
+#~ msgid "<strong>The exact date and details of the Origin presale have not yet been announced.</strong> Please fill out this form if you are interested in participating in the Origin presale and want to be updated as more details are announced."
+#~ msgstr "<strong> Origin presale의 정확한 날짜 및 세부 정보는 아직 발표되지 않았습니다. </strong> Origin presale에 참여하고 더 자세한 내용을 받아보고 싶다면이 양식을 작성해 주십시오."
+
+#~ msgid "Interested in contributing?"
+#~ msgstr "투자에 관심이 있으십니까?"
+
+#~ msgid " I understand the presale will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
+#~ msgstr " 프리 세일은 미국 규정 및 증권법의 적용을받으며이 양식을 제출하는 것은 배분을 보장 받지 못한다는 것을 알고 있습니다."
+
+#~ msgid "Stan is a software architect with deep experience in game design and machine learning. Previously, he founded Lijit Networks (acquired by Federated Media)."
+#~ msgstr "Stan은 게임 디자인 및 기계 학습에 오랜 경력을 가진 소프트웨어 아키텍터입니다. 이전에는 Lijit Networks (Federated Media에서 인수됨)를 설립했습니다."
+
+#~ msgid "Micah has been a commercial real estate broker for over a decade while developing software along the way. He is the technical cofounder of WellAttended, a bootstrapped box office management platform."
+#~ msgstr "Micah는 10 년 이상 상업용 부동산 중개인으로 일해 왔으며 그 과정에서 소프트웨어를 개발했습니다. 그는 WellAttended의 기술 공동 창립자이며, 부트 스트랩 된 박스 오피스 관리 플랫폼입니다."
+
+#~ msgid "Tyler Yasaka"
+#~ msgstr "타일러 야 사카"
+
+#~ msgid "Tyler is a full stack developer and blockchain enthusiast. He is a recent college graduate who has helped build an ecommerce platform in the auto recycling industry."
+#~ msgstr "Tyler는 완전한 스택 개발자이자 블록 체인 애호가입니다. 그는 최근 대학 졸업생으로 자동차 재활용 산업에서 전자 상거래 플랫폼을 구축하는 것을 도왔습니다."
+
+#~ msgid "Extended Team"
+#~ msgstr "확장 팀"
+
+#~ msgid "Aure Gimon"
+#~ msgstr "Aure Gimon"
+
+#~ msgid "Product Designer"
+#~ msgstr "제품 디자이너"
+
+#~ msgid "Aure has deep experience in crafting products that delight users. He has designed experiences with top brands (Nike, Sony, Virgin) and Silicon Valley startups."
+#~ msgstr "Aure는 사용자를 만족하게 하는 제품 제작에 오랜 경력을 쌓아 왔습니다. 그는 톱 브랜드 (나이키, 소니, 버진) 및 실리콘 밸리 신생 기업의 디자인을 맡은 경력이 있습니다."
+
+#~ msgid "Daniel Von Fange"
+#~ msgstr "Daniel Von Fange"
+
+#~ msgid "Daniel is a full stack, polyglot developer. He's worked on projects from assembly programming to architecting systems tracking billions of dollars of NGO spend worldwide."
+#~ msgstr "Daniel은 다개국어가 가능한 풀 스택 개발자로. 어셈블리 프로그래밍에서 건축 시스템에 이르기까지 전세계에서 수십억 달러의 NGO 지출을 추적하는 프로젝트에 참여한 경력이 있습니다."
+
+#~ msgid "Gagandeep Singh"
+#~ msgstr "가간데프 싱"
+
+#~ msgid "Gagan is a full stack developer with over 4 years of experience working with several early stage startups. He has expertise in building scalable enterprise-grade applications."
+#~ msgstr "Gagan은 4 년 넘게 초기 몇 개의 초기 신생 업체와 함께 일한 경험 많은 스택 개발자입니다. 그는 확장 가능한 엔터프라이즈 급 응용 프로그램을 구축 할 수있는 전문 지식을 갖추고 있습니다."
+
+#~ msgid "Nick founded his first company while still at college in the UK, later moving to Silicon Valley to work as a UI Architect for multiple organizations, small and large."
+#~ msgstr "Nick은 영국에있는 대학에서 처음으로 회사를 설립 한 후 실리콘 밸리로 이동하여 크고 작은 여러 조직의 UI 아키텍트로 일했습니다."
+
+#~ msgid "Kath Brandon"
+#~ msgstr "캐스 브랜든"
+
+#~ msgid "Kath has over 30 years of recruiting experience and spent 9 years in operations at Apple. She has also volunteered with Ignite Boulder, The Humane Society, adult literacy programs and the Alzheimer's Association."
+#~ msgstr "Kath는 30 년 이상의 경력을 쌓았으며 Apple에서 9 년간 일했습니다. 그녀는 또한 Ignite Boulder, Humane Society, 성인 문맹 퇴치 프로그램 및 알츠하이머 병 협회 (Alzheimer 's Association)에 자원했습니다."
+
+#~ msgid "Dave Craige"
+#~ msgstr "데이브 크레이지"
+
+#~ msgid "Dave is a serial entrepreneur whose last startup was acquired in 2016.  He runs private communities for cryptocurrency investors and startup founders. He consults with two nonprofit organizations."
+#~ msgstr "Dave는 2016 년에 마지막으로 벤처 기업을 인수 한 일련의 기업가입니다. 그는 cryptocurrency 투자자 및 창업자를 위해 개인 커뮤니티를 운영합니다. 그는 비영리 단체 두 곳과상의합니다."
+
+#~ msgid "Mijbel AlQattan"
+#~ msgstr "Mijbel AlQattan"
+
+#~ msgid "Mijbel has over 12 years of experience in venture and consulting. His interests are primarily in data science and machine learning. Mijbel graduated from Virginia Tech in computer engineering and holds a CFA."
+#~ msgstr "Mijbel은 벤처 및 컨설팅 분야에서 12 년 이상의 경력을 쌓았습니다. 그의 관심은 주로 데이터 과학 및 기계 학습에 있습니다. Mijbel은 Virginia Tech에서 컴퓨터 공학을 전공하고 CFA를 보유하고 있습니다."
+
+#~ msgid "Andrei Munteanu"
+#~ msgstr "안드레이 문테 아누"
+
+#~ msgid "Andrei is the co-founder at Cowork Timisoara and an active startup community leader. He runs a NGO which supports young entrepreneurs in Romania through programs like Startup Weekend, Startup Survivor, and Startup Coffee."
+#~ msgstr "Andrei는 Cowork Timisoara의 공동 설립자이자 적극적인 창업 커뮤니티 리더입니다. 그는 Startup Weekend, Startup Survivor, Startup Coffee와 같은 프로그램을 통해 루마니아의 젊은 기업가를 지원하는 NGO를 운영합니다."
+
+#~ msgid "<strong>Don't get Phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
+#~ msgstr "<strong> 피싱을 당하지 마십시오! </strong> Origin 프로토콜의 유일한 공식 URL은 <strong> www.originprotocol.com </strong>입니다. 부디 즐겨찾기를 하시고 유사한 주소에 주의하여 주십시오"
+
+#~ msgid "Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, empowering the unbanked, and giving early participants in the community a stake in the network."
+#~ msgstr ""
 
