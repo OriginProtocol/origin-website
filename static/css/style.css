@@ -1799,7 +1799,7 @@ footer .company-mission {
   font-size: 3rem;
   line-height: 3.75rem;
 }
-#rtl .creator-hero-graphic, .creator-hero-graphic .foreground-content  {
+#rtl .creator-hero-graphic, #rtl .creator-hero-graphic .foreground-content  {
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -1883,41 +1883,25 @@ footer .company-mission {
   background-color: #1a82ff;
   background-image: url("/static/img/blue-coins.svg");
 }
-#rtl .reasons .blue-coins {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
 .reasons .purple-censorship {
   background-color: #6e3bea;
   background-image: url("/static/img/purple-censorship.svg");
-}
-#rtl .reasons .purple-censorship {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
 }
 .reasons .green-coins {
   background-color: #26d198;
   background-image: url("/static/img/green-coins.svg");
 }
-#rtl .reasons .green-coins {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
 .reasons .red-boxes {
   background-color: #ff1a1a;
   background-image: url("/static/img/red-boxes.svg");
+}
+/* Can't move these graphics yet as they have logos that do not mirror
+#rtl .reasons .purple-censorship {
+  background-position-x: right;
+}
+#rtl .reasons .blue-coins,
+#rtl .reasons .green-coins {
+  background-position-x: left
 }
 #rtl .reasons .red-boxes {
   -moz-transform: scaleX(-1);
@@ -1926,7 +1910,8 @@ footer .company-mission {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-}
+} */
+
 .reasons .earn-tokens .inner-box {
   padding-top: 90px;
 }
