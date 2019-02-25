@@ -463,6 +463,9 @@ main.landing-page > .background-wrapper {
   z-index: 100000;
   background-color: #ebf0f3;
 }
+#rtl .dropdown-menu {
+  text-align: right;
+}
 
 .language .dropdown-item  {
   text-transform: capitalize;
@@ -1796,6 +1799,14 @@ footer .company-mission {
   font-size: 3rem;
   line-height: 3.75rem;
 }
+#rtl .creator-hero-graphic, #rtl .creator-hero-graphic .foreground-content  {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
 
 /* verticals section */
 .creator-verticals-graphic {
@@ -1817,6 +1828,10 @@ footer .company-mission {
 .creator-verticals .media b, .creator-verticals .media p {
   font-size: 1.25rem;
   margin: 5px 0px 5px 30px;
+}
+
+#rtl .creator-verticals .media b, #rtl .creator-verticals .media p {
+  margin: 5px 30px 5px 0px;
 }
 
 /* reasons section */
@@ -1880,11 +1895,34 @@ footer .company-mission {
   background-color: #ff1a1a;
   background-image: url("/static/img/red-boxes.svg");
 }
+/* Can't move these graphics yet as they have logos that do not mirror
+#rtl .reasons .purple-censorship {
+  background-position-x: right;
+}
+#rtl .reasons .blue-coins,
+#rtl .reasons .green-coins {
+  background-position-x: left
+}
+#rtl .reasons .red-boxes {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+} */
+
 .reasons .earn-tokens .inner-box {
   padding-top: 90px;
 }
 .reasons .borderless-payments .inner-box {
   padding-top: 70px;
+}
+#rtl .reasons .earn-tokens .inner-box, 
+#rtl .reasons .borderless-payments .inner-box, 
+#rtl .reasons .run-business .inner-box,
+#rtl .reasons .bootstrap-marketplace .inner-box {
+  text-align: right;
 }
 
 /* features section */
@@ -1915,6 +1953,10 @@ footer .company-mission {
   margin-right: 20px;
   width: 30px;
   height: 30px;
+}
+
+.creator-features img {
+  margin-left: 20px;
 }
 
 .creator-bottom-cta {
