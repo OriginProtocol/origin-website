@@ -3,16 +3,22 @@ from datetime import datetime
 import os
 
 from app import app
+from database import db, db_models
+
 from config import constants, universal, partner_details
 from flask import (jsonify, redirect, render_template,
-                   request, flash, g, url_for, Response, stream_with_context)
+                   request, flash, g, url_for, Response,
+                   stream_with_context, session)
 from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 import requests
-from database import db_models
+
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
+import googleapiclient.discovery
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -94,7 +100,7 @@ def presale():
     return redirect('/tokens', code=302)
 
 @app.route('/<lang_code>/tokens')
-def tokens():   
+def tokens():
     return render_template('tokens.html')
 
 @app.route('/<lang_code>/whitepaper')
@@ -119,10 +125,15 @@ def product_brief():
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
-    email = request.form['email']
-    ip_addr = get_real_ip()
-    feedback = mailing_list.send_welcome(email, ip_addr)
-    return jsonify(feedback)
+    if 'email' in request.form:
+        email = request.form['email']
+        dapp_user = request.form['dapp_user'] if 'dapp_user' in request.form else None
+        ip_addr = get_real_ip()
+        feedback = mailing_list.send_welcome(email, ip_addr)
+        mailing_list.add_sendgrid_contact(email=email, dapp_user=dapp_user)
+        return jsonify(feedback)
+    else:
+        return jsonify("Missing email")
 
 @app.route('/vk577', methods=['GET'])
 def vk577():
@@ -154,6 +165,7 @@ def join_presale():
     if not recaptcha.verify():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
+    mailing_list.add_sendgrid_contact(email, full_name, citizenship)
     flash(feedback)
     return jsonify("OK")
 
@@ -161,6 +173,7 @@ def join_presale():
 def unsubscribe():
     email = request.args.get("email")
     feedback = mailing_list.unsubscribe(email)
+    mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
     return redirect('/', code=302)
 
@@ -229,6 +242,7 @@ def partners_interest():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.partners_interest(name, company_name, email,
                                               website, note, ip_addr)
+    mailing_list.add_sendgrid_contact(email,name)
     flash(feedback)
     return jsonify("OK")
 
@@ -267,6 +281,75 @@ def serve_origin_js(version):
     url = "https://github.com/OriginProtocol/origin-js/releases/download/v%s/origin.js" % version
     req = requests.get(url, stream=True)
     return Response(stream_with_context(req.iter_content(chunk_size=2048)), content_type="text/javascript")
+
+YOUTUBE_CONFIG = {
+  "web":
+  {
+    "client_id": constants.YOUTUBE_CLIENT_ID,
+    "project_id": constants.YOUTUBE_PROJECT_ID,
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
+    "redirect_uris":[constants.YOUTUBE_REDIRECT_URL]
+  }
+}
+
+SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
+
+@app.route('/youtube')
+def youtube():
+  if not (constants.YOUTUBE_TOKEN and constants.YOUTUBE_REFRESH_TOKEN):
+    return redirect('/youtube/authorize')
+
+  return redirect(url_for('index', lang_code=get_locale()))
+
+@app.route('/youtube/authorize')
+def authorize():
+  flow = google_auth_oauthlib.flow.Flow.from_client_config(
+      client_config=YOUTUBE_CONFIG, scopes=SCOPES)
+  flow.redirect_uri = url_for('oauth2callback', _external=True)
+  authorization_url, state = flow.authorization_url(
+      access_type='offline',
+      include_granted_scopes='true')
+
+  session['state'] = state
+
+  return redirect(authorization_url)
+
+
+@app.route('/youtube/oauth2callback')
+def oauth2callback():
+  state = session['state']
+  flow = google_auth_oauthlib.flow.Flow.from_client_config(
+      client_config=YOUTUBE_CONFIG, scopes=SCOPES, state=state)
+  flow.redirect_uri = url_for('oauth2callback', _external=True)
+
+  authorization_response = request.url
+  flow.fetch_token(authorization_response=authorization_response)
+
+  #save the token and refresh_token in the credentials as environment variables
+  credentials = flow.credentials
+
+  print("YOUTUBE TOKEN", credentials.token)
+  print("YOUTUBE REFRESH_TOKEN", credentials.refresh_token)
+
+  return redirect(url_for('index', lang_code=get_locale()))
+
+def get_channel_info(client, **kwargs):
+  response = client.channels().list(**kwargs).execute()
+
+  statistics = response['items'][0]['statistics']
+  updated_count = statistics['subscriberCount'].encode('ascii')
+  print("Updating stats for Youtube: " + str(updated_count))
+
+  stat = db_models.SocialStat()
+  stat.name = 'Youtube'
+  stat.subscribed_count = updated_count
+  db.session.add(stat)
+  db.session.commit()
+
+  return redirect(url_for('index', lang_code=get_locale()))
 
 @app.context_processor
 def inject_partners():

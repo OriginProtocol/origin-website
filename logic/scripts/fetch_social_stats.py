@@ -1,5 +1,6 @@
 from contextlib import closing
 import json
+import webbrowser
 
 from bs4 import BeautifulSoup
 
@@ -10,6 +11,10 @@ from sqlalchemy.exc import IntegrityError
 from tools import db_utils
 from util import tasks
 from config import constants
+
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
+import googleapiclient.discovery
 
 headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
@@ -85,12 +90,6 @@ sites.append({
     'name': 'Facebook',
     'url': 'https://www.facebook.com/originprotocol',
     'selector': '.clearfix ._ikh div._4bl9',
-    'json': False,
-})
-sites.append({
-    'name': 'Youtube',
-    'url': 'https://www.youtube.com/c/originprotocol',
-    'selector': 'span.subscribed',
     'json': False,
 })
 sites.append({
@@ -229,5 +228,43 @@ def update_subscribed_count():
             db.session.add(stat)
     db.session.commit()
 
+def update_youtube_count():
+  SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
+  API_SERVICE_NAME = 'youtube'
+  API_VERSION = 'v3'
+
+  if not (constants.YOUTUBE_TOKEN and constants.YOUTUBE_REFRESH_TOKEN):
+    return
+
+  session_credentials = {
+    "token": constants.YOUTUBE_TOKEN,
+    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+    "refresh_token": constants.YOUTUBE_REFRESH_TOKEN,
+    "client_id": constants.YOUTUBE_CLIENT_ID,
+    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
+    "scopes": SCOPES
+  }
+  credentials = google.oauth2.credentials.Credentials(**session_credentials)
+
+  client = googleapiclient.discovery.build(
+      API_SERVICE_NAME, API_VERSION, credentials=credentials)
+  channel_id = constants.YOUTUBE_CHANNEL_ID
+
+  return get_channel_info(client, part='snippet,contentDetails,statistics', id=channel_id)
+
+def get_channel_info(client, **kwargs):
+  response = client.channels().list(**kwargs).execute()
+
+  statistics = response['items'][0]['statistics']
+  updated_count = statistics['subscriberCount'].encode('ascii')
+  print("Updating stats for Youtube: " + str(updated_count))
+
+  stat = db_models.SocialStat()
+  stat.name = 'Youtube'
+  stat.subscribed_count = updated_count
+  db.session.add(stat)
+  db.session.commit()
+
 with db_utils.request_context():
     update_subscribed_count()
+    update_youtube_count()
