@@ -2,47 +2,42 @@ from config import universal, constants
 from database import db, db_models
 from flask import render_template
 from util import sendgrid_wrapper as sgw
+from util import time_
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 # BCC_RECIPIENTS = [sgw.Email('founders@originprotocol.com', 'Founders')]
 
+# welcome1 is sent when they sign up
+# welcome emails 2-5 sent on a drip campaign
+
 EMAILS = {
-    'welcome': {
+    'welcome1': {
         'subject': 'Welcome to Origin Protocol'
+    },
+    'welcome2': {
+        'subject': 'Getting started with decentralized applications'
+    },
+    'welcome3': {
+        'subject': 'Welcome to the Origin marketplace'
+    },
+    'welcome4': {
+        'subject': 'Making your first purchase on Origin'
+    },
+    'welcome5': {
+        'subject': 'Start selling on Origin'
     },
     'presale': {
         'subject': 'Thanks for your interest in Origin!'
     },
-    'demo_dapp_announcement': {
-        'subject': 'Origin Demo DApp is now live on testnet'
-    },
     'build_on_origin': {
         'subject': 'Thanks for your interest in Origin!'
-    },
-    'march_2018_newsletter': {
-        'subject': 'News from Origin Protocol (March 2018)'
-    },
-    'april_2018_newsletter': {
-        'subject': 'News from Origin Protocol (April 2018)'
-    },
-    'yupan_announcement': {
-        'subject': 'PayPal co-founder & 1st YouTube engineer joins Origin!'
-    },
-    'may_2018_newsletter': {
-        'subject': 'Tech update and newly released demo DApp!'
-    },
-    'coinlist_announcement': {
-        'subject': 'Register for Origin\'s CoinList Round today'
-    },
-    'coinlist_reminder': {
-        'subject': 'Registration ending soon for Origin\'s CoinList round'
-    },
-    'coinlist_investment_period': {
-        'subject': 'Investment period has started for Origin\'s CoinList round'
     }
 }
 
 def send_email_type(email_type, from_email, to_email):
+
+    print email_type, from_email, to_email
+
     msg_subject = EMAILS.get(email_type).get('subject')
 
     msg_text = render_template('email/%s.txt' % email_type, universal=universal, to_email=to_email)
@@ -105,3 +100,28 @@ def add_to_message_log(email, msg_purpose, msg_text, msg_subject=None, msg_html=
 
     db.session.add(message_log)
     db.session.commit()
+
+
+def send_welcome_drips():
+    EL = db_models.EmailList
+    db_users = EL.query.filter(EL.unsubscribed == False)
+
+    db_users_2_days = db_users.filter(EL.created_at <= time_.days_before_now(1)).filter(EL.created_at > time_.days_before_now(2))
+    for row in db_users_2_days:
+        send_email_type('welcome2', DEFAULT_SENDER, row.email)
+
+    db_users_3_days = db_users.filter(EL.created_at <= time_.days_before_now(2)).filter(EL.created_at > time_.days_before_now(3))
+    for row in db_users_3_days:
+        send_email_type('welcome3', DEFAULT_SENDER, row.email)
+
+    db_users_4_days = db_users.filter(EL.created_at <= time_.days_before_now(3)).filter(EL.created_at > time_.days_before_now(4))
+    for row in db_users_4_days:
+        send_email_type('welcome4', DEFAULT_SENDER, row.email)
+
+    db_users_5_days = db_users.filter(EL.created_at <= time_.days_before_now(4)).filter(EL.created_at > time_.days_before_now(5))
+    for row in db_users_5_days:
+        send_email_type('welcome5', DEFAULT_SENDER, row.email)
+
+
+
+
