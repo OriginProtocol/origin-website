@@ -35,22 +35,20 @@ def beforeRequest():
     if constants.HTTPS:
         if not request.url.startswith('https'):
             return redirect(request.url.replace('http', 'https', 1))
-
-    selected_lang = None
     if request.view_args and 'lang_code' in request.view_args:
-        selected_lang = request.view_args.pop('lang_code')
-    elif request.args and 'lang_code' in request.args:
-        selected_lang = request.args['lang_code']
+        if request.view_args['lang_code'] in constants.LANGUAGES:
+            # Pull off current language from URL
+            g.current_lang = request.view_args['lang_code']
+            request.view_args.pop('lang_code')
+        else:
+            # Possible old style URL without language prefix
+            # e.g. /blah --> /en/blah
+            return redirect("/%s/%s" % (get_locale(), request.view_args['lang_code']), code=302)
 
-    if selected_lang in constants.LANGUAGES:
-        g.current_lang = selected_lang
-    else:
-        # Use Accept-Languages header for fallback
-        g.current_lang = get_locale()
 
 @app.route('/')
 def root():
-    return render_template('index.html')
+    return redirect(url_for('index', lang_code=get_locale()))
 
 @app.route('/robots.txt')
 def robots():
