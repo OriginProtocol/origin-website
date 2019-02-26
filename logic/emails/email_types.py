@@ -8,11 +8,11 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 # BCC_RECIPIENTS = [sgw.Email('founders@originprotocol.com', 'Founders')]
 
 # welcome1 is sent when they sign up
-# welcome emails 2-5 sent on a drip campaign
+# welcome emails 2-5 are sent on a drip campaign
 
 EMAILS = {
     'welcome1': {
-        'subject': 'Welcome to Origin Protocol'
+        'subject': 'Thanks for joining Origin Protocol'
     },
     'welcome2': {
         'subject': 'Getting started with decentralized applications'
@@ -20,23 +20,23 @@ EMAILS = {
     'welcome3': {
         'subject': 'Welcome to the Origin marketplace'
     },
-    'welcome4': {
-        'subject': 'Making your first purchase on Origin'
-    },
-    'welcome5': {
-        'subject': 'Start selling on Origin'
-    },
+    # 'welcome4': {
+    #     'subject': 'Making your first purchase on Origin'
+    # },
+    # 'welcome5': {
+    #     'subject': 'Start selling on Origin'
+    # },
     'presale': {
         'subject': 'Thanks for your interest in Origin!'
     },
     'build_on_origin': {
-        'subject': 'Thanks for your interest in Origin!'
+        'subject': 'Thanks for your interest in partnering with Origin!'
     }
 }
 
 def send_email_type(email_type, from_email, to_email):
 
-    print email_type, from_email, to_email
+    # print email_type, from_email, to_email
 
     msg_subject = EMAILS.get(email_type).get('subject')
 
@@ -114,13 +114,14 @@ def send_welcome_drips():
     for row in db_users_3_days:
         send_email_type('welcome3', DEFAULT_SENDER, row.email)
 
-    db_users_4_days = db_users.filter(EL.created_at <= time_.days_before_now(3)).filter(EL.created_at > time_.days_before_now(4))
-    for row in db_users_4_days:
-        send_email_type('welcome4', DEFAULT_SENDER, row.email)
+    # TODO: let's try the initial 3 emails out first before adding these to the campaign
+    # db_users_4_days = db_users.filter(EL.created_at <= time_.days_before_now(3)).filter(EL.created_at > time_.days_before_now(4))
+    # for row in db_users_4_days:
+    #     send_email_type('welcome4', DEFAULT_SENDER, row.email)
 
-    db_users_5_days = db_users.filter(EL.created_at <= time_.days_before_now(4)).filter(EL.created_at > time_.days_before_now(5))
-    for row in db_users_5_days:
-        send_email_type('welcome5', DEFAULT_SENDER, row.email)
+    # db_users_5_days = db_users.filter(EL.created_at <= time_.days_before_now(4)).filter(EL.created_at > time_.days_before_now(5))
+    # for row in db_users_5_days:
+    #     send_email_type('welcome5', DEFAULT_SENDER, row.email)
 
 
 
