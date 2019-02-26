@@ -70,6 +70,7 @@ def mobile(link_code=None):
 def index():
     return render_template('index.html')
 
+@app.route('/team')
 @app.route('/<lang_code>/team')
 def team():
     # fetch our list of contributors from the DB
@@ -95,14 +96,17 @@ def team():
 
 
 
+@app.route('/presale')
 @app.route('/<lang_code>/presale')
 def presale():
     return redirect('/tokens', code=302)
 
+@app.route('/tokens')
 @app.route('/<lang_code>/tokens')
 def tokens():
     return render_template('tokens.html')
 
+@app.route('/whitepaper')
 @app.route('/<lang_code>/whitepaper')
 def whitepaper():
     localized_filename = 'whitepaper_v5_%s.pdf' % g.current_lang.lower()
@@ -113,6 +117,7 @@ def whitepaper():
         # Default to English
         return app.send_static_file('docs/whitepaper_v5.pdf')
 
+@app.route('/product-brief')
 @app.route('/<lang_code>/product-brief')
 def product_brief():
     localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
@@ -184,42 +189,52 @@ def fullcontact_webhook():
     print(request.json)
     return redirect('/', code=302)
 
+@app.route('/build-on-origin')
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
     return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
+@app.route('/developers')
 @app.route('/<lang_code>/developers')
 def developers():
     return render_template('developers.html')
 
+@app.route('/discord')
 @app.route('/<lang_code>/discord')
 def discord():
     return redirect(universal.DISCORD_URL, code=301)
 
+@app.route('/ios')
 @app.route('/<lang_code>/ios')
 def ios():
     return redirect(universal.IOS_URL, code=301)
 
+@app.route('/telegram')
 @app.route('/<lang_code>/telegram')
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
 
+@app.route('/partners')
 @app.route('/<lang_code>/partners')
 def partners():
     return render_template('partners.html')
 
+@app.route('/privacy')
 @app.route('/<lang_code>/privacy')
 def privacy():
     return render_template('privacy.html')
 
+@app.route('/tos')
 @app.route('/<lang_code>/tos')
 def tos():
     return render_template('tos.html')
 
+@app.route('/aup')
 @app.route('/<lang_code>/aup')
 def aup():
     return render_template('aup.html')
 
+@app.route('/creator')
 @app.route('/<lang_code>/creator')
 def creator():
     return render_template('creator.html')

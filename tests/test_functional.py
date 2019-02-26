@@ -25,6 +25,13 @@ def test_root_with_lang(client):
     assert '<html lang="es">' in res.get_data()
 
 
+def test_old_urls(client):
+    """ Make sure the old style URLs load properly (e.g. /team) """
+    res = client.get(url_for('team', lang_code='en'))
+    assert res.status_code == 200
+    assert 'team of distributed entrepreneurs' in res.get_data()
+
+
 def test_index_returns_200(client):
     res = client.get(url_for('index', lang_code=random.choice(LANGUAGES)))
     assert res.status_code == 200
