@@ -35,20 +35,22 @@ def beforeRequest():
     if constants.HTTPS:
         if not request.url.startswith('https'):
             return redirect(request.url.replace('http', 'https', 1))
-    if request.view_args and 'lang_code' in request.view_args:
-        if request.view_args['lang_code'] in constants.LANGUAGES:
-            # Pull off current language from URL
-            g.current_lang = request.view_args['lang_code']
-            request.view_args.pop('lang_code')
-        else:
-            # Possible old style URL without language prefix
-            # e.g. /blah --> /en/blah
-            return redirect("/%s/%s" % (get_locale(), request.view_args['lang_code']), code=302)
 
+    selected_lang = None
+    if request.view_args and 'lang_code' in request.view_args:
+        selected_lang = request.view_args.pop('lang_code')
+    elif request.args and 'lang_code' in request.args:
+        selected_lang = request.args['lang_code']
+
+    if selected_lang in constants.LANGUAGES:
+        g.current_lang = selected_lang
+    else:
+        # Use Accept-Languages header for fallback
+        g.current_lang = get_locale()
 
 @app.route('/')
 def root():
-    return redirect(url_for('index', lang_code=get_locale()))
+    return render_template('index.html')
 
 @app.route('/robots.txt')
 def robots():
@@ -68,6 +70,7 @@ def mobile(link_code=None):
 def index():
     return render_template('index.html')
 
+@app.route('/team')
 @app.route('/<lang_code>/team')
 def team():
     # fetch our list of contributors from the DB
@@ -93,14 +96,17 @@ def team():
 
 
 
+@app.route('/presale')
 @app.route('/<lang_code>/presale')
 def presale():
     return redirect('/tokens', code=302)
 
+@app.route('/tokens')
 @app.route('/<lang_code>/tokens')
 def tokens():
     return render_template('tokens.html')
 
+@app.route('/whitepaper')
 @app.route('/<lang_code>/whitepaper')
 def whitepaper():
     localized_filename = 'whitepaper_v5_%s.pdf' % g.current_lang.lower()
@@ -111,6 +117,7 @@ def whitepaper():
         # Default to English
         return app.send_static_file('docs/whitepaper_v5.pdf')
 
+@app.route('/product-brief')
 @app.route('/<lang_code>/product-brief')
 def product_brief():
     localized_filename = 'product_brief_v17_%s.pdf' % g.current_lang.lower()
@@ -182,42 +189,52 @@ def fullcontact_webhook():
     print(request.json)
     return redirect('/', code=302)
 
+@app.route('/build-on-origin')
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
     return redirect(url_for('partners', lang_code=g.current_lang), code=301)
 
+@app.route('/developers')
 @app.route('/<lang_code>/developers')
 def developers():
     return render_template('developers.html')
 
+@app.route('/discord')
 @app.route('/<lang_code>/discord')
 def discord():
     return redirect(universal.DISCORD_URL, code=301)
 
+@app.route('/ios')
 @app.route('/<lang_code>/ios')
 def ios():
     return redirect(universal.IOS_URL, code=301)
 
+@app.route('/telegram')
 @app.route('/<lang_code>/telegram')
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
 
+@app.route('/partners')
 @app.route('/<lang_code>/partners')
 def partners():
     return render_template('partners.html')
 
+@app.route('/privacy')
 @app.route('/<lang_code>/privacy')
 def privacy():
     return render_template('privacy.html')
 
+@app.route('/tos')
 @app.route('/<lang_code>/tos')
 def tos():
     return render_template('tos.html')
 
+@app.route('/aup')
 @app.route('/<lang_code>/aup')
 def aup():
     return render_template('aup.html')
 
+@app.route('/creator')
 @app.route('/<lang_code>/creator')
 def creator():
     return render_template('creator.html')

@@ -13,9 +13,23 @@ from .factories import PresaleFactory, InterestFactory
 fake = Faker()
 
 
-def test_root_returns_302(client):
+def test_root_returns_200(client):
     res = client.get(url_for('root'))
-    assert res.status_code == 302
+    assert res.status_code == 200
+
+
+def test_root_with_lang(client):
+    """ Make sure the correct language is returned with lang_code query param """
+    res = client.get(url_for('root', lang_code='es'))
+    assert res.status_code == 200
+    assert '<html lang="es">' in res.get_data()
+
+
+def test_old_urls(client):
+    """ Make sure the old style URLs load properly (e.g. /team) """
+    res = client.get(url_for('team', lang_code='en'))
+    assert res.status_code == 200
+    assert 'team of distributed entrepreneurs' in res.get_data()
 
 
 def test_index_returns_200(client):
