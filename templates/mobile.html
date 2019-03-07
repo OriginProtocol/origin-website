@@ -25,8 +25,8 @@
           {% if link_code %}
             <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download</button>
           {% else %}
-            <a href="{{ios_url}}"><button role="button" class="btn btn-primary btn-min-size">iOS</button></a>
-            <a href="{{android_url}}"><button role="button" class="btn btn-primary btn-min-size">Andoid</button></a>
+            <a href="{{universal.IOS_URL}}"><button role="button" class="btn btn-primary btn-min-size">iOS</button></a>
+            <a href="{{universal.ANDROID_URL}}"><button role="button" class="btn btn-primary btn-min-size">Andoid</button></a>
           {% endif %} 
 
           <br><br><br>
@@ -59,9 +59,9 @@
       $(".copy-get-app").click(function() {
         clipboard.writeText("orgw:{{ link_code }}").then(function() {
           if (iOS) {
-            window.open("{{ ios_url }}")
+            window.open("{{ universal.IOS_URL }}")
           } else {
-            window.open("{{ android_url }}")
+            window.open("{{ universal.ANDROID_URL }}")
           }
         }, function(err) {
           console.log("Copy failed.");
@@ -71,9 +71,9 @@
     {% else %}
 
       if (iOS) {
-        window.location = "{{ ios_url }}"
+        window.location = "{{ universal.IOS_URL }}"
       } else if (android) {
-        window.location = "{{ android_url }}"
+        window.location = "{{ universal.ANDROID_URL }}"
       }
 
     {% endif %}
