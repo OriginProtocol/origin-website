@@ -1,80 +1,84 @@
 {% extends 'base.html' %}
 
 {% block title %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
+
 {% block meta_description %}{{ gettext("Origin Protocol - Mobile") }}{% endblock %}
+
 {% block content %}
-  <main class="landing-page">
-    {% include 'navbar.html' %}
-    <section class="header-section {{ 'mobile' if 'mobile' in request.path }}">
-      <div class="container foreground-content">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <p>
-              <div class="general-panel">
-                Origin Wallet is not yet available for Android. Please visit <a href="https://github.com/OriginProtocol/origin/issues/1150" class="android-link">https://github.com/OriginProtocol/origin/issues/1150</a> and let us know if we should make this happen.
-              </div>
-              <div class="ios-panel">
-                {% if role == 'seller' %}
-                  <p class="message">
-                    Get the <span class="wallet">Origin Wallet</span> to start selling on Origin.
-                  </p>
-                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
-                  <div class="image-container">
-                    <img src="/static/img/eth-pile.svg" alt="ethereum coins" />
-                  </div>
-                {% elif role == 'buyer' %}
-                  <p class="message">
-                    Get the <span class="wallet">Origin Wallet</span> to complete your purchase.
-                  </p>
-                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
-                  <div class="image-container">
-                    <img src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
-                  </div>
-                {% else %}
-                  <p class="message">
-                    Get the <span class="wallet">Origin Wallet</span> to buy or sell on Origin.
-                  </p>
-                  <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download Origin Wallet</button>
-                {% endif %}
-              </div>
-            </p>
-          </div>
-        </div>
+
+<main class="presale-page">
+  {% include 'navbar.html' %}
+  <section class="header-section">
+    <div class="container foreground-content">
+      <div class="col-12">
+        <center>
+          {% if role == 'seller' %}
+            <h2>Get the <strong>Origin Wallet</strong> to start selling on Origin</h2>
+          {% elif role == 'buyer' %}
+            <h2>Get the <strong>Origin Wallet</strong> to complete your purchase</h2>
+          {% else %}
+            <h2>Get the <strong>Origin Wallet</strong> to buy or sell on Origin</h2>
+          {% endif %}
+
+          <br><br>
+
+          {% if link_code %}
+            <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download</button>
+          {% else %}
+            <a href="{{ios_url}}"><button role="button" class="btn btn-primary btn-min-size">iOS</button></a>
+            <a href="{{android_url}}"><button role="button" class="btn btn-primary btn-min-size">Andoid</button></a>
+          {% endif %} 
+
+          <br><br><br>
+
+          {% if role == 'buyer' %}
+            <img class="img-fluid" src="/static/img/eth-pile.svg" alt="ethereum coins" />
+          {% else %}
+            <img class="img-fluid" src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
+          {% endif %}
+          
+        </center>
+        <br><br><br><br>
       </div>
-    </section>
-    {% include 'footer.html' %}
-  </main>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</main>
 {% endblock %}
 {% block extra_scripts %}
-  <script src="/static/js/clipboard-polyfill.js"></script>
-  <script>
-    $(function() {
-      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+<script src="/static/js/clipboard-polyfill.js"></script>
+<script type='text/javascript'>
+  $(function() {
+    var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+    var android = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+
+    {% if link_code %}
+
+      $(".copy-get-app").click(function() {
+        clipboard.writeText("orgw:{{ link_code }}").then(function() {
+          if (iOS) {
+            window.open("{{ ios_url }}")
+          } else {
+            window.open("{{ android_url }}")
+          }
+        }, function(err) {
+          console.log("Copy failed.");
+        });
+      });
+
+    {% else %}
 
       if (iOS) {
-        $(".general-panel").hide();
-        $(".ios-panel").show();
-
-        {% if link_code %}
-          $(".copy-get-app").click(function() {
-            clipboard.writeText("orgw:{{link_code}}").then(function() {
-              window.open("https://itunes.apple.com/app/origin-wallet/id1446091928")
-            }, function(err) {
-              console.log("copy failed");
-            });
-          });
-        {% else %}
-          window.location = "https://itunes.apple.com/app/origin-wallet/id1446091928";
-        {% endif %}
-      } else {
-        $(".ios-panel").hide();
+        window.location = "{{ ios_url }}"
+      } else if (android) {
+        window.location = "{{ android_url }}"
       }
-    });
-  </script>
-{% endblock %}
-{% block extra_styles %}
-  <style>
-    .ios-panel { display: none; }
-    .android-link { word-break: break-all; }
-  </style>
+
+    {% endif %}
+  });
+</script>
+
+
 {% endblock %}

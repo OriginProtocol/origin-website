@@ -64,7 +64,7 @@ def apple_app_site_association():
 @app.route('/mobile')
 def mobile(link_code=None):
     role = request.args.get('role')
-    return render_template('mobile.html', link_code=link_code, role=role)
+    return render_template('mobile.html', link_code=link_code, role=role, ios_url=universal.IOS_URL, android_url=universal.ANDROID_URL)
 
 @app.route('/<lang_code>')
 def index():
