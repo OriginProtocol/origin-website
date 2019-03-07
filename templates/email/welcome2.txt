@@ -1,0 +1,49 @@
+{% extends 'email/email_base.txt' %}
+
+{% block content %}
+
+Decentralized applications (DApps) are important because of their ability to eliminate middlemen, enabling you to place your trust in mathematics and economic incentives instead of any one company or organization. You control your own data but DApps are designed to run on open, distributed networks that aren’t controlled or owned by anyone. They work anywhere in the world and can’t be shut down by anyone, including bad actors or overzealous governments.
+
+Decentralized applications work differently from the centralized applications you’re used to using. Here are a few core concepts you should know as you start using the Origin marketplace:
+
+What is blockchain?
+
+Picture a spreadsheet that is duplicated thousands of times across a network of computers. Then imagine that this network is designed to update this spreadsheet regularly and you have a basic understanding of the blockchain.
+
+Information shared on the blockchain is constantly updated and verified, then duplicated to many locations. The end result is that everyone using the blockchain trusts that the data is accurate, meaning a lot of people that don't know each other can still interact and transact with each other safely.
+
+Decentralized Applications (DApps) running on the blockchain are not controlled by any central entity. End users like you are in full control.
+
+Private keys: Keep them secret. Keep them safe.
+
+While anyone can read information from the blockchain, to write to the blockchain you need to own the right private key.
+
+A private key is a secret that is randomly generated when you create a wallet. Nobody on earth knows it besides you (and it's too long to merely guess). The decentralized nature of the blockchain means that every individual needs to safeguard their own private key.
+
+This is harder than it sounds, and most people never had to do it before. With centralized services such as Google and Facebook, you did not control your data. Those services did, which is why you never had to truly own a private key.
+
+Be advised: If you lose all copies of your private key - there is no way to recover it. If someone gets their hands on a copy of your private key - they can steal all of your funds, and there is no way to undo it.
+
+Setting up your wallet.
+
+Wallets are a secure place to store your private keys. Wallets can be hardware devices (Ledger, Trezor), mobile apps (Coinbase Wallet, imToken, Trust Wallet), or a browser extension like Metamask. All of these wallets will work with the Origin marketplace DApp. Here’s a video tutorial on how to setup Metamask (https://metamask.io) on your desktop browser:
+
+https://www.youtube.com/watch?v=EMVh3b29gYA
+
+While Metamask is generally the best option for desktop users, on mobile, we recommend using the Origin Wallet (https://www.originprotocol.com/ios). The Origin Wallet is currently only available for iOS and is limited to English speakers.
+
+Acquiring ETH
+
+Before you can use our DApp, you will need to acquire ETH from an exchange or a friend. There are cryptocurrency exchanges in every region of the world. Coinbase (https://www.coinbase.com) is a popular choice that is currently available in 42 countries (https://www.coinbase.com/global), but Google can help you find the best option for where you live. Once you obtain your initial ETH, you’ll want to transfer it to the wallet that you plan to use with the DApp so you can start buying and selling on the Origin marketplace.
+
+Gas fees
+
+Whenever you interact with the blockchain, your request gets sent to miners on the Ethereum network who crunch the numbers and confirm the transaction. For that service the miners receive a fee paid by the person submitting the transaction request (please note that entire fee goes to the miners, not us!). You can think of it a bit like paying for shipping and handling.
+
+Gas represents the computational power used to process and add a transaction to the Ethereum blockchain. For a transaction to be approved a user must pay a transaction fee to the computers that confirm transactions. A transaction will use as much gas as is required, up to the user-defined limit. If the gas limit is reached, the transaction will fail (and no gas cost will be refunded).
+
+Sometimes you’ll be prompted to sign a message using your private key. Signing allows you to prove that you are the owner of a specific wallet. Unlike sending a transaction, signing is free and doesn’t require any gas.
+
+
+{% endblock %}
+

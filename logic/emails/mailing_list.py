@@ -65,7 +65,7 @@ def send_welcome(email, ip_addr):
     except:
         return gettext('You are already signed up!')
 
-    email_types.send_email_type('welcome', DEFAULT_SENDER, email)
+    email_types.send_email_type('welcome1', DEFAULT_SENDER, email)
 
     return gettext('Thanks for signing up!')
 
