@@ -219,6 +219,15 @@ def android():
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
 
+@app.route('/dapp')
+@app.route('/<lang_code>/dapp')
+def dapp():
+    return redirect(universal.DAPP_URL, code=301) 
+
+@app.route('/sveth')
+def faucet():
+    return redirect("https://faucet.originprotocol.com/eth?code=sveth", code=301) 
+
 @app.route('/partners')
 @app.route('/<lang_code>/partners')
 def partners():
