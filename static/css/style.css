@@ -179,6 +179,44 @@ a:hover {
   text-align: right;
 }
 
+.blue-bar {
+  background-color: #1a82ff;
+  height:85px;
+  padding-top:10px;
+  padding-bottom:5px;
+  color:#fff;
+  font-size:18px;
+  border-bottom:1px solid #213040;
+}
+.blue-bar img {
+  margin-right:20px;
+  margin-bottom:10px;
+}
+.blue-bar strong {
+  top:5px;
+}
+.blue-bar-text {
+  margin-top:18px;
+}
+.blue-bar .btn {
+  background-color:#2e3f53;
+  color:#fff !important;
+  margin-top:12px;
+  width:96px;
+}
+.blue-bar .btn:hover {
+  background-color:#0c2033;
+}
+@media (min-width: 992px) {
+  .blue-bar-text {
+    margin-top:5px;
+  }
+ /* .blue-bar-text span {
+    display:none;
+  }*/
+}
+
+
 #rtl .warning .img-container {
   text-align: left;
   margin: 10px 20px 10px 0;
