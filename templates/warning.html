@@ -1,4 +1,4 @@
-{% if theme_light==True %}
+<!-- {% if theme_light==True %}
 <div class="warning warning-light">
 {% else %}
 <div class="warning warning-dark">
@@ -7,4 +7,23 @@
     <img src="/static/img/phishing-icon.svg" alt="phishing icon" />
   </div>
   <p>{{ gettext("<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs.") }}</p>
+</div> -->
+<div class='blue-bar'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-12'>
+				<div class='float-left'>
+					<img src='/static/img/blue-coins.png' srcset="/static/img/blue-coins@2x.png 2x,
+					/static/img/blue-coins@3x.png 3x" />
+				</div>
+				<div class='blue-bar-text float-left'>
+					<strong>{{ gettext("Earn Free Origin Tokens Today") }}</strong><br>
+					<span class='d-none d-lg-block'>{{ gettext("Participate in our campaigns and complete tasks on our DApp to earn Origin Tokens.") }}</span>
+				</div>
+				<div class='float-right'>
+					<a class='btn' href="https://dapp.originprotocol.com/#/welcome">{{ gettext("Go") }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
