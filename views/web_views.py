@@ -83,11 +83,6 @@ def team():
 
     # community team
     community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
-                 # {'avatar':'dave', 'url': 'https://twitter.com/davecraige', 'name':'Dave Craig'},
-                 # {'avatar':'andrei','url': 'https://www.linkedin.com/in/andreicosminmunteanu/', 'name':'Andrei Munteanu'},
-                 # {'avatar':'mijbel', 'url': 'https://twitter.com/mijbelf', 'name':'Mijbel AlQattan' },
-                 # {'avatar':'adam', 'url': 'https://www.linkedin.com/in/adamcalihman/', 'name':'Adam Calihman' },
-                 # {'avatar':'russell', 'url': 'https://twitter.com/_russellduncan_', 'name':'Russell Duncan' },
                  {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
                  {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
                  {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
@@ -140,10 +135,6 @@ def join_mailing_list():
     else:
         return jsonify("Missing email")
 
-@app.route('/vk577', methods=['GET'])
-def vk577():
-    return jsonify('Temporaily posting as requested for claiming @originprotocol on vk.com: VK577')
-
 @app.route('/presale/join', methods=['POST'])
 def join_presale():
     full_name = request.form['full_name']
@@ -180,13 +171,6 @@ def unsubscribe():
     feedback = mailing_list.unsubscribe(email)
     mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
-    return redirect('/', code=302)
-
-@app.route('/webhook/fullcontact', methods=['GET','POST'])
-def fullcontact_webhook():
-    print('POSTED!!')
-    print(request.get_json())
-    print(request.json)
     return redirect('/', code=302)
 
 @app.route('/build-on-origin')
@@ -295,90 +279,6 @@ def assets_all_javascript():
         "static/js/vendor-wow.min.js",
         "static/js/script.js"
     ]), mimetype="application/javascript")
-
-@app.route('/origin-js/origin-v<version>.js', methods=['GET'])
-def serve_origin_js(version):
-
-    # temporary hack
-    # should really do this w/ NGINX or serve from a proper CDN
-
-    # serves up:
-    # https://github.com/OriginProtocol/origin-js/releases/download/v0.5.10/origin.js
-    # when you visit:
-    # https://code.originprotocol.com/origin-js/origin-v0.5.10.js
-
-    url = "https://github.com/OriginProtocol/origin-js/releases/download/v%s/origin.js" % version
-    req = requests.get(url, stream=True)
-    return Response(stream_with_context(req.iter_content(chunk_size=2048)), content_type="text/javascript")
-
-YOUTUBE_CONFIG = {
-  "web":
-  {
-    "client_id": constants.YOUTUBE_CLIENT_ID,
-    "project_id": constants.YOUTUBE_PROJECT_ID,
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret": constants.YOUTUBE_CLIENT_SECRET,
-    "redirect_uris":[constants.YOUTUBE_REDIRECT_URL]
-  }
-}
-
-SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
-
-@app.route('/youtube')
-def youtube():
-  if not (constants.YOUTUBE_TOKEN and constants.YOUTUBE_REFRESH_TOKEN):
-    return redirect('/youtube/authorize')
-
-  return redirect(url_for('index', lang_code=get_locale()))
-
-@app.route('/youtube/authorize')
-def authorize():
-  flow = google_auth_oauthlib.flow.Flow.from_client_config(
-      client_config=YOUTUBE_CONFIG, scopes=SCOPES)
-  flow.redirect_uri = url_for('oauth2callback', _external=True)
-  authorization_url, state = flow.authorization_url(
-      access_type='offline',
-      include_granted_scopes='true')
-
-  session['state'] = state
-
-  return redirect(authorization_url)
-
-
-@app.route('/youtube/oauth2callback')
-def oauth2callback():
-  state = session['state']
-  flow = google_auth_oauthlib.flow.Flow.from_client_config(
-      client_config=YOUTUBE_CONFIG, scopes=SCOPES, state=state)
-  flow.redirect_uri = url_for('oauth2callback', _external=True)
-
-  authorization_response = request.url
-  flow.fetch_token(authorization_response=authorization_response)
-
-  #save the token and refresh_token in the credentials as environment variables
-  credentials = flow.credentials
-
-  print("YOUTUBE TOKEN", credentials.token)
-  print("YOUTUBE REFRESH_TOKEN", credentials.refresh_token)
-
-  return redirect(url_for('index', lang_code=get_locale()))
-
-def get_channel_info(client, **kwargs):
-  response = client.channels().list(**kwargs).execute()
-
-  statistics = response['items'][0]['statistics']
-  updated_count = statistics['subscriberCount'].encode('ascii')
-  print("Updating stats for Youtube: " + str(updated_count))
-
-  stat = db_models.SocialStat()
-  stat.name = 'Youtube'
-  stat.subscribed_count = updated_count
-  db.session.add(stat)
-  db.session.commit()
-
-  return redirect(url_for('index', lang_code=get_locale()))
 
 @app.context_processor
 def inject_partners():
