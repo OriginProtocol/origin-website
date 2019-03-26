@@ -71,9 +71,13 @@ def mobile(link_code=None):
 
 @app.route('/<lang_code>')
 def index():
-    # might be a 404 instead of a language code, so let's check.
+    # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
         return render_template('index.html')
+    # if you're using an ogn.dev url, assume it's a faucet shortcut
+    elif 'ogn.dev' in constants.HOST:
+        return redirect('https://faucet.originprotocol.com/eth?code=%s' % (g.lang_code), code=302)
+    # nope, it's a 404
     else:
         return render_template('404.html'), 404
 
