@@ -28,6 +28,8 @@ recaptcha = ReCaptcha(app=app)
 if not recaptcha.is_enabled:
     print("Warning: recaptcha is not is_enabled")
 
+selected_lang = ""
+
 @app.before_request
 def beforeRequest():
     """ Processing of URL before any routing """
@@ -41,6 +43,7 @@ def beforeRequest():
         selected_lang = request.view_args.pop('lang_code')
     elif request.args and 'lang_code' in request.args:
         selected_lang = request.args['lang_code']
+    g.lang_code = selected_lang
 
     if selected_lang in constants.LANGUAGES:
         g.current_lang = selected_lang
@@ -68,7 +71,11 @@ def mobile(link_code=None):
 
 @app.route('/<lang_code>')
 def index():
-    return render_template('index.html')
+    # might be a 404 instead of a language code, so let's check.
+    if g.lang_code in constants.LANGUAGES:
+        return render_template('index.html')
+    else:
+        return render_template('404.html'), 404
 
 @app.route('/team')
 @app.route('/<lang_code>/team')
