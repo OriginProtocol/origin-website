@@ -35,7 +35,7 @@ def beforeRequest():
     """ Processing of URL before any routing """
     # Force https on prod
     if constants.HTTPS:
-        if not request.url.startswith('https'):
+        if not request.url.startswith('https') and 'ogn.dev' not in request.url_root:
             return redirect(request.url.replace('http', 'https', 1))
 
     selected_lang = None
@@ -75,7 +75,8 @@ def index():
     if g.lang_code in constants.LANGUAGES:
         return render_template('index.html')
     # if you're using an ogn.dev url, assume it's a faucet shortcut
-    elif 'ogn.dev' in constants.HOST:
+    elif 'ogn.dev' in request.url_root:
+        # if 'doordashdriver.com' in request.url_root:
         return redirect('https://faucet.originprotocol.com/eth?code=%s' % (g.lang_code), code=302)
     # nope, it's a 404
     else:
