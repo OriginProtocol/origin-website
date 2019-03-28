@@ -35,7 +35,7 @@
       mso-table-lspace: 0pt !important;
       mso-table-rspace: 0pt !important;
     }
-        
+
     table {
       border-spacing: 0 !important;
       border-collapse: collapse !important;
@@ -72,7 +72,7 @@
         min-width: 375px !important;
       }
     }
-  
+
   </style>
   
   <style>
@@ -94,8 +94,8 @@
   </style>
 
 </head>
-<body width="100%" bgcolor="#f9f9f9" style="margin: 0; mso-line-height-rule: exactly;">
-  <center style="width: 100%; background: #F7F9FB;">
+<body width="100%" bgcolor="#f1f6f9" style="margin: 0; mso-line-height-rule: exactly;">
+  <center style="width: 100%; background: #f1f6f9;">
 
     <!-- Visually Hidden Preheader Text : BEGIN -->
     <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
@@ -116,8 +116,10 @@
       <![endif]-->
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
         <tr>
-          <td bgcolor="#4A5D72" height='60'>
-            <img src='https://www.originprotocol.com/static/img/origin-logo.png' height='20' style='margin-left:20px'>
+          <td bgcolor="#f1f6f9" height='60'>
+            <center>
+              <img src='https://www.originprotocol.com/static/img/origin-logo-dark@3x.png' srcset='https://www.originprotocol.com/static/img/origin-logo-dark.png, https://www.originprotocol.com/static/img/origin-logo-dark@2x.png 2x, https://www.originprotocol.com/static/img/origin-logo-dark@3x.png 3x' height='20' style='margin:22px 0 18px 0'>
+            </center>
           </td>
         </tr>
         <tr>
@@ -125,7 +127,7 @@
 
             {% block content %}
             {% endblock %}
-        
+
           </td>
         </tr>
       </table>
@@ -133,31 +135,10 @@
       <!-- Email Footer : BEGIN -->
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
         <tr>
-          <td style="padding: 10px 10px 10px 10px;width: 60%;font-size: 16px; font-family: 'Lato', sans-serif; line-height:24px; text-align: center; color: #444444;" class="x-gmail-data-detectors">
-            <br>
-            <br>
-            Help us build our community. Share {{ universal.BUSINESS_NAME }} with your friends.
-            <br>
-            <br>
-            <br>
-            <a style="text-decoration:none;" href="http://t.me/originprotocol">
-              <img src="https://www.originprotocol.com/static/img/telegram-icon-color.png">
-            </a>
-            <a style="text-decoration:none;" href="http://www.originprotocol.com/discord">
-              <img src="https://www.originprotocol.com/static/img/discord-icon-color.png">
-            </a>
-            <a style="text-decoration:none;" href="http://www.facebook.com/originprotocol">
-              <img src="https://www.originprotocol.com/static/img/fb-icon-color.png">
-            </a>
-            <a style="text-decoration:none;" href="http://twitter.com/originprotocol">
-              <img src="https://www.originprotocol.com/static/img/twitter-icon-color.png">
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 20px 10px 40px 10px;width: 100%;font-size: 14px; font-family: 'Lato', sans-serif; line-height:18px; text-align: center; color: #666666;" class="x-gmail-data-detectors">
-            {{ universal.BUSINESS_NAME }}<br>845 Market Street, Suite 450A, San Francisco, CA, 94103<br>
-            <a href='https://www.originprotocol.com/mailing-list/unsubscribe?email={{ to_email|urlencode }}'>Unsubscribe</a>
+          <td style="padding: 20px 10px 40px 10px;width: 100%;font-size: 10px; font-family: 'Lato', sans-serif; line-height:18px; text-align: center; color: #666666;" class="x-gmail-data-detectors">
+            <br>845 Market Street, Suite 450A, San Francisco, CA, 94103<br>
+            If you no longer want to hear from us, you can <a href='https://www.originprotocol.com/mailing-list/unsubscribe?email={{ to_email|urlencode }}' style='color: #666666;'>unsubscribe</a>.<br><br>
+            <a href='https://www.originprotocol.com' style='color:#666666;text-decoration:none'>originprotocol.com</a>
           </td>
         </tr>
       </table>
@@ -167,8 +148,8 @@
       </td>
       </tr>
       </table>
-      <![endif]-->
-    </div>
-  </center>
+    <![endif]-->
+  </div>
+</center>
 </body>
 </html>
