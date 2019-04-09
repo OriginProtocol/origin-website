@@ -12,6 +12,7 @@ from flask import (jsonify, redirect, render_template,
 from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
+from logic.scripts import update_token_insight as insight
 import requests
 
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
@@ -149,6 +150,21 @@ def join_mailing_list():
     else:
         return jsonify("Missing email")
 
+@app.route('/insight/add', methods=['GET','POST'])
+def add_insight():
+    if 'address' in request.form:
+        try:
+            name = request.form['name'] if 'name' in request.form else None
+            email = request.form['email'] if 'email' in request.form else None
+            phone = request.form['phone'] if 'phone' in request.form else None
+            insight.add_contact(address=request.form['address'], dapp_user=1, name=name, email=email, phone=phone)
+            return jsonify("Success")
+        except Exception as e:
+            print e
+            return jsonify("Something went wrong.")
+    else:
+        return jsonify("Missing address")
+
 @app.route('/presale/join', methods=['POST'])
 def join_presale():
     full_name = request.form['full_name']
@@ -176,6 +192,7 @@ def join_presale():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
     mailing_list.add_sendgrid_contact(email, full_name, citizenship)
+    insight.add_contact(sending_addr,name=full_name, email=email)
     flash(feedback)
     return jsonify("OK")
 
@@ -221,10 +238,6 @@ def telegram():
 @app.route('/<lang_code>/dapp')
 def dapp():
     return redirect(universal.DAPP_URL, code=301) 
-
-@app.route('/nucypher')
-def faucet():
-    return redirect("https://faucet.originprotocol.com/eth?code=nucypher", code=301) 
 
 @app.route('/partners')
 @app.route('/<lang_code>/partners')

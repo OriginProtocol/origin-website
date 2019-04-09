@@ -7,7 +7,7 @@ def utcnow():
 	return datetime.datetime.now(tz.tzutc()) #+relativedelta(months=3)
 
 def fromtimestamp(utc_timestamp):
-	return datetime.datetime.fromtimestamp(utc_timestamp, tz=tz.tzutc())
+	return datetime.datetime.fromtimestamp(float(utc_timestamp), tz=tz.tzutc())
 
 def days_before_now(days_interval):
 	return utcnow() - datetime.timedelta(days=days_interval)
