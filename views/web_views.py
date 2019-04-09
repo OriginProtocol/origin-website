@@ -74,9 +74,8 @@ def index():
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
         return render_template('index.html')
-    # if you're using an ogn.dev url, assume it's a faucet shortcut
+    # otherwise if you're using an ogn.dev url, assume it's a faucet shortcut
     elif 'ogn.dev' in request.url_root:
-        # if 'doordashdriver.com' in request.url_root:
         return redirect('https://faucet.originprotocol.com/eth?code=%s' % (g.lang_code), code=302)
     # nope, it's a 404
     else:
@@ -101,7 +100,10 @@ def team():
                  {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
     return render_template('team.html', contributors=[aure] + contributors, community=community)
 
-
+@app.route('/admin')
+@app.route('/<lang_code>/admin')
+def admin():
+    return redirect('https://admin.staging.originprotocol.com', code=302)
 
 @app.route('/presale')
 @app.route('/<lang_code>/presale')
