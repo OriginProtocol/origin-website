@@ -160,7 +160,7 @@ def fetch_ogn_transactions():
 			else:
 				subject = "%g OGN moved" % (tx.amount)
 
-			body = """
+			body = u"""
 				{amount} OGN <a href='https://etherscan.io/tx/{tx_hash}'>moved</a>
 				from <a href='https://etherscan.io/address/{from_address}'>{from_name}</a>
 				to <a href='https://etherscan.io/address/{to_address}'>{to_name}</a>
@@ -173,7 +173,7 @@ def fetch_ogn_transactions():
 				to_address=tx.to_address
 			)
 
-			# print subject
+			print subject
 
 			sgw.notify_founders(body, subject)
 			tx.notification_sent = True
