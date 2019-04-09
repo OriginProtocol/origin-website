@@ -101,6 +101,47 @@ class SocialStat(db.Model):
     def __str__(self):
         return '%s' % (self.name)
 
+class EthContact(db.Model):
+    __tablename__ = 'eth_contact'
+    address = db.Column(db.String(42), primary_key=True)
+    name = db.Column(db.String(255), index=True)
+    desc = db.Column(db.String(255))
+    email = db.Column(db.String(255), index=True)
+    phone = db.Column(db.String(255), index=True)
+    eth_balance = db.Column(db.Float())
+    ogn_balance = db.Column(db.Float())
+    dai_balance = db.Column(db.Float())
+    investor = db.Column(db.Boolean())
+    presale_interest = db.Column(db.Boolean())
+    dapp_user = db.Column(db.Boolean())
+    employee = db.Column(db.Boolean())
+    exchange = db.Column(db.Boolean())
+    company_wallet = db.Column(db.Boolean())
+    investor_airdrop = db.Column(db.Boolean())
+    token_count = db.Column(db.Integer())
+    transaction_count = db.Column(db.Integer())
+    tokens = db.Column(JSONB)
+    last_updated = db.Column(db.DateTime(),server_default=db.func.now(), onupdate=db.func.now())
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+
+    def __str__(self):
+        return '%s' % (self.name)
+
+class TokenTransaction(db.Model):
+    __tablename__ = 'token_transaction'
+    tx_hash = db.Column(db.String(66), primary_key=True)
+    from_address = db.Column(db.String(42), index=True)
+    to_address = db.Column(db.String(42), index=True)
+    amount = db.Column(db.Float())
+    block_number = db.Column(db.Integer())
+    notification_sent = db.Column(db.Boolean())
+    timestamp = db.Column(db.DateTime(timezone=True))
+    last_updated = db.Column(db.DateTime(),server_default=db.func.now(), onupdate=db.func.now())
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+    
+    def __str__(self):
+        return '%s' % (self.name)
+
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')
 def _subscribe_email_list(mapper, connection, target):

@@ -53,6 +53,9 @@ YOUTUBE_REFRESH_TOKEN = dotenv.get('YOUTUBE_REFRESH_TOKEN')
 DISCORD_BOT_TOKEN = dotenv.get('DISCORD_BOT_TOKEN')
 DISCORD_GUILD_ID = dotenv.get('DISCORD_GUILD_ID')
 
+ETHERSCAN_KEY = dotenv.get('ETHERSCAN_KEY')
+AMBERDATA_KEY = dotenv.get('AMBERDATA_KEY')
+
 # Language option constants
 
 LANGUAGES = [
