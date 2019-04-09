@@ -143,7 +143,7 @@ def fetch_ogn_transactions():
 		tx.timestamp = time_.fromtimestamp(result['timeStamp'])
 
 		if tx.amount > 0:
-			print "%g OGN moved in transaction %s from %s to %s" % (tx.amount, result['hash'], tx.from_address, tx.to_address) 
+			print "%g OGN moved in transaction %s" % (tx.amount, result['hash']) 
 
 		# send an email alert every time OGN tokens are moved
 		# only alert once & ignore marketplace transactions which show up as 0 OGN

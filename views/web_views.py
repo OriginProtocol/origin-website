@@ -192,7 +192,7 @@ def join_presale():
         return jsonify(gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
     mailing_list.add_sendgrid_contact(email, full_name, citizenship)
-    insight.add_contact(sending_addr,name=full_name, email=email)
+    insight.add_contact(sending_addr,name=full_name, email=email, presale_interest=1)
     flash(feedback)
     return jsonify("OK")
 
