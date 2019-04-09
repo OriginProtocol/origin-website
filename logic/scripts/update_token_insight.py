@@ -22,6 +22,8 @@ dai_contract = '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359'
 # start tracking a wallet address
 def add_contact(address, **kwargs):
 
+	address = address.strip()
+
 	# must look like an ETH address
 	if not re.match("^(0x)?[0-9a-fA-F]{40}$", address):
 		return False
@@ -141,7 +143,7 @@ def fetch_ogn_transactions():
 		tx.timestamp = time_.fromtimestamp(result['timeStamp'])
 
 		if tx.amount > 0:
-			print "%g OGN moved in transaction %s" % (tx.amount, result['hash']) 
+			print "%g OGN moved in transaction %s from %s to %s" % (tx.amount, result['hash'], tx.from_address, tx.to_address) 
 
 		# send an email alert every time OGN tokens are moved
 		# only alert once & ignore marketplace transactions which show up as 0 OGN
@@ -171,7 +173,7 @@ def fetch_ogn_transactions():
 				to_address=tx.to_address
 			)
 
-			print subject
+			# print subject
 
 			sgw.notify_founders(body, subject)
 			tx.notification_sent = True
