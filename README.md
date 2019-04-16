@@ -97,8 +97,7 @@ You can run the website in combination with a local PostgreSQL, Redis and Celery
 
 1. Clone the repository
 
-`git clone https://github.com/OriginProtocol/origin-website
-cd origin-website`
+`git clone https://github.com/OriginProtocol/origin-website && cd origin-website`
 
 2. From the root of the repository run `docker-compose up`. The first time this command runs it will take some time to complete due to the initial building of the containers.
 
