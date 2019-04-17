@@ -1,26 +1,5 @@
 # Localization
 
-## Status 2018-04-12
-
-| Code | Language | Status |
-| ---- | -------- | ------ |
-| ar | Arabic | 🚧 Partial |
-| de | German | ✅ Complete |
-| el | Greek  | ✅ Complete |
-| es | Spanish | ✅ Complete |
-| fr | French |  ✅ Complete |
-| he | Hebrew | |
-| hr | Croatian | ✅ Complete |
-| it | Italian |  ✅ Complete |
-| ja | Japanese | ✅ Complete |
-| ko | Korean |  ✅ Complete |
-| nl | Dutch | ✅ Complete |
-| pt | Portugese | ✅ Complete |
-| ru | Russian | ✅ Complete |
-| th | Thai | ✅ Complete |
-| zh_Hans | Chinese (Simplified) | ✅ Complete |
-| zh_Hant | Chinese (Traditional) | ✅ Complete |
-
 ## Implementation
 
 Localization is done with the [Flask-Babel](https://pythonhosted.org/Flask-Babel/) module.
