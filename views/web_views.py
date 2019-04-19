@@ -142,28 +142,20 @@ def product_brief():
 def join_mailing_list():
     if 'email' in request.form:
         email = request.form['email']
-        dapp_user = request.form['dapp_user'] if 'dapp_user' in request.form else None
+        # optional fields
+        first_name = request.form['first_name'] if 'first_name' in request.form else None
+        last_name = request.form['last_name'] if 'last_name' in request.form else None
+        full_name = ' '.join(filter(None, (first_name, last_name)))
+        full_name = None if full_name == '' else full_name
+        phone = request.form['phone'] if 'phone' in request.form else None
+        if 'eth_address' in request.form:
+            insight.add_contact(address=request.form['eth_address'], dapp_user=1, name=full_name, email=email, phone=phone)
         ip_addr = get_real_ip()
         feedback = mailing_list.send_welcome(email, ip_addr)
-        mailing_list.add_sendgrid_contact(email=email, dapp_user=dapp_user)
+        mailing_list.add_sendgrid_contact(email=email, full_name=full_name, dapp_user=dapp_user)
         return jsonify(feedback)
     else:
         return jsonify("Missing email")
-
-@app.route('/insight/add', methods=['GET','POST'])
-def add_insight():
-    if 'address' in request.form:
-        try:
-            name = request.form['name'] if 'name' in request.form else None
-            email = request.form['email'] if 'email' in request.form else None
-            phone = request.form['phone'] if 'phone' in request.form else None
-            insight.add_contact(address=request.form['address'], dapp_user=1, name=name, email=email, phone=phone)
-            return jsonify("Success")
-        except Exception as e:
-            print e
-            return jsonify("Something went wrong.")
-    else:
-        return jsonify("Missing address")
 
 @app.route('/presale/join', methods=['POST'])
 def join_presale():
