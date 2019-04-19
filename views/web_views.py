@@ -237,7 +237,12 @@ def telegram():
 @app.route('/dapp')
 @app.route('/<lang_code>/dapp')
 def dapp():
-    return redirect(universal.DAPP_URL, code=301) 
+    return redirect(universal.DAPP_URL, code=301)
+
+@app.route('/rewards')
+@app.route('/<lang_code>/rewards')
+def rewards():
+    return redirect(universal.REWARDS_URL, code=301)
 
 @app.route('/partners')
 @app.route('/<lang_code>/partners')

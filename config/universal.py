@@ -17,8 +17,6 @@ CONTACT_EMAIL = 'info@originprotocol.com'
 PRODUCT_BRIEF_URL = BASE_URL + '/product-brief'
 WHITEPAPER_URL = BASE_URL + '/whitepaper'
 
-DEMO_DAPP_URL = 'https://demo.originprotocol.com'
-
 GITHUB_URL = 'https://github.com/originprotocol'
 SLACK_URL = 'https://slack.originprotocol.com/'
 DISCORD_URL = 'https://discord.gg/jyxpUSe'
@@ -28,6 +26,7 @@ FACEBOOK_URL = 'https://www.facebook.com/originprotocol'
 IOS_URL = 'https://itunes.apple.com/app/origin-wallet/id1446091928'
 ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.origincatcher'
 DAPP_URL = 'https://dapp.originprotocol.com'
+REWARDS_URL = 'https://dapp.originprotocol.com/#/welcome'
 FAUCET_URL = 'https://faucet.originprotocol.com'
 
 DEFAULT_SHARE_MSG = quote('Check out ' + BUSINESS_NAME + ', an exciting blockchain project that will decentralize the sharing economy.')
