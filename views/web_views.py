@@ -241,7 +241,7 @@ def dapp():
 
 @app.route('/rewards')
 @app.route('/<lang_code>/rewards')
-def dapp():
+def rewards():
     return redirect(universal.REWARDS_URL, code=301)
 
 @app.route('/partners')
