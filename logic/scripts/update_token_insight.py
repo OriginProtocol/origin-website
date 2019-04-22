@@ -1,17 +1,19 @@
-import requests
 import collections
+from datetime import datetime, timedelta
 import json
 import math
-from util import time_
-from util import sendgrid_wrapper as sgw
+import re
+import sys
+import time
+
+from backoff import on_exception, expo
 from config import constants
 from database import db, db_models, db_common
-from tools import db_utils
-import sys
 from ratelimit import limits, sleep_and_retry, RateLimitException
-from backoff import on_exception, expo
-import re
-import time
+import requests
+from tools import db_utils
+from util import sendgrid_wrapper as sgw
+from util import time_
 
 # NOTE: remember to use lowercase addresses for everything
 
@@ -65,13 +67,23 @@ def call_amberdata(url):
 	raw_json = requests.get(url, headers=headers)
 	return raw_json.json()
 
+# this script is called on a 10 minute cron by Heroku
+# break things up so we update slowly throughout the day instead of in one big batch
+def get_some_contacts():
+	per_run = 24*6 # every ten minutes
+	total = db.session.query(db_models.EthContact.address).count()
+	limit = int(total / per_run) + 1
+	print 'checking %d wallets' % (limit)
+	EC = db_models.EthContact
+	return EC.query.filter(EC.last_updated < time_.days_before_now(1)).limit(limit).all()
+
 # track the holdings of every wallet that we're watching
 def fetch_eth_balances():
 
 	# etherscan allows us to query the ETH balance of 20 addresses at a time
 	chunk = 20
 
-	contacts = db_models.EthContact.query.all()
+	contacts = get_some_contacts()
 
 	groups = [contacts[i * chunk:(i + 1) * chunk] for i in range((len(contacts) + chunk - 1) // chunk )]  
 	for group in groups:
@@ -90,6 +102,7 @@ def fetch_eth_balances():
 					wallet.eth_balance = float(result['balance'])/math.pow(10, 18)
 				else:
 					print 'invalid address: %s' % (result['account'])
+				wallet.last_updated = datetime.utcnow()
 				db.session.add(wallet)
 				db.session.commit()
 		except Exception as e:
@@ -99,37 +112,54 @@ def fetch_eth_balances():
 # amberdata seems to have the fastest API
 def fetch_token_balances():
 
-	contacts = db_models.EthContact.query.all()
+	contacts = get_some_contacts()
 
 	for contact in contacts:
 		print "Fetching token balances for %s" % (contact.address)
 
-		# retry up to 5 times
-		for i in range(5):
+		contact.tokens = []
+
+		per_page = 5
+		page = 0
+
+		# pagination
+		while True:	
 			try:
-				url = "https://web3api.io/api/v1/addresses/%s/tokens?page=0&size=100" % (contact.address)
+
+				url = "https://web3api.io/api/v1/addresses/%s/tokens?page=%d&size=%d" % (contact.address, page, per_page)
 				results = call_amberdata(url)
-				contact.tokens = results['payload']['records']
+
+				# print results
+
+				contact.tokens = contact.tokens+results['payload']['records']
 				contact.token_count = results['payload']['totalRecords']
+
+				print '%s tokens found. fetching page %s' % (contact.token_count, page)
 
 				for token in results['payload']['records']:
 					if token['address'] == ogn_contract:
 						contact.ogn_balance = float(token['amount'])/math.pow(10, 18)
 					elif token['address'] == dai_contract:
 						contact.dai_balance = float(token['amount'])/math.pow(10, 18)
-				break
+
+				if contact.token_count <= per_page:
+					break
+				else:
+					page = page + 1
 			except Exception as e:
 				print e
 				time.sleep(1)
-				print 'retrying. attempt: %d' % (i)
+				print 'retrying'
 
 		db.session.add(contact)
 		db.session.commit()
+
 		
 # monitor & alert on all movement of OGN
 def fetch_ogn_transactions():
 
 	etherscan_url = 'http://api.etherscan.io/api?module=account&action=tokentx&contractaddress=%s&startblock=0&endblock=999999999&sort=desc&apikey=%s' % (ogn_contract, constants.ETHERSCAN_KEY)
+	print etherscan_url
 	results = call_etherscan(etherscan_url)
 
 	# loop through every transaction where Origin tokens were moved
