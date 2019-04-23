@@ -122,11 +122,14 @@ def fetch_token_balances():
 		per_page = 100
 		page = 0
 
+		keep_looking = True
+
 		# pagination
-		while True:	
+		while keep_looking:	
 			try:
 
 				url = "https://web3api.io/api/v1/addresses/%s/tokens?page=%d&size=%d" % (contact.address, page, per_page)
+				print url
 				results = call_amberdata(url)
 
 				# print results
@@ -142,7 +145,8 @@ def fetch_token_balances():
 					elif token['address'] == dai_contract:
 						contact.dai_balance = float(token['amount'])/math.pow(10, 18)
 
-				if contact.token_count <= per_page:
+				if int(results['payload']['totalRecords']) <= per_page or len(results['payload']['records']) < per_page:
+					keep_looking = False
 					break
 				else:
 					page = page + 1
@@ -151,6 +155,8 @@ def fetch_token_balances():
 				time.sleep(1)
 				print 'retrying'
 
+
+		contact.last_updated = datetime.utcnow()
 		db.session.add(contact)
 		db.session.commit()
 
