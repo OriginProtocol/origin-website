@@ -176,8 +176,6 @@ def fetch_from_ethplorer():
 
 	contacts = get_some_contacts()
 
-	# print contacts
-
 	for contact in contacts:
 
 		print "Fetching tokens & ETH balance for %s" % (contact.address)
@@ -266,10 +264,11 @@ def fetch_ogn_transactions():
 			db.session.add(tx)
 			db.session.commit()
 
-# called via cron on Heroku
-with db_utils.request_context():
-	fetch_ogn_transactions()
-	fetch_from_ethplorer()
+if __name__ == '__main__':
+	# called via cron on Heroku
+	with db_utils.request_context():
+		fetch_ogn_transactions()
+		fetch_from_ethplorer()
 
 
 
