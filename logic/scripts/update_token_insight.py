@@ -119,7 +119,7 @@ def fetch_token_balances():
 
 		contact.tokens = []
 
-		per_page = 5
+		per_page = 100
 		page = 0
 
 		# pagination
