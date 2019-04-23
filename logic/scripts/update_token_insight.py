@@ -176,7 +176,7 @@ def fetch_from_ethplorer():
 
 	contacts = get_some_contacts()
 
-	print contacts
+	# print contacts
 
 	for contact in contacts:
 
