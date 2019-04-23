@@ -67,6 +67,15 @@ def call_amberdata(url):
 	raw_json = requests.get(url, headers=headers)
 	return raw_json.json()
 
+# limit calls to 10 requests / second per their limits 
+# https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API#api-keys-limits
+@sleep_and_retry
+@limits(calls=10, period=1)
+def call_ethplorer(url):
+	url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY)
+	raw_json = requests.get(url)
+	return raw_json.json()
+
 # this script is called on a 10 minute cron by Heroku
 # break things up so we update slowly throughout the day instead of in one big batch
 def get_some_contacts():
@@ -75,10 +84,10 @@ def get_some_contacts():
 	limit = int(total / per_run) + 1
 	print 'checking %d wallets' % (limit)
 	EC = db_models.EthContact
-	return EC.query.filter(EC.last_updated < time_.days_before_now(1)).limit(limit).all()
+	return EC.query.filter(EC.last_updated < time_.days_before_now(1)).order_by(EC.last_updated).limit(limit).all()
 
 # track the holdings of every wallet that we're watching
-def fetch_eth_balances():
+def fetch_eth_balances_from_etherscan():
 
 	# etherscan allows us to query the ETH balance of 20 addresses at a time
 	chunk = 20
@@ -109,8 +118,10 @@ def fetch_eth_balances():
 			print e
 			print results
 
+
+
 # amberdata seems to have the fastest API
-def fetch_token_balances():
+def fetch_tokens_from_amberdata():
 
 	contacts = get_some_contacts()
 
@@ -160,12 +171,49 @@ def fetch_token_balances():
 		db.session.add(contact)
 		db.session.commit()
 
+# use ethplorer to fetch eth balance & token holdings
+def fetch_from_ethplorer():
+
+	contacts = get_some_contacts()
+
+	for contact in contacts:
+
+		print "Fetching tokens & ETH balance for %s" % (contact.address)
+
+		try:
+
+			url = "http://api.ethplorer.io/getAddressInfo/%s" % (contact.address)
+			results = call_ethplorer(url)
+
+			contact.eth_balance = results['ETH']['balance']
+			contact.transaction_count = results['countTxs']
+
+			if 'tokens' in results:
+				contact.tokens = results['tokens']
+				# update the OGN & DAI balance 
+				for token in results['tokens']:
+					if token['tokenInfo']['address'] == ogn_contract:
+						contact.ogn_balance = float(token['balance'])/math.pow(10, 18)
+					elif token['tokenInfo']['address'] == dai_contract:
+						contact.dai_balance = float(token['balance'])/math.pow(10, 18)
+				contact.token_count = len(results['tokens'])
+			contact.last_updated = datetime.utcnow()
+
+			db.session.add(contact)
+			db.session.commit()
+
+
+		except Exception as e:
+			print e
+			time.sleep(1)
+			print 'retrying'
+
 		
 # monitor & alert on all movement of OGN
 def fetch_ogn_transactions():
 
 	etherscan_url = 'http://api.etherscan.io/api?module=account&action=tokentx&contractaddress=%s&startblock=0&endblock=999999999&sort=desc&apikey=%s' % (ogn_contract, constants.ETHERSCAN_KEY)
-	print etherscan_url
+	# print etherscan_url
 	results = call_etherscan(etherscan_url)
 
 	# loop through every transaction where Origin tokens were moved
@@ -218,13 +266,9 @@ def fetch_ogn_transactions():
 
 # called via cron on Heroku
 with db_utils.request_context():
-	if len(sys.argv) > 1:
-		if sys.argv[1] == 'ogn':
-			fetch_ogn_transactions()
-		elif sys.argv[1] == 'eth':
-			fetch_eth_balances()
-		elif sys.argv[1] == 'tokens':
-			fetch_token_balances()
+	fetch_ogn_transactions()
+	fetch_from_ethplorer()
+
 
 
 

@@ -55,6 +55,7 @@ DISCORD_GUILD_ID = dotenv.get('DISCORD_GUILD_ID')
 
 ETHERSCAN_KEY = dotenv.get('ETHERSCAN_KEY')
 AMBERDATA_KEY = dotenv.get('AMBERDATA_KEY')
+ETHPLORER_KEY = dotenv.get('ETHPLORER_KEY')
 
 # Language option constants
 
