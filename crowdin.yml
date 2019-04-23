@@ -1,7 +1,3 @@
 files:
   - source: /messages.pot
-    translation: /translations/%osx_locale%/LC_MESSAGES/%file_name%.po
-    languages_mapping:
-      osx_locale:
-        zh-Hans: zh_Hans
-        zh-Hant: zh_Hant
+    translation: /translations/%locale_with_underscore%/LC_MESSAGES/%file_name%.po
