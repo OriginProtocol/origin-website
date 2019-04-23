@@ -148,6 +148,7 @@ def join_mailing_list():
         full_name = ' '.join(filter(None, (first_name, last_name)))
         full_name = None if full_name == '' else full_name
         phone = request.form['phone'] if 'phone' in request.form else None
+        dapp_user = 1 if 'dapp_user' in request.form else 0
         if 'eth_address' in request.form:
             insight.add_contact(address=request.form['eth_address'], dapp_user=1, name=full_name, email=email, phone=phone)
         ip_addr = get_real_ip()

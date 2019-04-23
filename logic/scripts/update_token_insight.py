@@ -226,8 +226,5 @@ with db_utils.request_context():
 		elif sys.argv[1] == 'tokens':
 			fetch_token_balances()
 
-	else:
-		print 'pass `eth`, `ogn` or `tokens` as an argument when running this script'
-
 
 
