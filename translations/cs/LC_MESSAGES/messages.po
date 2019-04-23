@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-01-29 12:55-0800\n"
-"PO-Revision-Date: 2019-04-17 19:52\n"
+"POT-Creation-Date: 2019-04-17 20:43+0000\n"
+"PO-Revision-Date: 2019-04-23 22:17\n"
 "Last-Translator: OriginProtocol\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -25,36 +25,36 @@ msgstr "Technologických partnerů"
 msgid "Building on Origin"
 msgstr "Stavět na původu"
 
-#: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:36
-#: logic/emails/mailing_list.py:110
+#: logic/emails/mailing_list.py:56 logic/emails/mailing_list.py:75
+#: logic/emails/mailing_list.py:150
 msgid "Please enter a valid email address"
 msgstr "Prosím zadejte platnou emailovou adresu"
 
-#: logic/emails/mailing_list.py:27
+#: logic/emails/mailing_list.py:66
 msgid "You are already signed up!"
 msgstr "Již jste přihlášeni!"
 
-#: logic/emails/mailing_list.py:31
+#: logic/emails/mailing_list.py:70
 msgid "Thanks for signing up!"
 msgstr "Děkujeme, že jste se zaregistrovali!"
 
-#: logic/emails/mailing_list.py:54 logic/emails/mailing_list.py:127
+#: logic/emails/mailing_list.py:93 logic/emails/mailing_list.py:167
 msgid "Ooops! Something went wrong."
 msgstr "Jděte! Něco se pokazilo."
 
-#: logic/emails/mailing_list.py:81 logic/emails/mailing_list.py:138
+#: logic/emails/mailing_list.py:120 logic/emails/mailing_list.py:178
 msgid "Thanks! We'll be in touch soon."
 msgstr "Dík! Budeme brzy v kontaktu."
 
-#: logic/emails/mailing_list.py:94
+#: logic/emails/mailing_list.py:134
 msgid "Ooops, something went wrong"
 msgstr "Ooops, něco se stalo"
 
-#: logic/emails/mailing_list.py:96
+#: logic/emails/mailing_list.py:136
 msgid "You have been unsubscribed"
 msgstr "Byl jste odhlášen"
 
-#: logic/emails/mailing_list.py:113
+#: logic/emails/mailing_list.py:153
 msgid "Please enter a valid website address"
 msgstr "Zadejte platnou adresu webových stránek"
 
@@ -205,7 +205,7 @@ msgid "Messaging"
 msgstr ""
 
 #: templates/creator.html:182
-msgid "Decentralized, encrypted end-to-end, fast, fre, and auditable"
+msgid "Decentralized, encrypted end-to-end, fast, free, and auditable"
 msgstr ""
 
 #: templates/creator.html:189
@@ -289,98 +289,106 @@ msgid "Marketplace DApp"
 msgstr ""
 
 #: templates/footer.html:58
-msgid "Mobile Wallet (iOS)"
+msgid "iOS Wallet"
 msgstr ""
 
-#: templates/footer.html:65
-msgid "Resources"
+#: templates/footer.html:63
+msgid "Android Wallet"
 msgstr ""
 
 #: templates/footer.html:70
+msgid "Resources"
+msgstr ""
+
+#: templates/footer.html:75
 msgid "Developers"
 msgstr ""
 
-#: templates/footer.html:75 templates/index.html:211
+#: templates/footer.html:80 templates/index.html:211
 msgid "GitHub"
 msgstr ""
 
-#: templates/footer.html:80
+#: templates/footer.html:85
 msgid "Docs"
 msgstr "Dokumenty"
 
-#: templates/footer.html:85 templates/navbar.html:76
+#: templates/footer.html:90 templates/navbar.html:76
 msgid "Product Brief"
 msgstr "Product Brief"
 
-#: templates/footer.html:90
+#: templates/footer.html:95
 msgid "Whitepaper"
 msgstr "Bílý papír"
 
-#: templates/footer.html:97
+#: templates/footer.html:102
 msgid "Organization"
 msgstr "Organizace"
 
-#: templates/footer.html:102 templates/navbar.html:80
+#: templates/footer.html:107 templates/navbar.html:80
 msgid "Team"
 msgstr "tým"
 
-#: templates/footer.html:107 templates/navbar.html:69 templates/tokens.html:18
+#: templates/footer.html:112 templates/navbar.html:69 templates/tokens.html:18
 msgid "Tokens"
 msgstr ""
 
-#: templates/footer.html:112
+#: templates/footer.html:117
 msgid "Partners"
 msgstr "Partneři"
 
-#: templates/footer.html:117
+#: templates/footer.html:122
+msgid "Store"
+msgstr ""
+
+#: templates/footer.html:127
 msgid "Meetups"
 msgstr ""
 
-#: templates/footer.html:122
+#: templates/footer.html:132
 msgid "Jobs"
 msgstr ""
 
-#: templates/footer.html:129 templates/team.html:422 templates/team.html:436
+#: templates/footer.html:139 templates/team.html:423 templates/team.html:437
 msgid "Community"
 msgstr "Společenství"
 
-#: templates/footer.html:134
+#: templates/footer.html:144
 msgid "Discord"
 msgstr "Svár"
 
-#: templates/footer.html:139
+#: templates/footer.html:149
 msgid "Telegram"
 msgstr "Telegram"
 
-#: templates/footer.html:144
+#: templates/footer.html:154
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:148
+#: templates/footer.html:158
 msgid "WeChat"
 msgstr ""
 
-#: templates/footer.html:151
+#: templates/footer.html:161
 msgid "Weibo"
 msgstr ""
 
-#: templates/footer.html:160
+#: templates/footer.html:170
 msgid "Twitter"
 msgstr "Cvrlikání"
 
-#: templates/footer.html:165
+#: templates/footer.html:175
 msgid "Instagram"
 msgstr "Instagram"
 
-#: templates/footer.html:170
+#: templates/footer.html:180
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:175
+#: templates/footer.html:185
 msgid "Medium"
 msgstr "Střední"
 
-#: templates/footer.html:180
+#: templates/footer.html:190
 msgid "Youtube"
 msgstr ""
 
@@ -511,8 +519,8 @@ msgstr "Září 2017"
 
 #: templates/index.html:424
 #, python-format
-msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
-msgstr "<a href='%%(product_brief)s'>Produkt Brief</a> a <a href='%%(whitepaper)s'>Whitepaper</a> uvolněn"
+msgid "<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released"
+msgstr "<a href='%(product_brief)s'>Produkt Brief</a> a <a href='%(whitepaper)s'>Whitepaper</a> uvolněn"
 
 #: templates/index.html:429
 msgid "December 2017"
@@ -615,10 +623,14 @@ msgid "Origin Protocol, a blockchain project building a decentralized marketplac
 msgstr ""
 
 #: templates/index.html:700
+msgid "We want to create a future where buyers and sellers can transact in the wild by using neutral tools that don't favor either party."
+msgstr ""
+
+#: templates/index.html:713
 msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
 msgstr ""
 
-#: templates/mobile.html:3 templates/mobile.html:4
+#: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
 msgstr "Protokol o původu - mobilní"
 
@@ -747,8 +759,7 @@ msgstr "Matt byl 3. hodina na YouTube (získal Google) a VP PM v Qwiki (získal 
 msgid "Stan James"
 msgstr "Stan James"
 
-#: templates/team.html:107 templates/team.html:175 templates/team.html:228
-#: templates/team.html:318
+#: templates/team.html:107 templates/team.html:211 templates/team.html:301
 msgid "Senior Engineer"
 msgstr "Senior inženýr"
 
@@ -789,186 +800,190 @@ msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st e
 msgstr "Yu Pan byl jedním ze 6 zakládajících členů týmu PayPal a byl prvním zaměstnancem na YouTube. Je bývalým zaměstnancem Google a spoluzakladatelem Kiwi Crate."
 
 #: templates/team.html:171
-msgid "Cuong Do"
-msgstr "Cuong Do"
-
-#: templates/team.html:178
-msgid "Cuong Do was the former head of Dropbox NYC Engineering. Before that, Cuong was one of the early team members at PayPal and worked alongside Yu Pan and Matt at YouTube."
-msgstr "Cuong Do byl bývalý šéf Dropbox NYC Engineering. Předtím byl Cuong jedním z raných členů týmu v PayPalu a spolupracoval s Yu Panem a Mattem na YouTube."
-
-#: templates/team.html:188
 msgid "Micah Alcorn"
 msgstr "Micah Alcorn"
 
-#: templates/team.html:192 templates/team.html:282
-msgid "Engineer"
-msgstr "Inženýr"
+#: templates/team.html:175
+msgid "Product Manager/Engineer"
+msgstr ""
 
-#: templates/team.html:195
+#: templates/team.html:178
 msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
 msgstr ""
 
-#: templates/team.html:206
+#: templates/team.html:189
 msgid "Kay Yoo"
 msgstr ""
 
-#: templates/team.html:210
+#: templates/team.html:193
 msgid "Finance & Operations"
 msgstr ""
 
-#: templates/team.html:213
+#: templates/team.html:196
 msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
 msgstr ""
 
-#: templates/team.html:224
+#: templates/team.html:207
 msgid "Franck Chastagnol"
 msgstr ""
 
-#: templates/team.html:231
+#: templates/team.html:214
 msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
 msgstr ""
 
-#: templates/team.html:242
+#: templates/team.html:225
 msgid "Austin Virts"
 msgstr ""
 
-#: templates/team.html:246
+#: templates/team.html:229
 msgid "Marketing"
 msgstr ""
 
-#: templates/team.html:249
+#: templates/team.html:232
 msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
 msgstr ""
 
-#: templates/team.html:260
+#: templates/team.html:243
 msgid "Mila Choi"
 msgstr ""
 
-#: templates/team.html:264
-msgid "Korea Community"
+#: templates/team.html:247
+msgid "Regional Manager Korea"
 msgstr ""
 
-#: templates/team.html:267
+#: templates/team.html:250
 msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
 msgstr ""
 
-#: templates/team.html:278
+#: templates/team.html:261
 msgid "Tom Linton"
 msgstr ""
 
-#: templates/team.html:285
+#: templates/team.html:265 templates/team.html:319
+msgid "Engineer"
+msgstr "Inženýr"
+
+#: templates/team.html:268
 msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
 msgstr ""
 
-#: templates/team.html:296
+#: templates/team.html:279
 msgid "Anna Wang"
 msgstr ""
 
-#: templates/team.html:300
-msgid "China Community"
+#: templates/team.html:283
+msgid "Regional Manager China"
 msgstr ""
 
-#: templates/team.html:303
+#: templates/team.html:286
 msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
 msgstr ""
 
-#: templates/team.html:314
+#: templates/team.html:297
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:321
+#: templates/team.html:304
 msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr ""
 
-#: templates/team.html:341
+#: templates/team.html:315
+msgid "Domen Grabec"
+msgstr ""
+
+#: templates/team.html:322
+msgid "Domen co-founded and led a team developing a mobile application with 2 chess Grandmasters. He previously had a successful career at Cetra, Zemanta and Peerindex."
+msgstr ""
+
+#: templates/team.html:342
 msgid "Advisors"
 msgstr "Poradci"
 
-#: templates/team.html:350
+#: templates/team.html:351
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:354
+#: templates/team.html:355
 msgid "Advisor/PR"
 msgstr "Poradce / PR"
 
-#: templates/team.html:357
+#: templates/team.html:358
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "Addison je komunikační a marketingový specialista se zaměřením na fyziku z UC Berkeley. Předtím pracoval s Nadací Ethereum a DEVCON1."
 
-#: templates/team.html:367
+#: templates/team.html:368
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:371
+#: templates/team.html:372
 msgid "Advisor/International BD"
 msgstr "Poradce / mezinárodní BD"
 
-#: templates/team.html:374
+#: templates/team.html:375
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "Melody je zakladatelem Spartan Group, blokového poradního a investičního fondu. Byla časným investorem do společnosti TenX a strategickým poradcem společnosti Gifto a Appcoins."
 
-#: templates/team.html:384
+#: templates/team.html:385
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/team.html:388 templates/team.html:405
+#: templates/team.html:389 templates/team.html:406
 msgid "Advisor"
 msgstr "Poradce"
 
-#: templates/team.html:391
+#: templates/team.html:392
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "Paul je partnerem společnosti Pantera Capital. Je také poradcem několika vysoce úspěšných projektů kryptoobchodů, včetně Orchid Labs, Enigma a ICON."
 
-#: templates/team.html:401
+#: templates/team.html:402
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:408
+#: templates/team.html:409
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "Joey je spoluzakladatel Auguru, první decentralizovaný trh předpovědí na světě a systém oracle. Je spoluvlastním ředitelem společnosti Pantera Capital."
 
-#: templates/team.html:418
+#: templates/team.html:419
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:425
+#: templates/team.html:426
 msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
 msgstr "Andrew byl zakladatelem čtyř startupů, včetně startovního víkendu, a vybudoval globální komunity napříč desítkami zemí. Byl zaměstnancem číslo 1 v TechStars."
 
-#: templates/team.html:459
+#: templates/team.html:460
 msgid "Open-source Contributors"
 msgstr ""
 
-#: templates/team.html:517
+#: templates/team.html:518
 msgid "Investment Funds"
 msgstr "Investiční fondy"
 
-#: templates/team.html:735
+#: templates/team.html:736
 msgid "Individual Investors"
 msgstr "Individuální investoři"
 
-#: templates/team.html:744
+#: templates/team.html:745
 msgid "Steve Jang"
 msgstr "Steve Jang"
 
-#: templates/team.html:754
+#: templates/team.html:755
 msgid "Xiahong Lin"
 msgstr "Xiahong Lin"
 
-#: templates/team.html:764
+#: templates/team.html:765
 msgid "Alexis Ohanian"
 msgstr "Alexis Ohanian"
 
-#: templates/team.html:774
+#: templates/team.html:775
 msgid "Gil Penchina"
 msgstr "Gil Penchina"
 
-#: templates/team.html:784
+#: templates/team.html:785
 msgid "Kamal Ravikant"
 msgstr "Kamal Ravikant"
 
-#: templates/team.html:794
+#: templates/team.html:795
 msgid "Garry Tan"
 msgstr "Garry Tan"
 
@@ -1056,31 +1071,43 @@ msgstr ""
 msgid "<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
 msgstr ""
 
-#: views/web_views.py:143 views/web_views.py:217
+#: templates/warning.html:20
+msgid "Earn Free Origin Tokens Today"
+msgstr ""
+
+#: templates/warning.html:21
+msgid "Participate in our campaigns and complete tasks on our DApp to earn Origin Tokens."
+msgstr ""
+
+#: templates/warning.html:24
+msgid "Go"
+msgstr ""
+
+#: views/web_views.py:182 views/web_views.py:276
 msgid "Please enter your name"
 msgstr "Zadejte své jméno"
 
-#: views/web_views.py:145 views/web_views.py:221
+#: views/web_views.py:184 views/web_views.py:280
 msgid "Please enter your email"
 msgstr "Zadejte svůj e-mail"
 
-#: views/web_views.py:147
+#: views/web_views.py:186
 msgid "An error occured"
 msgstr "Nastala chyba"
 
-#: views/web_views.py:149
+#: views/web_views.py:188
 msgid "Please enter your desired allocation"
 msgstr "Zadejte požadované přidělení"
 
-#: views/web_views.py:151
+#: views/web_views.py:190
 msgid "Please agree to the important notice"
 msgstr "Souhlasíte s důležitým upozorněním"
 
-#: views/web_views.py:153 views/web_views.py:223
+#: views/web_views.py:192 views/web_views.py:282
 msgid "Please prove you are not a robot."
 msgstr "Ukažte prosím, že nejste robot."
 
-#: views/web_views.py:219
+#: views/web_views.py:278
 msgid "Please enter your company name"
 msgstr "Zadejte prosím název firmy"
 
