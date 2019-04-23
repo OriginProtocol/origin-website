@@ -124,7 +124,6 @@ def fetch_eth_balances_from_etherscan():
 def fetch_tokens_from_amberdata():
 
 	contacts = get_some_contacts()
-	print contacts
 
 	for contact in contacts:
 		print "Fetching token balances for %s" % (contact.address)
@@ -176,6 +175,8 @@ def fetch_tokens_from_amberdata():
 def fetch_from_ethplorer():
 
 	contacts = get_some_contacts()
+
+	print contacts
 
 	for contact in contacts:
 
