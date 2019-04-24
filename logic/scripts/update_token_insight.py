@@ -176,6 +176,8 @@ def fetch_from_ethplorer():
 
 	contacts = get_some_contacts()
 
+	# print contacts
+
 	for contact in contacts:
 
 		print "Fetching tokens & ETH balance for %s" % (contact.address)
