@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-01-29 12:55-0800\n"
-"PO-Revision-Date: 2019-04-17 20:03\n"
+"POT-Creation-Date: 2019-04-17 20:43+0000\n"
+"PO-Revision-Date: 2019-04-24 01:45\n"
 "Last-Translator: OriginProtocol\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -25,36 +25,36 @@ msgstr "기술 파트너"
 msgid "Building on Origin"
 msgstr "오리진(Origin) 기반 구축"
 
-#: logic/emails/mailing_list.py:17 logic/emails/mailing_list.py:36
-#: logic/emails/mailing_list.py:110
+#: logic/emails/mailing_list.py:56 logic/emails/mailing_list.py:75
+#: logic/emails/mailing_list.py:150
 msgid "Please enter a valid email address"
 msgstr "사용 가능한 이메일 주소를 입력 해주세요."
 
-#: logic/emails/mailing_list.py:27
+#: logic/emails/mailing_list.py:66
 msgid "You are already signed up!"
 msgstr "이미 가입하셨습니다!"
 
-#: logic/emails/mailing_list.py:31
+#: logic/emails/mailing_list.py:70
 msgid "Thanks for signing up!"
 msgstr "가입해주셔서 감사합니다!"
 
-#: logic/emails/mailing_list.py:54 logic/emails/mailing_list.py:127
+#: logic/emails/mailing_list.py:93 logic/emails/mailing_list.py:167
 msgid "Ooops! Something went wrong."
 msgstr "이런! 뭔가 잘못되었습니다."
 
-#: logic/emails/mailing_list.py:81 logic/emails/mailing_list.py:138
+#: logic/emails/mailing_list.py:120 logic/emails/mailing_list.py:178
 msgid "Thanks! We'll be in touch soon."
 msgstr "감사합니다! 곧 연락 드리겠습니다."
 
-#: logic/emails/mailing_list.py:94
+#: logic/emails/mailing_list.py:134
 msgid "Ooops, something went wrong"
 msgstr "이런! 뭔가 잘못되었습니다."
 
-#: logic/emails/mailing_list.py:96
+#: logic/emails/mailing_list.py:136
 msgid "You have been unsubscribed"
 msgstr "구독이 취소되었습니다."
 
-#: logic/emails/mailing_list.py:113
+#: logic/emails/mailing_list.py:153
 msgid "Please enter a valid website address"
 msgstr "사용 가능한 웹사이트 주소를 입력 해주세요."
 
@@ -97,7 +97,7 @@ msgstr "<br>피어 투 피어<br>마켓 플레이스 구축"
 #: templates/creator.html:21
 #, python-format
 msgid "Blockchain enabled.<br>No code required.<br>100%% free to operate."
-msgstr "블록체인 기능 사용.<br>코드가 필요하지 않습니다.<br>100%% 무료로 운영할수 있습니다."
+msgstr "블록체인 기능 사용.<br>코드가 필요하지 않습니다.<br>100% 무료로 운영할수 있습니다."
 
 #: templates/creator.html:24 templates/creator.html:100
 #: templates/creator.html:223
@@ -205,8 +205,8 @@ msgid "Messaging"
 msgstr "메세징"
 
 #: templates/creator.html:182
-msgid "Decentralized, encrypted end-to-end, fast, fre, and auditable"
-msgstr "탈 중앙화된, 끝에서 끝까지 암호화된, 신속, 자유, 감사 가능한"
+msgid "Decentralized, encrypted end-to-end, fast, free, and auditable"
+msgstr ""
 
 #: templates/creator.html:189
 msgid "Arbitration"
@@ -289,98 +289,106 @@ msgid "Marketplace DApp"
 msgstr "마켓 플레이스 댑(DApp)"
 
 #: templates/footer.html:58
-msgid "Mobile Wallet (iOS)"
-msgstr "모바일 지갑 (iOS)"
+msgid "iOS Wallet"
+msgstr "iOS 지갑"
 
-#: templates/footer.html:65
+#: templates/footer.html:63
+msgid "Android Wallet"
+msgstr "안드로이드 지갑"
+
+#: templates/footer.html:70
 msgid "Resources"
 msgstr "자원"
 
-#: templates/footer.html:70
+#: templates/footer.html:75
 msgid "Developers"
 msgstr "개발자"
 
-#: templates/footer.html:75 templates/index.html:211
+#: templates/footer.html:80 templates/index.html:211
 msgid "GitHub"
 msgstr "Github"
 
-#: templates/footer.html:80
+#: templates/footer.html:85
 msgid "Docs"
 msgstr "문서"
 
-#: templates/footer.html:85 templates/navbar.html:76
+#: templates/footer.html:90 templates/navbar.html:76
 msgid "Product Brief"
 msgstr "제품 개요"
 
-#: templates/footer.html:90
+#: templates/footer.html:95
 msgid "Whitepaper"
 msgstr "백서"
 
-#: templates/footer.html:97
+#: templates/footer.html:102
 msgid "Organization"
 msgstr "조직"
 
-#: templates/footer.html:102 templates/navbar.html:80
+#: templates/footer.html:107 templates/navbar.html:80
 msgid "Team"
 msgstr "팀"
 
-#: templates/footer.html:107 templates/navbar.html:69 templates/tokens.html:18
+#: templates/footer.html:112 templates/navbar.html:69 templates/tokens.html:18
 msgid "Tokens"
 msgstr "토큰"
 
-#: templates/footer.html:112
+#: templates/footer.html:117
 msgid "Partners"
 msgstr "파트너"
 
-#: templates/footer.html:117
+#: templates/footer.html:122
+msgid "Store"
+msgstr "상점"
+
+#: templates/footer.html:127
 msgid "Meetups"
 msgstr "밋업"
 
-#: templates/footer.html:122
+#: templates/footer.html:132
 msgid "Jobs"
 msgstr "채용"
 
-#: templates/footer.html:129 templates/team.html:422 templates/team.html:436
+#: templates/footer.html:139 templates/team.html:423 templates/team.html:437
 msgid "Community"
 msgstr "커뮤니티"
 
-#: templates/footer.html:134
+#: templates/footer.html:144
 msgid "Discord"
 msgstr "Discord"
 
-#: templates/footer.html:139
+#: templates/footer.html:149
 msgid "Telegram"
 msgstr "텔레그램"
 
-#: templates/footer.html:144
+#: templates/footer.html:154
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:148
+#: templates/footer.html:158
 msgid "WeChat"
 msgstr "WeChat"
 
-#: templates/footer.html:151
+#: templates/footer.html:161
 msgid "Weibo"
 msgstr "Weibo"
 
-#: templates/footer.html:160
+#: templates/footer.html:170
 msgid "Twitter"
 msgstr "트위터"
 
-#: templates/footer.html:165
+#: templates/footer.html:175
 msgid "Instagram"
 msgstr "인스타그램"
 
-#: templates/footer.html:170
+#: templates/footer.html:180
 msgid "Facebook"
 msgstr "페이스북"
 
-#: templates/footer.html:175
+#: templates/footer.html:185
 msgid "Medium"
 msgstr "Medium"
 
-#: templates/footer.html:180
+#: templates/footer.html:190
 msgid "Youtube"
 msgstr "유튜브"
 
@@ -467,7 +475,7 @@ msgstr "지대추구 경향의 미들맨을 바꿔야할 때입니다."
 #: templates/index.html:226
 #, python-format
 msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "Ethereum 블록 체인의 힘을 이용하면 목록들은 중립적인 제 3 자 역할을 하는 안전하고 투명한 시스템을 통해 관리됩니다. 구매자와 판매자는 기존의 Uber, Airbnb, Fiverr 및 Getaround와 같은 회사에 지불되던 20-30 %%의 거래 수수료를 나눠가질 수 있습니다."
+msgstr "Ethereum 블록 체인의 힘을 이용하면 목록들은 중립적인 제 3 자 역할을 하는 안전하고 투명한 시스템을 통해 관리됩니다. 구매자와 판매자는 기존의 Uber, Airbnb, Fiverr 및 Getaround와 같은 회사에 지불되던 20-30 %의 거래 수수료를 나눠가질 수 있습니다."
 
 #: templates/index.html:230
 msgid "Read the Product Brief"
@@ -511,8 +519,8 @@ msgstr "2017년 9월"
 
 #: templates/index.html:424
 #, python-format
-msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
-msgstr "<a href='%%(product_brief)s'>제품 개요</a>와<a href='%%(whitepaper)s'>백서</a>발표"
+msgid "<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released"
+msgstr "<a href='%(product_brief)s'>제품 개요</a>와<a href='%(whitepaper)s'>백서</a>발표"
 
 #: templates/index.html:429
 msgid "December 2017"
@@ -615,10 +623,14 @@ msgid "Origin Protocol, a blockchain project building a decentralized marketplac
 msgstr "탈 중앙화된 마켓 플레이스를 구축하는 블록체인 프로젝트인 오리진 프로토콜(Origin Protocol) 은 이더리움 블록체인 기반으로 피어투피어(P2P) 메시징 애플리케이션을 출시 했습니다."
 
 #: templates/index.html:700
+msgid "We want to create a future where buyers and sellers can transact in the wild by using neutral tools that don't favor either party."
+msgstr ""
+
+#: templates/index.html:713
 msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
 msgstr "우버(Uber) 그리고 에어비엔비(Airbnb) 와 같은 공유 경제 기업들은 거래 중개인들에게 거래 당사자들이 받은 수익의 상당 부분을 공유하도록 합니다."
 
-#: templates/mobile.html:3 templates/mobile.html:4
+#: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
 msgstr "Origin 프로토콜 - 모바일"
 
@@ -747,8 +759,7 @@ msgstr "Matt는 Youtube (Google에 피인수)의 세번 째 PM이었고 Qwiki (Y
 msgid "Stan James"
 msgstr "스탠 제임스"
 
-#: templates/team.html:107 templates/team.html:175 templates/team.html:228
-#: templates/team.html:318
+#: templates/team.html:107 templates/team.html:211 templates/team.html:301
 msgid "Senior Engineer"
 msgstr "시니어 엔지니어"
 
@@ -789,186 +800,190 @@ msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st e
 msgstr "Yu Pan은 페이팔의 창립멤버 6명 중 하나였으며 유투브의 첫 번째 직원이었습니다. 그는 Google에서 일했었으며 Kiwi Crated의 공동 창업자입니다."
 
 #: templates/team.html:171
-msgid "Cuong Do"
-msgstr "Cuong Do"
-
-#: templates/team.html:178
-msgid "Cuong Do was the former head of Dropbox NYC Engineering. Before that, Cuong was one of the early team members at PayPal and worked alongside Yu Pan and Matt at YouTube."
-msgstr "Cuong Do는 Dropbox NYC 엔지니어링의 전 대표입니다. 그 전에, Cuong은 페이팔의 초기 멤버 중 하나였으며 Yu Pan, Matt과 함께 유투브에서 일했습니다."
-
-#: templates/team.html:188
 msgid "Micah Alcorn"
 msgstr "마이카 알콘"
 
-#: templates/team.html:192 templates/team.html:282
-msgid "Engineer"
-msgstr "엔지니어"
+#: templates/team.html:175
+msgid "Product Manager/Engineer"
+msgstr "제품 관리자 / 엔지니어"
 
-#: templates/team.html:195
+#: templates/team.html:178
 msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
 msgstr "마이카(Micah) 는 부트스트랩 매표소 관리 플랫폼 WellAttended의 기술 공동 창업자였습니다. 마이카는 코딩하는 법을 익히며, 상업 부동산 브로커로 근무한 경력이 있습니다."
 
-#: templates/team.html:206
+#: templates/team.html:189
 msgid "Kay Yoo"
 msgstr "케이 유"
 
-#: templates/team.html:210
+#: templates/team.html:193
 msgid "Finance & Operations"
 msgstr "재무 및 운영"
 
-#: templates/team.html:213
+#: templates/team.html:196
 msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
 msgstr "Kay는 공인 회계사 (CPA) 입니다. 그녀는 이전에는 KPMG 캐나다의 선임 회계사 및 고위 컨설턴트로 근무했습니다."
 
-#: templates/team.html:224
+#: templates/team.html:207
 msgid "Franck Chastagnol"
 msgstr "프랑크 차스타뇰"
 
-#: templates/team.html:231
+#: templates/team.html:214
 msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
 msgstr "Franck는 수많은 유명 기업에서 초기 직원으로 성공적인 경력을 쌓았습니다. 그는 이전에 Inktomi, Paypal, YouTube, Google 및 Dropbox의 엔지니어링 팀을 이끌었습니다."
 
-#: templates/team.html:242
+#: templates/team.html:225
 msgid "Austin Virts"
 msgstr "오스틴 벌츠"
 
-#: templates/team.html:246
+#: templates/team.html:229
 msgid "Marketing"
 msgstr "마케팅"
 
-#: templates/team.html:249
+#: templates/team.html:232
 msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
 msgstr "Austin은 콜로라도 주 볼더 (Boulder) 에 전체 서비스 광고 대행사를 시작하기 전에 여러 성공적인 온라인 회사를 시작하고 운영 한 야심 찬 기업가입니다."
 
-#: templates/team.html:260
+#: templates/team.html:243
 msgid "Mila Choi"
 msgstr "밀라 최"
 
-#: templates/team.html:264
-msgid "Korea Community"
-msgstr "한국 커뮤니티"
+#: templates/team.html:247
+msgid "Regional Manager Korea"
+msgstr "한국 지역 매니저"
 
-#: templates/team.html:267
+#: templates/team.html:250
 msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
 msgstr "Mila는 한국에서 우리 공동체의 노력을 선도하고 있습니다. 그녀는 이전에 blockhain hackathons을 조직했으며 Penn State와 Erasmus University Rotterdam에서 학위를 받았습니다."
 
-#: templates/team.html:278
+#: templates/team.html:261
 msgid "Tom Linton"
 msgstr "톰 린톤"
 
-#: templates/team.html:285
+#: templates/team.html:265 templates/team.html:319
+msgid "Engineer"
+msgstr "엔지니어"
+
+#: templates/team.html:268
 msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
 msgstr "Origin 전에 Tom은 솔로 스타트 업 창업자로서 성공적인 경력을 쌓았습니다. 그는 베를린 공대 (University of Berlin) 와 스톡홀름 (Stockholm) 의 KTH에서 두 가지 석사 학위를 받았습니다."
 
-#: templates/team.html:296
+#: templates/team.html:279
 msgid "Anna Wang"
 msgstr "애나 왕"
 
-#: templates/team.html:300
-msgid "China Community"
-msgstr "중국 커뮤니티"
+#: templates/team.html:283
+msgid "Regional Manager China"
+msgstr "중국 지역 매니저"
 
-#: templates/team.html:303
+#: templates/team.html:286
 msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
 msgstr "Anna는 중국인을 대상으로 한 커뮤니티 활동을 이끌고 있습니다. Origin 전에 Anna는 세계적인 소셜 미디어 미디어 인 Exness를 관리했습니다. 그녀는 또한 호주에서 비영리 단체를 공동 창립했습니다."
 
-#: templates/team.html:314
+#: templates/team.html:297
 msgid "Nick Poulden"
 msgstr "닉 폴든"
 
-#: templates/team.html:321
+#: templates/team.html:304
 msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr "Nick은 University of Warwick에서 컴퓨터 과학을 전공했습니다. Origin에 입사하기 전에 그는 Sencha, C3 Energy Network 및 Palo Alto Networks의 엔지니어로 일했습니다."
 
-#: templates/team.html:341
+#: templates/team.html:315
+msgid "Domen Grabec"
+msgstr "도멘 그라백"
+
+#: templates/team.html:322
+msgid "Domen co-founded and led a team developing a mobile application with 2 chess Grandmasters. He previously had a successful career at Cetra, Zemanta and Peerindex."
+msgstr ""
+
+#: templates/team.html:342
 msgid "Advisors"
 msgstr "어드바이저"
 
-#: templates/team.html:350
+#: templates/team.html:351
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:354
+#: templates/team.html:355
 msgid "Advisor/PR"
 msgstr "어드바이저/PR"
 
-#: templates/team.html:357
+#: templates/team.html:358
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "Addison은 UC 버클리에서 물리학을 전공한 커뮤니케이션 및 마케팅 전문가입니다. 그는 이더리움 재단 및 DEVCON1에서 일한 경험이 있습니다."
 
-#: templates/team.html:367
+#: templates/team.html:368
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:371
+#: templates/team.html:372
 msgid "Advisor/International BD"
 msgstr "어드바이저/국제 비즈니스 개발"
 
-#: templates/team.html:374
+#: templates/team.html:375
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "Melody는 블록체인 자문 및 투자펀드인 Spartan Group의 창업자입니다. 그녀는 TenX의 초기 투자자였으며 Gifto와 Appcoins의 전략 자문이었습니다."
 
-#: templates/team.html:384
+#: templates/team.html:385
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/team.html:388 templates/team.html:405
+#: templates/team.html:389 templates/team.html:406
 msgid "Advisor"
 msgstr "어드바이저"
 
-#: templates/team.html:391
+#: templates/team.html:392
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "Paul은 Pantera Capital의 파트너입니다. 그는 또한 Orchid Labs, Enigma, 그리고 ICON을 포함한 여러 성공적인 암호화폐 프로젝트의 자문입니다."
 
-#: templates/team.html:401
+#: templates/team.html:402
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:408
+#: templates/team.html:409
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "Joey는 세계 최초의 탈중앙화 예측 시장 및 오라클 시스템인 Augur의 공동창업자입니다. 그는 또한 Pantera Capital의 공동최고투자이사입니다."
 
-#: templates/team.html:418
+#: templates/team.html:419
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:425
+#: templates/team.html:426
 msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
 msgstr "Andrew는 Startup Weekend를 포함한 4개의 스타트업 창업자입니다. 그는 수십 개 국에 걸쳐 글로벌 커뮤니티를 구축했으며 TechStars의 첫 번째 직원이기도 했습니다."
 
-#: templates/team.html:459
+#: templates/team.html:460
 msgid "Open-source Contributors"
 msgstr "오픈 소스 기여자"
 
-#: templates/team.html:517
+#: templates/team.html:518
 msgid "Investment Funds"
 msgstr "투자 펀드"
 
-#: templates/team.html:735
+#: templates/team.html:736
 msgid "Individual Investors"
 msgstr "개인 투자자"
 
-#: templates/team.html:744
+#: templates/team.html:745
 msgid "Steve Jang"
 msgstr "Steve Jang"
 
-#: templates/team.html:754
+#: templates/team.html:755
 msgid "Xiahong Lin"
 msgstr "Xiahong Lin"
 
-#: templates/team.html:764
+#: templates/team.html:765
 msgid "Alexis Ohanian"
 msgstr "Alexis Ohanian"
 
-#: templates/team.html:774
+#: templates/team.html:775
 msgid "Gil Penchina"
 msgstr "Gil Penchina"
 
-#: templates/team.html:784
+#: templates/team.html:785
 msgid "Kamal Ravikant"
 msgstr "Kamal Ravikant"
 
-#: templates/team.html:794
+#: templates/team.html:795
 msgid "Garry Tan"
 msgstr "Garry Tan"
 
@@ -1056,31 +1071,43 @@ msgstr "오리진 프로토콜 - 서비스 약관"
 msgid "<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
 msgstr "<strong>피싱에 당하지 마세요!</strong> Origin Protocol의 유일한 공식 URL은 <strong>www.originprotocol.com</strong>입니다. 즐겨찾기에 등록하고 비슷한 URL을 조심하세요."
 
-#: views/web_views.py:143 views/web_views.py:217
+#: templates/warning.html:20
+msgid "Earn Free Origin Tokens Today"
+msgstr "지금 오리진 토큰(Origin Tokens) 을 무료로 얻어보세요."
+
+#: templates/warning.html:21
+msgid "Participate in our campaigns and complete tasks on our DApp to earn Origin Tokens."
+msgstr "지금 오리진 댑에서 특정 활동을 수행하는 캠페인에 참여하고 오리진 토큰을 얻어보세요."
+
+#: templates/warning.html:24
+msgid "Go"
+msgstr "계속"
+
+#: views/web_views.py:182 views/web_views.py:276
 msgid "Please enter your name"
 msgstr "이름을 입력해 주세요"
 
-#: views/web_views.py:145 views/web_views.py:221
+#: views/web_views.py:184 views/web_views.py:280
 msgid "Please enter your email"
 msgstr "이메일 주소를 입력해 주세요"
 
-#: views/web_views.py:147
+#: views/web_views.py:186
 msgid "An error occured"
 msgstr "오류가 발생 했습니다."
 
-#: views/web_views.py:149
+#: views/web_views.py:188
 msgid "Please enter your desired allocation"
 msgstr "원하시는 할당량을 입력 해 주세요"
 
-#: views/web_views.py:151
+#: views/web_views.py:190
 msgid "Please agree to the important notice"
 msgstr "위의 중요한 사항에 동의해 주세요"
 
-#: views/web_views.py:153 views/web_views.py:223
+#: views/web_views.py:192 views/web_views.py:282
 msgid "Please prove you are not a robot."
 msgstr "당신이 로봇이 아니라는 것을 증명 하세요"
 
-#: views/web_views.py:219
+#: views/web_views.py:278
 msgid "Please enter your company name"
 msgstr "당신의 회사명을 입력 하세요"
 
