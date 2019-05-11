@@ -64,11 +64,9 @@ def robots():
 def apple_app_site_association():
     return app.send_static_file('files/apple-app-site-association.json')
 
-@app.route('/mobile/<link_code>')
 @app.route('/mobile')
-def mobile(link_code=None):
-    role = request.args.get('role')
-    return render_template('mobile.html', link_code=link_code, role=role)
+def mobile():
+    return render_template('mobile.html')
 
 @app.route('/<lang_code>')
 def index():
