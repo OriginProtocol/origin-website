@@ -325,6 +325,24 @@
                     </div>
                   </div>
 
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="team-member">
+                      <div class="headshot-wrapper">
+                        <img src="/static/img/headshot-zaurbek.jpg" class="headshot" alt="Zaurbek Ivanov headshot">
+                      </div>
+                      <div class="name">
+                        <a href="https://vk.com/zaurbeksf" target="_blank">{{ gettext("Zaurbek Ivanov") }}
+                        </a>
+                      </div>
+                      <div class="title">
+                        {{ gettext("Russia Community") }}
+                      </div>
+                      <div class="bio">
+                        {{ gettext("Zaurbek Ivanov studied Economics at Kabardino-Balkaria State Agrarian University in Nalchik, Russia. He has worked in the hospitality industry in the US and Russia.") }}
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -428,29 +446,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
-            <h2>
-              {{ gettext("Community") }}
-            </h2>
-            <div class="row">
-
-              {% for person in community %}
-              <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
-                <div class="team-member">
-                  <div class="headshot-wrapper-small">
-                    <a href="{{ person.url }}" target="_blank">
-                      <img src="/static/img/headshot-{{ person.avatar }}.jpg" class="headshot" alt="{{ person.name }}" title="{{ person.name }}">
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-
             </div>
           </div>
         </div>
