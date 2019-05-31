@@ -28,28 +28,40 @@ When the `.po` files are pushed to any branch in the GitHub repo, they will be s
 
 ## Updating translations on website
 
-1. Look at the GitHub PR called "New Crowdin translations" which is generated and maintained automatically by Crowdin. This PR will always contain the latest `.po` files from our translators. Manually copy and paste whatever `.po` files you want from that PR and place the files in the `LC_MESSAGES` directory for the appropriate language.
+1. Look at the GitHub PR called _New Crowdin translations_ which is generated and maintained automatically by Crowdin. This PR will always contain the latest `.po` files from our translators. Locally, merge this PR into `master` for testing.
 
-2. Fix common errors:
+2. If you're using Docker, you'll probably want to ssh into it, and then cd into the translations dir. (This will have the virtual environment set up with the pybabel tools.)
+
+```
+docker exec -it origin-website /bin/bash
+# Then, in the container
+cd translations
+```
+
+3. Fix common errors:
 
 ```
 python fix_po_files.py
 ```
 
-3. Compile translations into `.mo` files:
+4. Compile translations into `.mo` files:
 
 ```
 pybabel compile -f -d  .
 ```
-The `-f` flag is needed to force the compile, since downloads from Google translator are always marked as 'fuzzy'
+The `-f` flag may be needed for entries that are marked as 'fuzzy'
 
-Note: `.mo` files must committed in the repo in order for them to get on heroku.
+5. Run the website locally to ensure things look good. (`python main.py` or restart docker container.)
 
-4. From repo root directory, run the website code to see new translations:
+6. Add and commit the  compiled `.mo` files. This is requried to get them onto heroku.
 
 ```
-python main.py
+git add *.mo
+git add *.po
+git commit -m "New translations compiled."
 ```
+
+7. Merge to master, and push to heroku.
 
 ## Adding a new language
 
