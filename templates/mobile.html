@@ -6,35 +6,25 @@
 
 {% block content %}
 
-<main class="presale-page">
+<main class="mobile-page">
   {% include 'navbar.html' %}
   <section class="header-section">
     <div class="container foreground-content">
       <div class="col-12">
         <center>
-          {% if role == 'seller' %}
-            <h2>Get the <strong>Origin Wallet</strong> to start selling on Origin</h2>
-          {% elif role == 'buyer' %}
-            <h2>Get the <strong>Origin Wallet</strong> to complete your purchase</h2>
-          {% else %}
-            <h2>Get the <strong>Origin Wallet</strong> to buy or sell on Origin</h2>
-          {% endif %}
-
-          {% if link_code %}
-            <br><br>
-            <button role="button" class="btn btn-primary btn-min-size copy-get-app">Download</button>
-          {% endif %} 
-
-          <br><br><br>
-
-          {% if role == 'buyer' %}
-            <img class="img-fluid" src="/static/img/eth-pile.svg" alt="ethereum coins" />
-          {% else %}
+          <h2>Get <strong>Origin Marketplace</strong> to buy or sell on Origin.</h2>
+          <div class="image-container">
             <img class="img-fluid" src="/static/img/buyer-graphic-generic.svg" alt="ethereum coins" />
-          {% endif %}
-          
+          </div>
+          <div class="image-container">
+            <a class="ios" href="{{ universal.IOS_URL }}" target="_blank">
+              <img class="img-fluid download-badge" src="/static/img/app-store.svg" alt="iOS App Store" />
+            </a>
+            <a class="android" href="{{ universal.ANDROID_URL }}" target="_blank">
+              <img class="img-fluid download-badge android" src="/static/img/play-store.svg" alt="Google Play Store" />
+            </a>
+          </div>
         </center>
-        <br><br><br><br>
       </div>
     </div>
   </section>
@@ -50,31 +40,14 @@
     var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
     var android = navigator.userAgent.toLowerCase().indexOf("android") > -1;
 
-    {% if link_code %}
-
-      $(".copy-get-app").click(function() {
-        clipboard.writeText("orgw:{{ link_code }}").then(function() {
-          if (iOS) {
-            window.open("{{ universal.IOS_URL }}")
-          } else {
-            window.open("{{ universal.ANDROID_URL }}")
-          }
-        }, function(err) {
-          console.log("Copy failed.");
-        });
-      });
-
-    {% else %}
-
-      if (iOS) {
-        window.location = "{{ universal.IOS_URL }}"
-      } else if (android) {
-        window.location = "{{ universal.ANDROID_URL }}"
-      }
-
-    {% endif %}
+    if (iOS) {
+      $('a.android').hide()
+      window.location = "{{ universal.IOS_URL }}"
+    } else if (android) {
+      $('a.ios').hide()
+      window.location = "{{ universal.ANDROID_URL }}"
+    }
   });
 </script>
-
 
 {% endblock %}
