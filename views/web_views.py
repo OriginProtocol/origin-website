@@ -73,7 +73,9 @@ def index():
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
         return render_template('index.html')
-    # otherwise if you're using an ogn.dev url, assume it's a faucet shortcut
+    # shortcut for nick
+    elif 'ogn.dev' in request.url_root and g.lang_code == "tb":
+        return redirect('https://originprotocol.github.io/test-builds', code=302)
     elif 'ogn.dev' in request.url_root:
         return redirect('https://faucet.originprotocol.com/eth?code=%s' % (g.lang_code), code=302)
     # nope, it's a 404
