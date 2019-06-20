@@ -8,34 +8,9 @@ from flask_babel import lazy_gettext
 # More fancy, left and right quotes may be used: &ldquo; and &rdquo;
 PARTNERS = [
     {
-    "name":"servishero",
-    "url":"https://servishero.com/",
-     "desc":lazy_gettext("ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol.")
-    },
-    {
-    "name":"canya",
-    "url":"https://canya.io/",
-    "desc":lazy_gettext("CanYa is building a blockchain-powered &ldquo;marketplace of services&rdquo; with Origin Protocol for the gig economy and freelancing.")
-    },
-    {
-    "name":"spin",
-    "url":"https://www.spin.pm/",
-     "desc":lazy_gettext("Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US.")
-    },
-    {
-    "name":"circle",
-    "url":"https://usdc.circle.com/",
-     "desc":lazy_gettext("Circle's USDC stablecoin is proudly supported by Origin Protocol.")
-    },
-    {
-    "name":"wehome",
-    "url":"http://wehome.foundation/",
-     "desc":lazy_gettext("Wehome is Kozaza's decentralized homesharing platform of the future built on Origin Protocol.")
-    },
-    {
-    "name":"wetrust",
-    "url":"https://www.wetrust.io/",
-     "desc":lazy_gettext("Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform.")
+    "name":"metapsplus",
+    "url":"http://www.metaps-plus.com/",
+     "desc":lazy_gettext("Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol.")
     },
     {
     "name":"nucypher",
@@ -43,9 +18,29 @@ PARTNERS = [
      "desc":lazy_gettext("Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform.")
     },
     {
-    "name":"metapsplus",
-    "url":"http://www.metaps-plus.com/",
-     "desc":lazy_gettext("Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol.")
+    "name":"circle",
+    "url":"https://usdc.circle.com/",
+     "desc":lazy_gettext("Circle's USDC stablecoin is proudly supported by Origin Protocol.")
+    },
+    {
+    "name":"wetrust",
+    "url":"https://www.wetrust.io/",
+     "desc":lazy_gettext("Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform.")
+    },
+    {
+    "name":"trips",
+    "url":"https://tripscommunity.com/",
+     "desc":lazy_gettext("Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol.")
+    },
+    {
+    "name":"populstay",
+    "url":"https://www.populstay.com/",
+     "desc":lazy_gettext("Populstay is building their decentralized vacation home rental and home sharing platform using Origin Protocol.")
+    },
+    {
+    "name":"wehome",
+    "url":"http://wehome.foundation/",
+     "desc":lazy_gettext("Wehome is Kozaza's decentralized homesharing platform of the future built on Origin Protocol.")
     },
     {
     "name":"storiqa",
@@ -56,11 +51,6 @@ PARTNERS = [
     "name":"blocklancer",
     "url":"https://blocklancer.net/",
      "desc":lazy_gettext("Blocklancer is building a distributed autonomous job marketplace on the blockchain using Origin Protocol.")
-    },
-    {
-    "name":"beetoken",
-    "url":"https://www.beetoken.com/",
-     "desc":lazy_gettext("Bee is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol.")
     },
     {
     "name":"propy",
@@ -218,11 +208,6 @@ PARTNERS = [
      "desc":lazy_gettext("Akaiito is utilizing Origin Protocol's technology in their marketplace and sharing economy platform.")
     },
     {
-    "name":"populstay",
-    "url":"https://www.populstay.com/",
-     "desc":lazy_gettext("Populstay is building their decentralized vacation home rental and home sharing platform using Origin Protocol.")
-    },
-    {
     "name":"libertylance",
     "url":"https://libertylance.io/",
      "desc":lazy_gettext("LibertyLance is building their decentralized and self-regulating freelancing platform on Origin Protocol.")
@@ -242,11 +227,6 @@ PARTNERS = [
     "url":"https://www.crowdvilla.io/",
      "desc":lazy_gettext("Crowdvilla is building a decentralized platform for crowd owned vacation properties using Origin Protocol.")
     },
-    {
-    "name":"trips",
-    "url":"https://tripscommunity.com/",
-     "desc":lazy_gettext("Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol.")
-    }, 
     {
     "name":"tenzorum",
     "url":"https://tenzorum.org/",
