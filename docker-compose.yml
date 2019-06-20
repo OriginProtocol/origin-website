@@ -37,6 +37,7 @@ services:
       - redis
     ports:
       - "5000:5000"
+      - "5555:5555"
     environment:
       - FLASK_APP=/app/main.py
     command: "python /app/main.py"

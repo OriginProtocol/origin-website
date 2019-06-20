@@ -1,6 +1,7 @@
 from contextlib import closing
 import json
 import webbrowser
+import re
 
 from bs4 import BeautifulSoup
 
@@ -72,12 +73,14 @@ sites.append({
     'name': 'Telegram',
     'url': 'http://t.me/originprotocol',
     'selector': 'div.tgme_page_extra',
+    'pattern': '([\d\s]+)\s*members',
     'json': False,
 })
 sites.append({
     'name': 'Telegram (Korean)',
     'url': 'https://t.me/originprotocolkorea',
     'selector': 'div.tgme_page_extra',
+    'pattern': '([\d\s]+)\s*members',
     'json': False,
 })
 sites.append({
@@ -113,7 +116,7 @@ sites.append({
 sites.append({
     'name': 'Youku',
     'url': 'http://i.youku.com/originprotocol',
-    'selector': 'div.user-state > ul > li.vnum em',
+    'selector': 'div.user-state > ul > li.snum em',
     'json': False,
 })
 sites.append({
@@ -172,10 +175,18 @@ def get_count_from_html(site, html):
         selector = site['selector'].encode("ascii")
         select = html.select(selector)[0]
         count_with_text = select.text.encode("ascii")
+        if 'pattern' in site:
+            match = re.findall(site['pattern'], count_with_text)
+            if len(match) == 1:
+                count_with_text = match[0]
+            else:
+                raise Exception('Pattern {} should yield exactly one match in string: "{}"'.format(site['pattern'], count_with_text))
+
         return count_without_text(count_with_text)
 
     except Exception as e:
         message = "Error fetching follower count for", site['name'].encode("ascii")
+        print("Root Error: ", e)
         print(message)
 
         return { 'error': message }
