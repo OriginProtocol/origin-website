@@ -21,6 +21,9 @@ from util import time_
 ogn_contract = '0x8207c1ffc5b6804f6024322ccf34f29c3541ae26'
 dai_contract = '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359'
 
+# master meta-txpurse
+meta_tx_purse = '0x5fabfc823e13de8f1d138953255dd020e2b3ded0'
+
 # start tracking a wallet address
 def add_contact(address, **kwargs):
 
@@ -264,11 +267,54 @@ def fetch_ogn_transactions():
 			db.session.add(tx)
 			db.session.commit()
 
+# check if we need to top up the meta tx's purse
+def fetch_meta_tx_balance():
+
+	print "Fetching meta tx purse balance"
+
+	try:
+
+		url = "http://api.ethplorer.io/getAddressInfo/%s" % (meta_tx_purse)
+		results = call_ethplorer(url)
+
+		contact = db_common.get_or_create(
+			db.session, db_models.EthContact, address=meta_tx_purse)
+		contact.eth_balance = results['ETH']['balance']
+		contact.transaction_count = results['countTxs']
+
+		if 'tokens' in results:
+			contact.tokens = results['tokens']
+			# update the OGN & DAI balance
+			for token in results['tokens']:
+				if token['tokenInfo']['address'] == ogn_contract:
+					contact.ogn_balance = float(token['balance'])/math.pow(10, 18)
+				elif token['tokenInfo']['address'] == dai_contract:
+					contact.dai_balance = float(token['balance'])/math.pow(10, 18)
+			contact.token_count = len(results['tokens'])
+		contact.last_updated = datetime.utcnow()
+
+		print(contact.eth_balance)
+
+		if contact.eth_balance < 2:
+			print 'Low balance. Notifying.'
+			subject = "Meta-transactions purse is running low. %s ETH remaining" % (contact.eth_balance)
+			body = "Please send more ETH to %s" % (meta_tx_purse)
+			print(body)
+			print(subject)
+			sgw.notify_founders(body, subject)
+
+		db.session.add(contact)
+		db.session.commit()
+	except Exception as e:
+		print e
+
+
 if __name__ == '__main__':
 	# called via cron on Heroku
 	with db_utils.request_context():
-		fetch_ogn_transactions()
-		fetch_from_ethplorer()
+		# fetch_ogn_transactions()
+		fetch_meta_tx_balance()
+		# fetch_from_ethplorer()
 
 
 
