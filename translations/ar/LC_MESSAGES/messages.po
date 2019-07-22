@@ -1,21 +1,18 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: originprotocolwebsite\n"
+"Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-17 20:43+0000\n"
-"PO-Revision-Date: 2019-04-24 01:45\n"
+"POT-Creation-Date: 2019-07-22 15:40+0000\n"
+"PO-Revision-Date: 2019-04-24 01:45+0000\n"
 "Last-Translator: OriginProtocol\n"
+"Language: ar_SA\n"
 "Language-Team: Arabic\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: originprotocolwebsite\n"
-"X-Crowdin-Language: ar\n"
-"X-Crowdin-File: /master/messages.pot\n"
-"Language: ar_SA\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -280,20 +277,20 @@ msgstr "شروط الخدمة"
 msgid "Products"
 msgstr "منتجات"
 
-#: templates/footer.html:48 templates/navbar.html:72
-msgid "Marketplace Creator"
-msgstr "السوق الخالق"
-
-#: templates/footer.html:53
-msgid "Marketplace DApp"
-msgstr "السوق DApp"
-
-#: templates/footer.html:58
-msgid "iOS Wallet"
+#: templates/footer.html:48
+msgid "iOS"
 msgstr ""
 
+#: templates/footer.html:53
+msgid "Android"
+msgstr ""
+
+#: templates/footer.html:58
+msgid "DApp"
+msgstr "DAPP"
+
 #: templates/footer.html:63
-msgid "Android Wallet"
+msgid "Creator"
 msgstr ""
 
 #: templates/footer.html:70
@@ -312,83 +309,75 @@ msgstr "جيثب"
 msgid "Docs"
 msgstr "مستندات"
 
-#: templates/footer.html:90 templates/navbar.html:76
-msgid "Product Brief"
-msgstr "باختصار المنتج"
-
-#: templates/footer.html:95
+#: templates/footer.html:90
 msgid "Whitepaper"
 msgstr "ورق ابيض"
 
-#: templates/footer.html:102
+#: templates/footer.html:97
 msgid "Organization"
 msgstr "منظمة"
 
-#: templates/footer.html:107 templates/navbar.html:80
+#: templates/footer.html:102 templates/navbar.html:74
 msgid "Team"
 msgstr "الفريق"
 
-#: templates/footer.html:112 templates/navbar.html:69 templates/tokens.html:18
+#: templates/footer.html:107 templates/navbar.html:68 templates/tokens.html:18
 msgid "Tokens"
 msgstr "الرموز"
 
-#: templates/footer.html:117
-msgid "Partners"
-msgstr "شركاء"
-
-#: templates/footer.html:122
+#: templates/footer.html:112
 msgid "Store"
 msgstr ""
 
-#: templates/footer.html:127
+#: templates/footer.html:117
 msgid "Meetups"
 msgstr "لقاءات"
 
-#: templates/footer.html:132
+#: templates/footer.html:122
 msgid "Jobs"
 msgstr "وظائف"
 
-#: templates/footer.html:139 templates/team.html:423 templates/team.html:437
+#: templates/footer.html:129 templates/team.html:443
 msgid "Community"
 msgstr "تواصل اجتماعي"
 
-#: templates/footer.html:144
+#: templates/footer.html:134
 msgid "Discord"
 msgstr "خلاف"
 
-#: templates/footer.html:149
+#: templates/footer.html:139
 msgid "Telegram"
 msgstr "برقية"
 
-#: templates/footer.html:154
+#: templates/footer.html:144
 msgid "Reddit"
 msgstr "رديت"
 
-#: templates/footer.html:158
+#: templates/footer.html:148
 msgid "WeChat"
 msgstr "WeChat"
 
-#: templates/footer.html:161
+#: templates/footer.html:151
 msgid "Weibo"
 msgstr "ويبو"
 
-#: templates/footer.html:170
+#: templates/footer.html:160
 msgid "Twitter"
 msgstr "تغريد"
 
-#: templates/footer.html:175
+#: templates/footer.html:165
 msgid "Instagram"
 msgstr "إينستاجرام"
 
-#: templates/footer.html:180
+#: templates/footer.html:170
 msgid "Facebook"
 msgstr "فيس بوك"
 
-#: templates/footer.html:185
+#: templates/footer.html:175
 msgid "Medium"
 msgstr "متوسط"
 
-#: templates/footer.html:190
+#: templates/footer.html:180
 msgid "Youtube"
 msgstr "موقع YouTube"
 
@@ -413,8 +402,8 @@ msgid "We empower developers and businesses to build decentralized marketplaces 
 msgstr "نحن نقوم بتمكين المطورين والشركات لبناء الأسواق اللامركزية على blockchain. يعمل بروتوكولنا على تسهيل إنشاء وإدارة القوائم للاستخدام الجزئي للأصول والخدمات. يمكن للمشترين والبائعين اكتشاف بعضهم البعض ، وتصفح القوائم ، وإجراء الحجوزات ، وترك التقييمات والمراجعات ، وأكثر من ذلك بكثير."
 
 #: templates/index.html:84
-msgid "Try the DApp"
-msgstr "جرب DApp"
+msgid "Shop Origin"
+msgstr ""
 
 #: templates/index.html:90
 msgid "Join Our Discord"
@@ -433,24 +422,24 @@ msgid "View All Partners"
 msgstr "عرض جميع الشركاء"
 
 #: templates/index.html:125
-msgid "Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
-msgstr "تعمل Bee Token على إنشاء شبكة وسيطة مجانية من المضيفين والضيوف على الويب اللامركزي باستخدام بروتوكول Origin."
+msgid "Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol."
+msgstr ""
 
 #: templates/index.html:133
-msgid "Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US."
-msgstr "Spin هي منصة تنقل شخصية رائدة تعمل على تأجير الدراجات الإلكترونية والدراجات الإلكترونية والدراجات في أكثر من 50 سوقًا في الولايات المتحدة."
+msgid "Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform."
+msgstr ""
 
 #: templates/index.html:141
-msgid "Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol."
-msgstr "تقوم شركة كوزازا ببناء شبكة مشاركة منزلية وشبكة منزلية تقليدية على blockchain باستخدام بروتوكول الأصل."
+msgid "Circle's USDC stablecoin is proudly supported by Origin Protocol."
+msgstr ""
 
 #: templates/index.html:149
-msgid "CanYa is building their “marketplace of services” with Origin Protocol for the gig economy."
-msgstr "تقوم CanYa ببناء \"سوق الخدمات\" الخاص بها مع بروتوكول الأصل الخاص باقتصاد gig."
+msgid "Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform."
+msgstr ""
 
 #: templates/index.html:157
-msgid "ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol."
-msgstr "تقوم ServisHero ببناء سوق خدماتها الذي يمكّن العاملين في البلدان النامية على بروتوكول الأصل."
+msgid "Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol."
+msgstr ""
 
 #: templates/index.html:198
 msgid "Build your business on Origin"
@@ -478,8 +467,8 @@ msgid "Harnessing the power of the Ethereum blockchain, listings are managed via
 msgstr "من خلال تسخير قوة كتلة Ethereum blockchain ، يتم إدارة القوائم عبر نظام آمن وشفاف يعمل كطرف ثالث محايد. يشترك المشترون والبائعون في رسوم المعاملات 20-30%% التي تذهب حاليًا إلى شركات مثل Uber و Airbnb و Fiverr و Getaround."
 
 #: templates/index.html:230
-msgid "Read the Product Brief"
-msgstr "قراءة موجز المنتج"
+msgid "Read the Whitepaper"
+msgstr ""
 
 #: templates/index.html:285
 msgid "Smart contracts enable secure and reliable payments directly from one party to another"
@@ -519,8 +508,8 @@ msgstr "سبتمبر 2017"
 
 #: templates/index.html:424
 #, python-format
-msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
-msgstr "<a href='%%(product_brief)s'>موجز المنتج</a> و <a href='%%(whitepaper)s'>Whitepaper</a> صدر"
+msgid "<a href='%(whitepaper)s'>Whitepaper</a> released"
+msgstr ""
 
 #: templates/index.html:429
 msgid "December 2017"
@@ -634,13 +623,17 @@ msgstr "ينتهي اقتصاد المشاركة بمشاركة الكثير م�
 msgid "Origin Protocol - Mobile"
 msgstr "بروتوكول المنشأ - المحمول"
 
-#: templates/navbar.html:83
+#: templates/navbar.html:71
+msgid "Marketplace Creator"
+msgstr "السوق الخالق"
+
+#: templates/navbar.html:77
 msgid "Blog"
 msgstr "مدونة"
 
-#: templates/navbar.html:86
-msgid "DApp"
-msgstr "DAPP"
+#: templates/navbar.html:80
+msgid "Shop"
+msgstr ""
 
 #: templates/partners.html:3 templates/partners.html:5
 msgid "Origin Protocol - Build on Origin"
@@ -755,235 +748,244 @@ msgstr "ماثيو ليو"
 msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "كان Matt في الثالثة مساءً على YouTube (حصلت عليها Google) و VP VP في Qwiki (حصلت عليها Yahoo) و Bonobos (حصل عليها Walmart). لديه MS و BS من ستانفورد."
 
-#: templates/team.html:103
-msgid "Stan James"
-msgstr "ستان جيمس"
-
-#: templates/team.html:107 templates/team.html:211 templates/team.html:301
-msgid "Senior Engineer"
-msgstr "كبير المهندسين"
-
-#: templates/team.html:110
-msgid "Stan is a software architect with patents in decentralized trust, game design, computer vision, and robotics. Previously, he founded Lijit Networks (acquired by Federated Media)."
-msgstr "ستان هو مهندس برمجيات مع براءات الاختراع في الثقة اللامركزية ، وتصميم الألعاب ، ورؤية الكمبيوتر ، والروبوتات. في السابق ، أسس Lijit Networks (حصلت عليها شركة Federated Media)."
-
-#: templates/team.html:124
-msgid "Partnerships"
-msgstr "شراكات"
-
-#: templates/team.html:127
-msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
-msgstr "كولمان هو مستثمر نشط في مجالي الكمبرلاين ورجل أعمال عقاري ، يمتلك ويدير العديد من خصائص Airbnb. درس الرياضيات في بيركلي."
-
-#: templates/team.html:137
-msgid "Jon Hearty"
-msgstr "جون هيرتي"
-
-#: templates/team.html:141
+#: templates/team.html:107
 msgid "Business Development"
 msgstr "تطوير الاعمال"
 
-#: templates/team.html:144
-msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
-msgstr "كان جون هو الموظف العاشر في Redbeacon (التي حصل عليها The Home Depot) وأول موظف في Datanyze حيث شغل عدة مناصب في تطوير الأعمال من نائب الرئيس للنمو إلى COO."
+#: templates/team.html:110
+msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
+msgstr "كولمان هو مستثمر نشط في مجالي الكمبرلاين ورجل أعمال عقاري ، يمتلك ويدير العديد من خصائص Airbnb. درس الرياضيات في بيركلي."
 
-#: templates/team.html:154
+#: templates/team.html:120
 msgid "Yu Pan"
 msgstr "يو بان"
 
-#: templates/team.html:158
+#: templates/team.html:124
 msgid "R&D Engineer"
 msgstr "R & D مهندس"
 
-#: templates/team.html:161
+#: templates/team.html:127
 msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate."
 msgstr "كان Yu Pan أحد أعضاء فريق التأسيس الـ 6 في PayPal وكان الموظف الأول في YouTube. وهو موظف سابق في Google وأحد مؤسسي Kiwi Crate."
 
-#: templates/team.html:171
+#: templates/team.html:137
 msgid "Micah Alcorn"
 msgstr "ميكا الكورن"
 
-#: templates/team.html:175
+#: templates/team.html:141
 msgid "Product Manager/Engineer"
 msgstr ""
 
-#: templates/team.html:178
+#: templates/team.html:144
 msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
 msgstr "كان Micah هو المؤسس الفني المشارك لـ WellAttended ، وهي منصة لإدارة شباك التذاكر. كان يعمل سمسار عقارات تجاريًا بينما كان يتعلم الرمز."
 
-#: templates/team.html:189
+#: templates/team.html:155
 msgid "Kay Yoo"
 msgstr "كاي يو"
 
-#: templates/team.html:193
+#: templates/team.html:159
 msgid "Finance & Operations"
 msgstr "المالية والعمليات"
 
-#: templates/team.html:196
+#: templates/team.html:162
 msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
 msgstr "كاي محاسب قانوني معتمد (CPA). عملت سابقًا كمحاسب أول ثم كمستشارة أولى في KPMG Canada."
 
-#: templates/team.html:207
+#: templates/team.html:173
 msgid "Franck Chastagnol"
 msgstr "فرانك تشاستاجنول"
 
-#: templates/team.html:214
+#: templates/team.html:177 templates/team.html:267
+msgid "Senior Engineer"
+msgstr "كبير المهندسين"
+
+#: templates/team.html:180
 msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
 msgstr "يتمتع فرانك بمهنة ناجحة كموظف مبكر في العديد من الشركات البارزة. وقد سبق له قيادة فرق هندسية في Inktomi و Paypal و YouTube و Google و Dropbox."
 
-#: templates/team.html:225
+#: templates/team.html:191
 msgid "Austin Virts"
 msgstr "أوستن فيرتس"
 
-#: templates/team.html:229
+#: templates/team.html:195
 msgid "Marketing"
 msgstr "تسويق"
 
-#: templates/team.html:232
+#: templates/team.html:198
 msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
 msgstr "أوستن هو رجل أعمال طموح بدأ وتشغيل العديد من الشركات الناجحة على الإنترنت قبل إطلاق وكالة إبداعية تقدم خدمات كاملة في بولدر ، كولورادو."
 
-#: templates/team.html:243
+#: templates/team.html:209
 msgid "Mila Choi"
 msgstr "ميلا تشوي"
 
-#: templates/team.html:247
+#: templates/team.html:213
 msgid "Regional Manager Korea"
 msgstr ""
 
-#: templates/team.html:250
+#: templates/team.html:216
 msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
 msgstr "Mila تقود جهود مجتمعنا في كوريا الجنوبية. سبق لها أن نظمت hackathons بلوكين وحصلت على شهادات من جامعة ولاية بنسلفانيا وجامعة إراسموس روتردام."
 
-#: templates/team.html:261
+#: templates/team.html:227
 msgid "Tom Linton"
 msgstr "توم لينتون"
 
-#: templates/team.html:265 templates/team.html:319
+#: templates/team.html:231 templates/team.html:285 templates/team.html:303
+#: templates/team.html:339
 msgid "Engineer"
 msgstr "مهندس"
 
-#: templates/team.html:268
+#: templates/team.html:234
 msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
 msgstr "قبل الأصل ، كان توم مهنة ناجحة كمؤسس لبدء التشغيل منفرداً. حاصل على شهادتي ماجستير في الأنظمة الموزعة من الجامعة التقنية في برلين و KTH في ستوكهولم."
 
-#: templates/team.html:279
+#: templates/team.html:245
 msgid "Anna Wang"
 msgstr "آنا وانغ"
 
-#: templates/team.html:283
+#: templates/team.html:249
 msgid "Regional Manager China"
 msgstr ""
 
-#: templates/team.html:286
+#: templates/team.html:252
 msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
 msgstr "تقود آنا جهود مجتمعنا للمتحدثين باللغة الصينية. قبل الأصل ، تمكنت Anna من إدارة وسائل التواصل الاجتماعي العالمية في Exness ، وسيط فوركس الرائد. شاركت أيضًا في تأسيس مؤسسة غير ربحية في أستراليا."
 
-#: templates/team.html:297
+#: templates/team.html:263
 msgid "Nick Poulden"
 msgstr "نيك بولدن"
 
-#: templates/team.html:304
+#: templates/team.html:270
 msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr "درس نيك علوم الكمبيوتر في جامعة وارويك. قبل انضمامه إلى Origin ، عمل مهندسًا في Sencha و C3 Energy Network و Palo Alto Networks."
 
-#: templates/team.html:315
+#: templates/team.html:281
 msgid "Domen Grabec"
 msgstr ""
 
-#: templates/team.html:322
+#: templates/team.html:288
 msgid "Domen co-founded and led a team developing a mobile application with 2 chess Grandmasters. He previously had a successful career at Cetra, Zemanta and Peerindex."
 msgstr ""
 
+#: templates/team.html:299
+msgid "Shahul Hameed"
+msgstr ""
+
+#: templates/team.html:306
+msgid "Shahul is a fullstack engineer who started programming at age of 10. He previously worked as a freelancer and then joined Zoho as a front-end developer."
+msgstr ""
+
+#: templates/team.html:317
+msgid "Zaurbek Ivanov"
+msgstr ""
+
+#: templates/team.html:321
+msgid "Russia Community"
+msgstr ""
+
+#: templates/team.html:324
+msgid "Zaurbek Ivanov studied Economics at Kabardino-Balkaria State Agrarian University in Nalchik, Russia. He has worked in the hospitality industry in the US and Russia."
+msgstr ""
+
+#: templates/team.html:335
+msgid "Mike Shultz"
+msgstr ""
+
 #: templates/team.html:342
+msgid "Mike is a long-time contributor to open-source. He created a dev toolkit for creating Ethereum smart contracts with Python and previously worked with Ethereum and IPFS at Lunyr."
+msgstr ""
+
+#: templates/team.html:362
 msgid "Advisors"
 msgstr "المستشارين"
 
-#: templates/team.html:351
+#: templates/team.html:371
 msgid "Addison Huegel"
 msgstr "أديسون هوجل"
 
-#: templates/team.html:355
+#: templates/team.html:375
 msgid "Advisor/PR"
 msgstr "المستشار / PR"
 
-#: templates/team.html:358
+#: templates/team.html:378
 msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
 msgstr "أديسون هي أخصائية في الاتصالات والتسويق حاصلة على شهادة في الفيزياء من جامعة كاليفورنيا في بيركلي. عمل سابقا مع مؤسسة Ethereum و DEVCON1."
 
-#: templates/team.html:368
+#: templates/team.html:388
 msgid "Melody He"
 msgstr "ميلودي هي"
 
-#: templates/team.html:372
+#: templates/team.html:392
 msgid "Advisor/International BD"
 msgstr "مستشار / الدولية دينار بحريني"
 
-#: templates/team.html:375
+#: templates/team.html:395
 msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
 msgstr "ميلودي هي مؤسِسة مجموعة Spartan Group ، وهي صندوق استشارى واستثماري. كانت مستثمرة مبكرة في TenX ومستشار إستراتيجي لشركة Gifto و Appcoins."
 
-#: templates/team.html:385
+#: templates/team.html:405
 msgid "Paul Veradittakit"
 msgstr "بول فيراديتاكيت"
 
-#: templates/team.html:389 templates/team.html:406
+#: templates/team.html:409 templates/team.html:426
 msgid "Advisor"
 msgstr "مستشار"
 
-#: templates/team.html:392
+#: templates/team.html:412
 msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
 msgstr "بول هو شريك في Pantera Capital. وهو أيضًا مستشار للعديد من مشروعات التشفير المثالية الناجحة بما في ذلك Orchid Labs و Enigma و ICON."
 
-#: templates/team.html:402
+#: templates/team.html:422
 msgid "Joey Krug"
 msgstr "جوي كروج"
 
-#: templates/team.html:409
+#: templates/team.html:429
 msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
 msgstr "Joey هو المؤسس المشارك لشركة Augur ، أول سوق للتنبؤات اللامركزية في العالم ونظام أوراكل. يشغل منصب رئيس الاستثمار المشارك في بانتيرا كابيتال."
 
-#: templates/team.html:419
+#: templates/team.html:439
 msgid "Andrew Hyde"
 msgstr "أندرو هايد"
 
-#: templates/team.html:426
+#: templates/team.html:446
 msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
 msgstr "كان أندرو مؤسس أربعة شركات ناشئة ، بما في ذلك Startup Weekend ، وقام ببناء مجتمعات عالمية عبر عشرات البلدان. كان الموظف رقم 1 في TechStars."
 
-#: templates/team.html:460
+#: templates/team.html:457
 msgid "Open-source Contributors"
 msgstr "المساهمون في المصادر المفتوحة"
 
-#: templates/team.html:518
+#: templates/team.html:515
 msgid "Investment Funds"
 msgstr "صناديق الاستثمار"
 
-#: templates/team.html:736
+#: templates/team.html:733
 msgid "Individual Investors"
 msgstr "المستثمرون الأفراد"
 
-#: templates/team.html:745
+#: templates/team.html:742
 msgid "Steve Jang"
 msgstr "ستيف جانج"
 
-#: templates/team.html:755
+#: templates/team.html:752
 msgid "Xiahong Lin"
 msgstr "شيا هونغ لين"
 
-#: templates/team.html:765
+#: templates/team.html:762
 msgid "Alexis Ohanian"
 msgstr "الكسيس اوانيان"
 
-#: templates/team.html:775
+#: templates/team.html:772
 msgid "Gil Penchina"
 msgstr "جيل بنشينا"
 
-#: templates/team.html:785
+#: templates/team.html:782
 msgid "Kamal Ravikant"
 msgstr "كمال رافيكانت"
 
-#: templates/team.html:795
+#: templates/team.html:792
 msgid "Garry Tan"
 msgstr "غاري تان"
 
@@ -1083,31 +1085,85 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: views/web_views.py:182 views/web_views.py:276
+#: views/web_views.py:175 views/web_views.py:274
 msgid "Please enter your name"
 msgstr "من فضلك أدخل إسمك"
 
-#: views/web_views.py:184 views/web_views.py:280
+#: views/web_views.py:177 views/web_views.py:278
 msgid "Please enter your email"
 msgstr "رجاءا أدخل بريدك الإلكتروني"
 
-#: views/web_views.py:186
+#: views/web_views.py:179
 msgid "An error occured"
 msgstr "حدث خطأ"
 
-#: views/web_views.py:188
+#: views/web_views.py:181
 msgid "Please enter your desired allocation"
 msgstr "يرجى إدخال التخصيص المطلوب"
 
-#: views/web_views.py:190
+#: views/web_views.py:183
 msgid "Please agree to the important notice"
 msgstr "يرجى الموافقة على الإشعار المهم"
 
-#: views/web_views.py:192 views/web_views.py:282
+#: views/web_views.py:185 views/web_views.py:280
 msgid "Please prove you are not a robot."
 msgstr "يرجى إثبات أنك لست روبوتًا."
 
-#: views/web_views.py:278
+#: views/web_views.py:276
 msgid "Please enter your company name"
 msgstr "يرجى إدخال اسم الشركة الخاصة بك"
+
+#~ msgid "Marketplace DApp"
+#~ msgstr "السوق DApp"
+
+#~ msgid "iOS Wallet"
+#~ msgstr ""
+
+#~ msgid "Android Wallet"
+#~ msgstr ""
+
+#~ msgid "Product Brief"
+#~ msgstr "باختصار المنتج"
+
+#~ msgid "Partners"
+#~ msgstr "شركاء"
+
+#~ msgid "Try the DApp"
+#~ msgstr "جرب DApp"
+
+#~ msgid "Bee Token is building a middleman free, peer-to-peer network of hosts and guests on the decentralized web using Origin Protocol."
+#~ msgstr "تعمل Bee Token على إنشاء شبكة وسيطة مجانية من المضيفين والضيوف على الويب اللامركزي باستخدام بروتوكول Origin."
+
+#~ msgid "Spin is a leading personal mobility platform that rents e-scooters, e-bikes, and bikes in over 50 markets in the US."
+#~ msgstr "Spin هي منصة تنقل شخصية رائدة تعمل على تأجير الدراجات الإلكترونية والدراجات الإلكترونية والدراجات في أكثر من 50 سوقًا في الولايات المتحدة."
+
+#~ msgid "Kozaza is building their homesharing and traditional homestay network on the blockchain using Origin Protocol."
+#~ msgstr "تقوم شركة كوزازا ببناء شبكة مشاركة منزلية وشبكة منزلية تقليدية على blockchain باستخدام بروتوكول الأصل."
+
+#~ msgid "CanYa is building their “marketplace of services” with Origin Protocol for the gig economy."
+#~ msgstr "تقوم CanYa ببناء \"سوق الخدمات\" الخاص بها مع بروتوكول الأصل الخاص باقتصاد gig."
+
+#~ msgid "ServisHero is building their services marketplace that empowers workers in developing countries on Origin Protocol."
+#~ msgstr "تقوم ServisHero ببناء سوق خدماتها الذي يمكّن العاملين في البلدان النامية على بروتوكول الأصل."
+
+#~ msgid "Read the Product Brief"
+#~ msgstr "قراءة موجز المنتج"
+
+#~ msgid "<a href='%%(product_brief)s'>Product Brief</a> and <a href='%%(whitepaper)s'>Whitepaper</a> released"
+#~ msgstr "<a href='%%(product_brief)s'>موجز المنتج</a> و <a href='%%(whitepaper)s'>Whitepaper</a> صدر"
+
+#~ msgid "Stan James"
+#~ msgstr "ستان جيمس"
+
+#~ msgid "Stan is a software architect with patents in decentralized trust, game design, computer vision, and robotics. Previously, he founded Lijit Networks (acquired by Federated Media)."
+#~ msgstr "ستان هو مهندس برمجيات مع براءات الاختراع في الثقة اللامركزية ، وتصميم الألعاب ، ورؤية الكمبيوتر ، والروبوتات. في السابق ، أسس Lijit Networks (حصلت عليها شركة Federated Media)."
+
+#~ msgid "Partnerships"
+#~ msgstr "شراكات"
+
+#~ msgid "Jon Hearty"
+#~ msgstr "جون هيرتي"
+
+#~ msgid "Jon was the 10th hire at Redbeacon (acquired by The Home Depot) and 1st hire at Datanyze where he served in multiple business development roles from VP of growth to COO."
+#~ msgstr "كان جون هو الموظف العاشر في Redbeacon (التي حصل عليها The Home Depot) وأول موظف في Datanyze حيث شغل عدة مناصب في تطوير الأعمال من نائب الرئيس للنمو إلى COO."
 

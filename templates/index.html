@@ -80,7 +80,7 @@
                   {{ gettext("We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more.") }}
                 </p>
                 <div class="btn-container">
-                  <a href="https://www.shoporigin.com" role="button" class="product-brief-btn btn btn-primary btn-min-size" target="_blank">
+                  <a href="https://www.shoporigin.com" role="button" class="shop-origin-btn btn btn-primary btn-min-size" target="_blank">
                     {{ gettext("Shop Origin") }}
                   </a>
                 </div>
@@ -226,8 +226,8 @@
           {{ gettext("Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround.") }}
         </p>
         <div class="btn-container">
-          <a href="{{ url_for('product_brief', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
-            {{ gettext("Read the Product Brief") }}
+          <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" role="button" class="btn btn-primary btn-min-size">
+            {{ gettext("Read the Whitepaper") }}
           </a>
         </div>
       </div>
@@ -421,7 +421,7 @@
                 <div class="when">
                   {{ gettext("September 2017") }}
                 </div>
-                {{ gettext("<a href='%(product_brief)s'>Product Brief</a> and <a href='%(whitepaper)s'>Whitepaper</a> released", whitepaper=url_for('whitepaper', lang_code=CURRENT_LANGUAGE) ,product_brief=url_for('product_brief', lang_code=CURRENT_LANGUAGE))}}
+                {{ gettext("<a href='%(whitepaper)s'>Whitepaper</a> released", whitepaper=url_for('whitepaper', lang_code=CURRENT_LANGUAGE)) }}
               </div>
               <div class="col-md-2 col-xs-12 blue-to-purple">
                 <div class="blue-circle"></div>
