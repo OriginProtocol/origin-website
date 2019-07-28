@@ -295,7 +295,7 @@ def fetch_meta_tx_balance():
 
 		print(contact.eth_balance)
 
-		if contact.eth_balance < 2:
+		if contact.eth_balance < 1:
 			print 'Low balance. Notifying.'
 			subject = "Meta-transactions purse is running low. %s ETH remaining" % (contact.eth_balance)
 			body = "Please send more ETH to %s" % (meta_tx_purse)
@@ -312,9 +312,9 @@ def fetch_meta_tx_balance():
 if __name__ == '__main__':
 	# called via cron on Heroku
 	with db_utils.request_context():
-		# fetch_ogn_transactions()
+		fetch_ogn_transactions()
 		fetch_meta_tx_balance()
-		# fetch_from_ethplorer()
+		fetch_from_ethplorer()
 
 
 
