@@ -88,18 +88,13 @@ def team():
     # fetch our list of contributors from the DB
     contributors = db_models.Contributor.query.all()
 
-    # manually add aure until he gets his first PR in
-    aure = db_models.Contributor()
-    aure.username = 'auregimon'
-    aure.avatar = 'https://avatars1.githubusercontent.com/u/13142288?s=460&v=4'
-
     # community team
     community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
                  {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
                  {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
                  {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
                  {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
-    return render_template('team.html', contributors=[aure] + contributors, community=community)
+    return render_template('team.html', contributors=contributors, community=community)
 
 @app.route('/admin')
 @app.route('/<lang_code>/admin')
