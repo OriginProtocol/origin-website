@@ -70,8 +70,12 @@ def mobile():
 
 @app.route('/mobile/apk')
 def mobile_apk():
-    req = requests.get(app.config['APK_URL'], stream = True)
-    return Response(stream_with_context(req.iter_content(chunk_size=1024)), content_type = req.headers['content-type'])
+    req = requests.get(constants.APK_URL, stream = True)
+    return Response(stream_with_context(req.iter_content(chunk_size=1024)),
+                    headers={
+                        'content-type': req.headers['content-type'],
+                        'content-disposition': 'attachment;filename=origin-marketplace.apk'
+                    })
 
 @app.route('/<lang_code>')
 def index():
