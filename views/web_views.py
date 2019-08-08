@@ -68,6 +68,11 @@ def apple_app_site_association():
 def mobile():
     return render_template('mobile.html')
 
+@app.route('/mobile/apk')
+def mobile_apk():
+    req = requests.get(app.config['APK_URL'], stream = True)
+    return Response(stream_with_context(req.iter_content(chunk_size=1024)), content_type = req.headers['content-type'])
+
 @app.route('/<lang_code>')
 def index():
     # check if it's a legit language code

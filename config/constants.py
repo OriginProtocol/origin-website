@@ -57,6 +57,8 @@ ETHERSCAN_KEY = dotenv.get('ETHERSCAN_KEY')
 AMBERDATA_KEY = dotenv.get('AMBERDATA_KEY')
 ETHPLORER_KEY = dotenv.get('ETHPLORER_KEY')
 
+APK_URL = dotenv.get('APK_URL')
+
 # Language option constants
 
 LANGUAGES = [
