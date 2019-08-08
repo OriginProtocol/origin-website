@@ -68,11 +68,6 @@ PARTNERS = [
      "desc":lazy_gettext("HireGo is building the world's first decentralized peer-to-peer car rental platform using Origin Protocol.")
     },
     {
-    "name":"layerprotocol",
-    "url":"https://layerprotocol.com/",
-     "desc":lazy_gettext("Layer Protocol is the decentralized reputation, incentive, and payments protocol for the global sharing economy, built on the blockchain.")
-    },
-    {
     "name":"scidex",
     "url":"https://www.scidex.co/",
      "desc":lazy_gettext("SciDex is builing their marketspace for smart contracts and data using Origin Protocol.")
@@ -148,11 +143,6 @@ PARTNERS = [
      "desc":lazy_gettext("HireMatch connects job seekers and employers using the blockchain and cryptocurrency with Origin Protocol.")
     },
     {
-    "name":"smartrefer",
-    "url":"https://smartrefer.io/",
-     "desc":lazy_gettext("SmartRefer is building a technology and diversity hiring marketplace powered by referrals with Origin Protocol.")
-    },
-    {
     "name":"lotus",
     "url":"#",
      "desc":lazy_gettext("Lotus is building a decentralized blockchain-based travel agency on Origin Protocol.")
@@ -206,11 +196,6 @@ PARTNERS = [
     "name":"akaiito",
     "url":"https://akaiito.io/home/",
      "desc":lazy_gettext("Akaiito is utilizing Origin Protocol's technology in their marketplace and sharing economy platform.")
-    },
-    {
-    "name":"libertylance",
-    "url":"https://libertylance.io/",
-     "desc":lazy_gettext("LibertyLance is building their decentralized and self-regulating freelancing platform on Origin Protocol.")
     },
     {
     "name":"wificoin",
