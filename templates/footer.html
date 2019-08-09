@@ -134,11 +134,19 @@
                   <i class="fab fa-discord"></i> {{ gettext("Discord") }}
                 </a>
               </li>
-              <li class="footer-link">
-                <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
-                  <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
-                </a>
-              </li>
+              {% if CURRENT_LANGUAGE == "ko" %}
+                <li class="footer-link">
+                  <a href="{{ universal.TELEGRAM_KOREA_URL }}" target="_blank">
+                    <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
+                  </a>
+                </li>
+              {% else %}
+                <li class="footer-link">
+                  <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
+                    <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
+                  </a>
+                </li>
+              {% endif %}
               <li class="footer-link">
                 <a href="https://www.reddit.com/r/originprotocol/" target="_blank">
                   <i class="fab fa-reddit"></i> {{ gettext("Reddit") }}
@@ -150,6 +158,14 @@
               <li class="footer-link">
                 <a data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-weibo-qr.png' />"><i class="fab fa-weibo"></i> {{ gettext("Weibo") }}</a>
               </li>
+            
+              {% if CURRENT_LANGUAGE == "ru" %}
+                <li class="footer-link">
+                  <a href="{{ universal.VK_URL }}" target="_blank">
+                    <i class="fab fa-vk"></i> {{ gettext("VK") }}
+                  </a>
+                </li>
+              {% endif %}
             </ul>
           </div>
           <div class="col-6 col-md-4 col-lg-2">
