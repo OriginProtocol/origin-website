@@ -123,24 +123,24 @@ def tokens():
 @app.route('/whitepaper')
 @app.route('/<lang_code>/whitepaper')
 def whitepaper():
-    localized_filename = 'whitepaper_v19_%s.pdf' % g.current_lang.lower()
+    localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(whitepaper_path):
         return app.send_static_file('docs/%s' % localized_filename)
     else:
         # Default to English
-        return app.send_static_file('docs/whitepaper_v18.pdf')
+        return app.send_static_file('docs/whitepaper_v19.pdf')
 
 @app.route('/product-brief')
 @app.route('/<lang_code>/product-brief')
 def product_brief():
-    localized_filename = 'whitepaper_v19_%s.pdf' % g.current_lang.lower()
+    localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
     if os.path.isfile(product_brief_path):
         return app.send_static_file('docs/%s' % localized_filename)
     else:
         # Default to English
-        return app.send_static_file('docs/whitepaper_v18.pdf')
+        return app.send_static_file('docs/whitepaper_v19.pdf')
 
 @app.route('/mailing-list/join', methods=['POST'])
 def join_mailing_list():
