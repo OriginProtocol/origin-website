@@ -4,9 +4,9 @@ volumes:
   pg_data:
 
 services:
-  postgres:
+  postgres-website:
     image: postgres:10.0
-    container_name: postgres
+    container_name: postgres-website
     restart: always
     # Data persistence, comment out the following two lines to disable
     volumes:
@@ -33,7 +33,7 @@ services:
       - ./:/app
       - ./docker.env:/app/.env
     depends_on:
-      - postgres
+      - postgres-website
       - redis
     ports:
       - "5000:5000"
@@ -47,7 +47,7 @@ services:
     image: origin-website
     user: nobody
     depends_on:
-      - postgres
+      - postgres-website
       - redis
     volumes:
       - ./:/app
