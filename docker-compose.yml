@@ -40,7 +40,10 @@ services:
       - "5555:5555"
     environment:
       - FLASK_APP=/app/main.py
-    command: "python /app/main.py"
+    command:
+      >
+      /bin/bash -c "flask db upgrade &&
+      python /app/main.py"
 
   celery:
     container_name: celery
