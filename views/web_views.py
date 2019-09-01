@@ -246,6 +246,31 @@ def rewards():
 def partners():
     return render_template('partners.html')
 
+@app.route('/about')
+@app.route('/<lang_code>/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/investors')
+@app.route('/<lang_code>/investors')
+def investors():
+    return render_template('investors.html')
+
+@app.route('/product')
+@app.route('/<lang_code>/product')
+def product():
+    return render_template('product.html')
+
+@app.route('/ognToken')
+@app.route('/<lang_code>/ognToken')
+def ognToken():
+    return render_template('ognToken.html')
+
+@app.route('/videos')
+@app.route('/<lang_code>/videos')
+def videos():
+    return render_template('videos.html')
+
 @app.route('/privacy')
 @app.route('/<lang_code>/privacy')
 def privacy():

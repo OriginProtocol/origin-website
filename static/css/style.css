@@ -299,9 +299,10 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin {
-  position: relative;
-  padding-bottom: 40px;
+  position: absolute;
   padding-top: 20px;
+  right: 0px;
+  left: 0px;
 }
 
 .navbar-origin .brand-container {
@@ -313,7 +314,11 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin .logo-container {
-  width: 100px;
+  width: 120px;
+}
+
+.navbar-origin .logo-container img{
+  width: 100%;
 }
 
 .navbar-origin .mobile-background {
@@ -346,6 +351,7 @@ main.landing-page > .background-wrapper {
 
 .navbar-origin .brand-container .navbar-brand {
   padding-top: 0px;
+  padding-bottom: 1rem;
 }
 
 .navbar-light {
@@ -2631,12 +2637,6 @@ footer .company-mission {
     padding: 20px;
   }
 
-  /* whitelist languages with wider padding */
-  :lang(en) .navbar-origin .navbar-collapse .nav-item,
-  :lang(en) .navbar-origin .navbar-collapse .nav-item.dropdown {
-    padding: 20px 30px;
-  }
-
   .headshot-wrapper {
     height: 160px;
     width: 160px;
@@ -2699,10 +2699,6 @@ footer .company-mission {
   .navbar {
     max-width: 1140px;
   }
-  .navbar-origin .navbar-collapse .nav-item,
-  .navbar-origin .navbar-collapse .nav-item.dropdown {
-    padding: 20px 30px;
-  }
   .technology-section .container-fluid > .row {
     padding-bottom: 200px;
   }
@@ -2731,4 +2727,53 @@ footer .company-mission {
   .platform-section .right-upper-pane {
     height: 100%;
   }
+}
+
+/* Shared page elements */
+
+.video-block {
+  position: relative;
+  min-height: 864px;
+  background-color: #061d2a;
+  color: white;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+
+.video-block .title {
+  font-family: Poppins;
+  font-size: 2.375rem;
+  font-weight: normal;
+  max-width: 756px;
+}
+
+.video-block .footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.video-block .footer div {
+  padding: 20px;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.video-block .play-button {
+  width: 108px;
+  height: 108px;
+  border: solid 1px var(--white);
+  border-radius: 54px;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
+
+.countown-block {
+  background-color: white;
+  min-height: 554px;
+  font-family: Poppins;
+  font-size: 2.375rem;
+  text-align: center;
+  color: #061d2a;
 }

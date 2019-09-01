@@ -65,17 +65,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('tokens', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Tokens") }}</a>
+          <a class="nav-link" href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://medium.com/originprotocol" target="_blank">{{ gettext("Blog") }}</a>
+          <a class="nav-link" href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.shoporigin.com" target="_blank">{{ gettext("Shop") }}</a>
+          <a class="nav-link" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Product") }}</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('ognToken', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN Token") }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('videos', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Videos") }}</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="https://www.shoporigin.com" target="_blank">{{ gettext("Shop") }}</a>
+        </li>-->
         <li class="d-none d-lg-block nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
           <div class="dropdown-menu language">
