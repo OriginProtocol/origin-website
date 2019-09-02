@@ -11,8 +11,21 @@
 {% endwith %}  
 
 <main class="about-page">
-  <div class="video-block">
-    
+  <div class="video-block d-flex flex-column justify-content-center align-items-center">
+    <div class="background-video">
+      <video id="about-video" autoplay muted loop>
+        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
+        {{gettext("Your browser does not support the video tag.")}}
+      </video>
+    </div>
+    <div class="video-overlay"></div>
+    <div class="contents d-flex flex-column justify-content-center align-items-center">
+      <div class="title">{{gettext("It’s time to build the sharing economy without intermediaries")}}</div>
+      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+        play triangle
+      </button>
+      <div class="mt-2">{{gettext("Watch the video")}}</div>
+    </div>
   </div>
 </main>
 

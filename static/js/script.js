@@ -96,3 +96,24 @@ $(function() {
 $('[data-toggle="tooltip"]').tooltip({
   html: true
 });
+
+// REDESIGN 2019 START
+$(function() {
+  const onVideoPlay = function(videoButtonId, videoElementId){
+    $(`#${videoButtonId}`).click(function(){
+      var videoElement = document.getElementById(videoElementId);
+      if (videoElement.requestFullscreen) {
+        videoElement.requestFullscreen();
+      } else if (videoElement.mozRequestFullScreen) {
+        videoElement.mozRequestFullScreen();
+      } else if (videoElement.webkitRequestFullscreen) {
+        videoElement.webkitRequestFullscreen();
+      } else if (videoElement.msRequestFullscreen) { 
+        videoElement.msRequestFullscreen();
+      }
+    });
+  }
+
+  onVideoPlay('index-video-button', 'index-video');
+  onVideoPlay('about-video-button', 'about-video');
+});

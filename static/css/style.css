@@ -2769,6 +2769,32 @@ footer .company-mission {
   color: white;
 }
 
+.video-block .contents {
+  z-index: 3;
+}
+
+.video-block .background-video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.video-block .background-video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-block .video-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.73;
+  background-color: #061d2a; 
+}
+
 .countown-block {
   background-color: white;
   min-height: 554px;

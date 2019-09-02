@@ -12,17 +12,26 @@
 
 <main class="landing-page">
   <div class="video-block d-flex flex-column justify-content-center align-items-center">
-    <div class="title">{{gettext("The blockchain platform for building decentralized marketplaces")}}</div>
-    <button class="play-button d-flex justify-content-center align-items-center m-4">
-      play triangle
-    </button>
-    <div class="mt-2">{{gettext("Watch the video")}}</div>
-    <div class="footer d-flex justify-content-center mb-5">
-      <div>TechCrunch</div>
-      <div>Forbes</div>
-      <div>Inc</div>
-      <div>Coindesk</div>
-      <div>WSJ</div>
+    <div class="background-video">
+      <video id="index-video" autoplay muted loop>
+        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
+        {{gettext("Your browser does not support the video tag.")}}
+      </video>
+    </div>
+    <div class="video-overlay"></div>
+    <div class="contents d-flex flex-column justify-content-center align-items-center">
+      <div class="title">{{gettext("The blockchain platform for building decentralized marketplaces")}}</div>
+      <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+        play triangle
+      </button>
+      <div class="mt-2">{{gettext("Watch the video")}}</div>
+      <div class="footer d-flex justify-content-center mb-5">
+        <div>TechCrunch</div>
+        <div>Forbes</div>
+        <div>Inc</div>
+        <div>Coindesk</div>
+        <div>WSJ</div>
+      </div>
     </div>
   </div>
   <div class="countown-block d-flex flex-column justify-content-center align-items-center">
