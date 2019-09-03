@@ -1,0 +1,457 @@
+.landing-page h1 {
+  font-family: Poppins;
+  font-size: 2.375rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: normal;
+}
+
+.video-block {
+  position: relative;
+  background-color: #061d2a;
+  color: white;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+
+.video-block .video-title {
+  max-width: 860px;
+}
+
+.video-block .bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
+.video-block .bottom img {
+  margin: 10px;
+  max-height: 12px;
+}
+
+.vc-backed .play-button,
+.video-block .play-button {
+  width: 108px;
+  height: 108px;
+  border: solid 1px var(--white);
+  border-radius: 54px;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
+
+.video-block .contents {
+  z-index: 3;
+}
+
+.video-block .background-video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.video-block .background-video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-block .video-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.73;
+  background-color: #061d2a; 
+}
+
+.countdown-block {
+  background-color: white;
+  min-height: 554px;
+  font-family: Poppins;
+  font-size: 2.375rem;
+  text-align: center;
+  color: #061d2a;
+}
+
+.countdown-block .clock-title {
+  max-width: 756px;  
+}
+
+.countdown-block .clock {
+  font-size: 3.8rem;
+  font-weight: 500;
+  padding: 40px;
+}
+
+.countdown-block .clock .subtitle {
+  margin-top: -15px;
+  font-size: 0.65rem;
+  color: #061d2a;
+  font-weight: 300;
+}
+
+.countdown-block .clock .clock-progress-bar {
+  padding: 15px;
+  border: solid 5px var(--blue);
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.email-form input[type=submit] {
+    background: url(/static/img/triangle.png) no-repeat center;
+    border: 0;
+    border-radius: 25px;
+    display: block;
+    background-color: var(--blue);
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+}
+
+.email-form .email-input {
+  border: 0px;
+  border-bottom: solid 1px #bdcbd5;
+  min-width: 300px;
+  font-family: Lato;
+  font-size: 1.75rem;
+  color: #061d2a;
+}
+
+.email-form .email-input::placeholder {
+  color: #8fa7b7;
+}
+
+.buy-sell-block {
+  background-color: #007cff;
+  color: white;
+  font-weight: normal;
+}
+
+.buy-sell-block .segment-subtitle {
+  font-family: Lato;
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 680px;
+  margin-top: -25px;
+}
+
+.buy-sell-block .marketplace {
+  margin-top: 76px;
+  text-align: left;
+}
+
+.buy-sell-block .marketplace .title {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.buy-sell-block .marketplace .text {
+  line-height: 1.39;
+  max-width: 330px;
+  font-size: 1.125rem;
+}
+
+.vc-backed .button,
+.buy-sell-block .marketplace .button {
+  font-size: 1.125rem;
+  width: 100%;
+  border-radius: 26px;
+  border: solid 1px var(--white);
+  padding: 12px 0;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+}
+
+.buy-sell-block .marketplace .button:hover {
+  background-color: #036ddd;
+  cursor: pointer;
+}
+
+.buy-sell-block .opaque {
+  opacity: 0.7;
+}
+
+.buy-sell-block .bottom img {
+  margin: 10px;
+  max-height: 12px;
+}
+
+.sharing-economy {
+  color: black;
+  background-color: white;
+  color: #061d2a;
+}
+
+.segment-title {
+  max-width: 940px;
+  margin-top: 74px;
+}
+
+.segment-subtitle {
+  font-family: Lato;
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 680px;
+  margin-top: -25px;
+  font-weight: normal;
+}
+
+.sharing-economy .percentages {
+  margin-top: 60px;
+  margin-bottom: 75px;
+}
+.sharing-economy .percentages-holder {
+  width: 200px
+}
+
+.sharing-economy .percentage {
+  font-family: Poppins;
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sharing-economy .subtitle1 {
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  text-align: center;
+  font-weight: normal;
+}
+
+.sharing-economy .subtitle2 {
+  margin-top: 16px;
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  text-align: center;
+  color: #638298;
+  font-weight: normal;
+}
+
+.decentralised-marketplaces {
+  background-color: #fafbfc;
+}
+
+.decentralised-marketplaces .tiles-holder {
+  margin-top: 70px;
+  margin-bottom: 97px;
+}
+
+.decentralised-marketplaces .tiles-holder .tile {
+  padding: 10px;
+}
+
+.decentralised-marketplaces .tiles-holder .image-holder {
+  width: 220px;
+  height: 220px;
+  border: solid 1px #dbe6eb;
+  background-color: white;
+}
+
+.decentralised-marketplaces .tiles-holder .tile-name {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #061d2a;
+  margin-top: 30px;
+}
+
+.decentralised-marketplaces .tiles-holder .tile-text {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  color: #061d2a;
+  max-width: 170px;
+  margin-top: 7px;
+}
+
+.world-class {
+  background-color: white;
+}
+
+.world-class .logos-holder img {
+  padding: 20px;
+}
+
+.vc-backed {
+  background-color: #007cff;
+  color: white;
+}
+
+.vc-backed .contents{
+  height: 100%;
+}
+
+.vc-backed .video-title {
+  max-width: 1020px;
+  padding: 0 50px;
+}
+
+.vc-backed .watch {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.vc-backed .bottom img {
+  margin: 10px;
+  max-height: 12px;
+}
+
+.vc-backed .contents .button {
+  width: auto;
+  padding: 12px 32px;
+}
+
+.featured-partner {
+  background-color: #fafbfc;
+}
+
+.featured-partner .box {
+  max-width: 940px;
+  margin-top: 65px;
+  margin-bottom: 70px;
+}
+
+.featured-partner .box .text {
+  background-color: #061d2a;
+  padding: 50px;
+  color: white;
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.featured-partner .box .text .fname {
+  line-height: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+.featured-partner .box .text .position {
+  line-height: normal;
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+.featured-video {
+  background-color: white;
+}
+
+.featured-video .segment-title {
+  margin-top: 70;
+  margin-bottom: 60;
+}
+
+.featured-video .tiles-holder {
+  margin-bottom: 60;
+}
+
+.featured-video .tiles-holder .tile {
+  max-width: 320px;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.56;
+  color: #061d2a;
+  padding: 0 15px;
+}
+
+.featured-video .tiles-holder .tile-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.featured-video .tiles-holder .tile-text {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.featured-video .tiles-holder .tile a {
+  margin-top: auto;
+}
+
+.featured-video .white-button-blue-border {
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.recent-news {
+  color: #061d2a;
+  background-color: #fafbfc;
+}
+
+.recent-news .segment-title {
+  margin-top: 70;
+  margin-bottom: 60;
+}
+
+.recent-news .tiles-holder .tile {
+  max-width: 320px;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.56;
+  color: #061d2a;
+  padding: 0 15px;
+}
+
+.recent-news .tiles-holder .tile-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.recent-news .tiles-holder .tile-text {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.recent-news .tiles-holder .tile img {
+  margin-bottom: 21px;
+}
+
+.recent-news .white-button-blue-border {
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .video-block .bottom img,
+  .buy-sell-block .bottom img,
+  .vc-backed .bottom img {
+    margin: 15px;
+    max-height: 16px;
+  }
+}
+
+/* md + */
+@media (min-width: 768px) {
+  .video-block .bottom img,
+  .buy-sell-block .bottom img,
+  .vc-backed .bottom img {
+    margin: 21px;
+    max-height: 26px;
+  }
+}
+
+/* lg + */
+@media (min-width: 992px) {
+  .video-block .bottom img,
+  .buy-sell-block .bottom img,
+  .vc-backed .bottom img {
+    margin: 30px;
+    max-height: 36px;
+  }
+}

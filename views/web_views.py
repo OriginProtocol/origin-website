@@ -54,7 +54,7 @@ def beforeRequest():
 
 @app.route('/')
 def root():
-    return render_template('index.html')
+    return render_template('landing.html')
 
 @app.route('/robots.txt')
 def robots():
@@ -81,7 +81,7 @@ def mobile_apk():
 def index():
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
-        return render_template('index.html')
+        return render_template('landing.html')
     # shortcut for nick
     elif 'ogn.dev' in request.url_root and g.lang_code == "tb":
         return redirect('https://originprotocol.github.io/test-builds', code=302)
