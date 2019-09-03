@@ -44,9 +44,9 @@ def resolve_inline_css_imports(filename, file_contents):
     
     normalizedFilenames = [os.path.normpath(os.path.join(basePath, relativeUrl)) for relativeUrl in matches]
 
-    contents = ["/* %s */\n\n %s" % (filename, file_get_contents(filename)) for filename in normalizedFilenames]
+    contents = ["/* %s */\n\n%s" % (filename, file_get_contents(filename)) for filename in normalizedFilenames]
     contents.append(file_contents.replace('@import url(', '// Resolved: @import url('))
-    return "\n\n;\n\n".join(contents)
+    return "\n\n\n\n".join(contents)
 
 def file_get_contents(filename):
     """
