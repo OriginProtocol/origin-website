@@ -319,7 +319,10 @@ def assets_all_styles():
         "static/css/vendor-bootstrap-4.0.0-beta2.css",
         "static/css/app.css",
         "static/css/alertify.css",
-        "static/css/animate.css"
+        "static/css/animate.css",
+        "static/css/pages/about.css",
+        "static/css/pages/landing.css",
+        "static/css/pages/common.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js')

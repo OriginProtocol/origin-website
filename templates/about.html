@@ -11,20 +11,100 @@
 {% endwith %}  
 
 <main class="about-page">
-  <div class="video-block d-flex flex-column justify-content-center align-items-center">
+  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
     <div class="background-video">
-      <video id="about-video" autoplay muted loop>
-        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
+      <video id="index-video" autoplay muted loop>
+        <source src="/static/img/about/MattMovie.mp4" type="video/mp4">
         {{gettext("Your browser does not support the video tag.")}}
       </video>
     </div>
     <div class="video-overlay"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <div class="title">{{gettext("It’s time to build the sharing economy without intermediaries")}}</div>
-      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
-        play triangle
+      <h1 class="video-title">{{gettext("It’s time to build the sharing economy without intermediaries")}}</h1>
+      <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
+    </div>
+  </div>
+  <!-- Origin enables true peer to peer commerce -->
+  <div class="world-class d-flex flex-column justify-content-center align-items-center">
+    <h1 class="segment-title ml-4 mr-4">{{gettext("Origin enables true peer-to-peer commerce")}}</h1>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world.")}}</div>
+    <div class="d-flex justify-content-center mt-4 pt-2">
+      <a class="white-button-blue-border m-2" href="/team">{{gettext("Learn more about our team")}}</a>
+      <a class="white-button-blue-border m-2" href="/investors">{{gettext("Learn more about our investors")}}</a>
+    </div>
+    <img class="team-photo" src="/static/img/about/team-photo-2.jpg"/>
+  </div>
+  <!-- Lower fees section -->
+  <div class="blue-section d-flex screen-size-segment justify-content-center align-items-center">
+    <div class="section-content d-flex justify-content-between">
+      <div class="col-6 d-flex flex-column p-0 justify-content-center">
+        <div class="section-name">{{gettext("Lower fees")}}</div>
+        <div class="section-text mb-4 mt-3">{{gettext("Centralized intermediaries often charge 20-30%% in transaction fees. By removing the middlemen, Origin removes these fees.")}}</div>
+        <div class="section-text">{{gettext("Sellers can make more money while passing on savings to buyers. Both sides benefit when the middlemen are removed.")}}</div>
+      </div>
+      <div class="col-6 p-0 d-flex justify-content-end">
+        <img src="/static/img/about/fees-graphic-large.svg"/>
+      </div>
+    </div>
+  </div>
+  <!-- Better incentives -->
+  <div class="white-section d-flex screen-size-segment justify-content-center align-items-center">
+    <div class="section-content d-flex justify-content-between">
+      <div class="col-6 p-0 d-flex justify-content-start">
+        <img src="/static/img/about/ogn-graphic-large.svg"/>
+      </div>
+      <div class="col-6 d-flex flex-column p-0 justify-content-center">
+        <div class="section-name">{{gettext("Better Incentives")}}</div>
+        <div class="section-text mb-4 mt-3">{{gettext("Origin enables buyers, sellers, developers, and other ecosystem participants to own stakes in the network.")}}</div>
+        <div class="section-text">{{gettext("Everyone is incentivized to promote the health and growth of the network.")}}</div>
+      </div>
+    </div>
+  </div>
+  <!-- Increased access section -->
+  <div class="access-section blue-section d-flex screen-size-segment justify-content-center align-items-center">
+    <div class="section-content d-flex justify-content-between">
+      <div class="col-6 d-flex flex-column p-0 justify-content-center">
+        <div class="section-name">{{gettext("Increased access")}}</div>
+        <div class="section-text mb-4 mt-3">{{gettext("Origin makes it easy for 2 billion unbanked individuals to participate in the new Internet economy.")}}</div>
+        <div class="section-text">{{gettext("Users from all around the world can transact with each other even if they do not have stable local fiat currencies")}}</div>
+      </div>
+      <div class="col-6 p-0 d-flex justify-content-end">
+        <img src="/static/img/about/access-graphic-large.png"/>
+      </div>
+    </div>
+  </div>
+  <!-- Better incentives -->
+  <div class="better-incentives white-section d-flex screen-size-segment justify-content-center align-items-center">
+    <div class="section-content d-flex justify-content-between">
+      <div class="col-6 p-0 d-flex justify-content-start">
+        <img src="/static/img/about/resiliance-graphic-large.png"/>
+      </div>
+      <div class="col-6 d-flex flex-column p-0 justify-content-center">
+        <div class="section-name">{{gettext("More Resilience")}}</div>
+        <div class="section-text mb-4 mt-3">{{gettext("Decentralized marketplaces promote open and free commerce.")}}</div>
+        <div class="section-text">{{gettext("Unlike centralized alternatives, they can't be banned or shut down.")}}</div>
+      </div>
+    </div>
+  </div>
+  <!-- Origin in the press section -->
+  <div class="the-press d-flex flex-column justify-content-center align-items-center">
+    <h1 class="segment-title ml-4 mr-4">{{gettext("Origin in the Press")}}</h1>
+    <div class="content d-flex flex-wrap">
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/coindesk.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/wsj.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/nasdaq.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/tnw.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/fast-company.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/vice.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/cointelegraph.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/wired.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/bitcoinmag.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/inc.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/forbes.jpg"/></a></div>
+      <div class="d-flex justify-content-center" ><a href="/#"><img src="/static/img/about/techcrunch.jpg"/></a></div>
     </div>
   </div>
 </main>
