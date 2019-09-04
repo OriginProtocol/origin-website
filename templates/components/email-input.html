@@ -1,0 +1,12 @@
+{% if theme_dark==True %}
+<div class="input-group email-input dark">
+{% else %}
+<div class="input-group email-input light">
+{% endif %}
+  <input type="text" class="form-control" placeholder="Your email" aria-label="Your email" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-primary" type="button">
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
