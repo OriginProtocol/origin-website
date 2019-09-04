@@ -6,6 +6,178 @@
 
 {% block content %}
 
-<div>product</div>
+{% with theme_dark=True %}
+{% include 'navbar.html' %}
+{% endwith %}  
+
+<main class="product-page">
+  <section class="product-title-section blue-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <h1>{{gettext("Our platform will power decentralized marketplaces all over the world")}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marketplaces-section white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>{{gettext("Apps built on our platform")}}</h1>
+          <img src="/static/img/product/shoporigin-laptop.png" />
+          <h3>{{gettext("See the Origin Platform in action at shoporigin.com")}}</h3>
+          <a href="https://shoporigin.com" target="_blank" class="btn btn-primary">
+            {{gettext("Buy and sell today")}}
+          </a>
+          <h3>{{gettext("Other apps built on the Origin Platform")}}</h3>
+          <div class="marketplace-images">
+            <img src="/static/img/product/peerart.png" />
+            <img src="/static/img/product/trips.png" />
+            <img src="/static/img/product/cryptomerch.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features-section grey-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Features")}}</h1>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image"></div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image"></div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image"></div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image"></div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image"></div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image"></div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="userflow-section blue-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <h1>{{gettext("How it works")}}</h1>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
+          <h1 class="flow-step">1</h1>
+          <div class="flow-desc">
+            {{gettext("Buyers search and browse for seller listings on the blockchain through DApps")}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
+          <h1 class="flow-step">2</h1>
+          <div class="flow-desc">
+            {{gettext("Buyers submit offers and escrowed payments to our Marketplace smart contract")}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
+          <h1 class="flow-step">3</h1>
+          <div class="flow-desc">
+            {{gettext("Sellers accept or reject offers from prospective buyers, then fulfill active offers")}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
+          <h1 class="flow-step">4</h1>
+          <div class="flow-desc">
+            {{gettext("After offers are finalized, the smart contract releases escrowed payments to sellers")}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="whitepaper-section grey-section">
+    <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Check out our updated whitepaper")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="action-buttons">
+            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-outline-primary">{{gettext("Read our whitepaper")}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="milestones-section white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Milestones")}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tokens-section blue-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Origin Token")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="subtitle">{{gettext("Origin Token (OGN) is an incentive token that ensures the health and growth of the network.")}}</div>
+        </div>
+        <div class="col-12">
+          <div class="action-buttons">
+            <a href="{{ url_for('ognToken', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-primary btn-inverse">{{gettext("Learn more about Origin Token")}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</main>
 
 {% endblock %}

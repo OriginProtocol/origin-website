@@ -323,6 +323,7 @@ def assets_all_styles():
         "static/css/components/countdown-timer.css",
         "static/css/pages/team.css",
         "static/css/pages/token.css",
+        "static/css/pages/product.css",
         "static/css/alertify.css",
         "static/css/animate.css",
         "static/css/pages/about.css",
