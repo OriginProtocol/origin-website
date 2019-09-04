@@ -93,3 +93,12 @@ main section .btn.btn-inverse.btn-primary {
 main section .btn.btn-inverse.btn-primary:hover {
   border: 1px solid transparent;
 }
+
+
+@media (max-width: 575px) {
+  main section .btn {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+}

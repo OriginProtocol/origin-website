@@ -73,3 +73,12 @@
   text-align: center;
   margin-bottom: 4.375rem;
 }
+
+@media (max-width: 575px) {
+  .tokens-page .app-showcase {
+    flex-direction: column-reverse;
+  }
+  .tokens-page .app-showcase.image-first {
+    flex-direction: column;
+  }
+}
