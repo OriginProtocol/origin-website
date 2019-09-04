@@ -1,10 +1,41 @@
+.countdown-timer {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.countdown-timer .dial {
+  margin-right: 3rem;
+  background-image: url('/static/img/ognToken/ogn-icon.svg');
+  background-size: 2.875rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .countdown-timer .dial > .dial-svg {
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   margin: 2rem 0;
   border-radius: 100%;
   transform: rotate(-90deg);
+}
+
+.countdown-timer.large {
+  flex-direction: column;
+}
+
+.countdown-timer.large .dial {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 0;
+  background-size: 4.375rem;
+}
+
+.countdown-timer.large .dial > .dial-svg {
+  height: 140px;
+  width: 140px;
 }
 
 .countdown-timer .dial > .dial-svg circle {
@@ -17,4 +48,60 @@
 .countdown-timer .dial > .dial-svg .active-arc {
   stroke: #007cff;
   stroke-linecap: round;
+}
+
+.countdown-time-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 380px;
+  max-width: 380px;
+}
+
+.countdown-timer.large .countdown-time-left {
+  margin: 0 auto;
+}
+
+.countdown-time-left .time-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex: 1;
+}
+
+.countdown-time-left .time-group .time-value {
+  font-size: 3rem;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+
+.countdown-time-left .time-group .time-label {
+  font-size: 0.725rem;
+  text-align: center;
+}
+
+.countdown-time-left .time-group:not(:first-child):not(:last-child) .time-value:after {
+  position: absolute;
+  content: ':';
+  top: 0;
+  bottom: 0;
+  right: -0.375rem;
+  line-height: 3.5rem;
+}
+
+
+@media (max-width: 575px) {
+  .countdown-time-left {
+    max-width: 100%;
+    width: 100%;
+  }
+  .countdown-timer {
+    flex-direction: column;
+  }
+  .countdown-timer .dial {
+    margin-right: 0;
+    justify-content: center;
+    display: flex;
+  }
 }

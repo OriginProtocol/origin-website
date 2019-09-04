@@ -1,4 +1,16 @@
-
-<div class="countdown-timer">
-
+{% if timer_large==True %}
+<div 
+  data-countdown-timer 
+  data-startdate="2019/08/31" 
+  data-enddate="2019/10/15"
+  data-large>
 </div>
+{% else %}
+<div 
+  data-countdown-timer 
+  data-startdate="2019/08/31" 
+  data-enddate="2019/10/15">
+</div>
+{% endif %}
+
+
