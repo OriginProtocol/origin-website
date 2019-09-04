@@ -99,7 +99,7 @@ $('[data-toggle="tooltip"]').tooltip({
 
 // REDESIGN 2019 START
 $(function() {
-  const onVideoPlay = function(videoButtonId, videoElementId){
+  var onVideoPlay = function(videoButtonId, videoElementId){
     $(`#${videoButtonId}`).click(function(){
       var videoElement = document.getElementById(videoElementId);
       if (videoElement.requestFullscreen) {

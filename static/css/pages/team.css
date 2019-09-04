@@ -1,3 +1,144 @@
-.team-page .core-team-section h1 {
-  color: #333;
+.team-page h1 {
+  font-family: Poppins;
+  font-size: 2.375rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: normal;
+}
+
+.team-page {
+  background-color: #fff;
+  position: relative;
+}
+
+.team-page .team-members > div {
+  /* To center align last card */
+  margin: 0 auto;
+}
+
+.team-page .team-member {
+  max-width: 230px;
+  margin: 1.25rem 0 6.25rem 0;
+}
+
+.team-page .advisor-team-section .team-member {
+  margin-bottom: 1.25rem;
+  padding: 0 1rem;
+}
+
+.team-page .core-team-section .team-member {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-page .headshot-wrapper {
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  margin: 1.25rem auto;
+}
+
+.team-page .headshot-wrapper img {
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+.team-page .headshot-wrapper-small {
+  text-align: center;
+  width: 92px;
+  height: 92px;
+  margin: 10px auto;
+}
+
+.team-page .headshot-wrapper-small img {
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.team-page .advisor-team-section h1 {
+  margin-bottom: 30px;
+}
+
+.team-page .advisor-team-section .headshot-wrapper {
+  width: 120px;
+  height: 120px;
+}
+
+.team-page .name {
+  margin: 1.25rem auto 0px auto;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.team-page .name a, .team-page .name a:hover {
+  color: #061d2a;
+}
+
+.team-page .title {
+  margin: 0px auto 1.25rem auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #638298;
+}
+
+.team-page .bio {
+  margin: 0.625rem auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #061d2a;
+}
+
+.team-page .core-team-section > div > .row {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.team-page .contributing-team-section > div > .row {
+  position: relative;
+}
+
+.team-page .contributing-team-section h1:first-of-type {
+  margin-bottom: 0;
+}
+
+.team-page .contributing-team-section h1 + h1 {
+  margin-top: 0;
+}
+
+.team-page .advisor-team-section > div > .row {
+  position: relative;
+}
+
+.team-page .action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 6.25rem;
+}
+
+.team-page .join-team-section h1 {
+  margin-bottom: 1rem;
+}
+
+.team-page .join-team-section .subtitle {
+  text-align: center;
+  margin-bottom: 3.125rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 575px) {
+  .team-page .action-buttons {
+    flex-direction: column;
+  }
+
+  .team-page .action-buttons .btn {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
 }

@@ -58,10 +58,13 @@ def file_get_contents(filename):
         else:
             return file.read()
 
-def concat_asset_files(filenames):
+def concat_asset_files(filenames, joinWithSemicolon=False):
     """
     Concats css or javascript files together with a comment containing the filename
     at the top of each file.
     """
-    contents = ["/* %s */\n\n%s" % (filename, file_get_contents(filename)) for filename in filenames]
-    return "\n\n\n\n".join(contents) 
+    contents = ["/* %s */\n\n %s" % (filename, file_get_contents(filename)) for filename in filenames]
+    if joinWithSemicolon:
+        return "\n\n;\n\n".join(contents) 
+    else:
+        return "\n\n\n\n".join(contents)
