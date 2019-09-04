@@ -1,0 +1,20 @@
+.countdown-timer .dial > .dial-svg {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  margin: 2rem 0;
+  border-radius: 100%;
+  transform: rotate(-90deg);
+}
+
+.countdown-timer .dial > .dial-svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #dbe6eb;
+  stroke-width: 0.75rem;
+}
+
+.countdown-timer .dial > .dial-svg .active-arc {
+  stroke: #007cff;
+  stroke-linecap: round;
+}
