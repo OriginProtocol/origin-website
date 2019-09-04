@@ -318,8 +318,9 @@ def assets_all_styles():
     return Response(concat_asset_files([
         "static/css/vendor-bootstrap-4.0.0-beta2.css",
         "static/css/style.css",
-        "static/css/footer.css",
         "static/css/common.css",
+        "static/css/footer.css",
+        "static/css/components/countdown-timer.css",
         "static/css/pages/team.css",
         "static/css/pages/token.css",
         "static/css/alertify.css",
@@ -336,7 +337,7 @@ def assets_all_javascript():
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
         "static/js/script.js"
-    ]), mimetype="application/javascript")
+    ], True), mimetype="application/javascript")
 
 @app.context_processor
 def inject_partners():
