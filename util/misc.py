@@ -31,32 +31,12 @@ def get_real_ip():
     else:
         return request.remote_addr or 'untrackable'
 
-def resolve_inline_css_imports(filename, file_contents):
-    """
-    Replaces the `import()` statement with those files contents
-    Open Ended Question: What happens with cyclic import?
-    """
-    # Array of relative CSS URLs
-    matches = re.findall(r'\@import url\([\'\"]([^\)]+)[\'\"]\);', file_contents)
-
-    # Base path of the file
-    basePath = os.path.split(filename)[0]
-    
-    normalizedFilenames = [os.path.normpath(os.path.join(basePath, relativeUrl)) for relativeUrl in matches]
-
-    contents = ["/* %s */\n\n %s" % (filename, file_get_contents(filename)) for filename in normalizedFilenames]
-    contents.append(file_contents.replace('@import url(', '// Resolved: @import url('))
-    return "\n\n\n\n".join(contents)
-
 def file_get_contents(filename):
     """
     Returns file contents as a string.
     """
     with open(filename) as file:
-        if filename.endswith(".css"):
-            return resolve_inline_css_imports(filename, file.read())
-        else:
-            return file.read()
+        return file.read()
 
 def concat_asset_files(filenames):
     """
