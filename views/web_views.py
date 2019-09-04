@@ -317,7 +317,11 @@ def partners_interest():
 def assets_all_styles():
     return Response(concat_asset_files([
         "static/css/vendor-bootstrap-4.0.0-beta2.css",
-        "static/css/app.css",
+        "static/css/style.css",
+        "static/css/footer.css",
+        "static/css/common.css",
+        "static/css/pages/team.css",
+        "static/css/pages/token.css",
         "static/css/alertify.css",
         "static/css/animate.css"
     ]), mimetype="text/css")

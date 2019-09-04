@@ -46,7 +46,7 @@ def resolve_inline_css_imports(filename, file_contents):
 
     contents = ["/* %s */\n\n %s" % (filename, file_get_contents(filename)) for filename in normalizedFilenames]
     contents.append(file_contents.replace('@import url(', '// Resolved: @import url('))
-    return "\n\n;\n\n".join(contents)
+    return "\n\n\n\n".join(contents)
 
 def file_get_contents(filename):
     """
@@ -64,4 +64,4 @@ def concat_asset_files(filenames):
     at the top of each file.
     """
     contents = ["/* %s */\n\n %s" % (filename, file_get_contents(filename)) for filename in filenames]
-    return "\n\n;\n\n".join(contents) 
+    return "\n\n\n\n".join(contents) 
