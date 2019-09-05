@@ -1,5 +1,5 @@
-$("#mailing-list").submit(function(event) {
-  $.post('/mailing-list/join', $('form').serialize(), function(data) {
+function submitEmailForm (event) {
+  $.post('/mailing-list/join', $(event.target).serialize(), function(data) {
       $("#signup-result").html(data);
       alertify.log(data, "default");
       fbq('track', 'Lead');
@@ -7,7 +7,10 @@ $("#mailing-list").submit(function(event) {
     'json'
   );
   event.preventDefault();
-});
+}
+
+$("#mailing-list").submit(submitEmailForm);
+$("#mailing-list-footer").submit(submitEmailForm);
 
 function presaleFormSubmit(event) {
   $.post('/presale/join', $('form').serialize(), function(data) {
@@ -99,21 +102,86 @@ $('[data-toggle="tooltip"]').tooltip({
 
 // REDESIGN 2019 START
 $(function() {
-  var onVideoPlay = function(videoButtonId, videoElementId){
-    $(`#${videoButtonId}`).click(function(){
-      var videoElement = document.getElementById(videoElementId);
-      if (videoElement.requestFullscreen) {
-        videoElement.requestFullscreen();
-      } else if (videoElement.mozRequestFullScreen) {
-        videoElement.mozRequestFullScreen();
-      } else if (videoElement.webkitRequestFullscreen) {
-        videoElement.webkitRequestFullscreen();
-      } else if (videoElement.msRequestFullscreen) { 
-        videoElement.msRequestFullscreen();
+  function startBackgroundVideo(backgroundVideoElementId, videoSource, aspectRatio, videoButtonId, fullScreenVideoElementId) {
+
+    var playerOpts = {
+      'autoplay': true,
+      'controls': false,
+      'fullscreen': false,
+      'related': false,
+      'info': false,
+      'related': false,
+      'width': '100%',
+      'height': '100%'
+    };
+
+    var fullScreenPlayerOpts = {};
+
+    Object.assign(fullScreenPlayerOpts, playerOpts, {
+      'fullscreen': true,
+      'controls': true,
+    });
+
+    var backgroundElement = document.getElementById(backgroundVideoElementId);
+
+    if (!backgroundElement) {
+      console.warn('Can not find element with id: ', backgroundVideoElementId);
+      return;
+    }
+
+
+    var bgPlayer = new window.ytPlayer('#' + backgroundVideoElementId, playerOpts);
+    bgPlayer.load(videoSource);
+    bgPlayer.setVolume(0);
+    bgPlayer.on('ended', () => {
+      // loop
+      bgPlayer.seek(0);
+      bgPlayer.play();
+    });
+    bgPlayer.play();
+    
+    var fullPlayer = new window.ytPlayer('#' + fullScreenVideoElementId, fullScreenPlayerOpts);
+    fullPlayer.load(videoSource);
+
+    function closeFullScreen() {
+      fullPlayer.stop();
+      $('#' + fullScreenVideoElementId).addClass('d-none');
+    }  
+
+    $(document).keyup(function(e) {
+      if (e.key === "Escape") {
+        closeFullScreen()
       }
+    });
+
+    // close the video when it ends
+    fullPlayer.on('ended', () => {
+      closeFullScreen()
+    });
+
+    function handleVideoResize() {
+      var videoAspectRatio = aspectRatio;
+      var containerWidth = document.getElementById(backgroundVideoElementId).parentElement.offsetWidth;
+      var containerHeight = document.getElementById(backgroundVideoElementId).parentElement.offsetHeight;
+
+      if (containerHeight / videoAspectRatio > containerWidth) {
+        bgPlayer.setSize(containerHeight/videoAspectRatio, containerHeight);
+      } else {
+        bgPlayer.setSize(containerWidth, containerWidth*videoAspectRatio);
+      }
+    }
+
+    window.onresize = handleVideoResize;
+    handleVideoResize();
+
+    $('#' + videoButtonId).click(function() {
+      $('#' + fullScreenVideoElementId).removeClass('d-none')
+      bgPlayer.seek(0);
+      fullPlayer.play();
     });
   }
 
-  onVideoPlay('index-video-button', 'index-video');
-  onVideoPlay('about-video-button', 'about-video');
+  startBackgroundVideo('landing-video-background', 'e70bvBw1oOo', 0.56, 'index-video-button', 'landing-video')
+  startBackgroundVideo('about-video-background', 'nfWlot6h_JM', 0.56, 'about-video-button', 'about-video')
+  startBackgroundVideo('team-video-background', 'VooJP3pWv54', 0.56, 'team-video-button', 'team-video')
 });

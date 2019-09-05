@@ -12,16 +12,16 @@
 
 <main class="team-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
+    <div id="team-video" class="full-screen-video d-none" ></div>
     <div class="background-video">
-      <video id="about-video" autoplay muted loop>
-        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
-        {{gettext("Your browser does not support the video tag.")}}
-      </video>
+      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
+        <div id="team-video-background" ></div>
+      </div>
     </div>
     <div class="video-overlay"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
       <h1 class="video-title">{{gettext("Our world-class team is led by entrepreneurs and engineers from iconic tech companies")}}</h1>
-      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+      <button id="team-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         play triangle
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>

@@ -341,7 +341,8 @@ def assets_all_javascript():
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
         "static/js/script.js",
-        "static/js/countdown-timer.js"
+        "static/js/countdown-timer.js",
+        "static/js/yt-player.js"
     ], True), mimetype="application/javascript")
 
 @app.context_processor
