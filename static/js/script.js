@@ -185,3 +185,91 @@ $(function() {
   startBackgroundVideo('about-video-background', 'nfWlot6h_JM', 0.56, 'about-video-button', 'about-video')
   startBackgroundVideo('team-video-background', 'VooJP3pWv54', 0.56, 'team-video-button', 'team-video')
 });
+
+$(function() {
+  var socialSection = document.getElementById('social-media-list')
+  if (!socialSection)
+    return
+
+  var socialLegend = {
+    'Discord': {
+      'img': '/static/img/about/discord.svg',
+      'countLabel': 'members'
+    },
+    'Telegram': {
+      'img': '/static/img/about/telegram.svg',
+      'countLabel': 'members'
+    },
+    'Wechat': {
+      'img': '/static/img/about/wechat.svg',
+      'countLabel': 'followers'
+    },
+    'KaKao plus friends': {
+      'img': '/static/img/about/kakao.svg',
+      'countLabel': 'subscribers'
+    },
+    'Facebook': {
+      'img': '/static/img/about/facebook.svg',
+      'countLabel': 'followers'
+    },
+    'Twitter': {
+      'img': '/static/img/about/twitter.svg',
+      'countLabel': 'followers'
+    },
+    'Instagram': {
+      'img': '/static/img/about/instagram.svg',
+      'countLabel': 'followers'
+    },
+    'Youtube': {
+      'img': '/static/img/about/youtube.svg',
+      'countLabel': 'subscribers'
+    },
+    'Reddit': {
+      'img': '/static/img/about/reddit.svg',
+      'countLabel': 'subscribers'
+    }
+  }
+
+  function createElementFromHTML(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+    return div.firstChild; 
+  }
+
+  function intlFormat(num)
+  {
+    return new Intl.NumberFormat().format(Math.round(num*10)/10);
+  }
+
+  function formatNumber(num)
+  {
+    if(num >= 1000000)
+      return intlFormat(num/1000000)+'M';
+    if(num >= 1000)
+      return intlFormat(num/1000)+'k';
+    return intlFormat(num);
+  }
+
+
+  $.ajax({
+    url: '/social-stats'
+  })
+    .done(function( data ) {
+      if (!data || !data.stats)
+        return
+
+      data.stats.forEach(stat => {
+        var statMetadata = socialLegend[stat.name]
+        if(!statMetadata)
+          return
+
+        console.log("Appending", statMetadata, socialSection)
+        socialSection.appendChild(createElementFromHTML(
+          '<div class="d-flex flex-column social-box">' +
+            '<img src="' + statMetadata.img + '"/>' +
+            '<div class="mt-auto">' + formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel  + '</div>' +
+          '</div>'
+        ))
+      })
+    })
+});

@@ -13,6 +13,7 @@ from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 from logic.scripts import update_token_insight as insight
+from logic.views import social_stats
 import requests
 
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
@@ -200,6 +201,12 @@ def unsubscribe():
     mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
     return redirect('/', code=302)
+
+@app.route('/social-stats', methods=['GET'])
+@app.route('/<lang_code>/social-stats', methods=['GET'])
+def fetch_social_stats():
+    stats = social_stats.get_social_stats(g.current_lang)
+    return jsonify({'stats': stats})
 
 @app.route('/build-on-origin')
 @app.route('/<lang_code>/build-on-origin')
