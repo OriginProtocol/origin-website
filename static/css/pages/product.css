@@ -20,11 +20,18 @@
   margin-bottom: 6.25rem;
 }
 
+.product-page .userflow-section .userflow-step {
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem 0;
+}
+
 .product-page .userflow-section .flow-desc {
   font-size: 1.125rem;
-  text-align: center;
+  text-align: left;
   color: #fff;
-  margin-bottom: 1rem;
+  flex: 1;
+  padding-left: 1.875rem;
 }
 
 .product-page .userflow-section .flow-step {
@@ -33,14 +40,22 @@
   color: #fff;
   text-align: center;
   display: inline-block;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5rem;
-  margin: 0 0 2rem 0;
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  margin: 0;
+  flex: 3.75rem 0 0;
+  font-size: 2.25rem;
+  text-align: center;
 }
 
 .product-page .userflow-section .col-12:last-child {
   margin-bottom: 5.875rem;
+}
+
+.product-page .userflow-section .col-12 > img {
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 .product-page .features-section .product-feature {
@@ -128,6 +143,123 @@
   text-align: left;
 }
 
+.product-page .milestones-section .milestones-timeline {
+  max-width: 660px;
+  margin: 3rem auto 5rem auto;
+}
+
+.product-page .milestones-timeline .milestone {
+  width: 50%;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  padding: 0 4.5rem 0 0;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+  padding: 0 0 0 4.5rem;
+}
+
+.product-page .milestones-timeline .milestone:before {
+  content: '';
+  position: absolute;
+  right: -3.5px;
+  top: calc(0.875rem - 3.5px);
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #007cff;
+  border-radius: 50%;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed):before {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone:not(:last-child):after {
+  content: '';
+  position: absolute;
+  right: -1.5px;
+  display: inline-block;
+  width: 3px;
+  background-color: #007cff;
+  top: calc(0.875rem - 3.5px);
+  bottom: calc(-0.875rem + 3.5px);
+  z-index: -1;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed):after,
+.product-page .milestones-timeline .milestone.recent:after {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even):before {
+  left: -3.5px;
+  right: unset;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even):after {
+  left: -1.5px;
+  right: unset;
+}
+
+.product-page .milestones-timeline .milestone .step {
+  background-color: #007cff;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 auto 1.25rem auto;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed) .step {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone .step:after {
+  position: absolute;
+  right: 0;
+  height: 1px;
+  display: inline-block;
+  content: '';
+  background-color: #007cff;
+  top: 0.875rem;
+  left: calc(50% - 3rem);
+  z-index: -1;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even) .step:after {
+  left: 0;
+  right: calc(50% - 3rem);
+}
+
+.product-page .milestones-timeline .milestone:not(.completed) .step:after {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone .timestamp {
+  font-size: 1.125rem;
+  color: #007cff;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed) .timestamp {
+  color: #8fa7b7;
+}
+
+.product-page .milestones-timeline .milestone .title {
+  font-size: 1.125rem;
+  color: #111d28;
+}
+
+.product-page .milestones-timeline .milestone .title > span:not(:last-child) {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 575px) {
   .product-page .marketplaces-section .marketplace-images {
     flex-direction: column;
@@ -140,7 +272,24 @@
     margin-top: 0;
     text-align: center;
   }
-  .product-page .userflow-section .flow-desc {
-    margin-bottom: 2.5rem;
+  .product-page .userflow-section .userflow-step {
+    margin-bottom: 1rem;
   }
+
+  .product-page .milestones-timeline .milestone {
+    padding: 0 1.5rem 0 0;
+  }
+  
+  .product-page .milestones-timeline .milestone:nth-child(even) {
+    padding: 0 0 0 1.5rem;
+  }
+
+  .product-page .milestones-timeline .milestone .step:after {
+    left: calc(50% - 1.5rem);
+  }
+  
+  .product-page .milestones-timeline .milestone:nth-child(even) .step:after {
+    right: calc(50% - 1.5rem);
+  }
+  
 }
