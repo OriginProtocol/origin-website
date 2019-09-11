@@ -1,11 +1,340 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Investors") }}{% endblock %}
 
-{% block meta_description %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Investors") }}{% endblock %}
 
 {% block content %}
 
-<div>investors</div>
+{% with theme_dark=True %}
+{% include 'navbar.html' %}
+{% endwith %}  
 
+<main class="investors-page">
+  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
+    <div class="background-video">
+      <video id="about-video" autoplay muted loop>
+        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
+        {{gettext("Your browser does not support the video tag.")}}
+      </video>
+    </div>
+    <div class="video-overlay"></div>
+    <div class="contents d-flex flex-column justify-content-center align-items-center">
+      <h1 class="video-title">{{gettext("Our world-class team is led by entrepreneurs and engineers from iconic tech companies")}}</h1>
+      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+        play triangle
+      </button>
+      <div class="mt-2 text-center">{{gettext("We're backed by top investors from all over the world")}}</div>
+    </div>
+  </div>
+
+  <section class="fundraising-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Fundraising")}}</h1>
+          <div class="section-desc">{{gettext("We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform.")}}</div>
+          <img src="/static/img/investors/graph.svg" />
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="investment-counter investments">{{gettext("$38.1M")}}</div>
+          <div class="investment-caption">{{gettext("total raised to date")}}</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="investment-counter investors">{{gettext("800+")}}</div>
+          <div class="investment-caption">{{gettext("investors")}}</div>
+        </div>
+        <div class="col-12">
+          <div class="get-stake-desc">
+            {{gettext("Interested in getting a stake in Origin? Sign up to receive the latest updates.")}}
+          </div>
+          {% include 'components/email-input.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="featured-investor-section grey-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Featured Investor")}}</h1>
+        </div>
+        <div class="col-12">
+          <div id="featuredInvestors" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#featuredInvestors" data-slide-to="0" class="active"></li>
+              <li data-target="#featuredInvestors" data-slide-to="1"></li>
+              <li data-target="#featuredInvestors" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="featured-investor">
+                  <div class="investor-data">
+                    <div class="investor-quote">
+                      {{gettext("\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\"")}}
+                    </div>
+                    <div class="investor-info">
+                      <div class="investor-name">
+                        {{gettext("Rodolfo Gonzalez")}}
+                      </div>
+                      <div class="investor-title">
+                        {{gettext("Partner, Foundation Capital")}}
+                      </div>
+                    </div>
+                    <div class="actions">
+                      <a href="" class="btn btn-primary-outline btn-inverse">Watch Rodolfo talk about Origin</a>
+                    </div>
+                  </div>
+                  <div class="investor-image">
+                    <img src="/static/img/investors/featured/rodolfo@3x.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="featured-investor">
+                  <div class="investor-data">
+                    <div class="investor-quote">
+                      {{gettext("\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\"")}}
+                    </div>
+                    <div class="investor-info">
+                      <div class="investor-name">
+                        {{gettext("Rodolfo Gonzalez")}}
+                      </div>
+                      <div class="investor-title">
+                        {{gettext("Partner, Foundation Capital")}}
+                      </div>
+                    </div>
+                    <div class="actions">
+                      <a href="" class="btn btn-primary-outline btn-inverse">Watch Rodolfo talk about Origin</a>
+                    </div>
+                  </div>
+                  <div class="investor-image">
+                    <img src="/static/img/investors/featured/rodolfo@3x.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="featured-investor">
+                  <div class="investor-data">
+                    <div class="investor-quote">
+                      {{gettext("\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\"")}}
+                    </div>
+                    <div class="investor-info">
+                      <div class="investor-name">
+                        {{gettext("Rodolfo Gonzalez")}}
+                      </div>
+                      <div class="investor-title">
+                        {{gettext("Partner, Foundation Capital")}}
+                      </div>
+                    </div>
+                    <div class="actions">
+                      <a href="" class="btn btn-primary-outline btn-inverse">Watch Rodolfo talk about Origin</a>
+                    </div>
+                  </div>
+                  <div class="investor-image">
+                    <img src="/static/img/investors/featured/rodolfo@3x.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="vc-section blue-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("We are backed by top venture capital firms and investors in Silicon Valley and around the world")}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="vc-section blue-section vc-firms">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="country-name">{{gettext("United States")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/pantera@3x.png" />
+            <div class="firm-name">{{gettext("Pantera Capital")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/foundation-capital@3x.png" />
+            <div class="firm-name">{{gettext("Foundation Capital")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/blocktower-capital@3x.png" />
+            <div class="firm-name">{{gettext("Blocktower Capital")}}</div>
+          </div>
+          <div class="country-name">{{gettext("Germany")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/1-kx@3x.png" />
+            <div class="firm-name">{{gettext("1kx")}}</div>
+          </div>
+          <div class="country-name">{{gettext("United Kingdom")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/blockchain@3x.png" />
+            <div class="firm-name">{{gettext("Blockchain.com")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/eterna-capital@3x.png" />
+            <div class="firm-name">{{gettext("Eterna Capital")}}</div>
+          </div>
+          <div class="country-name">{{gettext("Saudi Arabia")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/kbw-ventures@3x.png" />
+            <div class="firm-name">{{gettext("KBW Ventures")}}</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="country-name">{{gettext("China")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/preangel@3x.png" />
+            <div class="firm-name">{{gettext("PreAngel Fund")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/fbg@3x.png" />
+            <div class="firm-name">{{gettext("FBG")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/snz-holdings@3x.png" />
+            <div class="firm-name">{{gettext("SNZ Holdings")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/continue-capital.png" />
+            <div class="firm-name">{{gettext("Continue Capital")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/block-assist@3x.png" />
+            <div class="firm-name">{{gettext("BLockAsset")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/blockvc@3x.png" />
+            <div class="firm-name">{{gettext("BlockVC")}}</div>
+          </div>
+          <div class="country-name">{{gettext("Russia")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/cryptobazaar@3x.png" />
+            <div class="firm-name">{{gettext("Crypto Bazaar")}}</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="country-name">{{gettext("Hong Kong")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/sora-ventures@3x.png" />
+            <div class="firm-name">{{gettext("Sora Ventures")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/kenetic-capital@3x.png" />
+            <div class="firm-name">{{gettext("Kenetic Capital")}}</div>
+          </div>
+          <div class="country-name">{{gettext("Korea")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/hashed@3x.png" />
+            <div class="firm-name">{{gettext("Hashed")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/metaps@3x.png" />
+            <div class="firm-name">{{gettext("Metaps+")}}</div>
+          </div>
+          <div class="country-name">{{gettext("Japan")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/smart-contract@3x.png" />
+            <div class="firm-name">{{gettext("Smart Contract")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/gumi@3x.png" />
+            <div class="firm-name">{{gettext("Gumi")}}</div>
+          </div>
+          <div class="country-name">{{gettext("Singapore")}}</div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/spartan@3x.png" />
+            <div class="firm-name">{{gettext("Spartan")}}</div>
+          </div>
+          <div class="vc-firm">
+            <img src="/static/img/investors/vc/qcp@3x.png" />
+            <div class="firm-name">{{gettext("QCP Capital")}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="individual-investors-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Individual Investors")}}</h1>
+          <div class="section-desc">
+            {{gettext("We are supported by some of the best angel investors and previous founders in Silicon Valley.")}}
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-sm-row flex-column flex-wrap align-items-center justify-content-sm-center justify-content-around">
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img src="/static/img/investors/gary.png" class="headshot" alt="Gary Tan headshot">
+          </div>
+          <div class="name">
+            {{ gettext("Gary Tan") }}
+          </div>
+          <div class="title">
+          {{ gettext("Partner, Y Combinator") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img src="/static/img/investors/alex.png" class="headshot" alt="Alexis Ohanian headshot">
+          </div>
+          <div class="name">
+            {{ gettext("Alexis Ohanian") }}
+          </div>
+          <div class="title">
+          {{ gettext("Founder, Reddit") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img src="/static/img/investors/gil.png" class="headshot" alt="Gil Penchina headshot">
+          </div>
+          <div class="name">
+            {{ gettext("Gil Penchina") }}
+          </div>
+          <div class="title">
+          {{ gettext("Angel Investor") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img src="/static/img/investors/steve.png" class="headshot" alt="Steve Jang headshot">
+          </div>
+          <div class="name">
+            {{ gettext("Steve Jang") }}
+          </div>
+          <div class="title">
+          {{ gettext("Advisor & Angel, Uber") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img src="/static/img/investors/randall.png" class="headshot" alt="Randall Kalpan headshot">
+          </div>
+          <div class="name">
+            {{ gettext("Randall Kalpan") }}
+          </div>
+          <div class="title">
+          {{ gettext("Founder, Akamai") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include 'footer.html' %}
+</main>
+
+{% endblock %}
+
+{% block extra_scripts %}
 {% endblock %}

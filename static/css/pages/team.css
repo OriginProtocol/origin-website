@@ -16,14 +16,14 @@
   margin: 0 auto;
 }
 
-.team-page .team-member {
+.team-member {
   max-width: 230px;
   margin: 1.25rem 0 6.25rem 0;
 }
 
-.team-page .advisor-team-section .team-member {
+.advisor-team-section .team-member, .individual-investors-section .team-member {
   margin-bottom: 1.25rem;
-  padding: 0 1rem;
+  padding: 0 2.5rem;
 }
 
 .team-page .core-team-section .team-member {
@@ -31,28 +31,28 @@
   margin-right: auto;
 }
 
-.team-page .headshot-wrapper {
+.team-member .headshot-wrapper {
   text-align: center;
   width: 140px;
   height: 140px;
   margin: 1.25rem auto;
 }
 
-.team-page .headshot-wrapper img {
+.team-member .headshot-wrapper img {
   box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 100px;
   height: 100%;
   width: 100%;
 }
 
-.team-page .headshot-wrapper-small {
+.team-member .headshot-wrapper-small {
   text-align: center;
   width: 92px;
   height: 92px;
   margin: 10px auto;
 }
 
-.team-page .headshot-wrapper-small img {
+.team-member .headshot-wrapper-small img {
   box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 50px;
   height: 100%;
@@ -68,18 +68,18 @@
   height: 120px;
 }
 
-.team-page .name {
+.team-member .name {
   margin: 1.25rem auto 0px auto;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 400;
 }
 
-.team-page .name a, .team-page .name a:hover {
+.team-member .name a, .team-member .name a:hover {
   color: #061d2a;
 }
 
-.team-page .title {
+.team-member .title {
   margin: 0px auto 1.25rem auto;
   text-align: center;
   font-weight: 500;

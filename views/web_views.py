@@ -326,7 +326,8 @@ def assets_all_styles():
         "static/css/pages/product.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",
-        "static/css/pages/videos.css"
+        "static/css/pages/videos.css",
+        "static/css/pages/investors.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js')
