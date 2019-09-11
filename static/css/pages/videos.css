@@ -9,6 +9,11 @@
 
 .videos-page .category-tab-groups {
   margin-bottom: 2.25rem;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: scroll;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .video-item {
@@ -77,11 +82,6 @@
 
 .video-item .watch-link span {
   font-size: 0.75rem;
-}
-
-.videos-page .category-tab-groups {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .videos-page .category-tab-groups .category-tab {
