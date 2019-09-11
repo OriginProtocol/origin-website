@@ -1,6 +1,6 @@
 .landing-page h1 {
   font-family: Poppins;
-  font-size: 2.375rem;
+  font-size: 1.9rem;
   font-weight: normal;
   text-align: center;
   line-height: normal;
@@ -82,7 +82,7 @@
 .countdown-block .clock {
   font-size: 3.8rem;
   font-weight: 500;
-  padding: 40px;
+  width: 500px;
 }
 
 .countdown-block .clock .subtitle {
@@ -114,9 +114,9 @@
 .email-form .email-input {
   border: 0px;
   border-bottom: solid 1px #bdcbd5;
-  min-width: 300px;
+  min-width: 200px;
   font-family: Lato;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   color: #061d2a;
 }
 
@@ -139,24 +139,25 @@
 }
 
 .buy-sell-block .marketplace {
-  margin-top: 76px;
-  text-align: left;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .buy-sell-block .marketplace .title {
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .buy-sell-block .marketplace .text {
   line-height: 1.39;
-  max-width: 330px;
+  max-width: 300px;
   font-size: 1.125rem;
 }
 
 .vc-backed .button,
 .buy-sell-block .marketplace .button {
   font-size: 1.125rem;
+  max-width: 300px;
   width: 100%;
   border-radius: 26px;
   border: solid 1px var(--white);
@@ -281,6 +282,10 @@
   padding: 20px;
 }
 
+.world-class .team_img {
+  max-width: 90%;
+}
+
 .vc-backed {
   background-color: #007cff;
   color: white;
@@ -304,12 +309,13 @@
 
 .vc-backed .bottom img {
   margin: 10px;
-  max-height: 12px;
+  max-height: 10px;
 }
 
 .vc-backed .contents .button {
   width: auto;
   padding: 12px 32px;
+  white-space: nowrap;
 }
 
 .featured-partner {
@@ -419,11 +425,25 @@
 
 .recent-news .tiles-holder .tile img {
   margin-bottom: 21px;
+  width: 100%;
 }
 
 .recent-news .white-button-blue-border {
   margin-top: 60px;
   margin-bottom: 70px;
+}
+
+.recent-news .tiles-holder a {
+  margin-top: 17px;
+}
+
+.landing-page .countdown-timer {
+  width: 345px;
+}
+
+.landing-page .video-item {
+  display: block;
+  max-width: 320px;
 }
 
 /* sm + */
@@ -434,6 +454,37 @@
     margin: 15px;
     max-height: 16px;
   }
+
+  .vc-backed .bottom img {
+    margin: 15px;
+    max-height: 16px;
+  }
+
+  .landing-page .countdown-timer {
+    width: 500px;
+  }
+
+  .buy-sell-block .marketplace {
+    margin-top: 76px;
+    text-align: left;
+  }
+
+  .buy-sell-block .marketplace .title {
+    text-align: left;
+  }
+
+  .email-form .email-input {
+    font-size: 1.75rem;
+    min-width: 300px;
+  }
+
+  .buy-sell-block .marketplace .text {
+    max-width: 300px;
+  }
+
+  .buy-sell-block .marketplace .button {
+    max-width: 600px;
+  }
 }
 
 /* md + */
@@ -443,6 +494,10 @@
   .vc-backed .bottom img {
     margin: 21px;
     max-height: 26px;
+  }
+
+  .landing-page h1 {
+    font-size: 2.375rem;
   }
 }
 

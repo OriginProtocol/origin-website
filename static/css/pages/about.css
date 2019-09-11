@@ -1,6 +1,6 @@
 .about-page h1 {
   font-family: Poppins;
-  font-size: 2.375rem;
+  font-size: 1.9rem;
   font-weight: normal;
   text-align: center;
   line-height: normal;
@@ -17,6 +17,7 @@
 .about-page .team-photo {
   margin-top: 86px;
   margin-bottom: 102px;
+  max-width: 90%
 }
 
 .about-page .blue-section {
@@ -30,7 +31,7 @@
   font-weight: normal;
 }
 
-.about-page .blue-section .section-text{
+.about-page .blue-section .section-text {
   font-family: Lato;
   font-size: 1.125rem;
   font-weight: normal;
@@ -38,9 +39,23 @@
   line-height: normal;
 }
 
+.about-page .white-section img,
+.about-page .blue-section img {
+  max-width: 70%;
+}
+
 .about-page .section-content {
   max-width: 940px;
   width: 100%;
+}
+
+.about-page .section-content .image {
+  padding: 40px 0px;
+}
+
+.about-page .section-content .text-block {
+  padding: 40px 24px;
+  text-align: center;
 }
 
 .about-page .white-section {
@@ -99,15 +114,16 @@
 
 .social-media-section #social-media-list {
   max-width: 1000px;
-  margin: 10px 110px;
+  margin: 10px 10px;
   margin-bottom: 90px;
 }
+
 .social-media-section h1 {
   margin-bottom: 0px;
 }
 
 .social-media-section .social-box {
-  margin: 90px 35px 0px 35px;
+  margin: 70px 20px 0px 20px;
 }
 
 .social-media-section img {
@@ -117,4 +133,28 @@
 .social-media-section h1 {
   max-width: 920px;
   margin-top: 70px;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .about-page h1 {
+    font-size: 2.375rem;
+  }
+
+  .about-page .section-content .image {
+    padding: 0px;
+  }
+
+  .about-page .section-content .text-block {
+    padding: 24px;
+    text-align: left;
+  }
+
+  .social-media-section #social-media-list {
+    margin: 10px 110px;
+  }
+
+  .social-media-section .social-box {
+    margin: 90px 35px 0px 35px;
+  }
 }

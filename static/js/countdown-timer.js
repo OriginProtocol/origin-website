@@ -124,7 +124,7 @@
     }, [bgArc, activeArc])
 
     var dial = createElement('div', {
-      class: 'dial'
+      class: 'dial d-flex'
     }, svg)
     
     element.classList.add('countdown-timer')

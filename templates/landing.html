@@ -38,28 +38,9 @@
   <div class="countdown-block d-flex flex-column justify-content-center align-items-center">
     <h1 class="clock-title">{{gettext("Token launch date")}}</h1>
     <div class="clock d-flex align-items-center justify-content-center">
-      <div class="clock-progress-bar d-flex justify-content-center align-items-center mr-5">
-        <img src="/static/img/landing/ogn-icon.svg"/>
-      </div>
-      <div class="days">
-        <div class="number">30</div>
-        <div class="subtitle">{{gettext("days")}}</div>
-      </div>
-      <div class="ml-2 mr-2"> </div>
-      <div class="hours">
-        <div class="number">23</div>
-        <div class="subtitle">{{gettext("hours")}}</div>
-      </div>
-      <div class="number ml-2 mr-2">:</div>
-      <div class="minutes">
-        <div class="number">43</div>
-        <div class="subtitle">{{gettext("minutes")}}</div>
-      </div>
-      <div class="number ml-2 mr-2">:</div>
-      <div class="seconds">
-        <div class="number">12</div>
-        <div class="subtitle">{{gettext("seconds")}}</div>
-      </div>
+      {% with timer_large=False %}
+      {% include 'components/countdown-timer.html' %}
+      {% endwith %}
     </div>
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
@@ -69,12 +50,12 @@
     </div>
   </div>
   <!-- Buy and Sell on Origin section -->
-  <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center">
+  <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
     <h1>{{gettext("Buy and Sell on Origin")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
     <div class="d-flex marketplace">
-      <img src="/static/img/landing/origin-marketplace.png">
-      <div class="d-flex flex-column">
+      <img class="d-none d-sm-flex" src="/static/img/landing/origin-marketplace.png">
+      <div class="d-flex flex-column align-items-center align-items-md-start">
         <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
         <div class="text mb-2">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
         <div class="d-flex mt-4">
@@ -97,23 +78,23 @@
   <div class="sharing-economy d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("The sharing economy is a massive opportunity waiting to be disrupted")}}</h1>
     <div class="segment-subtitle title ml-3 mr-3">{{gettext("Gross bookings are expected to reach $335B by 2025")}}</div>
-    <div class="percentages d-flex justify-content-center">
-      <div class="d-flex flex-column percentages-holder">
+    <div class="percentages d-flex justify-content-center flex-wrap">
+      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">33%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber’s average take per ride")}}</div>
         <a href="https://www.epi.org/publication/uber-and-the-labor-market-uber-drivers-compensation-wages-and-the-scale-of-uber-and-the-gig-economy/" target="_blank" class="subtitle2">www.epi.org</a>
       </div>
-      <div class="d-flex flex-column percentages-holder">
+      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">20%</div>
         <div class="subtitle1 mb-auto">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
         <a href="https://skift.com/2019/05/27/airbnb-eliminates-most-guest-fees-to-take-on-booking-holdings/" target="_blank" class="subtitle2">www.skift.com</a>
       </div>
-      <div class="d-flex flex-column percentages-holder">
+      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">30%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber driver churn by quarter")}}</div>
         <a href="https://www.vox.com/2018/2/5/16777536/uber-travis-kalanick-recruit-drivers-tipping" target="_blank" class="subtitle2">www.vox.com</a>
       </div>
-      <div class="d-flex flex-column percentages-holder">
+      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">80%</div>
         <div class="subtitle1 mb-auto">{{gettext("Airbnb Japan home-share listings removed in 2018")}}</div>
         <a href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings" target="_blank" class="subtitle2">asia.nikkei.com</a>
@@ -124,31 +105,31 @@
   <div class="decentralised-marketplaces d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Decentralized marketplaces are inevitable")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen.")}}</div>
-    <div class="tiles-holder d-flex justify-content-center">
-      <div class="d-flex flex-column tile align-items-center">
+    <div class="tiles-holder d-flex justify-content-center flex-wrap">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/fees-graphic.svg"/>
+          <img src="/static/img/landing/lower-fees.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Lower fees")}}</div>
         <div class="tile-text">{{gettext("Buyers and sellers share 20-30%% in savings when middlemen are removed")}}</div>
       </div>
-      <div class="d-flex flex-column tile align-items-center">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/incentives-graphics.svg"/>
+          <img src="/static/img/landing/better-incentives.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Better incentives")}}</div>
         <div class="tile-text">{{gettext("Everyone can own a stake in the network by contributing to its growth")}}</div>
       </div>
-      <div class="d-flex flex-column tile align-items-center">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/access-graphic.png"/>
+          <img src="/static/img/landing/increased-access.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Increased access")}}</div>
         <div class="tile-text">{{gettext("2 billion unbanked people can access new markets globally")}}</div>
       </div>
-      <div class="d-flex flex-column tile align-items-center">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/resilience-graphic.png"/>
+          <img src="/static/img/landing/more-resilience.jpg"/>
         </div>
         <div class="tile-name">{{gettext("More resilience")}}</div>
         <div class="tile-text">{{gettext("Decentralized marketplaces can’t be banned or shut down")}}</div>
@@ -159,14 +140,14 @@
   <div class="world-class d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Origin has a world-class team")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox.")}}</div>
-    <div class="d-flex logos-holder mt-4 justify-content-center align-items-center">
+    <div class="d-flex logos-holder mt-4 justify-content-center align-items-center flex-wrap">
         <img src="/static/img/landing/paypal-logo.svg"/>
         <img src="/static/img/landing/youtube-logo.svg"/>
         <img src="/static/img/landing/google-logo.svg"/>
         <img src="/static/img/landing/dropbox-logo.svg"/>
     </div>
     <a class="white-button-blue-border mt-4" href="/team">{{gettext("Learn more about our team")}}</a>
-    <img class="mt-5 mb-5 pb-3" src="/static/img/landing/team-photo.jpg"/>
+    <img class="mt-5 mb-5 pb-3 team_img" src="/static/img/landing/team-photo.jpg"/>
   </div>
   <!-- Backed by venture capital firms -->
   <div class="vc-backed screen-size-segment d-flex flex-column justify-content-between align-items-center">
@@ -189,58 +170,55 @@
   <div class="featured-partner d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Partner")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("Trips Community is building a homesharing DApp in Italy with 3,000 hosts")}}</div>
-    <div class="box d-flex">
-      <div class="col-6 text d-flex flex-column">
+    <div class="box d-flex flex-column-reverse flex-md-row">
+      <div class="col-12 col-md-6 text d-flex flex-column">
         <div>{{gettext("“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”")}}</div>
         <div class="fname mt-auto">{{gettext("Luca De Giglio")}}</div>
         <div class="position">{{gettext("Founder, Trips Community")}}</div>
       </div>
-      <img class="col-6 p-0" src="/static/img/landing/luca-photo.jpg"/>
+      <img class="col-12 col-md-6  p-0" src="/static/img/landing/luca-photo.jpg"/>
     </div>
   </div>
   <!-- Featured video -->
   <div class="featured-video d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Videos")}}</h1>
-    <div class="tiles-holder d-flex justify-content-center">
-      <div class="d-flex flex-column tile align-items-center">
-        <div class="tile-title">{{gettext("Fortune Magazine, Balancing The Ledger: Origins Mission to Decentralize Marketplaces")}}</div>
-        <div class="tile-text mb-auto">{{gettext("Fortune covers our goal to create a truly decentralized sharing...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-      </div>
-      <div class="d-flex flex-column tile align-items-center">
-        <div class="tile-title">{{gettext("The first Origin Tech Workshop in Venezuela")}}</div>
-        <div class="tile-text mb-auto">{{gettext("We teamed up with the Aktio team to host the first Origin Protocol tech workshop in Caracas.")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-      </div>
-      <div class="d-flex flex-column tile align-items-center">
-        <div class="tile-title">{{gettext("K.E.Y. Conference - Micah Alcorn")}}</div>
-        <div class="tile-text mb-auto">{{gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy pellentesque curabitur lorem ipsum dolor sit...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-      </div>
+    <div class="tiles-holder d-flex justify-content-center flex-wrap">
+      {% for video in featured_videos %}
+        <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
+          <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{ "/static/img/videos/%s_thumb.png" % (video.hash)}}" /></a>
+          <a href="{{ "/video/%s" % (video.hash)}}" class="title">
+            {{ gettext(video.title) }}
+          </a>
+          <div class="summary">
+            {{ gettext(video.summary) }}
+          </div>
+          <a class="watch-link" href="{{ "/video/%s" % (video.hash)}}">{{ gettext("Watch now") }} <span>></span></a>
+        </div>
+      {% endfor %}
     </div>
     <a class="white-button-blue-border" href="/videos">{{gettext("Watch more videos")}}</a>
   </div>
   <!-- Recent news -->
   <div class="recent-news d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Recent News")}}</h1>
-    <div class="tiles-holder d-flex justify-content-center">
-      <div class="d-flex flex-column tile align-items-center">
+    <div class="tiles-holder d-flex justify-content-center flex-wrap">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <img src="/static/img/landing/medium-header-1.jpg"/>
         <div class="tile-title">{{gettext("Announcing Origin’s Upcoming China Tour")}}</div>
         <div class="tile-text mb-auto">{{gettext("Recently, we ran an Origin Rewards campaign that showcased our sellers from Greater China and Korea to show them our appreciation. From the...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Read")}}</a>
+        <a class="align-self-start" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
-      <div class="d-flex flex-column tile align-items-center">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <img src="/static/img/landing/medium-header-2.jpg"/>
         <div class="tile-title">{{gettext("Bridging the Decentralized and Centralized Worlds")}}</div>
         <div class="tile-text mb-auto">{{gettext("At Origin, we are building a platform to enable many peer-to-peer marketplaces. Our long-term goal is to have a fully decentralized...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Read")}}</a>
+        <a class="align-self-start" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
-      <div class="d-flex flex-column tile align-items-center">
+      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <img src="/static/img/landing/medium-header-3.jpg"/>
         <div class="tile-title">{{gettext("Follow and Share on Social Media to Earn Origin Tokens")}}</div>
         <div class="tile-text mb-auto">{{gettext("To reward our early users who help us grow & bootstrap our network, we came up with Origin Rewards early this year. As Origin continues to...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Read")}}</a>
+        <a class="align-self-start" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
     </div>
     <a class="white-button-blue-border" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>

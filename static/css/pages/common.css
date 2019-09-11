@@ -24,5 +24,26 @@
 }
 
 .video-block .video-title {
-  max-width: 860px;
+  max-width: 320px;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .video-block .video-title {
+    max-width: 470px;
+  }
+}
+
+/* md + */
+@media (min-width: 768px) {
+  .video-block .video-title {
+    max-width: 500px;
+  } 
+}
+
+/* lg + */
+@media (min-width: 992px) {
+  .video-block .video-title {
+    max-width: 860px;
+  } 
 }

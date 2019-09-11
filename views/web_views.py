@@ -57,7 +57,12 @@ def beforeRequest():
 
 @app.route('/')
 def root():
-    return render_template('landing.html')
+    def filter_featured_videos(video):
+        return video['landing_page_featured']
+
+    all_videos = json.load(open('static/files/videos.json'))
+    featured_videos = filter(filter_featured_videos, all_videos)
+    return render_template('landing.html', featured_videos=featured_videos)
 
 @app.route('/robots.txt')
 def robots():
@@ -82,9 +87,15 @@ def mobile_apk():
 
 @app.route('/<lang_code>')
 def index():
+    def filter_featured_videos(video):
+        return video['landing_page_featured']
+
+    all_videos = json.load(open('static/files/videos.json'))
+    featured_videos = filter(filter_featured_videos, all_videos)
+
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
-        return render_template('landing.html')
+        return render_template('landing.html', featured_videos=featured_videos)
     # shortcut for nick
     elif 'ogn.dev' in request.url_root and g.lang_code == "tb":
         return redirect('https://originprotocol.github.io/test-builds', code=302)
@@ -285,7 +296,7 @@ def video(video_id):
             return False
 
     def filter_featured_videos(video):
-        return video['featured']
+        return video['video_page_featured']
 
 
     all_videos = json.load(open('static/files/videos.json'))
