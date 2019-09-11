@@ -12,11 +12,11 @@
 
 <main class="landing-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
+    <div id="landing-video" class="full-screen-video d-none" ></div>
     <div class="background-video">
-      <video id="index-video" autoplay muted loop>
-        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
-        {{gettext("Your browser does not support the video tag.")}}
-      </video>
+      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
+        <div id="landing-video-background" ></div>
+      </div>
     </div>
     <div class="video-overlay"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
@@ -36,7 +36,7 @@
   </div>
   <!-- Countdown section -->
   <div class="countdown-block d-flex flex-column justify-content-center align-items-center">
-    <h1 class="clock-title">Lorem ipsum dolor sit amet consectetuer adsplicing</h1>
+    <h1 class="clock-title">{{gettext("Token launch date")}}</h1>
     <div class="clock d-flex align-items-center justify-content-center">
       <div class="clock-progress-bar d-flex justify-content-center align-items-center mr-5">
         <img src="/static/img/landing/ogn-icon.svg"/>
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="email-form">
-      <form class="d-flex" method="post" action="/mailing-list/join" id="mailing-list">
+      <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
         <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter yout email")}}">
         <input class="ml-2" type="submit" value="">
       </form>
@@ -73,8 +73,8 @@
     <h1>{{gettext("Buy and Sell on Origin")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
     <div class="d-flex marketplace">
-      <img class="col-7" src="/static/img/tech-stack-graphic.png" style="height: 400px;">
-      <div class="d-flex flex-column col-7">
+      <img src="/static/img/landing/origin-marketplace.png">
+      <div class="d-flex flex-column">
         <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
         <div class="text mb-2">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
         <div class="d-flex mt-4">
@@ -101,22 +101,22 @@
       <div class="d-flex flex-column percentages-holder">
         <div class="percentage">33%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber’s average take per ride")}}</div>
-        <a href="https://www.epi.org" target="_blank" class="subtitle2">www.epi.org</a>
+        <a href="https://www.epi.org/publication/uber-and-the-labor-market-uber-drivers-compensation-wages-and-the-scale-of-uber-and-the-gig-economy/" target="_blank" class="subtitle2">www.epi.org</a>
       </div>
       <div class="d-flex flex-column percentages-holder">
         <div class="percentage">20%</div>
         <div class="subtitle1 mb-auto">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
-        <a href="https://www.skift.com" target="_blank" class="subtitle2">www.skift.com</a>
+        <a href="https://skift.com/2019/05/27/airbnb-eliminates-most-guest-fees-to-take-on-booking-holdings/" target="_blank" class="subtitle2">www.skift.com</a>
       </div>
       <div class="d-flex flex-column percentages-holder">
         <div class="percentage">30%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber driver churn by quarter")}}</div>
-        <a href="https://www.vox.com" target="_blank" class="subtitle2">www.vox.com</a>
+        <a href="https://www.vox.com/2018/2/5/16777536/uber-travis-kalanick-recruit-drivers-tipping" target="_blank" class="subtitle2">www.vox.com</a>
       </div>
       <div class="d-flex flex-column percentages-holder">
         <div class="percentage">80%</div>
         <div class="subtitle1 mb-auto">{{gettext("Airbnb Japan home-share listings removed in 2018")}}</div>
-        <a href="https://asia.nikkei.com" target="_blank" class="subtitle2">asia.nikkei.com</a>
+        <a href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings" target="_blank" class="subtitle2">asia.nikkei.com</a>
       </div>
     </div>
   </div>
@@ -218,7 +218,7 @@
         <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
       </div>
     </div>
-    <a class="white-button-blue-border" href="/team">{{gettext("Learn more about our team")}}</a>
+    <a class="white-button-blue-border" href="/videos">{{gettext("Watch more videos")}}</a>
   </div>
   <!-- Recent news -->
   <div class="recent-news d-flex flex-column justify-content-center align-items-center">

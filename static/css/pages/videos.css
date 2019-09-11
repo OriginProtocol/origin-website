@@ -16,7 +16,7 @@
   justify-content: flex-start;
 }
 
-.videos-page .video-item {
+.video-item {
   margin: 2.25rem 0;
   flex-direction: column;
   display: none;
@@ -24,7 +24,7 @@
   animation-name: slideout;
 }
 
-.videos-page .video-item.active {
+.video-item.active {
   animation-duration: 0.5s;
   animation-name: slidein;
   display: flex;
@@ -54,33 +54,33 @@
   }
 }
 
-.videos-page .video-item > a {
+.video-item > a {
   display: block;
 }
 
-.videos-page .video-item img {
-  max-width: 100%;
+.video-item img {
+  width: 100%;
   cursor: pointer;
 }
 
-.videos-page .video-item .title {
+.video-item .title {
   margin-top: 1.5rem;
   font-weight: bold;
   color: #000;
   cursor: pointer;
 }
 
-.videos-page .video-item .summary {
+.video-item .summary {
   margin-top: 1.5rem;
 }
 
-.videos-page .video-item .watch-link {
+.video-item .watch-link {
   margin-top: auto;
   padding-top: 1.5rem;
   cursor: pointer;
 }
 
-.videos-page .video-item .watch-link span {
+.video-item .watch-link span {
   font-size: 0.75rem;
 }
 

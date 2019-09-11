@@ -13,6 +13,7 @@ from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 from logic.scripts import update_token_insight as insight
+from logic.views import social_stats
 import requests
 
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
@@ -197,6 +198,12 @@ def unsubscribe():
     flash(feedback)
     return redirect('/', code=302)
 
+@app.route('/social-stats', methods=['GET'])
+@app.route('/<lang_code>/social-stats', methods=['GET'])
+def fetch_social_stats():
+    stats = social_stats.get_social_stats(g.current_lang)
+    return jsonify({'stats': stats})
+
 @app.route('/build-on-origin')
 @app.route('/<lang_code>/build-on-origin')
 def build_on_origin():
@@ -262,6 +269,35 @@ def product():
 def ognToken():
     return render_template('ognToken.html')
 
+@app.route('/video/<video_id>')
+@app.route('/<lang_code>/video/<video_id>')
+def video(video_id):
+    def remove_current_video(video):
+        if(video['hash'] == video_id):
+            return False
+        else:
+            return True
+
+    def find_current_video(video):
+        if(video['hash'] == video_id):
+            return True
+        else:
+            return False
+
+    def filter_featured_videos(video):
+        return video['featured']
+
+
+    all_videos = json.load(open('static/files/videos.json'))
+
+    featured_videos = filter(remove_current_video, filter(filter_featured_videos, all_videos))
+
+    videoList = filter(find_current_video, all_videos)
+    if (len(videoList) == 0):
+        return render_template('404.html'), 404
+
+    return render_template('video.html', featured_videos=featured_videos, video=videoList[0])
+
 @app.route('/videos')
 @app.route('/<lang_code>/videos')
 def videos():
@@ -326,6 +362,7 @@ def assets_all_styles():
         "static/css/pages/product.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",
+        "static/css/pages/video.css",
         "static/css/pages/videos.css",
         "static/css/pages/investors.css"
     ]), mimetype="text/css")
@@ -341,6 +378,7 @@ def assets_all_javascript():
         "static/js/vendor-wow.min.js",
         "static/js/script.js",
         "static/js/countdown-timer.js",
+        "static/js/yt-player.js",
         "static/js/videos.js"
     ], True), mimetype="application/javascript")
 
