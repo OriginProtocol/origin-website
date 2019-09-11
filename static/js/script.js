@@ -102,8 +102,31 @@ $('[data-toggle="tooltip"]').tooltip({
 
 // REDESIGN 2019 START
 $(function() {
-  function startBackgroundVideo(backgroundVideoElementId, videoSource, aspectRatio, videoButtonId, fullScreenVideoElementId) {
+  function handleVideoResize(backgroundVideoElementId, videoAspectRatio, isVideoPlayer, bgPlayer) {
+    var videoElement = document.getElementById(backgroundVideoElementId)
+    var containerWidth = videoElement.parentElement.offsetWidth;
+    var containerHeight = videoElement.parentElement.offsetHeight;
 
+    if (containerHeight / videoAspectRatio > containerWidth) {
+      var width = containerHeight/videoAspectRatio;
+      if (isVideoPlayer){
+        bgPlayer.setSize(width, containerHeight);
+      } else {
+        videoElement.style.width = width + "px";
+        videoElement.style.height = containerHeight + "px";
+      }
+    } else {
+      var height = containerWidth*videoAspectRatio;
+      if (isVideoPlayer) {
+        bgPlayer.setSize(containerWidth, height);
+      } else {
+        videoElement.style.width = containerWidth + "px";
+        videoElement.style.height = height + "px";
+      }
+    }
+  }
+
+  function setupYoutubeVideoElement(backgroundElementId, videoSource, aspectRatio, videoButtonId, fullScreenVideoElementId, bgElementIsVideo) {
     var playerOpts = {
       'autoplay': true,
       'controls': false,
@@ -122,24 +145,29 @@ $(function() {
       'controls': true,
     });
 
-    var backgroundElement = document.getElementById(backgroundVideoElementId);
-
+    var backgroundElement = document.getElementById(backgroundElementId);
     if (!backgroundElement) {
-      console.warn('Can not find element with id: ', backgroundVideoElementId);
+      console.warn('Can not find element with id: ', backgroundElementId);
       return;
     }
 
-
-    var bgPlayer = new window.ytPlayer('#' + backgroundVideoElementId, playerOpts);
-    bgPlayer.load(videoSource);
-    bgPlayer.setVolume(0);
-    bgPlayer.on('ended', () => {
-      // loop
-      bgPlayer.seek(0);
+    if (bgElementIsVideo) {
+      var bgPlayer = new window.ytPlayer('#' + backgroundElementId, playerOpts);
+      bgPlayer.load(videoSource);
+      bgPlayer.setVolume(0);
+      bgPlayer.on('ended', () => {
+        // loop
+        bgPlayer.seek(0);
+        bgPlayer.play();
+      });
       bgPlayer.play();
-    });
-    bgPlayer.play();
-    
+    }
+      
+    // video source is stored in data-video-source property
+    if (!bgElementIsVideo) {
+      videoSource = $('#video-page-video').attr("data-video-source");
+    }
+
     var fullPlayer = new window.ytPlayer('#' + fullScreenVideoElementId, fullScreenPlayerOpts);
     fullPlayer.load(videoSource);
 
@@ -159,31 +187,27 @@ $(function() {
       closeFullScreen()
     });
 
-    function handleVideoResize() {
-      var videoAspectRatio = aspectRatio;
-      var containerWidth = document.getElementById(backgroundVideoElementId).parentElement.offsetWidth;
-      var containerHeight = document.getElementById(backgroundVideoElementId).parentElement.offsetHeight;
-
-      if (containerHeight / videoAspectRatio > containerWidth) {
-        bgPlayer.setSize(containerHeight/videoAspectRatio, containerHeight);
-      } else {
-        bgPlayer.setSize(containerWidth, containerWidth*videoAspectRatio);
-      }
+    function callHandleVideoResize() {
+      handleVideoResize(backgroundElementId, aspectRatio, bgElementIsVideo, bgPlayer);
     }
 
-    window.onresize = handleVideoResize;
-    handleVideoResize();
+    window.onresize = callHandleVideoResize;
+    callHandleVideoResize();
 
     $('#' + videoButtonId).click(function() {
       $('#' + fullScreenVideoElementId).removeClass('d-none')
-      bgPlayer.seek(0);
+      if (bgElementIsVideo) {
+        bgPlayer.seek(0);
+      }
+
       fullPlayer.play();
     });
   }
 
-  startBackgroundVideo('landing-video-background', 'e70bvBw1oOo', 0.56, 'index-video-button', 'landing-video')
-  startBackgroundVideo('about-video-background', 'nfWlot6h_JM', 0.56, 'about-video-button', 'about-video')
-  startBackgroundVideo('team-video-background', 'VooJP3pWv54', 0.56, 'team-video-button', 'team-video')
+  setupYoutubeVideoElement('landing-video-background', 'e70bvBw1oOo', 0.56, 'index-video-button', 'landing-video', true)
+  setupYoutubeVideoElement('about-video-background', 'nfWlot6h_JM', 0.56, 'about-video-button', 'about-video', true)
+  setupYoutubeVideoElement('team-video-background', 'VooJP3pWv54', 0.56, 'team-video-button', 'team-video', true)
+  setupYoutubeVideoElement('video-page-video-background', null, 0.56, 'video-page-video-button', 'video-page-video', false)
 });
 
 $(function() {
@@ -263,7 +287,6 @@ $(function() {
         if(!statMetadata)
           return
 
-        console.log("Appending", statMetadata, socialSection)
         socialSection.appendChild(createElementFromHTML(
           '<div class="d-flex flex-column social-box">' +
             '<img src="' + statMetadata.img + '"/>' +

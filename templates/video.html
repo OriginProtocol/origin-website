@@ -12,15 +12,15 @@
 
 <main class="video-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="about-video" class="full-screen-video d-none" ></div>
+    <div id="video-page-video" data-video-source="{{"%s" % (video.hash)}}" class="full-screen-video d-none" ></div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <img src="/static/img/videos/zZcOdbYo7ys.png"/>
+        <img id="video-page-video-background" src="{{"/static/img/videos/%s.png" % (video.hash)}}"/>
       </div>
     </div>
     <div class="video-overlay"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+      <button id="video-page-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
@@ -29,34 +29,26 @@
   <!-- Video info -->
   <div class="video-info d-flex flex-column justify-content-center align-items-center">
     <div class="container d-flex flex-column">
-      <h1 class="segment-title ml-0 mr-4">{{gettext("Video Title Goes Here and Can Be Long")}}</h1>
-      <div>{{gettext("Share")}}</div>
+      <h1 class="segment-title ml-0 mr-4">{{gettext(video.title)}}</h1>
+      <div class="share">{{gettext("Share")}}</div>
       <div class="d-flex share-items">
         <div id="facebook-share"><img src="/static/img/video/facebook.svg"/></div>
         <div id="twitter-share"><img src="/static/img/video/twitter.svg"/></div>
         <div id="link-share"><img src="/static/img/video/link.svg"/></div>
       </div>
-      <div class="tiles-holder d-flex justify-content-center align-self-center">
-        <div class="d-flex flex-column tile align-items-center">
-          <div class="tile-title">{{gettext("Fortune Magazine, Balancing The Ledger: Origins Mission to Decentralize Marketplaces")}}</div>
-          <div class="tile-text mb-auto">{{gettext("Fortune covers our goal to create a truly decentralized sharing...")}}</div>
-          <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-        </div>
-        <div class="d-flex flex-column tile align-items-center">
-          <div class="tile-title">{{gettext("The first Origin Tech Workshop in Venezuela")}}</div>
-          <div class="tile-text mb-auto">{{gettext("We teamed up with the Aktio team to host the first Origin Protocol tech workshop in Caracas.")}}</div>
-          <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-        </div>
-        <div class="d-flex flex-column tile align-items-center">
-          <div class="tile-title">{{gettext("K.E.Y. Conference - Micah Alcorn")}}</div>
-          <div class="tile-text mb-auto">{{gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy pellentesque curabitur lorem ipsum dolor sit...")}}</div>
-          <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-        </div>
-        <div class="d-flex flex-column tile align-items-center">
-          <div class="tile-title">{{gettext("K.E.Y. Conference - Micah Alcorn")}}</div>
-          <div class="tile-text mb-auto">{{gettext("Lorem ipsum dolor sit amet consectetuer adsplicing nonummy pellentesque curabitur lorem ipsum dolor sit...")}}</div>
-          <a class="align-self-start" href="/#">{{gettext("Watch now")}}</a>
-        </div>
+      <div class="tiles-holder d-flex justify-content-start align-self-center flex-wrap">
+        {% for video in featured_videos %}
+          <div class="col-12 col-md-3 video-item">
+            <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{"/static/img/videos/%s_thumb.png" % (video.hash)}}" /></a>
+            <a href="{{ "/video/%s" % (video.hash)}}" class="title">
+              {{ gettext(video.title) }}
+            </a>
+            <div class="summary">
+              {{ gettext(video.summary) }}
+            </div>
+            <a class="watch-link" href="{{ "/video/%s" % (video.hash)}}">{{ gettext("Watch now") }} <span>></span></a>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
