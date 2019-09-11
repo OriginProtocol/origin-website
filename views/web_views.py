@@ -21,6 +21,8 @@ import google.oauth2.credentials
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 
+import json
+
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
 babel = Babel(app)
@@ -95,15 +97,9 @@ def index():
 @app.route('/<lang_code>/team')
 def team():
     # fetch our list of contributors from the DB
-    contributors = db_models.Contributor.query.all()
+    contributors = db_models.Contributor.query.all()    
 
-    # community team
-    community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
-                 {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
-                 {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
-                 {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
-                 {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
-    return render_template('team.html', contributors=contributors, community=community)
+    return render_template('team.html', contributors=contributors)
 
 @app.route('/admin')
 @app.route('/<lang_code>/admin')
@@ -269,7 +265,8 @@ def ognToken():
 @app.route('/videos')
 @app.route('/<lang_code>/videos')
 def videos():
-    return render_template('videos.html')
+    data = json.load(open('static/files/videos.json'))
+    return render_template('videos.html', videos=data)
 
 @app.route('/privacy')
 @app.route('/<lang_code>/privacy')
@@ -317,18 +314,19 @@ def partners_interest():
 def assets_all_styles():
     return Response(concat_asset_files([
         "static/css/vendor-bootstrap-4.0.0-beta2.css",
+        "static/css/alertify.css",
+        "static/css/animate.css",
         "static/css/style.css",
         "static/css/common.css",
         "static/css/footer.css",
         "static/css/components/countdown-timer.css",
+        "static/css/pages/common.css",
         "static/css/pages/team.css",
         "static/css/pages/token.css",
         "static/css/pages/product.css",
-        "static/css/alertify.css",
-        "static/css/animate.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",
-        "static/css/pages/common.css"
+        "static/css/pages/videos.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js')
@@ -341,7 +339,8 @@ def assets_all_javascript():
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
         "static/js/script.js",
-        "static/js/countdown-timer.js"
+        "static/js/countdown-timer.js",
+        "static/js/videos.js"
     ], True), mimetype="application/javascript")
 
 @app.context_processor

@@ -1,4 +1,4 @@
-(() => {
+(function () {
   function createElement(tag, props, children) {
     var namespace
 
@@ -186,7 +186,7 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', onDOMReady);
+  document.addEventListener('DOMContentLoaded', onDOMReady)
 
   window.CountdownTimer = CountdownTimer
 })()

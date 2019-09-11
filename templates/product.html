@@ -110,28 +110,33 @@
         <div class="col-12">
             <h1>{{gettext("How it works")}}</h1>
         </div>
-        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
-          <h1 class="flow-step">1</h1>
-          <div class="flow-desc">
-            {{gettext("Buyers search and browse for seller listings on the blockchain through DApps")}}
-          </div>
+        <div class="col-12 col-md-6">
+          <img src="/static/img/product/smartcontract.png">
         </div>
-        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
-          <h1 class="flow-step">2</h1>
-          <div class="flow-desc">
-            {{gettext("Buyers submit offers and escrowed payments to our Marketplace smart contract")}}
+        <div class="col-12 col-md-6">
+          <div class="userflow-step">
+            <h1 class="flow-step">1</h1>
+            <div class="flow-desc">
+              {{gettext("Buyers search and browse for seller listings on the blockchain through DApps")}}
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
-          <h1 class="flow-step">3</h1>
-          <div class="flow-desc">
-            {{gettext("Sellers accept or reject offers from prospective buyers, then fulfill active offers")}}
+          <div class="userflow-step">
+            <h1 class="flow-step">2</h1>
+            <div class="flow-desc">
+              {{gettext("Buyers submit offers and escrowed payments to our Marketplace smart contract")}}
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
-          <h1 class="flow-step">4</h1>
-          <div class="flow-desc">
-            {{gettext("After offers are finalized, the smart contract releases escrowed payments to sellers")}}
+          <div class="userflow-step">
+            <h1 class="flow-step">3</h1>
+            <div class="flow-desc">
+              {{gettext("Sellers accept or reject offers from prospective buyers, then fulfill active offers")}}
+            </div>
+          </div>
+          <div class="userflow-step">
+            <h1 class="flow-step">4</h1>
+            <div class="flow-desc">
+              {{gettext("After offers are finalized, the smart contract releases escrowed payments to sellers")}}
+            </div>
           </div>
         </div>
       </div>
@@ -155,6 +160,89 @@
       <div class="row">
         <div class="col-12">
           <h1>{{gettext("Milestones")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="milestones-timeline">
+            <div class="milestone completed">
+              <div class="step">1</div>
+              <div class="timestamp">{{gettext("May 2017")}}</div>
+              <div class="title">{{gettext("Begin initial development</div")}}>
+            </div>
+            <div class="milestone completed">
+              <div class="step">2</div>
+              <div class="timestamp">{{gettext("September 2017")}}</div>
+              <div class="title">{{gettext("Released initial whitepaper</div")}}>
+            </div>
+            <div class="milestone completed">
+              <div class="step">3</div>
+              <div class="timestamp">{{gettext("December 2017")}}</div>
+              <div class="title">{{gettext("Launched Alpha on Ethereum testnet")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">4</div>
+              <div class="timestamp">{{gettext("October 2018")}}</div>
+              <div class="title">{{gettext("Launched Beta on Ethereum mainnet")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">5</div>
+              <div class="timestamp">{{gettext("February 2019")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched Marketplace Creator 1.0 and our first mobile apps")}}</span>
+                <span>{{("Supported first partner app launches")}}</span>
+              </div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">6</div>
+              <div class="timestamp">{{gettext("April 2019")}}</div>
+              <div class="title">{{gettext("Launched Origin Rewards")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">7</div>
+              <div class="timestamp">{{gettext("July 2019")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched www.shoporigin.com and new mobile apps")}}</span>
+                <span>{{("Launched Meta Transactions")}}</span>
+              </div>
+            </div>
+            <div class="milestone completed recent">
+              <div class="step">8</div>
+              <div class="timestamp">{{gettext("September 2019")}}</div>
+              <div class="title">{{gettext("Launch OGN Commissions")}}</div>
+            </div>
+            <div class="milestone future">
+              <div class="step">9</div>
+              <div class="timestamp">{{gettext("Q4 2019")}}</div>
+              <div class="title">
+                  <span>{{gettext("Launch Mainnet 1.0")}}</span>
+                  <span>{{gettext("Launch OGN as payment token")}}</span>
+                  <span>{{gettext("Distribute investor OGN tokens")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">10</div>
+              <div class="timestamp">{{gettext("Q1 2020")}}</div>
+              <div class="title">
+                  <span>{{gettext("Launch off-chain payments")}}</span>
+                  <span>{{gettext("Launch Marketplace Creator 2.0")}}</span>
+                  <span>{{gettext("Launch Origin Nodes")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">11</div>
+              <div class="timestamp">{{gettext("Q2 2020")}}</div>
+              <div class="title">
+                  <span>{{gettext("Launch new Developer APIs and expand developer adoption")}}</span>
+                  <span>{{gettext("Launch Meta Transactions Relayer program")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">12</div>
+              <div class="timestamp">{{gettext("Q3 2020")}}</div>
+              <div class="title">
+                  {{gettext("Launch OGN as governance token")}}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

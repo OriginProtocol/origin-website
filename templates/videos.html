@@ -1,11 +1,42 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
 
-{% block meta_description %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
 
 {% block content %}
 
-<div>videos</div>
+{% include 'navbar.html' %}
+
+<main class="videos-page">
+  <section class="videos-tabbed-view-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Origin Videos</h1>
+          <div class="category-tab-groups">
+            <a href="#" class="category-tab" data-category-group="investor">{{ gettext("Investor Testimonial Videos") }}</a>
+            <a href="#" class="category-tab" data-category-group="employee">{{ gettext("Employee Videos") }}</a>
+            <a href="#" class="category-tab" data-category-group="meetup">{{ gettext("Meetup Videos") }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {% for video in videos %}
+          <div class="col-12 col-md-3 video-item" data-category="{{video.category}}">
+            <a href="#"></a><img src="{{ video.featuredImage }}" /></a>
+            <a href="#" class="title">
+              {{ gettext(video.title) }}
+            </a>
+            <div class="summary">
+              {{ gettext(video.summary) }}
+            </div>
+            <a class="watch-link" href="#">{{ gettext("Watch now") }} <span>></span></a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
 
 {% endblock %}
