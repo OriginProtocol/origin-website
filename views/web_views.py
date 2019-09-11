@@ -273,6 +273,11 @@ def product():
 def ognToken():
     return render_template('ognToken.html')
 
+@app.route('/video')
+@app.route('/<lang_code>/video')
+def video():
+    return render_template('video.html')
+
 @app.route('/videos')
 @app.route('/<lang_code>/videos')
 def videos():
@@ -335,7 +340,8 @@ def assets_all_styles():
         "static/css/animate.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",
-        "static/css/pages/common.css"
+        "static/css/pages/common.css",
+        "static/css/pages/video.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js')
