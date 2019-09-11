@@ -15,10 +15,38 @@
   margin: 2.25rem 0;
   flex-direction: column;
   display: none;
+  animation-duration: 0.5s;
+  animation-name: slideout;
 }
 
 .videos-page .video-item.active {
+  animation-duration: 0.5s;
+  animation-name: slidein;
   display: flex;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    margin-top: 4.25rem;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 2.25rem
+  }
+}
+
+@keyframes slideout {
+  0% {
+    opacity: 1;
+    margin-top: 2.25rem
+  }
+
+  to {
+    opacity: 0;
+    margin-top: 4.25rem;
+  }
 }
 
 .videos-page .video-item > a {
