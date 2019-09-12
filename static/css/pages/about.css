@@ -35,8 +35,24 @@
   font-family: Lato;
   font-size: 1.125rem;
   font-weight: normal;
-  max-width: 340px;
-  line-height: normal;
+  max-width: 427px;
+  line-height: 1.61;
+}
+
+.screen-size-segment.white-section,
+.screen-size-segment.blue-section {
+  min-height: 580px;
+  max-height: 1200px;
+  height: auto;
+}
+
+.about-page .white-section .links a,
+.about-page .blue-section .links a {
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.61;
+  font-weight: normal;
+  color: #bdcbd5;
 }
 
 .about-page .white-section img,
@@ -73,8 +89,8 @@
   font-family: Lato;
   font-size: 1.125rem;
   font-weight: normal;
-  max-width: 404px;
-  line-height: normal;
+  max-width: 427px;
+  line-height: 1.61;
 }
 
 .about-page .better-incentives.white-section .section-text,
@@ -152,9 +168,22 @@
 
   .social-media-section #social-media-list {
     margin: 10px 110px;
+    padding-bottom: 90px;
+  }
+
+  .about-page .white-section img,
+  .about-page .blue-section img {
+    max-width: 100%;
   }
 
   .social-media-section .social-box {
     margin: 90px 35px 0px 35px;
+  }
+
+  .screen-size-segment.white-section,
+  .screen-size-segment.blue-section {
+    min-height: 580px;
+    max-height: 800px;
+    height: 100vh;
   }
 }
