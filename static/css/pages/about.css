@@ -1,11 +1,3 @@
-.about-page h1 {
-  font-family: Poppins;
-  font-size: 1.9rem;
-  font-weight: normal;
-  text-align: center;
-  line-height: normal;
-}
-
 .about-page .segment-title {
   margin-top: 88px;
 }
@@ -25,9 +17,10 @@
   color: white;
 }
 
+.about-page .white-section .section-name,
 .about-page .blue-section .section-name {
   font-family: Poppins;
-  font-size: 2.375rem;
+  font-size: 1.75rem;
   font-weight: normal;
 }
 
@@ -77,12 +70,6 @@
 .about-page .white-section {
   background-color: white;
   color: #061d2a;
-}
-
-.about-page .white-section .section-name {
-  font-family: Poppins;
-  font-size: 2.375rem;
-  font-weight: normal;
 }
 
 .about-page .white-section .section-text{
@@ -153,10 +140,6 @@
 
 /* sm + */
 @media (min-width: 576px) {
-  .about-page h1 {
-    font-size: 2.375rem;
-  }
-
   .about-page .section-content .image {
     padding: 0px;
   }
@@ -185,5 +168,10 @@
     min-height: 580px;
     max-height: 800px;
     height: 100vh;
+  }
+
+  .about-page .white-section .section-name,
+  .about-page .blue-section .section-name {
+    font-size: 2.375rem;
   }
 }
