@@ -11,9 +11,11 @@
   bottom: 0px;
 }
 
-.video-block .bottom img {
-  margin: 10px;
-  max-height: 12px;
+.video-block .bottom img,
+.buy-sell-block .bottom img,
+.vc-backed .bottom img {
+  margin: 15px;
+  max-height: 16px;
 }
 
 .vc-backed .play-button,
@@ -21,7 +23,7 @@
   width: 108px;
   height: 108px;
   border: solid 1px var(--white);
-  border-radius: 54px;
+  border-radius: 50%;
   cursor: pointer;
   background: transparent;
   color: white;
@@ -100,6 +102,10 @@
   height: 100px;
 }
 
+.email-form {
+  margin-bottom: 80px;
+}
+
 .email-form input[type=submit] {
     background: url(/static/img/triangle.png) no-repeat center;
     border: 0;
@@ -174,11 +180,6 @@
 
 .buy-sell-block .opaque {
   opacity: 0.7;
-}
-
-.buy-sell-block .bottom img {
-  margin: 10px;
-  max-height: 12px;
 }
 
 .sharing-economy {
@@ -286,6 +287,10 @@
   max-width: 90%;
 }
 
+.vc-backed h1 {
+  font-size: 1.75rem;
+}
+
 .vc-backed {
   background-color: #007cff;
   color: white;
@@ -305,11 +310,6 @@
   font-size: 1.125rem;
   font-weight: normal;
   text-align: center;
-}
-
-.vc-backed .bottom img {
-  margin: 10px;
-  max-height: 10px;
 }
 
 .vc-backed .contents .button {
@@ -448,20 +448,13 @@
 
 /* sm + */
 @media (min-width: 576px) {
-  .video-block .bottom img,
-  .buy-sell-block .bottom img,
-  .vc-backed .bottom img {
-    margin: 15px;
-    max-height: 16px;
-  }
-
   .vc-backed .bottom img {
     margin: 15px;
     max-height: 16px;
   }
 
   .landing-page .countdown-timer {
-    width: 500px;
+    width: 570px;
   }
 
   .buy-sell-block .marketplace {
@@ -471,6 +464,8 @@
 
   .buy-sell-block .marketplace .title {
     text-align: left;
+    font-family: 'Poppins';
+    font-weight: 500;
   }
 
   .email-form .email-input {
@@ -498,6 +493,14 @@
 
   .decentralised-marketplaces .tiles-holder {
     margin-bottom: 97px;
+  }
+
+  .landing-page h1 {
+    font-family: Poppins;
+    font-size: 2.375rem;
+    font-weight: normal;
+    text-align: center;
+    line-height: normal;
   }
 }
 

@@ -25,7 +25,7 @@
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
-      <div class="bottom d-flex justify-content-center mb-5">
+      <div class="bottom d-flex justify-content-center mb-5 flex-wrap">
         <img src="/static/img/landing/techcrunch.svg"/>
         <img src="/static/img/landing/forbes.svg"/>
         <img src="/static/img/landing/inc.svg"/>
@@ -35,7 +35,7 @@
     </div>
   </div>
   <!-- Countdown section -->
-  <div class="countdown-block d-flex flex-column justify-content-center align-items-center">
+  <div class="countdown-block d-flex flex-column justify-content-between align-items-center">
     <h1 class="clock-title">{{gettext("Token launch date")}}</h1>
     <div class="clock d-flex align-items-center justify-content-center">
       {% with timer_large=False %}
@@ -44,7 +44,7 @@
     </div>
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
-        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter yout email")}}">
+        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
         <input class="ml-2" type="submit" value="">
       </form>
     </div>
@@ -54,7 +54,7 @@
     <h1>{{gettext("Buy and Sell on Origin")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
     <div class="d-flex marketplace">
-      <img class="d-none d-sm-flex" src="/static/img/landing/origin-marketplace.png">
+      <img class="d-none d-sm-flex mw-568" src="/static/img/landing/origin-marketplace@3x.png">
       <div class="d-flex flex-column align-items-center align-items-md-start">
         <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
         <div class="text mb-2">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="opaque mt-3">{{gettext("Available on")}}</div>
-    <div class="bottom d-flex justify-content-center mb-4">
+    <div class="bottom d-flex justify-content-center mb-4 flex-wrap">
       <img src="/static/img/landing/coinbase.svg"/>
       <img src="/static/img/landing/imtoken.svg"/>
       <img src="/static/img/landing/trustwallet.svg"/>
@@ -108,28 +108,28 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/lower-fees.jpg"/>
+          <img class="mw-220" src="/static/img/landing/lower-fees@3x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Lower fees")}}</div>
         <div class="tile-text">{{gettext("Buyers and sellers share 20-30%% in savings when middlemen are removed")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/better-incentives.jpg"/>
+          <img class="mw-220" src="/static/img/landing/better-incentives@3x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Better incentives")}}</div>
         <div class="tile-text">{{gettext("Everyone can own a stake in the network by contributing to its growth")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/increased-access.jpg"/>
+          <img class="mw-220" src="/static/img/landing/increased-access@3x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Increased access")}}</div>
         <div class="tile-text">{{gettext("2 billion unbanked people can access new markets globally")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img src="/static/img/landing/more-resilience.jpg"/>
+          <img class="mw-220" src="/static/img/landing/more-resilience@3x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("More resilience")}}</div>
         <div class="tile-text">{{gettext("Decentralized marketplaces can’t be banned or shut down")}}</div>
@@ -147,7 +147,9 @@
         <img src="/static/img/landing/dropbox-logo.svg"/>
     </div>
     <a class="white-button-blue-border mt-4" href="/team">{{gettext("Learn more about our team")}}</a>
-    <img class="mt-5 mb-5 pb-3 team_img" src="/static/img/landing/team-photo.jpg"/>
+    <div class="mw-940">
+      <img class="mt-5 mb-5 pb-3 team_img" src="/static/img/landing/team-photo@3x.jpg"/>
+    </div>
   </div>
   <!-- Backed by venture capital firms -->
   <div class="vc-backed screen-size-segment d-flex flex-column justify-content-between align-items-center">
@@ -157,13 +159,13 @@
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
       <div class="watch mt-2 mb-auto">{{gettext("Watch the video")}}</div>
-      <div class="bottom d-flex justify-content-center mb-5">
+      <div class="bottom d-flex justify-content-center mb-5 flex-wrap">
         <img src="/static/img/landing/pantera.svg"/>
         <img src="/static/img/landing/foundation-capital.svg"/>
         <img src="/static/img/landing/preangel.svg"/>
         <img src="/static/img/landing/hashed.svg"/>
       </div>
-      <a class="button mt-4 mb-4" href="/investors">{{gettext("Learn more about our investors")}}</a>
+      <a class="button mb-6" href="/investors">{{gettext("Learn more about our investors")}}</a>
     </div>
   </div>
   <!-- Featured partner -->
@@ -176,7 +178,7 @@
         <div class="fname mt-auto">{{gettext("Luca De Giglio")}}</div>
         <div class="position">{{gettext("Founder, Trips Community")}}</div>
       </div>
-      <img class="col-12 col-md-6  p-0" src="/static/img/landing/luca-photo.jpg"/>
+      <img class="col-12 col-md-6  p-0" src="/static/img/landing/luca-photo@3x.jpg"/>
     </div>
   </div>
   <!-- Featured video -->
@@ -203,25 +205,25 @@
     <h1 class="segment-title ml-4 mr-4">{{gettext("Recent News")}}</h1>
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
-        <img src="/static/img/landing/medium-header-1.jpg"/>
+        <img src="/static/img/landing/medium-header-1@3x.jpg"/>
         <div class="tile-title">{{gettext("Announcing Origin’s Upcoming China Tour")}}</div>
         <div class="tile-text mb-auto">{{gettext("Recently, we ran an Origin Rewards campaign that showcased our sellers from Greater China and Korea to show them our appreciation. From the...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a class="align-self-start" target="_blank" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
-        <img src="/static/img/landing/medium-header-2.jpg"/>
+        <img src="/static/img/landing/medium-header-2@3x.jpg"/>
         <div class="tile-title">{{gettext("Bridging the Decentralized and Centralized Worlds")}}</div>
         <div class="tile-text mb-auto">{{gettext("At Origin, we are building a platform to enable many peer-to-peer marketplaces. Our long-term goal is to have a fully decentralized...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a class="align-self-start" target="_blank" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
-        <img src="/static/img/landing/medium-header-3.jpg"/>
+        <img src="/static/img/landing/medium-header-3@3x.jpg"/>
         <div class="tile-title">{{gettext("Follow and Share on Social Media to Earn Origin Tokens")}}</div>
         <div class="tile-text mb-auto">{{gettext("To reward our early users who help us grow & bootstrap our network, we came up with Origin Rewards early this year. As Origin continues to...")}}</div>
-        <a class="align-self-start" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a class="align-self-start" target="_blank" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
     </div>
-    <a class="white-button-blue-border" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>
+    <a class="white-button-blue-border" target="_blank" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>
   </div>
 
   {% include 'footer.html' %}
