@@ -1,11 +1,3 @@
-.about-page h1 {
-  font-family: Poppins;
-  font-size: 2.375rem;
-  font-weight: normal;
-  text-align: center;
-  line-height: normal;
-}
-
 .about-page .segment-title {
   margin-top: 88px;
 }
@@ -17,6 +9,7 @@
 .about-page .team-photo {
   margin-top: 86px;
   margin-bottom: 102px;
+  max-width: 90%
 }
 
 .about-page .blue-section {
@@ -24,18 +17,41 @@
   color: white;
 }
 
+.about-page .white-section .section-name,
 .about-page .blue-section .section-name {
   font-family: Poppins;
-  font-size: 2.375rem;
+  font-size: 1.75rem;
   font-weight: normal;
 }
 
-.about-page .blue-section .section-text{
+.about-page .blue-section .section-text {
   font-family: Lato;
   font-size: 1.125rem;
   font-weight: normal;
-  max-width: 340px;
-  line-height: normal;
+  max-width: 427px;
+  line-height: 1.61;
+  text-align: left;
+}
+
+.screen-size-segment.white-section,
+.screen-size-segment.blue-section {
+  min-height: 580px;
+  max-height: 1200px;
+  height: auto;
+}
+
+.about-page .white-section .links a,
+.about-page .blue-section .links a {
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.61;
+  font-weight: normal;
+  color: #bdcbd5;
+}
+
+.about-page .white-section img,
+.about-page .blue-section img {
+  max-width: 70%;
 }
 
 .about-page .section-content {
@@ -43,23 +59,27 @@
   width: 100%;
 }
 
+.about-page .section-content .image {
+  padding: 40px 0px;
+}
+
+.about-page .section-content .text-block {
+  padding: 40px 24px;
+  text-align: center;
+}
+
 .about-page .white-section {
   background-color: white;
   color: #061d2a;
 }
 
-.about-page .white-section .section-name {
-  font-family: Poppins;
-  font-size: 2.375rem;
-  font-weight: normal;
-}
-
-.about-page .white-section .section-text{
+.about-page .white-section .section-text {
   font-family: Lato;
   font-size: 1.125rem;
   font-weight: normal;
-  max-width: 404px;
-  line-height: normal;
+  max-width: 427px;
+  line-height: 1.61;
+  text-align: left;
 }
 
 .about-page .better-incentives.white-section .section-text,
@@ -99,15 +119,16 @@
 
 .social-media-section #social-media-list {
   max-width: 1000px;
-  margin: 10px 110px;
+  margin: 10px 10px;
   margin-bottom: 90px;
 }
+
 .social-media-section h1 {
   margin-bottom: 0px;
 }
 
 .social-media-section .social-box {
-  margin: 90px 35px 0px 35px;
+  margin: 70px 20px 0px 20px;
 }
 
 .social-media-section img {
@@ -117,4 +138,42 @@
 .social-media-section h1 {
   max-width: 920px;
   margin-top: 70px;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .about-page .section-content .image {
+    padding: 0px;
+  }
+
+  .about-page .section-content .text-block {
+    padding: 24px;
+    text-align: left;
+  }
+
+  .social-media-section #social-media-list {
+    margin: 10px 110px;
+    padding-bottom: 90px;
+  }
+
+  .about-page .white-section img,
+  .about-page .blue-section img {
+    max-width: 100%;
+  }
+
+  .social-media-section .social-box {
+    margin: 90px 35px 0px 35px;
+  }
+
+  .screen-size-segment.white-section,
+  .screen-size-segment.blue-section {
+    min-height: 580px;
+    max-height: 800px;
+    height: 100vh;
+  }
+
+  .about-page .white-section .section-name,
+  .about-page .blue-section .section-name {
+    font-size: 2.375rem;
+  }
 }

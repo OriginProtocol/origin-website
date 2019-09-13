@@ -93,7 +93,7 @@
 
     console.log(props)
 
-    var size = props.large ? 70 : 50
+    var size = props.large ? 80 : 60
     var radius = size - 10
     var circumference = Math.PI * radius * 2
 
@@ -124,7 +124,7 @@
     }, [bgArc, activeArc])
 
     var dial = createElement('div', {
-      class: 'dial'
+      class: 'dial d-flex'
     }, svg)
     
     element.classList.add('countdown-timer')
@@ -140,7 +140,7 @@
 
     element.appendChild(timeComponent)
 
-    var interval = setInterval(function () {
+    const intervalFunction = function () {
       var now = new Date(Date.now())
 
       var diff = getDateDiff(now, props.endDate)
@@ -161,7 +161,11 @@
 
       activeArc.style.strokeDashoffset = completionAngle
 
-    }, 1000)
+    }
+
+    // also call immediately so there is not 1 second delay before timer starts
+    intervalFunction();
+    var interval = setInterval(intervalFunction, 1000)
   }
 
   function onDOMReady() {

@@ -3,10 +3,10 @@
 {% else %}
 <div class="input-group email-input light">
 {% endif %}
-  <input type="text" class="form-control" placeholder="Your email" aria-label="Your email" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-    <button class="btn btn-outline-primary" type="button">
-      <i class="fas fa-arrow-right"></i>
-    </button>
+  <div class="email-form">
+    <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
+      <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter yout email")}}">
+      <input class="ml-2" type="submit" value="">
+    </form>
   </div>
 </div>

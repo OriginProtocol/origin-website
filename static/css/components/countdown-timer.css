@@ -5,8 +5,8 @@
 }
 
 .countdown-timer .dial {
-  margin-right: 3rem;
-  background-image: url('/static/img/ognToken/ogn-icon.svg');
+  margin-right: 1rem;
+  background-image: url('/static/img/ognToken/ogn-icon-empty.svg');
   background-size: 2.875rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,8 +14,8 @@
 
 .countdown-timer .dial > .dial-svg {
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   margin: 2rem 0;
   border-radius: 100%;
   transform: rotate(-90deg);
@@ -34,15 +34,19 @@
 }
 
 .countdown-timer.large .dial > .dial-svg {
-  height: 140px;
-  width: 140px;
+  height: 160px;
+  width: 160px;
+}
+
+.countdown-timer.large .dial > .dial-svg circle {
+  stroke-width: 0.75rem;
 }
 
 .countdown-timer .dial > .dial-svg circle {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
   stroke: #dbe6eb;
-  stroke-width: 0.75rem;
+  stroke-width: 0.45rem;
 }
 
 .countdown-timer .dial > .dial-svg .active-arc {
@@ -54,8 +58,8 @@
   flex: 1;
   display: flex;
   align-items: center;
-  width: 380px;
-  max-width: 380px;
+  width: 410px;
+  max-width: 410px;
 }
 
 .countdown-timer.large .countdown-time-left {
@@ -70,10 +74,12 @@
 }
 
 .countdown-time-left .time-group .time-value {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0;
   position: relative;
   text-align: center;
+  text-align: center;
+  font-weight: 500;
 }
 
 .countdown-time-left .time-group .time-label {
@@ -87,7 +93,6 @@
   top: 0;
   bottom: 0;
   right: -0.375rem;
-  line-height: 3.5rem;
 }
 
 

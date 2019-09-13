@@ -72,6 +72,10 @@
 
 .investors-page .fundraising-section .get-stake-desc {
   margin: 3.5rem 0;
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #061d2a;
 }
 
 .investors-page .fundraising-section .investment-counter.investors {
@@ -171,5 +175,29 @@
 
   .investors-page .featured-investor-section .featured-investor .investor-data {
     padding: 1rem;
+  }
+
+  .investors-page .vc-firm img {
+    margin-right: 0.5rem;
+    flex: 50px 0 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .investors-page .vc-firm .firm-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .investors-page .vc-firm img {
+    margin-right: 0.5rem;
+    flex: 50px 0 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .investors-page .vc-firm .firm-name {
+    font-size: 1rem;
   }
 }

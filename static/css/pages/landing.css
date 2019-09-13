@@ -1,6 +1,6 @@
 .landing-page h1 {
   font-family: Poppins;
-  font-size: 2.375rem;
+  font-size: 1.9rem;
   font-weight: normal;
   text-align: center;
   line-height: normal;
@@ -11,9 +11,11 @@
   bottom: 0px;
 }
 
-.video-block .bottom img {
-  margin: 10px;
-  max-height: 12px;
+.video-block .bottom img,
+.buy-sell-block .bottom img,
+.vc-backed .bottom img {
+  margin: 15px;
+  max-height: 16px;
 }
 
 .vc-backed .play-button,
@@ -21,7 +23,7 @@
   width: 108px;
   height: 108px;
   border: solid 1px var(--white);
-  border-radius: 54px;
+  border-radius: 50%;
   cursor: pointer;
   background: transparent;
   color: white;
@@ -82,7 +84,7 @@
 .countdown-block .clock {
   font-size: 3.8rem;
   font-weight: 500;
-  padding: 40px;
+  width: 500px;
 }
 
 .countdown-block .clock .subtitle {
@@ -100,6 +102,10 @@
   height: 100px;
 }
 
+.email-form {
+  margin-bottom: 80px;
+}
+
 .email-form input[type=submit] {
     background: url(/static/img/triangle.png) no-repeat center;
     border: 0;
@@ -114,9 +120,9 @@
 .email-form .email-input {
   border: 0px;
   border-bottom: solid 1px #bdcbd5;
-  min-width: 300px;
+  min-width: 200px;
   font-family: Lato;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   color: #061d2a;
 }
 
@@ -139,24 +145,25 @@
 }
 
 .buy-sell-block .marketplace {
-  margin-top: 76px;
-  text-align: left;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .buy-sell-block .marketplace .title {
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .buy-sell-block .marketplace .text {
   line-height: 1.39;
-  max-width: 330px;
+  max-width: 300px;
   font-size: 1.125rem;
 }
 
 .vc-backed .button,
 .buy-sell-block .marketplace .button {
   font-size: 1.125rem;
+  max-width: 300px;
   width: 100%;
   border-radius: 26px;
   border: solid 1px var(--white);
@@ -173,11 +180,6 @@
 
 .buy-sell-block .opaque {
   opacity: 0.7;
-}
-
-.buy-sell-block .bottom img {
-  margin: 10px;
-  max-height: 12px;
 }
 
 .sharing-economy {
@@ -240,7 +242,7 @@
 
 .decentralised-marketplaces .tiles-holder {
   margin-top: 70px;
-  margin-bottom: 97px;
+  margin-bottom: 0px;
 }
 
 .decentralised-marketplaces .tiles-holder .tile {
@@ -281,6 +283,14 @@
   padding: 20px;
 }
 
+.world-class .team_img {
+  max-width: 90%;
+}
+
+.vc-backed h1 {
+  font-size: 1.75rem;
+}
+
 .vc-backed {
   background-color: #007cff;
   color: white;
@@ -302,14 +312,10 @@
   text-align: center;
 }
 
-.vc-backed .bottom img {
-  margin: 10px;
-  max-height: 12px;
-}
-
 .vc-backed .contents .button {
   width: auto;
   padding: 12px 32px;
+  white-space: nowrap;
 }
 
 .featured-partner {
@@ -419,6 +425,7 @@
 
 .recent-news .tiles-holder .tile img {
   margin-bottom: 21px;
+  width: 100%;
 }
 
 .recent-news .white-button-blue-border {
@@ -426,13 +433,52 @@
   margin-bottom: 70px;
 }
 
+.recent-news .tiles-holder a {
+  margin-top: 17px;
+}
+
+.landing-page .countdown-timer {
+  width: 345px;
+}
+
+.landing-page .video-item {
+  display: block;
+  max-width: 320px;
+}
+
 /* sm + */
 @media (min-width: 576px) {
-  .video-block .bottom img,
-  .buy-sell-block .bottom img,
   .vc-backed .bottom img {
     margin: 15px;
     max-height: 16px;
+  }
+
+  .landing-page .countdown-timer {
+    width: 570px;
+  }
+
+  .buy-sell-block .marketplace {
+    margin-top: 76px;
+    text-align: left;
+  }
+
+  .buy-sell-block .marketplace .title {
+    text-align: left;
+    font-family: 'Poppins';
+    font-weight: 500;
+  }
+
+  .email-form .email-input {
+    font-size: 1.75rem;
+    min-width: 300px;
+  }
+
+  .buy-sell-block .marketplace .text {
+    max-width: 300px;
+  }
+
+  .buy-sell-block .marketplace .button {
+    max-width: 600px;
   }
 }
 
@@ -443,6 +489,18 @@
   .vc-backed .bottom img {
     margin: 21px;
     max-height: 26px;
+  }
+
+  .decentralised-marketplaces .tiles-holder {
+    margin-bottom: 97px;
+  }
+
+  .landing-page h1 {
+    font-family: Poppins;
+    font-size: 2.375rem;
+    font-weight: normal;
+    text-align: center;
+    line-height: normal;
   }
 }
 

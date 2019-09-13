@@ -207,6 +207,7 @@ $(function() {
   setupYoutubeVideoElement('landing-video-background', 'e70bvBw1oOo', 0.56, 'index-video-button', 'landing-video', true)
   setupYoutubeVideoElement('about-video-background', 'nfWlot6h_JM', 0.56, 'about-video-button', 'about-video', true)
   setupYoutubeVideoElement('team-video-background', 'VooJP3pWv54', 0.56, 'team-video-button', 'team-video', true)
+  setupYoutubeVideoElement('investors-video-background', 'J6XuNwTpZ3M', 0.56, 'investors-video-button', 'investors-video', true)
   setupYoutubeVideoElement('video-page-video-background', null, 0.56, 'video-page-video-button', 'video-page-video', false)
 });
 

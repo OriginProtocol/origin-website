@@ -12,19 +12,19 @@
 
 <main class="investors-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
+    <div id="investors-video" class="full-screen-video d-none" ></div>
     <div class="background-video">
-      <video id="about-video" autoplay muted loop>
-        <source src="/static/img/sampleVideo.mp4" type="video/mp4">
-        {{gettext("Your browser does not support the video tag.")}}
-      </video>
+      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
+        <div id="investors-video-background" ></div>
+      </div>
     </div>
     <div class="video-overlay"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
       <h1 class="video-title">{{gettext("Our world-class team is led by entrepreneurs and engineers from iconic tech companies")}}</h1>
-      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
-        play triangle
+      <button id="investors-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
+        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
-      <div class="mt-2 text-center">{{gettext("We're backed by top investors from all over the world")}}</div>
+      <div class="mt-2">{{gettext("Watch the video")}}</div>
     </div>
   </div>
 
@@ -154,7 +154,7 @@
   <section class="vc-section blue-section vc-firms">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-6 col-md-4">
           <div class="country-name">{{gettext("United States")}}</div>
           <div class="vc-firm">
             <img src="/static/img/investors/vc/pantera@3x.png" />
@@ -187,8 +187,28 @@
             <img src="/static/img/investors/vc/kbw-ventures@3x.png" />
             <div class="firm-name">{{gettext("KBW Ventures")}}</div>
           </div>
+          <div class="d-flex flex-column d-md-none">
+            <div class="country-name">{{gettext("Hong Kong")}}</div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/sora-ventures@3x.png" />
+              <div class="firm-name">{{gettext("Sora Ventures")}}</div>
+            </div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/kenetic-capital@3x.png" />
+              <div class="firm-name">{{gettext("Kenetic Capital")}}</div>
+            </div>
+            <div class="country-name">{{gettext("Korea")}}</div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/hashed@3x.png" />
+              <div class="firm-name">{{gettext("Hashed")}}</div>
+            </div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/metaps@3x.png" />
+              <div class="firm-name">{{gettext("Metaps+")}}</div>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-6 col-md-4">
           <div class="country-name">{{gettext("China")}}</div>
           <div class="vc-firm">
             <img src="/static/img/investors/vc/preangel@3x.png" />
@@ -219,8 +239,28 @@
             <img src="/static/img/investors/vc/cryptobazaar@3x.png" />
             <div class="firm-name">{{gettext("Crypto Bazaar")}}</div>
           </div>
+          <div class="d-flex flex-column d-md-none">
+            <div class="country-name">{{gettext("Japan")}}</div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/smart-contract@3x.png" />
+              <div class="firm-name">{{gettext("Smart Contract")}}</div>
+            </div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/gumi@3x.png" />
+              <div class="firm-name">{{gettext("Gumi")}}</div>
+            </div>
+            <div class="country-name">{{gettext("Singapore")}}</div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/spartan@3x.png" />
+              <div class="firm-name">{{gettext("Spartan")}}</div>
+            </div>
+            <div class="vc-firm">
+              <img src="/static/img/investors/vc/qcp@3x.png" />
+              <div class="firm-name">{{gettext("QCP Capital")}}</div>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="d-none flex-column col-md-4 d-md-flex">
           <div class="country-name">{{gettext("Hong Kong")}}</div>
           <div class="vc-firm">
             <img src="/static/img/investors/vc/sora-ventures@3x.png" />
