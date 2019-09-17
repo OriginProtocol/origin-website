@@ -91,8 +91,6 @@
       endDate: new Date('10/15/2019')
     }, props)
 
-    console.log(props)
-
     var size = props.large ? 80 : 60
     var radius = size - 10
     var circumference = Math.PI * radius * 2

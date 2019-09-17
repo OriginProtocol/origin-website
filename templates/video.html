@@ -32,9 +32,9 @@
       <h1 class="segment-title ml-0 mr-4">{{gettext(video.title)}}</h1>
       <div class="share">{{gettext("Share")}}</div>
       <div class="d-flex share-items">
-        <div id="facebook-share"><img src="/static/img/video/facebook.svg"/></div>
-        <div id="twitter-share"><img src="/static/img/video/twitter.svg"/></div>
-        <div id="link-share"><img src="/static/img/video/link.svg"/></div>
+        <a href="#" target="_blank" rel="noopener noreferer" share-video-to="facebook" id="facebook-share"><img src="/static/img/video/facebook.svg"/></a>
+        <a href="#" target="_blank" rel="noopener noreferer" share-video-to="twitter" id="twitter-share"><img src="/static/img/video/twitter.svg"/></a>
+        <a href="#" target="_blank" rel="noopener noreferer" share-video-to="link" id="link-share"><img src="/static/img/video/link.svg"/></a>
       </div>
       <div class="tiles-holder d-flex justify-content-start align-self-center flex-wrap">
         {% for video in featured_videos %}
