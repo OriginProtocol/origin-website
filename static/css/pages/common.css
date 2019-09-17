@@ -12,6 +12,12 @@ h1 {
   height: 100vh;
 }
 
+.small-screen-size-segment {
+  min-height: 580px;
+  max-height: 650px;
+  height: 100vh; 
+}
+
 .white-button-blue-border {
   font-size: 1.125rem;
   border-radius: 26px;
@@ -58,4 +64,107 @@ h1 {
   .video-block .video-title {
     max-width: 860px;
   } 
+}
+
+
+.mb-6, .my-6 {
+  margin-bottom: 4.375rem!important;
+}
+
+.mt-6, .my-6 {
+  margin-top: 4.375rem!important;
+}
+
+.mw-568 {
+  max-width: 568px!important;
+}
+
+.mw-562 {
+  max-width: 562px!important;
+}
+
+.mw-220 {
+  max-width: 220px!important;
+}
+
+.mw-940 {
+  max-width: 940px!important;
+}
+
+.mw-470 {
+  max-width: 470px!important;
+}
+
+.mw-460 {
+  max-width: 460px!important;
+}
+
+.mw-549 {
+  max-width: 549px!important;
+}
+
+.mw-461 {
+  max-width: 461px!important;
+}
+
+.mw-298 {
+  max-width: 298px!important;
+}
+
+@media (min-width: 576px) {
+  .mw-sm-298 {
+    max-width: 298px!important;
+  }
+
+  .mw-sm-568 {
+    max-width: 568px!important;
+  }
+}
+
+@media (min-width: 768px) {
+  .mw-md-298 {
+    max-width: 298px!important;
+  }
+
+  .mw-md-568 {
+    max-width: 568px!important;
+  } 
+}
+
+@media (min-width: 992px) {
+  .mw-lg-568 {
+    max-width: 568px!important;
+  }
+
+  .mw-lg-562 {
+    max-width: 562px!important;
+  }
+
+  .mw-lg-220 {
+    max-width: 220px!important;
+  }
+
+  .mw-lg-940 {
+    max-width: 940px!important;
+  }
+
+  .mw-lg-470 {
+    max-width: 470px!important;
+  }
+
+  .mw-lg-460 {
+    max-width: 460px!important;
+  }
+
+  .mw-lg-549 {
+    max-width: 549px!important;
+  }
+
+  .mw-lg-461 {
+    max-width: 461px!important;
+  }
+
+  .nav .nav-link.selected {
+    border-bottom: 2px solid var(--blue);
+  }
 }

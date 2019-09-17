@@ -6,9 +6,18 @@
   margin-bottom: 4.1875rem;
 }
 
+.tokens-page .countdown-section button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tokens-page .feature-box {
   margin-bottom: 4.1875rem;
   text-align: center;
+}
+
+.tokens-page .btn {
+  max-width: 300px;
 }
 
 .tokens-page .feature-box img {
@@ -28,7 +37,7 @@
 }
 
 .tokens-page .app-showcase {
-  padding: 8.75rem 0 6rem 0;
+  padding: 7.5rem 0 5rem 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,18 +46,21 @@
 .tokens-page .app-showcase .showcase-content {
   flex: 1;
   text-align: left;
-  max-width: 500px;
-  margin-right: auto;
+  max-width: 430px;
+  margin-right: 130px;
 }
 .tokens-page .app-showcase .showcase-image + .showcase-content {
   margin-right: 0;
-  margin-left: auto;
+  margin-left: 80px;
 }
 
 .tokens-page .app-showcase .showcase-content p {
   font-size: 1.125rem;
   margin-bottom: 3.125rem;
   margin-left: 0;
+  font-family: Lato;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 .tokens-page .app-showcase .showcase-content p span {
@@ -69,6 +81,28 @@
   margin-top: 0;
 }
 
+.tokens-page .app-showcase img {
+  max-width: 378px;
+}
+
+.tokens-page .app-showcase.image-first img {
+  max-width: 355px;
+}
+
+.tokens-page .rnd-section p {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.39;
+  max-width: 280px;
+}
+
+.tokens-page .rnd-section h3 {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tokens-page .primary-cta {
   text-align: center;
   margin-bottom: 4.375rem;
@@ -76,9 +110,48 @@
 
 @media (max-width: 575px) {
   .tokens-page .app-showcase {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .tokens-page .app-showcase.image-first {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .tokens-page .app-showcase.image-first img {
+    max-width: 190px;
+  }
+
+  .tokens-page .app-showcase img {
+    max-width: 200px;
+  }
+
+  .tokens-page .app-showcase .showcase-content h1 {
+    text-align: center;
+  }
+
+  .tokens-page .app-showcase {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+
+  .tokens-page .app-showcase .showcase-content {
+    max-width: 430px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tokens-page .app-showcase .showcase-image + .showcase-content {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .tokens-page .rewards-section .btn {
+    margin-bottom: 35px;
+  }
+
+  .tokens-page .feature-box h3 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .tokens-page .feature-box p {
+    margin: 20px 40px;
   }
 }
