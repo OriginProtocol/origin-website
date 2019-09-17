@@ -88,6 +88,7 @@
     props = Object.assign({}, {
       large: false,
       startDate: new Date('08/31/2019'),
+      placeholder: 'To be Announced',
       endDate: new Date('10/15/2019')
     }, props)
 
@@ -96,6 +97,12 @@
     var circumference = Math.PI * radius * 2
 
     var initialAngle = Math.ceil(circumference)
+  
+    if (!props.endDate) {
+      var h1Element = createElement('h1', { class: 'time-group' }, props.placeholder);
+      element.appendChild(h1Element);
+      return;
+    }
 
     var activeArc = createElement('circle', {
       r: radius,
@@ -177,6 +184,7 @@
       new CountdownTimer(timer, {
         large: timer.hasAttribute('data-large'),
         startDate: new Date(timer.getAttribute('data-startdate')),
+        placeholder: timer.getAttribute('placeholder'),
         endDate: new Date(timer.getAttribute('data-enddate'))
       })
 
