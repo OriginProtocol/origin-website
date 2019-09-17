@@ -7,7 +7,9 @@
 {% block content %}
 
 {% with theme_dark=True %}
-{% include 'navbar.html' %}
+  {% with single_video_id=video.hash %}
+    {% include 'navbar.html' %}
+  {% endwith %}  
 {% endwith %}  
 
 <main class="video-page">
