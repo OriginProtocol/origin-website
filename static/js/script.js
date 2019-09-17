@@ -318,3 +318,12 @@ $(function() {
       })
     })
 });
+
+// To set defualt language
+(function() {
+  var langRegExp = /^\/[a-z]{2}(_[a-z]{4})?(\/|$)/i
+  if(!langRegExp.test(window.location.pathname)) {
+    var currentLang = document.body.parentElement.getAttribute('lang')
+    window.location = '/' + currentLang + window.location.pathname
+  }
+})()
