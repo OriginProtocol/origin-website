@@ -171,6 +171,27 @@ $(function() {
     var fullPlayer = new window.ytPlayer('#' + fullScreenVideoElementId, fullScreenPlayerOpts);
     fullPlayer.load(videoSource);
 
+    fullPlayer.on('unstarted', function () {
+      var socialLinks = document.querySelectorAll('[share-video-to]')
+  
+      for (var i = 0; i < socialLinks.length; i++) {
+        var link = socialLinks[i]
+        var href = document.getElementById(fullScreenVideoElementId).getAttribute('src')
+        var title = document.querySelector('.segment-title')
+        switch (link.getAttribute('share-video-to')) {
+          case 'facebook':
+            href = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(href)
+            break
+          case 'twitter':
+            title = encodeURIComponent(title ? title.innerText + ' ' : '')
+            href = 'https://twitter.com/intent/tweet?text=' + title + encodeURIComponent(href)
+            break
+        }
+
+        link.setAttribute('href', href)
+      }
+    })
+
     function closeFullScreen() {
       fullPlayer.stop();
       $('#' + fullScreenVideoElementId).addClass('d-none');
@@ -297,3 +318,12 @@ $(function() {
       })
     })
 });
+
+// To set defualt language
+(function() {
+  var langRegExp = /^\/[a-z]{2,3}(_[a-z]{4})?(\/|$)/i
+  if(!langRegExp.test(window.location.pathname)) {
+    var currentLang = document.body.parentElement.getAttribute('lang')
+    window.location = '/' + currentLang + window.location.pathname
+  }
+})()

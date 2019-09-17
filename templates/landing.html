@@ -58,12 +58,18 @@
       <div class="d-flex flex-column align-items-center align-items-md-start">
         <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
         <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
+        {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
+        <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
         <div class="d-flex mt-4">
-          <a class="p-2" href="https://apps.apple.com/us/app/origin-marketplace/id1446091928" target="_blank"><img src="/static/img/landing/app-store-button.svg"></a>
-          <a class="p-2" href="https://play.google.com/store/apps/details?id=com.origincatcher" target="_blank"><img src="/static/img/landing/google-play-button.svg"></a>
+          <a class="p-2" href="https://apps.apple.com/us/app/origin-marketplace/id1446091928" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
+          <a class="p-2" href="https://play.google.com/store/apps/details?id=com.origincatcher" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
         </div>
+        {% endif %}
         <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
-        <a class="button mt-4" href="https://shoporigin.com" target="_blank">{{gettext("shoporigin.com")}}</a>
+        <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
+        {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
+          <a class="button mt-4" href="/static/files/origin-0.23.15.apk" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
+        {% endif %}
       </div>
     </div>
     <div class="opaque mt-3">{{gettext("Available on")}}</div>
@@ -82,22 +88,22 @@
       <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">33%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber’s average take per ride")}}</div>
-        <a href="https://www.epi.org/publication/uber-and-the-labor-market-uber-drivers-compensation-wages-and-the-scale-of-uber-and-the-gig-economy/" target="_blank" class="subtitle2">www.epi.org</a>
+        <a href="https://www.epi.org/publication/uber-and-the-labor-market-uber-drivers-compensation-wages-and-the-scale-of-uber-and-the-gig-economy/" target="_blank" rel="noopener noreferrer" class="subtitle2">www.epi.org</a>
       </div>
       <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">20%</div>
         <div class="subtitle1 mb-auto">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
-        <a href="https://skift.com/2019/05/27/airbnb-eliminates-most-guest-fees-to-take-on-booking-holdings/" target="_blank" class="subtitle2">www.skift.com</a>
+        <a href="https://skift.com/2019/05/27/airbnb-eliminates-most-guest-fees-to-take-on-booking-holdings/" target="_blank" rel="noopener noreferrer" class="subtitle2">www.skift.com</a>
       </div>
       <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">30%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber driver churn by quarter")}}</div>
-        <a href="https://www.vox.com/2018/2/5/16777536/uber-travis-kalanick-recruit-drivers-tipping" target="_blank" class="subtitle2">www.vox.com</a>
+        <a href="https://www.vox.com/2018/2/5/16777536/uber-travis-kalanick-recruit-drivers-tipping" target="_blank" rel="noopener noreferrer" class="subtitle2">www.vox.com</a>
       </div>
       <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
         <div class="percentage">80%</div>
         <div class="subtitle1 mb-auto">{{gettext("Airbnb Japan home-share listings removed in 2018")}}</div>
-        <a href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings" target="_blank" class="subtitle2">asia.nikkei.com</a>
+        <a href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings" target="_blank" rel="noopener noreferrer" class="subtitle2">asia.nikkei.com</a>
       </div>
     </div>
   </div>
@@ -208,22 +214,22 @@
         <img src="/static/img/landing/medium-header-1@3x.jpg"/>
         <div class="tile-title">{{gettext("Announcing Origin’s Upcoming China Tour")}}</div>
         <div class="tile-text mb-auto">{{gettext("Recently, we ran an Origin Rewards campaign that showcased our sellers from Greater China and Korea to show them our appreciation. From the...")}}</div>
-        <a class="align-self-start" target="_blank" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a class="align-self-start" target="_blank" rel="noopener noreferrer" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <img src="/static/img/landing/medium-header-2@3x.jpg"/>
         <div class="tile-title">{{gettext("Bridging the Decentralized and Centralized Worlds")}}</div>
         <div class="tile-text mb-auto">{{gettext("At Origin, we are building a platform to enable many peer-to-peer marketplaces. Our long-term goal is to have a fully decentralized...")}}</div>
-        <a class="align-self-start" target="_blank" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a class="align-self-start" target="_blank" rel="noopener noreferrer" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <img src="/static/img/landing/medium-header-3@3x.jpg"/>
         <div class="tile-title">{{gettext("Follow and Share on Social Media to Earn Origin Tokens")}}</div>
         <div class="tile-text mb-auto">{{gettext("To reward our early users who help us grow & bootstrap our network, we came up with Origin Rewards early this year. As Origin continues to...")}}</div>
-        <a class="align-self-start" target="_blank" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a class="align-self-start" target="_blank" rel="noopener noreferrer" href="/#">{{gettext("Read ")}}<span>></span></a>
       </div>
     </div>
-    <a class="white-button-blue-border" target="_blank" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>
+    <a class="white-button-blue-border" target="_blank" rel="noopener noreferrer" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>
   </div>
 
   {% include 'footer.html' %}

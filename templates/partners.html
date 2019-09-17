@@ -48,7 +48,7 @@
                 {% for partner in partners_dict[0:12] %}
                   <div class="col-12 col-sm-6 col-md-2">
                     <div class="img-graphic m-auto">
-                      <a href="{{ partner.url }}" target="_blank">
+                      <a href="{{ partner.url }}" target="_blank" rel="noopener noreferrer">
                         <img src="/static/img/partners/{{ partner.name }}.png"
                           class="{{'%s-logo wow fadeInUp' %partner.name }}"
                           title="{{ partner.desc }}"
@@ -65,7 +65,7 @@
                 {% for partner in partners_dict[12:] %}
                   <div class="col-12 col-sm-6 col-md-2">
                     <div class="img-graphic m-auto">
-                      <a href="{{ partner.url }}" target="_blank">
+                      <a href="{{ partner.url }}" target="_blank" rel="noopener noreferrer">
                         <img src="/static/img/partners/{{ partner.name }}.png"
                           class="{{'%s-logo' %partner.name }}"
                           title="{{ partner.desc }}"
