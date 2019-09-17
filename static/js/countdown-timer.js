@@ -131,12 +131,9 @@
     props.large && element.classList.add('large')
     element.appendChild(dial)
 
-    var timeComponent = buildTimeComponent({
-      days: '00',
-      hours: '00',
-      minutes: '00',
-      seconds: '00'
-    })
+    var now = new Date(Date.now())
+    var diff = getDateDiff(now, props.endDate)
+    var timeComponent = buildTimeComponent(diff)
 
     element.appendChild(timeComponent)
 
@@ -160,11 +157,10 @@
       var completionAngle = ((100 - completed) / 100) * circumference
 
       activeArc.style.strokeDashoffset = completionAngle
-
     }
 
-    // also call immediately so there is not 1 second delay before timer starts
-    intervalFunction();
+    activeArc.style.strokeDashoffset = 440
+
     var interval = setInterval(intervalFunction, 1000)
   }
 
@@ -177,8 +173,6 @@
       if (timer.hasAttribute('data-timer-loaded')) {
         continue
       }
-
-      console.log(timer)
   
       new CountdownTimer(timer, {
         large: timer.hasAttribute('data-large'),
