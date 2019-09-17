@@ -95,6 +95,8 @@
     var radius = size - 10
     var circumference = Math.PI * radius * 2
 
+    var initialAngle = Math.ceil(circumference)
+
     var activeArc = createElement('circle', {
       r: radius,
       cx: size,
@@ -157,7 +159,7 @@
       activeArc.style.strokeDashoffset = completionAngle
     }
 
-    activeArc.style.strokeDashoffset = 440
+    activeArc.style.strokeDashoffset = initialAngle
 
     var interval = setInterval(intervalFunction, 1000)
   }
