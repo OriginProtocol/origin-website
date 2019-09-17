@@ -4,7 +4,7 @@
   font-weight: normal;
   text-align: center;
   line-height: normal;
-  margin: 50px auto 27px auto;
+  margin: 40px auto 27px auto;
 }
 
 .video-block .bottom {
@@ -15,7 +15,7 @@
 .video-block .bottom img,
 .buy-sell-block .bottom img,
 .vc-backed .bottom img {
-  margin: 15px;
+  margin: 10px;
   max-height: 16px;
 }
 
@@ -139,10 +139,10 @@
 
 .buy-sell-block .segment-subtitle {
   font-family: Lato;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   text-align: center;
-  max-width: 680px;
-  margin-top: -25px;
+  max-width: 320px;
+  margin-top: -10px;
 }
 
 .buy-sell-block .marketplace {
@@ -156,9 +156,10 @@
 }
 
 .buy-sell-block .marketplace .text {
+  font-family: Lato;
   line-height: 1.39;
-  max-width: 300px;
-  font-size: 1.125rem;
+  max-width: 340px;
+  font-size: 0.875rem;
 }
 
 .vc-backed .button,
@@ -450,7 +451,7 @@
 /* sm + */
 @media (min-width: 576px) {
   .vc-backed .bottom img {
-    margin: 15px;
+    margin: 10px;
     max-height: 16px;
   }
 
@@ -476,6 +477,7 @@
 
   .buy-sell-block .marketplace .text {
     max-width: 300px;
+    font-size: 1.125rem;
   }
 
   .buy-sell-block .marketplace .button {
@@ -502,6 +504,12 @@
     font-weight: normal;
     text-align: center;
     line-height: normal;
+  }
+
+  .buy-sell-block .segment-subtitle {
+    font-size: 1.125rem;
+    max-width: 680px;
+    margin-top: -25px;
   }
 }
 
