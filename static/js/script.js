@@ -128,21 +128,22 @@ $(function() {
 
   function setupYoutubeVideoElement(backgroundElementId, videoSource, aspectRatio, videoButtonId, fullScreenVideoElementId, bgElementIsVideo) {
     var playerOpts = {
-      'autoplay': true,
-      'controls': false,
-      'fullscreen': false,
-      'related': false,
-      'info': false,
-      'related': false,
-      'width': '100%',
-      'height': '100%'
+      autoplay: true,
+      controls: false,
+      fullscreen: false,
+      related: false,
+      info: false,
+      related: false,
+      width: '100%',
+      height: '100%'
     };
 
     var fullScreenPlayerOpts = {};
 
     Object.assign(fullScreenPlayerOpts, playerOpts, {
-      'fullscreen': true,
-      'controls': true,
+      fullscreen: true,
+      controls: true,
+      playsInline: false
     });
 
     var backgroundElement = document.getElementById(backgroundElementId);
@@ -194,8 +195,51 @@ $(function() {
 
     function closeFullScreen() {
       fullPlayer.stop();
-      $('#' + fullScreenVideoElementId).addClass('d-none');
+      var el = document.getElementById(fullScreenVideoElementId)
+      el.classList.add('d-none')
+      el.onfullscreenchange = undefined
+      if (document.exitFullscreen) {
+        document.exitFullscreen()
+      } else if (document.mozExitFullScreen) {
+        document.mozExitFullScreen()
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen()
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen()
+      }
     }  
+
+    function goFullscreen() {
+      var el = document.getElementById(fullScreenVideoElementId)
+
+      var promise
+      if (el.requestFullscreen) {
+        promise = el.requestFullscreen()
+      } else if (el.mozRequestFullScreen) {
+        promise = el.mozRequestFullScreen()
+      } else if (el.webkitRequestFullscreen) {
+        promise = el.webkitRequestFullscreen()
+      } else if (el.msRequestFullscreen) {
+        promise = el.msRequestFullscreen()
+      }
+
+      if (!promise) {
+        return
+      }
+      var flag = false
+      promise
+        .then(function () {
+          el.onfullscreenchange = function () {
+            if (!flag) {
+              // Hack to ignore the first fullscreen change event
+              // We cannot differentiate fullscreen enter/exit otherwise
+              flag = true
+              return
+            }
+            closeFullScreen()
+          }
+        })
+    }
 
     $(document).keyup(function(e) {
       if (e.key === "Escape") {
@@ -216,11 +260,13 @@ $(function() {
     callHandleVideoResize();
 
     $('#' + videoButtonId).click(function() {
-      $('#' + fullScreenVideoElementId).removeClass('d-none')
+      var el = document.getElementById(fullScreenVideoElementId)
+      el.classList.remove('d-none')
       if (bgElementIsVideo) {
         bgPlayer.seek(0);
       }
 
+      goFullscreen()
       fullPlayer.play();
     });
   }
