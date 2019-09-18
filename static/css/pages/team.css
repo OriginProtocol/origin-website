@@ -10,7 +10,7 @@
 
 .team-member {
   max-width: 230px;
-  margin: 1.25rem 0 6.25rem 0;
+  margin: 1.25rem 0 3rem 0;
 }
 
 .advisor-team-section .team-member, .individual-investors-section .team-member {
@@ -31,7 +31,6 @@
 }
 
 .team-member .headshot-wrapper img {
-  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 100px;
   height: 100%;
   width: 100%;
@@ -39,8 +38,8 @@
 
 .team-member .headshot-wrapper-small {
   text-align: center;
-  width: 92px;
-  height: 92px;
+  width: 70px;
+  height: 70px;
   margin: 10px auto;
 }
 
@@ -145,5 +144,10 @@
   .advisor-team-section .team-member, .individual-investors-section .team-member {
     margin:  0.5rem;
     padding: 0;
+  }
+
+  .team-member .headshot-wrapper-small {
+    width: 92px;
+    height: 92px;
   }
 }
