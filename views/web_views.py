@@ -277,7 +277,7 @@ def product():
 
 @app.route('/ogn-token', strict_slashes=False)
 @app.route('/<lang_code>/ogn-token', strict_slashes=False)
-def ognToken():
+def ogn_token():
     return render_template('ogn-token.html')
 
 @app.route('/video/<video_id>', strict_slashes=False)
