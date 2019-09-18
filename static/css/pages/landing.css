@@ -4,7 +4,11 @@
   font-weight: normal;
   text-align: center;
   line-height: normal;
-  margin: 40px auto 27px auto;
+  margin: 70px auto 27px auto;
+}
+
+.landing-page .video-block h1 {
+  margin-top: 10px;
 }
 
 .video-block .bottom {
@@ -206,10 +210,11 @@
 
 .sharing-economy .percentages {
   margin-top: 60px;
-  margin-bottom: 75px;
+  margin-bottom: 95px;
 }
+
 .sharing-economy .percentages-holder {
-  width: 200px
+  width: 260px;
 }
 
 .sharing-economy .percentage {
@@ -226,6 +231,7 @@
   line-height: 1.21;
   text-align: center;
   font-weight: normal;
+  max-width: 230px;
 }
 
 .sharing-economy .subtitle2 {
@@ -236,6 +242,58 @@
   text-align: center;
   color: #638298;
   font-weight: normal;
+}
+
+.circular-stats {
+  width: 300px;
+  height: 304px;
+  background-size: 298px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.circular-stats .percentage {
+  font-family: Poppins;
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: #6e3bea;
+  margin-top: -10px;
+}
+
+.circular-stats .text {
+  font-family: Lato;
+  font-size: 0.73rem;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+  max-width: 150px;
+  margin-top: -25px;
+}
+
+.circular-stats.blue .percentage {
+  color: #1a82ff;
+}
+
+.circular-stats.blue .text {
+  max-width: 110px;
+}
+
+.circular-stats a {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.21;
+  text-align: center;
+  color: #638298;
+
+}
+
+.circular-stats.blue {
+  background-image: url('/static/img/landing/pie-chart-blue.svg');
+}
+
+.circular-stats.purple {
+  background-image: url('/static/img/landing/pie-chart-purple.svg');
 }
 
 .decentralised-marketplaces {
@@ -391,8 +449,13 @@
 }
 
 .featured-video .white-button-blue-border {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 70px;
+}
+
+.landing-page .vc-backed .button,
+.landing-page .white-button-blue-border {
+  font-weight: normal;
 }
 
 .recent-news {
@@ -482,6 +545,27 @@
 
   .buy-sell-block .marketplace .button {
     max-width: 600px;
+  }
+
+  .sharing-economy .percentages {
+    margin-top: 60px;
+    margin-bottom: 75px;
+  }
+
+  .circular-stats {
+    width: 410px;
+    height: 415px;
+    background-size: 408px;
+  }
+
+  .circular-stats .text {
+    font-size: 0.875rem;
+    max-width: 200px;
+    line-height: normal;
+  }
+
+  .circular-stats .percentage {
+    font-size: 5rem;
   }
 }
 
