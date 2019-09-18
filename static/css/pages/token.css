@@ -21,7 +21,7 @@
 }
 
 .tokens-page .feature-box img {
-  margin: 0 auto 1.75rem 0;
+  margin: 0 0 1.75rem 0;
   max-width: 187px;
   object-fit: contain;
   min-height: 200px;
@@ -34,6 +34,15 @@
 .tokens-page .feature-box p {
   text-align: left;
   font-size: 1.125rem;
+}
+
+.tokens-page .explanation {
+  margin: 3.5rem 0;
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #061d2a;
+  text-align: center;
 }
 
 .tokens-page .app-showcase {
@@ -49,6 +58,7 @@
   max-width: 430px;
   margin-right: 130px;
 }
+
 .tokens-page .app-showcase .showcase-image + .showcase-content {
   margin-right: 0;
   margin-left: 80px;
@@ -137,6 +147,7 @@
     margin-left: 40px;
     margin-right: 40px;
   }
+
   .tokens-page .app-showcase .showcase-image + .showcase-content {
     margin-right: 40px;
     margin-left: 40px;
@@ -153,5 +164,23 @@
 
   .tokens-page .feature-box p {
     margin: 20px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tokens-page .app-showcase img {
+    max-width: 200px;
+  }
+
+  .tokens-page .app-showcase .showcase-content {
+    margin-right: 40px;
+  }
+
+  .tokens-page .app-showcase.image-first img {
+    max-width: 190px;
+  }
+
+  .tokens-page .app-showcase .showcase-image + .showcase-content {
+    margin-left: 10px;
   }
 }

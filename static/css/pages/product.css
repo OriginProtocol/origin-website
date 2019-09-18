@@ -32,6 +32,7 @@
   color: #fff;
   flex: 1;
   padding-left: 1.875rem;
+  font-weight: normal;
 }
 
 .product-page .userflow-section .flow-step {
@@ -135,8 +136,6 @@
 }
 
 .product-page .marketplaces-section .marketplace-images img {
-  height: 2.75rem;
-  width: auto;
   margin: 0 2.375rem
 }
 
@@ -352,11 +351,15 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .product-page .milestones-timeline .milestone .title {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 400px) {
   .product-page .product-title-section {
     background-position: 100% 115%;
-    background-size: auto 75%;
+    background-size: auto 77%;
   }
 }
