@@ -275,10 +275,10 @@ def investors():
 def product():
     return render_template('product.html')
 
-@app.route('/ognToken', strict_slashes=False)
-@app.route('/<lang_code>/ognToken', strict_slashes=False)
+@app.route('/ogn-token', strict_slashes=False)
+@app.route('/<lang_code>/ogn-token', strict_slashes=False)
 def ognToken():
-    return render_template('ogntoken.html')
+    return render_template('ogn-token.html')
 
 @app.route('/video/<video_id>', strict_slashes=False)
 @app.route('/<lang_code>/video/<video_id>', strict_slashes=False)
