@@ -35,16 +35,16 @@
     </div>
   </div>
   <!-- Countdown section -->
-  <div class="countdown-block d-flex flex-column justify-content-between align-items-center">
-    <h1 class="clock-title">{{gettext("Token launch date")}}</h1>
-    <div class="clock d-flex align-items-center justify-content-center">
+  <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
+    <h1 class="clock-title"><br>{{gettext("Origin Tokens are launching soon!")}}<br><br></h1>
+    <!-- <div class="clock d-flex align-items-center justify-content-center">
       {% with timer_large=False %}
       {% include 'components/countdown-timer.html' %}
       {% endwith %}
-    </div>
+    </div> -->
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
-        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
+        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Email")}}">
         <input class="ml-2" type="submit" value="">
       </form>
     </div>
