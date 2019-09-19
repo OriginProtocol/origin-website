@@ -82,9 +82,17 @@
   text-align: left;
 }
 
-.about-page .better-incentives.white-section .section-text,
+.about-page .more-resilience.white-section .section-text,
 .about-page .access-section.blue-section .section-text {  
   max-width: 386px;
+}
+
+.about-page .more-resilience .image {
+  top: 0px;
+}
+
+.about-page .access-section .image {
+  top: 0px;
 }
 
 .the-press {
@@ -142,6 +150,14 @@
 
 /* sm + */
 @media (min-width: 576px) {
+  .about-page .more-resilience .image {
+    top: -10px;
+  }
+
+  .about-page .access-section .image {
+    top: -6px;
+  }
+
   .about-page .section-content .image {
     padding: 0px;
   }

@@ -18,13 +18,13 @@
       {% with timer_large=True %}
       {% include 'components/countdown-timer.html' %}
       {% endwith %}
-      <div class="explanation">
-        {{gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")}}
-      </div>
       <div class="mailing-list">
         {% with theme_dark=False %}
         {% include 'components/email-input.html' %}
         {% endwith %}
+      </div>
+      <div class="explanation">
+        {{gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")}}
       </div>
       <div class="primary-cta">
         <button class="btn btn-dark">Lorem Ipsum</button>
@@ -34,7 +34,7 @@
   <section class="rewards-section blue-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">
-        <div class="showcase-content">
+        <div class="showcase-content higher">
           <h1 class="mb-1">{{gettext("Origin Rewards")}}</h1>
           <p>
             {{gettext("Earn your stake of the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers.")}}

@@ -34,10 +34,6 @@
   color: white;
 }
 
-.video-block .contents {
-  z-index: 3;
-}
-
 .video-block .background-video {
   overflow: hidden;
   position: absolute;
@@ -511,6 +507,11 @@
   max-width: 320px;
 }
 
+.landing-page .segment-title {
+  line-height: 1.25;
+  margin-bottom: 45px;
+}
+
 /* sm + */
 @media (min-width: 576px) {
   .vc-backed .bottom img {
@@ -539,7 +540,7 @@
   }
 
   .buy-sell-block .marketplace .text {
-    max-width: 300px;
+    max-width: auto;
     font-size: 1.125rem;
   }
 
@@ -566,6 +567,12 @@
 
   .circular-stats .percentage {
     font-size: 5rem;
+  }
+
+  .buy-sell-block .segment-subtitle {
+    font-size: 1.125rem;
+    max-width: 680px;
+    margin-top: -25px;
   }
 }
 
