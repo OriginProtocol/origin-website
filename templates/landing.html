@@ -11,7 +11,7 @@
 {% endwith %}  
 
 <main class="landing-page">
-  <div class="video-block screen-size-segment small-screen-size-segment d-flex flex-column justify-content-center align-items-center">
+  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
     <div id="landing-video" class="full-screen-video d-none" ></div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
@@ -19,6 +19,7 @@
       </div>
     </div>
     <div class="video-overlay"></div>
+    <div class="video-overlay-gradient"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
       <h1 class="video-title">{{gettext("The blockchain platform for building decentralized marketplaces")}}</h1>
       <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
@@ -84,26 +85,30 @@
   <div class="sharing-economy d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("The sharing economy is a massive opportunity waiting to be disrupted")}}</h1>
     <div class="segment-subtitle title ml-3 mr-3">{{gettext("Gross bookings are expected to reach $335B by 2025")}}</div>
-    <div class="percentages d-flex justify-content-center flex-wrap">
-      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
-        <div class="percentage">33%</div>
-        <div class="subtitle1 mb-auto">{{gettext("Uber’s average take per ride")}}</div>
-        <a href="https://www.epi.org/publication/uber-and-the-labor-market-uber-drivers-compensation-wages-and-the-scale-of-uber-and-the-gig-economy/" target="_blank" rel="noopener noreferrer" class="subtitle2">www.epi.org</a>
-      </div>
-      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
+    <div class="d-flex flex-column flex-md-row mt-5 pt-3">
+      <div class="circular-stats purple d-flex flex-column justify-content-center align-items-center mr-md-4">
         <div class="percentage">20%</div>
-        <div class="subtitle1 mb-auto">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
-        <a href="https://skift.com/2019/05/27/airbnb-eliminates-most-guest-fees-to-take-on-booking-holdings/" target="_blank" rel="noopener noreferrer" class="subtitle2">www.skift.com</a>
+        <div class="text">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
+        <a class="mt-3 mt-md-4" href="">www.epi.org</a>
       </div>
-      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
+      <div class="circular-stats blue d-flex flex-column justify-content-center align-items-center ml-md-4 mt-5 mt-md-0">
+        <div class="percentage">33%</div>
+        <div class="text">{{gettext("Uber's average take per ride")}}</div>
+        <a class="mt-3 mt-md-4" href="">www.skift.org</a>
+      </div>
+    </div>
+    <div class="percentages d-flex justify-content-center flex-wrap">
+      <div class="d-flex flex-column percentages-holder align-items-center mb-5 mb-md-0">
+        <div class="percentage">70%</div>
+        <div class="subtitle1 mb-auto">{{gettext("Drivers that rated Uber under 3 stars out of 5 for earnings satisfaction")}}</div>
+      </div>
+      <div class="d-flex flex-column percentages-holder align-items-center mb-5 mb-md-0">
         <div class="percentage">30%</div>
         <div class="subtitle1 mb-auto">{{gettext("Uber driver churn by quarter")}}</div>
-        <a href="https://www.vox.com/2018/2/5/16777536/uber-travis-kalanick-recruit-drivers-tipping" target="_blank" rel="noopener noreferrer" class="subtitle2">www.vox.com</a>
       </div>
-      <div class="d-flex flex-column percentages-holder mb-5 mb-md-0">
+      <div class="d-flex flex-column percentages-holder align-items-center mb-5 mb-md-0">
         <div class="percentage">80%</div>
         <div class="subtitle1 mb-auto">{{gettext("Airbnb Japan home-share listings removed in 2018")}}</div>
-        <a href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings" target="_blank" rel="noopener noreferrer" class="subtitle2">asia.nikkei.com</a>
       </div>
     </div>
   </div>
@@ -153,7 +158,7 @@
         <img src="/static/img/landing/dropbox-logo.svg"/>
     </div>
     <a class="white-button-blue-border mt-4" href="/team">{{gettext("Learn more about our team")}}</a>
-    <div class="mw-940">
+    <div class="mw-940 d-flex justify-content-center">
       <img class="mt-5 mb-5 pb-3 team_img" src="/static/img/landing/team-photo@3x.jpg"/>
     </div>
   </div>

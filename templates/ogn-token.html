@@ -16,7 +16,14 @@
       <h1>{{gettext("Origin Tokens are launching soon!")}}</h1>
       <!-- {% with timer_large=True %}
       {% include 'components/countdown-timer.html' %}
+<<<<<<< HEAD:templates/ogn-token.html
       {% endwith %} -->
+=======
+      {% endwith %}
+      <div class="explanation">
+        {{gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")}}
+      </div>
+>>>>>>> eef72f304fdbeb31cd22e0f38575a5e82e33f126:templates/ogntoken.html
       <div class="mailing-list">
         {% with theme_dark=False %}
         {% include 'components/email-input.html' %}
@@ -38,7 +45,7 @@
               {{gettext("Not available in the United States")}}
             </span>
           </p>
-          <div class="actions">
+          <div class="actions d-flex justify-content-center justify-content-md-start">
             <a 
               class="btn btn-primary btn-inverse"
               href="https://originrewards.com"
@@ -88,21 +95,21 @@
         <div class="col-12">
           <h1>{{gettext("Research and Development")}}</h1>
         </div>
-        <div class="col-12 col-md-4 feature-box">
+        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-center align-items-center">
           <img src="/static/img/ognToken/rd-1@3x.png" />
           <h3>{{gettext("Origin Nodes")}}</h3>
           <p>
             {{gettext("Stake your OGN to run an Origin Node and earn more OGN for helping replicate and validate profile and listing data on the network.")}}
           </p>
         </div>
-        <div class="col-12 col-md-4 feature-box">
+        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-center align-items-center">
           <img src="/static/img/ognToken/rd-2@3x.png" />
           <h3>{{gettext("Meta Transactions Relayer")}}</h3>
           <p>
             {{gettext("Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention.")}}
           </p>
         </div>
-        <div class="col-12 col-md-4 feature-box">
+        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-center align-items-center">
           <img src="/static/img/ognToken/rd-3@3x.png" />
           <h3>{{gettext("Governance")}}</h3>
           <p>

@@ -26,6 +26,7 @@ h1 {
   color: #007cff;
   background-color: transparent;
   text-align: center;
+  font-weight: normal;
 }
 
 .video-block {
@@ -39,6 +40,63 @@ h1 {
 
 .video-block .video-title {
   max-width: 320px;
+}
+
+.video-block .video-overlay-gradient {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 100%);
+}
+
+.w-201 {
+  width: 201px;
+}
+
+.w-86 {
+  width: 86px;
+}
+
+.w-179 {
+  width: 179px;
+}
+
+.w-140 {
+  width: 140px;
+}
+
+.w-187 {
+  width: 187px;
+}
+
+.w-111 {
+  width: 111px;
+}
+
+.w-205 {
+  width: 205px;
+}
+
+.w-161 {
+  width: 161px;
+}
+
+.w-164 {
+  width: 164px;
+}
+
+.w-114 {
+  width: 114px;
+}
+
+.w-152 {
+  width: 152px;
+}
+
+.w-189 {
+  width: 189px;
 }
 
 /* sm + */
