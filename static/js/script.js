@@ -271,7 +271,7 @@ $(function() {
     });
   }
 
-  setupYoutubeVideoElement('landing-video-background', 'PveIPRnjhiI', 0.42, 'index-video-button', 'landing-video', true)
+  setupYoutubeVideoElement('landing-video-background', 'aanKtnkWP8U', 0.42, 'index-video-button', 'landing-video', true)
   setupYoutubeVideoElement('about-video-background', 'e70bvBw1oOo', 0.56, 'about-video-button', 'about-video', true)
   setupYoutubeVideoElement('team-video-background', 'ERh2n-vlpQ4', 0.56, 'team-video-button', 'team-video', true)
   setupYoutubeVideoElement('investors-video-background', 'tAyusRT3ZDQ', 0.56, 'investors-video-button', 'investors-video', true)
