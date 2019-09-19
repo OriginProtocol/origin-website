@@ -218,7 +218,7 @@ def fetch_social_stats():
 @app.route('/build-on-origin', strict_slashes=False)
 @app.route('/<lang_code>/build-on-origin', strict_slashes=False)
 def build_on_origin():
-    return redirect(url_for('partners', lang_code=g.current_lang), code=301)
+     return render_template('404.html'), 410
 
 @app.route('/developers', strict_slashes=False)
 @app.route('/<lang_code>/developers', strict_slashes=False)
@@ -258,7 +258,7 @@ def rewards():
 @app.route('/partners', strict_slashes=False)
 @app.route('/<lang_code>/partners', strict_slashes=False)
 def partners():
-    return render_template('partners.html')
+    return render_template('404.html'), 410
 
 @app.route('/about', strict_slashes=False)
 @app.route('/<lang_code>/about', strict_slashes=False)
@@ -275,10 +275,10 @@ def investors():
 def product():
     return render_template('product.html')
 
-@app.route('/ognToken', strict_slashes=False)
-@app.route('/<lang_code>/ognToken', strict_slashes=False)
-def ognToken():
-    return render_template('ogntoken.html')
+@app.route('/ogn-token', strict_slashes=False)
+@app.route('/<lang_code>/ogn-token', strict_slashes=False)
+def ogn_token():
+    return render_template('ogn-token.html')
 
 @app.route('/video/<video_id>', strict_slashes=False)
 @app.route('/<lang_code>/video/<video_id>', strict_slashes=False)
@@ -335,27 +335,27 @@ def aup():
 def creator():
     return render_template('creator.html')
 
-@app.route('/partners/interest', methods=['POST'], strict_slashes=False)
-def partners_interest():
-    name = request.form['name']
-    company_name = request.form['company_name']
-    email = request.form['email']
-    website = request.form["website"]
-    note = request.form["note"]
-    ip_addr = get_real_ip()
-    if not name:
-        return jsonify(gettext("Please enter your name"))
-    if not company_name:
-        return jsonify(gettext("Please enter your company name"))
-    if not email:
-        return jsonify(gettext("Please enter your email"))
-    if not recaptcha.verify():
-        return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.partners_interest(name, company_name, email,
-                                              website, note, ip_addr)
-    mailing_list.add_sendgrid_contact(email,name)
-    flash(feedback)
-    return jsonify("OK")
+# @app.route('/partners/interest', methods=['POST'], strict_slashes=False)
+# def partners_interest():
+#     name = request.form['name']
+#     company_name = request.form['company_name']
+#     email = request.form['email']
+#     website = request.form["website"]
+#     note = request.form["note"]
+#     ip_addr = get_real_ip()
+#     if not name:
+#         return jsonify(gettext("Please enter your name"))
+#     if not company_name:
+#         return jsonify(gettext("Please enter your company name"))
+#     if not email:
+#         return jsonify(gettext("Please enter your email"))
+#     if not recaptcha.verify():
+#         return jsonify(gettext("Please prove you are not a robot."))
+#     feedback = mailing_list.partners_interest(name, company_name, email,
+#                                               website, note, ip_addr)
+#     mailing_list.add_sendgrid_contact(email,name)
+#     flash(feedback)
+#     return jsonify("OK")
 
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
@@ -392,10 +392,6 @@ def assets_all_javascript():
         "static/js/yt-player.js",
         "static/js/videos.js"
     ], True), mimetype="application/javascript")
-
-@app.context_processor
-def inject_partners():
-    return dict(partners_dict = partner_details.PARTNERS)
 
 @app.errorhandler(404)
 def page_not_found(e):
