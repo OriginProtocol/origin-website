@@ -204,6 +204,10 @@
   font-weight: normal;
 }
 
+.sharing-economy .pies {
+  max-width: 270px;
+}
+
 .sharing-economy .percentages {
   margin-top: 60px;
   margin-bottom: 95px;
@@ -240,14 +244,6 @@
   font-weight: normal;
 }
 
-.circular-stats {
-  width: 300px;
-  height: 304px;
-  background-size: 298px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .circular-stats .percentage {
   font-family: Poppins;
   font-size: 3.8rem;
@@ -256,22 +252,22 @@
   margin-top: -10px;
 }
 
+.circular-stats {
+  margin-left: 0;
+}
+
 .circular-stats .text {
   font-family: Lato;
-  font-size: 0.73rem;
+  font-size: 1rem;
   font-weight: normal;
   text-align: center;
   color: #000000;
-  max-width: 150px;
   margin-top: -25px;
+  max-width: 200px;
 }
 
 .circular-stats.blue .percentage {
   color: #1a82ff;
-}
-
-.circular-stats.blue .text {
-  max-width: 110px;
 }
 
 .circular-stats a {
@@ -282,14 +278,6 @@
   text-align: center;
   color: #638298;
 
-}
-
-.circular-stats.blue {
-  background-image: url('/static/img/landing/pie-chart-blue.svg');
-}
-
-.circular-stats.purple {
-  background-image: url('/static/img/landing/pie-chart-purple.svg');
 }
 
 .decentralised-marketplaces {
@@ -553,16 +541,19 @@
     margin-bottom: 75px;
   }
 
+  .sharing-economy .pies {
+    max-width: 570px;
+  }
+
   .circular-stats {
-    width: 410px;
-    height: 415px;
-    background-size: 408px;
+    margin-left: 4.8rem;
   }
 
   .circular-stats .text {
-    font-size: 0.875rem;
-    max-width: 200px;
+    font-size: 1.125rem;
+    max-width: 250px;
     line-height: normal;
+    text-align: left;
   }
 
   .circular-stats .percentage {
