@@ -126,7 +126,16 @@ $(function() {
     }
   }
 
-  function setupYoutubeVideoElement(backgroundElementId, videoSource, aspectRatio, videoButtonId, fullScreenVideoElementId, bgElementIsVideo) {
+  function setupYoutubeVideoElement({
+    backgroundElementId,
+    videoSource,
+    aspectRatio,
+    videoButtonId,
+    fullScreenVideoElementId,
+    bgElementIsVideo,
+    startTime = 0,
+    loopTime = null
+  }) {
     var playerOpts = {
       autoplay: true,
       controls: false,
@@ -154,14 +163,22 @@ $(function() {
 
     if (bgElementIsVideo) {
       var bgPlayer = new window.ytPlayer('#' + backgroundElementId, playerOpts);
-      bgPlayer.load(videoSource);
+      bgPlayer.load(videoSource, true);
       bgPlayer.setVolume(0);
       bgPlayer.on('ended', () => {
         // loop
-        bgPlayer.seek(0);
-        bgPlayer.play();
+        bgPlayer.seek(startTime);
       });
-      bgPlayer.play();
+      bgPlayer.on('timeupdate', (seconds) => {
+        if (startTime && seconds < startTime) {
+          bgPlayer.seek(startTime);
+        }
+        //early loop
+        if (loopTime && seconds >= loopTime) {
+          bgPlayer.seek(startTime);
+        }
+
+      });
     }
       
     // video source is stored in data-video-source property
@@ -271,11 +288,48 @@ $(function() {
     });
   }
 
-  setupYoutubeVideoElement('landing-video-background', 'aanKtnkWP8U', 0.42, 'index-video-button', 'landing-video', true)
-  setupYoutubeVideoElement('about-video-background', 'e70bvBw1oOo', 0.56, 'about-video-button', 'about-video', true)
-  setupYoutubeVideoElement('team-video-background', 'ERh2n-vlpQ4', 0.56, 'team-video-button', 'team-video', true)
-  setupYoutubeVideoElement('investors-video-background', 'tAyusRT3ZDQ', 0.56, 'investors-video-button', 'investors-video', true)
-  setupYoutubeVideoElement('video-page-video-background', null, 0.56, 'video-page-video-button', 'video-page-video', false)
+  setupYoutubeVideoElement({
+    backgroundElementId: 'landing-video-background',
+    videoSource: 'aanKtnkWP8U',
+    aspectRatio: 0.42,
+    videoButtonId: 'index-video-button',
+    fullScreenVideoElementId: 'landing-video',
+    bgElementIsVideo: true,
+    loopTime: 70, // loop time in seconds
+    startTime: 0
+  })
+  setupYoutubeVideoElement({
+    backgroundElementId: 'about-video-background',
+    videoSource: 'e70bvBw1oOo',
+    aspectRatio: 0.56,
+    videoButtonId: 'about-video-button',
+    fullScreenVideoElementId: 'about-video',
+    bgElementIsVideo: true
+  })
+  setupYoutubeVideoElement({
+    backgroundElementId: 'team-video-background',
+    videoSource: 'ERh2n-vlpQ4',
+    aspectRatio: 0.56,
+    videoButtonId: 'team-video-button',
+    fullScreenVideoElementId: 'team-video',
+    bgElementIsVideo: true
+  })
+  setupYoutubeVideoElement({
+    backgroundElementId: 'investors-video-background',
+    videoSource: 'tAyusRT3ZDQ',
+    aspectRatio: 0.56,
+    videoButtonId: 'investors-video-button',
+    fullScreenVideoElementId: 'investors-video',
+    bgElementIsVideo: true
+  })
+  setupYoutubeVideoElement({
+    backgroundElementId: 'video-page-video-background',
+    videoSource: null,
+    aspectRatio: 0.56,
+    videoButtonId: 'video-page-video-button',
+    fullScreenVideoElementId: 'video-page-video',
+    bgElementIsVideo: false
+  })
 });
 
 $(function() {
