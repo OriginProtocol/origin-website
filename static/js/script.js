@@ -138,7 +138,6 @@ $(function() {
 
     if (containerHeight / videoAspectRatio > containerWidth) {
       var width = containerHeight/videoAspectRatio;
-      console.log(backgroundVideoElementId, "WIDTH: " + width, containerHeight, isVideoPlayer)
       if (isVideoPlayer){
         bgPlayer.setSize(width, containerHeight);
       } else {
@@ -152,7 +151,6 @@ $(function() {
       }
     } else {
       var height = containerWidth*videoAspectRatio;
-      console.log(backgroundVideoElementId, "WIDTH: " + containerWidth, height, isVideoPlayer)
       if (isVideoPlayer) {
         bgPlayer.setSize(containerWidth, height);
       } else {
@@ -360,7 +358,7 @@ $(function() {
         aspectRatio: 0.42,
         loopTime: 70, // loop time in seconds
       },
-      // Input other localisation videos this way
+      // Input other localisation videos this way 
       // 'zh_Hans' : {
       //   videoSource: 'aanKtnkWP8U',
       //   aspectRatio: 0.42,
@@ -453,39 +451,58 @@ $(function() {
   var socialLegend = {
     'Discord': {
       'img': '/static/img/about/discord.svg',
-      'countLabel': 'members'
+      'countLabel': 'members',
+      'link': 'https://discordapp.com/invite/jyxpUSe'
     },
     'Telegram': {
       'img': '/static/img/about/telegram.svg',
-      'countLabel': 'members'
+      'countLabel': 'members',
+      'link': 'https://t.me/originprotocol'
+    },
+    'Telegram (Korean)': {
+      'img': '/static/img/about/telegram.svg',
+      'countLabel': 'members',
+      'link': 'https://t.me/OriginProtocolKorea'
     },
     'Wechat': {
       'img': '/static/img/about/wechat.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'qr': '/static/img/origin-wechat-qr.png'
     },
     'KaKao plus friends': {
       'img': '/static/img/about/kakao.svg',
-      'countLabel': 'subscribers'
+      'countLabel': 'subscribers',
+      'qr': '/static/img/origin-kakao-qr.png'
     },
     'Facebook': {
       'img': '/static/img/about/facebook.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'link': 'https://www.facebook.com/originprotocol'
     },
     'Twitter': {
       'img': '/static/img/about/twitter.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'link': 'https://twitter.com/originprotocol'
     },
     'Instagram': {
       'img': '/static/img/about/instagram.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'link': 'https://instagram.com/originprotocol'
     },
     'Youtube': {
       'img': '/static/img/about/youtube.svg',
-      'countLabel': 'subscribers'
+      'countLabel': 'subscribers',
+      'link': 'https://youtube.com/c/originprotocol'
     },
     'Reddit': {
       'img': '/static/img/about/reddit.svg',
-      'countLabel': 'subscribers'
+      'countLabel': 'subscribers',
+      'link': 'https://www.reddit.com/r/'
+    },
+    'Medium': {
+      'img': '/static/img/about/medium.svg',
+      'countLabel': 'followers',
+      'link': 'https://medium.com/originprotocol'
     }
   }
 
@@ -523,12 +540,21 @@ $(function() {
           return
 
         socialSection.appendChild(createElementFromHTML(
-          '<div class="d-flex flex-column social-box">' +
-            '<img src="' + statMetadata.img + '"/>' +
-            '<div class="mt-auto">' + formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel  + '</div>' +
-          '</div>'
+          '<a class="d-flex flex-column social-box align-items-center"' + 
+            (statMetadata.link ? ('href="' + statMetadata.link + '"') : 'href="#"') + 
+            (statMetadata.qr ? 'data-container="body" data-toggle="tooltip" title="" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : '') +
+          '>' +
+              '<img src="' + statMetadata.img + '"/>' +
+              '<div class="mt-auto">' + formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel  + '</div>' +
+          '</a>'
         ))
       })
+
+      // enable newly created tooltips
+      $('[data-toggle="tooltip"]').tooltip({
+        html: true
+      });
+
     })
 });
 

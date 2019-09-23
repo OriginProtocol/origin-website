@@ -126,18 +126,14 @@
   <div class="social-media-section d-flex flex-column justify-content-between align-items-center">
     <h1>{{gettext("We have a large and growing community of developers and supporters")}}</h1>
     <div id="social-media-list" class="d-flex flex-wrap justify-content-center">
-      <div class="d-flex flex-column social-box">
+      <a href="https://discordapp.com/invite/jyxpUSe" class="d-flex flex-column social-box">
         <img src="/static/img/about/discord.svg"/>
         <div class="mt-auto">1K members</div>
-      </div>
-      <div class="d-flex flex-column social-box">
-        <img src="/static/img/about/telegram.svg"/>
-        <div class="mt-auto">12.6K members</div>
-      </div>
-      <div class="d-flex flex-column social-box">
+      </a>
+      <a class="d-flex flex-column social-box" data-container="body" data-toggle="tooltip" title="" data-original-title="<img src='/static/img/origin-wechat-qr.png'/>">
         <img src="/static/img/about/wechat.svg"/>
         <div class="mt-auto">1.1K followers</div>
-      </div>
+      </a>
     </div>
   </div>
   {% include 'footer.html' %}
