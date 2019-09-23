@@ -1,21 +1,18 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: originprotocolwebsite\n"
+"Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-07-22 15:40+0000\n"
-"PO-Revision-Date: 2019-07-31 13:22\n"
+"POT-Creation-Date: 2019-09-23 07:21+0530\n"
+"PO-Revision-Date: 2019-07-31 13:22+0000\n"
 "Last-Translator: OriginProtocol\n"
-"Language-Team: Greek\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: originprotocolwebsite\n"
-"X-Crowdin-Language: el\n"
-"X-Crowdin-File: /master/messages.pot\n"
 "Language: el_GR\n"
+"Language-Team: Greek\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -58,31 +55,120 @@ msgstr "Έχετε απεγγραφεί"
 msgid "Please enter a valid website address"
 msgstr "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ιστοτόπου"
 
-#: templates/404.html:18
+#: templates/404.html:16
 msgid "How did I get here?"
 msgstr "Πώς έφτασα εδώ;"
 
-#: templates/404.html:24
+#: templates/404.html:22
 msgid "The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
 msgstr "Η σελίδα που ψάχνετε δεν είναι πλέον εδώ, ίσως ποτέ δεν ήταν εδώ. Εν πάση περιπτώσει, εμείς ειλικρινά απολογούμαστε, αν πρόκειται για δικό μας λάθος και σας συγχωρούμε αν πρόκειται για δικό σας :)"
 
-#: templates/404.html:28 templates/404.html:34
+#: templates/404.html:26 templates/404.html:32
 msgid "Go Home"
 msgstr "Μετάβαση στην Αρχική"
+
+#: templates/about.html:3 templates/about.html:5 templates/ogntoken.html:3
+#: templates/ogntoken.html:5 templates/partners.html:3
+#: templates/partners.html:5 templates/product.html:3 templates/product.html:5
+msgid "Origin Protocol - Build on Origin"
+msgstr "Πρωτόκολλο Origin - Χτίστε στο Origin"
+
+#: templates/about.html:23
+msgid "It’s time to build the sharing economy without intermediaries"
+msgstr ""
+
+#: templates/about.html:27 templates/investors.html:27
+#: templates/landing.html:27 templates/landing.html:166 templates/team.html:27
+#: templates/video.html:28
+msgid "Watch the video"
+msgstr ""
+
+#: templates/about.html:32
+msgid "Origin enables true peer-to-peer commerce"
+msgstr ""
+
+#: templates/about.html:33
+msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
+msgstr ""
+
+#: templates/about.html:35 templates/landing.html:154
+msgid "Learn more about our team"
+msgstr ""
+
+#: templates/about.html:36 templates/landing.html:173
+msgid "Learn more about our investors"
+msgstr ""
+
+#: templates/about.html:46 templates/landing.html:118
+msgid "Lower fees"
+msgstr ""
+
+#: templates/about.html:47
+#, python-format
+msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. In total, sharing economy fees are expected to cross $40B by 2020."
+msgstr ""
+
+#: templates/about.html:48
+msgid "By removing the middlemen, Origin removes these fees. Sellers are no longer at the mercy of marketplace providers arbitrarily changing the rules. When they make more money, they can pass on those savings to buyers. Both sides benefit financially when the middlemen are removed."
+msgstr ""
+
+#: templates/about.html:67
+msgid "Better Incentives"
+msgstr ""
+
+#: templates/about.html:68
+msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the buyers and sellers on these platforms benefited."
+msgstr ""
+
+#: templates/about.html:69
+msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
+msgstr ""
+
+#: templates/about.html:77 templates/landing.html:132
+msgid "Increased access"
+msgstr ""
+
+#: templates/about.html:78
+msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
+msgstr ""
+
+#: templates/about.html:79
+msgid "With the advent of cryptocurrencies and the proliferation of cheap smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world will be able to transact with each other on Origin-enabled marketplaces even if they do not have stable local banking systems."
+msgstr ""
+
+#: templates/about.html:96
+msgid "More Resilience"
+msgstr ""
+
+#: templates/about.html:97
+msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
+msgstr ""
+
+#: templates/about.html:98
+msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
+msgstr ""
+
+#: templates/about.html:107
+msgid "Origin in the Press"
+msgstr ""
+
+#: templates/about.html:125
+msgid "We have a large and growing community of developers and supporters"
+msgstr ""
 
 #: templates/aup.html:3 templates/aup.html:5
 msgid "Origin Protocol - Marketplace Acceptable Use Policy"
 msgstr "Πρωτόκολλο προέλευσης - Πολιτική αποδεκτής χρήσης από την αγορά"
 
-#: templates/aup.html:18
+#: templates/aup.html:16
 msgid "Marketplace Acceptable Use Policy"
 msgstr "Πολιτική αποδεκτής χρήσης από την αγορά"
 
-#: templates/base.html:15 templates/index.html:3
+#: templates/base.html:17 templates/landing.html:3 templates/video.html:3
 msgid "Origin Protocol"
 msgstr "Το Πρωτόκολλο Origin"
 
-#: templates/base.html:16
+#: templates/base.html:18
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "Πρωτόκολλο προέλευσης είναι η πλατφόρμα για την οικοδόμηση αποκεντρωμένων αγορών"
 
@@ -164,7 +250,7 @@ msgstr "Αξιοποιήστε την ισχύ των <span class='green'>χωρ
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "Να είστε στην κοπτική άκρη της επανάστασης κρυπτογράφησης. Το DApp σας είναι συμβατό με το Metamask και τα δημοφιλή κινητά πορτοφόλια έξω από το κουτί."
 
-#: templates/creator.html:135 templates/index.html:274
+#: templates/creator.html:135 templates/product.html:48
 msgid "Features"
 msgstr "Χαρακτηριστικά"
 
@@ -249,461 +335,608 @@ msgid "Origin Protocol - Developers"
 msgstr "Πρωτόκολλο Origin - Προγραμματιστές"
 
 #: templates/flashes.html:4
-msgid "New!"
-msgstr "Νέος!"
+msgid "Buy or Sell on Origin"
+msgstr ""
 
 #: templates/flashes.html:4
-msgid "Create your own<br>decentralized marketplace."
-msgstr "Δημιουργήστε τη δική σας<br>αποκεντρωμένη αγορά."
-
-#: templates/flashes.html:4
-msgid "Try It Now"
-msgstr "Δοκίμασέ το τώρα"
-
-#: templates/footer.html:25
-msgid "Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network."
-msgstr "Η προέλευση επιτρέπει την αληθινή αλληλεπίδραση με το peer to peer commerce. Πιστεύουμε στη μείωση των αμοιβών συναλλαγών, στην προώθηση ελεύθερου και διαφανούς εμπορίου, στην εξυπηρέτηση των μη τραπεζικών και στο να συμμετέχουν στο δίκτυο οι πρώτοι συμμετέχοντες στην κοινότητα."
-
-#: templates/footer.html:28
-msgid "Origin Protocol, Inc."
-msgstr "Το Πρωτόκολλο Origin, Α.Ε."
-
-#: templates/footer.html:30
-msgid "Privacy"
-msgstr "Προστασία προσωπικών δεδομένων"
-
-#: templates/footer.html:34 templates/tos.html:18
-msgid "Terms of Service"
-msgstr "Όροι και Προϋποθέσεις"
-
-#: templates/footer.html:43
-msgid "Products"
-msgstr "Προϊόντα"
-
-#: templates/footer.html:48
-msgid "iOS"
+msgid "Download App"
 msgstr ""
 
-#: templates/footer.html:53
-msgid "Android"
+#: templates/footer.html:6
+msgid "Mailing List"
 msgstr ""
 
-#: templates/footer.html:58
-msgid "DApp"
-msgstr "DApp"
-
-#: templates/footer.html:63
-msgid "Creator"
+#: templates/footer.html:7
+msgid "Sign up to stay in touch. Your email will be kept private."
 msgstr ""
 
-#: templates/footer.html:70
-msgid "Resources"
-msgstr "Πόροι"
+#: templates/components/email-input.html:8 templates/footer.html:9
+msgid "Enter yout email"
+msgstr ""
 
-#: templates/footer.html:75
-msgid "Developers"
-msgstr "Προγραμματιστές"
+#: templates/footer.html:21 templates/navbar.html:70
+msgid "About"
+msgstr ""
 
-#: templates/footer.html:80 templates/index.html:211
-msgid "GitHub"
-msgstr "GitHub"
-
-#: templates/footer.html:85
-msgid "Docs"
-msgstr "Έγγραφα"
-
-#: templates/footer.html:90
-msgid "Whitepaper"
-msgstr "Whitepaper"
-
-#: templates/footer.html:97
-msgid "Organization"
-msgstr "Ο Οργανισμός μας"
-
-#: templates/footer.html:102 templates/navbar.html:74
+#: templates/footer.html:24 templates/navbar.html:73
 msgid "Team"
 msgstr "Η Ομάδα μας"
 
-#: templates/footer.html:107 templates/navbar.html:68 templates/tokens.html:18
-msgid "Tokens"
-msgstr "Σημεία"
+#: templates/footer.html:27 templates/navbar.html:76
+msgid "Investors"
+msgstr ""
 
-#: templates/footer.html:112
-msgid "Store"
-msgstr "Κατάστημα"
+#: templates/footer.html:30 templates/navbar.html:79
+msgid "Product"
+msgstr ""
 
-#: templates/footer.html:117
-msgid "Meetups"
-msgstr "Meetups"
+#: templates/footer.html:33 templates/navbar.html:82
+msgid "OGN Token"
+msgstr ""
 
-#: templates/footer.html:122
-msgid "Jobs"
-msgstr "Εργασία"
+#: templates/footer.html:36 templates/navbar.html:85
+msgid "Videos"
+msgstr ""
 
-#: templates/footer.html:129 templates/team.html:443
-msgid "Community"
-msgstr "Κοινότητα"
+#: templates/footer.html:74
+msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
+msgstr ""
 
-#: templates/footer.html:134
-msgid "Discord"
-msgstr "Discord"
+#: templates/footer.html:78 templates/tos.html:17
+msgid "Terms of Service"
+msgstr "Όροι και Προϋποθέσεις"
 
-#: templates/footer.html:139
-msgid "Telegram"
-msgstr "Telegram"
+#: templates/footer.html:81 templates/privacy.html:16
+msgid "Privacy Policy"
+msgstr "Πολιτική Απορρήτου"
 
-#: templates/footer.html:144
-msgid "Reddit"
-msgstr "Reddit"
+#: templates/investors.html:3 templates/investors.html:5
+msgid "Origin Protocol - Investors"
+msgstr ""
 
-#: templates/footer.html:148
-msgid "WeChat"
-msgstr "WeChat"
+#: templates/investors.html:23 templates/team.html:23
+msgid "Our world-class team is led by entrepreneurs and engineers from iconic tech companies"
+msgstr ""
 
-#: templates/footer.html:151
-msgid "Weibo"
-msgstr "Weibo"
+#: templates/investors.html:35
+msgid "Fundraising"
+msgstr ""
 
-#: templates/footer.html:160
-msgid "Twitter"
-msgstr "Twitter"
+#: templates/investors.html:36
+msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
+msgstr ""
 
-#: templates/footer.html:165
-msgid "Instagram"
-msgstr "Instagram"
+#: templates/investors.html:40
+msgid "$38.1M"
+msgstr ""
 
-#: templates/footer.html:170
-msgid "Facebook"
-msgstr "Facebook"
+#: templates/investors.html:41
+msgid "total raised to date"
+msgstr ""
 
-#: templates/footer.html:175
-msgid "Medium"
-msgstr "Medium"
+#: templates/investors.html:44
+msgid "800+"
+msgstr ""
 
-#: templates/footer.html:180
-msgid "Youtube"
-msgstr "Youtube"
+#: templates/investors.html:45
+msgid "investors"
+msgstr ""
 
-#: templates/index.html:5
+#: templates/investors.html:49
+msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
+msgstr ""
+
+#: templates/investors.html:60
+msgid "Featured Investor"
+msgstr ""
+
+#: templates/investors.html:74 templates/investors.html:97
+#: templates/investors.html:120
+msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
+msgstr ""
+
+#: templates/investors.html:78 templates/investors.html:101
+#: templates/investors.html:124
+msgid "Rodolfo Gonzalez"
+msgstr ""
+
+#: templates/investors.html:81 templates/investors.html:104
+#: templates/investors.html:127
+msgid "Partner, Foundation Capital"
+msgstr ""
+
+#: templates/investors.html:149 templates/landing.html:162
+msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
+msgstr ""
+
+#: templates/investors.html:158
+msgid "United States"
+msgstr ""
+
+#: templates/investors.html:161
+msgid "Pantera Capital"
+msgstr ""
+
+#: templates/investors.html:165
+msgid "Foundation Capital"
+msgstr ""
+
+#: templates/investors.html:169
+msgid "Blocktower Capital"
+msgstr ""
+
+#: templates/investors.html:171
+msgid "Germany"
+msgstr ""
+
+#: templates/investors.html:174
+msgid "1kx"
+msgstr ""
+
+#: templates/investors.html:176
+msgid "United Kingdom"
+msgstr ""
+
+#: templates/investors.html:179
+msgid "Blockchain.com"
+msgstr ""
+
+#: templates/investors.html:183
+msgid "Eterna Capital"
+msgstr ""
+
+#: templates/investors.html:185
+msgid "Saudi Arabia"
+msgstr ""
+
+#: templates/investors.html:188
+msgid "KBW Ventures"
+msgstr ""
+
+#: templates/investors.html:191 templates/investors.html:264
+msgid "Hong Kong"
+msgstr ""
+
+#: templates/investors.html:194 templates/investors.html:267
+msgid "Sora Ventures"
+msgstr ""
+
+#: templates/investors.html:198 templates/investors.html:271
+msgid "Kenetic Capital"
+msgstr ""
+
+#: templates/investors.html:200 templates/investors.html:273
+msgid "Korea"
+msgstr ""
+
+#: templates/investors.html:203 templates/investors.html:276
+msgid "Hashed"
+msgstr ""
+
+#: templates/investors.html:207 templates/investors.html:280
+msgid "Metaps+"
+msgstr ""
+
+#: templates/investors.html:212
+msgid "China"
+msgstr ""
+
+#: templates/investors.html:215
+msgid "PreAngel Fund"
+msgstr ""
+
+#: templates/investors.html:219
+msgid "FBG"
+msgstr ""
+
+#: templates/investors.html:223
+msgid "SNZ Holdings"
+msgstr ""
+
+#: templates/investors.html:227
+msgid "Continue Capital"
+msgstr ""
+
+#: templates/investors.html:231
+msgid "BLockAsset"
+msgstr ""
+
+#: templates/investors.html:235
+msgid "BlockVC"
+msgstr ""
+
+#: templates/investors.html:237
+msgid "Russia"
+msgstr ""
+
+#: templates/investors.html:240
+msgid "Crypto Bazaar"
+msgstr ""
+
+#: templates/investors.html:243 templates/investors.html:282
+msgid "Japan"
+msgstr ""
+
+#: templates/investors.html:246 templates/investors.html:285
+msgid "Smart Contract"
+msgstr ""
+
+#: templates/investors.html:250 templates/investors.html:289
+msgid "Gumi"
+msgstr ""
+
+#: templates/investors.html:252 templates/investors.html:291
+msgid "Singapore"
+msgstr ""
+
+#: templates/investors.html:255 templates/investors.html:294
+msgid "Spartan"
+msgstr ""
+
+#: templates/investors.html:259 templates/investors.html:298
+msgid "QCP Capital"
+msgstr ""
+
+#: templates/investors.html:308
+msgid "Individual Investors"
+msgstr "Ιδιώτες Επενδυτές"
+
+#: templates/investors.html:310
+msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
+msgstr ""
+
+#: templates/investors.html:320
+msgid "Gary Tan"
+msgstr ""
+
+#: templates/investors.html:323
+msgid "Partner, Y Combinator"
+msgstr ""
+
+#: templates/investors.html:331
+msgid "Alexis Ohanian"
+msgstr "Alexis Ohanian"
+
+#: templates/investors.html:334
+msgid "Founder, Reddit"
+msgstr ""
+
+#: templates/investors.html:342
+msgid "Gil Penchina"
+msgstr "Gil Penchina"
+
+#: templates/investors.html:345
+msgid "Angel Investor"
+msgstr ""
+
+#: templates/investors.html:353
+msgid "Steve Jang"
+msgstr "Steve Jang"
+
+#: templates/investors.html:356
+msgid "Advisor & Angel, Uber"
+msgstr ""
+
+#: templates/investors.html:364
+msgid "Randall Kalpan"
+msgstr ""
+
+#: templates/investors.html:367
+msgid "Founder, Akamai"
+msgstr ""
+
+#: templates/landing.html:5
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "Η συνεργατική οικονομία χωρίς μεσάζοντες. H Origin είναι ένα πρωτόκολλο για τη δημιουργία αγορών κοινόχρηστης οικονομίας χρησιμοποιώντας το Ethereum blockchain και IPFS."
 
-#: templates/index.html:24
-msgid "Decentralized marketplaces on the blockchain"
-msgstr "Αποκεντρωμένες αγορές στην μπλοκ αλυσίδα"
-
-#: templates/index.html:27
-msgid "Origin is a protocol for creating peer-to-peer marketplaces<br>using the Ethereum blockchain and IPFS"
-msgstr "Origin είναι ένα πρωτόκολλο για τη δημιουργία peer-to-peer αγορές<br>χρησιμοποιώντας το blockchain Ethereum και σφαλμάτων μη έγκυρης σελίδας"
-
-#: templates/index.html:77
-msgid "The Origin platform"
-msgstr "Η πλατφόρμα του Origin"
-
-#: templates/index.html:80
-msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
-msgstr "Ενδυναμώνουμε developers και επιχειρήσεις να χτίζουν αποκεντρωμένες αγορές σε blockchain. Το πρωτόκολλό μας διευκολύνει τη δημιουργία και οργάνωση λιστών για την μερική χρήση περιουσιακών στοιχείων και υπηρεσιών. Αγοραστές και πωλητές μπορούν να ανακαλύψουν ο ένας τον άλλον, να ξεφυλλίσουν λίστες, να δημιουργήσουν κρατήσεις, να βαθμολογήσουν και να αφήσουν κάποια κριτική, και πολλά ακόμη."
-
-#: templates/index.html:84
-msgid "Shop Origin"
+#: templates/landing.html:23
+msgid "The blockchain platform for building decentralized marketplaces"
 msgstr ""
 
-#: templates/index.html:90
-msgid "Join Our Discord"
-msgstr "Συμμετοχή στη Διαφωνία μας"
-
-#: templates/index.html:107
-msgid "Partners building on Origin"
-msgstr "Συνεργάτες που χτίζουν πάνω στην Origin"
-
-#: templates/index.html:110
-msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
-msgstr "Ομάδες από όλο τον κόσμο χτίζουν πάνω στα πρωτόκολλα της Origin, αλλά ψάχνουμε για περισσότερους εκπληκτικούς ανθρώπους για να ενταχθούν στην αποστολή μας."
-
-#: templates/index.html:114
-msgid "View All Partners"
-msgstr "Δείτε Όλους Τους Συνεταίρους"
-
-#: templates/index.html:125
-msgid "Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol."
+#: templates/landing.html:39
+msgid "Token launch date"
 msgstr ""
 
-#: templates/index.html:133
-msgid "Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform."
+#: templates/landing.html:47
+msgid "Enter your email"
 msgstr ""
 
-#: templates/index.html:141
-msgid "Circle's USDC stablecoin is proudly supported by Origin Protocol."
+#: templates/landing.html:54
+msgid "Buy and Sell on Origin"
 msgstr ""
 
-#: templates/index.html:149
-msgid "Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform."
+#: templates/landing.html:55
+msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr ""
 
-#: templates/index.html:157
-msgid "Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol."
+#: templates/landing.html:59
+msgid "Origin Marketplace"
 msgstr ""
 
-#: templates/index.html:198
-msgid "Build your business on Origin"
-msgstr "Χτίστε την επιχείρησή σας στην Origin"
+#: templates/landing.html:60
+msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
+msgstr ""
 
-#: templates/index.html:201
-msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
-msgstr "Αν είστε ανεξάρτητος φωτογράφος, ιδιοκτήτης διαμερίσματος, προμηθευτής ποδηλάτων κοινής χρήσης, ή έχετε υφιστάμενη επιχείρηση οικονομίας κοινής χρήσης, η Origin καθιστά εύκολο το επιχειρείν στο αποκεντρωμένο δίκτυο."
+#: templates/landing.html:67
+msgid "Visit us on the web"
+msgstr ""
 
-#: templates/index.html:201
-msgid "Get in touch to learn more."
-msgstr "Ελάτε σε επαφή με εμάς για να μάθετε περισσότερα."
+#: templates/landing.html:68
+msgid "shoporigin.com"
+msgstr ""
 
-#: templates/index.html:205
-msgid "Create Your Marketplace"
-msgstr "Δημιουργήστε την αγορά σας"
+#: templates/landing.html:70
+msgid "Download Android App"
+msgstr ""
 
-#: templates/index.html:223
-msgid "It's time to replace rent-seeking middlemen"
-msgstr "Ήρθε η ώρα να αντικαταστήσετε τους μεσάζοντες που επιδιώκουν τόκο"
+#: templates/landing.html:74
+msgid "Available on"
+msgstr ""
 
-#: templates/index.html:226
+#: templates/landing.html:84
+msgid "The sharing economy is a massive opportunity waiting to be disrupted"
+msgstr ""
+
+#: templates/landing.html:85
+msgid "Gross bookings are expected to reach $335B by 2025"
+msgstr ""
+
+#: templates/landing.html:89
+msgid "Uber’s average take per ride"
+msgstr ""
+
+#: templates/landing.html:94
+msgid "Percentage of total value of a booking Airbnb charged guests"
+msgstr ""
+
+#: templates/landing.html:99
+msgid "Uber driver churn by quarter"
+msgstr ""
+
+#: templates/landing.html:104
+msgid "Airbnb Japan home-share listings removed in 2018"
+msgstr ""
+
+#: templates/landing.html:111
+msgid "Decentralized marketplaces are inevitable"
+msgstr ""
+
+#: templates/landing.html:112
+msgid "For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen."
+msgstr ""
+
+#: templates/landing.html:119
 #, python-format
-msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-msgstr "Αξιοποιώντας τη δύναμη του Ethereum blockchain, οι λίστες διαχειρίζονται μέσω ενός ασφαλούς και διαφανούς συστήματος που δρα ως ουδέτερος ανεξάρτητος φορέας. Αγοραστές και πωλητές μοιράζονται το 20-30%% των τελών συναλλαγών που σήμερα λαμβάνουν εταιρίες όπως η Uber, η Airbnb, η Fiverr και η Getaround."
-
-#: templates/index.html:230
-msgid "Read the Whitepaper"
+msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed"
 msgstr ""
 
-#: templates/index.html:285
-msgid "Smart contracts enable secure and reliable payments directly from one party to another"
-msgstr "Τα έξυπνα συμβόλαια συνεπάγονται ασφαλείς και αξιόπιστες πληρωμές απευθείας από το ένα μέρος στο άλλο"
-
-#: templates/index.html:296
-msgid "Protocol schemas support hundreds of listing types, including custom verticals"
-msgstr "Τα σχήματα του πρωτοκόλλου υποστηρίζουν εκατοντάδες τύπους καταχωρήσεων, συμπεριλαμβανόμενων και των προσαρμοζόμενων κατακόρυφων"
-
-#: templates/index.html:307
-msgid "Open and shared data encourages innovation by developers and businesses"
-msgstr "Τα ανοιχτά και κοινόχρηστα δεδομένα ενθαρρύνουν την καινοτομία από προγραμματιστές και επιχειρήσεις"
-
-#: templates/index.html:318
-msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
-msgstr "Η βεβαίωση ταυτότητας και τα δεδομένα φήμης στο blockchain εξασφαλίζουν ασφαλείς και αξιόπιστους συνεργάτες"
-
-#: templates/index.html:335
-msgid "Tech Stack"
-msgstr "Τεχνολογική Στοίβα"
-
-#: templates/index.html:409
-msgid "Roadmap"
-msgstr "Χάρτης Πορείας"
-
-#: templates/index.html:415
-msgid "May 2017"
-msgstr "Μάϊος 2017"
-
-#: templates/index.html:417
-msgid "Idea conception and early development"
-msgstr "Ιδέα σύλληψη και πρώιμη ανάπτυξη"
-
-#: templates/index.html:422
-msgid "September 2017"
-msgstr "Σεπτέμβριος 2017"
-
-#: templates/index.html:424
-#, python-format
-msgid "<a href='%%(whitepaper)s'>Whitepaper</a> released"
+#: templates/landing.html:125
+msgid "Better incentives"
 msgstr ""
 
-#: templates/index.html:429
-msgid "December 2017"
-msgstr "Δεκέμβριος 2017"
+#: templates/landing.html:126
+msgid "Everyone can own a stake in the network by contributing to its growth"
+msgstr ""
 
-#: templates/index.html:431
-msgid "Launch alpha on Ethereum testnet"
-msgstr "Εκκινήστε το alpha στο testnet της Ethereum"
+#: templates/landing.html:133
+msgid "2 billion unbanked people can access new markets globally"
+msgstr ""
 
-#: templates/index.html:436
-msgid "Q2 2018"
-msgstr "Q2 2018"
+#: templates/landing.html:139
+msgid "More resilience"
+msgstr ""
 
-#: templates/index.html:438
-msgid "Launch beta on Ethereum testnet"
-msgstr "Ξεκινήστε τη δοκιμή beta στο Ethereum testnet"
+#: templates/landing.html:140
+msgid "Decentralized marketplaces can’t be banned or shut down"
+msgstr ""
 
-#: templates/index.html:443
-msgid "Q3 2018"
-msgstr "Q3 2018"
+#: templates/landing.html:146
+msgid "Origin has a world-class team"
+msgstr ""
 
-#: templates/index.html:445
-msgid "Platform readiness and mainnet launch"
-msgstr "Ετοιμότητα πλατφόρμας και εκτόξευση mainnet"
+#: templates/landing.html:147
+msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
+msgstr ""
 
-#: templates/index.html:450
-msgid "2019"
-msgstr "2019"
+#: templates/landing.html:178
+msgid "Featured Partner"
+msgstr ""
 
-#: templates/index.html:452
-msgid "3rd-parties expected to launch DApps"
-msgstr "Τα τρίτα μέρη αναμένεται να ξεκινήσουν τα DApps"
+#: templates/landing.html:179
+msgid "Trips Community is building a homesharing DApp in Italy with 3,000 hosts"
+msgstr ""
 
-#: templates/index.html:478
-msgid "Join us in building the sharing economy of tomorrow"
-msgstr "Ελάτε μαζί μας στην οικοδόμηση της συνεργατικής οικονομίας του αύριο"
+#: templates/landing.html:182
+msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
+msgstr ""
 
-#: templates/index.html:481
-msgid "Sign up for our mailing list and be first to learn of any Origin news!"
-msgstr "Εγγραφείτε στη λίστα αλληλογραφίας μας και γίνεται οι πρώτοι που θα μαθαίνουν οποιαδήποτε νέα για την Origin!"
+#: templates/landing.html:183
+msgid "Luca De Giglio"
+msgstr ""
 
-#: templates/index.html:485
-msgid "Enter email"
-msgstr "Εισάγετε διεύθυνση ηλεκτρονικού ταχυδρομείου"
+#: templates/landing.html:184
+msgid "Founder, Trips Community"
+msgstr ""
 
-#: templates/index.html:488
-msgid "Join the Community"
-msgstr "Γίνετε μέλος της Κοινότητας"
+#: templates/landing.html:191
+msgid "Featured Videos"
+msgstr ""
 
-#: templates/index.html:502
-msgid "Press"
-msgstr "Ο Τύπος"
+#: templates/landing.html:202 templates/video.html:51 templates/videos.html:34
+msgid "Watch now"
+msgstr ""
 
-#: templates/index.html:534
-msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
-msgstr "Αν η Airbnb ξεκινούσε σήμερα, θα ήταν ένα peer-to-peer συνεργατικό μοντέλο βασιζόμενο στο blockchain - Joey Krug Augur"
+#: templates/landing.html:206
+msgid "Watch more videos"
+msgstr ""
 
-#: templates/index.html:546
-msgid "Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers"
-msgstr "Το πρωτόκολλο Origin περιέχει 28 εκατομμύρια δολάρια για την πλατφόρμα blockchain peer-to-peer. Η πώληση τεκμηρίων τροφοδοτεί τη χρηματοδότηση, περίπου 45 εταιρείες έχουν δεσμευτεί ως πελάτες"
+#: templates/landing.html:210
+msgid "Recent News"
+msgstr ""
 
-#: templates/index.html:558
-msgid "Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain."
-msgstr "Η Origin στοχεύει στη δημιουργία ενός συνόλου πρωτοκόλλων που να επιτρέπουν στους προγραμματιστές και τις επιχειρήσεις να χτίσουν μια αποκεντρωμένη κοινόχρηστη αγορά οικονομιών στο blockchain."
+#: templates/landing.html:214
+msgid "Announcing Origin’s Upcoming China Tour"
+msgstr ""
 
-#: templates/index.html:576
-msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
-msgstr "Η Origin Protocol, που χρησιμοποιεί το ethereum blockchain, επιτρέπει σε αγοραστές και πωλητές να αλληλεπιδρούν μεταξύ τους αποτελεσματικά."
+#: templates/landing.html:215
+msgid "Recently, we ran an Origin Rewards campaign that showcased our sellers from Greater China and Korea to show them our appreciation. From the..."
+msgstr ""
 
-#: templates/index.html:588
-msgid "A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy."
-msgstr "Ένα αποκεντρωμένο ψηφιακό κατάστιχο που επιτρέπει συναλλαγές μεταξύ χρηστών χωρίς μεσάζοντα (και χωρίς επιπλέον έξοδα), είναι έτοιμο να εφεύρει εκ νέου την εμπειρία χρηστών στην συνεργατική οικονομία."
+#: templates/landing.html:216 templates/landing.html:222
+#: templates/landing.html:228
+msgid "Read "
+msgstr ""
 
-#: templates/index.html:600
-msgid "It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too."
-msgstr "Ακούγεται ουτοπικό και εντελώς επαναστατικό: ένας κόσμος καλοπροαίρετων κοινωνικών επιχειρήσεων και μη κερδοσκοπικών οργανισμών που επιδιώκουν να ενδυναμώσουν τους καταναλωτές και να τους επιστρέψουν τα δικαιώματα απορρήτου τους, και ενδεχομένως τους σώσει και κάποια χρήματα επίσης."
+#: templates/landing.html:220
+msgid "Bridging the Decentralized and Centralized Worlds"
+msgstr ""
 
-#: templates/index.html:619
-msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
-msgstr "To πρωτόκολλο Origin χρησιμοποιεί το Ethereum Blockchain ώστε να βοηθήσει αγοραστές και πωλητές να συναλλάσσονται σε ένα αποκεντρωμένο περιβάλλον χωρίς παραδοσιακούς μεσάζοντες."
+#: templates/landing.html:221
+msgid "At Origin, we are building a platform to enable many peer-to-peer marketplaces. Our long-term goal is to have a fully decentralized..."
+msgstr ""
 
-#: templates/index.html:631
-msgid "Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet."
-msgstr "Φανταστείτε ένα Airbnb με μηδενικές προμήθειες και απολύτως δημοκρατικό. Η πλατφόρμα δεν ελέγχεται από έναν γίγαντα του Silicon Valley αλλά προσφέρεται δωρεάν σε οποιονδήποτε έχει πρόσβαση στο διαδίκτυο."
+#: templates/landing.html:226
+msgid "Follow and Share on Social Media to Earn Origin Tokens"
+msgstr ""
 
-#: templates/index.html:643
-msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
-msgstr "Το πρωτόκολλο Origin είναι ένα σύνολο πρωτοκόλλων blockchain ανοιχτού λογισμικού για αγοραστές και πωλητές υπηρεσιών, όπως η κοινοχρησία οχημάτων ή σπιτιών, ώστε αυτοί να συναλλάσονται σε μια αποκεντρωμένη, open web πλατφόρμα."
+#: templates/landing.html:227
+msgid "To reward our early users who help us grow & bootstrap our network, we came up with Origin Rewards early this year. As Origin continues to..."
+msgstr ""
 
-#: templates/index.html:661
-msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
-msgstr "Τι θα συνέβαινε αν το ανοιχτό λογισμικό αντικαθιστούσε δεκάδες εταιρίες πολλών εκατομμυρίων ή ακόμη και δισεκατομμυρίων δολαρίων;"
-
-#: templates/index.html:674
-msgid "Origin Protocol offers an entire blockchain-based platform to allow anyone to create their own property-sharing business."
-msgstr "Το πρωτόκολλο προέλευσης προσφέρει μια ολόκληρη πλατφόρμα βασισμένη σε blockchain για να επιτρέψει σε οποιονδήποτε να δημιουργήσει τη δική του επιχείρηση κοινής ιδιοκτησίας."
-
-#: templates/index.html:687
-msgid "Origin Protocol, a blockchain project building a decentralized marketplace, has rolled out a peer-to-peer messaging application built on top of ethereum."
-msgstr "Το πρωτόκολλο προέλευσης, ένα έργο blockchain για την οικοδόμηση μιας αποκεντρωμένης αγοράς, έχει αναπτύξει μια εφαρμογή ανταλλαγής μηνυμάτων από ομότιμους χρήστες που είναι χτισμένη πάνω από το αιθέριο."
-
-#: templates/index.html:700
-msgid "We want to create a future where buyers and sellers can transact in the wild by using neutral tools that don't favor either party."
-msgstr "Θέλουμε να δημιουργήσουμε ένα μέλλον όπου οι αγοραστές και οι πωλητές μπορούν να πραγματοποιούν συναλλαγές φυσικά χρησιμοποιώντας ουδέτερα εργαλεία που δεν ευνοούν κανένα μέρος."
-
-#: templates/index.html:713
-msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
-msgstr "Η οικονομία κοινής χρήσης καταλήγει να μοιράζεται έναν τόνο των αποδοχών της εργασίας με μεσάζοντες όπως η Uber και η Airbnb."
+#: templates/landing.html:231
+msgid "Read more on Medium"
+msgstr ""
 
 #: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
 msgstr "Πρωτόκολλο Origin - Mobile"
 
-#: templates/navbar.html:71
-msgid "Marketplace Creator"
-msgstr "Δημιουργός αγοράς"
-
-#: templates/navbar.html:77
-msgid "Blog"
-msgstr "Blog"
-
-#: templates/navbar.html:80
+#: templates/navbar.html:88
 msgid "Shop"
 msgstr ""
 
-#: templates/partners.html:3 templates/partners.html:5
-msgid "Origin Protocol - Build on Origin"
-msgstr "Πρωτόκολλο Origin - Χτίστε στο Origin"
+#: templates/ogntoken.html:16
+msgid "Participate in the Origin Token (OGN) distribution"
+msgstr ""
 
-#: templates/partners.html:18
+#: templates/ogntoken.html:35
+msgid "Origin Rewards"
+msgstr ""
+
+#: templates/ogntoken.html:37
+msgid "Earn your stake of the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
+msgstr ""
+
+#: templates/ogntoken.html:39
+msgid "Not available in the United States"
+msgstr ""
+
+#: templates/ogntoken.html:59
+msgid "Commissions"
+msgstr ""
+
+#: templates/ogntoken.html:61
+msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
+msgstr ""
+
+#: templates/ogntoken.html:71
+msgid "Payments"
+msgstr ""
+
+#: templates/ogntoken.html:73
+msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
+msgstr ""
+
+#: templates/ogntoken.html:86
+msgid "Research and Development"
+msgstr ""
+
+#: templates/ogntoken.html:90
+msgid "Origin Nodes"
+msgstr ""
+
+#: templates/ogntoken.html:92
+msgid "Stake your OGN to run an Origin Node and earn more OGN for helping replicate and validate profile and listing data on the network."
+msgstr ""
+
+#: templates/ogntoken.html:97
+msgid "Meta Transactions Relayer"
+msgstr ""
+
+#: templates/ogntoken.html:99
+msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
+msgstr ""
+
+#: templates/ogntoken.html:104
+msgid "Governance"
+msgstr ""
+
+#: templates/ogntoken.html:106
+msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
+msgstr ""
+
+#: templates/partners.html:16
 msgid "Build on Origin"
 msgstr "Χτίσετε στην Origin"
 
-#: templates/partners.html:24
+#: templates/partners.html:22
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong>Ομάδες από όλο τον κόσμο χτίζουν τα project τους χρησιμοποιώντας τα πρωτόκολλα της Origin. Αναζητούμε περισσότερα άτομα για να <a href='#join_our_mission'>ενταχθούν στην αποστολή μας</a>.</strong>"
 
-#: templates/partners.html:89
+#: templates/partners.html:87
 msgid "View More"
 msgstr "Δείτε περισσότερα"
 
-#: templates/partners.html:90
+#: templates/partners.html:88
 msgid "View Less"
 msgstr "Δείτε λιγότερα"
 
-#: templates/partners.html:120
+#: templates/partners.html:118
 msgid "Join our mission!"
 msgstr "Συμμετάσχετε την αποστολή μας!"
 
-#: templates/partners.html:123
+#: templates/partners.html:121
 msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
 msgstr "Είτε είστε προϋπάρχουσα εταιρία blockchain, είτε παραδοσιακή αγορά που σκέφτεστε να ενταχθείτε στις τεχνολογίες blockchain, θα θέλαμε να σας ακούσουμε. Συμπληρώστε την ακόλουθη φόρμα και θα επικοινωνήσουμε μαζί σας σύντομα."
 
-#: templates/partners.html:127
+#: templates/partners.html:125
 msgid "Name"
 msgstr "Όνομα"
 
-#: templates/partners.html:128
+#: templates/partners.html:126
 msgid "Firstname Lastname"
 msgstr "Όνομα Επώνυμο"
 
-#: templates/partners.html:131
+#: templates/partners.html:129
 msgid "Company"
 msgstr "Εταιρεία"
 
-#: templates/partners.html:132
+#: templates/partners.html:130
 msgid "My Amazing Company"
 msgstr "Η Καταπληκτική Εταιρεία μου"
 
-#: templates/partners.html:135 templates/tokens.html:76
-#: templates/tokens.html:77
+#: templates/partners.html:133 templates/tokens.html:74
+#: templates/tokens.html:75
 msgid "Email"
 msgstr "Διεύθυνση Ηλεκτρονικού Ταχυδρομείου"
 
-#: templates/partners.html:136
+#: templates/partners.html:134
 msgid "yourname@websitename.com"
 msgstr "yourname@websitename.com"
 
-#: templates/partners.html:139
+#: templates/partners.html:137
 msgid "Website"
 msgstr "Ιστοσελίδα"
 
-#: templates/partners.html:140
+#: templates/partners.html:138
 msgid "https://websitename.com"
 msgstr "https://websitename.com"
 
-#: templates/partners.html:143 templates/tokens.html:386
+#: templates/partners.html:141 templates/tokens.html:384
 msgid "<strong>Anything else we should know?</strong> (optional)"
 msgstr "<strong>Κάτι άλλο που πρέπει να γνωρίζουμε;</strong> (προαιρετικό)"
 
-#: templates/partners.html:155
+#: templates/partners.html:153
 msgid "Become a Partner"
 msgstr "Γίνετε συνεργάτης"
 
@@ -711,366 +944,546 @@ msgstr "Γίνετε συνεργάτης"
 msgid "Origin Protocol - Privacy Policy"
 msgstr "Πρωτόκολλο προέλευσης - Πολιτική απορρήτου"
 
-#: templates/privacy.html:18
-msgid "Privacy Policy"
-msgstr "Πολιτική Απορρήτου"
+#: templates/product.html:18
+msgid "Our platform will power decentralized marketplaces all over the world"
+msgstr ""
+
+#: templates/product.html:28
+msgid "Apps built on our platform"
+msgstr ""
+
+#: templates/product.html:30
+msgid "See the Origin Platform in action at shoporigin.com"
+msgstr ""
+
+#: templates/product.html:32
+msgid "Buy and sell today"
+msgstr ""
+
+#: templates/product.html:34
+msgid "Other apps built on the Origin Platform"
+msgstr ""
+
+#: templates/product.html:55 templates/product.html:66
+#: templates/product.html:77 templates/product.html:88
+#: templates/product.html:99 templates/product.html:110
+msgid "Self-sovereign identity"
+msgstr ""
+
+#: templates/product.html:57 templates/product.html:68
+#: templates/product.html:79 templates/product.html:90
+#: templates/product.html:101 templates/product.html:112
+msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
+msgstr ""
+
+#: templates/product.html:123
+msgid "How it works"
+msgstr ""
+
+#: templates/product.html:132
+msgid "Buyers search and browse for seller listings on the blockchain through DApps"
+msgstr ""
+
+#: templates/product.html:138
+msgid "Buyers submit offers and escrowed payments to our Marketplace smart contract"
+msgstr ""
+
+#: templates/product.html:144
+msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
+msgstr ""
+
+#: templates/product.html:150
+msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
+msgstr ""
+
+#: templates/product.html:160
+msgid "Check out our updated whitepaper"
+msgstr ""
+
+#: templates/product.html:164
+msgid "Read our whitepaper"
+msgstr ""
+
+#: templates/product.html:174
+msgid "Milestones"
+msgstr ""
+
+#: templates/product.html:180
+msgid "May 2017"
+msgstr "Μάϊος 2017"
+
+#: templates/product.html:181
+msgid "Begin initial development</div"
+msgstr ""
+
+#: templates/product.html:185
+msgid "September 2017"
+msgstr "Σεπτέμβριος 2017"
+
+#: templates/product.html:186
+msgid "Released initial whitepaper</div"
+msgstr ""
+
+#: templates/product.html:190
+msgid "December 2017"
+msgstr "Δεκέμβριος 2017"
+
+#: templates/product.html:191
+msgid "Launched Alpha on Ethereum testnet"
+msgstr ""
+
+#: templates/product.html:195
+msgid "October 2018"
+msgstr ""
+
+#: templates/product.html:196
+msgid "Launched Beta on Ethereum mainnet"
+msgstr ""
+
+#: templates/product.html:200
+msgid "February 2019"
+msgstr ""
+
+#: templates/product.html:202
+msgid "Launched Marketplace Creator 1.0 and our first mobile apps"
+msgstr ""
+
+#: templates/product.html:208
+msgid "April 2019"
+msgstr ""
+
+#: templates/product.html:209
+msgid "Launched Origin Rewards"
+msgstr ""
+
+#: templates/product.html:213
+msgid "July 2019"
+msgstr ""
+
+#: templates/product.html:215
+msgid "Launched www.shoporigin.com and new mobile apps"
+msgstr ""
+
+#: templates/product.html:221
+msgid "September 2019"
+msgstr ""
+
+#: templates/product.html:222
+msgid "Launch OGN Commissions"
+msgstr ""
+
+#: templates/product.html:226
+msgid "Q4 2019"
+msgstr ""
+
+#: templates/product.html:228
+msgid "Launch Mainnet 1.0"
+msgstr ""
+
+#: templates/product.html:229
+msgid "Launch OGN as payment token"
+msgstr ""
+
+#: templates/product.html:230
+msgid "Distribute investor OGN tokens"
+msgstr ""
+
+#: templates/product.html:235
+msgid "Q1 2020"
+msgstr ""
+
+#: templates/product.html:237
+msgid "Launch off-chain payments"
+msgstr ""
+
+#: templates/product.html:238
+msgid "Launch Marketplace Creator 2.0"
+msgstr ""
+
+#: templates/product.html:239
+msgid "Launch Origin Nodes"
+msgstr ""
+
+#: templates/product.html:244
+msgid "Q2 2020"
+msgstr ""
+
+#: templates/product.html:246
+msgid "Launch new Developer APIs and expand developer adoption"
+msgstr ""
+
+#: templates/product.html:247
+msgid "Launch Meta Transactions Relayer program"
+msgstr ""
+
+#: templates/product.html:252
+msgid "Q3 2020"
+msgstr ""
+
+#: templates/product.html:254
+msgid "Launch OGN as governance token"
+msgstr ""
+
+#: templates/product.html:266
+msgid "Origin Token"
+msgstr ""
+
+#: templates/product.html:269
+msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
+msgstr ""
+
+#: templates/product.html:273
+msgid "Learn more about Origin Token"
+msgstr ""
 
 #: templates/team.html:3 templates/team.html:5
 msgid "Origin Protocol - Team"
 msgstr "Πρωτόκολλο Origin - Ομάδα"
 
-#: templates/team.html:24
+#: templates/team.html:35
 msgid "Our Team"
 msgstr "Η ομάδα μας"
 
-#: templates/team.html:29
-msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
-msgstr "Η Origin είναι ομάδα κατανεμημένων καινοτόμων, μηχανικών και ειδικών του blockchain. Η αποστολή μας είναι να επιτρέψουμε την ύπαρξη κοινόχρηστης οικονομίας στο αποκεντρωμένο δίκτυο. Είμαστε ανοιχτοί σε προσλήψεις!"
-
-#: templates/team.html:60
-msgid "Core Team"
-msgstr "Ο Πυρήνας της Ομάδας μας"
-
-#: templates/team.html:69
+#: templates/team.html:45
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:73 templates/team.html:90
+#: templates/team.html:49 templates/team.html:66
 msgid "Cofounder"
 msgstr "Συνιδρυτής"
 
-#: templates/team.html:76
+#: templates/team.html:52
 msgid "Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "Ο Josh ξεκίνησε να γράφει κώδικα στην ηλικία των 10 ετών. Πριν από την Origin, είχε συνιδρύσει τρεις άλλες εταιρίες-τολμήματα: την EventVue, την Torbit (που απέκτησε η Walmart Labs) &amp; την Forage."
 
-#: templates/team.html:86
+#: templates/team.html:62
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:93
+#: templates/team.html:69
 msgid "Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "Ο Matt ήταν 3ος Product Manager στο YouTube (αποκτήθηκε από την Google) και Αντιπρόεδρος Product Management στο Qwiki (αποκτήθηκε από την Yahoo) και στο Bonobos (αποκτήθηκε από το Walmart). Είναι κάτοχος Bachelor και Master από το πανεπιστήμιου του Stanford."
 
-#: templates/team.html:107
+#: templates/team.html:83
 msgid "Business Development"
 msgstr "Επιχειρηματική ανάπτυξη"
 
-#: templates/team.html:110
+#: templates/team.html:86
 msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr "Ο Coleman είναι ένας ενεργός επενδυτής σε cryptocurrency και επιχειρηματίας ακινήτων, είναι ιδιοκτήτης και διαχειριστής πολλαπλών ιδιοκτησιών Airbnb. Σπούδασε μαθηματικά στο Berkeley."
 
-#: templates/team.html:120
+#: templates/team.html:96
 msgid "Yu Pan"
 msgstr "Yu Pan"
 
-#: templates/team.html:124
+#: templates/team.html:100
 msgid "R&D Engineer"
 msgstr "Μηχανικός R&D"
 
-#: templates/team.html:127
+#: templates/team.html:103
 msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate."
 msgstr "Ο Yu Pan ήταν ένας από τα 6 μέλη της ιδρυτικής ομάδας του PayPal και ήταν ο 1ος υπάλληλος του Youtube. Είναι πρώην υπάλληλος της Google και συνιδρυτής του Kiwi Crate."
 
-#: templates/team.html:137
+#: templates/team.html:113
 msgid "Micah Alcorn"
 msgstr "Micah Alcorn"
 
-#: templates/team.html:141
+#: templates/team.html:117
 msgid "Product Manager/Engineer"
 msgstr "Manager Προϊόντος/Μηχανικός"
 
-#: templates/team.html:144
+#: templates/team.html:120
 msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
 msgstr "Ο Micah ήταν ο τεχνικός συνιδρυτής της WellAttended, μιας πλατφόρμας διοίκησης γραφείων με bootstrap. Εργάστηκε ως εμπορικός μεσίτης ακινήτων, μαθαίνοντας να κωδικοποιήσει."
 
-#: templates/team.html:155
+#: templates/team.html:131
 msgid "Kay Yoo"
 msgstr "Kay Yoo"
 
-#: templates/team.html:159
+#: templates/team.html:135
 msgid "Finance & Operations"
 msgstr "Οικονομικών & Επιχειρήσεων"
 
-#: templates/team.html:162
+#: templates/team.html:138
 msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
 msgstr "Ο Kay είναι Chartered Professional Accountant (CPA). Προηγουμένως εργάστηκε ως Ανώτερος Λογιστής και έπειτα ως Ανώτερος Σύμβουλος στην KPMG Canada."
 
-#: templates/team.html:173
+#: templates/team.html:149
 msgid "Franck Chastagnol"
 msgstr "Franck Chastagnol"
 
-#: templates/team.html:177 templates/team.html:267
+#: templates/team.html:153 templates/team.html:189 templates/team.html:225
 msgid "Senior Engineer"
 msgstr "Ανώτερος Μηχανικός"
 
-#: templates/team.html:180
+#: templates/team.html:156
 msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
 msgstr "Ο Franck είχε μια επιτυχημένη καριέρα ως πρόωρος υπάλληλος σε πολλές εταιρείες υψηλού επιπέδου. Προηγουμένως οργάνωσε ομάδες μηχανικών σε Inktomi, Paypal, YouTube, Google και Dropbox."
 
-#: templates/team.html:191
-msgid "Austin Virts"
-msgstr "Ώστιν Βιρτς"
-
-#: templates/team.html:195
-msgid "Marketing"
-msgstr "Εμπορία"
-
-#: templates/team.html:198
-msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
-msgstr "Ο Austin είναι ένας φιλόδοξος επιχειρηματίας που ξεκίνησε και λειτούργησε πολλές επιτυχημένες εταιρείες στο διαδίκτυο πριν ξεκινήσει μια δημιουργική αντιπροσωπεία πλήρους υπηρεσίας στο Boulder, CO."
-
-#: templates/team.html:209
+#: templates/team.html:167
 msgid "Mila Choi"
 msgstr "Μίλα Τσόι"
 
-#: templates/team.html:213
+#: templates/team.html:171
 msgid "Regional Manager Korea"
 msgstr "Περιφερειακός Διευθυντής Κορέας"
 
-#: templates/team.html:216
+#: templates/team.html:174
 msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
 msgstr "Ο Μίλα οδηγεί τις κοινοτικές μας προσπάθειες στη Νότια Κορέα. Έχει οργανώσει προηγουμένως blockhain hackathons και έχει πτυχία από το Πανεπιστήμιο Penn και το Erasmus University Rotterdam."
 
-#: templates/team.html:227
+#: templates/team.html:185
 msgid "Tom Linton"
 msgstr "Tom Linton"
 
-#: templates/team.html:231 templates/team.html:285 templates/team.html:303
-#: templates/team.html:339
-msgid "Engineer"
-msgstr "Μηχανικός"
-
-#: templates/team.html:234
+#: templates/team.html:192
 msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
 msgstr "Πριν από την Προέλευση, ο Tom είχε μια επιτυχημένη καριέρα ως ιδρυτής σόλο ξεκίνημα. Έχει δύο πτυχία Masters στο Distributed Systems από το Τεχνικό Πανεπιστήμιο του Βερολίνου και την KTH στη Στοκχόλμη."
 
-#: templates/team.html:245
+#: templates/team.html:203
 msgid "Anna Wang"
 msgstr "Άννα Γουάνγκ"
 
-#: templates/team.html:249
+#: templates/team.html:207
 msgid "Regional Manager China"
 msgstr "Περιφερειακός Διευθυντής Κίνας"
 
-#: templates/team.html:252
+#: templates/team.html:210
 msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
 msgstr "Η Άννα οδηγεί τις κοινοτικές μας προσπάθειες για κινέζους ομιλητές. Πριν από την Προέλευση, η Άννα διαχειριζόταν παγκόσμια κοινωνικά μέσα στην Exness, έναν κορυφαίο χρηματιστή forex. Συνεργάστηκε επίσης μη κερδοσκοπικό στην Αυστραλία."
 
-#: templates/team.html:263
+#: templates/team.html:221
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:270
+#: templates/team.html:228
 msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr "Ο Νίκος σπούδασε Πληροφορική στο Πανεπιστήμιο του Warwick. Πριν από την είσοδό του στην Ori, εργάστηκε ως μηχανικός στο Sencha, το δίκτυο ενέργειας C3 και το Palo Alto Networks."
 
-#: templates/team.html:281
+#: templates/team.html:239
 msgid "Domen Grabec"
 msgstr "Domen Grabec"
 
-#: templates/team.html:288
+#: templates/team.html:243 templates/team.html:261 templates/team.html:297
+msgid "Engineer"
+msgstr "Μηχανικός"
+
+#: templates/team.html:246
 msgid "Domen co-founded and led a team developing a mobile application with 2 chess Grandmasters. He previously had a successful career at Cetra, Zemanta and Peerindex."
 msgstr "Ο Domen είναι ο συνιδρυτής και επικεφαλής μιας ομάδας που αναπτύσσει μια εφαρμογή κινητής τηλεφωνίας μαζί με 2 Grandmasters σκακιού. Είχε προηγουμένως μια επιτυχημένη καριέρα στα Cetra, Zemanta και Peerindex."
 
-#: templates/team.html:299
+#: templates/team.html:257
 msgid "Shahul Hameed"
 msgstr ""
 
-#: templates/team.html:306
+#: templates/team.html:264
 msgid "Shahul is a fullstack engineer who started programming at age of 10. He previously worked as a freelancer and then joined Zoho as a front-end developer."
 msgstr ""
 
-#: templates/team.html:317
+#: templates/team.html:275
 msgid "Zaurbek Ivanov"
 msgstr ""
 
-#: templates/team.html:321
+#: templates/team.html:279
 msgid "Russia Community"
 msgstr ""
 
-#: templates/team.html:324
+#: templates/team.html:282
 msgid "Zaurbek Ivanov studied Economics at Kabardino-Balkaria State Agrarian University in Nalchik, Russia. He has worked in the hospitality industry in the US and Russia."
 msgstr ""
 
-#: templates/team.html:335
+#: templates/team.html:293
 msgid "Mike Shultz"
 msgstr ""
 
-#: templates/team.html:342
+#: templates/team.html:300
 msgid "Mike is a long-time contributor to open-source. He created a dev toolkit for creating Ethereum smart contracts with Python and previously worked with Ethereum and IPFS at Lunyr."
 msgstr ""
 
-#: templates/team.html:362
+#: templates/team.html:311
+msgid "Aure Gimon"
+msgstr ""
+
+#: templates/team.html:315
+msgid "Product Designer"
+msgstr ""
+
+#: templates/team.html:318
+msgid "Aure is a product designer with 10+ years of experience. Prior to joining Origin, Aure worked at multiple startups and Fortune 500 companies. In a past life, he was also a software engineer."
+msgstr ""
+
+#: templates/team.html:332
 msgid "Advisors"
 msgstr "Σύμβουλοι"
 
-#: templates/team.html:371
+#: templates/team.html:341
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:375
-msgid "Advisor/PR"
-msgstr "Σύμβουλος/PR"
+#: templates/team.html:345
+msgid "PR"
+msgstr ""
 
-#: templates/team.html:378
-msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
-msgstr "O Addison είναι ειδικός στις επικοινωνίες και το marketing με δίπλωμα στη Φυσική από το Πανεπιστήμιο του Berkeley. Πρωτύτερα είχε εργαστεί στο Ethereum Foundation και στο DEVCON1."
-
-#: templates/team.html:388
+#: templates/team.html:353
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:392
-msgid "Advisor/International BD"
-msgstr "Σύμβουλος/Διεθνής BD"
+#: templates/team.html:357
+msgid "International BD"
+msgstr ""
 
-#: templates/team.html:395
-msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
-msgstr "Η Melody είναι ιδρύτρια του Spartan Group, ενός ταμείου συμβουλευτικής για blockchain και επενδύσεις. Ήταν μια πρώιμη επενδυτής του TenX και στρατηγικός σύμβουλος του Gifto και του Appcoins."
-
-#: templates/team.html:405
+#: templates/team.html:365
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/team.html:409 templates/team.html:426
+#: templates/team.html:369 templates/team.html:381
 msgid "Advisor"
 msgstr "Σύμβουλος"
 
-#: templates/team.html:412
-msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
-msgstr "Ο Paul είναι εταίρος της Pantera Capital. Είναι επίσης σύμβουλος σε μερικά άκρως επιτυχή projects κρυπτονομισμάτων, συμπεριλαμβανομένων των Orchid Labs, Enigma και ICON."
-
-#: templates/team.html:422
+#: templates/team.html:377
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:429
-msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
-msgstr "Ο Joey είναι συνιδρυτής του Augur, την πρώτη αποκεντρωμένη αγορά προβλέψεων και μαντείων στον κόσμο. Είναι συνδιευθυντής του Γραφείου Επενδύσεων στο Pantera Capital."
-
-#: templates/team.html:439
+#: templates/team.html:389
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:446
-msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
-msgstr "Ο Andrew ήταν ο ιδρυτής τεσσάρων startups, μεταξύ των οποίων το Startup Weekend, και έχει χτίσει παγκόσμιες κοινότητες σε δεκάδες χώρες. Ήταν ο #1 υπάλληλος στο TechStars."
+#: templates/team.html:393
+msgid "Community"
+msgstr "Κοινότητα"
 
-#: templates/team.html:457
-msgid "Open-source Contributors"
-msgstr "Συνεισφέροντες ανοιχτού κώδικα"
+#: templates/team.html:404
+#, python-format
+msgid "100%% open-source."
+msgstr ""
 
-#: templates/team.html:515
-msgid "Investment Funds"
-msgstr "Επενδυτικά Κεφάλαια"
+#: templates/team.html:405
+msgid "Over 150 contributors."
+msgstr ""
 
-#: templates/team.html:733
-msgid "Individual Investors"
-msgstr "Ιδιώτες Επενδυτές"
+#: templates/team.html:425
+msgid "Want to contribute?"
+msgstr ""
 
-#: templates/team.html:742
-msgid "Steve Jang"
-msgstr "Steve Jang"
+#: templates/team.html:429
+msgid "Visit our Github Repository"
+msgstr ""
 
-#: templates/team.html:752
-msgid "Xiahong Lin"
-msgstr "Xiahong Lin"
+#: templates/team.html:430
+msgid "Join our #engineering channel on Discord"
+msgstr ""
 
-#: templates/team.html:762
-msgid "Alexis Ohanian"
-msgstr "Alexis Ohanian"
+#: templates/team.html:441
+msgid "Interested in working at Origin?"
+msgstr ""
 
-#: templates/team.html:772
-msgid "Gil Penchina"
-msgstr "Gil Penchina"
-
-#: templates/team.html:782
-msgid "Kamal Ravikant"
-msgstr "Kamal Ravikant"
-
-#: templates/team.html:792
-msgid "Garry Tan"
-msgstr "Garry Tan"
+#: templates/team.html:448
+msgid "Go to job posts"
+msgstr ""
 
 #: templates/tokens.html:3 templates/tokens.html:5
 msgid "Origin Protocol - Tokens"
 msgstr "Πρωτόκολλο προέλευσης - Σήματα"
 
-#: templates/tokens.html:23
+#: templates/tokens.html:16
+msgid "Tokens"
+msgstr "Σημεία"
+
+#: templates/tokens.html:21
 msgid "<strong>Origin tokens are not currently available for purchase.</strong><br> Please fill out this form if you are interested in participating in any future tokens sales and would like to be updated as more details are announced."
 msgstr "<strong>Σημειώσεις προέλευσης δεν είναι προς το παρόν διαθέσιμες για αγορά.</strong><br> Συμπληρώστε αυτή τη φόρμα εάν ενδιαφέρεστε να συμμετάσχετε σε οποιεσδήποτε μελλοντικές πωλήσεις νομισμάτων και επιθυμείτε να ενημερώνεστε καθώς ανακοινώνονται περισσότερες λεπτομέρειες."
 
-#: templates/tokens.html:68
+#: templates/tokens.html:66
 msgid "Interested in Origin tokens?"
 msgstr "Ενδιαφέρεστε για το Origin tokens;"
 
-#: templates/tokens.html:72 templates/tokens.html:73
+#: templates/tokens.html:70 templates/tokens.html:71
 msgid "Full Name"
 msgstr "Ονοματεπώνυμο"
 
-#: templates/tokens.html:80
+#: templates/tokens.html:78
 msgid "Are you an accredited investor?"
 msgstr "Είστε διαπιστευμένος επενδυτής;"
 
-#: templates/tokens.html:80
+#: templates/tokens.html:78
 msgid "An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)"
 msgstr "Ένας διαπιστευμένος επενδυτής οφείλει να έχει καθαρή αξία τουλάχιστον $1.000.000, μη συμπεριλαμβανόμενης της αξίας της κύριας κατοικίας του, ή να έχει εισόδημα τουλάχιστον $200.000 ετησίως για τα τελευταία δύο έτη (ή $300.000 μικτού εισοδήματος αν είναι παντρεμένος/-η)."
 
-#: templates/tokens.html:80
+#: templates/tokens.html:78
 msgid "Huh?"
 msgstr "Ε;"
 
-#: templates/tokens.html:83
+#: templates/tokens.html:81
 msgid "Yes"
 msgstr "Ναι"
 
-#: templates/tokens.html:88
+#: templates/tokens.html:86
 msgid "No"
 msgstr "Όχι"
 
-#: templates/tokens.html:93
+#: templates/tokens.html:91
 msgid "What type of entity do you represent?"
 msgstr "Τι τύπου οντότητα εκπροσωπείτε;"
 
-#: templates/tokens.html:96
+#: templates/tokens.html:94
 msgid "Individual"
 msgstr "Ατομική"
 
-#: templates/tokens.html:101
+#: templates/tokens.html:99
 msgid "Syndicate"
 msgstr "Συνδικάτου"
 
-#: templates/tokens.html:106
+#: templates/tokens.html:104
 msgid "Professional Fund"
 msgstr "Επαγγελματικό Κεφάλαιο"
 
-#: templates/tokens.html:112
+#: templates/tokens.html:110
 msgid "<strong>Desired allocation</strong>"
 msgstr "<strong>Επιθυμητή κατανομή</strong>"
 
-#: templates/tokens.html:128
+#: templates/tokens.html:126
 msgid "Citizenship"
 msgstr "Ιθαγένεια"
 
-#: templates/tokens.html:382
+#: templates/tokens.html:380
 msgid "<strong>ETH or BTC address you plan to send from?</strong> (optional)"
 msgstr "<strong>Η διεύθυνση ETH ή BTC από όπου σκοπεύεται να αποστείλετε;</strong> (optional)"
 
-#: templates/tokens.html:390
+#: templates/tokens.html:388
 msgid "Important notice"
 msgstr "Σημαντική ειδοποίηση"
 
-#: templates/tokens.html:393
+#: templates/tokens.html:391
 msgid " I understand any token sales will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation."
 msgstr " Κατανοώ ότι οι πωλήσεις συμβόλων θα υπόκεινται στους κανονισμούς των Ηνωμένων Πολιτειών και στους νόμους περί κινητών αξιών και ότι η υποβολή αυτού του εντύπου ΔΕΝ αποτελεί εγγύηση κατανομής."
 
-#: templates/tokens.html:402
+#: templates/tokens.html:400
 msgid "Submit"
 msgstr "Υποβολή"
 
 #: templates/tos.html:3 templates/tos.html:5
 msgid "Origin Protocol - Terms of Service"
 msgstr "Πρωτόκολλο προέλευσης - Όροι υπηρεσίας"
+
+#: templates/video.html:35
+msgid "Share"
+msgstr ""
+
+#: templates/videos.html:3 templates/videos.html:5
+msgid "Origin Protocol - Videos"
+msgstr ""
+
+#: templates/videos.html:18
+msgid "Investor Testimonial Videos"
+msgstr ""
+
+#: templates/videos.html:19
+msgid "Employee Videos"
+msgstr ""
+
+#: templates/videos.html:20
+msgid "Meetup Videos"
+msgstr ""
 
 #: templates/warning.html:9
 msgid "<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
@@ -1088,31 +1501,343 @@ msgstr "Συμμετάσχετε στις καμπάνιες μας και ολ�
 msgid "Go"
 msgstr "Πάμε"
 
-#: views/web_views.py:175 views/web_views.py:274
+#: views/web_views.py:187 views/web_views.py:347
 msgid "Please enter your name"
 msgstr "Παρακαλώ εισάγετε το όνομά σας"
 
-#: views/web_views.py:177 views/web_views.py:278
+#: views/web_views.py:189 views/web_views.py:351
 msgid "Please enter your email"
 msgstr "Παρακαλώ εισάγετε το email σας"
 
-#: views/web_views.py:179
+#: views/web_views.py:191
 msgid "An error occured"
 msgstr "Παρουσιάστηκε σφάλμα"
 
-#: views/web_views.py:181
+#: views/web_views.py:193
 msgid "Please enter your desired allocation"
 msgstr "Παρακαλώ εισάγετε την επιθυμητή κατανομή σας"
 
-#: views/web_views.py:183
+#: views/web_views.py:195
 msgid "Please agree to the important notice"
 msgstr "Παρακαλούμε να συμφωνήσετε με την σημαντική ανακοίνωση"
 
-#: views/web_views.py:185 views/web_views.py:280
+#: views/web_views.py:197 views/web_views.py:353
 msgid "Please prove you are not a robot."
 msgstr "Παρακαλώ αποδείξτε ότι δεν είστε ρομπότ."
 
-#: views/web_views.py:276
+#: views/web_views.py:349
 msgid "Please enter your company name"
 msgstr "Παρακαλώ εισάγετε το όνομα της εταιρείας σας"
+
+#~ msgid "New!"
+#~ msgstr "Νέος!"
+
+#~ msgid "Create your own<br>decentralized marketplace."
+#~ msgstr "Δημιουργήστε τη δική σας<br>αποκεντρωμένη αγορά."
+
+#~ msgid "Try It Now"
+#~ msgstr "Δοκίμασέ το τώρα"
+
+#~ msgid "Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network."
+#~ msgstr "Η προέλευση επιτρέπει την αληθινή αλληλεπίδραση με το peer to peer commerce. Πιστεύουμε στη μείωση των αμοιβών συναλλαγών, στην προώθηση ελεύθερου και διαφανούς εμπορίου, στην εξυπηρέτηση των μη τραπεζικών και στο να συμμετέχουν στο δίκτυο οι πρώτοι συμμετέχοντες στην κοινότητα."
+
+#~ msgid "Origin Protocol, Inc."
+#~ msgstr "Το Πρωτόκολλο Origin, Α.Ε."
+
+#~ msgid "Privacy"
+#~ msgstr "Προστασία προσωπικών δεδομένων"
+
+#~ msgid "Products"
+#~ msgstr "Προϊόντα"
+
+#~ msgid "iOS"
+#~ msgstr ""
+
+#~ msgid "Android"
+#~ msgstr ""
+
+#~ msgid "DApp"
+#~ msgstr "DApp"
+
+#~ msgid "Creator"
+#~ msgstr ""
+
+#~ msgid "Resources"
+#~ msgstr "Πόροι"
+
+#~ msgid "Developers"
+#~ msgstr "Προγραμματιστές"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgid "Docs"
+#~ msgstr "Έγγραφα"
+
+#~ msgid "Whitepaper"
+#~ msgstr "Whitepaper"
+
+#~ msgid "Organization"
+#~ msgstr "Ο Οργανισμός μας"
+
+#~ msgid "Store"
+#~ msgstr "Κατάστημα"
+
+#~ msgid "Meetups"
+#~ msgstr "Meetups"
+
+#~ msgid "Jobs"
+#~ msgstr "Εργασία"
+
+#~ msgid "Discord"
+#~ msgstr "Discord"
+
+#~ msgid "Telegram"
+#~ msgstr "Telegram"
+
+#~ msgid "Reddit"
+#~ msgstr "Reddit"
+
+#~ msgid "WeChat"
+#~ msgstr "WeChat"
+
+#~ msgid "Weibo"
+#~ msgstr "Weibo"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Instagram"
+#~ msgstr "Instagram"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Medium"
+#~ msgstr "Medium"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Decentralized marketplaces on the blockchain"
+#~ msgstr "Αποκεντρωμένες αγορές στην μπλοκ αλυσίδα"
+
+#~ msgid "Origin is a protocol for creating peer-to-peer marketplaces<br>using the Ethereum blockchain and IPFS"
+#~ msgstr "Origin είναι ένα πρωτόκολλο για τη δημιουργία peer-to-peer αγορές<br>χρησιμοποιώντας το blockchain Ethereum και σφαλμάτων μη έγκυρης σελίδας"
+
+#~ msgid "The Origin platform"
+#~ msgstr "Η πλατφόρμα του Origin"
+
+#~ msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
+#~ msgstr "Ενδυναμώνουμε developers και επιχειρήσεις να χτίζουν αποκεντρωμένες αγορές σε blockchain. Το πρωτόκολλό μας διευκολύνει τη δημιουργία και οργάνωση λιστών για την μερική χρήση περιουσιακών στοιχείων και υπηρεσιών. Αγοραστές και πωλητές μπορούν να ανακαλύψουν ο ένας τον άλλον, να ξεφυλλίσουν λίστες, να δημιουργήσουν κρατήσεις, να βαθμολογήσουν και να αφήσουν κάποια κριτική, και πολλά ακόμη."
+
+#~ msgid "Shop Origin"
+#~ msgstr ""
+
+#~ msgid "Join Our Discord"
+#~ msgstr "Συμμετοχή στη Διαφωνία μας"
+
+#~ msgid "Partners building on Origin"
+#~ msgstr "Συνεργάτες που χτίζουν πάνω στην Origin"
+
+#~ msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
+#~ msgstr "Ομάδες από όλο τον κόσμο χτίζουν πάνω στα πρωτόκολλα της Origin, αλλά ψάχνουμε για περισσότερους εκπληκτικούς ανθρώπους για να ενταχθούν στην αποστολή μας."
+
+#~ msgid "View All Partners"
+#~ msgstr "Δείτε Όλους Τους Συνεταίρους"
+
+#~ msgid "Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol."
+#~ msgstr ""
+
+#~ msgid "Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform."
+#~ msgstr ""
+
+#~ msgid "Circle's USDC stablecoin is proudly supported by Origin Protocol."
+#~ msgstr ""
+
+#~ msgid "Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform."
+#~ msgstr ""
+
+#~ msgid "Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol."
+#~ msgstr ""
+
+#~ msgid "Build your business on Origin"
+#~ msgstr "Χτίστε την επιχείρησή σας στην Origin"
+
+#~ msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
+#~ msgstr "Αν είστε ανεξάρτητος φωτογράφος, ιδιοκτήτης διαμερίσματος, προμηθευτής ποδηλάτων κοινής χρήσης, ή έχετε υφιστάμενη επιχείρηση οικονομίας κοινής χρήσης, η Origin καθιστά εύκολο το επιχειρείν στο αποκεντρωμένο δίκτυο."
+
+#~ msgid "Get in touch to learn more."
+#~ msgstr "Ελάτε σε επαφή με εμάς για να μάθετε περισσότερα."
+
+#~ msgid "Create Your Marketplace"
+#~ msgstr "Δημιουργήστε την αγορά σας"
+
+#~ msgid "It's time to replace rent-seeking middlemen"
+#~ msgstr "Ήρθε η ώρα να αντικαταστήσετε τους μεσάζοντες που επιδιώκουν τόκο"
+
+#~ msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
+#~ msgstr "Αξιοποιώντας τη δύναμη του Ethereum blockchain, οι λίστες διαχειρίζονται μέσω ενός ασφαλούς και διαφανούς συστήματος που δρα ως ουδέτερος ανεξάρτητος φορέας. Αγοραστές και πωλητές μοιράζονται το 20-30%% των τελών συναλλαγών που σήμερα λαμβάνουν εταιρίες όπως η Uber, η Airbnb, η Fiverr και η Getaround."
+
+#~ msgid "Read the Whitepaper"
+#~ msgstr ""
+
+#~ msgid "Smart contracts enable secure and reliable payments directly from one party to another"
+#~ msgstr "Τα έξυπνα συμβόλαια συνεπάγονται ασφαλείς και αξιόπιστες πληρωμές απευθείας από το ένα μέρος στο άλλο"
+
+#~ msgid "Protocol schemas support hundreds of listing types, including custom verticals"
+#~ msgstr "Τα σχήματα του πρωτοκόλλου υποστηρίζουν εκατοντάδες τύπους καταχωρήσεων, συμπεριλαμβανόμενων και των προσαρμοζόμενων κατακόρυφων"
+
+#~ msgid "Open and shared data encourages innovation by developers and businesses"
+#~ msgstr "Τα ανοιχτά και κοινόχρηστα δεδομένα ενθαρρύνουν την καινοτομία από προγραμματιστές και επιχειρήσεις"
+
+#~ msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
+#~ msgstr "Η βεβαίωση ταυτότητας και τα δεδομένα φήμης στο blockchain εξασφαλίζουν ασφαλείς και αξιόπιστους συνεργάτες"
+
+#~ msgid "Tech Stack"
+#~ msgstr "Τεχνολογική Στοίβα"
+
+#~ msgid "Roadmap"
+#~ msgstr "Χάρτης Πορείας"
+
+#~ msgid "Idea conception and early development"
+#~ msgstr "Ιδέα σύλληψη και πρώιμη ανάπτυξη"
+
+#~ msgid "<a href='%%(whitepaper)s'>Whitepaper</a> released"
+#~ msgstr ""
+
+#~ msgid "Launch alpha on Ethereum testnet"
+#~ msgstr "Εκκινήστε το alpha στο testnet της Ethereum"
+
+#~ msgid "Q2 2018"
+#~ msgstr "Q2 2018"
+
+#~ msgid "Launch beta on Ethereum testnet"
+#~ msgstr "Ξεκινήστε τη δοκιμή beta στο Ethereum testnet"
+
+#~ msgid "Q3 2018"
+#~ msgstr "Q3 2018"
+
+#~ msgid "Platform readiness and mainnet launch"
+#~ msgstr "Ετοιμότητα πλατφόρμας και εκτόξευση mainnet"
+
+#~ msgid "2019"
+#~ msgstr "2019"
+
+#~ msgid "3rd-parties expected to launch DApps"
+#~ msgstr "Τα τρίτα μέρη αναμένεται να ξεκινήσουν τα DApps"
+
+#~ msgid "Join us in building the sharing economy of tomorrow"
+#~ msgstr "Ελάτε μαζί μας στην οικοδόμηση της συνεργατικής οικονομίας του αύριο"
+
+#~ msgid "Sign up for our mailing list and be first to learn of any Origin news!"
+#~ msgstr "Εγγραφείτε στη λίστα αλληλογραφίας μας και γίνεται οι πρώτοι που θα μαθαίνουν οποιαδήποτε νέα για την Origin!"
+
+#~ msgid "Enter email"
+#~ msgstr "Εισάγετε διεύθυνση ηλεκτρονικού ταχυδρομείου"
+
+#~ msgid "Join the Community"
+#~ msgstr "Γίνετε μέλος της Κοινότητας"
+
+#~ msgid "Press"
+#~ msgstr "Ο Τύπος"
+
+#~ msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
+#~ msgstr "Αν η Airbnb ξεκινούσε σήμερα, θα ήταν ένα peer-to-peer συνεργατικό μοντέλο βασιζόμενο στο blockchain - Joey Krug Augur"
+
+#~ msgid "Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers"
+#~ msgstr "Το πρωτόκολλο Origin περιέχει 28 εκατομμύρια δολάρια για την πλατφόρμα blockchain peer-to-peer. Η πώληση τεκμηρίων τροφοδοτεί τη χρηματοδότηση, περίπου 45 εταιρείες έχουν δεσμευτεί ως πελάτες"
+
+#~ msgid "Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain."
+#~ msgstr "Η Origin στοχεύει στη δημιουργία ενός συνόλου πρωτοκόλλων που να επιτρέπουν στους προγραμματιστές και τις επιχειρήσεις να χτίσουν μια αποκεντρωμένη κοινόχρηστη αγορά οικονομιών στο blockchain."
+
+#~ msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
+#~ msgstr "Η Origin Protocol, που χρησιμοποιεί το ethereum blockchain, επιτρέπει σε αγοραστές και πωλητές να αλληλεπιδρούν μεταξύ τους αποτελεσματικά."
+
+#~ msgid "A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy."
+#~ msgstr "Ένα αποκεντρωμένο ψηφιακό κατάστιχο που επιτρέπει συναλλαγές μεταξύ χρηστών χωρίς μεσάζοντα (και χωρίς επιπλέον έξοδα), είναι έτοιμο να εφεύρει εκ νέου την εμπειρία χρηστών στην συνεργατική οικονομία."
+
+#~ msgid "It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too."
+#~ msgstr "Ακούγεται ουτοπικό και εντελώς επαναστατικό: ένας κόσμος καλοπροαίρετων κοινωνικών επιχειρήσεων και μη κερδοσκοπικών οργανισμών που επιδιώκουν να ενδυναμώσουν τους καταναλωτές και να τους επιστρέψουν τα δικαιώματα απορρήτου τους, και ενδεχομένως τους σώσει και κάποια χρήματα επίσης."
+
+#~ msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
+#~ msgstr "To πρωτόκολλο Origin χρησιμοποιεί το Ethereum Blockchain ώστε να βοηθήσει αγοραστές και πωλητές να συναλλάσσονται σε ένα αποκεντρωμένο περιβάλλον χωρίς παραδοσιακούς μεσάζοντες."
+
+#~ msgid "Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet."
+#~ msgstr "Φανταστείτε ένα Airbnb με μηδενικές προμήθειες και απολύτως δημοκρατικό. Η πλατφόρμα δεν ελέγχεται από έναν γίγαντα του Silicon Valley αλλά προσφέρεται δωρεάν σε οποιονδήποτε έχει πρόσβαση στο διαδίκτυο."
+
+#~ msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
+#~ msgstr "Το πρωτόκολλο Origin είναι ένα σύνολο πρωτοκόλλων blockchain ανοιχτού λογισμικού για αγοραστές και πωλητές υπηρεσιών, όπως η κοινοχρησία οχημάτων ή σπιτιών, ώστε αυτοί να συναλλάσονται σε μια αποκεντρωμένη, open web πλατφόρμα."
+
+#~ msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
+#~ msgstr "Τι θα συνέβαινε αν το ανοιχτό λογισμικό αντικαθιστούσε δεκάδες εταιρίες πολλών εκατομμυρίων ή ακόμη και δισεκατομμυρίων δολαρίων;"
+
+#~ msgid "Origin Protocol offers an entire blockchain-based platform to allow anyone to create their own property-sharing business."
+#~ msgstr "Το πρωτόκολλο προέλευσης προσφέρει μια ολόκληρη πλατφόρμα βασισμένη σε blockchain για να επιτρέψει σε οποιονδήποτε να δημιουργήσει τη δική του επιχείρηση κοινής ιδιοκτησίας."
+
+#~ msgid "Origin Protocol, a blockchain project building a decentralized marketplace, has rolled out a peer-to-peer messaging application built on top of ethereum."
+#~ msgstr "Το πρωτόκολλο προέλευσης, ένα έργο blockchain για την οικοδόμηση μιας αποκεντρωμένης αγοράς, έχει αναπτύξει μια εφαρμογή ανταλλαγής μηνυμάτων από ομότιμους χρήστες που είναι χτισμένη πάνω από το αιθέριο."
+
+#~ msgid "We want to create a future where buyers and sellers can transact in the wild by using neutral tools that don't favor either party."
+#~ msgstr "Θέλουμε να δημιουργήσουμε ένα μέλλον όπου οι αγοραστές και οι πωλητές μπορούν να πραγματοποιούν συναλλαγές φυσικά χρησιμοποιώντας ουδέτερα εργαλεία που δεν ευνοούν κανένα μέρος."
+
+#~ msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
+#~ msgstr "Η οικονομία κοινής χρήσης καταλήγει να μοιράζεται έναν τόνο των αποδοχών της εργασίας με μεσάζοντες όπως η Uber και η Airbnb."
+
+#~ msgid "Marketplace Creator"
+#~ msgstr "Δημιουργός αγοράς"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
+#~ msgstr "Η Origin είναι ομάδα κατανεμημένων καινοτόμων, μηχανικών και ειδικών του blockchain. Η αποστολή μας είναι να επιτρέψουμε την ύπαρξη κοινόχρηστης οικονομίας στο αποκεντρωμένο δίκτυο. Είμαστε ανοιχτοί σε προσλήψεις!"
+
+#~ msgid "Core Team"
+#~ msgstr "Ο Πυρήνας της Ομάδας μας"
+
+#~ msgid "Austin Virts"
+#~ msgstr "Ώστιν Βιρτς"
+
+#~ msgid "Marketing"
+#~ msgstr "Εμπορία"
+
+#~ msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
+#~ msgstr "Ο Austin είναι ένας φιλόδοξος επιχειρηματίας που ξεκίνησε και λειτούργησε πολλές επιτυχημένες εταιρείες στο διαδίκτυο πριν ξεκινήσει μια δημιουργική αντιπροσωπεία πλήρους υπηρεσίας στο Boulder, CO."
+
+#~ msgid "Advisor/PR"
+#~ msgstr "Σύμβουλος/PR"
+
+#~ msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
+#~ msgstr "O Addison είναι ειδικός στις επικοινωνίες και το marketing με δίπλωμα στη Φυσική από το Πανεπιστήμιο του Berkeley. Πρωτύτερα είχε εργαστεί στο Ethereum Foundation και στο DEVCON1."
+
+#~ msgid "Advisor/International BD"
+#~ msgstr "Σύμβουλος/Διεθνής BD"
+
+#~ msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
+#~ msgstr "Η Melody είναι ιδρύτρια του Spartan Group, ενός ταμείου συμβουλευτικής για blockchain και επενδύσεις. Ήταν μια πρώιμη επενδυτής του TenX και στρατηγικός σύμβουλος του Gifto και του Appcoins."
+
+#~ msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
+#~ msgstr "Ο Paul είναι εταίρος της Pantera Capital. Είναι επίσης σύμβουλος σε μερικά άκρως επιτυχή projects κρυπτονομισμάτων, συμπεριλαμβανομένων των Orchid Labs, Enigma και ICON."
+
+#~ msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
+#~ msgstr "Ο Joey είναι συνιδρυτής του Augur, την πρώτη αποκεντρωμένη αγορά προβλέψεων και μαντείων στον κόσμο. Είναι συνδιευθυντής του Γραφείου Επενδύσεων στο Pantera Capital."
+
+#~ msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
+#~ msgstr "Ο Andrew ήταν ο ιδρυτής τεσσάρων startups, μεταξύ των οποίων το Startup Weekend, και έχει χτίσει παγκόσμιες κοινότητες σε δεκάδες χώρες. Ήταν ο #1 υπάλληλος στο TechStars."
+
+#~ msgid "Open-source Contributors"
+#~ msgstr "Συνεισφέροντες ανοιχτού κώδικα"
+
+#~ msgid "Investment Funds"
+#~ msgstr "Επενδυτικά Κεφάλαια"
+
+#~ msgid "Xiahong Lin"
+#~ msgstr "Xiahong Lin"
+
+#~ msgid "Kamal Ravikant"
+#~ msgstr "Kamal Ravikant"
+
+#~ msgid "Garry Tan"
+#~ msgstr "Garry Tan"
 
