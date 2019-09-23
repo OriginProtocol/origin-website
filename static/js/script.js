@@ -1,24 +1,81 @@
-function submitEmailForm (event) {
-  $.post('/mailing-list/join', $(event.target).serialize(), function(data) {
-      $("#signup-result").html(data);
-      alertify.log(data, "default");
-      fbq('track', 'Lead');
+function toggleElementsState(elements, disabled) {
+  Array.from(elements)
+    .forEach(function (el) {
+      if (disabled) {
+        el.setAttribute('disabled', true)
+        el.disabled = true
+      } else {
+        el.removeAttribute('disabled')
+        el.disabled = false
+      }
+    })
+}
+
+function addToMailingList(event) {
+  event.preventDefault();
+
+  var isTokensPage = window.location.pathname.split('/').pop().startsWith('ogn-token')
+
+  var inputData = $(event.target).serialize()
+
+  var formElements = event.target.querySelectorAll('input')
+  toggleElementsState(formElements, true)
+
+  $.post('/mailing-list/join', inputData, function (data) {
+      if (data.success && isTokensPage) {
+        var presaleMailingList = document.getElementById('presale-mailing-list')
+        presaleMailingList.classList.add('open')
+
+        // var emailList = document.getElementById('add-to-mailing-list')
+        // emailList.classList.remove('d-none')
+
+        var emailInput = presaleMailingList.querySelector('[type=email]', presaleMailingList)
+        emailInput.value = decodeURIComponent(inputData.split('=').pop())
+        emailInput.parentElement.classList.add('d-none')
+      } else {
+        toggleElementsState(formElements, false)
+      }
+
+      if (data.success) {
+        fbq('track', 'Lead');
+      }
+
+      alertify.log(data.message ? data.message : data, "default");
+
     },
     'json'
   );
-  event.preventDefault();
+  
+
 }
 
-$("#mailing-list").submit(submitEmailForm);
-$("#mailing-list-footer").submit(submitEmailForm);
+$("#mailing-list").submit(addToMailingList);
+$("#mailing-list-footer").submit(addToMailingList);
 
-function presaleFormSubmit(event) {
-  $.post('/presale/join', $('form').serialize(), function(data) {
-    if (data == "OK") {
+function presaleFormSubmit() {
+  var emailList = document.getElementById('add-to-mailing-list')
+
+  var presaleMailingList = document.getElementById('presale-mailing-list')
+  var presaleForm = presaleMailingList.querySelector('form')
+  var inputData = $(presaleForm).serialize()
+  var formElements = presaleForm.querySelectorAll('input')
+  toggleElementsState(formElements, true)
+  $.post('/presale/join', inputData, function(data) {
+    if (data.success) {
+      var presaleMailingList = document.getElementById('presale-mailing-list')
+      if (presaleMailingList) {
+        presaleMailingList.classList.remove('open')
+      }
+
       fbq('track', 'Lead');
-      window.location = "/";
+
+      toggleElementsState(emailList.querySelectorAll('input'), false)
+      emailList.querySelector('input[type=email]').value = ''
+      window.scrollTo(0, 0)
     }
-    alertify.log(data, "default");
+
+    toggleElementsState(formElements, false)
+    alertify.log(data.message, "default");
   },
   'json')
 }

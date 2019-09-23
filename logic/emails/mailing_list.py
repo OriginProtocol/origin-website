@@ -53,7 +53,7 @@ def unsubscribe_sendgrid_contact(email):
 def send_welcome(email, ip_addr):
 
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-        return gettext('Please enter a valid email address')
+        return jsonify(success=False, message=gettext('Please enter a valid email address'))
 
     try:
         me = db_models.EmailList()
@@ -63,11 +63,11 @@ def send_welcome(email, ip_addr):
         db.session.add(me)
         db.session.commit()
     except:
-        return gettext('You are already signed up!')
+        return jsonify(success=False, message=gettext('You are already signed up!'))
 
     email_types.send_email_type('welcome1', DEFAULT_SENDER, email)
 
-    return gettext('Thanks for signing up!')
+    return jsonify(success=True, message=gettext('Thanks for signing up!'))
 
 def presale(full_name, email, desired_allocation, desired_allocation_currency, citizenship, sending_addr, ip_addr):
 

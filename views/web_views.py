@@ -121,12 +121,12 @@ def admin():
 @app.route('/presale', strict_slashes=False)
 @app.route('/<lang_code>/presale', strict_slashes=False)
 def presale():
-    return redirect('/tokens', code=302)
+    return redirect('/ogn-token', code=302)
 
 @app.route('/tokens', strict_slashes=False)
 @app.route('/<lang_code>/tokens', strict_slashes=False)
 def tokens():
-    return render_template('tokens.html')
+    return redirect('/ogn-token', code=302)
 
 @app.route('/whitepaper', strict_slashes=False)
 @app.route('/<lang_code>/whitepaper', strict_slashes=False)
@@ -166,9 +166,9 @@ def join_mailing_list():
         ip_addr = get_real_ip()
         feedback = mailing_list.send_welcome(email, ip_addr)
         mailing_list.add_sendgrid_contact(email=email, full_name=full_name, dapp_user=dapp_user)
-        return jsonify(feedback)
+        return feedback
     else:
-        return jsonify("Missing email")
+        return jsonify(success=False, message=gettext("Missing email"))
 
 @app.route('/presale/join', methods=['POST'], strict_slashes=False)
 def join_presale():
@@ -180,22 +180,22 @@ def join_presale():
     sending_addr = request.form["sending_addr"]
     ip_addr = get_real_ip()
     if not full_name:
-        return jsonify(gettext("Please enter your name"))
+        return jsonify(success=False, message=gettext("Please enter your name"))
     if not email:
-        return jsonify(gettext("Please enter your email"))
+        return jsonify(success=False, message=gettext("Please enter your email"))
     if not citizenship:
-        return jsonify(gettext("Select your country of citizenship"))
+        return jsonify(success=False, message=gettext("Select your country of citizenship"))
     if not desired_allocation:
-        return jsonify(gettext("Please enter your desired allocation"))
+        return jsonify(success=False, message=gettext("Please enter your desired allocation"))
     if not desired_allocation_currency:
-        return jsonify(gettext("Select a currency"))
+        return jsonify(success=False, message=gettext("Select a currency"))
     if not recaptcha.verify():
-        return jsonify(gettext("Please prove you are not a robot."))
+        return jsonify(success=False, message=gettext("Please prove you are not a robot."))
     feedback = mailing_list.presale(full_name, email, desired_allocation, desired_allocation_currency, citizenship, sending_addr, request.remote_addr)
     mailing_list.add_sendgrid_contact(email, full_name, citizenship)
     insight.add_contact(sending_addr,name=full_name, email=email, presale_interest=1)
     flash(feedback)
-    return jsonify("OK")
+    return jsonify(success=True, message=gettext("OK"))
 
 @app.route('/mailing-list/unsubscribe', methods=['GET'], strict_slashes=False)
 def unsubscribe():

@@ -17,10 +17,13 @@
       <!-- {% with timer_large=True %}
       {% include 'components/countdown-timer.html' %}
       {% endwith %} -->
-      <div class="mailing-list">
+      <div id="add-to-mailing-list" class="mailing-list">
         {% with theme_dark=False %}
-        {% include 'components/email-input.html' %}
+          {% include 'components/email-input.html' %}
         {% endwith %}
+      </div>
+      <div id="presale-mailing-list" class="presale-mailing-list">
+        {% include 'components/presale-form.html' %}
       </div>
       <div class="explanation">
         {{gettext("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")}}

@@ -108,14 +108,18 @@
 }
 
 .email-form input[type=submit] {
-    background: url(/static/img/triangle.png) no-repeat center;
-    border: 0;
-    border-radius: 25px;
-    display: block;
-    background-color: var(--blue);
-    height: 50px;
-    width: 50px;
-    padding: 0px;
+  background: url(/static/img/triangle.png) no-repeat center;
+  border: 0;
+  border-radius: 25px;
+  display: block;
+  background-color: var(--blue);
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+}
+
+.email-form input[type=submit]:disabled {
+  background-color: #868e96;
 }
 
 .email-form .email-input {
@@ -127,7 +131,7 @@
   color: #061d2a;
 }
 
-.email-form .email-input::placeholder {
+.email-form .email-input::placeholder, .email-form .email-input:disabled {
   color: #8fa7b7;
 }
 
