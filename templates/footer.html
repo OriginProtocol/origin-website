@@ -44,35 +44,38 @@
           </div>
         </div>
         <div class="social-links mt-5">
-          <a href="https://www.facebook.com/originprotocol" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Facebook") }}" data-placement="top">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://twitter.com/originprotocol" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Twitter") }}" data-placement="top">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://www.linkedin.com/company/originprotocol" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://medium.com/originprotocol" target="_blank" rel="noopener noreferrer">
+          <a href="https://medium.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Medium") }}" data-placement="top">
             <i class="fab fa-medium-m"></i>
           </a>
-          <a href="https://youtube.com/c/originprotocol" target="_blank" rel="noopener noreferrer">
+          <a href="https://youtube.com/c/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Youtube") }}" data-placement="top">
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="https://instagram.com/originprotocol" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Instagram") }}" data-placement="top">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://t.me/originprotocol" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Telegram") }}" data-placement="top">
             <i class="fab fa-telegram-plane"></i>
           </a>
-          <a href="https://www.reddit.com/r/originprotocol/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.reddit.com/r/originprotocol/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Reddit") }}" data-placement="top">
             <i class="fab fa-reddit-alien"></i>
           </a>
-          <a href="{{ universal.DISCORD_URL }}" target="_blank" rel="noopener noreferrer">
+          <a href="{{ universal.DISCORD_URL }}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Discord") }}" data-placement="top">
             <i class="fab fa-discord"></i>
           </a>
+          <a href="#" data-container="body" data-toggle="tooltip" title="" data-original-title="<img class='tooltip-img' src='/static/img/origin-weibo-qr.png' />">
+            <i class="fab fa-weibo"></i>
+          </a>
+          <a href="#" data-container="body" data-toggle="tooltip" title="" data-original-title="<img class='tooltip-img' src='/static/img/origin-wechat-qr.png' />">
+            <i class="fab fa-weixin"></i>
+          </a>
           {% if CURRENT_LANGUAGE == "ru" %}
-            <a href="{{ universal.VK_URL }}" target="_blank" rel="noopener noreferrer">
+            <a href="{{ universal.VK_URL }}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("VK") }}" data-placement="top">
               <i class="fab fa-vk"></i>
             </a>
           {% endif %}

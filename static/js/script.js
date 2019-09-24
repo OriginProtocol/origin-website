@@ -159,7 +159,36 @@ $('[data-toggle="tooltip"]').tooltip({
 
 // REDESIGN 2019 START
 $(function() {
-  function handleVideoResize(backgroundVideoElementId, videoAspectRatio, isVideoPlayer, bgPlayer) {
+  function createElement(tag, props, children) {
+    var namespace
+
+    if (tag === 'svg' || tag === 'circle') {
+      namespace = 'http://www.w3.org/2000/svg'
+    }
+
+    var element = namespace ? document.createElementNS(namespace, tag) : document.createElement(tag)
+
+    var attributes = Object.keys(props)
+    for (var i = 0; i < attributes.length; i++) {
+      element.setAttribute(attributes[i], props[attributes[i]])
+    }
+
+    if (children) {
+      if (typeof children !== 'object') {
+        element.innerText = children
+      } else if (children.constructor === Array) {
+        for (var i = 0; i < children.length; i++) {
+          element.appendChild(children[i])
+        }
+      } else {
+        element.appendChild(children)
+      }
+    }
+
+    return element
+  }
+
+  function handleVideoResize(backgroundVideoElementId, videoAspectRatio, isVideoPlayer, bgPlayer, posterImageElement) {
     var videoElement = document.getElementById(backgroundVideoElementId)
     var containerWidth = videoElement.parentElement.offsetWidth;
     var containerHeight = videoElement.parentElement.offsetHeight;
@@ -172,6 +201,11 @@ $(function() {
         videoElement.style.width = width + "px";
         videoElement.style.height = containerHeight + "px";
       }
+
+      if (posterImageElement) {
+        posterImageElement.style.width = width + "px";
+        posterImageElement.style.height = containerHeight + "px"; 
+      }
     } else {
       var height = containerWidth*videoAspectRatio;
       if (isVideoPlayer) {
@@ -180,18 +214,21 @@ $(function() {
         videoElement.style.width = containerWidth + "px";
         videoElement.style.height = height + "px";
       }
+
+      if (posterImageElement) {
+        posterImageElement.style.width = containerWidth + "px";
+        posterImageElement.style.height = height + "px";
+      }
     }
   }
 
   function setupYoutubeVideoElement({
     backgroundElementId,
-    videoSource,
-    aspectRatio,
+    videoSources,
     videoButtonId,
     fullScreenVideoElementId,
     bgElementIsVideo,
-    startTime = 0,
-    loopTime = null
+    videoPosterId
   }) {
     var playerOpts = {
       autoplay: true,
@@ -205,6 +242,14 @@ $(function() {
     };
 
     var fullScreenPlayerOpts = {};
+    var currentLang = document.body.parentElement.getAttribute('lang')
+    var currentVideoSource = videoSources[currentLang] ? videoSources[currentLang] : videoSources.default
+
+
+    var videoSource = currentVideoSource.videoSource
+    var aspectRatio = currentVideoSource.aspectRatio
+    var startTime = currentVideoSource.startTime || 0
+    var loopTime = currentVideoSource.loopTime || null
 
     Object.assign(fullScreenPlayerOpts, playerOpts, {
       fullscreen: true,
@@ -218,6 +263,13 @@ $(function() {
       return;
     }
 
+    let posterImageElement
+    // if poster image is used populate it and pass it to resize function
+    if (videoPosterId) {
+      posterImageElement = document.getElementById(videoPosterId)
+      posterImageElement.appendChild(createElement('img', { src: `/static/img/videos/${videoSource}_poster_image.png` }))
+    }
+
     if (bgElementIsVideo) {
       var bgPlayer = new window.ytPlayer('#' + backgroundElementId, playerOpts);
       bgPlayer.load(videoSource, true);
@@ -227,6 +279,7 @@ $(function() {
         bgPlayer.seek(startTime);
       });
       bgPlayer.on('timeupdate', (seconds) => {
+        // jump to start time
         if (startTime && seconds < startTime) {
           bgPlayer.seek(startTime);
         }
@@ -235,6 +288,15 @@ $(function() {
           bgPlayer.seek(startTime);
         }
 
+        // hide picture poster when video starts
+        if (posterImageElement &&
+          (
+            (startTime && seconds > startTime) ||
+            (!startTime && seconds > 0)
+          )
+        ) {
+          posterImageElement.style.display = 'none';
+        }
       });
     }
       
@@ -327,7 +389,7 @@ $(function() {
     });
 
     function callHandleVideoResize() {
-      handleVideoResize(backgroundElementId, aspectRatio, bgElementIsVideo, bgPlayer);
+      handleVideoResize(backgroundElementId, aspectRatio, bgElementIsVideo, bgPlayer, posterImageElement);
     }
 
     window.onresize = callHandleVideoResize;
@@ -347,42 +409,91 @@ $(function() {
 
   setupYoutubeVideoElement({
     backgroundElementId: 'landing-video-background',
-    videoSource: 'aanKtnkWP8U',
-    aspectRatio: 0.42,
+    videoSources: {
+      'default': {
+        videoSource: 'aanKtnkWP8U',
+        aspectRatio: 0.42,
+        loopTime: 70, // loop time in seconds
+      },
+      // Input other localisation videos this way 
+      // 'zh_Hans' : {
+      //   videoSource: 'aanKtnkWP8U',
+      //   aspectRatio: 0.42,
+      //   loopTime: 70
+      // }
+    },
     videoButtonId: 'index-video-button',
     fullScreenVideoElementId: 'landing-video',
     bgElementIsVideo: true,
-    loopTime: 70, // loop time in seconds
-    startTime: 0
+    videoPosterId: 'landing-video-poster'
   })
+
+  setupYoutubeVideoElement({
+    backgroundElementId: 'landing-video-background2',
+    videoSources: {
+      'default': {
+        videoSource: 'tAyusRT3ZDQ',
+        aspectRatio: 0.56,
+        startTime: 72
+      }
+    },
+    videoButtonId: 'landing-video-button2',
+    fullScreenVideoElementId: 'landing-video2',
+    bgElementIsVideo: true,
+    videoPosterId: 'landing-video-poster2'
+  })
+
   setupYoutubeVideoElement({
     backgroundElementId: 'about-video-background',
-    videoSource: 'e70bvBw1oOo',
-    aspectRatio: 0.56,
+    videoSources: {
+      'default': {
+        videoSource: 'e70bvBw1oOo',
+        aspectRatio: 0.56,
+        startTime: 5
+      }
+    },
     videoButtonId: 'about-video-button',
     fullScreenVideoElementId: 'about-video',
-    bgElementIsVideo: true
+    bgElementIsVideo: true,
+    videoPosterId: 'about-video-poster'
   })
   setupYoutubeVideoElement({
     backgroundElementId: 'team-video-background',
-    videoSource: 'ERh2n-vlpQ4',
-    aspectRatio: 0.56,
+    videoSources: {
+      'default': {
+        videoSource: 'ERh2n-vlpQ4',
+        aspectRatio: 0.56,
+        startTime: 15
+      }
+    },
     videoButtonId: 'team-video-button',
     fullScreenVideoElementId: 'team-video',
-    bgElementIsVideo: true
+    bgElementIsVideo: true,
+    videoPosterId: 'team-video-poster'
   })
   setupYoutubeVideoElement({
     backgroundElementId: 'investors-video-background',
+    videoSources: {
+      'default': {
+        videoSource: 'tAyusRT3ZDQ',
+        aspectRatio: 0.56,
+        startTime: 72
+      }
+    },
     videoSource: 'tAyusRT3ZDQ',
-    aspectRatio: 0.56,
     videoButtonId: 'investors-video-button',
     fullScreenVideoElementId: 'investors-video',
-    bgElementIsVideo: true
+    bgElementIsVideo: true,
+    videoPosterId: 'investor-video-poster'
   })
   setupYoutubeVideoElement({
     backgroundElementId: 'video-page-video-background',
-    videoSource: null,
-    aspectRatio: 0.56,
+    videoSources: {
+      'default': {
+        videoSource: null,
+        aspectRatio: 0.56
+      }
+    },
     videoButtonId: 'video-page-video-button',
     fullScreenVideoElementId: 'video-page-video',
     bgElementIsVideo: false
@@ -397,39 +508,58 @@ $(function() {
   var socialLegend = {
     'Discord': {
       'img': '/static/img/about/discord.svg',
-      'countLabel': 'members'
+      'countLabel': 'members',
+      'link': 'https://discordapp.com/invite/jyxpUSe'
     },
     'Telegram': {
       'img': '/static/img/about/telegram.svg',
-      'countLabel': 'members'
+      'countLabel': 'members',
+      'link': 'https://t.me/originprotocol'
+    },
+    'Telegram (Korean)': {
+      'img': '/static/img/about/telegram.svg',
+      'countLabel': 'members',
+      'link': 'https://t.me/OriginProtocolKorea'
     },
     'Wechat': {
       'img': '/static/img/about/wechat.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'qr': '/static/img/origin-wechat-qr.png'
     },
     'KaKao plus friends': {
       'img': '/static/img/about/kakao.svg',
-      'countLabel': 'subscribers'
+      'countLabel': 'subscribers',
+      'qr': '/static/img/origin-kakao-qr.png'
     },
     'Facebook': {
       'img': '/static/img/about/facebook.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'link': 'https://www.facebook.com/originprotocol'
     },
     'Twitter': {
       'img': '/static/img/about/twitter.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'link': 'https://twitter.com/originprotocol'
     },
     'Instagram': {
       'img': '/static/img/about/instagram.svg',
-      'countLabel': 'followers'
+      'countLabel': 'followers',
+      'link': 'https://instagram.com/originprotocol'
     },
     'Youtube': {
       'img': '/static/img/about/youtube.svg',
-      'countLabel': 'subscribers'
+      'countLabel': 'subscribers',
+      'link': 'https://youtube.com/c/originprotocol'
     },
     'Reddit': {
       'img': '/static/img/about/reddit.svg',
-      'countLabel': 'subscribers'
+      'countLabel': 'subscribers',
+      'link': 'https://www.reddit.com/r/'
+    },
+    'Medium': {
+      'img': '/static/img/about/medium.svg',
+      'countLabel': 'followers',
+      'link': 'https://medium.com/originprotocol'
     }
   }
 
@@ -467,12 +597,21 @@ $(function() {
           return
 
         socialSection.appendChild(createElementFromHTML(
-          '<div class="d-flex flex-column social-box">' +
-            '<img src="' + statMetadata.img + '"/>' +
-            '<div class="mt-auto">' + formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel  + '</div>' +
-          '</div>'
+          '<a class="d-flex flex-column social-box align-items-center"' + 
+            (statMetadata.link ? ('href="' + statMetadata.link + '"') : 'href="#"') + 
+            (statMetadata.qr ? 'data-container="body" data-toggle="tooltip" title="" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : '') +
+          '>' +
+              '<img src="' + statMetadata.img + '"/>' +
+              '<div class="mt-auto">' + formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel  + '</div>' +
+          '</a>'
         ))
       })
+
+      // enable newly created tooltips
+      $('[data-toggle="tooltip"]').tooltip({
+        html: true
+      });
+
     })
 });
 
