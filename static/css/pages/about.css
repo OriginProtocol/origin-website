@@ -125,6 +125,14 @@
   text-align: center;
 }
 
+.social-media-section h2 {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.social-media-section #social-media-list-country-specific,
 .social-media-section #social-media-list {
   max-width: 1000px;
   margin: 10px 10px;
@@ -135,9 +143,13 @@
   margin-bottom: 0px;
 }
 
-.social-media-section .social-box {
+.social-media-section #social-media-list-country-specific > .social-box {
   margin: 70px 20px 0px 20px;
+}
+
+.social-media-section .social-box {
   color: white;
+  margin: 70px 20px 0px 20px;
 }
 
 .social-media-section img {
@@ -168,9 +180,14 @@
     text-align: left;
   }
 
+  .social-media-section #social-media-list-country-specific,
   .social-media-section #social-media-list {
     margin: 10px 110px;
     padding-bottom: 90px;
+  }
+
+  .social-media-section #social-media-list-country-specific > .social-box {
+    margin: 40px 35px 0px 25px;
   }
 
   .about-page .white-section img,

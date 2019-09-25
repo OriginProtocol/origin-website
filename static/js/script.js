@@ -501,67 +501,107 @@ $(function() {
 });
 
 $(function() {
-  var socialSection = document.getElementById('social-media-list')
-  if (!socialSection)
-    return
+  var socialSection = document.getElementById('social-media-list');
+  var socialSectionRegionSpecific = document.getElementById('social-media-list-country-specific');
+
+  if (!socialSection || !socialSectionRegionSpecific)
+    return;
+
+  var hardcodedStats = [
+    {
+      'name': 'Discord',
+      'subscribed_count': 1000
+    },
+    {
+      'name': 'Wechat',
+      'subscribed_count': 1100
+    },
+    {
+      'name': 'Vk',
+      'subscribed_count': undefined
+    }
+  ];
 
   var socialLegend = {
     'Discord': {
       'img': '/static/img/about/discord.svg',
       'countLabel': 'members',
-      'link': 'https://discordapp.com/invite/jyxpUSe'
+      'link': 'https://discordapp.com/invite/jyxpUSe',
+      'regionSpecific': false
     },
     'Telegram': {
       'img': '/static/img/about/telegram.svg',
       'countLabel': 'members',
-      'link': 'https://t.me/originprotocol'
+      'link': 'https://t.me/originprotocol',
+      'regionSpecific': false
     },
     'Telegram (Korean)': {
-      'img': '/static/img/about/telegram.svg',
+      'img': '/static/img/about/korean-telegram.svg',
       'countLabel': 'members',
-      'link': 'https://t.me/OriginProtocolKorea'
+      'link': 'https://t.me/OriginProtocolKorea',
+      'regionSpecific': true
     },
     'Wechat': {
-      'img': '/static/img/about/wechat.svg',
+      'img': '/static/img/about/china-wechat.svg',
       'countLabel': 'followers',
-      'qr': '/static/img/origin-wechat-qr.png'
+      'qr': '/static/img/origin-wechat-qr.png',
+      'regionSpecific': true
+    },
+    'Weibo': {
+      'img': '/static/img/about/weibo-china.svg',
+      'countLabel': 'followers',
+      'qr': '/static/img/origin-weibo-qr.png',
+      'regionSpecific': true
     },
     'KaKao plus friends': {
       'img': '/static/img/about/kakao.svg',
       'countLabel': 'subscribers',
-      'qr': '/static/img/origin-kakao-qr.png'
+      'qr': '/static/img/origin-kakao-qr.png',
+      'regionSpecific': true
+    },
+    'Vk': {
+      'img': '/static/img/about/russia-vk.svg',
+      'countLabel': 'subscribers',
+      'link': 'https://vk.com/originprotocol',
+      'regionSpecific': true
     },
     'Facebook': {
       'img': '/static/img/about/facebook.svg',
       'countLabel': 'followers',
-      'link': 'https://www.facebook.com/originprotocol'
+      'link': 'https://www.facebook.com/originprotocol',
+      'regionSpecific': false
     },
     'Twitter': {
       'img': '/static/img/about/twitter.svg',
       'countLabel': 'followers',
-      'link': 'https://twitter.com/originprotocol'
+      'link': 'https://twitter.com/originprotocol',
+      'regionSpecific': false
     },
     'Instagram': {
       'img': '/static/img/about/instagram.svg',
       'countLabel': 'followers',
-      'link': 'https://instagram.com/originprotocol'
+      'link': 'https://instagram.com/originprotocol',
+      'regionSpecific': false
     },
     'Youtube': {
       'img': '/static/img/about/youtube.svg',
       'countLabel': 'subscribers',
-      'link': 'https://youtube.com/c/originprotocol'
+      'link': 'https://youtube.com/c/originprotocol',
+      'regionSpecific': false
     },
     'Reddit': {
       'img': '/static/img/about/reddit.svg',
       'countLabel': 'subscribers',
-      'link': 'https://www.reddit.com/r/'
+      'link': 'https://www.reddit.com/r/',
+      'regionSpecific': false
     },
     'Medium': {
       'img': '/static/img/about/medium.svg',
       'countLabel': 'followers',
-      'link': 'https://medium.com/originprotocol'
+      'link': 'https://medium.com/originprotocol',
+      'regionSpecific': false
     }
-  }
+  };
 
   function createElementFromHTML(htmlString) {
     var div = document.createElement('div');
@@ -589,23 +629,31 @@ $(function() {
   })
     .done(function( data ) {
       if (!data || !data.stats)
-        return
+        return;
 
-      data.stats.forEach(stat => {
-        var statMetadata = socialLegend[stat.name]
-        if(!statMetadata)
-          return
+      data.stats = data.stats.concat(hardcodedStats);
 
-        socialSection.appendChild(createElementFromHTML(
-          '<a class="d-flex flex-column social-box align-items-center"' + 
-            (statMetadata.link ? ('href="' + statMetadata.link + '"') : 'href="#"') + 
-            (statMetadata.qr ? 'data-container="body" data-toggle="tooltip" title="" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : '') +
-          '>' +
-              '<img src="' + statMetadata.img + '"/>' +
-              '<div class="mt-auto">' + formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel  + '</div>' +
-          '</a>'
-        ))
-      })
+      function renderStats(regionSpecific, appendToElement) {
+        data.stats.forEach(stat => {
+          var statMetadata = socialLegend[stat.name];
+          
+          if (!statMetadata || statMetadata.regionSpecific != regionSpecific)
+            return;
+
+          appendToElement.appendChild(createElementFromHTML(
+            '<a class="d-flex flex-column social-box align-items-center"' + 
+              (statMetadata.link ? ('href="' + statMetadata.link + '"') : 'href="#"') + 
+              (statMetadata.qr ? 'data-container="body" data-toggle="tooltip" title="" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : '') +
+            '>' +
+                '<img src="' + statMetadata.img + '"/>' +
+                '<div class="mt-auto">' + (stat.subscribed_count ? (formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel) : '')  + '</div>' +
+            '</a>'
+          ));
+        });
+      }
+
+      renderStats(false, socialSection);
+      renderStats(true, socialSectionRegionSpecific);
 
       // enable newly created tooltips
       $('[data-toggle="tooltip"]').tooltip({
