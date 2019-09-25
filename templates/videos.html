@@ -13,7 +13,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>Origin Videos</h1>
+          <h1>Videos</h1>
           <div class="category-tab-groups">
             <a href="#" class="category-tab d-none d-md-flex" data-category-group="investor">{{ gettext("Investor Testimonial Videos") }}</a>
             <a href="#" class="category-tab d-none d-md-flex" data-category-group="employee">{{ gettext("Employee Videos") }}</a>
@@ -31,10 +31,6 @@
             <a href="{{ "/video/%s" % (video.hash)}}" class="title">
               {{ gettext(video.title) }}
             </a>
-            <div class="summary">
-              {{ gettext(video.summary) }}
-            </div>
-            <a class="watch-link" href="{{ "/video/%s" % (video.hash)}}">{{ gettext("Watch now") }} <span>></span></a>
           </div>
         {% endfor %}
       </div>

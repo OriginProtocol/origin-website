@@ -313,15 +313,16 @@ $(function() {
   
       for (var i = 0; i < socialLinks.length; i++) {
         var link = socialLinks[i]
-        var href = document.getElementById(fullScreenVideoElementId).getAttribute('src')
+        // we want to link people to the Origin site, not YouTube
+        // var href = document.getElementById(fullScreenVideoElementId).getAttribute('src')
         var title = document.querySelector('.segment-title')
         switch (link.getAttribute('share-video-to')) {
           case 'facebook':
-            href = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(href)
+            href = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)
             break
           case 'twitter':
             title = encodeURIComponent(title ? title.innerText + ' ' : '')
-            href = 'https://twitter.com/intent/tweet?text=' + title + encodeURIComponent(href)
+            href = 'https://twitter.com/intent/tweet?text=' + title + encodeURIComponent(window.location.href)
             break
         }
 
@@ -413,7 +414,7 @@ $(function() {
       'default': {
         videoSource: 'aanKtnkWP8U',
         aspectRatio: 0.42,
-        loopTime: 70, // loop time in seconds
+        loopTime: 69, // loop time in seconds
       },
       // Input other localisation videos this way 
       // 'zh_Hans' : {
@@ -434,7 +435,20 @@ $(function() {
       'default': {
         videoSource: 'tAyusRT3ZDQ',
         aspectRatio: 0.56,
-        startTime: 72
+        startTime: 72,
+        loopTime: 120
+      },
+      'ko' : {
+        videoSource: 'GDDfAP150W8',
+        aspectRatio: 0.56,
+        startTime: 72,
+        loopTime: 120
+      },
+      'es': {
+        videoSource: 'OPobPJoYH7M',
+        aspectRatio: 0.56,
+        startTime: 72,
+        loopTime: 120
       }
     },
     videoButtonId: 'landing-video-button2',
@@ -480,7 +494,6 @@ $(function() {
         startTime: 72
       }
     },
-    videoSource: 'tAyusRT3ZDQ',
     videoButtonId: 'investors-video-button',
     fullScreenVideoElementId: 'investors-video',
     bgElementIsVideo: true,
