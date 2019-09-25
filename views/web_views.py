@@ -372,6 +372,7 @@ def assets_all_styles():
         "static/css/pages/video.css",
         "static/css/pages/videos.css",
         "static/css/pages/investors.css",
+        "static/css/pages/developers.css",
         "static/css/pages/presale.css"
     ]), mimetype="text/css")
 

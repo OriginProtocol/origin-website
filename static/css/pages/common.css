@@ -1,5 +1,11 @@
 html {
-  zoom: 0.90
+  zoom: 0.90;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 h1 {
@@ -68,6 +74,8 @@ h1 {
 .video-block .video-overlay-poster {
   position: absolute;
   z-index: 1;
+  bottom: 0px;
+  overflow: hidden;
 }
 
 .video-block .video-overlay-poster img {
@@ -157,6 +165,17 @@ h1 {
   } 
 }
 
+.mt-8, .my-8 {
+  margin-top: 8.375rem!important;
+}
+
+.mt-10, .my-10 {
+  margin-top: 13.25rem!important;
+}
+
+.mt-7, .my-7 {
+  margin-top: 5.375rem!important;
+}
 
 .mb-6, .my-6 {
   margin-bottom: 4.375rem!important;
@@ -164,6 +183,10 @@ h1 {
 
 .mt-6, .my-6 {
   margin-top: 4.375rem!important;
+}
+
+.pt-60 {
+  padding-top: 3.75rem;
 }
 
 .mw-568 {
