@@ -566,12 +566,6 @@ $(function() {
       'qr': '/static/img/origin-weibo-qr.png',
       'regionSpecific': true
     },
-    'KaKao plus friends': {
-      'img': '/static/img/about/korean-kakao.svg',
-      'countLabel': 'subscribers',
-      'qr': '/static/img/origin-kakao-qr.png',
-      'regionSpecific': true
-    },
     'Vk': {
       'img': '/static/img/about/russia-vk.svg',
       'countLabel': 'subscribers',
@@ -654,9 +648,9 @@ $(function() {
             return;
 
           appendToElement.appendChild(createElementFromHTML(
-            '<a class="d-flex flex-column social-box align-items-center"' + 
+            '<a class="d-flex flex-column social-box align-items-center" data-toggle="tooltip"' + 
               (statMetadata.link ? ('href="' + statMetadata.link + '"') : 'href="#"') + 
-              (statMetadata.qr ? 'data-container="body" data-toggle="tooltip" title="" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : '') +
+            (statMetadata.qr ? 'data-container="body" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : ' title="'+stat.name+'"') +
             '>' +
                 '<img src="' + statMetadata.img + '"/>' +
                 '<div class="mt-auto">' + (stat.subscribed_count ? (formatNumber(stat.subscribed_count) + ' ' + statMetadata.countLabel) : '')  + '</div>' +
