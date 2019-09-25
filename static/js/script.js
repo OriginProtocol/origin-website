@@ -518,7 +518,7 @@ $(function() {
     },
     {
       'name': 'Vk',
-      'subscribed_count': undefined
+      'subscribed_count': 36
     }
   ];
 
@@ -554,7 +554,7 @@ $(function() {
       'regionSpecific': true
     },
     'KaKao plus friends': {
-      'img': '/static/img/about/kakao.svg',
+      'img': '/static/img/about/korean-kakao.svg',
       'countLabel': 'subscribers',
       'qr': '/static/img/origin-kakao-qr.png',
       'regionSpecific': true
