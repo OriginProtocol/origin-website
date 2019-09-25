@@ -107,14 +107,18 @@
 }
 
 .email-form input[type=submit] {
-    background: url(/static/img/triangle.png) no-repeat center;
-    border: 0;
-    border-radius: 25px;
-    display: block;
-    background-color: var(--blue);
-    height: 50px;
-    width: 50px;
-    padding: 0px;
+  background: url(/static/img/triangle.png) no-repeat center;
+  border: 0;
+  border-radius: 25px;
+  display: block;
+  background-color: var(--blue);
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+}
+
+.email-form input[type=submit]:disabled {
+  background-color: #868e96;
 }
 
 .email-form .email-input {
@@ -126,7 +130,7 @@
   color: #061d2a;
 }
 
-.email-form .email-input::placeholder {
+.email-form .email-input::placeholder, .email-form .email-input:disabled {
   color: #8fa7b7;
 }
 
@@ -204,7 +208,7 @@
 }
 
 .sharing-economy .pies {
-  max-width: 270px;
+  max-width: 90%;
 }
 
 .sharing-economy .percentages {
@@ -213,7 +217,7 @@
 }
 
 .sharing-economy .percentages-holder {
-  width: 260px;
+  width: 50%;
 }
 
 .sharing-economy .percentage {
@@ -222,6 +226,14 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 16px;
+}
+
+.sharing-economy .percentages .percentage {
+  font-family: Poppins;
+  font-size: 3.125rem;
+  font-weight: normal;
+  color: #061d2a;
+  text-align: left;
 }
 
 .sharing-economy .percentage .small {
@@ -234,7 +246,7 @@
   font-family: Lato;
   font-size: 0.875rem;
   line-height: 1.21;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   max-width: 230px;
 }
@@ -263,9 +275,9 @@
 
 .circular-stats .text {
   font-family: Lato;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  text-align: center;
+  text-align: left;
   color: #000000;
   margin-top: -25px;
   max-width: 200px;
@@ -601,6 +613,18 @@
     font-size: 1.125rem;
     max-width: 680px;
     margin-top: -25px;
+  }
+
+  .sharing-economy .percentages-holder {
+    width: 260px;
+  }
+
+  .sharing-economy .percentages .percentage {
+    text-align: center;
+  }
+
+  .sharing-economy .percentages .subtitle1 {
+    text-align: center;
   }
 }
 

@@ -126,6 +126,18 @@
   margin-top: -20px;
 }
 
+.tokens-page .presale-mailing-list {
+  max-height: 0px;
+  transition: max-height 0.5s ease, opacity 0.1s ease;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.tokens-page .presale-mailing-list.open {
+  max-height: 1000px;
+  opacity: 1;
+}
+
 @media (max-width: 575px) {
   .tokens-page .app-showcase {
     flex-direction: column;

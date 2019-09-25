@@ -125,16 +125,9 @@
   <!-- Social media section -->
   <div class="social-media-section d-flex flex-column justify-content-between align-items-center">
     <h1>{{gettext("We have a large and growing community of developers and supporters")}}</h1>
-    <div id="social-media-list" class="d-flex flex-wrap justify-content-center">
-      <a href="https://discordapp.com/invite/jyxpUSe" class="d-flex flex-column social-box">
-        <img src="/static/img/about/discord.svg"/>
-        <div class="mt-auto">1K members</div>
-      </a>
-      <a class="d-flex flex-column social-box" data-container="body" data-toggle="tooltip" title="" data-original-title="<img src='/static/img/origin-wechat-qr.png'/>">
-        <img src="/static/img/about/wechat.svg"/>
-        <div class="mt-auto">1.1K followers</div>
-      </a>
-    </div>
+    <div id="social-media-list" class="d-flex flex-wrap justify-content-center"></div>
+    <h2>{{gettext("Region-specific Channels")}}</h2>
+    <div id="social-media-list-country-specific" class="d-flex flex-wrap justify-content-center"></div>
   </div>
   {% include 'footer.html' %}
 </main>
