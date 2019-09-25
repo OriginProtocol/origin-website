@@ -23,6 +23,14 @@
   max-height: 16px;
 }
 
+.video-block .bottom.clickable img {
+  opacity: 0.6;
+}
+
+.video-block .bottom.clickable img:hover {
+  opacity: 1;
+}
+
 .vc-backed .play-button,
 .video-block .play-button {
   width: 108px;
@@ -209,6 +217,7 @@
 
 .sharing-economy .pies {
   max-width: 90%;
+  margin-right: 10%;
 }
 
 .sharing-economy .percentages {
@@ -394,7 +403,7 @@
   padding: 50px;
   color: white;
   font-family: Lato;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -472,7 +481,7 @@
 .recent-news .tiles-holder .tile {
   max-width: 320px;
   font-family: Lato;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.56;
   color: #061d2a;
@@ -563,7 +572,8 @@
   }
 
   .sharing-economy .pies {
-    max-width: 570px;
+    max-width: 540px;
+    margin-right: 0px;
   }
 
   .circular-stats {
@@ -578,13 +588,13 @@
   }
 
   .circular-stats .percentage {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   .buy-sell-block .segment-subtitle {
     font-size: 1.125rem;
     max-width: 680px;
-    margin-top: -25px;
+    margin-top: -15px;
   }
 }
 
@@ -603,7 +613,6 @@
 
   .landing-page h1 {
     font-family: Poppins;
-    font-size: 2.375rem;
     font-weight: normal;
     text-align: center;
     line-height: normal;
@@ -612,7 +621,7 @@
   .buy-sell-block .segment-subtitle {
     font-size: 1.125rem;
     max-width: 680px;
-    margin-top: -25px;
+    margin-top: -15px;
   }
 
   .sharing-economy .percentages-holder {
@@ -626,6 +635,10 @@
   .sharing-economy .percentages .subtitle1 {
     text-align: center;
   }
+
+  .featured-partner .box .text {
+    font-size: 1.375rem;
+  }
 }
 
 /* lg + */
@@ -634,6 +647,6 @@
   .buy-sell-block .bottom img,
   .vc-backed .bottom img {
     margin: 30px;
-    max-height: 36px;
+    max-height: 30px;
   }
 }
