@@ -112,19 +112,19 @@
       <!-- github labels section -->
       <div class="d-flex justify-content-center flex-wrap labels-section">
         <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3A"good+first+issue"' class="github-label mx-1 my-2" target="_blank">
-          {{gettext("good first issue")}}</h1>
+          {{gettext("good first issue")}}
         </a>
         <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Asolidity' class="github-label mx-1 my-2" target="_blank">
-          {{gettext("solidity")}}</h1>
+          {{gettext("solidity")}}
         </a>
         <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Ajavascript' class="github-label mx-1 my-2" target="_blank">
-          {{gettext("javascript")}}</h1>
+          {{gettext("javascript")}}
         </a>
         <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Agraphql' class="github-label mx-1 my-2" target="_blank">
-          {{gettext("graphql")}}</h1>
+          {{gettext("graphql")}}
         </a>
         <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Ahtml%2Fcss' class="github-label mx-1 my-2" target="_blank">
-          {{gettext("html/css")}}</h1>
+          {{gettext("html/css")}}
         </a>
       </div>
       <div class="mt-6 d-flex flex-column flex-md-row">
@@ -140,7 +140,57 @@
       <div class="subtitle">
         {{gettext("Tune in to our public Google Hangout every Wednesday at 12:30PM PT, where we demonstrate our engineering progress and discuss upcoming features.")}}</h1>
       </div>
-      <img src="/static/img/developers/map.svg"/>
+    </div>
+    <div class="d-flex flex-column justify-content-start align-items-center">
+      <img class="d-none d-md-flex" src="/static/img/developers/map.svg"/>
+      <div class="d-flex d-md-none mobile-map-holder flex-row mt-4">
+        <div class="container d-flex">
+          <div class="d-flex flex-column col-6 p-0">
+            <div class="city">{{gettext("San Francisco")}}</div>
+            <div class="time">{{gettext("12:30PM")}}</div>
+
+            <div class="city">{{gettext("Boulder")}}</div>
+            <div class="time">{{gettext("1:30PM")}}</div>
+
+            <div class="city">{{gettext("New York")}}</div>
+            <div class="time">{{gettext("12:30PM")}}</div>
+
+            <div class="city">{{gettext("Buenos Aires")}}</div>
+            <div class="time">{{gettext("3:30PM")}}</div>
+
+            <div class="city">{{gettext("London")}}</div>
+            <div class="time">{{gettext("8:30PM")}}</div>
+
+            <div class="city">{{gettext("Berlin")}}</div>
+            <div class="time">{{gettext("9:30PM")}}</div>
+
+            <div class="city">{{gettext("Johanesburg")}}</div>
+            <div class="time">{{gettext("8:30PM")}}</div>
+          </div>
+          <div class="d-flex flex-column col-6 p-0 pl-5">
+            <div class="city">{{gettext("Moscov")}}</div>
+            <div class="time">{{gettext("9:30PM")}}</div>
+
+            <div class="city">{{gettext("New Delhi")}}</div>
+            <div class="time">{{gettext("12AM")}}</div>
+
+            <div class="city">{{gettext("Singapore")}}</div>
+            <div class="time">{{gettext("2:30AM")}}</div>
+
+            <div class="city">{{gettext("Seoul")}}</div>
+            <div class="time">{{gettext("3:30AM")}}</div>
+
+            <div class="city">{{gettext("Yokyo")}}</div>
+            <div class="time">{{gettext("3:30AM")}}</div>
+
+            <div class="city">{{gettext("Hong Kong")}}</div>
+            <div class="time">{{gettext("2:30AM")}}</div>
+
+            <div class="city">{{gettext("Wellington")}}</div>
+            <div class="time">{{gettext("7:30AM")}}</div>
+          </div>
+        </div>
+      </div>
       <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2llYjc1MDA1aXVhbzZnYWRmbWhjbmRvcmRfMjAxODA2MTNUMjAwMDAwWiBvcmlnaW5wcm90b2NvbC5jb21fcXY1NWNvNmd2bTN2c3Y3OW9iNXFsZjVhaWtAZw&tmsrc=originprotocol.com_qv55co6gvm3vsv79ob5qlf5aik%40group.calendar.google.com&scp=ALL" target="_blank" class="button">{{gettext("Add to calendar")}}</a>
     </div>
   </div>
