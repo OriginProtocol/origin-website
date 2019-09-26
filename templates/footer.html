@@ -1,31 +1,90 @@
-{% if theme_dark==False %}
-<footer class="light-footer">
-{% else %}
-<footer class="dark-footer">
-{% endif %}
+<footer class="footer-section">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-5 col-lg-4">
-        <div class="logo-container">
-          {% if theme_dark==False %}
-            <img src="/static/img/origin-logo-dark.png"
-            srcset="/static/img/origin-logo-dark@2x.png 2x,
-              /static/img/origin-logo-dark@3x.png 3x"
-            class="origin-logo"
-            alt="Origin Protocol logo">
-          {% else %} 
-            <img src="/static/img/origin-logo.png"
-            srcset="/static/img/origin-logo@2x.png 2x,
-              /static/img/origin-logo@3x.png 3x"
-            class="origin-logo"
-            alt="Origin Protocol logo">
-          {% endif %}
+      <div class="col-12 col-md-6">
+        <div class="mailing-list mb-5">
+          <div class="section-title">{{gettext("Stay in touch")}}</div>
+          <p>{{gettext("Subscribe to stay in touch. Your email will be kept private.")}}</p>
+          <form id="mailing-list-footer" class="email-input input-group" method="post" action="/mailing-list/join">
+            <input id="email" name="email" type="email" class="form-control" placeholder="{{gettext("Enter your email")}}" aria-label="Your email" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="submit">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
         </div>
-        <p class="company-mission">
-          {{ gettext("Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network.") }}
-        </p>
-        <p>
-          &copy; {{ now.year }} {{ gettext("Origin Protocol, Inc.") }}  &bull;
+      </div>
+      <div class="col-12 col-md-6">
+
+        <div class="row footer-links">
+          <div class="col-4 footer-links">
+            <strong>Products</strong><br>
+            <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Overview") }}</a><br>
+            <a href="{{ universal.IOS_URL }}">{{ gettext("iOS") }}</a><br>
+            <a href="{{ universal.ANDROID_URL }}">{{ gettext("Android") }}</a><br>
+            <a href="{{ universal.DAPP_URL }}">{{ gettext("DApp") }}</a><br>
+            <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Creator") }}</a><br>
+          </div>
+          <div class="col-4">
+            <strong>Resources</strong><br>
+            <a href="{{ url_for('videos', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Videos") }}</a><br>
+            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Whitepaper") }}</a><br>
+            <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Developers") }}</a><br>
+            <a href="{{ universal.GITHUB_URL }}">{{ gettext("Github") }}</a><br>
+            <a href="{{ universal.DOCS_URL }}">{{ gettext("Docs") }}</a><br>
+          </div>
+          <div class="col-4">
+            <strong>Organization</strong><br>
+            <a href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a><br>
+            <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a><br>
+            <a href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a><br>
+            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN") }}</a><br>
+            <a href="{{ universal.JOBS_URL }}">{{ gettext("Jobs") }}</a><br>        
+          </div>
+        </div>
+        <div class="social-links mt-5">
+          <a href="https://www.facebook.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Facebook") }}" data-placement="top">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Twitter") }}" data-placement="top">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://medium.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Medium") }}" data-placement="top">
+            <i class="fab fa-medium-m"></i>
+          </a>
+          <a href="https://youtube.com/c/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Youtube") }}" data-placement="top">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://instagram.com/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Instagram") }}" data-placement="top">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/originprotocol" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Telegram") }}" data-placement="top">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.reddit.com/r/originprotocol/" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Reddit") }}" data-placement="top">
+            <i class="fab fa-reddit-alien"></i>
+          </a>
+          <a href="{{ universal.DISCORD_URL }}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("Discord") }}" data-placement="top">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="#" data-container="body" data-toggle="tooltip" title="" data-original-title="<img class='tooltip-img' src='/static/img/origin-weibo-qr.png' />">
+            <i class="fab fa-weibo"></i>
+          </a>
+          <a href="#" data-container="body" data-toggle="tooltip" title="" data-original-title="<img class='tooltip-img' src='/static/img/origin-wechat-qr.png' />">
+            <i class="fab fa-weixin"></i>
+          </a>
+          {% if CURRENT_LANGUAGE == "ru" %}
+            <a href="{{ universal.VK_URL }}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="{{ gettext("VK") }}" data-placement="top">
+              <i class="fab fa-vk"></i>
+            </a>
+          {% endif %}
+          </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="copyright-text">
+          {{gettext("© 2019 Origin Protocol. All rights reserved.")}}
+          &bull;
           <a href="{{ url_for('privacy', lang_code=CURRENT_LANGUAGE) }}">
             {{ gettext("Privacy") }}
           </a>
@@ -33,171 +92,6 @@
           <a href="{{ url_for('tos', lang_code=CURRENT_LANGUAGE) }}">
             {{ gettext("Terms of Service") }}
           </a>
-
-        </p>
-      </div>
-      <div class="col-12 col-md-7 col-lg-8">
-        <div class="row">
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer-header">
-              {{ gettext("Products") }}
-            </div>
-            <ul class="footer-links">
-              <li class="footer-link">
-                <a href="{{universal.IOS_URL}}" target="_blank">
-                  <i class="fab fa-apple"></i> {{ gettext("iOS") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{universal.ANDROID_URL}}" target="_blank">
-                  <i class="fab fa-android"></i> {{ gettext("Android") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://www.shoporigin.com" target="_blank">
-                  <i class="fas fa-laptop"></i> {{ gettext("DApp") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">
-                  <i class="fas fa-palette"></i> {{ gettext("Creator") }}
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer-header">
-              {{ gettext("Resources") }}
-            </div>
-            <ul class="footer-links">
-              <li class="footer-link">
-                <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Developers") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://github.com/OriginProtocol" target="_blank">
-                  {{ gettext("GitHub") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="http://docs.originprotocol.com/" target="_blank">
-                  {{ gettext("Docs") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Whitepaper") }}
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer-header">
-              {{ gettext("Organization") }}
-            </div>
-            <ul class="footer-links">
-              <li class="footer-link">
-                <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Team") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="{{ url_for('tokens', lang_code=CURRENT_LANGUAGE) }}">
-                  {{ gettext("Tokens") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://store.originprotocol.com">
-                  {{ gettext("Store") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://www.eventbrite.com/o/origin-protocol-17702006678" target="_blank">
-                  {{ gettext("Meetups") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://angel.co/originprotocol/jobs" target="_blank">
-                  {{ gettext("Jobs") }}
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer-header">
-              {{ gettext("Community") }}
-            </div>
-            <ul class="footer-links">
-              <li class="footer-link">
-                <a href="{{ universal.DISCORD_URL }}" target="_blank">
-                  <i class="fab fa-discord"></i> {{ gettext("Discord") }}
-                </a>
-              </li>
-              {% if CURRENT_LANGUAGE == "ko" %}
-                <li class="footer-link">
-                  <a href="{{ universal.TELEGRAM_KOREA_URL }}" target="_blank">
-                    <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
-                  </a>
-                </li>
-              {% else %}
-                <li class="footer-link">
-                  <a href="{{ universal.TELEGRAM_URL }}" target="_blank">
-                    <i class="fab fa-telegram"></i> {{ gettext("Telegram") }}
-                  </a>
-                </li>
-              {% endif %}
-              <li class="footer-link">
-                <a href="https://www.reddit.com/r/originprotocol/" target="_blank">
-                  <i class="fab fa-reddit"></i> {{ gettext("Reddit") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-wechat-qr.png' />"><i class="fab fa-weixin"></i> {{ gettext("WeChat") }}</a>
-              </li>
-              <li class="footer-link">
-                <a data-container="body" data-toggle="tooltip" title="<img src='/static/img/origin-weibo-qr.png' />"><i class="fab fa-weibo"></i> {{ gettext("Weibo") }}</a>
-              </li>
-            
-              {% if CURRENT_LANGUAGE == "ru" %}
-                <li class="footer-link">
-                  <a href="{{ universal.VK_URL }}" target="_blank">
-                    <i class="fab fa-vk"></i> {{ gettext("VK") }}
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer-header">Social</div>
-            <ul class="footer-links">
-              <li class="footer-link">
-                <a href="https://twitter.com/originprotocol" target="_blank">
-                  <i class="fab fa-twitter-square"></i> {{ gettext("Twitter") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://instagram.com/originprotocol" target="_blank">
-                  <i class="fab fa-instagram"></i> {{ gettext("Instagram") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://www.facebook.com/originprotocol" target="_blank">
-                  <i class="fab fa-facebook-square"></i> {{ gettext("Facebook") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="https://medium.com/originprotocol" target="_blank">
-                  <i class="fab fa-medium"></i> {{ gettext("Medium") }}
-                </a>
-              </li>
-              <li class="footer-link">
-                <a href="http://www.youtube.com/c/originprotocol" target="_blank">
-                  <i class="fab fa-youtube"></i> {{ gettext("Youtube") }}
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

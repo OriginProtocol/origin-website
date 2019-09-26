@@ -21,7 +21,7 @@ body {
 h1 {
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
-  margin: 40px auto;
+  margin: 70px auto 40px auto;
 }
 
 h2 {
@@ -46,11 +46,6 @@ p {
   font-size: 1.125rem;
   font-weight: 300;
   margin: 20px auto;
-}
-
-a:not([href]):not([tabindex]) {
-  color: #007bff;
-  cursor: pointer;
 }
 
 label {
@@ -253,8 +248,7 @@ nav {
   z-index: 9;
 }
 
-.landing-page,
-.team-page {
+.landing-page {
   position: relative;
   background-color: #2e3f53;
 }
@@ -299,9 +293,10 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin {
-  position: relative;
-  padding-bottom: 40px;
+  position: absolute;
   padding-top: 20px;
+  right: 0px;
+  left: 0px;
 }
 
 .navbar-origin .brand-container {
@@ -313,7 +308,11 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin .logo-container {
-  width: 100px;
+  width: 120px;
+}
+
+.navbar-origin .logo-container img{
+  width: 100%;
 }
 
 .navbar-origin .mobile-background {
@@ -340,20 +339,21 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin .nav-item {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 400;
 }
 
 .navbar-origin .brand-container .navbar-brand {
   padding-top: 0px;
+  padding-bottom: 1rem;
 }
 
 .navbar-light {
-  background-color: #f7f9fb;
+  background-color: #fff;
 }
 
 .navbar-origin .navbar-collapse {
-  margin: 20px -30px 0px;
+  margin: 20px 0px 40px 0px;
   padding: 0px 30px;
   z-index: 3;
 }
@@ -388,7 +388,7 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin .navbar-collapse .col-6 .nav-link {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 400;
   padding-left: 0px;
 }
@@ -604,80 +604,6 @@ main.landing-page > .background-wrapper {
 
 .btn-container {
   margin: 60px auto;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-footer {
-  padding: 78px 0px 78px;
-}
-
-.dark-footer {
-  color: #fff;
-  background-color: #2e3f53;
-}
-.dark-footer a, .dark-footer a:not([href]):not([tabindex]) {
-  color: #fff;
-  cursor: pointer;
-}
-.dark-footer a:hover {
-  opacity: 0.75;
-}
-
-.light-footer {
-  color: #455d75;
-  background-color: #fff;
-}
-
-.light-footer a, .light-footer a:not([href]):not([tabindex]) {
-  color: #455d75;
-  cursor: pointer;
-}
-.light-footer a:hover {
-  opacity: 0.75;
-}
-
-footer .logo-container {
-  margin: 40px auto;
-}
-
-footer p {
-  font-size: 0.75rem;
-}
-
-footer .footer-header {
-  margin: 40px auto 15px auto;
-  font-weight: 400;
-  font-size: 0.875rem;
-}
-
-footer .footer-links {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
-#rtl footer .footer-links {
-  padding-right: 0px;
-}
-
-footer .footer-link {
-  margin: 15px auto;
-  font-size: 0.875rem;
-}
-
-footer .logo-container {
-  margin: 40px auto 20px auto;
-}
-
-footer .company-mission {
-  max-width: 360px;
-  margin-left: 0px;
-}
-
-#rtl footer .company-mission {
-  margin-right: 0px;
 }
 
 /* Alertify */
@@ -1345,248 +1271,35 @@ footer .company-mission {
   background-color: #2e3f53;
 }
 
-/* Presale page */
+/* Terms of Service, Privacy Policy & AUP */
 
-.presale-page {
-  background-color: #f7f9fb;
-}
-
-.presale-form .form-group {
-  margin-bottom: 40px;
-}
-
-.presale-form .form-group p {
-  font-size: 1.0rem;
-  margin-bottom: 0.5rem;
-}
-
-.presale-form .form-group #desired_allocation {
-  min-width: unset;
-}
-
-.presale-form .form-group .input-group .input-group-btn {
-  min-width: 75px;
-}
-
-.presale-form .form-group .input-group .input-group-btn #desired_allocation_currency {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-/* Terms of Service & Privacy Policy */
-
-.tos {
+.legal {
   counter-reset: section;
 }
-.tos h4, .privacy h4 {
+.legal h4, .privacy h4 {
   margin-top: 1em;
   font-size: 16px;
   margin-bottom: 1em;
 }
-.tos h4:before {
+.legal h4:before {
   counter-increment: section;
   content: counter(section) ". ";
 }
-.tos ol {
+.legal ol {
   counter-reset: clause;
   list-style: none outside none;
 }
-.tos ol li {
+.legal ol li {
   margin-top: 1em;
   counter-increment: clause;
   margin-bottom: 1em;
 }
-.tos ol li:before {
+.legal ol li:before {
   font-weight: bold;
   content: counter(section) "." counters(clause, ".") ". ";
 }
-.tos ol li ol li:before {
+.legal ol li ol li:before {
   content: "(" counter(clause, lower-alpha) ") ";
-}
-
-/* Team page */
-
-.investor,
-.team-member {
-  margin: 20px;
-}
-
-.headshot-wrapper {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-}
-
-.headshot-wrapper img {
-  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 100px;
-  height: 100%;
-  width: 100%;
-}
-
-
-.headshot-wrapper-small {
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  margin: 10px auto;
-}
-
-.headshot-wrapper-small img {
-  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 50px;
-  height: 100%;
-  width: 100%;
-}
-
-.name {
-  margin: 20px auto 0px auto;
-  text-align: center;
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-
-.title {
-  margin: 0px auto 10px auto;
-  text-align: center;
-  font-weight: 500;
-}
-
-.bio {
-  margin: 10px auto;
-  text-align: center;
-  font-size: 0.75rem;
-}
-
-.team-header-section {
-  background-color: transparent;
-  color: #fff;
-}
-
-.core-team-section > div > .row {
-  position: relative;
-  overflow-y: hidden;
-}
-
-.core-team-section .background-panes {
-  height: 100%;
-}
-
-.core-team-section .background-panes .row:last-of-type > .col-12 {
-  display: flex;
-}
-
-.core-team-section .top-panes .col-pane {
-  display: flex;
-}
-
-.core-team-section .left-upper-pane,
-.core-team-section .right-upper-pane {
-  position: relative;
-  flex: 1;
-  background-color: #fff;
-}
-
-.core-team-section .left-upper-pane {
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
-  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
-  margin-bottom: -1px;
-}
-
-.core-team-section .right-upper-pane {
-  -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
-  clip-path: polygon(0 100%, 0 0, 100% 100%);
-  margin: 0px 0px -1px -1px;
-}
-
-#rtl .core-team-section .left-upper-pane {
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%);
-  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%);
-  margin: 0px 0px -1px -1px;
-}
-
-#rtl .core-team-section .right-upper-pane {
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
-  clip-path: polygon(0 100%, 100% 100%, 100% 0);
-}
-
-.core-team-section h2 {
-  margin: 80px auto 40px auto;
-}
-
-.contributing-team-section > div > .row {
-  position: relative;
-}
-
-.contributing-team-section {
-  background-color: #fff;
-}
-
-.contributing-team-section h2 {
-  margin: 80px auto 40px auto;
-}
-
-.advisor-team-section > div > .row {
-  position: relative;
-}
-
-.advisor-team-section {
-  background-color: #fff;
-}
-
-.advisor-team-section .foreground-content {
-  margin-bottom: 131px;
-}
-
-.advisor-team-section h2 {
-  margin: 80px auto 40px auto;
-}
-
-.advisor-team-section .left-lower-pane,
-.advisor-team-section .right-lower-pane {
-  background-color: #f7f9fb;
-}
-
-.filler-section {
-  background-color: #f7f9fb;
-  height: 100px;
-}
-
-.investors-section {
-  background-color: #fff;
-}
-
-.investors-section > div > .row {
-  position: relative;
-  overflow: hidden;
-}
-
-.investors-section .left-upper-pane,
-.investors-section .right-upper-pane {
-  position: relative;
-  background-color: #f7f9fb;
-}
-
-.investors-section .foreground-content {
-  margin-bottom: 120px;
-}
-
-.investors-section h2 {
-  margin: 140px auto 40px auto;
-}
-
-.investors-section .logos {
-  padding-top: 0;
-}
-
-.investors-section .logos .d-flex {
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.investors-section .logos .img-graphic img {
-  max-height: unset;
 }
 
 /* Partners page */
@@ -2020,7 +1733,7 @@ footer .company-mission {
 .developers-page .left-upper-pane,
 .developers-page .right-lower-pane,
 .developers-page .right-upper-pane {
-  background-color: #111d28;
+  background-color: #061d2a;
   color: #fff;
 }
 
@@ -2606,6 +2319,7 @@ footer .company-mission {
 
   .navbar-origin .brand-container {
     flex-grow: 0;
+    position: absolute;
   }
   .navbar-origin .navbar-nav {
     flex-grow: 1;
@@ -2631,12 +2345,6 @@ footer .company-mission {
     padding: 20px;
   }
 
-  /* whitelist languages with wider padding */
-  :lang(en) .navbar-origin .navbar-collapse .nav-item,
-  :lang(en) .navbar-origin .navbar-collapse .nav-item.dropdown {
-    padding: 20px 30px;
-  }
-
   .headshot-wrapper {
     height: 160px;
     width: 160px;
@@ -2653,9 +2361,6 @@ footer .company-mission {
   }
   .advisor-team-section .foreground-content {
     margin-bottom: 0px;
-  }
-  .social-links {
-    padding-top: 200px;
   }
   .building-interest-section .build-on-origin-form .form-group.flex {
     align-items: center;
@@ -2698,10 +2403,6 @@ footer .company-mission {
 @media (min-width: 1200px) {
   .navbar {
     max-width: 1140px;
-  }
-  .navbar-origin .navbar-collapse .nav-item,
-  .navbar-origin .navbar-collapse .nav-item.dropdown {
-    padding: 20px 30px;
   }
   .technology-section .container-fluid > .row {
     padding-bottom: 200px;

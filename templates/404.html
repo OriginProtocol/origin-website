@@ -6,49 +6,37 @@
 
 {% block content %}
 
-{% include 'warning.html' %}
+{% include 'navbar.html' %}
 
-<main class="error-page">
-  {% include 'navbar.html' %}
-  <section class="error-header-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12">
-          <h1>
-            {{ gettext("How did I get here?") }}
-          </h1>
-        </div>
-        <div class="col-12 col-md-9 col-lg-6">
-          <div class="indented text-container">
-            <p>
-              {{ gettext("The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)") }}
-            </p>
-            <div class="btn-container d-none d-sm-block">
-              <a href="/" role="button" class="btn btn-sm btn-outline-primary">
-                {{ gettext("Go Home") }}
-              </a>
-            </div>
-          </div>
-          <div class="btn-container d-sm-none">
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1><br>
+          {{ gettext("How did I get here?") }}
+        </h1>
+        <center>
+          {{ gettext("The page you’re looking for is no longer here, maybe it was never here in the first place.<br>In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)") }}
+          <div class="btn-container d-none d-sm-block">
             <a href="/" role="button" class="btn btn-sm btn-outline-primary">
               {{ gettext("Go Home") }}
             </a>
           </div>
-        </div>
+        </center>
       </div>
     </div>
-  </section>
-  <section class="error-content-section">
-    <div class="images-container">
-      <img src="/static/img/mask.svg" alt="background mask" class="mask" />
-      <img src="/static/img/404.svg" alt="status code" class="code" />
-      <img src="/static/img/blocks-1.svg" alt="blocks" class="blocks-1" />
-      <img src="/static/img/blocks-2.svg" alt="blocks" class="blocks-2" />
-      <img src="/static/img/dude.svg" alt="dude" class="dude" />
-    </div>
-  </section>
-  {% include 'footer.html' %}
-</main>
+  </div>
+</section>
+<section class="error-content-section">
+  <div class="images-container">
+    <img src="/static/img/mask.svg" alt="background mask" class="mask" />
+    <img src="/static/img/404.svg" alt="status code" class="code" />
+    <img src="/static/img/blocks-1.svg" alt="blocks" class="blocks-1" />
+    <img src="/static/img/blocks-2.svg" alt="blocks" class="blocks-2" />
+    <img src="/static/img/dude.svg" alt="dude" class="dude" />
+  </div>
+</section>
+{% include 'footer.html' %}
 
 {% endblock %}
 

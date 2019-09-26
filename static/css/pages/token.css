@@ -1,0 +1,210 @@
+.tokens-page {
+  padding-top: 6.875rem;
+}
+
+.tokens-page .countdown-section .mailing-list {
+  margin-bottom: 4.1875rem;
+}
+
+.tokens-page .countdown-section button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tokens-page .feature-box {
+  margin-bottom: 4.1875rem;
+  text-align: center;
+}
+
+.tokens-page .btn {
+  max-width: 300px;
+}
+
+.tokens-page .feature-box img {
+  margin: 0 0 1.75rem 0;
+  max-width: 187px;
+  object-fit: contain;
+  min-height: 200px;
+}
+
+.tokens-page .feature-box h3 {
+  font-weight: 500;
+}
+
+.tokens-page .feature-box p {
+  text-align: left;
+  font-size: 1.125rem;
+}
+
+.tokens-page .explanation {
+  margin: 3.5rem 0;
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #061d2a;
+  text-align: center;
+}
+
+.tokens-page .app-showcase {
+  padding: 7.5rem 0 5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tokens-page .app-showcase .showcase-content {
+  flex: 1;
+  text-align: left;
+  max-width: 430px;
+  margin-right: 130px;
+}
+
+.tokens-page .app-showcase .showcase-image + .showcase-content {
+  margin-right: 0;
+  margin-left: 80px;
+}
+
+.tokens-page .app-showcase .showcase-content p {
+  font-size: 1.125rem;
+  margin-bottom: 3.125rem;
+  margin-left: 0;
+  font-family: Lato;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.tokens-page .app-showcase .showcase-content p span {
+  display: block;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #dbe6eb;
+  margin-top: 1.25rem
+}
+
+.tokens-page .app-showcase .showcase-image {
+  flex: auto 0 0;
+  padding: 0 1rem;
+}
+
+.tokens-page .app-showcase .showcase-content h1 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.tokens-page .app-showcase img {
+  max-width: 378px;
+}
+
+.tokens-page .app-showcase.image-first img {
+  max-width: 355px;
+}
+
+.tokens-page .rnd-section p {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.39;
+  max-width: 280px;
+}
+
+.tokens-page .rnd-section h3 {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tokens-page .primary-cta {
+  text-align: center;
+  margin-bottom: 4.375rem;
+}
+
+.tokens-page .email-form {
+  margin-bottom: 0px;
+}
+
+.tokens-page .showcase-content.higher {
+  margin-top: -20px;
+}
+
+.tokens-page .presale-mailing-list {
+  max-height: 0px;
+  transition: max-height 0.5s ease, opacity 0.1s ease;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.tokens-page .presale-mailing-list.open {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+@media (max-width: 575px) {
+  .tokens-page .app-showcase {
+    flex-direction: column;
+  }
+  .tokens-page .app-showcase.image-first {
+    flex-direction: column-reverse;
+  }
+
+  .tokens-page .app-showcase.image-first img {
+    max-width: 190px;
+  }
+
+  .tokens-page .app-showcase img {
+    max-width: 200px;
+  }
+
+  .tokens-page .app-showcase .showcase-content h1 {
+    text-align: center;
+  }
+
+  .tokens-page .app-showcase {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+
+  .tokens-page .app-showcase .showcase-content {
+    max-width: 430px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .tokens-page .app-showcase .showcase-image + .showcase-content {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .tokens-page .rewards-section .btn {
+    margin-bottom: 35px;
+  }
+
+  .tokens-page .feature-box h3 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .tokens-page .feature-box p {
+    margin: 20px 40px;
+  }
+
+  .tokens-page .showcase-content.higher {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tokens-page .app-showcase img {
+    max-width: 200px;
+  }
+
+  .tokens-page .app-showcase .showcase-content {
+    margin-right: 40px;
+  }
+
+  .tokens-page .app-showcase.image-first img {
+    max-width: 190px;
+  }
+
+  .tokens-page .app-showcase .showcase-image + .showcase-content {
+    margin-left: 10px;
+  }
+}

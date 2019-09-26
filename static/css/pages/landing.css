@@ -1,0 +1,652 @@
+.landing-page h1 {
+  font-family: Poppins;
+  font-size: 1.9rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: normal;
+  margin: 70px auto 27px auto;
+}
+
+.landing-page .video-block h1 {
+  margin-top: 10px;
+}
+
+.video-block .bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
+.video-block .bottom img,
+.buy-sell-block .bottom img,
+.vc-backed .bottom img {
+  margin: 10px;
+  max-height: 16px;
+}
+
+.video-block .bottom.clickable img {
+  opacity: 0.6;
+}
+
+.video-block .bottom.clickable img:hover {
+  opacity: 1;
+}
+
+.vc-backed .play-button,
+.video-block .play-button {
+  width: 108px;
+  height: 108px;
+  border: solid 1px var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
+
+.vc-backed .play-button {
+  margin-top: 4rem!important;
+}
+
+.video-block .background-video {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.video-block .video-holder {
+  position: relative;
+  height: 100%;
+}
+
+.video-block .background-video iframe {
+  position: absolute;
+}
+
+.video-block .full-screen-video {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.vc-backed .bottom {
+  margin-bottom: 8rem;
+}
+
+.countdown-block {
+  background-color: white;
+  min-height: 554px;
+  font-family: Poppins;
+  font-size: 2.375rem;
+  text-align: center;
+  color: #061d2a;
+}
+
+.countdown-block .clock-title {
+  max-width: 756px;  
+}
+
+.countdown-block .clock {
+  font-size: 3.8rem;
+  font-weight: 500;
+  width: 500px;
+}
+
+.countdown-block .clock .subtitle {
+  margin-top: -15px;
+  font-size: 0.65rem;
+  color: #061d2a;
+  font-weight: 300;
+}
+
+.countdown-block .clock .clock-progress-bar {
+  padding: 15px;
+  border: solid 5px var(--blue);
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.email-form {
+  margin-bottom: 80px;
+}
+
+.email-form input[type=submit] {
+  background: url(/static/img/triangle.png) no-repeat center;
+  border: 0;
+  border-radius: 25px;
+  display: block;
+  background-color: var(--blue);
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+}
+
+.email-form input[type=submit]:disabled {
+  background-color: #868e96;
+}
+
+.email-form .email-input {
+  border: 0px;
+  border-bottom: solid 1px #bdcbd5;
+  min-width: 200px;
+  font-family: Lato;
+  font-size: 1.25rem;
+  color: #061d2a;
+}
+
+.email-form .email-input::placeholder, .email-form .email-input:disabled {
+  color: #8fa7b7;
+}
+
+.buy-sell-block {
+  background-color: #007cff;
+  color: white;
+  font-weight: normal;
+}
+
+.buy-sell-block .segment-subtitle {
+  font-family: Lato;
+  font-size: 0.875rem;
+  text-align: center;
+  max-width: 320px;
+  margin-top: -10px;
+}
+
+.buy-sell-block .marketplace {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.buy-sell-block .marketplace .title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.buy-sell-block .marketplace .text {
+  font-family: Lato;
+  line-height: 1.39;
+  max-width: 340px;
+  font-size: 0.875rem;
+}
+
+.vc-backed .button,
+.buy-sell-block .marketplace .button {
+  font-size: 1.125rem;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 26px;
+  border: solid 1px var(--white);
+  padding: 12px 0;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+}
+
+.buy-sell-block .marketplace .button:hover {
+  background-color: #036ddd;
+  cursor: pointer;
+}
+
+.buy-sell-block .opaque {
+  opacity: 0.7;
+}
+
+.sharing-economy {
+  color: black;
+  background-color: white;
+  color: #061d2a;
+}
+
+.segment-title {
+  max-width: 940px;
+  margin-top: 74px;
+}
+
+.segment-subtitle {
+  font-family: Lato;
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 680px;
+  margin-top: -25px;
+  font-weight: normal;
+}
+
+.sharing-economy .pies {
+  max-width: 90%;
+  margin-right: 10%;
+}
+
+.sharing-economy .percentages {
+  margin-top: 60px;
+  margin-bottom: 95px;
+}
+
+.sharing-economy .percentages-holder {
+  width: 50%;
+}
+
+.sharing-economy .percentage {
+  font-family: Poppins;
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sharing-economy .percentages .percentage {
+  font-family: Poppins;
+  font-size: 3.125rem;
+  font-weight: normal;
+  color: #061d2a;
+  text-align: left;
+}
+
+.sharing-economy .percentage .small {
+  font-size: 2rem;
+  font-weight: 600;
+  vertical-align: super;
+}
+
+.sharing-economy .subtitle1 {
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  text-align: left;
+  font-weight: normal;
+  max-width: 230px;
+}
+
+.sharing-economy .subtitle2 {
+  margin-top: 16px;
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.21;
+  text-align: center;
+  color: #638298;
+  font-weight: normal;
+}
+
+.circular-stats .percentage {
+  font-family: Poppins;
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: #6e3bea;
+  margin-top: -10px;
+}
+
+.circular-stats {
+  margin-left: 0;
+}
+
+.circular-stats .text {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: left;
+  color: #000000;
+  margin-top: -25px;
+  max-width: 200px;
+}
+
+.circular-stats.blue .percentage {
+  color: #1a82ff;
+}
+
+.circular-stats a {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.21;
+  text-align: center;
+  color: #638298;
+
+}
+
+.decentralised-marketplaces {
+  background-color: #fafbfc;
+}
+
+.decentralised-marketplaces .tiles-holder {
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+
+.decentralised-marketplaces .tiles-holder .tile {
+  padding: 10px;
+}
+
+.decentralised-marketplaces .tiles-holder .image-holder {
+  width: 220px;
+  height: 220px;
+  border: solid 1px #dbe6eb;
+  background-color: white;
+}
+
+.decentralised-marketplaces .tiles-holder .tile-name {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #061d2a;
+  margin-top: 30px;
+}
+
+.decentralised-marketplaces .tiles-holder .tile-text {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  color: #061d2a;
+  max-width: 170px;
+  margin-top: 7px;
+}
+
+.world-class {
+  background-color: white;
+}
+
+.world-class .logos-holder img {
+  padding: 20px;
+}
+
+.world-class .team_img {
+  max-width: 90%;
+}
+
+.vc-backed h1 {
+  font-size: 1.75rem;
+}
+
+.vc-backed {
+  background-color: #007cff;
+  color: white;
+}
+
+.vc-backed .contents{
+  height: 100%;
+}
+
+.vc-backed .video-title {
+  max-width: 1020px;
+  padding: 0 50px;
+}
+
+.vc-backed .watch {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.vc-backed .contents .button {
+  width: auto;
+  padding: 12px 32px;
+  white-space: nowrap;
+}
+
+.featured-partner {
+  background-color: #fafbfc;
+}
+
+.featured-partner .box {
+  max-width: 940px;
+  margin-top: 65px;
+  margin-bottom: 70px;
+}
+
+.featured-partner .box .text {
+  background-color: #061d2a;
+  padding: 50px;
+  color: white;
+  font-family: Lato;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.featured-partner .box .text .fname {
+  line-height: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+.featured-partner .box .text .position {
+  line-height: normal;
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+.featured-video {
+  background-color: white;
+}
+
+.featured-video .segment-title {
+  margin-top: 70;
+  margin-bottom: 60;
+}
+
+.featured-video .tiles-holder {
+  margin-bottom: 60;
+}
+
+.featured-video .tiles-holder .tile {
+  max-width: 320px;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.56;
+  color: #061d2a;
+  padding: 0 15px;
+}
+
+.featured-video .tiles-holder .tile-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.featured-video .tiles-holder .tile-text {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.featured-video .tiles-holder .tile a {
+  margin-top: auto;
+}
+
+.featured-video .white-button-blue-border {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.landing-page .vc-backed .button,
+.landing-page .white-button-blue-border {
+  font-weight: normal;
+}
+
+.recent-news {
+  color: #061d2a;
+  background-color: #fafbfc;
+}
+
+.recent-news .segment-title {
+  margin-top: 70;
+  margin-bottom: 60;
+}
+
+.recent-news .tiles-holder .tile {
+  max-width: 320px;
+  font-family: Lato;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.56;
+  color: #061d2a;
+  padding: 0 15px;
+}
+
+.recent-news .tiles-holder .tile-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.recent-news .tiles-holder .tile-text {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.recent-news .tiles-holder .tile img {
+  margin-bottom: 21px;
+  width: 100%;
+}
+
+.recent-news .white-button-blue-border {
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.recent-news .tiles-holder a {
+  margin-top: 17px;
+}
+
+.landing-page .countdown-timer {
+  width: 345px;
+}
+
+.landing-page .video-item {
+  display: block;
+  max-width: 320px;
+}
+
+.landing-page .segment-title {
+  line-height: 1.25;
+  margin-bottom: 45px;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .vc-backed .bottom img {
+    margin: 10px;
+    max-height: 16px;
+  }
+
+  .vc-backed .bottom {
+    margin-bottom: 10rem;
+  }
+
+  .landing-page .countdown-timer {
+    width: 570px;
+  }
+
+  .buy-sell-block .marketplace {
+    margin-top: 76px;
+    text-align: left;
+  }
+
+  .buy-sell-block .marketplace .title {
+    text-align: left;
+    font-family: 'Poppins';
+    font-weight: 500;
+  }
+
+  .email-form .email-input {
+    font-size: 1.75rem;
+    min-width: 300px;
+  }
+
+  .buy-sell-block .marketplace .text {
+    max-width: auto;
+    font-size: 1.125rem;
+  }
+
+  .buy-sell-block .marketplace .button {
+    max-width: 600px;
+  }
+
+  .sharing-economy .percentages {
+    margin-top: 60px;
+    margin-bottom: 75px;
+  }
+
+  .sharing-economy .pies {
+    max-width: 540px;
+    margin-right: 0px;
+  }
+
+  .circular-stats {
+    margin-left: 4.8rem;
+  }
+
+  .circular-stats .text {
+    font-size: 1.125rem;
+    max-width: 250px;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .circular-stats .percentage {
+    font-size: 4.5rem;
+  }
+
+  .buy-sell-block .segment-subtitle {
+    font-size: 1.125rem;
+    max-width: 680px;
+    margin-top: -15px;
+  }
+}
+
+/* md + */
+@media (min-width: 768px) {
+  .video-block .bottom img,
+  .buy-sell-block .bottom img,
+  .vc-backed .bottom img {
+    margin: 21px;
+    max-height: 26px;
+  }
+
+  .decentralised-marketplaces .tiles-holder {
+    margin-bottom: 97px;
+  }
+
+  .landing-page h1 {
+    font-family: Poppins;
+    font-weight: normal;
+    text-align: center;
+    line-height: normal;
+  }
+
+  .buy-sell-block .segment-subtitle {
+    font-size: 1.125rem;
+    max-width: 680px;
+    margin-top: -15px;
+  }
+
+  .sharing-economy .percentages-holder {
+    width: 260px;
+  }
+
+  .sharing-economy .percentages .percentage {
+    text-align: center;
+  }
+
+  .sharing-economy .percentages .subtitle1 {
+    text-align: center;
+  }
+
+  .featured-partner .box .text {
+    font-size: 1.375rem;
+  }
+}
+
+/* lg + */
+@media (min-width: 992px) {
+  .video-block .bottom img,
+  .buy-sell-block .bottom img,
+  .vc-backed .bottom img {
+    margin: 30px;
+    max-height: 30px;
+  }
+}

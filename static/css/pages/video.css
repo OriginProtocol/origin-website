@@ -1,0 +1,76 @@
+.video-page .share {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.36;
+  color: #061d2a;
+}
+
+.video-page .segment-title {
+  text-align: left;
+}
+
+.video-page .share-items > a {
+  margin: 12px 20px 20px 0px;
+  cursor: pointer;
+}
+
+.video-info .tiles-holder {
+  margin-bottom: 60px;
+}
+
+.video-info .tiles-holder .tile {
+  max-width: 320px;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.56;
+  color: #061d2a;
+  padding: 0 15px;
+}
+
+.video-info .tiles-holder .tile-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.video-info .tiles-holder .tile-text {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.video-info .tiles-holder .tile a {
+  margin-top: auto;
+}
+
+.video-page .video-item {
+  display: block;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .video-page .tiles-holder {
+    width: 540px;
+  }
+}
+
+/* md + */
+@media (min-width: 768px) {
+  .video-page .tiles-holder {
+    width: 720px;
+  }
+}
+
+/* lg + */
+@media (min-width: 992px) {
+  .video-page .tiles-holder {
+    width: 960px;
+  }
+}
+
+/* lg + */
+@media (min-width: 1200px) {
+  .video-page .tiles-holder {
+    width: 1140px;
+  }
+}

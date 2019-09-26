@@ -1,0 +1,113 @@
+.videos-page {
+  padding-top: 6.875rem;
+}
+
+.videos-page .videos-tabbed-view-section h1 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.videos-page .category-tab-groups {
+  margin-bottom: 2.25rem;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: scroll;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.video-item {
+  margin: 2.25rem 0;
+  flex-direction: column;
+  display: none;
+  animation-duration: 0.5s;
+  animation-name: slideout;
+}
+
+.video-item.active {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+  display: flex;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    margin-top: 4.25rem;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 2.25rem
+  }
+}
+
+@keyframes slideout {
+  0% {
+    opacity: 1;
+    margin-top: 2.25rem
+  }
+
+  to {
+    opacity: 0;
+    margin-top: 4.25rem;
+  }
+}
+
+.video-item > a {
+  display: block;
+}
+
+.video-item img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-item .title {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.video-item .summary {
+  margin-top: 1.5rem;
+  margin-bottom: 60px;
+  font-weight: normal;
+}
+
+.video-item .watch-link {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  font-weight: normal;
+}
+
+.video-item .watch-link span {
+  font-size: 0.75rem;
+}
+
+.videos-page .category-tab-groups .category-tab {
+  display: inline-block;
+  margin-right: 4.5rem;
+  font-size: 1.125rem;
+  color: #638298;
+  padding-bottom: 0.5rem;
+}
+
+.videos-page .category-tab-groups .category-tab.active {
+  color: #000;
+  border-bottom: 4px solid #007cff;
+}
+
+.videos-page .category-tab-groups .category-tab:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .videos-page .category-tab-groups .category-tab {
+    margin-right: 1.8rem;
+  }
+}

@@ -13,6 +13,7 @@ from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
 from logic.emails import mailing_list
 from logic.scripts import update_token_insight as insight
+from logic.views import social_stats
 import requests
 
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files
@@ -20,6 +21,8 @@ from util.misc import sort_language_constants, get_real_ip, concat_asset_files
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
+
+import json
 
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
@@ -52,23 +55,28 @@ def beforeRequest():
         # Use Accept-Languages header for fallback
         g.current_lang = get_locale()
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def root():
-    return render_template('index.html')
+    def filter_featured_videos(video):
+        return video['landing_page_featured']
 
-@app.route('/robots.txt')
+    all_videos = json.load(open('static/files/videos.json'))
+    featured_videos = filter(filter_featured_videos, all_videos)
+    return render_template('landing.html', featured_videos=featured_videos)
+
+@app.route('/robots.txt', strict_slashes=False)
 def robots():
     return app.send_static_file('files/robots.txt')
 
-@app.route('/apple-app-site-association')
+@app.route('/apple-app-site-association', strict_slashes=False)
 def apple_app_site_association():
     return app.send_static_file('files/apple-app-site-association.json')
 
-@app.route('/mobile')
+@app.route('/mobile', strict_slashes=False)
 def mobile():
     return render_template('mobile.html')
 
-@app.route('/mobile/apk')
+@app.route('/mobile/apk', strict_slashes=False)
 def mobile_apk():
     req = requests.get(constants.APK_URL, stream = True)
     return Response(stream_with_context(req.iter_content(chunk_size=1024)),
@@ -77,11 +85,17 @@ def mobile_apk():
                         'content-disposition': 'attachment;filename=origin-marketplace.apk'
                     })
 
-@app.route('/<lang_code>')
+@app.route('/<lang_code>', strict_slashes=False)
 def index():
+    def filter_featured_videos(video):
+        return video['landing_page_featured']
+
+    all_videos = json.load(open('static/files/videos.json'))
+    featured_videos = filter(filter_featured_videos, all_videos)
+
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
-        return render_template('index.html')
+        return render_template('landing.html', featured_videos=featured_videos)
     # shortcut for nick
     elif 'ogn.dev' in request.url_root and g.lang_code == "tb":
         return redirect('https://originprotocol.github.io/test-builds', code=302)
@@ -91,37 +105,31 @@ def index():
     else:
         return render_template('404.html'), 404
 
-@app.route('/team')
-@app.route('/<lang_code>/team')
+@app.route('/team', strict_slashes=False)
+@app.route('/<lang_code>/team', strict_slashes=False)
 def team():
     # fetch our list of contributors from the DB
-    contributors = db_models.Contributor.query.all()
+    contributors = db_models.Contributor.query.all()    
 
-    # community team
-    community = [{'avatar':'kath', 'url': 'https://twitter.com/kath1213', 'name':'Kath Brandon' },
-                 {'avatar':'elaine', 'url': 'https://www.linkedin.com/in/yingyin1225/', 'name':'Elaine Yin' },
-                 {'avatar':'zaurbek', 'url': 'https://vk.com/zaurbeksf', 'name':'Zaurbek Ivanov' },
-                 {'avatar':'bonnie', 'url': 'https://www.linkedin.com/in/bonnie-yen-35025b16b', 'name':'Bonnie Yen' },
-                 {'avatar':'jenny', 'url': 'https://www.linkedin.com/in/jenny-wang-a15ba32b/', 'name':'Jenny Wang' }]
-    return render_template('team.html', contributors=contributors, community=community)
+    return render_template('team.html', contributors=contributors)
 
-@app.route('/admin')
-@app.route('/<lang_code>/admin')
+@app.route('/admin', strict_slashes=False)
+@app.route('/<lang_code>/admin', strict_slashes=False)
 def admin():
     return redirect('https://admin.staging.originprotocol.com', code=302)
 
-@app.route('/presale')
-@app.route('/<lang_code>/presale')
+@app.route('/presale', strict_slashes=False)
+@app.route('/<lang_code>/presale', strict_slashes=False)
 def presale():
-    return redirect('/tokens', code=302)
+    return redirect('/ogn-token', code=302)
 
-@app.route('/tokens')
-@app.route('/<lang_code>/tokens')
+@app.route('/tokens', strict_slashes=False)
+@app.route('/<lang_code>/tokens', strict_slashes=False)
 def tokens():
-    return render_template('tokens.html')
+    return redirect('/ogn-token', code=302)
 
-@app.route('/whitepaper')
-@app.route('/<lang_code>/whitepaper')
+@app.route('/whitepaper', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper', strict_slashes=False)
 def whitepaper():
     localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
@@ -131,8 +139,8 @@ def whitepaper():
         # Default to English
         return app.send_static_file('docs/whitepaper_v19.pdf')
 
-@app.route('/product-brief')
-@app.route('/<lang_code>/product-brief')
+@app.route('/product-brief', strict_slashes=False)
+@app.route('/<lang_code>/product-brief', strict_slashes=False)
 def product_brief():
     localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
     product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
@@ -142,7 +150,7 @@ def product_brief():
         # Default to English
         return app.send_static_file('docs/whitepaper_v19.pdf')
 
-@app.route('/mailing-list/join', methods=['POST'])
+@app.route('/mailing-list/join', methods=['POST'], strict_slashes=False)
 def join_mailing_list():
     if 'email' in request.form:
         email = request.form['email']
@@ -158,42 +166,38 @@ def join_mailing_list():
         ip_addr = get_real_ip()
         feedback = mailing_list.send_welcome(email, ip_addr)
         mailing_list.add_sendgrid_contact(email=email, full_name=full_name, dapp_user=dapp_user)
-        return jsonify(feedback)
+        return feedback
     else:
-        return jsonify("Missing email")
+        return jsonify(success=False, message=gettext("Missing email"))
 
-@app.route('/presale/join', methods=['POST'])
+@app.route('/presale/join', methods=['POST'], strict_slashes=False)
 def join_presale():
     full_name = request.form['full_name']
     email = request.form['email']
-    accredited = request.form["accredited"]
-    entity_type = request.form["entity_type"]
     desired_allocation = request.form["desired_allocation"]
     desired_allocation_currency = request.form["desired_allocation_currency"]
     citizenship = request.form["citizenship"]
     sending_addr = request.form["sending_addr"]
-    note = request.form["note"]
     ip_addr = get_real_ip()
-    print("CHECK:", email, request.remote_addr) # Temp until we get IP recorded
     if not full_name:
-        return jsonify(gettext("Please enter your name"))
+        return jsonify(success=False, message=gettext("Please enter your name"))
     if not email:
-        return jsonify(gettext("Please enter your email"))
-    if not accredited or not entity_type or not citizenship or not desired_allocation_currency:
-        return jsonify(gettext("An error occured"))
+        return jsonify(success=False, message=gettext("Please enter your email"))
+    if not citizenship:
+        return jsonify(success=False, message=gettext("Select your country of citizenship"))
     if not desired_allocation:
-        return jsonify(gettext("Please enter your desired allocation"))
-    if "confirm" not in request.form:
-        return jsonify(gettext("Please agree to the important notice"))
+        return jsonify(success=False, message=gettext("Please enter your desired allocation"))
+    if not desired_allocation_currency:
+        return jsonify(success=False, message=gettext("Select a currency"))
     if not recaptcha.verify():
-        return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.presale(full_name, email, accredited, entity_type, desired_allocation, desired_allocation_currency, citizenship, sending_addr, note, request.remote_addr)
+        return jsonify(success=False, message=gettext("Please prove you are not a robot."))
+    feedback = mailing_list.presale(full_name, email, desired_allocation, desired_allocation_currency, citizenship, sending_addr, request.remote_addr)
     mailing_list.add_sendgrid_contact(email, full_name, citizenship)
     insight.add_contact(sending_addr,name=full_name, email=email, presale_interest=1)
     flash(feedback)
-    return jsonify("OK")
+    return jsonify(success=True, message=gettext("OK"))
 
-@app.route('/mailing-list/unsubscribe', methods=['GET'])
+@app.route('/mailing-list/unsubscribe', methods=['GET'], strict_slashes=False)
 def unsubscribe():
     email = request.args.get("email")
     feedback = mailing_list.unsubscribe(email)
@@ -201,103 +205,178 @@ def unsubscribe():
     flash(feedback)
     return redirect('/', code=302)
 
-@app.route('/build-on-origin')
-@app.route('/<lang_code>/build-on-origin')
-def build_on_origin():
-    return redirect(url_for('partners', lang_code=g.current_lang), code=301)
+@app.route('/social-stats', methods=['GET'], strict_slashes=False)
+@app.route('/<lang_code>/social-stats', methods=['GET'], strict_slashes=False)
+def fetch_social_stats():
+    stats = social_stats.get_social_stats(g.current_lang)
+    return jsonify({'stats': stats})
 
-@app.route('/developers')
-@app.route('/<lang_code>/developers')
+@app.route('/build-on-origin', strict_slashes=False)
+@app.route('/<lang_code>/build-on-origin', strict_slashes=False)
+def build_on_origin():
+     return render_template('404.html'), 410
+
+@app.route('/developers', strict_slashes=False)
+@app.route('/<lang_code>/developers', strict_slashes=False)
 def developers():
     return render_template('developers.html')
 
-@app.route('/discord')
-@app.route('/<lang_code>/discord')
+@app.route('/discord', strict_slashes=False)
+@app.route('/<lang_code>/discord', strict_slashes=False)
 def discord():
     return redirect(universal.DISCORD_URL, code=301)
 
-@app.route('/ios')
-@app.route('/<lang_code>/ios')
+@app.route('/ios', strict_slashes=False)
+@app.route('/<lang_code>/ios', strict_slashes=False)
 def ios():
     return redirect(universal.IOS_URL, code=301)
 
-@app.route('/android')
-@app.route('/<lang_code>/android')
+@app.route('/android', strict_slashes=False)
+@app.route('/<lang_code>/android', strict_slashes=False)
 def android():
     return redirect(universal.ANDROID_URL, code=301)
 
-@app.route('/telegram')
-@app.route('/<lang_code>/telegram')
+@app.route('/telegram', strict_slashes=False)
+@app.route('/<lang_code>/telegram', strict_slashes=False)
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
 
-@app.route('/dapp')
-@app.route('/<lang_code>/dapp')
+@app.route('/dapp', strict_slashes=False)
+@app.route('/<lang_code>/dapp', strict_slashes=False)
 def dapp():
     return redirect(universal.DAPP_URL, code=301)
 
-@app.route('/rewards')
-@app.route('/<lang_code>/rewards')
+@app.route('/rewards', strict_slashes=False)
+@app.route('/<lang_code>/rewards', strict_slashes=False)
 def rewards():
     return redirect(universal.REWARDS_URL, code=301)
 
-@app.route('/partners')
-@app.route('/<lang_code>/partners')
+@app.route('/partners', strict_slashes=False)
+@app.route('/<lang_code>/partners', strict_slashes=False)
 def partners():
-    return render_template('partners.html')
+    return render_template('404.html'), 410
 
-@app.route('/privacy')
-@app.route('/<lang_code>/privacy')
+@app.route('/about', strict_slashes=False)
+@app.route('/<lang_code>/about', strict_slashes=False)
+def about():
+    return render_template('about.html')
+
+@app.route('/investors', strict_slashes=False)
+@app.route('/<lang_code>/investors', strict_slashes=False)
+def investors():
+    return render_template('investors.html')
+
+@app.route('/product', strict_slashes=False)
+@app.route('/<lang_code>/product', strict_slashes=False)
+def product():
+    return render_template('product.html')
+
+@app.route('/ogn-token', strict_slashes=False)
+@app.route('/<lang_code>/ogn-token', strict_slashes=False)
+def ogn_token():
+    return render_template('ogn-token.html')
+
+@app.route('/video/<video_id>', strict_slashes=False)
+@app.route('/<lang_code>/video/<video_id>', strict_slashes=False)
+def video(video_id):
+    def remove_current_video(video):
+        if(video['hash'] == video_id):
+            return False
+        else:
+            return True
+
+    def find_current_video(video):
+        if(video['hash'] == video_id):
+            return True
+        else:
+            return False
+
+    def filter_featured_videos(video):
+        return video['video_page_featured']
+
+
+    all_videos = json.load(open('static/files/videos.json'))
+
+    featured_videos = filter(remove_current_video, filter(filter_featured_videos, all_videos))
+
+    videoList = filter(find_current_video, all_videos)
+    if (len(videoList) == 0):
+        return render_template('404.html'), 404
+
+    return render_template('video.html', featured_videos=featured_videos, video=videoList[0])
+
+@app.route('/videos', strict_slashes=False)
+@app.route('/<lang_code>/videos', strict_slashes=False)
+def videos():
+    data = json.load(open('static/files/videos.json'))
+    return render_template('videos.html', videos=data)
+
+@app.route('/privacy', strict_slashes=False)
+@app.route('/<lang_code>/privacy', strict_slashes=False)
 def privacy():
     return render_template('privacy.html')
 
-@app.route('/tos')
-@app.route('/<lang_code>/tos')
+@app.route('/tos', strict_slashes=False)
+@app.route('/<lang_code>/tos', strict_slashes=False)
 def tos():
     return render_template('tos.html')
 
-@app.route('/aup')
-@app.route('/<lang_code>/aup')
+@app.route('/aup', strict_slashes=False)
+@app.route('/<lang_code>/aup', strict_slashes=False)
 def aup():
     return render_template('aup.html')
 
-@app.route('/creator')
-@app.route('/<lang_code>/creator')
+@app.route('/creator', strict_slashes=False)
+@app.route('/<lang_code>/creator', strict_slashes=False)
 def creator():
     return render_template('creator.html')
 
-@app.route('/partners/interest', methods=['POST'])
-def partners_interest():
-    name = request.form['name']
-    company_name = request.form['company_name']
-    email = request.form['email']
-    website = request.form["website"]
-    note = request.form["note"]
-    ip_addr = get_real_ip()
-    if not name:
-        return jsonify(gettext("Please enter your name"))
-    if not company_name:
-        return jsonify(gettext("Please enter your company name"))
-    if not email:
-        return jsonify(gettext("Please enter your email"))
-    if not recaptcha.verify():
-        return jsonify(gettext("Please prove you are not a robot."))
-    feedback = mailing_list.partners_interest(name, company_name, email,
-                                              website, note, ip_addr)
-    mailing_list.add_sendgrid_contact(email,name)
-    flash(feedback)
-    return jsonify("OK")
+# @app.route('/partners/interest', methods=['POST'], strict_slashes=False)
+# def partners_interest():
+#     name = request.form['name']
+#     company_name = request.form['company_name']
+#     email = request.form['email']
+#     website = request.form["website"]
+#     note = request.form["note"]
+#     ip_addr = get_real_ip()
+#     if not name:
+#         return jsonify(gettext("Please enter your name"))
+#     if not company_name:
+#         return jsonify(gettext("Please enter your company name"))
+#     if not email:
+#         return jsonify(gettext("Please enter your email"))
+#     if not recaptcha.verify():
+#         return jsonify(gettext("Please prove you are not a robot."))
+#     feedback = mailing_list.partners_interest(name, company_name, email,
+#                                               website, note, ip_addr)
+#     mailing_list.add_sendgrid_contact(email,name)
+#     flash(feedback)
+#     return jsonify("OK")
 
-@app.route('/static/css/all_styles.css')
+@app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
         "static/css/vendor-bootstrap-4.0.0-beta2.css",
-        "static/css/style.css",
         "static/css/alertify.css",
-        "static/css/animate.css"
+        "static/css/animate.css",
+        "static/css/style.css",
+        "static/css/common.css",
+        "static/css/footer.css",
+        "static/css/components/countdown-timer.css",
+        "static/css/pages/common.css",
+        "static/css/pages/team.css",
+        "static/css/pages/token.css",
+        "static/css/pages/product.css",
+        "static/css/pages/about.css",
+        "static/css/pages/landing.css",
+        "static/css/pages/video.css",
+        "static/css/pages/videos.css",
+        "static/css/pages/investors.css",
+        "static/css/pages/developers.css",
+        "static/css/pages/presale.css"
     ]), mimetype="text/css")
 
-@app.route('/static/js/all_javascript.js')
+@app.route('/static/js/all_javascript.js', strict_slashes=False)
 def assets_all_javascript():
     return Response(concat_asset_files([
         "static/js/vendor-jquery-3.2.1.min.js",
@@ -306,12 +385,11 @@ def assets_all_javascript():
         "static/js/vendor-alertify.js",
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
-        "static/js/script.js"
-    ]), mimetype="application/javascript")
-
-@app.context_processor
-def inject_partners():
-    return dict(partners_dict = partner_details.PARTNERS)
+        "static/js/script.js",
+        "static/js/countdown-timer.js",
+        "static/js/yt-player.js",
+        "static/js/videos.js"
+    ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)
 def page_not_found(e):

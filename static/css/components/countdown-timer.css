@@ -1,0 +1,112 @@
+.countdown-timer {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.countdown-timer .dial {
+  margin-right: 1rem;
+  background-image: url('/static/img/ognToken/ogn-icon-empty.svg');
+  background-size: 2.875rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.countdown-timer .dial > .dial-svg {
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  margin: 2rem 0;
+  border-radius: 100%;
+  transform: rotate(-90deg);
+}
+
+.countdown-timer.large {
+  flex-direction: column;
+}
+
+.countdown-timer.large .dial {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 0;
+  background-size: 4.375rem;
+}
+
+.countdown-timer.large .dial > .dial-svg {
+  height: 160px;
+  width: 160px;
+}
+
+.countdown-timer.large .dial > .dial-svg circle {
+  stroke-width: 0.75rem;
+}
+
+.countdown-timer .dial > .dial-svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #dbe6eb;
+  stroke-width: 0.45rem;
+}
+
+.countdown-timer .dial > .dial-svg .active-arc {
+  stroke: #007cff;
+  stroke-linecap: round;
+}
+
+.countdown-time-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 410px;
+  max-width: 410px;
+}
+
+.countdown-timer.large .countdown-time-left {
+  margin: 0 auto;
+}
+
+.countdown-time-left .time-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex: 1;
+}
+
+.countdown-time-left .time-group .time-value {
+  font-size: 4rem;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.countdown-time-left .time-group .time-label {
+  font-size: 0.725rem;
+  text-align: center;
+}
+
+.countdown-time-left .time-group:not(:first-child):not(:last-child) .time-value:after {
+  position: absolute;
+  content: ':';
+  top: 0;
+  bottom: 0;
+  right: -0.375rem;
+}
+
+
+@media (max-width: 575px) {
+  .countdown-time-left {
+    max-width: 100%;
+    width: 100%;
+  }
+  .countdown-timer {
+    flex-direction: column;
+  }
+  .countdown-timer .dial {
+    margin-right: 0;
+    justify-content: center;
+    display: flex;
+  }
+}

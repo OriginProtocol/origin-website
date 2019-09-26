@@ -1,0 +1,369 @@
+.product-page {
+  background-color: #007cff;
+  padding-top: 6.875rem;
+}
+
+.product-page .tokens-section h1 {
+  margin-bottom: 1rem;
+}
+
+.product-page .tokens-section .subtitle {
+  text-align: center;
+  margin-bottom: 3.125rem;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+
+.product-page .action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 6.25rem;
+}
+
+.product-page .userflow-section .userflow-step {
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem 0;
+}
+
+.product-page .userflow-section .flow-desc {
+  font-size: 1.125rem;
+  text-align: left;
+  color: #fff;
+  flex: 1;
+  padding-left: 1.875rem;
+  font-weight: normal;
+}
+
+.product-page .userflow-section .flow-step {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  margin: 0;
+  flex: 3.75rem 0 0;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.product-page .userflow-section .col-12:last-child {
+  margin-bottom: 5.875rem;
+}
+
+.product-page .userflow-section .col-12 > img {
+  margin-bottom: 2rem;
+  max-width: 100%;
+  margin-left: auto;
+}
+
+.product-page .features-section .product-feature {
+  display: flex;
+  flex-direction: row;
+  margin: 1.656rem 0;
+  padding-bottom: 0px;
+}
+
+.product-page .product-feature  {
+  padding-bottom: 5.875rem;
+}
+
+.product-page .product-feature .feature-image {
+  flex: auto 0 0;
+  margin-right: 1.5rem
+}
+
+.product-page .product-feature .feature-content {
+  flex: 1;
+  font-size: 1.125rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.product-page .product-feature .feature-content h4 {
+  color: #000;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.product-page .marketplaces-section img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.product-page .marketplaces-section h3 {
+  display: block;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #061d2a;
+}
+
+.product-page .features-section h3 {
+  font-family: Poppins;
+  font-size: 1.375rem;
+  font-weight: normal;
+  color: #061d2a;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.product-page .feature-desc {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.39;
+  color: #345d7a;
+}
+
+.product-page .marketplaces-section .btn {
+  margin-bottom: 3.825rem;
+}
+
+.product-page .marketplaces-section .marketplace-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  object-fit: contain;
+  padding-bottom: 5.875rem;
+}
+
+.product-page .marketplaces-section .marketplace-images img {
+  margin: auto 2.375rem
+}
+
+.product-page .product-title-section .row,
+.product-page .product-title-section .container {
+  height: 100%;
+}
+
+.product-page .product-title-section {
+  background-image: url('/static/img/product/origin-stack-normal.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;  
+  background-size: auto 90%;
+}
+
+.product-page .product-title-section h1 {
+  text-align: left;
+  padding-bottom: 45%;
+}
+
+.product-page .milestones-section .milestones-timeline {
+  max-width: 660px;
+  margin: 3rem auto 5rem auto;
+}
+
+.product-page .milestones-timeline .milestone {
+  width: 50%;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  padding: 0 4.5rem 0 0;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+  padding: 0 0 0 4.5rem;
+}
+
+.product-page .milestones-timeline .milestone:before {
+  content: '';
+  position: absolute;
+  right: -3.5px;
+  top: calc(0.875rem - 3.5px);
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #007cff;
+  border-radius: 50%;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed):before {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone:not(:last-child):after {
+  content: '';
+  position: absolute;
+  right: -1.5px;
+  display: inline-block;
+  width: 3px;
+  background-color: #007cff;
+  top: calc(0.875rem - 3.5px);
+  bottom: calc(-0.875rem + 3.5px);
+  z-index: -1;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed):after,
+.product-page .milestones-timeline .milestone.recent:after {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even):before {
+  left: -3.5px;
+  right: unset;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even):after {
+  left: -1.5px;
+  right: unset;
+}
+
+.product-page .milestones-timeline .milestone .step {
+  background-color: #007cff;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: normal;
+  margin: 0 auto 1.25rem auto;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed) .step {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone .step:after {
+  position: absolute;
+  right: 0;
+  height: 1px;
+  display: inline-block;
+  content: '';
+  background-color: #007cff;
+  top: 0.875rem;
+  left: calc(50% - 3rem);
+  z-index: -1;
+}
+
+.product-page .milestones-timeline .milestone:nth-child(even) .step:after {
+  left: 0;
+  right: calc(50% - 3rem);
+}
+
+.product-page .milestones-timeline .milestone:not(.completed) .step:after {
+  background-color: #bdcbd5;
+}
+
+.product-page .milestones-timeline .milestone .timestamp {
+  font-size: 1.125rem;
+  color: #007cff;
+  font-weight: normal;
+}
+
+.product-page .milestones-timeline .milestone:not(.completed) .timestamp {
+  color: #8fa7b7;
+}
+
+.product-page .milestones-timeline .milestone .title {
+  font-size: 1.125rem;
+  font-weight: normal;
+  color: #111d28;
+}
+
+.product-page .milestones-timeline .milestone .title > span:not(:last-child) {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.product-page .btn {
+  width: 310px
+}
+
+@media (max-width: 992px) {
+  .product-page .product-title-section {
+    background-position: right bottom;
+    background-size: auto 80%;
+    background-image: url('/static/img/product/origin-stack-mobile.svg');
+  }
+}
+
+@media (max-width: 767px) {
+  .product-page .userflow-section .col-12 > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-page .product-title-section h1 {
+    max-width: 520px;
+    margin-top: 0px;
+  }
+
+  .product-page .product-title-section {
+    background-position: 100% 90%;
+    background-size: auto 75%;
+  }
+} 
+
+@media (max-width: 575px) {
+  .product-page .marketplaces-section .marketplace-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-page .marketplaces-section .marketplace-images img {
+    margin: 1.5rem 0;
+    max-width: 200px;
+  }
+
+  .product-page .userflow-section .userflow-step {
+    margin-bottom: 1rem;
+  }
+
+  .product-page .milestones-timeline .milestone {
+    padding: 0 1.5rem 0 0;
+  }
+  
+  .product-page .milestones-timeline .milestone:nth-child(even) {
+    padding: 0 0 0 1.5rem;
+  }
+
+  .product-page .milestones-timeline .milestone .step:after {
+    left: calc(50% - 1.5rem);
+  }
+  
+  .product-page .milestones-timeline .milestone:nth-child(even) .step:after {
+    right: calc(50% - 1.5rem);
+  }
+  
+  .product-page .product-title-section {
+    background-position: 100% 115%;
+    background-size: auto 75%;  
+  }
+
+  .product-page .product-title-section h1 {
+    padding-top: 0;
+    margin-top: 0;
+    max-width: 400px;
+    text-align: left;
+    padding: 0px 20px;  
+  }
+
+  .product-page .marketplaces-section .btn {
+    margin-bottom: 3.825rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-page .milestones-timeline .milestone .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-page .product-title-section {
+    background-position: 100% 115%;
+    background-size: auto 77%;
+  }
+}

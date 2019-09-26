@@ -1,0 +1,213 @@
+.about-page .segment-title {
+  margin-top: 88px;
+}
+
+.about-page .segment-subtitle {
+  margin-top: -20px;
+}
+
+.about-page .team-photo {
+  margin-top: 86px;
+  margin-bottom: 102px;
+  max-width: 90%
+}
+
+.about-page .blue-section {
+  background-color: #007cff;
+  color: white;
+}
+
+.about-page .white-section .section-name,
+.about-page .blue-section .section-name {
+  font-family: Poppins;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+.about-page .blue-section .section-text {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  max-width: 427px;
+  line-height: 1.61;
+  text-align: left;
+}
+
+.screen-size-segment.white-section,
+.screen-size-segment.blue-section {
+  min-height: 580px;
+  max-height: 1200px;
+  height: auto;
+}
+
+.about-page .white-section .links a,
+.about-page .blue-section .links a {
+  font-family: Lato;
+  font-size: 0.875rem;
+  line-height: 1.61;
+  font-weight: normal;
+  color: #bdcbd5;
+}
+
+.about-page .white-section img,
+.about-page .blue-section img {
+  max-width: 70%;
+}
+
+.about-page .section-content {
+  max-width: 940px;
+  width: 100%;
+}
+
+.about-page .section-content .image {
+  padding: 40px 0px;
+}
+
+.about-page .section-content .text-block {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.about-page .white-section {
+  background-color: white;
+  color: #061d2a;
+}
+
+.about-page .white-section .section-text {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  max-width: 427px;
+  line-height: 1.61;
+  text-align: left;
+}
+
+.about-page .more-resilience.white-section .section-text,
+.about-page .access-section.blue-section .section-text {  
+  max-width: 386px;
+}
+
+.about-page .more-resilience .image {
+  top: 0px;
+}
+
+.about-page .access-section .image {
+  top: 0px;
+}
+
+.the-press {
+  background-color: #fafbfc;
+}
+
+.the-press .content {
+  max-width: 1000px; 
+  margin-top: 5px;
+  margin-bottom: 70px;
+}
+
+.the-press .content a {
+  width: 180px;
+  margin: 45px 30px;
+}
+
+.the-press .content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-media-section {
+  color: white; 
+  background-color: #007cff;
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.social-media-section h2 {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.social-media-section #social-media-list-country-specific,
+.social-media-section #social-media-list {
+  max-width: 1000px;
+  margin: 10px 10px;
+  margin-bottom: 90px;
+}
+
+.social-media-section h1 {
+  margin-bottom: 0px;
+}
+
+.social-media-section #social-media-list-country-specific > .social-box {
+  margin: 70px 20px 0px 20px;
+}
+
+.social-media-section .social-box {
+  color: white;
+  margin: 70px 20px 0px 20px;
+}
+
+.social-media-section img {
+  margin-bottom: 30px;
+}
+
+.social-media-section h1 {
+  max-width: 920px;
+  margin-top: 70px;
+}
+
+/* sm + */
+@media (min-width: 576px) {
+  .about-page .more-resilience .image {
+    top: -10px;
+  }
+
+  .about-page .access-section .image {
+    top: -6px;
+  }
+
+  .about-page .section-content .image {
+    padding: 0px;
+  }
+
+  .about-page .section-content .text-block {
+    padding: 24px;
+    text-align: left;
+  }
+
+  .social-media-section #social-media-list-country-specific,
+  .social-media-section #social-media-list {
+    margin: 10px 110px;
+    padding-bottom: 90px;
+  }
+
+  .social-media-section #social-media-list-country-specific > .social-box {
+    margin: 40px 35px 0px 25px;
+  }
+
+  .about-page .white-section img,
+  .about-page .blue-section img {
+    max-width: 100%;
+  }
+
+  .social-media-section .social-box {
+    margin: 90px 35px 0px 35px;
+  }
+
+  .screen-size-segment.white-section,
+  .screen-size-segment.blue-section {
+    min-height: 580px;
+    max-height: 800px;
+    height: 100vh;
+  }
+
+  .about-page .white-section .section-name,
+  .about-page .blue-section .section-name {
+    font-size: 2.375rem;
+  }
+}

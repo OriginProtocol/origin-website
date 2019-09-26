@@ -6,47 +6,20 @@
 
 {% block content %}
 
-{% include 'warning.html' %}
+{% with theme_dark=False %}
+{% include 'navbar.html' %}
+{% endwith %}  
 
 <main class="presale-page">
-  {% include 'navbar.html' %}
-  <section class="header-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h1>
-            {{ gettext("Tokens") }}
-          </h1>
-        </div>
-        <div class="col-12 col-md-6">
-          <p>
-            {{ gettext("<strong>Origin tokens are not currently available for purchase.</strong><br> Please fill out this form if you are interested in participating in any future tokens sales and would like to be updated as more details are announced.") }}
-          </p>
-        </div>
-      </div>
+  <section class="presale-title-section">
+    <div class="container">
+      <h1>{{gettext("Origin Tokens are launching soon!")}}</h1>
+      <h2>
+        {{ gettext("Interested in Origin tokens?") }}
+      </h2>
     </div>
   </section>
-  <section class="core-team-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes">
-          <div class="row row-pane">
-            <div class="col-4 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-8 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="filler-section">
-  </section>
-  <section class="investors-section">
+  <section class="mailing-list-section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-pane background-panes">
@@ -63,10 +36,7 @@
         </div>
         <div class="container foreground-content">
           <div class="row presale-form">
-            <div class="col-12 offset-xl-1 col-xl-5">
-              <h2>
-                {{ gettext("Interested in Origin tokens?") }}
-              </h2>
+            <div class="col-12 col-xl-5 mx-xl-auto">
               <form method="post" action="/presale/join" id="presale">
                 <div class="form-group">
                   <label for="full_name"><strong>{{ gettext("Full Name") }}</strong></label>
@@ -75,37 +45,6 @@
                 <div class="form-group">
                   <label for="email"><strong>{{ gettext("Email") }}</strong></label>
                   <input name="email" id="email" type="email" class="form-control" placeholder="{{ gettext("Email") }}" />
-                </div>
-                <div class="form-group">
-                  <p><strong>{{ gettext("Are you an accredited investor?") }}</strong>&nbsp;(<a id="huh" data-toggle="tooltip" title="{{ gettext("An accredited investor must have a net worth of at least $1,000,000, excluding the value of one's primary residence, or have income at least $200,000 each year for the last two years (or $300,000 combined income if married.)") }}">{{ gettext("Huh?") }}</a>)</p>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="accredited" id="accredited_yes" value="1" checked="checked" /> <strong>{{ gettext("Yes") }}</strong>
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="accredited" id="accredited_no" value="0" /> <strong>{{ gettext("No") }}</strong>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <p><strong>{{ gettext("What type of entity do you represent?") }}</strong></p>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="entity_type" id="individual" value="individual" checked="checked" /> <strong>{{ gettext("Individual") }}</strong>
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="entity_type" id="syndicate" value="syndicate" /> <strong>{{ gettext("Syndicate") }}</strong>
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="entity_type" id="fund" value="fund" /> <strong>{{ gettext("Professional Fund") }}</strong>
-                    </label>
-                  </div>
                 </div>
                 <div class="form-group">
                   <input type="hidden" name="desired_allocation_currency" value="USD" />
@@ -381,18 +320,6 @@
                 <div class="form-group">
                   <label for="sending_addr">{{ gettext("<strong>ETH or BTC address you plan to send from?</strong> (optional)") }}</label>
                   <input name="sending_addr" id="sending_addr" class="form-control" placeholder="0x..." />
-                </div>
-                <div class="form-group">
-                  <label for="note">{{ gettext("<strong>Anything else we should know?</strong> (optional)") }}</label>
-                  <input name="note" id="note" class="form-control" placeholder="" />
-                </div>
-                <div class="form-group">
-                  <label><strong>{{ gettext("Important notice") }}</strong></label>
-                 <div class="form-check form-check-inline">
-                   <label for="confirm" class="form-check-label">
-                     <input name="confirm" class="form-check-input" type="checkbox" id="confirm" value="1" />{{ gettext(" I understand any token sales will be subject to United States regulations and securities laws and that submitting this form is NOT a guarantee of allocation.") }}
-                   </label>
-                 </div>
                 </div>
                 <div class="form-group">
                   <!-- Recaptcha -->

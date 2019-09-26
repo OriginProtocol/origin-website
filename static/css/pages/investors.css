@@ -1,0 +1,227 @@
+.investors-page h1 {
+  text-align: center;
+}
+
+.investors-page .headshot-wrapper img {
+  width: 120px;
+  height: 120px;
+}
+
+.investors-page .individual-investors-section h1, .investors-page .fundraising-section h1 {
+  margin-bottom: 1rem;
+}
+
+.investors-page .section-desc {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.investors-page .individual-investors-section {
+  margin-bottom: 2rem;
+}
+
+.investors-page .individual-investors-section .team-member {
+  margin-top: 0px;
+  padding: 0 1.5rem;
+}
+
+.investors-page .vc-section.vc-firms {
+  background-image: url('/static/img/investors/map.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.investors-page .vc-section.vc-firms .container {
+  padding: 0 7rem 5rem 7rem;
+}
+
+.investors-page .vc-section .country-name {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.investors-page .vc-section .vc-firm + .country-name {
+  margin-top: 2rem;
+}
+
+.investors-page .vc-section .vc-firm {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.investors-page .vc-firm.smaller img {
+  flex: 48px 0 0;
+  width: 48px;
+  height: 48px;
+}
+
+.investors-page .vc-firm img {
+  flex: 60px 0 0;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.investors-page .vc-firm .firm-name {
+  flex: 1;
+  font-size: 1.125rem;
+  color: #fff;
+  font-weight: normal;
+}
+
+.investors-page .fundraising-section {
+  text-align: center;
+  padding-bottom: 3.5rem;
+}
+
+.investors-page .fundraising-section img {
+  max-width: 100%;
+  margin: 2rem 0;
+}
+
+.investors-page .fundraising-section .get-stake-desc {
+  margin: 3.5rem 0;
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #061d2a;
+}
+
+.investors-page .fundraising-section .investment-counter.investors {
+  color: #8900fd;
+}
+
+.investors-page .fundraising-section .investment-counter.investments {
+  color: #007cff;
+}
+
+.investors-page .fundraising-section .investment-counter {
+  margin-top: 3.5rem;
+  font-size: 5.5rem;
+  text-align: center;
+}
+
+.investors-page .fundraising-section .investment-caption {
+  margin-bottom: 3.5rem;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.investors-page .featured-investor-section {
+  padding-bottom: 3.5rem;  
+}
+
+.investors-page .featured-investor-section .carousel-item {
+  height: auto;
+  margin-bottom: 4rem;
+}
+
+.investors-page .featured-investor-section .featured-investor {
+  display: flex;
+  justify-content: stretch;
+  object-fit: contain;
+}
+
+.investors-page .featured-investor-section .featured-investor .investor-data {
+  background-color: #061d2a;
+  color: #fff;
+  padding: 4.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 50% 0 0;
+}
+
+.investors-page .featured-investor-section .actions {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.investors-page .featured-investor-section .actions .btn {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.investors-page .featured-investor .investor-image {
+  flex: 50% 0 0;
+}
+
+.investors-page .featured-investor .investor-image img {
+  max-width: 100%;
+}
+
+.investors-page .featured-investor .investor-quote {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.investors-page .featured-investor .investor-info {
+  font-size: 1.125rem;
+  margin-left: auto;
+  text-align: right;
+}
+
+.investors-page .featured-investor .investor-info .investor-name {
+  font-weight: bold;
+}
+
+.investors-page .featured-investor-section .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px 0 5px;
+}
+
+.investors-page .featured-investor-section .carousel-indicators li.active {
+  color: #061d2a;
+}
+
+@media (max-width: 575px) {
+  .investors-page .vc-section.vc-firms .container {
+    padding: 0 2rem 5rem 2rem;
+  }  
+
+  .investors-page .featured-investor-section .featured-investor {
+    flex-direction: column-reverse;
+  }
+
+  .investors-page .featured-investor-section .featured-investor .investor-data {
+    padding: 1rem;
+  }
+
+  .investors-page .vc-firm.smaller img {
+    flex: 40px 0 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .investors-page .vc-firm img {
+    margin-right: 0.5rem;
+    flex: 50px 0 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .investors-page .vc-firm .firm-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .investors-page .vc-firm.smaller img {
+    flex: 40px 0 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .investors-page .vc-firm img {
+    margin-right: 0.5rem;
+    flex: 50px 0 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .investors-page .vc-firm .firm-name {
+    font-size: 1rem;
+  }
+}

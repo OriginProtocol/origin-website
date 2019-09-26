@@ -1,11 +1,12 @@
 from pyuca import Collator
 
-
 from flask import request
 from flask_babel import Locale
 
 from config import constants
 
+import re
+import os
 
 def sort_language_constants():
     """
@@ -30,17 +31,40 @@ def get_real_ip():
     else:
         return request.remote_addr or 'untrackable'
 
+def resolve_inline_css_imports(filename, file_contents):
+    """
+    Replaces the `import()` statement with those files contents
+    Open Ended Question: What happens with cyclic import?
+    """
+    # Array of relative CSS URLs
+    matches = re.findall(r'\@import url\([\'\"]([^\)]+)[\'\"]\);', file_contents)
+
+    # Base path of the file
+    basePath = os.path.split(filename)[0]
+    
+    normalizedFilenames = [os.path.normpath(os.path.join(basePath, relativeUrl)) for relativeUrl in matches]
+
+    contents = ["/* %s */\n\n%s" % (filename, file_get_contents(filename)) for filename in normalizedFilenames]
+    contents.append(file_contents.replace('@import url(', '// Resolved: @import url('))
+    return "\n\n\n\n".join(contents)
+
 def file_get_contents(filename):
     """
     Returns file contents as a string.
     """
     with open(filename) as file:
-        return file.read()
+        if filename.endswith(".css"):
+            return resolve_inline_css_imports(filename, file.read())
+        else:
+            return file.read()
 
-def concat_asset_files(filenames):
+def concat_asset_files(filenames, joinWithSemicolon=False):
     """
     Concats css or javascript files together with a comment containing the filename
     at the top of each file.
     """
     contents = ["/* %s */\n\n %s" % (filename, file_get_contents(filename)) for filename in filenames]
-    return "\n\n;\n\n".join(contents) 
+    if joinWithSemicolon:
+        return "\n\n;\n\n".join(contents) 
+    else:
+        return "\n\n\n\n".join(contents)

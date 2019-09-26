@@ -3,200 +3,202 @@
 {% block meta_description %}{{ gettext("Origin Protocol - Developers") }}{% endblock %}
 {% block content %}
 
-{% with theme_light=True %}
-  {% include 'warning.html' %}
+{% with theme_dark=True %}
+{% include 'navbar.html' %}
 {% endwith %}
 
 <main class="developers-page">
-  {% with theme_dark=True %}
-  {% include 'navbar.html' %}
-  {% endwith %}
-  <section class="introduction-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12 col-md-5">
-          <h1>Origin For Developers</h1>
-          <p>Origin is empowering developers to build decentralized marketplaces on the blockchain, which will allow buyers and sellers to meet and transact without requiring any trusted intermediaries. Achieving this visionary goal requires contributions from a growing community of developers; And <strong>we need your help</strong>.</p>
+  <div class="stack-section">
+    <div class="container d-flex flex-column justify-content-start">
+      <h1>{{gettext("Our open-source codebase is being developed by a global network of contributors")}}</h1>
+      <div class="d-flex flex-column">
+        <!-- desktop layout -->
+        <div class="d-none d-md-flex desktop mt-7">
+          <!-- first column -->
+          <div class="col-4 d-flex flex-column column1">
+            <div>
+              <div class="d-flex left-indicator-holder">
+                <h2 class="ml-0 mr-auto">{{gettext("Mobile Apps")}}</h2>
+                <img class="d-none d-md-flex indicator-left" src="/static/img/developers/indicator-left.svg"/>
+              </div>
+              <div class="text">{{gettext("Native applications that offer fully-integrated marketplace experiences with a built-in Ethereum wallet")}}</div>
+            </div>
+            <div>
+              <div class="d-flex left-indicator-holder">
+                <h2 class="ml-0 mr-auto">{{gettext("DApps")}}</h2>
+                <img class="d-none d-md-flex indicator-left" src="/static/img/developers/indicator-left.svg"/>
+              </div>
+              <div class="text">{{gettext("Decentralized applications that enable true peer-to-peer commerce on the Origin platform")}}</div>
+            </div>
+          </div>
+          <!-- second column -->
+          <div class="col-4 column2">
+            <img src="/static/img/developers/mobile-apps@3x.png"/>
+            <img src="/static/img/developers/infrastructure@3x.png"/>
+            <img src="/static/img/developers/dapps@3x.png"/>
+            <img src="/static/img/developers/core-packages@3x.png"/>
+          </div>
+          <!-- third column -->
+          <div class="col-4 d-flex flex-column column3">
+            <div class="d-flex flex-column text-holder align-items-start pl-4">
+              <img class="d-none d-md-flex indicator-right" src="/static/img/developers/indicator-right.svg"/>
+              <h2 class="ml-0 mr-3">{{gettext("Infrastructure")}}</h2>
+              <div class="text">{{gettext("Services enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, messaging, and notifications")}}</div>
+            </div>
+            <div class="d-flex flex-column text-holder pt-60 align-items-start pl-4">
+              <img class="d-none d-md-flex indicator-right" src="/static/img/developers/indicator-right.svg"/>
+              <h2 class="ml-0 mr-3">{{gettext("Core Packages")}}</h2>
+              <div class="text">{{gettext("A suite of smart contracts and standards for creating listings, offers, and identities on decentralized marketplaces")}}</div>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-7">
-          <div class="img-graphic d-flex justify-content-center">
-            <img src="/static/img/computer-icon.svg"
-              class="computer"
-              role="presentation" />
+        <!-- mobile layout -->
+        <div class="d-flex flex-column align-items-center d-md-none mobile">
+          <img class="img1" src="/static/img/developers/mobile-apps@3x.png"/>
+          <h2>{{gettext("Mobile Apps")}}</h2>
+          <div class="text">{{gettext("Native applications that offer fully-integrated marketplace experiences with a built-in Ethereum wallet")}}</div>
+          
+          <img class="img2" src="/static/img/developers/infrastructure@3x.png"/>
+          <h2>{{gettext("Infrastructure")}}</h2>
+          <div class="text">{{gettext("Services enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, messaging, and notifications")}}</div>
+
+          <img class="img3" src="/static/img/developers/dapps@3x.png"/>
+          <h2>{{gettext("DApps")}}</h2>
+          <div class="text">{{gettext("Decentralized applications that enable true peer-to-peer commerce on the Origin platform")}}</div>
+
+          <img class="img4" src="/static/img/developers/core-packages@3x.png"/>
+          <h2>{{gettext("Core Packages")}}</h2>
+          <div class="text">{{gettext("A suite of smart contracts and standards for creating listings, offers, and identities on decentralized marketplaces")}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <a href="https://github.com/OriginProtocol/origin" target="_blank" class="button mt-6">{{gettext("See the Code")}}</a>
+  </div>
+  <!-- getting involved --> 
+  <div class="getting-involved">
+    <div class="container d-flex flex-column justify-content-start align-items-center">
+      <h1>{{gettext("Getting Involved")}}</h1>
+      <div class="subtitle">
+        {{gettext("Our compa    ny has a culture of radical inclusion and transparency. Everyone is welcome to participate in our open-source engineering process and our product discussions, which are all public by default.")}}</h1>
+      </div>
+      <!-- steps section -->
+      <div class="d-flex flex-column steps">
+        <div class="d-flex step flex-column flex-md-row">
+          <div class="col-12 col-md-4">
+            <div class="d-flex justify-content-center align-items-center number">1</div>
+          </div>
+          <div class="col-12 col-md-8 subtext">
+            {{gettext("Introduce yourself in our public Discord #engineering channel.")}}</h1>
+          </div>
+        </div>
+        <div class="d-flex step flex-column flex-md-row">
+          <div class="col-12 col-md-4">
+            <div class="d-flex justify-content-center align-items-center number">2</div>
+          </div>
+          <div class="col-12 col-md-8 subtext">
+            {{gettext("Find an open issue in our monorepo and tell us that you would like to solve it.")}}</h1>
+          </div>
+        </div>
+        <div class="d-flex step flex-column flex-md-row">
+          <div class="col-12 col-md-4">
+            <div class="d-flex justify-content-center align-items-center number">3</div>
+          </div>
+          <div class="col-12 col-md-8 subtext">
+            {{gettext("Merge your first pull request today.")}}</h1>
           </div>
         </div>
       </div>
+      <!-- github labels section -->
+      <div class="d-flex justify-content-center flex-wrap labels-section">
+        <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3A"good+first+issue"' class="github-label mx-1 my-2" target="_blank">
+          {{gettext("good first issue")}}
+        </a>
+        <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Asolidity' class="github-label mx-1 my-2" target="_blank">
+          {{gettext("solidity")}}
+        </a>
+        <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Ajavascript' class="github-label mx-1 my-2" target="_blank">
+          {{gettext("javascript")}}
+        </a>
+        <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Agraphql' class="github-label mx-1 my-2" target="_blank">
+          {{gettext("graphql")}}
+        </a>
+        <a href='https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3Ahtml%2Fcss' class="github-label mx-1 my-2" target="_blank">
+          {{gettext("html/css")}}
+        </a>
+      </div>
+      <div class="mt-6 d-flex flex-column flex-md-row">
+        <a href="#" target="_blank" class="button mr-0 mr-md-2 mb-3 mb-md-0">{{gettext("Learn more about contributing")}}</a>
+        <a href="https://discordapp.com/invite/jyxpUSe" target="_blank" class="button ml-0 ml-md-2">{{gettext("Join us on Discord")}}</a>
+      </div>
     </div>
-  </section>
-  <section class="plane-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-pane background-panes top-panes">
-          <div class="row row-pane">
-            <div class="col-8 col-pane">
-              <div class="left-upper-pane">
-              </div>
-            </div>
-            <div class="col-4 col-pane">
-              <div class="right-upper-pane">
-              </div>
-            </div>
+  </div>
+  <!-- getting involved --> 
+  <div class="behind-the-scenes">
+    <div class="container d-flex flex-column justify-content-start align-items-center">
+      <h1>{{gettext("Behind the Scenes")}}</h1>
+      <div class="subtitle">
+        {{gettext("Tune in to our public Google Hangout every Wednesday at 12:30PM PT, where we demonstrate our engineering progress and discuss upcoming features.")}}</h1>
+      </div>
+    </div>
+    <div class="d-flex flex-column justify-content-start align-items-center">
+      <img class="d-none d-md-flex" src="/static/img/developers/map.svg"/>
+      <div class="d-flex d-md-none mobile-map-holder flex-row mt-4">
+        <div class="container d-flex">
+          <div class="d-flex flex-column col-6 p-0">
+            <div class="city">{{gettext("San Francisco")}}</div>
+            <div class="time">{{gettext("12:30PM")}}</div>
+
+            <div class="city">{{gettext("Boulder")}}</div>
+            <div class="time">{{gettext("1:30PM")}}</div>
+
+            <div class="city">{{gettext("New York")}}</div>
+            <div class="time">{{gettext("12:30PM")}}</div>
+
+            <div class="city">{{gettext("Buenos Aires")}}</div>
+            <div class="time">{{gettext("3:30PM")}}</div>
+
+            <div class="city">{{gettext("London")}}</div>
+            <div class="time">{{gettext("8:30PM")}}</div>
+
+            <div class="city">{{gettext("Berlin")}}</div>
+            <div class="time">{{gettext("9:30PM")}}</div>
+
+            <div class="city">{{gettext("Johanesburg")}}</div>
+            <div class="time">{{gettext("8:30PM")}}</div>
           </div>
-          <div class="row row-pane">
-            <div class="col-12 col-pane">
-              <div class="platform-bottom-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12 col-md-6 d-flex align-items-center order-2 order-md-1">
-              <div class="img-graphic">
-                <img src="/static/img/building-icon.svg"
-                  class="boxes"
-                  role="presentation">
-              </div>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2">
-              <h2 class="header-text" id="building"><a class="header-link" href="#building"><i class="fas fa-link"></i></a>What We Are Building</h2>
-              <p>
-                <strong><a href="https://github.com/OriginProtocol/origin#core-packages" target="blank">Core Packages</a> - </strong>
-                a suite of smart contracts and standards for creating listings, offers, and identities on decentralized marketplaces
-              </p>
-              <p>
-                <strong><a href="https://github.com/OriginProtocol/origin#dapp-packages" target="blank">DApps</a> - </strong>
-                decentralized applications that enable true peer-to-peer commerce on the Origin platform
-              </p>
-              <p>
-                <strong><a href="https://github.com/OriginProtocol/origin#infrastructure-packages" target="blank">Infrastructure</a> - </strong>
-                services enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, messaging, and notifications
-              </p>
-              <p>
-                <strong><a href="https://github.com/OriginProtocol/origin#mobile" target="blank">Mobile Apps</a> - </strong>
-                native applications that offer fully-integrated marketplace experiences with a built-in Ethereum wallet
-              </p>
-              <div class="btn-container">
-                <a id="repos" href="https://github.com/OriginProtocol/" role="button" target="_blank" class="repos-btn btn btn-primary btn-min-size">
-                  <i class='fab fa-github'></i>
-                  Visit Repositories
-                </a>
-              </div>
-            </div>
+          <div class="d-flex flex-column col-6 p-0 pl-5">
+            <div class="city">{{gettext("Moscov")}}</div>
+            <div class="time">{{gettext("9:30PM")}}</div>
+
+            <div class="city">{{gettext("New Delhi")}}</div>
+            <div class="time">{{gettext("12AM")}}</div>
+
+            <div class="city">{{gettext("Singapore")}}</div>
+            <div class="time">{{gettext("2:30AM")}}</div>
+
+            <div class="city">{{gettext("Seoul")}}</div>
+            <div class="time">{{gettext("3:30AM")}}</div>
+
+            <div class="city">{{gettext("Yokyo")}}</div>
+            <div class="time">{{gettext("3:30AM")}}</div>
+
+            <div class="city">{{gettext("Hong Kong")}}</div>
+            <div class="time">{{gettext("2:30AM")}}</div>
+
+            <div class="city">{{gettext("Wellington")}}</div>
+            <div class="time">{{gettext("7:30AM")}}</div>
           </div>
         </div>
       </div>
+      <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2llYjc1MDA1aXVhbzZnYWRmbWhjbmRvcmRfMjAxODA2MTNUMjAwMDAwWiBvcmlnaW5wcm90b2NvbC5jb21fcXY1NWNvNmd2bTN2c3Y3OW9iNXFsZjVhaWtAZw&tmsrc=originprotocol.com_qv55co6gvm3vsv79ob5qlf5aik%40group.calendar.google.com&scp=ALL" target="_blank" class="button">{{gettext("Add to calendar")}}</a>
     </div>
-  </section>
-  <section class="plane-section">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="container foreground-content">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <h2 class="header-text" id="involved"><a class="header-link" href="#involved"><i class="fas fa-link"></i></a>How To Get Involved</h2>
-              <p>Our company is built upon a culture of radical inclusion and transparency. Everyone is welcome to participate in our open-source engineering process and our product discussions, which are public by default.</p>
-              <p>
-                <strong>#1</strong>&nbsp;
-                <a href="{{ universal.DISCORD_URL }}" target="_blank">Join our public Discord</a> and introduce yourself in the #engineering channel
-              </p>
-              <p>
-                <strong>#2</strong>&nbsp;
-                Find <a href="https://github.com/OriginProtocol/origin/issues" target="_blank">an open issue in our monorepo</a> and get your first pull request merged today.
-              </p>
-              <div class="badges">
-                <a href="https://github.com/OriginProtocol/origin/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22" target="_blank">
-                  <span class="badge badge-light">good first issue</span>
-                </a>
-                <a href="https://github.com/OriginProtocol/origin/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Asolidity" target="_blank">
-                  <span class="badge badge-success">solidity</span>
-                </a>
-                <a href="https://github.com/OriginProtocol/origin/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Ajavascript" target="_blank">
-                  <span class="badge badge-primary">javascript</span>
-                </a>
-                <a href="https://github.com/OriginProtocol/origin/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Agraphql" target="_blank">
-                  <span class="badge badge-info">graphql</span>
-                </a>
-                <a href="https://github.com/OriginProtocol/origin/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Ahtml%2Fcss+" target="_blank">
-                  <span class="badge badge-dark">html/css</span>
-                </a>
-              </div>
-              <div class="btn-container">
-                <a href="http://docs.originprotocol.com/#contributing" role="button" target="_blank" class="contributing-btn btn btn-primary btn-min-size">
-                  <i class='fas fa-hands-helping'></i>
-                  More About Contributing
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 d-flex align-items-center">
-              <div class="img-graphic">
-                <img src="/static/img/people-icon.svg"
-                  class="people"
-                  role="presentation">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-pane background-panes bottom-panes offset-panes">
-          <div class="row row-pane align-items-end">
-            <div class="col-3 col-pane">
-              <div class="left-lower-pane">
-              </div>
-            </div>
-            <div class="col-9 col-pane">
-              <div class="right-lower-pane">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="resources-section">
-    <div class="container foreground-content">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="header-text" id="resources"><a class="header-link" href="#resources"><i class="fas fa-link"></i></a>Resources</h2>
-        </div>
-        <div class="col-12 col-lg-4">
-          <h3 class="header-text" id="documentation"><a class="header-link" href="#documentation"><i class="fas fa-link"></i></a>Documentation</h3>
-          <p>
-            Our docs describe <a href="http://docs.originprotocol.com/#contributing" target="_blank">how to contribute</a>, <a href="http://docs.originprotocol.com/#getting-started" target="_blank">using Origin.js in your project</a>, Origin's overall <a href="http://docs.originprotocol.com/#architecture" target="_blank">architecture</a>, and much more.
-          </p>
-          <div class="btn-container">
-            <a href="http://docs.originprotocol.com/" role="button" class="docs-btn btn btn-outline-primary btn-min-size" target="_blank">
-              <i class='fas fa-book'></i>
-              View The Docs
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4">
-          <h3 class="header-text" id="call"><a class="header-link" href="#call"><i class="fas fa-link"></i></a>Weekly Engineering Call</h3>
-          <p>
-            Tune in to our public <a href="https://meet.google.com/pws-cgyd-tqp" target="_blank">Google Hangout</a> every Wednesday at 12:30PM PT, where we provide updates on our engineering progress and discuss upcoming features.
-          </p>
-          <div class="btn-container">
-            <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2llYjc1MDA1aXVhbzZnYWRmbWhjbmRvcmRfMjAxODA2MTNUMjAwMDAwWiBvcmlnaW5wcm90b2NvbC5jb21fcXY1NWNvNmd2bTN2c3Y3OW9iNXFsZjVhaWtAZw&tmsrc=originprotocol.com_qv55co6gvm3vsv79ob5qlf5aik%40group.calendar.google.com&scp=ALL" role="button" class="engineering-call-btn btn btn-outline-primary btn-min-size" target="_blank">
-              <i class='fab fa-google'></i>
-              Add To Calendar
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4">
-          <h3 class="header-text" id="discord"><a class="header-link" href="#discord"><i class="fas fa-link"></i></a>Discord</h3>
-          <p>Join our public Discord group (and specifically the #engineering channel) to become involved and contribute to our open source community.</p>
-          <div class="btn-container">
-            <a href="{{ universal.DISCORD_URL }}" role="button" class="discord-btn btn btn-outline-primary btn-min-size" target="_blank">
-              <i class='fab fa-discord'></i>
-              Join Our Discord
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {% include 'footer.html' %}
+  </div>
+
+{% include 'footer.html' %}
 </main>
+
 {% endblock %}
+
 {% block extra_scripts %}
 {% endblock %}

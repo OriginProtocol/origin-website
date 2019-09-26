@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+
+{% block meta_description %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+
+{% block content %}
+
+{% with theme_dark=True %}
+{% include 'navbar.html' %}
+{% endwith %}  
+
+<main class="product-page">
+  <section class="product-title-section blue-section screen-size-segment">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-7 d-flex align-items-start align-items-lg-center">
+          <h1>{{gettext("Our platform will power decentralized marketplaces everywhere")}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marketplaces-section white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>{{gettext("Apps built on our platform")}}</h1>
+          <img src="/static/img/product/shoporigin-laptop.png" />
+          <h3>{{gettext("See the Origin Platform in action at shoporigin.com")}}</h3>
+          <a href="https://shoporigin.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            {{gettext("Buy and sell today")}}
+          </a>
+          <h3>{{gettext("Other apps built on the Origin Platform")}}</h3>
+          <div class="marketplace-images">
+            <img src="/static/img/product/peerart.png" />
+            <img src="/static/img/product/trips.png" />
+            <img src="/static/img/product/cryptomerch.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features-section grey-section">
+    <div class="container pb-4 pb-md-5">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Features")}}</h1>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image">
+            <img src="/static/img/product/identity.png">
+          </div>
+          <div class="feature-content">
+            <h3>{{gettext("Self-sovereign Identity")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image">
+            <img src="/static/img/product/messaging.png">
+          </div>
+          <div class="feature-content">
+            <h3>{{gettext("Encrypted Messaging")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Send secure, private messages to other buyers and sellers on the platform.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image">
+            <img src="/static/img/product/payments.png">
+          </div>
+          <div class="feature-content">
+            <h3>{{gettext("Permissionless Payments")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image">
+            <img src="/static/img/product/reputation.png">
+          </div>
+          <div class="feature-content">
+            <h3>{{gettext("Reputation Systems")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Give ratings and leave reviews for your transactions just like you would on a centralized app.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image">
+            <img src="/static/img/product/transactions.png">
+          </div>
+          <div class="feature-content">
+            <h3>{{gettext("Blockchain-Powered Transactions")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries.")}}
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 product-feature">
+          <div class="feature-image">
+            <img src="/static/img/product/arbitration.png">
+          </div>
+          <div class="feature-content">
+            <h3>{{gettext("Arbitration Services")}}</h3>
+            <div class="feature-desc">
+              {{gettext("Use Origin or select a third-party arbitration service to keep both counterparties safe.")}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="userflow-section blue-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <h1>{{gettext("How it works")}}</h1>
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center">
+          <img src="/static/img/product/smartcontract.png">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="userflow-step">
+            <h1 class="flow-step">1</h1>
+            <div class="flow-desc">
+              {{gettext("Buyers search and browse for sellers' listings on the blockchain through DApps")}}
+            </div>
+          </div>
+          <div class="userflow-step">
+            <h1 class="flow-step">2</h1>
+            <div class="flow-desc">
+              {{gettext("Buyers submit offers and escrowed payments to our marketplace smart contract")}}
+            </div>
+          </div>
+          <div class="userflow-step">
+            <h1 class="flow-step">3</h1>
+            <div class="flow-desc">
+              {{gettext("Sellers accept or reject offers from prospective buyers, then fulfill active offers")}}
+            </div>
+          </div>
+          <div class="userflow-step">
+            <h1 class="flow-step">4</h1>
+            <div class="flow-desc">
+              {{gettext("After offers are finalized, the smart contract releases escrowed payments to sellers")}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="whitepaper-section grey-section">
+    <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Check out our updated whitepaper")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="action-buttons">
+            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-outline-primary">{{gettext("Read our whitepaper")}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="milestones-section white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Milestones")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="milestones-timeline">
+            <div class="milestone completed">
+              <div class="step">1</div>
+              <div class="timestamp">{{gettext("May 2017")}}</div>
+              <div class="title">{{gettext("Began initial development")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">2</div>
+              <div class="timestamp">{{gettext("September 2017")}}</div>
+              <div class="title">{{gettext("Released initial whitepaper")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">3</div>
+              <div class="timestamp">{{gettext("December 2017")}}</div>
+              <div class="title">{{gettext("Launched Alpha on Ethereum testnet")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">4</div>
+              <div class="timestamp">{{gettext("October 2018")}}</div>
+              <div class="title">{{gettext("Launched Beta on Ethereum mainnet")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">5</div>
+              <div class="timestamp">{{gettext("February 2019")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched Marketplace Creator 1.0 and our first mobile apps")}}</span>
+                <span>{{gettext("Supported first partner app launches")}}</span>
+              </div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">6</div>
+              <div class="timestamp">{{gettext("April 2019")}}</div>
+              <div class="title">{{gettext("Launched Origin Rewards")}}</div>
+            </div>
+            <div class="milestone completed">
+              <div class="step">7</div>
+              <div class="timestamp">{{gettext("July 2019")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched shoporigin.com and new mobile apps")}}</span>
+                <span>{{gettext("Launched Meta Transactions")}}</span>
+              </div>
+            </div>
+            <div class="milestone completed recent">
+              <div class="step">8</div>
+              <div class="timestamp">{{gettext("September 2019")}}</div>
+              <div class="title">{{gettext("Launched OGN Commissions")}}</div>
+            </div>
+            <div class="milestone future">
+              <div class="step">9</div>
+              <div class="timestamp">{{gettext("Q4 2019")}}</div>
+              <div class="title">
+                  <span>{{gettext("Launch Mainnet 1.0")}}</span>
+                  <span>{{gettext("Launch OGN as payment token")}}</span>
+                  <span>{{gettext("Distribute investor OGN tokens")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">10</div>
+              <div class="timestamp">{{gettext("Q1 2020")}}</div>
+              <div class="title">
+                <span>{{gettext("Increase the decentralization of the Origin network with Origin Nodes and other research initiatives")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">11</div>
+              <div class="timestamp">{{gettext("Q2 2020")}}</div>
+              <div class="title">
+                  <span>{{gettext("Focus on expanding developer adoption with new developer tools and APIs")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">12</div>
+              <div class="timestamp">{{gettext("Q3 2020 and beyond")}}</div>
+              <div class="title">
+                {{gettext("Continued development of the Origin platform with a focus on achieving decentralized governance")}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tokens-section blue-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Origin Token")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="subtitle">{{gettext("Origin Token (OGN) is an incentive token that ensures the health and growth of the network.")}}</div>
+        </div>
+        <div class="col-12">
+          <div class="action-buttons">
+            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-primary btn-inverse">{{gettext("Learn more about Origin Token")}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</main>
+
+{% endblock %}
