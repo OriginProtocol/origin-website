@@ -38,7 +38,8 @@
   </div>
   <!-- Countdown section -->
   <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
-    <h1 class="clock-title"><br>{{gettext("Origin Tokens are launching soon!")}}<br><br></h1>
+    <h1 class="clock-title">{{gettext("Origin Tokens are launching soon!")}}</h1>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Enter your email below and we will inform you once the sale date is known.")}}</div>
     <!-- <div class="clock d-flex align-items-center justify-content-center">
       {% with timer_large=False %}
       {% include 'components/countdown-timer.html' %}
@@ -91,14 +92,14 @@
         <img class="pies mt-5 mt-md-0 pt-3 pt-md-0" src="/static/img/landing/pies.svg"/>
         <div class="d-flex flex-row flex-md-column align-items-start align-items-md-center">
           <div class="d-flex flex-row flex-md-column justify-content-center">
-            <div class="circular-stats purple d-flex flex-column justify-content-stat justify-content-md-center align-items-start mr-md-4 mb-0 mb-md-0 px-3 px-md-0">
+            <div class="circular-stats purple d-flex flex-column justify-content-stat justify-content-md-center align-items-start mr-md-4 mb-0 mb-md-3 px-3 px-md-0">
               <div class="percentage">20<span class="small">%</span></div>
-              <div class="text mb-3 mb-md-4">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
+              <div class="text mb-3">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
               <a class="mt-auto" href="">www.epi.org</a>
             </div>
             <div class="circular-stats blue d-flex flex-column justify-content-stat justify-content-md-center align-items-start mt-0 mt-md-3 px-3 px-md-0">
               <div class="percentage">33<span class="small">%</span></div>
-              <div class="text mb-3 mb-md-4">{{gettext("Uber's average take per ride")}}</div>
+              <div class="text mb-3">{{gettext("Uber's average take per ride")}}</div>
               <a class="mt-auto" href="">www.skift.org</a>
             </div>
           </div>
@@ -215,7 +216,15 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       {% for video in featured_videos %}
         <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
-          <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" /></a>
+          <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
+            <img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" />
+            <div class="overlay hide hover-show justify-content-center align-items-center">
+              <img class="play" src="/static/img/landing/play-triangle.svg" />
+            </div>
+            <div class="overlay d-flex justify-content-end align-items-end">
+              <div class="duration mb-2 mr-2">{{video.duration}}</div>
+            </div>
+          </a>
           <a href="{{ "/video/%s" % (video.hash)}}" class="title">
             {{ gettext(video.title) }}
           </a>
