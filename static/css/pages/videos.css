@@ -89,6 +89,41 @@
   font-size: 0.75rem;
 }
 
+.video-item .image-video-link {
+  position: relative;
+}
+
+.video-item .image-video-link .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.video-item .image-video-link .overlay .play {
+  max-width: 42px;
+  align-self: center;
+  opacity: 0.72;
+}
+
+.video-item .image-video-link .overlay .duration {
+  font-size: 0.75rem;
+  font-weight: normal;
+  padding: 0.05rem 0.3rem;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+.video-item .image-video-link .overlay.hide {
+  display: none;
+}
+
+.video-item .image-video-link:hover > .hover-show {
+  display: flex;
+}
+
 .videos-page .category-tab-groups .category-tab {
   display: inline-block;
   margin-right: 4.5rem;

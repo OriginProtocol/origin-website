@@ -41,7 +41,15 @@
       <div class="tiles-holder d-flex justify-content-start align-self-center flex-wrap">
         {% for video in featured_videos %}
           <div class="col-12 col-md-3 video-item">
-            <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{"/static/img/videos/%s.jpg" % (video.hash)}}" /></a>
+            <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
+              <img src="{{"/static/img/videos/%s.jpg" % (video.hash)}}" />
+              <div class="overlay hide hover-show justify-content-center align-items-center">
+                <img class="play" src="/static/img/landing/play-triangle.svg" />
+              </div>
+              <div class="overlay d-flex justify-content-end align-items-end">
+                <div class="duration mb-2 mr-2">1:12</div>
+              </div>
+            </a>
             <a href="{{ "/video/%s" % (video.hash)}}" class="title">
               {{ gettext(video.title) }}
             </a>
