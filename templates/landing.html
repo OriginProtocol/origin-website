@@ -215,14 +215,10 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       {% for video in featured_videos %}
         <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
-          <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{ "/static/img/videos/%s_thumb.png" % (video.hash)}}" /></a>
+          <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" /></a>
           <a href="{{ "/video/%s" % (video.hash)}}" class="title">
             {{ gettext(video.title) }}
           </a>
-          <div class="summary">
-            {{ gettext(video.summary) }}
-          </div>
-          <a class="watch-link" href="{{ "/video/%s" % (video.hash)}}">{{ gettext("Watch now") }} <span>></span></a>
         </div>
       {% endfor %}
     </div>
@@ -233,23 +229,25 @@
     <h1 class="segment-title ml-4 mr-4">{{gettext("Recent News")}}</h1>
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
-        <img src="/static/img/landing/medium-header-1@3x.jpg"/>
-        <div class="tile-title">{{gettext("Announcing Origin’s Upcoming China Tour")}}</div>
-        <div class="tile-text mb-auto">{{gettext("Recently, we ran an Origin Rewards campaign that showcased our sellers from Greater China and Korea to show them our appreciation. From the...")}}</div>
-        <a class="align-self-start" target="_blank" rel="noopener noreferrer" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a
+          href="https://medium.com/originprotocol/rodolfo-gonzalez-shares-why-foundation-capital-invested-in-origin-bc512d377801">
+          <img src="/static/img/landing/rodolfo.png" />
+          <div class="tile-title">{{gettext("Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin")}}</div>
+        </a>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
-        <img src="/static/img/landing/medium-header-2@3x.jpg"/>
-        <div class="tile-title">{{gettext("Bridging the Decentralized and Centralized Worlds")}}</div>
-        <div class="tile-text mb-auto">{{gettext("At Origin, we are building a platform to enable many peer-to-peer marketplaces. Our long-term goal is to have a fully decentralized...")}}</div>
-        <a class="align-self-start" target="_blank" rel="noopener noreferrer" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a href="https://medium.com/originprotocol/live-on-tv-with-hkb-news-in-korea-a6636be60eef"><img
+            src="/static/img/landing/live-on-tv.png" />
+          <div class="tile-title">{{gettext("Live on TV with HKB News in Korea")}}</div>
+        </a>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
-        <img src="/static/img/landing/medium-header-3@3x.jpg"/>
-        <div class="tile-title">{{gettext("Follow and Share on Social Media to Earn Origin Tokens")}}</div>
-        <div class="tile-text mb-auto">{{gettext("To reward our early users who help us grow & bootstrap our network, we came up with Origin Rewards early this year. As Origin continues to...")}}</div>
-        <a class="align-self-start" target="_blank" rel="noopener noreferrer" href="/#">{{gettext("Read ")}}<span>></span></a>
+        <a href="https://medium.com/originprotocol/doo-wan-nam-discusses-origins-partnership-with-makerdao-c89461572cf0">
+          <img src="/static/img/landing/maker.png" />
+          <div class="tile-title">{{gettext("Doo Wan Nam Discusses Origin’s Partnership with MakerDAO")}}</div>
+        </a>
       </div>
+      
     </div>
     <a class="white-button-blue-border" target="_blank" rel="noopener noreferrer" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>
   </div>

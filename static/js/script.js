@@ -324,6 +324,8 @@ $(function() {
             title = encodeURIComponent(title ? title.innerText + ' ' : '')
             href = 'https://twitter.com/intent/tweet?text=' + title + encodeURIComponent(window.location.href)
             break
+          case 'link':
+            break
         }
 
         link.setAttribute('href', href)

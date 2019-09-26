@@ -17,7 +17,7 @@
     <div id="video-page-video" data-video-source="{{"%s" % (video.hash)}}" class="full-screen-video d-none" ></div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <img id="video-page-video-background" src="{{"/static/img/videos/%s.png" % (video.hash)}}"/>
+        <img id="video-page-video-background" src="{{"/static/img/videos/%s.jpg" % (video.hash)}}"/>
       </div>
     </div>
     <div class="video-overlay"></div>
@@ -36,19 +36,15 @@
       <div class="d-flex share-items">
         <a href="#" target="_blank" rel="noopener noreferer" share-video-to="facebook" id="facebook-share"><img src="/static/img/video/facebook.svg"/></a>
         <a href="#" target="_blank" rel="noopener noreferer" share-video-to="twitter" id="twitter-share"><img src="/static/img/video/twitter.svg"/></a>
-        <a href="#" target="_blank" rel="noopener noreferer" share-video-to="link" id="link-share"><img src="/static/img/video/link.svg"/></a>
+        <!-- <a href="#" target="_blank" rel="noopener noreferer" share-video-to="link" id="link-share"><img src="/static/img/video/link.svg"/></a> -->
       </div>
       <div class="tiles-holder d-flex justify-content-start align-self-center flex-wrap">
         {% for video in featured_videos %}
           <div class="col-12 col-md-3 video-item">
-            <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{"/static/img/videos/%s_thumb.png" % (video.hash)}}" /></a>
+            <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{"/static/img/videos/%s.jpg" % (video.hash)}}" /></a>
             <a href="{{ "/video/%s" % (video.hash)}}" class="title">
               {{ gettext(video.title) }}
             </a>
-            <div class="summary">
-              {{ gettext(video.summary) }}
-            </div>
-            <a class="watch-link" href="{{ "/video/%s" % (video.hash)}}">{{ gettext("Watch now") }} <span>></span></a>
           </div>
         {% endfor %}
       </div>

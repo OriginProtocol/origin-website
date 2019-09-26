@@ -15,19 +15,19 @@
         <div class="col-12">
           <h1>Videos</h1>
           <div class="category-tab-groups">
-            <a href="#" class="category-tab d-none d-md-flex" data-category-group="investor">{{ gettext("Investor Testimonial Videos") }}</a>
-            <a href="#" class="category-tab d-none d-md-flex" data-category-group="employee">{{ gettext("Employee Videos") }}</a>
-            <a href="#" class="category-tab d-none d-md-flex" data-category-group="meetup">{{ gettext("Meetup Videos") }}</a>
-            <a href="#" class="category-tab d-flex d-md-none" data-category-group="investor">{{ gettext("Investors") }}</a>
-            <a href="#" class="category-tab d-flex d-md-none" data-category-group="employee">{{ gettext("Employees") }}</a>
-            <a href="#" class="category-tab d-flex d-md-none" data-category-group="meetup">{{ gettext("Meetups") }}</a>
+            <a href="#" class="category-tab d-none d-md-flex" data-category-group="featured">{{ gettext("Featured") }}</a>
+            <!-- <a href="#" class="category-tab d-none d-md-flex" data-category-group="employee">{{ gettext("Employee Videos") }}</a>
+            <a href="#" class="category-tab d-none d-md-flex" data-category-group="meetup">{{ gettext("Meetup Videos") }}</a> -->
+            <a href="#" class="category-tab d-flex d-md-none" data-category-group="featured">{{ gettext("Featured") }}</a>
+            <!-- <a href="#" class="category-tab d-flex d-md-none" data-category-group="employee">{{ gettext("Employees") }}</a>
+            <a href="#" class="category-tab d-flex d-md-none" data-category-group="meetup">{{ gettext("Meetups") }}</a> -->
           </div>
         </div>
       </div>
       <div class="row">
         {% for video in videos %}
           <div class="col-12 col-md-3 video-item" data-category="{{video.category}}">
-            <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{ "/static/img/videos/%s_thumb.png" % (video.hash)}}" /></a>
+            <a href="{{ "/video/%s" % (video.hash)}}"><img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" /></a>
             <a href="{{ "/video/%s" % (video.hash)}}" class="title">
               {{ gettext(video.title) }}
             </a>
@@ -36,6 +36,8 @@
       </div>
     </div>
   </section>
+
+  <br><br><br>
   
 {% include 'footer.html' %}
 </main>
