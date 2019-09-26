@@ -1,8 +1,8 @@
-
 footer {
   padding: 6.25rem 0;
   background-color: #061d2a;
   color: #bdcbd5;
+  font-weight: normal;
 }
 
 footer a {
@@ -15,12 +15,23 @@ footer a:hover {
   opacity: 0.75;
 }
 
+.footer-links a,
+.footer-links {
+  font-size: 0.875rem;
+  color: #bdcbd5;
+}
+
 .footer-links strong {
   color:#ffffff;
 }
 
+.footer-links a {
+  padding-top: 12px;
+}
+
 footer p {
   font-size: 0.75rem;
+  font-weight: normal;
 }
 
 footer .social-links {
@@ -28,7 +39,7 @@ footer .social-links {
 }
 
 footer .social-links a {
-  margin-right: 1.125rem;
+  margin-right: 0.75rem;
   border-radius: 50%;
   background-color: #bdcbd5;
   color: #061d2a;
@@ -44,7 +55,7 @@ footer .social-links a {
 
 footer .copyright-text {
   font-size:0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 footer .mailing-list {
@@ -61,7 +72,7 @@ footer .mailing-list .section-title {
 footer .mailing-list p {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 footer .social-links a i {
@@ -74,6 +85,17 @@ footer .mailing-list .input-group {
 
 footer .tooltip_hover {
   position: relative;
+}
+
+footer button.btn {
+  color: white;
+  border-color: white;
+}
+
+footer button.btn:hover {
+  color: #061d2a;
+  background-color: white;
+  border-color: white;
 }
 
 .tooltip .tooltip-inner  {
