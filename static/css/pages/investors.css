@@ -123,6 +123,7 @@
   display: flex;
   justify-content: stretch;
   object-fit: contain;
+  height: 490px;
 }
 
 .investors-page .featured-investor-section .featured-investor .investor-data {
@@ -131,7 +132,7 @@
   padding: 4.5rem 5rem;
   display: flex;
   flex-direction: column;
-  flex: 50% 0 0;
+  min-height: 300px;
 }
 
 .investors-page .featured-investor-section .actions {
@@ -142,6 +143,8 @@
 .investors-page .featured-investor-section .actions .btn {
   color: #fff;
   border: 1px solid #fff;
+  width: 300px;
+  max-width: 100%;
 }
 
 .investors-page .featured-investor .investor-image {
@@ -150,10 +153,13 @@
 
 .investors-page .featured-investor .investor-image img {
   max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .investors-page .featured-investor .investor-quote {
-  font-size: 1.5rem;
+  font-size: 1.062rem;
+  font-weight: normal;
   margin-bottom: 1.5rem;
 }
 .investors-page .featured-investor .investor-info {
@@ -187,6 +193,7 @@
 
   .investors-page .featured-investor-section .featured-investor .investor-data {
     padding: 1rem;
+    flex: 1 0 0;
   }
 
   .investors-page .vc-firm.smaller img {
@@ -223,5 +230,10 @@
 
   .investors-page .vc-firm .firm-name {
     font-size: 1rem;
+  }
+
+  .investors-page .featured-investor-section .featured-investor {
+    min-height: 650px;
+    height: auto;
   }
 }
