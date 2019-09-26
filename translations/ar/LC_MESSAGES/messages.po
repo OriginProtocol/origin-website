@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-09-25 21:58+0530\n"
-"PO-Revision-Date: 2019-07-31 13:23+0000\n"
+"PO-Revision-Date: 2019-09-26 04:04\n"
 "Last-Translator: OriginProtocol\n"
 "Language: ar_SA\n"
 "Language-Team: Arabic\n"
@@ -13,6 +13,12 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: originprotocolwebsite\n"
+"X-Crowdin-Language: ar\n"
+"X-Crowdin-File: /master/messages.pot\n"
+"Language: ar_SA\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -416,35 +422,35 @@ msgstr "وظائف"
 
 #: templates/footer.html:47
 msgid "Facebook"
-msgstr ""
+msgstr "فيس بوك"
 
 #: templates/footer.html:50
 msgid "Twitter"
-msgstr ""
+msgstr "تغريد"
 
 #: templates/footer.html:53
 msgid "Medium"
-msgstr ""
+msgstr "متوسط"
 
 #: templates/footer.html:56
 msgid "Youtube"
-msgstr ""
+msgstr "موقع YouTube"
 
 #: templates/footer.html:59
 msgid "Instagram"
-msgstr ""
+msgstr "إينستاجرام"
 
 #: templates/footer.html:62
 msgid "Telegram"
-msgstr ""
+msgstr "برقية"
 
 #: templates/footer.html:65
 msgid "Reddit"
-msgstr ""
+msgstr "رديت"
 
 #: templates/footer.html:68
 msgid "Discord"
-msgstr ""
+msgstr "خلاف"
 
 #: templates/footer.html:78
 msgid "VK"
@@ -1029,9 +1035,9 @@ msgstr "<strong>أي شيء آخر يجب أن نعرفه؟</strong> (اختيا
 msgid "Become a Partner"
 msgstr "كن شريكًا"
 
-#: templates/privacy.html:3 templates/privacy.html:5
-msgid "Origin Protocol - Privacy Policy"
-msgstr "بروتوكول المنشأ - سياسة الخصوصية"
+#: templates/landing.html:73
+msgid "Visit us on the web"
+msgstr ""
 
 #: templates/privacy.html:16
 msgid "Privacy Policy"
@@ -1666,319 +1672,4 @@ msgstr "يرجى الموافقة على الإشعار المهم"
 #: views/web_views.py:197
 msgid "Please prove you are not a robot."
 msgstr "يرجى إثبات أنك لست روبوتًا."
-
-#~ msgid "The page you’re looking for is no longer here, maybe it was never here in the first place. In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
-#~ msgstr "الصفحة التي تبحث عنها لم تعد هنا ، ربما لم تكن هنا في المقام الأول. في أي حال ، نعتذر بصدق إذا كان لنا ذلك ونحن نغفر لك إذا كنت :)"
-
-#~ msgid "New!"
-#~ msgstr "الجديد!"
-
-#~ msgid "Create your own<br>decentralized marketplace."
-#~ msgstr "خلق بنفسك<br>السوق اللامركزي."
-
-#~ msgid "Try It Now"
-#~ msgstr "جربه الآن"
-
-#~ msgid "Origin is enabling true peer to peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network."
-#~ msgstr "الأصل هو تمكين نظير حقيقي للتجارة الأقران. نحن نؤمن بخفض رسوم المعاملات ، وتعزيز التجارة الحرة والشفافة ، وخدمة غير المقيدة ، وإعطاء المشاركين الأوائل في المجتمع حصة في الشبكة."
-
-#~ msgid "Origin Protocol, Inc."
-#~ msgstr "بروتوكول المنشأ ، وشركة"
-
-#~ msgid "Products"
-#~ msgstr "منتجات"
-
-#~ msgid "Resources"
-#~ msgstr "مصادر"
-
-#~ msgid "GitHub"
-#~ msgstr "جيثب"
-
-#~ msgid "Organization"
-#~ msgstr "منظمة"
-
-#~ msgid "Store"
-#~ msgstr ""
-
-#~ msgid "Discord"
-#~ msgstr "خلاف"
-
-#~ msgid "Telegram"
-#~ msgstr "برقية"
-
-#~ msgid "Reddit"
-#~ msgstr "رديت"
-
-#~ msgid "WeChat"
-#~ msgstr "WeChat"
-
-#~ msgid "Weibo"
-#~ msgstr "ويبو"
-
-#~ msgid "Twitter"
-#~ msgstr "تغريد"
-
-#~ msgid "Instagram"
-#~ msgstr "إينستاجرام"
-
-#~ msgid "Facebook"
-#~ msgstr "فيس بوك"
-
-#~ msgid "Medium"
-#~ msgstr "متوسط"
-
-#~ msgid "Youtube"
-#~ msgstr "موقع YouTube"
-
-#~ msgid "Decentralized marketplaces on the blockchain"
-#~ msgstr "الأسواق اللامركزية على blockchain"
-
-#~ msgid "Origin is a protocol for creating peer-to-peer marketplaces<br>using the Ethereum blockchain and IPFS"
-#~ msgstr "الأصل هو بروتوكول لإنشاء أسواق الند للند<br>باستخدام Ethereum blockchain و IPFS"
-
-#~ msgid "The Origin platform"
-#~ msgstr "المنصة الأصل"
-
-#~ msgid "We empower developers and businesses to build decentralized marketplaces on the blockchain. Our protocol makes it easy to create and manage listings for the fractional usage of assets and services. Buyers and sellers can discover each other, browse listings, make bookings, leave ratings and reviews, and much more."
-#~ msgstr "نحن نقوم بتمكين المطورين والشركات لبناء الأسواق اللامركزية على blockchain. يعمل بروتوكولنا على تسهيل إنشاء وإدارة القوائم للاستخدام الجزئي للأصول والخدمات. يمكن للمشترين والبائعين اكتشاف بعضهم البعض ، وتصفح القوائم ، وإجراء الحجوزات ، وترك التقييمات والمراجعات ، وأكثر من ذلك بكثير."
-
-#~ msgid "Shop Origin"
-#~ msgstr ""
-
-#~ msgid "Join Our Discord"
-#~ msgstr "الانضمام إلى الشقاق لدينا"
-
-#~ msgid "Partners building on Origin"
-#~ msgstr "شركاء بناء على الأصل"
-
-#~ msgid "Teams all over the world are building on Origin's protocols, but we're looking for more amazing people to join our mission."
-#~ msgstr "تقوم الفرق في جميع أنحاء العالم بالبناء على بروتوكولات Origin ، ولكننا نبحث عن المزيد من الأشخاص المدهشين للانضمام إلى مهمتنا."
-
-#~ msgid "View All Partners"
-#~ msgstr "عرض جميع الشركاء"
-
-#~ msgid "Metaps+ is building a decentralized marketplace for non-fungible tokens and game items using Origin Protocol."
-#~ msgstr ""
-
-#~ msgid "Origin is offering NuCypher's key management and encryption services for marketplaces building on our platform."
-#~ msgstr ""
-
-#~ msgid "Circle's USDC stablecoin is proudly supported by Origin Protocol."
-#~ msgstr ""
-
-#~ msgid "Origin is leveraging WeTrust's decentralized insurance protocol for marketplaces building on our platform."
-#~ msgstr ""
-
-#~ msgid "Trips is building a decentralized homesharing and travel community for digital nomads using Origin Protocol."
-#~ msgstr ""
-
-#~ msgid "Build your business on Origin"
-#~ msgstr "بناء عملك على الأصل"
-
-#~ msgid "Whether you are a freelance photographer, apartment owner, bikeshare supplier, or existing sharing economy business, Origin makes it easy to do business on the decentralized web."
-#~ msgstr "سواء كنت مصورًا حرًا ، أو مالكًا للشقة ، أو موردًا للدراجات النارية ، أو اقتصادًا تجاريًا قائمًا ، فإن Origin يجعل من السهل القيام بأعمال تجارية على الويب اللامركزي."
-
-#~ msgid "Get in touch to learn more."
-#~ msgstr "تواصل معنا لمعرفة المزيد."
-
-#~ msgid "Create Your Marketplace"
-#~ msgstr "إنشاء السوق الخاصة بك"
-
-#~ msgid "It's time to replace rent-seeking middlemen"
-#~ msgstr "لقد حان الوقت لاستبدال وسطاء يبحثون عن الريع"
-
-#~ msgid "Harnessing the power of the Ethereum blockchain, listings are managed via a secure and transparent system that acts as a neutral third party. Buyers and sellers share the 20-30%% transaction fees that currently go to companies like Uber, Airbnb, Fiverr, and Getaround."
-#~ msgstr "من خلال تسخير قوة كتلة Ethereum blockchain ، يتم إدارة القوائم عبر نظام آمن وشفاف يعمل كطرف ثالث محايد. يشترك المشترون والبائعون في رسوم المعاملات 20-30%% التي تذهب حاليًا إلى شركات مثل Uber و Airbnb و Fiverr و Getaround."
-
-#~ msgid "Read the Whitepaper"
-#~ msgstr ""
-
-#~ msgid "Smart contracts enable secure and reliable payments directly from one party to another"
-#~ msgstr "تمكن العقود الذكية المدفوعات الآمنة والموثوقة مباشرة من طرف إلى آخر"
-
-#~ msgid "Protocol schemas support hundreds of listing types, including custom verticals"
-#~ msgstr "تدعم مخططات البروتوكول مئات أنواع القوائم ، بما في ذلك القطاعات الرأسية المخصصة"
-
-#~ msgid "Open and shared data encourages innovation by developers and businesses"
-#~ msgstr "تشجع البيانات المفتوحة والمشتركة الابتكار من قِبل المطورين والشركات"
-
-#~ msgid "Identity verification and reputation data on the blockchain ensures safe, reputable partners"
-#~ msgstr "التحقق من الهوية وبيانات السمعة على blockchain يضمن شركاء آمنة وسمعة"
-
-#~ msgid "Tech Stack"
-#~ msgstr "تك ستاك"
-
-#~ msgid "Roadmap"
-#~ msgstr "خريطة الطريق"
-
-#~ msgid "Idea conception and early development"
-#~ msgstr "فكرة الفكرة والتطور المبكر"
-
-#~ msgid "<a href='%%(whitepaper)s'>Whitepaper</a> released"
-#~ msgstr ""
-
-#~ msgid "Launch alpha on Ethereum testnet"
-#~ msgstr "إطلاق ألفا على اختبار testnet"
-
-#~ msgid "Q2 2018"
-#~ msgstr "الربع الثاني 2018"
-
-#~ msgid "Launch beta on Ethereum testnet"
-#~ msgstr "إطلاق النسخة التجريبية على Ethereum testnet"
-
-#~ msgid "Q3 2018"
-#~ msgstr "الربع الثالث 2018"
-
-#~ msgid "Platform readiness and mainnet launch"
-#~ msgstr "منصة الاستعداد وإطلاق mainnet"
-
-#~ msgid "2019"
-#~ msgstr "2019"
-
-#~ msgid "3rd-parties expected to launch DApps"
-#~ msgstr "الجهات الخارجية المتوقع إطلاق DApps"
-
-#~ msgid "Join us in building the sharing economy of tomorrow"
-#~ msgstr "انضم إلينا في بناء اقتصاد تقاسم الغد"
-
-#~ msgid "Sign up for our mailing list and be first to learn of any Origin news!"
-#~ msgstr "قم بالتسجيل في قائمتنا البريدية و كن أول من يعلم بأية أخبار عن المنشأ!"
-
-#~ msgid "Enter email"
-#~ msgstr "أدخل البريد الإلكتروني"
-
-#~ msgid "Join the Community"
-#~ msgstr "الانضمام إلى المجتمع"
-
-#~ msgid "Press"
-#~ msgstr "صحافة"
-
-#~ msgid "If Airbnb were being started today, it would've been a peer-to-peer cooperative model based on a blockchain - Joey Krug, Augur"
-#~ msgstr "إذا كانت Airbnb قد بدأت اليوم ، فستكون نموذجًا تعاونيًا للنظير يعتمد على blockchain - Joey Krug، Augur"
-
-#~ msgid "Origin Protocol nabs $28 million for peer-to-peer blockchain platform. Token sale fuels funding round; about 45 companies have committed as customers"
-#~ msgstr "بروتوكول المنشأ يحتجز 28 مليون دولار لمنصة block-to-peer. بيع رمز بيع الوقود جولة التمويل. حوالي 45 شركة ارتكبت كعملاء"
-
-#~ msgid "Origin aims to create a set of protocols that allow developers and businesses to build a decentralized sharing economy marketplace on a blockchain."
-#~ msgstr "تهدف Origin إلى إنشاء مجموعة من البروتوكولات التي تسمح للمطورين والشركات بإنشاء سوق اقتصاد تقاسم لامركزي على blockchain."
-
-#~ msgid "Origin Protocol, which uses the ethereum blockchain, enables buyers and sellers to interact with each other in an effective manner."
-#~ msgstr "بروتوكول المنشأ ، والذي يستخدم blockchain ethereum ، تمكن المشترين والبائعين من التفاعل مع بعضهم البعض بطريقة فعالة."
-
-#~ msgid "A decentralized digital ledger that allows for transactions between users without an intermediary (and without its fees), is poised to reinvent the user experience in the sharing economy."
-#~ msgstr "دفتر الأستاذ الرقمي اللامركزي الذي يسمح بالمعاملات بين المستخدمين دون وسيط (وبدون رسومه) ، على وشك إعادة اختراع تجربة المستخدم في اقتصاد المشاركة."
-
-#~ msgid "It sounds utopic and downright revolutionary: a world of benevolent social enterprises and non-profit organizations seeking to empower consumers and give them back their privacy rights, and maybe save them some money too."
-#~ msgstr "يبدو هذا الأمر خياليًا وثوريًا تمامًا: عالم من المؤسسات الخيرية الخيرية والمنظمات غير الربحية التي تسعى إلى تمكين المستهلكين ومنحهم حقوقهم الخصوصية ، وربما توفير بعض المال لهم أيضًا."
-
-#~ msgid "Origin Protocol uses the Ethereum Blockchain to help buyers and sellers transact in a decentralized environment without traditional intermediaries."
-#~ msgstr "يستخدم بروتوكول الأصل في Ethereum Blockchain لمساعدة المشترين والبائعين في التعامل في بيئة لا مركزية بدون وسطاء تقليديين."
-
-#~ msgid "Imagine an Airbnb with zero commissions and completely democratic. The platform is not controlled by a Silicon Valley giant but offered free to anyone with access to the internet."
-#~ msgstr "تخيل Airbnb مع صفر اللجان والديمقراطية تماما. لا يتم التحكم في المنصة من قبل عملاق وادي السيليكون ولكن يتم تقديمها مجانًا لأي شخص لديه إمكانية الوصول إلى الإنترنت."
-
-#~ msgid "The Origin Protocol is a set of open-source blockchain protocols for buyers and sellers of services like car-sharing or home-sharing to transact on a decentralized, open web platform."
-#~ msgstr "بروتوكول المنشأ عبارة عن مجموعة من بروتوكولات مفتوحة المصدر للمشترين والبائعين للخدمات مثل مشاركة السيارات أو المشاركة المنزلية للتداول على منصة ويب مفتوحة لا مركزية."
-
-#~ msgid "What if open-source software can replace dozens of multi-million or even multi-billion dollar companies?"
-#~ msgstr "ماذا لو أن البرامج مفتوحة المصدر يمكن أن تحل محل العشرات من الشركات بمليارات الدولارات أو حتى مليارات الدولارات؟"
-
-#~ msgid "Origin Protocol offers an entire blockchain-based platform to allow anyone to create their own property-sharing business."
-#~ msgstr "يوفر Origin Protocol نظامًا أساسيًا قائمًا على blockchain للسماح لأي شخص بإنشاء أعماله الخاصة بمشاركة الممتلكات."
-
-#~ msgid "Origin Protocol, a blockchain project building a decentralized marketplace, has rolled out a peer-to-peer messaging application built on top of ethereum."
-#~ msgstr "قام Origin Protocol ، وهو مشروع blockchain يبني سوقًا لامركزية ، بتطبيق تطبيق المراسلة من نظير إلى نظير المبني على قمة ethereum."
-
-#~ msgid "We want to create a future where buyers and sellers can transact in the wild by using neutral tools that don't favor either party."
-#~ msgstr ""
-
-#~ msgid "The sharing economy ends up sharing a ton of labor’s earnings with middlemen like Uber and Airbnb."
-#~ msgstr "ينتهي اقتصاد المشاركة بمشاركة الكثير من أرباح العمال مع وسطاء مثل Uber و Airbnb."
-
-#~ msgid "Marketplace Creator"
-#~ msgstr "السوق الخالق"
-
-#~ msgid "Blog"
-#~ msgstr "مدونة"
-
-#~ msgid "Origin is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web. We're hiring!"
-#~ msgstr "الأصل هو فريق من رجال الأعمال الموزعين والمهندسين وخبراء blockchain. مهمتنا هي تمكين اقتصاد المشاركة على الشبكة اللامركزية. نقوم بالتوظيف!"
-
-#~ msgid "Core Team"
-#~ msgstr "الفريق الأساسي"
-
-#~ msgid "Austin Virts"
-#~ msgstr "أوستن فيرتس"
-
-#~ msgid "Marketing"
-#~ msgstr "تسويق"
-
-#~ msgid "Austin is an ambitious entrepreneur who has started and operated multiple successful online companies before launching a full service creative agency in Boulder, CO."
-#~ msgstr "أوستن هو رجل أعمال طموح بدأ وتشغيل العديد من الشركات الناجحة على الإنترنت قبل إطلاق وكالة إبداعية تقدم خدمات كاملة في بولدر ، كولورادو."
-
-#~ msgid "Advisor/PR"
-#~ msgstr "المستشار / PR"
-
-#~ msgid "Addison is a communications and marketing specialist with a degree in Physics from UC Berkeley. He previously worked with the Ethereum Foundation and DEVCON1."
-#~ msgstr "أديسون هي أخصائية في الاتصالات والتسويق حاصلة على شهادة في الفيزياء من جامعة كاليفورنيا في بيركلي. عمل سابقا مع مؤسسة Ethereum و DEVCON1."
-
-#~ msgid "Advisor/International BD"
-#~ msgstr "مستشار / الدولية دينار بحريني"
-
-#~ msgid "Melody is founder of Spartan Group, a blockchain advisory and investment fund. She was an early investor in TenX and strategic advisor to Gifto and Appcoins."
-#~ msgstr "ميلودي هي مؤسِسة مجموعة Spartan Group ، وهي صندوق استشارى واستثماري. كانت مستثمرة مبكرة في TenX ومستشار إستراتيجي لشركة Gifto و Appcoins."
-
-#~ msgid "Paul is a Partner at Pantera Capital. He is also an advisor to several highly successful cryptocurrency projects including Orchid Labs, Enigma and ICON."
-#~ msgstr "بول هو شريك في Pantera Capital. وهو أيضًا مستشار للعديد من مشروعات التشفير المثالية الناجحة بما في ذلك Orchid Labs و Enigma و ICON."
-
-#~ msgid "Joey is the co-founder of Augur, the world’s first decentralized prediction market and oracle system. He is a Co-Chief Investment Officer at Pantera Capital."
-#~ msgstr "Joey هو المؤسس المشارك لشركة Augur ، أول سوق للتنبؤات اللامركزية في العالم ونظام أوراكل. يشغل منصب رئيس الاستثمار المشارك في بانتيرا كابيتال."
-
-#~ msgid "Andrew was the founder of four startups, including Startup Weekend, and has built global communities across dozens of countries. He was employee number 1 at TechStars."
-#~ msgstr "كان أندرو مؤسس أربعة شركات ناشئة ، بما في ذلك Startup Weekend ، وقام ببناء مجتمعات عالمية عبر عشرات البلدان. كان الموظف رقم 1 في TechStars."
-
-#~ msgid "Open-source Contributors"
-#~ msgstr "المساهمون في المصادر المفتوحة"
-
-#~ msgid "Investment Funds"
-#~ msgstr "صناديق الاستثمار"
-
-#~ msgid "Xiahong Lin"
-#~ msgstr "شيا هونغ لين"
-
-#~ msgid "Kamal Ravikant"
-#~ msgstr "كمال رافيكانت"
-
-#~ msgid "Please enter your company name"
-#~ msgstr "يرجى إدخال اسم الشركة الخاصة بك"
-
-#~ msgid "Launched www.shoporigin.com and new mobile apps"
-#~ msgstr ""
-
-#~ msgid "Launch off-chain payments"
-#~ msgstr ""
-
-#~ msgid "Launch Marketplace Creator 2.0"
-#~ msgstr ""
-
-#~ msgid "Launch Origin Nodes"
-#~ msgstr ""
-
-#~ msgid "Launch new Developer APIs and expand developer adoption"
-#~ msgstr ""
-
-#~ msgid "Launch Meta Transactions Relayer program"
-#~ msgstr ""
-
-#~ msgid "Q3 2020"
-#~ msgstr ""
-
-#~ msgid "Launch OGN as governance token"
-#~ msgstr ""
-
-#~ msgid "Meta Transactions Relayer"
-#~ msgstr ""
-
-#~ msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-#~ msgstr ""
 
