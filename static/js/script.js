@@ -479,7 +479,8 @@ $(function() {
       'default': {
         videoSource: 'ERh2n-vlpQ4',
         aspectRatio: 0.56,
-        startTime: 15
+        startTime: 15,
+        loopTime: 117
       }
     },
     videoButtonId: 'team-video-button',
