@@ -195,6 +195,7 @@ $(function() {
 
     if (containerHeight / videoAspectRatio > containerWidth) {
       var width = containerHeight/videoAspectRatio;
+      var widthMargin = (width - containerWidth) / 2
       if (isVideoPlayer){
         bgPlayer.setSize(width, containerHeight);
       } else {
@@ -204,7 +205,8 @@ $(function() {
 
       if (posterImageElement) {
         posterImageElement.style.width = width + "px";
-        posterImageElement.style.height = containerHeight + "px"; 
+        posterImageElement.style.height = containerHeight + "px";
+        posterImageElement.style.marginLeft = "-" + widthMargin + "px";
       }
     } else {
       var height = containerWidth*videoAspectRatio;
@@ -263,11 +265,13 @@ $(function() {
       return;
     }
 
-    let posterImageElement
+    let posterImageHolder
+    let posterImage
     // if poster image is used populate it and pass it to resize function
     if (videoPosterId) {
-      posterImageElement = document.getElementById(videoPosterId)
-      posterImageElement.appendChild(createElement('img', { src: `/static/img/videos/${videoSource}_poster_image.png` }))
+      posterImageHolder = document.getElementById(videoPosterId)
+      posterImage = createElement('img', { src: `/static/img/videos/${videoSource}_poster_image.png` })
+      posterImageHolder.appendChild(posterImage)
     }
 
     if (bgElementIsVideo) {
@@ -289,13 +293,13 @@ $(function() {
         }
 
         // hide picture poster when video starts
-        if (posterImageElement &&
+        if (posterImageHolder &&
           (
             (startTime && seconds > startTime) ||
             (!startTime && seconds > 0)
           )
         ) {
-          posterImageElement.style.display = 'none';
+          posterImageHolder.style.display = 'none';
         }
       });
     }
@@ -392,7 +396,7 @@ $(function() {
     });
 
     function callHandleVideoResize() {
-      handleVideoResize(backgroundElementId, aspectRatio, bgElementIsVideo, bgPlayer, posterImageElement);
+      handleVideoResize(backgroundElementId, aspectRatio, bgElementIsVideo, bgPlayer, posterImage);
     }
 
     window.onresize = callHandleVideoResize;

@@ -1,8 +1,8 @@
 <footer class="footer-section">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6">
-        <div class="mailing-list mb-5">
+      <div class="col-12 col-md-6 pr-3 pr-md-4 d-flex flex-column">
+        <div class="mailing-list mb-5 mb-md-4">
           <div class="section-title">{{gettext("Stay in touch")}}</div>
           <p>{{gettext("Subscribe to stay in touch. Your email will be kept private.")}}</p>
           <form id="mailing-list-footer" class="email-input input-group" method="post" action="/mailing-list/join">
@@ -14,33 +14,43 @@
             </div>
           </form>
         </div>
+        <div class="copyright-text flex-column mt-auto d-none d-md-flex">
+          <div>{{gettext("Copyright © 2019 Origin Protocol Inc. All rights reserved.")}}</div>
+          <div class="mt-2">
+            <a class="pr-2" href="{{ url_for('tos', lang_code=CURRENT_LANGUAGE) }}">
+              {{ gettext("Terms of Service") }}
+            </a>
+            <a href="{{ url_for('privacy', lang_code=CURRENT_LANGUAGE) }}">
+              {{ gettext("Privacy Policy") }}
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-12 col-md-6">
-
+      <div class="col-12 col-md-6 pl-3 pl-md-4">
         <div class="row footer-links">
-          <div class="col-4 footer-links">
-            <strong>Products</strong><br>
-            <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Overview") }}</a><br>
-            <a href="{{ universal.IOS_URL }}">{{ gettext("iOS") }}</a><br>
-            <a href="{{ universal.ANDROID_URL }}">{{ gettext("Android") }}</a><br>
-            <a href="{{ universal.DAPP_URL }}">{{ gettext("DApp") }}</a><br>
-            <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Creator") }}</a><br>
+          <div class="col-4 d-flex flex-column">
+            <strong>Products</strong>
+            <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Overview") }}</a>
+            <a href="{{ universal.IOS_URL }}">{{ gettext("iOS") }}</a>
+            <a href="{{ universal.ANDROID_URL }}">{{ gettext("Android") }}</a>
+            <a href="{{ universal.DAPP_URL }}">{{ gettext("DApp") }}</a>
+            <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Creator") }}</a>
           </div>
-          <div class="col-4">
-            <strong>Resources</strong><br>
-            <a href="{{ url_for('videos', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Videos") }}</a><br>
-            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Whitepaper") }}</a><br>
-            <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Developers") }}</a><br>
-            <a href="{{ universal.GITHUB_URL }}">{{ gettext("Github") }}</a><br>
-            <a href="{{ universal.DOCS_URL }}">{{ gettext("Docs") }}</a><br>
+          <div class="col-4 d-flex flex-column">
+            <strong>Resources</strong>
+            <a href="{{ url_for('videos', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Videos") }}</a>
+            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Whitepaper") }}</a>
+            <a href="{{ url_for('developers', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Developers") }}</a>
+            <a href="{{ universal.GITHUB_URL }}">{{ gettext("Github") }}</a>
+            <a href="{{ universal.DOCS_URL }}">{{ gettext("Docs") }}</a>
           </div>
-          <div class="col-4">
-            <strong>Organization</strong><br>
-            <a href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a><br>
-            <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a><br>
-            <a href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a><br>
-            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN") }}</a><br>
-            <a href="{{ universal.JOBS_URL }}">{{ gettext("Jobs") }}</a><br>        
+          <div class="col-4 d-flex flex-column">
+            <strong>Organization</strong>
+            <a href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a>
+            <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
+            <a href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a>
+            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN") }}</a>
+            <a href="{{ universal.JOBS_URL }}">{{ gettext("Jobs") }}</a>        
           </div>
         </div>
         <div class="social-links mt-5">
@@ -81,17 +91,17 @@
           {% endif %}
           </div>
       </div>
-      <div class="col-12 col-md-6">
-        <div class="copyright-text">
-          {{gettext("© 2019 Origin Protocol. All rights reserved.")}}
-          &bull;
-          <a href="{{ url_for('privacy', lang_code=CURRENT_LANGUAGE) }}">
-            {{ gettext("Privacy") }}
-          </a>
-          &bull;
-          <a href="{{ url_for('tos', lang_code=CURRENT_LANGUAGE) }}">
-            {{ gettext("Terms of Service") }}
-          </a>
+      <div class="d-flex d-md-none col-12">
+        <div class="copyright-text d-flex flex-column">
+          <div>{{gettext("Copyright © 2019 Origin Protocol Inc. All rights reserved.")}}</div>
+          <div class="mt-2">
+            <a class="pr-2" href="{{ url_for('tos', lang_code=CURRENT_LANGUAGE) }}">
+              {{ gettext("Terms of Service") }}
+            </a>
+            <a href="{{ url_for('privacy', lang_code=CURRENT_LANGUAGE) }}">
+              {{ gettext("Privacy Policy") }}
+            </a>
+          </div>
         </div>
       </div>
     </div>

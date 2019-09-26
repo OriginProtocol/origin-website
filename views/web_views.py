@@ -73,10 +73,12 @@ def apple_app_site_association():
     return app.send_static_file('files/apple-app-site-association.json')
 
 @app.route('/mobile', strict_slashes=False)
+@app.route('/<lang_code>/mobile', strict_slashes=False)
 def mobile():
     return render_template('mobile.html')
 
 @app.route('/mobile/apk', strict_slashes=False)
+@app.route('/<lang_code>/mobile/apk', strict_slashes=False)
 def mobile_apk():
     req = requests.get(constants.APK_URL, stream = True)
     return Response(stream_with_context(req.iter_content(chunk_size=1024)),
