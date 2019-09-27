@@ -249,6 +249,8 @@ $(function() {
 
 
     var videoSource = currentVideoSource.videoSource
+    var backgroundVideoSource = currentVideoSource.alternateBackgroundSource || videoSource
+
     var aspectRatio = currentVideoSource.aspectRatio
     var startTime = currentVideoSource.startTime || 0
     var loopTime = currentVideoSource.loopTime || null
@@ -278,7 +280,7 @@ $(function() {
 
     if (bgElementIsVideo) {
       var bgPlayer = new window.ytPlayer('#' + backgroundElementId, playerOpts);
-      bgPlayer.load(videoSource, true);
+      bgPlayer.load(backgroundVideoSource, true);
       bgPlayer.setVolume(0);
       bgPlayer.on('ended', () => {
         // loop
@@ -428,6 +430,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'aanKtnkWP8U',
+        alternateBackgroundSource: 'GM8q0Cjzed4',
         aspectRatio: 0.42,
         loopTime: 69, // loop time in seconds
       },
@@ -449,18 +452,21 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'tAyusRT3ZDQ',
+        alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72,
         loopTime: 120
       },
       'ko' : {
         videoSource: 'GDDfAP150W8',
+        alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72,
         loopTime: 120
       },
       'es': {
         videoSource: 'OPobPJoYH7M',
+        alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72,
         loopTime: 120
@@ -491,6 +497,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'ERh2n-vlpQ4',
+        alternateBackgroundSource: 'SlbKrVjOBjw',
         aspectRatio: 0.56,
         startTime: 15,
         loopTime: 117

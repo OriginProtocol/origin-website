@@ -23,6 +23,10 @@
   max-height: 16px;
 }
 
+.vc-backed.video-block .contents {
+  margin-bottom: 0px;
+}
+
 .video-block .bottom.clickable img {
   opacity: 0.6;
 }
@@ -182,7 +186,7 @@
 .vc-backed .button,
 .buy-sell-block .marketplace .button {
   font-size: 1.125rem;
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   border-radius: 26px;
   border: solid 1px var(--white);
@@ -539,6 +543,10 @@
 
   .vc-backed .bottom {
     margin-bottom: 10rem;
+  }
+
+  .vc-backed.video-block .contents {
+    margin-bottom: 60px;
   }
 
   .landing-page .countdown-timer {
