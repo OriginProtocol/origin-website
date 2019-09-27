@@ -312,7 +312,7 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin .logo-container img{
-  width: 100%;
+  width: 90%;
 }
 
 .navbar-origin .mobile-background {
@@ -344,8 +344,8 @@ main.landing-page > .background-wrapper {
 }
 
 .navbar-origin .brand-container .navbar-brand {
-  padding-top: 0px;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-light {
@@ -1884,12 +1884,18 @@ main.landing-page > .background-wrapper {
   .form-group {
     width: 100%;
   }
-  .navbar,
+
   footer .container,
   .foreground-content {
     padding-left: 30px;
     padding-right: 30px;
   }
+
+  .navbar {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
   .hero-devices {
     top: 30px;
   }

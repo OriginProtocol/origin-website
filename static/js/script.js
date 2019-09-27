@@ -672,7 +672,7 @@ $(function() {
             return;
 
           appendToElement.appendChild(createElementFromHTML(
-            '<a class="d-flex flex-column social-box align-items-center" data-toggle="tooltip"' + 
+            '<a class="d-flex flex-column social-box align-items-center" data-toggle="tooltip" target="_blank"' + 
               (statMetadata.link ? ('href="' + statMetadata.link + '"') : 'href="#"') + 
             (statMetadata.qr ? 'data-container="body" data-original-title="<img src=\'' + statMetadata.qr + '\' />"' : ' title="'+stat.name+'"') +
             '>' +

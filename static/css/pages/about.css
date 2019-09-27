@@ -1,5 +1,5 @@
 .about-page .segment-title {
-  margin-top: 88px;
+  margin-top: 70px;
 }
 
 .about-page .segment-subtitle {
@@ -7,7 +7,7 @@
 }
 
 .about-page .team-photo {
-  margin-top: 86px;
+  margin-top: 40px;
   margin-bottom: 102px;
   max-width: 90%; 
 }
@@ -51,7 +51,7 @@
 
 .about-page .white-section img,
 .about-page .blue-section img {
-  max-width: 70%;
+  max-width: 85%;
 }
 
 .about-page .section-content {
@@ -60,11 +60,11 @@
 }
 
 .about-page .section-content .image {
-  padding: 40px 0px;
+  padding: 0px 0px 40px 0px;
 }
 
 .about-page .section-content .text-block {
-  padding: 40px 24px;
+  padding: 70px 24px 40px 24px;
   text-align: center;
 }
 
@@ -85,6 +85,10 @@
 .about-page .more-resilience.white-section .section-text,
 .about-page .access-section.blue-section .section-text {  
   max-width: 386px;
+}
+
+.about-page .section-text {
+  margin-top: 2rem;
 }
 
 .about-page .more-resilience .image {
@@ -114,6 +118,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.the-press .cointelegraph img,
+.the-press .coindesk img {
+  margin-left: -10px;
 }
 
 .social-media-section {
@@ -163,6 +172,10 @@
 
 /* sm + */
 @media (min-width: 576px) {
+  .about-page .team-photo {
+    margin-top: 86px;
+  }
+
   .about-page .more-resilience .image {
     top: -10px;
   }
@@ -209,5 +222,9 @@
   .about-page .white-section .section-name,
   .about-page .blue-section .section-name {
     font-size: 2.375rem;
+  }
+
+  .about-page .section-text {
+    margin-top: 1rem;
   }
 }

@@ -1,6 +1,5 @@
 .landing-page h1 {
   font-family: Poppins;
-  font-size: 1.9rem;
   font-weight: normal;
   text-align: center;
   line-height: normal;
@@ -21,6 +20,10 @@
 .vc-backed .bottom img {
   margin: 10px;
   max-height: 16px;
+}
+
+.buy-sell-block .bottom img.big {
+  max-height: 22px;
 }
 
 .vc-backed.video-block .contents {
@@ -439,7 +442,7 @@
 }
 
 .featured-video .tiles-holder {
-  margin-bottom: 60px;
+  
 }
 
 .featured-video .tiles-holder .tile {
@@ -507,12 +510,12 @@
 }
 
 .recent-news .tiles-holder .tile img {
-  margin-bottom: 21px;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
 .recent-news .white-button-blue-border {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 70px;
 }
 
@@ -608,6 +611,18 @@
     max-width: 680px;
     margin-top: -15px;
   }
+
+  .recent-news .tiles-holder .tile img {
+    margin-bottom: 21px;
+  }
+
+  .featured-video .white-button-blue-border {
+    margin-top: 40px;
+  }
+
+  .recent-news .white-button-blue-border {
+    margin-top: 60px;
+  }
 }
 
 /* md + */
@@ -617,6 +632,10 @@
   .vc-backed .bottom img {
     margin: 21px;
     max-height: 26px;
+  }
+
+  .buy-sell-block .bottom img.big {
+    max-height: 36px;
   }
 
   .decentralised-marketplaces .tiles-holder {
@@ -665,5 +684,9 @@
   .vc-backed .bottom img {
     margin: 30px;
     max-height: 30px;
+  }
+
+  .buy-sell-block .bottom img.big {
+    max-height: 41px;
   }
 }
