@@ -270,8 +270,10 @@ $(function() {
     // if poster image is used populate it and pass it to resize function
     if (videoPosterId) {
       posterImageHolder = document.getElementById(videoPosterId)
+      posterRelativeHolder = createElement('div', { class: 'video-overlay-poster-relative' })
       posterImage = createElement('img', { src: `/static/img/videos/${videoSource}_poster_image.png` })
-      posterImageHolder.appendChild(posterImage)
+      posterImageHolder.appendChild(posterRelativeHolder)
+      posterRelativeHolder.appendChild(posterImage)
     }
 
     if (bgElementIsVideo) {
