@@ -350,7 +350,7 @@ $(function() {
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen()
       }
-    }  
+    }
 
     function goFullscreen() {
       var el = document.getElementById(fullScreenVideoElementId)
@@ -364,6 +364,13 @@ $(function() {
         promise = el.webkitRequestFullscreen()
       } else if (el.msRequestFullscreen) {
         promise = el.msRequestFullscreen()
+      } else {
+        // on IOS none of the fullscreen functions are available, so we can 
+        // not detect when the user exits full screen. We just hide the inline
+        // YouTube player and let the IOS native player take over and play the video
+        setTimeout(() => {
+          el.style.display = "none";
+        }, 3000)
       }
 
       if (!promise) {

@@ -1,6 +1,5 @@
 .product-page {
   background-color: #007cff;
-  padding-top: 6.875rem;
 }
 
 .product-page .tokens-section h1 {
@@ -145,16 +144,19 @@
   height: 100%;
 }
 
+.product-title-section h1 {
+
+}
+
 .product-page .product-title-section {
   background-image: url('/static/img/product/origin-stack-normal.svg');
   background-repeat: no-repeat;
   background-position: right bottom;  
-  background-size: auto 90%;
+  background-size: auto 83%;
 }
 
 .product-page .product-title-section h1 {
   text-align: left;
-  padding-bottom: 45%;
 }
 
 .product-page .milestones-section .milestones-timeline {
@@ -287,6 +289,13 @@
     background-size: auto 80%;
     background-image: url('/static/img/product/origin-stack-mobile.svg');
   }
+
+  .product-page .product-title-section h1 {
+    max-width: 720px;
+    margin-top: 100px;
+    margin-left: 0px;
+    padding-left: 15px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -297,11 +306,13 @@
 
   .product-page .product-title-section h1 {
     max-width: 520px;
-    margin-top: 0px;
+    margin-top: 100px;
+    margin-left: 0px;
+    padding-left: 50px;
   }
 
   .product-page .product-title-section {
-    background-position: 100% 90%;
+    background-position: 100% 140%;
     background-size: auto 75%;
   }
 } 
@@ -338,16 +349,16 @@
   }
   
   .product-page .product-title-section {
-    background-position: 100% 115%;
+    background-position: 100% 180%;
     background-size: auto 75%;  
   }
 
   .product-page .product-title-section h1 {
-    padding-top: 0;
-    margin-top: 0;
+    margin-top: 100px;
+    margin-left: 0px;
+    padding-left: 17px;
     max-width: 400px;
-    text-align: left;
-    padding: 0px 20px;  
+    text-align: left; 
   }
 
   .product-page .marketplaces-section .btn {
@@ -363,7 +374,13 @@
 
 @media (max-width: 400px) {
   .product-page .product-title-section {
-    background-position: 100% 115%;
+    background-position: 78% 180%;
     background-size: auto 77%;
+  }
+
+  .product-page .product-title-section h1 {
+    margin-top: 100px;
+    margin-left: 0px;
+    padding-left: 10px;
   }
 }
