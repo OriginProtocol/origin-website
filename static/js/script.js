@@ -513,6 +513,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'tAyusRT3ZDQ',
+        alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72
       }
