@@ -26,16 +26,16 @@
       <div class="row">
         <div class="col-12 text-center">
           <h1>{{gettext("Apps built on our platform")}}</h1>
-          <img src="/static/img/product/shoporigin-laptop.png" />
+          <img src="/static/img/product/shoporigin-laptop@2x.png" />
           <h3>{{gettext("See the Origin Platform in action at shoporigin.com")}}</h3>
           <a href="https://shoporigin.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             {{gettext("Buy and sell today")}}
           </a>
           <h3>{{gettext("Other apps built on the Origin Platform")}}</h3>
           <div class="marketplace-images">
-            <img src="/static/img/product/peerart.png" />
-            <img src="/static/img/product/trips.png" />
-            <img src="/static/img/product/cryptomerch.png" />
+            <img src="/static/img/product/peerart.svg" />
+            <img src="/static/img/product/trips.svg" />
+            <img src="/static/img/product/cryptomerch.svg" />
           </div>
         </div>
       </div>
@@ -155,11 +155,11 @@
     </div>
   </section>
   <section class="whitepaper-section grey-section">
-    <div class="row">
-        <div class="col-12">
+    <div class="d-flex flex-column">
+        <div class="col-12 p-0">
           <h1>{{gettext("Check out our updated whitepaper")}}</h1>
         </div>
-        <div class="col-12">
+        <div class="col-12 p-0">
           <div class="action-buttons">
             <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-outline-primary">{{gettext("Read our whitepaper")}}</a>
           </div>
