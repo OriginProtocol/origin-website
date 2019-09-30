@@ -90,7 +90,7 @@
           </li>-->
           <li class="d-none d-lg-block nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
-            <div class="dropdown-menu language">
+            <div class="dropdown-menu language flex-wrap">
               {% for language in AVAILABLE_LANGUAGES.items() %}
                 {% if CURRENT_LANGUAGE == language[0] %}
                   <div class="dropdown-item-selected">{{ language[1] }}</div>
