@@ -101,7 +101,7 @@
 }
 
 .investors-page .fundraising-section .investment-counter {
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   font-size: 5.5rem;
   text-align: center;
 }
@@ -146,6 +146,7 @@
   color: #fff;
   border: 1px solid #fff;
   width: 100%;
+  margin-top: 20px;
 }
 
 .investors-page .featured-investor .investor-image {
@@ -184,10 +185,26 @@
   color: #061d2a;
 }
 
+.investors-page .team-member .headshot-wrapper {
+  margin: 1.25rem auto 0px auto;
+}
+
+.investors-page .team-member .name {
+  margin: auto;
+}
+
+.investors-page .individual-investors-section .section-desc {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 575px) {
   .investors-page .vc-section.vc-firms .container {
     padding: 0 2rem 5rem 2rem;
   }  
+
+  .investors-page .section-desc {
+    margin-bottom: 20px;
+  }
 
   .investors-page .featured-investor-section .featured-investor {
     flex-direction: column-reverse;
@@ -214,6 +231,11 @@
   .investors-page .vc-firm .firm-name {
     font-size: 0.7rem;
   }
+
+  .investors-page .fundraising-section .investment-counter {
+    margin-top: 3.5rem;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -235,7 +257,7 @@
   }
 
   .investors-page .featured-investor-section .featured-investor {
-    min-height: 750px;
+    min-height: 770px;
     height: auto;
   }
 }
