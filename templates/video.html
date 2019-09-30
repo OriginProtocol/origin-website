@@ -7,7 +7,7 @@
 {% block content %}
 
 {% with theme_dark=True %}
-  {% with single_video_id=video.hash %}
+  {% with single_video_slug=video.slug %}
     {% include 'navbar.html' %}
   {% endwith %}  
 {% endwith %}  
@@ -41,7 +41,7 @@
       <div class="tiles-holder d-flex justify-content-start align-self-center flex-wrap">
         {% for video in featured_videos %}
           <div class="col-12 col-md-3 video-item">
-            <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
+            <a class="image-video-link" href="{{ "/video/%s" % (video.slug)}}">
               <img src="{{"/static/img/videos/%s.jpg" % (video.hash)}}" />
               <div class="overlay hide hover-show justify-content-center align-items-center">
                 <img class="play" src="/static/img/landing/play-triangle.svg" />
@@ -50,7 +50,7 @@
                 <div class="duration mb-2 mr-2">1:12</div>
               </div>
             </a>
-            <a href="{{ "/video/%s" % (video.hash)}}" class="title">
+            <a href="{{ "/video/%s" % (video.slug)}}" class="title">
               {{ gettext(video.title) }}
             </a>
           </div>

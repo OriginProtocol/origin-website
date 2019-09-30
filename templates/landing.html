@@ -216,7 +216,7 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       {% for video in featured_videos %}
         <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
-          <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
+          <a class="image-video-link" href="{{ "/video/%s" % (video.slug)}}">
             <img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" />
             <div class="overlay hide hover-show justify-content-center align-items-center">
               <img class="play" src="/static/img/landing/play-triangle.svg" />
@@ -225,7 +225,7 @@
               <div class="duration mb-2 mr-2">{{video.duration}}</div>
             </div>
           </a>
-          <a href="{{ "/video/%s" % (video.hash)}}" class="title">
+          <a href="{{ "/video/%s" % (video.slug)}}" class="title">
             {{ gettext(video.title) }}
           </a>
         </div>

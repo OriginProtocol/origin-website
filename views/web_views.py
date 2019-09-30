@@ -278,17 +278,17 @@ def product():
 def ogn_token():
     return render_template('ogn-token.html')
 
-@app.route('/video/<video_id>', strict_slashes=False)
-@app.route('/<lang_code>/video/<video_id>', strict_slashes=False)
-def video(video_id):
+@app.route('/video/<video_slug>', strict_slashes=False)
+@app.route('/<lang_code>/video/<video_slug>', strict_slashes=False)
+def video(video_slug):
     def remove_current_video(video):
-        if(video['hash'] == video_id):
+        if(video['slug'] == video_slug):
             return False
         else:
             return True
 
     def find_current_video(video):
-        if(video['hash'] == video_id):
+        if(video['slug'] == video_slug):
             return True
         else:
             return False
