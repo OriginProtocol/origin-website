@@ -64,12 +64,12 @@
         <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
         {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
         <div class="d-flex mt-4">
-          <a class="pr-2 py-2" href="https://apps.apple.com/us/app/origin-marketplace/id1446091928" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
-          <a class="pl-2 py-2" href="https://play.google.com/store/apps/details?id=com.origincatcher" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
+          <a class="pr-2 py-2" href="{{ universal.IOS_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
+          <a class="pl-2 py-2" href="{{ universal.ANDROID_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
         </div>
         {% endif %}
         {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
-          <a class="button mt-4" href="/static/files/origin-marketplace-0.23.16.apk" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
+          <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
         {% endif %}
         <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
         <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
