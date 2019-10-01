@@ -62,6 +62,7 @@ def beforeRequest():
     g.metadata['image'] = 'https://www.originprotocol.com/static/img/fb-og-img.png'
     g.metadata['title'] = gettext('Origin Protocol')
     g.metadata['description'] = gettext('Origin Protocol is the blockchain platform for building decentralized marketplaces')
+    g.metadata['url'] = 'https://www.originprotocol.com'
 
 @app.route('/', strict_slashes=False)
 def root():
@@ -400,8 +401,9 @@ def video(video_slug):
         return render_template('404.html'), 404
 
     video=videoList[0]
-    g.metadata['image'] = 'https://www.originprotocol.com/static/img/videos/' + video['hash'] + '.jpg'
+    g.metadata['image'] = 'https://www.originprotocol.com/static/img/videos/' + video['hash'] + '.png'
     g.metadata['title'] = video['title']
+    g.metadata['url'] = 'https://www.originprotocol.com/en/video/' + video['slug']
     return render_template('video.html', featured_videos=featured_videos, video=video)
 
 @app.route('/videos', strict_slashes=False)
