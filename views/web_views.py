@@ -58,6 +58,11 @@ def beforeRequest():
         # Use Accept-Languages header for fallback
         g.current_lang = get_locale()
 
+    g.metadata = {}
+    g.metadata['image'] = 'https://www.originprotocol.com/static/img/fb-og-img.png'
+    g.metadata['title'] = gettext('Origin Protocol')
+    g.metadata['description'] = gettext('Origin Protocol is the blockchain platform for building decentralized marketplaces')
+
 @app.route('/', strict_slashes=False)
 def root():
     def filter_featured_videos(video):
@@ -394,7 +399,10 @@ def video(video_slug):
     if (len(videoList) == 0):
         return render_template('404.html'), 404
 
-    return render_template('video.html', featured_videos=featured_videos, video=videoList[0])
+    video=videoList[0]
+    g.metadata['image'] = 'https://www.originprotocol.com/static/img/videos/' + video['hash'] + '.jpg'
+    g.metadata['title'] = video['title']
+    return render_template('video.html', featured_videos=featured_videos, video=video)
 
 @app.route('/videos', strict_slashes=False)
 @app.route('/<lang_code>/videos', strict_slashes=False)
