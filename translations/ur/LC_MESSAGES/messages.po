@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-30 21:28+0000\n"
-"PO-Revision-Date: 2019-10-01 01:13\n"
+"POT-Creation-Date: 2019-10-01 22:07+0000\n"
+"PO-Revision-Date: 2019-10-01 22:14\n"
 "Last-Translator: OriginProtocol\n"
 "Language-Team: Urdu (Pakistan)\n"
 "MIME-Version: 1.0\n"
@@ -169,14 +169,6 @@ msgstr ""
 
 #: templates/aup.html:16
 msgid "Marketplace Acceptable Use Policy"
-msgstr ""
-
-#: templates/base.html:17 templates/landing.html:3 templates/video.html:3
-msgid "Origin Protocol"
-msgstr "اصل پروٹوکول"
-
-#: templates/base.html:18
-msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr ""
 
 #: templates/creator.html:3 templates/creator.html:5
@@ -437,16 +429,8 @@ msgstr ""
 msgid "San Francisco"
 msgstr ""
 
-#: templates/developers.html:149 templates/developers.html:155
-msgid "12:30PM"
-msgstr ""
-
 #: templates/developers.html:151
 msgid "Boulder"
-msgstr ""
-
-#: templates/developers.html:152
-msgid "1:30PM"
 msgstr ""
 
 #: templates/developers.html:154
@@ -457,24 +441,12 @@ msgstr ""
 msgid "Buenos Aires"
 msgstr ""
 
-#: templates/developers.html:158
-msgid "3:30PM"
-msgstr ""
-
 #: templates/developers.html:160
 msgid "London"
 msgstr ""
 
-#: templates/developers.html:161 templates/developers.html:167
-msgid "8:30PM"
-msgstr ""
-
 #: templates/developers.html:163
 msgid "Berlin"
-msgstr ""
-
-#: templates/developers.html:164 templates/developers.html:171
-msgid "9:30PM"
 msgstr ""
 
 #: templates/developers.html:166
@@ -489,25 +461,13 @@ msgstr ""
 msgid "New Delhi"
 msgstr ""
 
-#: templates/developers.html:174
-msgid "12AM"
-msgstr ""
-
 #: templates/developers.html:176 templates/investors.html:254
 #: templates/investors.html:293
 msgid "Singapore"
 msgstr ""
 
-#: templates/developers.html:177 templates/developers.html:186
-msgid "2:30AM"
-msgstr ""
-
 #: templates/developers.html:179
 msgid "Seoul"
-msgstr ""
-
-#: templates/developers.html:180 templates/developers.html:183
-msgid "3:30AM"
 msgstr ""
 
 #: templates/developers.html:182
@@ -521,10 +481,6 @@ msgstr ""
 
 #: templates/developers.html:188
 msgid "Wellington"
-msgstr ""
-
-#: templates/developers.html:189
-msgid "7:30AM"
 msgstr ""
 
 #: templates/developers.html:193
@@ -552,7 +508,7 @@ msgstr ""
 msgid "Enter your email"
 msgstr ""
 
-#: templates/footer.html:18 templates/footer.html:96
+#: templates/footer.html:18 templates/footer.html:96 templates/mobile.html:29
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr ""
 
@@ -908,6 +864,10 @@ msgstr ""
 msgid "Founder, Akamai"
 msgstr ""
 
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:63
+msgid "Origin Protocol"
+msgstr "اصل پروٹوکول"
+
 #: templates/landing.html:5
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "انٹرمیڈریٹس کے بغیر اشتراک کی معیشت. ایتھروم بلاکچین اور آئی پی ایف ایس کا استعمال کرتے ہوئے اصل معیشت کے بازاروں کو پیدا کرنے کے لئے اصل ایک پروٹوکول ہے."
@@ -940,11 +900,11 @@ msgstr ""
 msgid "Origin Marketplace"
 msgstr ""
 
-#: templates/landing.html:64
+#: templates/landing.html:64 templates/mobile.html:16
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr ""
 
-#: templates/landing.html:72
+#: templates/landing.html:72 templates/mobile.html:25
 msgid "Download Android App"
 msgstr ""
 
@@ -1072,6 +1032,10 @@ msgstr ""
 #: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
 msgstr "اصل پروٹوکول - موبائل"
+
+#: templates/mobile.html:15
+msgid "Buy and Sell on the Origin Marketplace"
+msgstr ""
 
 #: templates/navbar.html:80
 msgid "Product"
@@ -1761,35 +1725,39 @@ msgstr ""
 msgid "To be Announced"
 msgstr ""
 
-#: views/web_views.py:173
+#: views/web_views.py:64
+msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
+msgstr ""
+
+#: views/web_views.py:182
 msgid "Missing email"
 msgstr ""
 
-#: views/web_views.py:185
+#: views/web_views.py:194
 msgid "Please enter your name"
 msgstr "براہ مہربانی اپنا نام درج کریں"
 
-#: views/web_views.py:187
+#: views/web_views.py:196
 msgid "Please enter your email"
 msgstr "براہ مہربانی اپنے ای میل درج کریں"
 
-#: views/web_views.py:189
+#: views/web_views.py:198
 msgid "Select your country of citizenship"
 msgstr ""
 
-#: views/web_views.py:191
+#: views/web_views.py:200
 msgid "Please enter your desired allocation"
 msgstr "براہ کرم اپنے مطلوب مختص درج کریں"
 
-#: views/web_views.py:193
+#: views/web_views.py:202
 msgid "Select a currency"
 msgstr ""
 
-#: views/web_views.py:195
+#: views/web_views.py:204
 msgid "Please prove you are not a robot."
 msgstr "براہ کرم ثابت کریں کہ آپ روبوٹ نہیں ہیں."
 
-#: views/web_views.py:200
+#: views/web_views.py:209
 msgid "OK"
 msgstr ""
 
