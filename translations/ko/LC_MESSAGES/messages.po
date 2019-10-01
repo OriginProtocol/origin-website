@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-30 21:28+0000\n"
+"POT-Creation-Date: 2019-10-01 22:07+0000\n"
 "PO-Revision-Date: 2019-09-26 23:34+0000\n"
 "Last-Translator: OriginProtocol\n"
 "Language: ko_KR\n"
@@ -169,14 +169,6 @@ msgstr "오리진 프로토콜 - 마켓 플레이스 사용 관련 정책"
 #: templates/aup.html:16
 msgid "Marketplace Acceptable Use Policy"
 msgstr "마켓 플레이스 이용약관"
-
-#: templates/base.html:17 templates/landing.html:3 templates/video.html:3
-msgid "Origin Protocol"
-msgstr "오리진 프로토콜(Origin Protocol)"
-
-#: templates/base.html:18
-msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
-msgstr "오리진 프로토콜은 블록체인을 기반으로 탈 중앙화된 마켓 플레이스를 구축합니다."
 
 #: templates/creator.html:3 templates/creator.html:5
 msgid "Origin Protocol - Creator"
@@ -436,16 +428,8 @@ msgstr ""
 msgid "San Francisco"
 msgstr ""
 
-#: templates/developers.html:149 templates/developers.html:155
-msgid "12:30PM"
-msgstr ""
-
 #: templates/developers.html:151
 msgid "Boulder"
-msgstr ""
-
-#: templates/developers.html:152
-msgid "1:30PM"
 msgstr ""
 
 #: templates/developers.html:154
@@ -456,24 +440,12 @@ msgstr ""
 msgid "Buenos Aires"
 msgstr ""
 
-#: templates/developers.html:158
-msgid "3:30PM"
-msgstr ""
-
 #: templates/developers.html:160
 msgid "London"
 msgstr ""
 
-#: templates/developers.html:161 templates/developers.html:167
-msgid "8:30PM"
-msgstr ""
-
 #: templates/developers.html:163
 msgid "Berlin"
-msgstr ""
-
-#: templates/developers.html:164 templates/developers.html:171
-msgid "9:30PM"
 msgstr ""
 
 #: templates/developers.html:166
@@ -488,25 +460,13 @@ msgstr ""
 msgid "New Delhi"
 msgstr ""
 
-#: templates/developers.html:174
-msgid "12AM"
-msgstr ""
-
 #: templates/developers.html:176 templates/investors.html:254
 #: templates/investors.html:293
 msgid "Singapore"
 msgstr "싱가폴"
 
-#: templates/developers.html:177 templates/developers.html:186
-msgid "2:30AM"
-msgstr ""
-
 #: templates/developers.html:179
 msgid "Seoul"
-msgstr ""
-
-#: templates/developers.html:180 templates/developers.html:183
-msgid "3:30AM"
 msgstr ""
 
 #: templates/developers.html:182
@@ -520,10 +480,6 @@ msgstr "홍콩"
 
 #: templates/developers.html:188
 msgid "Wellington"
-msgstr ""
-
-#: templates/developers.html:189
-msgid "7:30AM"
 msgstr ""
 
 #: templates/developers.html:193
@@ -551,7 +507,7 @@ msgstr "오리진의 뉴스레터를 구독하세요. 사용자 이메일은 비
 msgid "Enter your email"
 msgstr "이메일 주소를 입력해주세요"
 
-#: templates/footer.html:18 templates/footer.html:96
+#: templates/footer.html:18 templates/footer.html:96 templates/mobile.html:29
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr ""
 
@@ -907,6 +863,10 @@ msgstr ""
 msgid "Founder, Akamai"
 msgstr "창업자, Akamai"
 
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:63
+msgid "Origin Protocol"
+msgstr "오리진 프로토콜(Origin Protocol)"
+
 #: templates/landing.html:5
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "중개인 없는 공유경제. Origin은 이더리움 블록체인과 IPFS를 사용하여 공유경제 시장을 만드는 프로토콜입니다."
@@ -939,11 +899,11 @@ msgstr "오리진(Origin) 플랫폼은 수백 개의 탈중앙화된 P2P 마켓 
 msgid "Origin Marketplace"
 msgstr "오리진 마켓플레이스"
 
-#: templates/landing.html:64
+#: templates/landing.html:64 templates/mobile.html:16
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr "오리진(Origin) 플랫폼을 기반으로하는 오리진 본사 앱에서 숙박 공유를 경험하거나, 콘서트 티켓을 구입하거나, 프리랜서를 고용해보세요."
 
-#: templates/landing.html:72
+#: templates/landing.html:72 templates/mobile.html:25
 msgid "Download Android App"
 msgstr "안드로이드 앱 다운받기"
 
@@ -1071,6 +1031,10 @@ msgstr "Medium에서 더 읽기"
 #: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
 msgstr "Origin 프로토콜 - 모바일"
+
+#: templates/mobile.html:15
+msgid "Buy and Sell on the Origin Marketplace"
+msgstr ""
 
 #: templates/navbar.html:80
 msgid "Product"
@@ -1760,38 +1724,69 @@ msgstr "계속"
 msgid "To be Announced"
 msgstr "곧 발표될 예정입니다"
 
-#: views/web_views.py:173
+#: views/web_views.py:64
+msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
+msgstr "오리진 프로토콜은 블록체인을 기반으로 탈 중앙화된 마켓 플레이스를 구축합니다."
+
+#: views/web_views.py:182
 msgid "Missing email"
 msgstr ""
 
-#: views/web_views.py:185
+#: views/web_views.py:194
 msgid "Please enter your name"
 msgstr "이름을 입력해 주세요"
 
-#: views/web_views.py:187
+#: views/web_views.py:196
 msgid "Please enter your email"
 msgstr "이메일 주소를 입력해 주세요"
 
-#: views/web_views.py:189
+#: views/web_views.py:198
 msgid "Select your country of citizenship"
 msgstr ""
 
-#: views/web_views.py:191
+#: views/web_views.py:200
 msgid "Please enter your desired allocation"
 msgstr "원하시는 할당량을 입력 해 주세요"
 
-#: views/web_views.py:193
+#: views/web_views.py:202
 msgid "Select a currency"
 msgstr ""
 
-#: views/web_views.py:195
+#: views/web_views.py:204
 msgid "Please prove you are not a robot."
 msgstr "당신이 로봇이 아니라는 것을 증명 하세요"
 
-#: views/web_views.py:200
+#: views/web_views.py:209
 msgid "OK"
 msgstr ""
 
 #~ msgid "Randall Kalpan"
 #~ msgstr "랜달 칼판"
+
+#~ msgid "12:30PM"
+#~ msgstr ""
+
+#~ msgid "1:30PM"
+#~ msgstr ""
+
+#~ msgid "3:30PM"
+#~ msgstr ""
+
+#~ msgid "8:30PM"
+#~ msgstr ""
+
+#~ msgid "9:30PM"
+#~ msgstr ""
+
+#~ msgid "12AM"
+#~ msgstr ""
+
+#~ msgid "2:30AM"
+#~ msgstr ""
+
+#~ msgid "3:30AM"
+#~ msgstr ""
+
+#~ msgid "7:30AM"
+#~ msgstr ""
 
