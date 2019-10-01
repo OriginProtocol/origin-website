@@ -556,6 +556,10 @@ $(function() {
     {
       'name': 'Vk',
       'subscribed_count': 36
+    },
+    {
+      'name': 'Blokfolio',
+      'subscribed_count': 39371
     }
   ];
 
@@ -630,6 +634,12 @@ $(function() {
       'img': '/static/img/about/medium.svg',
       'countLabel': 'followers',
       'link': 'https://medium.com/originprotocol',
+      'regionSpecific': false
+    },
+    'Blokfolio': {
+      'img': '/static/img/about/blockfolio.svg',
+      'countLabel': 'followers',
+      'link': 'https://blockfolio.com/coin/OGN',
       'regionSpecific': false
     }
   };
