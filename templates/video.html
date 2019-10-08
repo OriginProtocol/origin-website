@@ -14,7 +14,8 @@
 
 <main class="video-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="video-page-video" data-video-source="{{"%s" % (video.hash)}}" class="full-screen-video d-none" ></div>
+    <div id="video-page-video" data-video-source-zh="{{"%s" % (video.youkuHash)}}" data-video-source="{{"%s" % (video.hash)}}" class="full-screen-video d-none" ></div>
+    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
         <img id="video-page-video-background" src="{{"/static/img/videos/%s.jpg" % (video.hash)}}"/>
