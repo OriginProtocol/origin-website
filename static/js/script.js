@@ -330,19 +330,16 @@ $(function() {
 
     function startFullScreenYoukuPlayer() {
 
-      fullscreenYoukuPlayer = document.createElement("iframe");
-      var fullScreenElement = document.getElementById(fullScreenVideoElementId)
-      var parent = fullScreenElement.parentNode;
-      var className = fullScreenElement.getAttribute('class')
-      var id = fullScreenElement.getAttribute('id');
-      fullscreenYoukuPlayer.setAttribute('id', id);
-      fullscreenYoukuPlayer.setAttribute('allowfullscreen', "1")
-      fullscreenYoukuPlayer.setAttribute('frameborder', "0")
-      fullscreenYoukuPlayer.setAttribute('class', className + " fullscreen");
-      fullscreenYoukuPlayer.src = "http://player.youku.com/embed/" + videoSource + "?autoplay=1";
-      parent.removeChild(fullScreenElement);
-      parent.appendChild(fullscreenYoukuPlayer);
-      // show full screen button with slight delay
+      fullscreenYoukuPlayer = new YKU.Player(fullScreenVideoElementId, {
+        client_id: '44503cca1be605b5',
+        vid: videoSource,
+        width: "100%",
+        height: "100%",
+        autoplay: true,
+        show_related: false
+      });
+
+      // // show full screen button with slight delay
       setTimeout(function() {
         exitFullScreenButton.setAttribute("class", "");
       }, 3000)
@@ -354,14 +351,9 @@ $(function() {
 
     function stopFullScreenYoukuPlayer() {
       var fullScreenElement = document.getElementById(fullScreenVideoElementId)
-      var div = document.createElement("div");
-      var parent = fullScreenElement.parentNode;
-      var className = fullScreenElement.getAttribute('class')
-      var id = fullScreenElement.getAttribute('id');
-      div.setAttribute('id', id);
-      div.setAttribute('class', className + " d-none");
-      parent.removeChild(fullScreenElement);
-      parent.appendChild(div);
+      while (fullScreenElement.firstChild) {
+        fullScreenElement.removeChild(fullScreenElement.firstChild);
+      }
       exitFullScreenButton.setAttribute("class", "d-none")
     }
 
@@ -395,7 +387,7 @@ $(function() {
       if (!isFullScreen) {
         return;
       }
-      
+        
       if (fullYoutubePlayer) {
         fullYoutubePlayer.stop();
       } else if (fullscreenYoukuPlayer) {
