@@ -12,7 +12,8 @@
 
 <main class="landing-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="landing-video" class="full-screen-video d-none" ></div>
+    <div id="landing-video" class="full-screen-video d-none"></div>
+    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
         <div id="landing-video-background" ></div>
@@ -217,7 +218,7 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       {% for video in featured_videos %}
         <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
-          <a class="image-video-link" href="{{ "/video/%s" % (video.slug)}}">
+          <a class="image-video-link" href="{{ url_for('video', lang_code=CURRENT_LANGUAGE, video_slug=video.slug) }}">
             <img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" />
             <div class="overlay hide hover-show justify-content-center align-items-center">
               <img class="play" src="/static/img/landing/play-triangle.svg" />

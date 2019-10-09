@@ -490,7 +490,8 @@ def assets_all_javascript():
         "static/js/script.js",
         "static/js/countdown-timer.js",
         "static/js/yt-player.js",
-        "static/js/videos.js"
+        "static/js/videos.js",
+        "static/js/youkuPlayer.js"
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)

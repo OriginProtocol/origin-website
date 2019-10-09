@@ -197,7 +197,8 @@ $(function() {
       var width = containerHeight/videoAspectRatio;
       var widthMargin = (width - containerWidth) / 2
       if (isVideoPlayer){
-        bgPlayer.setSize(width, containerHeight);
+        if (bgPlayer)
+          bgPlayer.setSize(width, containerHeight);
       } else {
         videoElement.style.width = width + "px";
         videoElement.style.height = containerHeight + "px";
@@ -211,7 +212,8 @@ $(function() {
     } else {
       var height = containerWidth*videoAspectRatio;
       if (isVideoPlayer) {
-        bgPlayer.setSize(containerWidth, height);
+        if (bgPlayer)
+          bgPlayer.setSize(containerWidth, height);
       } else {
         videoElement.style.width = containerWidth + "px";
         videoElement.style.height = height + "px";
@@ -242,6 +244,7 @@ $(function() {
       width: '100%',
       height: '100%'
     };
+    var isChineseLanguage = ['zh_Hant', 'zh_Hans'].includes(document.body.parentElement.getAttribute('lang'))
 
     var fullScreenPlayerOpts = {};
     var currentLang = document.body.parentElement.getAttribute('lang')
@@ -250,6 +253,7 @@ $(function() {
 
     var videoSource = currentVideoSource.videoSource
     var backgroundVideoSource = currentVideoSource.alternateBackgroundSource || videoSource
+    videoSource = isChineseLanguage ? currentVideoSource.videoSourceYouku : videoSource;
 
     var aspectRatio = currentVideoSource.aspectRatio
     var startTime = currentVideoSource.startTime || 0
@@ -273,12 +277,12 @@ $(function() {
     if (videoPosterId) {
       posterImageHolder = document.getElementById(videoPosterId)
       posterRelativeHolder = createElement('div', { class: 'video-overlay-poster-relative' })
-      posterImage = createElement('img', { src: `/static/img/videos/${videoSource}_poster_image.png` })
+      posterImage = createElement('img', { src: `/static/img/videos/${currentVideoSource.videoSource}_poster_image.png` })
       posterImageHolder.appendChild(posterRelativeHolder)
       posterRelativeHolder.appendChild(posterImage)
     }
 
-    if (bgElementIsVideo) {
+    if (bgElementIsVideo && !isChineseLanguage) {
       var bgPlayer = new window.ytPlayer('#' + backgroundElementId, playerOpts);
       bgPlayer.load(backgroundVideoSource, true);
       bgPlayer.setVolume(0);
@@ -308,43 +312,97 @@ $(function() {
       });
     }
       
-    // video source is stored in data-video-source property
+    // video source is stored in data-video-source(-zh) property on video page
     if (!bgElementIsVideo) {
-      videoSource = $('#video-page-video').attr("data-video-source");
+      const videoElement = $('#video-page-video')
+      videoSource = isChineseLanguage ? videoElement.attr('data-video-source-zh') : videoElement.attr('data-video-source');
     }
 
-    var fullPlayer = new window.ytPlayer('#' + fullScreenVideoElementId, fullScreenPlayerOpts);
-    fullPlayer.load(videoSource);
+    var fullYoutubePlayer
+    var fullscreenYoukuPlayer
+    var exitFullScreenButton = document.getElementById("exit-fullscreen-button")
 
-    fullPlayer.on('unstarted', function () {
-      var socialLinks = document.querySelectorAll('[share-video-to]')
-  
-      for (var i = 0; i < socialLinks.length; i++) {
-        var link = socialLinks[i]
-        // we want to link people to the Origin site, not YouTube
-        // var href = document.getElementById(fullScreenVideoElementId).getAttribute('src')
-        var title = document.querySelector('.segment-title')
-        switch (link.getAttribute('share-video-to')) {
-          case 'facebook':
-            href = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)
-            break
-          case 'twitter':
-            title = encodeURIComponent(title ? title.innerText + ' ' : '')
-            href = 'https://twitter.com/intent/tweet?text=' + title + encodeURIComponent(window.location.href)
-            break
-          case 'link':
-            break
-        }
+    if (!isChineseLanguage) {
+      fullYoutubePlayer = new window.ytPlayer('#' + fullScreenVideoElementId, fullScreenPlayerOpts);
+    }
 
-        link.setAttribute('href', href)
+    //var isIOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+    function startFullScreenYoukuPlayer() {
+      // youku video not yet available
+      if (!videoSource || videoSource === '') {
+        return false;
       }
-    })
 
+      fullscreenYoukuPlayer = new YKU.Player(fullScreenVideoElementId, {
+        client_id: '44503cca1be605b5',
+        vid: videoSource,
+        width: "100%",
+        height: "100%",
+        autoplay: true,
+        show_related: false
+      });
+
+      // // show full screen button with slight delay
+      setTimeout(function() {
+        exitFullScreenButton.setAttribute("class", "");
+      }, 3000)
+      $(exitFullScreenButton).click(function() {
+        closeFullScreen();
+      })
+
+      return true;
+    }
+
+    function stopFullScreenYoukuPlayer() {
+      var fullScreenElement = document.getElementById(fullScreenVideoElementId)
+      while (fullScreenElement.firstChild) {
+        fullScreenElement.removeChild(fullScreenElement.firstChild);
+      }
+      exitFullScreenButton.setAttribute("class", "d-none")
+    }
+
+    if (fullYoutubePlayer)
+      fullYoutubePlayer.load(videoSource);
+    
+    var socialLinks = document.querySelectorAll('[share-video-to]')
+
+    for (var i = 0; i < socialLinks.length; i++) {
+      var link = socialLinks[i]
+      // we want to link people to the Origin site, not YouTube
+      // var href = document.getElementById(fullScreenVideoElementId).getAttribute('src')
+      var title = document.querySelector('.segment-title')
+      switch (link.getAttribute('share-video-to')) {
+        case 'facebook':
+          href = 'http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)
+          break
+        case 'twitter':
+          title = encodeURIComponent(title ? title.innerText + ' ' : '')
+          href = 'https://twitter.com/intent/tweet?text=' + title + encodeURIComponent(window.location.href)
+          break
+        case 'link':
+          break
+      }
+
+      link.setAttribute('href', href)
+    }
+
+    var isFullScreen = false
     function closeFullScreen() {
-      fullPlayer.stop();
+      if (!isFullScreen) {
+        return;
+      }
+        
+      if (fullYoutubePlayer) {
+        fullYoutubePlayer.stop();
+      } else if (fullscreenYoukuPlayer) {
+        stopFullScreenYoukuPlayer();
+      }
+
       var el = document.getElementById(fullScreenVideoElementId)
       el.classList.add('d-none')
       el.onfullscreenchange = undefined
+      isFullScreen = false
       if (document.exitFullscreen) {
         document.exitFullscreen()
       } else if (document.mozExitFullScreen) {
@@ -357,6 +415,12 @@ $(function() {
     }
 
     function goFullscreen() {
+      isFullScreen = true
+      // Youku embeded player does not support full screen on IOS
+      if (fullscreenYoukuPlayer) {
+        return;
+      }
+
       var el = document.getElementById(fullScreenVideoElementId)
 
       var promise
@@ -402,9 +466,11 @@ $(function() {
     });
 
     // close the video when it ends
-    fullPlayer.on('ended', () => {
-      closeFullScreen()
-    });
+    if (fullYoutubePlayer) {
+      fullYoutubePlayer.on('ended', () => {
+        closeFullScreen()
+      });
+    }
 
     function callHandleVideoResize() {
       handleVideoResize(backgroundElementId, aspectRatio, bgElementIsVideo, bgPlayer, posterImage);
@@ -414,14 +480,23 @@ $(function() {
     callHandleVideoResize();
 
     $('#' + videoButtonId).click(function() {
+      if (fullYoutubePlayer) {
+        fullYoutubePlayer.play();
+      }
+      // Chinese Youku player
+      else {
+        var youkuVideoConfigured = startFullScreenYoukuPlayer();
+        if (!youkuVideoConfigured)
+          return;
+      }
+
       var el = document.getElementById(fullScreenVideoElementId)
       el.classList.remove('d-none')
-      if (bgElementIsVideo) {
+      if (bgElementIsVideo && bgPlayer) {
         bgPlayer.seek(0);
       }
 
-      goFullscreen()
-      fullPlayer.play();
+      goFullscreen();
     });
   }
 
@@ -430,6 +505,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'aanKtnkWP8U',
+        videoSourceYouku: '',
         alternateBackgroundSource: 'GM8q0Cjzed4',
         aspectRatio: 0.42,
         loopTime: 69, // loop time in seconds
@@ -437,6 +513,7 @@ $(function() {
       // Input other localisation videos this way 
       // 'zh_Hans' : {
       //   videoSource: 'aanKtnkWP8U',
+      //   videoSourceYouku: '',
       //   aspectRatio: 0.42,
       //   loopTime: 70
       // }
@@ -452,6 +529,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'tAyusRT3ZDQ',
+        videoSourceYouku: 'XNDM4NjcxMjQwNA',
         alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72,
@@ -459,6 +537,7 @@ $(function() {
       },
       'ko' : {
         videoSource: 'GDDfAP150W8',
+        videoSourceYouku: 'XNDM4NjcxMjQwNA',
         alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72,
@@ -466,6 +545,7 @@ $(function() {
       },
       'es': {
         videoSource: 'OPobPJoYH7M',
+        videoSourceYouku: 'XNDM4NjcxMjQwNA',
         alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72,
@@ -483,6 +563,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'e70bvBw1oOo',
+        videoSourceYouku: '',
         aspectRatio: 0.56,
         startTime: 5
       }
@@ -497,6 +578,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'ERh2n-vlpQ4',
+        videoSourceYouku: '',
         alternateBackgroundSource: 'SlbKrVjOBjw',
         aspectRatio: 0.56,
         startTime: 15,
@@ -513,6 +595,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'tAyusRT3ZDQ',
+        videoSourceYouku: 'XNDM4NjcxMjQwNA',
         alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72
@@ -528,6 +611,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: null,
+        videoSourceYouku: null,
         aspectRatio: 0.56
       }
     },
