@@ -329,6 +329,10 @@ $(function() {
     //var isIOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
     function startFullScreenYoukuPlayer() {
+      // youku video not yet available
+      if (!videoSource || videoSource === '') {
+        return false;
+      }
 
       fullscreenYoukuPlayer = new YKU.Player(fullScreenVideoElementId, {
         client_id: '44503cca1be605b5',
@@ -347,6 +351,7 @@ $(function() {
         closeFullScreen();
       })
 
+      return true;
     }
 
     function stopFullScreenYoukuPlayer() {
@@ -475,19 +480,22 @@ $(function() {
     callHandleVideoResize();
 
     $('#' + videoButtonId).click(function() {
+      if (fullYoutubePlayer) {
+        fullYoutubePlayer.play();
+      }
+      // Chinese Youku player
+      else {
+        var youkuVideoConfigured = startFullScreenYoukuPlayer();
+        if (!youkuVideoConfigured)
+          return;
+      }
+
       var el = document.getElementById(fullScreenVideoElementId)
       el.classList.remove('d-none')
       if (bgElementIsVideo && bgPlayer) {
         bgPlayer.seek(0);
       }
 
-      if (fullYoutubePlayer) {
-        fullYoutubePlayer.play();
-      }
-      // Chinese Youku player
-      else {
-        startFullScreenYoukuPlayer();
-      }
       goFullscreen();
     });
   }
@@ -497,7 +505,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'aanKtnkWP8U',
-        videoSourceYouku: 'XNDM4NjcxMjQwNA',
+        videoSourceYouku: '',
         alternateBackgroundSource: 'GM8q0Cjzed4',
         aspectRatio: 0.42,
         loopTime: 69, // loop time in seconds
@@ -505,7 +513,7 @@ $(function() {
       // Input other localisation videos this way 
       // 'zh_Hans' : {
       //   videoSource: 'aanKtnkWP8U',
-      //   videoSourceYouku: 'XNDM4NjcxMjQwNA',
+      //   videoSourceYouku: '',
       //   aspectRatio: 0.42,
       //   loopTime: 70
       // }
@@ -555,7 +563,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'e70bvBw1oOo',
-        videoSourceYouku: 'XNDM4NjcxMjQwNA',
+        videoSourceYouku: '',
         aspectRatio: 0.56,
         startTime: 5
       }
@@ -570,7 +578,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'ERh2n-vlpQ4',
-        videoSourceYouku: 'XNDM4NjcxMjQwNA',
+        videoSourceYouku: '',
         alternateBackgroundSource: 'SlbKrVjOBjw',
         aspectRatio: 0.56,
         startTime: 15,
