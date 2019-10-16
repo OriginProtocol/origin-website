@@ -401,9 +401,9 @@ def video(video_slug):
         return render_template('404.html'), 404
 
     video=videoList[0]
-    g.metadata['image'] = 'https://www.originprotocol.com/static/img/videos/' + video['hash'] + '.png'
+    g.metadata['image'] = 'https://www.originprotocol.com/static/img/videos/' + video['hash'] + '.jpg'
     g.metadata['title'] = video['title']
-    g.metadata['url'] = 'https://www.originprotocol.com/en/video/' + video['slug']
+    g.metadata['url'] = 'https://www.originprotocol.com/video/' + video['slug']
     return render_template('video.html', featured_videos=featured_videos, video=video)
 
 @app.route('/videos', strict_slashes=False)
