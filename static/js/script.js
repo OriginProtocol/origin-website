@@ -271,15 +271,22 @@ $(function() {
       return;
     }
 
+    let videoPageVideoSource;
+    if (!bgElementIsVideo) {
+      const videoElement = $('#video-page-video');
+      videoPageVideoSource = isChineseLanguage ? videoElement.attr('data-video-source-zh') : videoElement.attr('data-video-source');
+    }
+
     let posterImageHolder
     let posterImage
     // if poster image is used populate it and pass it to resize function
     if (videoPosterId) {
-      posterImageHolder = document.getElementById(videoPosterId)
-      posterRelativeHolder = createElement('div', { class: 'video-overlay-poster-relative' })
-      posterImage = createElement('img', { src: `/static/img/videos/${currentVideoSource.videoSource}_poster_image.png` })
-      posterImageHolder.appendChild(posterRelativeHolder)
-      posterRelativeHolder.appendChild(posterImage)
+      posterImageHolder = document.getElementById(videoPosterId);
+      posterRelativeHolder = createElement('div', { class: 'video-overlay-poster-relative' });
+      let posterImageSrc = `/static/img/videos/${!bgElementIsVideo ? videoPageVideoSource : currentVideoSource.videoSource}_poster_image.png`;
+      posterImage = createElement('img', { src: posterImageSrc });
+      posterImageHolder.appendChild(posterRelativeHolder);
+      posterRelativeHolder.appendChild(posterImage);
     }
 
     if (bgElementIsVideo && !isChineseLanguage) {
@@ -314,8 +321,7 @@ $(function() {
       
     // video source is stored in data-video-source(-zh) property on video page
     if (!bgElementIsVideo) {
-      const videoElement = $('#video-page-video')
-      videoSource = isChineseLanguage ? videoElement.attr('data-video-source-zh') : videoElement.attr('data-video-source');
+      videoSource = videoPageVideoSource;
     }
 
     var fullYoutubePlayer
@@ -617,7 +623,8 @@ $(function() {
     },
     videoButtonId: 'video-page-video-button',
     fullScreenVideoElementId: 'video-page-video',
-    bgElementIsVideo: false
+    bgElementIsVideo: false,
+    videoPosterId: 'videos-video-poster'
   })
 });
 
