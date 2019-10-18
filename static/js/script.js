@@ -283,8 +283,12 @@ $(function() {
     if (videoPosterId) {
       posterImageHolder = document.getElementById(videoPosterId);
       posterRelativeHolder = createElement('div', { class: 'video-overlay-poster-relative' });
-      let posterImageSrc = `/static/img/videos/${!bgElementIsVideo ? videoPageVideoSource : currentVideoSource.videoSource}_poster_image.png`;
-      posterImage = createElement('img', { src: posterImageSrc });
+      let posterImgSrc = videoPageVideoSource;
+      if (bgElementIsVideo) {
+        posterImgSrc = currentVideoSource.posterImageOverride ? currentVideoSource.posterImageOverride : currentVideoSource.videoSource;
+      }
+      posterImgSrc = `/static/img/videos/${posterImgSrc}.jpg`;
+      posterImage = createElement('img', { src: posterImgSrc });
       posterImageHolder.appendChild(posterRelativeHolder);
       posterRelativeHolder.appendChild(posterImage);
     }
@@ -512,6 +516,7 @@ $(function() {
       'default': {
         videoSource: 'aanKtnkWP8U',
         videoSourceYouku: '',
+        posterImageOverride: 'aanKtnkWP8U_poster_image',
         alternateBackgroundSource: 'GM8q0Cjzed4',
         aspectRatio: 0.42,
         loopTime: 69, // loop time in seconds
@@ -537,6 +542,7 @@ $(function() {
         videoSource: 'tAyusRT3ZDQ',
         videoSourceYouku: 'XNDM4NjcxMjQwNA',
         alternateBackgroundSource: 'hT4SlNP_iNY',
+        posterImageOverride: 'tAyusRT3ZDQ_poster_image',
         aspectRatio: 0.56,
         startTime: 72,
         loopTime: 120
@@ -570,6 +576,7 @@ $(function() {
       'default': {
         videoSource: 'e70bvBw1oOo',
         videoSourceYouku: '',
+        posterImageOverride: 'e70bvBw1oOo_poster_image',
         aspectRatio: 0.56,
         startTime: 5
       }
@@ -586,9 +593,9 @@ $(function() {
         videoSource: 'ERh2n-vlpQ4',
         videoSourceYouku: '',
         alternateBackgroundSource: 'SlbKrVjOBjw',
+        posterImageOverride: '5zsz1wUFmps_poster_image',
         aspectRatio: 0.56,
-        startTime: 15,
-        loopTime: 117
+        startTime: 0
       }
     },
     videoButtonId: 'team-video-button',
@@ -602,6 +609,7 @@ $(function() {
       'default': {
         videoSource: 'tAyusRT3ZDQ',
         videoSourceYouku: 'XNDM4NjcxMjQwNA',
+        posterImageOverride: 'tAyusRT3ZDQ_poster_image',
         alternateBackgroundSource: 'hT4SlNP_iNY',
         aspectRatio: 0.56,
         startTime: 72
