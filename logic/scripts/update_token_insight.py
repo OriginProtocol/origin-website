@@ -27,6 +27,10 @@ meta_tx_purse = '0x5fabfc823e13de8f1d138953255dd020e2b3ded0'
 # start tracking a wallet address
 def add_contact(address, **kwargs):
 
+	# nothing to do here, bail
+	if not address:
+		return False
+		
 	address = address.strip()
 
 	# must look like an ETH address
