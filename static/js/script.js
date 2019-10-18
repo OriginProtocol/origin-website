@@ -272,9 +272,11 @@ $(function() {
     }
 
     let videoPageVideoSource;
+    let videoPageVideoSourceEn;
     if (!bgElementIsVideo) {
       const videoElement = $('#video-page-video');
       videoPageVideoSource = isChineseLanguage ? videoElement.attr('data-video-source-zh') : videoElement.attr('data-video-source');
+      videoPageVideoSourceEn = videoElement.attr('data-video-source')
     }
 
     let posterImageHolder
@@ -283,7 +285,7 @@ $(function() {
     if (videoPosterId) {
       posterImageHolder = document.getElementById(videoPosterId);
       posterRelativeHolder = createElement('div', { class: 'video-overlay-poster-relative' });
-      let posterImgSrc = videoPageVideoSource;
+      let posterImgSrc = videoPageVideoSourceEn;
       if (bgElementIsVideo) {
         posterImgSrc = currentVideoSource.posterImageOverride ? currentVideoSource.posterImageOverride : currentVideoSource.videoSource;
       }
@@ -515,7 +517,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'aanKtnkWP8U',
-        videoSourceYouku: '',
+        videoSourceYouku: 'XNDM5NzQ0NTEwMA',
         posterImageOverride: 'aanKtnkWP8U_poster_image',
         alternateBackgroundSource: 'GM8q0Cjzed4',
         aspectRatio: 0.42,
@@ -591,7 +593,7 @@ $(function() {
     videoSources: {
       'default': {
         videoSource: 'ERh2n-vlpQ4',
-        videoSourceYouku: '',
+        videoSourceYouku: 'XNDM5NDQ3NjM1Mg',
         alternateBackgroundSource: 'SlbKrVjOBjw',
         posterImageOverride: '5zsz1wUFmps_poster_image',
         aspectRatio: 0.56,
