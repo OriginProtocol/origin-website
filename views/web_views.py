@@ -217,7 +217,7 @@ def unsubscribe():
     feedback = mailing_list.unsubscribe(email)
     mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
-    return redirect('/', code=302)
+    return redirect('/en/', code=302)
 
 @app.route('/social-stats', methods=['GET'], strict_slashes=False)
 @app.route('/<lang_code>/social-stats', methods=['GET'], strict_slashes=False)
