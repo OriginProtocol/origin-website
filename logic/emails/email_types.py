@@ -14,12 +14,12 @@ EMAILS = {
     'welcome1': {
         'subject': 'Thanks for joining Origin Protocol'
     },
-    'welcome2': {
-        'subject': 'Getting started with decentralized applications'
-    },
-    'welcome3': {
-        'subject': 'Welcome to the Origin marketplace'
-    },
+    # 'welcome2': {
+    #     'subject': 'Getting started with decentralized applications'
+    # },
+    # 'welcome3': {
+    #     'subject': 'Welcome to the Origin marketplace'
+    # },
     # 'welcome4': {
     #     'subject': 'Making your first purchase on Origin'
     # },
@@ -106,13 +106,13 @@ def send_welcome_drips():
     EL = db_models.EmailList
     db_users = EL.query.filter(EL.unsubscribed == False)
 
-    db_users_2_days = db_users.filter(EL.created_at <= time_.days_before_now(1)).filter(EL.created_at > time_.days_before_now(2))
-    for row in db_users_2_days:
-        send_email_type('welcome2', DEFAULT_SENDER, row.email)
+    # db_users_2_days = db_users.filter(EL.created_at <= time_.days_before_now(1)).filter(EL.created_at > time_.days_before_now(2))
+    # for row in db_users_2_days:
+    #     send_email_type('welcome2', DEFAULT_SENDER, row.email)
 
-    db_users_3_days = db_users.filter(EL.created_at <= time_.days_before_now(2)).filter(EL.created_at > time_.days_before_now(3))
-    for row in db_users_3_days:
-        send_email_type('welcome3', DEFAULT_SENDER, row.email)
+    # db_users_3_days = db_users.filter(EL.created_at <= time_.days_before_now(2)).filter(EL.created_at > time_.days_before_now(3))
+    # for row in db_users_3_days:
+    #     send_email_type('welcome3', DEFAULT_SENDER, row.email)
 
     # TODO: let's try the initial 3 emails out first before adding these to the campaign
     # db_users_4_days = db_users.filter(EL.created_at <= time_.days_before_now(3)).filter(EL.created_at > time_.days_before_now(4))
