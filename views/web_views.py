@@ -259,21 +259,21 @@ def developers():
         # first day of a year to second Sunday in March
         DatetimeRange(
             datetime(year=year, month=1, day=1),
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 2)),
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
         ),
         # second Sunday in March to last Sunday in March
         DatetimeRange(
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 2)),
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
             datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1))
         ),
         # last Sunday in March to first Sunday in April
         DatetimeRange(
             datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1)),
-            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 1))
+            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0))
         ),
         # first Sunday in April last Sunday in September
         DatetimeRange(  
-            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 1)),
+            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0)),
             datetime(year=year, month=9, day=sundayInMonthToDay(year, 9, -1))
         ),
         # last Sunday in September to last Sunday in October
@@ -284,11 +284,11 @@ def developers():
         # last Sunday in October to first Sunday in November
         DatetimeRange(
             datetime(year=year, month=10, day=sundayInMonthToDay(year, 10, -1)),
-            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 1))
+            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0))
         ),
         # first Sunday in November to the end of the year
         DatetimeRange(
-            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 1)),
+            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0)),
             datetime(year=year, month=12, day=31)
         )
     ]
