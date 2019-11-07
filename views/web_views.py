@@ -86,6 +86,11 @@ def apple_app_site_association():
 def mobile():
     return render_template('mobile.html')
 
+@app.route('/singles', strict_slashes=False)
+@app.route('/<lang_code>/singles', strict_slashes=False)
+def singles():
+    return render_template('singles.html')
+
 @app.route('/mobile/apk', strict_slashes=False)
 @app.route('/<lang_code>/mobile/apk', strict_slashes=False)
 def mobile_apk():
@@ -471,6 +476,7 @@ def assets_all_styles():
         "static/css/pages/team.css",
         "static/css/pages/token.css",
         "static/css/pages/product.css",
+        "static/css/pages/singles.css",
         "static/css/pages/mobile.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",

@@ -1,0 +1,228 @@
+.singles-page {
+  background-color: #007cff;
+}
+
+.singles-page .screen-size-segment.white-section,
+.singles-page .screen-size-segment.blue-section {
+  max-height: 740px;
+  height: 100vh;
+}
+
+.singles-page .singles-title-section .row,
+.singles-page .singles-title-section .container {
+  height: 100%;
+}
+
+.singles-page .singles-title-section {
+  background-image: url('/static/img/singles/header-graphic.svg');
+  background-repeat: no-repeat;
+  background-position: right 108%;  
+  background-size: auto 70%;
+}
+
+.singles-page .singles-title-section .wallets {
+  margin-top: 26px;
+  width: 100%;
+}
+
+.singles-page .singles-title-section .wallets img:first-child {
+  margin-right: 36px;
+  width: 153px;
+}
+
+.singles-page .singles-title-section .wallets img:second-child {
+  width: 136px;
+}
+
+.singles-page h1 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #061d2a;
+}
+
+.singles-page .singles-title-section h2.title {
+  font-size: 36px;
+  font-weight: normal;
+  text-align: left;
+  color: white;
+}
+
+.singles-page .singles-title-section h1.title.big {
+  text-align: left;
+  font-size: 88px;
+  margin-top: 160px;
+  font-weight: 600;
+  color: white;
+}
+
+.singles-page .explanation-section {
+  font-size: 18px;
+  color: #061d2a;
+  font-weight: normal;
+}
+
+.singles-page .explanation-section .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.singles-page .explanation-section .container {
+  max-width: 886px;
+}
+
+.singles-page .explanation-section .text-block {
+  margin-bottom: 55px;
+}
+
+.singles-page .explanation-section .text-block-holder {
+  padding-bottom: 100px;
+}
+
+.singles-page .explanation-section ol {
+  padding-left: 30px;
+}
+
+.singles-page .explanation-section ol li {
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
+.singles-page .items-section .item img {
+  max-width: 190px;
+}
+
+.singles-page .items-section .item {
+  font-size: 18px;
+  color: #061d2a;
+  font-weight: normal;
+  max-width: 200px;
+  margin: 0px 25px;
+}
+
+.singles-page .items-section .item .item-name {
+  font-family: Poppins;
+  margin-top: 28px;
+}
+
+.singles-page .items-section .item .item-price {
+  font-family: Lato;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+.singles-page .items-section .item .item-desc {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #345d7a;
+  margin-top: 21px;
+}
+
+.singles-page .items-section .item .item-link {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.singles-page .items-section .white-button-blue-border {
+  margin-top: 69px;
+  margin-bottom: 27px;
+}
+
+.singles-page .info-box-section .holder {
+  padding: 100px 0px;
+}
+
+.singles-page .info-box-section .holder p {
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #061d2a;
+  padding-bottom: 14px;
+}
+
+.singles-page .info-box-section .holder .item {
+  margin: 0px 24px;
+  max-width: 275px;
+}
+
+.singles-page .info-box-section .holder img {
+  margin-bottom: 37px;
+}
+
+@media (max-width: 992px) {
+  .singles-page .singles-title-section {
+    background-position: 140% 105%;  
+    background-size: auto 52%;
+  }
+
+  .singles-page .explanation-section .text-block-holder {
+    padding-bottom: 55px;
+  }
+}
+
+@media (max-width: 767px) {
+  .singles-page .singles-title-section {
+    background-position: 58% 103%;  
+    background-size: auto 49%;
+  }
+
+  .singles-page .singles-title-section h2.title {
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .singles-page .singles-title-section h1.title.big {
+    font-size: 62px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .singles-page .singles-title-section .wallets {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
+  .singles-page .screen-size-segment.blue-section {
+    max-height: 570px;
+  }
+
+  .singles-page .explanation-section h1 {
+    margin-top: 40px;
+  }
+
+  .singles-page .explanation-section .container,
+  .singles-page .items-section .container,
+  .singles-page .info-box-section .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .singles-page .explanation-section .text-block {
+    margin-bottom: 35px;
+  }
+
+  .singles-page .items-section .item {
+    max-width: 190px;
+  }
+
+  .singles-page .items-section .white-button-blue-border {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .singles-page .info-box-section .holder {
+    padding: 70px 0px 0px 0px;
+  }
+
+  .singles-page .info-box-section .holder .item {
+    padding-bottom: 70px;
+  }
+} 
