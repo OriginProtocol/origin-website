@@ -136,7 +136,8 @@
                 }
                 // try to open app
                 var schemeUrl = _this.props.schemeUrl;
-                var url = schemeUrl + "?url=" + location.href;
+                //var url = schemeUrl + "?url=" + location.href;
+                var url = schemeUrl + "?url=https://shoporigin.com/#/search?q=slife2ori9imt174x";
                 if (isAndroid()) {
                     if (isChrome()) {
                         openByTagA(url);
@@ -228,8 +229,8 @@
         };
         OpenApp.prototype.renderTip = function () {
             this.tip = document.createElement('div');
-            var step1Text = isZh ? '1. ç‚¹å‡»æ›´å¤š' : '1. Click More';
-            var step2Text = isZh ? '2. è¯·é€‰æ‹©ã€Œåœ¨æµè§ˆå™¨ä¸­æ‰“å¼€ã€' : '2. Choose â€œOpen in Browserâ€';
+            var step1Text = isZh ? '1. 点击更多' : '1. Click More';
+            var step2Text = isZh ? '2. 请选择【在浏览器中打开】' : '2. Choose â€œOpen in Browserâ€';
             var styleContainner = "\n      position: fixed;\n      z-index: 10000;\n      top: 0;\n      right: 0;\n      left: 0;\n      bottom: 0;\n      background-color: rgba(35, 33, 71, 0.8);\n    ";
             var styleArrow = "\n      position: absolute;\n      top: -16px;\n      right: 6px;\n    ";
             var styleMore = "\n      position: absolute;\n      top: 70px;\n      right: 130px;\n      text-align: center;\n    ";
