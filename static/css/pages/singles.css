@@ -13,6 +13,18 @@
   height: 100%;
 }
 
+.singles-page .container.relative {
+  position:relative;
+}
+
+.singles-page .origin-logo {
+  position: absolute;
+  left: 30px;
+  top: 45px;
+  width: 108px;
+  z-index: 1;
+}
+
 .singles-page .singles-title-section {
   background-image: url('/static/img/singles/header-graphic.svg');
   background-repeat: no-repeat;
@@ -166,6 +178,11 @@
 }
 
 @media (max-width: 767px) {
+  .singles-page .origin-logo {
+    top: 35px;
+  }
+
+
   .singles-page .singles-title-section {
     background-position: 58% 103%;  
     background-size: auto 49%;
