@@ -112,14 +112,11 @@
             };
 
             this.shouldReplaceLinks = function () {
-                console.log("1")
                 if (isimToken()) {
-                    console.log("2")
                     return false;
                 }
 
                 if (isAndroid() || isiOS()) {
-                    console.log("3")
                     return true;
                 }
 
