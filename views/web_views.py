@@ -166,17 +166,20 @@ def join_mailing_list():
     if 'email' in request.form:
         email = request.form['email']
         # optional fields
-        first_name = request.form['first_name'] if 'first_name' in request.form else None
-        last_name = request.form['last_name'] if 'last_name' in request.form else None
-        full_name = ' '.join(filter(None, (first_name, last_name)))
+        full_name = request.form['name'] if 'name' in request.form else None
+        if not full_name:
+            first_name = request.form['first_name'] if 'first_name' in request.form else None
+            last_name = request.form['last_name'] if 'last_name' in request.form else None
+            full_name = ' '.join(filter(None, (first_name, last_name)))
         full_name = None if full_name == '' else full_name
         phone = request.form['phone'] if 'phone' in request.form else None
         dapp_user = 1 if 'dapp_user' in request.form else 0
+        investor = 1 if 'investor' in request.form else 0
         eth_address = request.form['eth_address'] if 'eth_address' in request.form else None
         print('updating mailing list. email: %s name: %s phone: %s eth_address: %s' % (email, full_name, phone, eth_address))
         if 'eth_address':
             print('adding to wallet insights')
-            insight.add_contact(address=eth_address, dapp_user=1, name=full_name, email=email, phone=phone)
+            insight.add_contact(address=eth_address, dapp_user=dapp_user, investor=investor, name=full_name, email=email, phone=phone)
         ip_addr = get_real_ip()
         feedback = mailing_list.send_welcome(email, ip_addr)
         mailing_list.add_sendgrid_contact(email=email, full_name=full_name, dapp_user=dapp_user)
