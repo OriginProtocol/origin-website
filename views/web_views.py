@@ -86,6 +86,11 @@ def apple_app_site_association():
 def mobile():
     return render_template('mobile.html')
 
+@app.route('/singles', strict_slashes=False)
+@app.route('/<lang_code>/singles', strict_slashes=False)
+def singles():
+    return render_template('singles.html')
+
 @app.route('/mobile/apk', strict_slashes=False)
 @app.route('/<lang_code>/mobile/apk', strict_slashes=False)
 def mobile_apk():
@@ -262,21 +267,21 @@ def developers():
         # first day of a year to second Sunday in March
         DatetimeRange(
             datetime(year=year, month=1, day=1),
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 2)),
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
         ),
         # second Sunday in March to last Sunday in March
         DatetimeRange(
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 2)),
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
             datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1))
         ),
         # last Sunday in March to first Sunday in April
         DatetimeRange(
             datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1)),
-            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 1))
+            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0))
         ),
         # first Sunday in April last Sunday in September
         DatetimeRange(  
-            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 1)),
+            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0)),
             datetime(year=year, month=9, day=sundayInMonthToDay(year, 9, -1))
         ),
         # last Sunday in September to last Sunday in October
@@ -287,11 +292,11 @@ def developers():
         # last Sunday in October to first Sunday in November
         DatetimeRange(
             datetime(year=year, month=10, day=sundayInMonthToDay(year, 10, -1)),
-            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 1))
+            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0))
         ),
         # first Sunday in November to the end of the year
         DatetimeRange(
-            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 1)),
+            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0)),
             datetime(year=year, month=12, day=31)
         )
     ]
@@ -474,6 +479,7 @@ def assets_all_styles():
         "static/css/pages/team.css",
         "static/css/pages/token.css",
         "static/css/pages/product.css",
+        "static/css/pages/singles.css",
         "static/css/pages/mobile.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",
@@ -497,7 +503,8 @@ def assets_all_javascript():
         "static/js/countdown-timer.js",
         "static/js/yt-player.js",
         "static/js/videos.js",
-        "static/js/youkuPlayer.js"
+        "static/js/youkuPlayer.js",
+        "static/js/wechat-redirect.js"
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)
