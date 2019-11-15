@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ gettext("Get Origin Protocol") }}{% endblock %}
+
+{% block meta_description %}{{ gettext("Get Origin Protocol") }}{% endblock %}
+
+{% block extra_styles %}
+<style type="text/css">
+  #app-download-button {
+    background: none;
+    /* tbd */
+    height: 90px;
+    width: 280px;
+    padding: 0;
+    border: 0;
+  }
+</style>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script>
+    const isIOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
+    const referalCode = 'op:{{ referalCode }}'
+
+    /**
+     * Copy a string to the clipboard
+     */
+    function codeToClipboard(code) {
+      if (false || navigator.clipboard) {
+        return navigator.clipboard.writeText(code)
+      }
+      // The hard way because it's a crap browser
+      return new Promise((resolve, reject) => {
+        const rng = document.createRange()
+        const sel = document.getSelection()
+        const tmp = document.createElement('span')
+        tmp.style.display = 'none'
+        tmp.textContent = code
+        document.body.appendChild(tmp)
+        rng.selectNodeContents(tmp)
+        sel.addRange(rng)
+        if (!document.execCommand('copy')) {
+          reject('Failed to execute copy of text')
+        }
+        document.body.removeChild(tmp)
+        resolve()
+      })
+    }
+
+    /**
+     * handle download button click and go to the appropriate download page
+     */
+    function downloadApp() {
+      let url = 'https://play.google.com/store/apps/details?id=com.origincatcher'
+      if (isIOS) {
+        url = 'https://apps.apple.com/us/app/origin-marketplace/id1446091928'
+      }
+      codeToClipboard(referalCode).then(() => {
+        const win = window.open(url)
+        // If we got snagged by a popup blocker(firefox) just go direct
+        if (!win) {
+          window.location = url
+        }
+      }).catch((err) => {
+        console.error('Problem copying code to clipboard')
+        console.error(err)
+        window.location = url
+      })
+      return false
+    }
+
+    /**
+     * Figure out which button to display
+     */
+    function detectButtion() {
+      const button = document.getElementById('app-download-button')
+      if (!button) {
+        console.warn('Did not find #app-download-button')
+        return
+      }
+      if (isIOS) {
+        console.log('ios')
+        button.style.backgroundImage = 'url(/static/img/app-store.svg)'
+      } else {
+        console.log('not-ios')
+        button.style.backgroundImage = 'url(/static/img/play-store.svg)'
+      }
+      button.style.backgroundRepeat = 'no-repeat'
+      button.style.height = '100px'
+      button.style.width = '280px'
+      console.log('setting backgroundImage to: ', button.style.backgroundImage)
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      detectButtion()
+    })
+  </script>
+{% endblock %}
+
+{% block content %}
+
+<main class="partner-campaign-page">
+  <div id="partner-campaign-header">
+    <div class="origin-logo"><a href="/"><img src="/static/img/origin-logo-dark@3x.png" alt="Origin" /></a></div>
+    <div class="partner-logo"><img src="{{ partner.logo }}" alt="{{ partner.name }}" /></div>
+  </div>
+  <section>
+    <p>Get Origin Marketplace & earn</p>
+  </section>
+  <section>
+    <p>{{ reward.value }} tokens</p>
+  </section>
+  <section>
+    <p>Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone.</p>
+  </section>
+  <section>
+    <p><button id="app-download-button" onclick="downloadApp()">[Download Graphic Button]</button></p>
+  </section>
+  <section>
+    <p>[Screenshot Graphic 1]</p>
+  </section>
+  <section>
+    <h2>What are Origin Rewards?</h2>
+    <p>Rent a home, buy concert tickets, or hire a contractor on Origin, the world’s first marketplace and crypto wallet all-in-one app.</p>
+  </section>
+  <section>
+    <p>[Screenshot Graphic 2]</p>
+  </section>
+</main>
+
+{% endblock %}
