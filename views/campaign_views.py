@@ -1,11 +1,15 @@
 import os.path
 import json
+from datetime import datetime, timedelta
 from flask import url_for, render_template
 
 from app import app
 
 MAX_FILE_SIZE = 1024*20  # 20KB
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+CACHED_CONFIG = None
+CONFIG_CACHE_TIME = None
+CACHE_DURATION = timedelta(minutes=5)
 
 
 def generic_response(status_code):
@@ -29,25 +33,36 @@ def load_campaign(code):
       "referalCode": "samsung2019abc"
     }
     """
-    conf_file = os.path.join(ROOT, 'partnerconf', '%s.json' % code)
+    global CACHED_CONFIG, CONFIG_CACHE_TIME, CACHE_DURATION
 
-    if not os.path.isfile(conf_file):
-        return None
+    # Load config if it hasn't already or cache is expired
+    if CACHED_CONFIG is None or (
+        CONFIG_CACHE_TIME is None
+        or CONFIG_CACHE_TIME - CACHE_DURATION > datetime.now()
+    ):
+        conf_file = os.path.join(ROOT, 'static', 'partnerconf', 'campaigns.json')
 
-    config_string = ""
+        print 'conf_file', conf_file
 
-    with open(conf_file) as fil:
-        config_string = fil.read(MAX_FILE_SIZE)
+        if not os.path.isfile(conf_file):
+            return None
 
-    if not config_string:
-        return None
+        config_string = ""
 
-    config = None
-    try:
-        config = json.loads(config_string)
-    except Exception:
-        pass
-    return config
+        with open(conf_file) as fil:
+            config_string = fil.read(MAX_FILE_SIZE)
+        print 'config_string', config_string
+        if not config_string:
+            return None
+
+        CACHED_CONFIG = None
+        try:
+            CACHED_CONFIG = json.loads(config_string)
+        except Exception:
+            pass
+        print 'config', CACHED_CONFIG
+
+    return CACHED_CONFIG.get(code)
 
 
 @app.context_processor
@@ -55,7 +70,7 @@ def campaign_context():
     """ template context processors """
     def url(req, **kwargs):
         """ Add a function url() to make building URLs for views easier """
-        if req.url_rule.endpoint:
+        if req.url_rule and req.url_rule.endpoint:
             endpoint = req.url_rule.endpoint
         elif req.path != '/':
             endpoint = req.path
@@ -63,7 +78,8 @@ def campaign_context():
             endpoint = 'index'
 
         view_args = {}
-        view_args.update(req.view_args)
+        if view_args:
+            view_args.update(req.view_args)
         view_args.update(kwargs)
 
         return url_for(endpoint, **view_args)
@@ -87,5 +103,6 @@ def partner(partner_code):
 
     return render_template(
         'partner_campaign.html',
+        referal_code=partner_code,
         **conf
     )
