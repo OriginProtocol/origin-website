@@ -1,7 +1,7 @@
 import os.path
 import json
 from datetime import datetime, timedelta
-from flask import url_for, render_template
+from flask import render_template
 
 from app import app
 
@@ -63,27 +63,6 @@ def load_campaign(code):
         print 'config', CACHED_CONFIG
 
     return CACHED_CONFIG.get(code)
-
-
-@app.context_processor
-def campaign_context():
-    """ template context processors """
-    def url(req, **kwargs):
-        """ Add a function url() to make building URLs for views easier """
-        if req.url_rule and req.url_rule.endpoint:
-            endpoint = req.url_rule.endpoint
-        elif req.path != '/':
-            endpoint = req.path
-        else:
-            endpoint = 'index'
-
-        view_args = {}
-        if view_args:
-            view_args.update(req.view_args)
-        view_args.update(kwargs)
-
-        return url_for(endpoint, **view_args)
-    return {'url': url}
 
 
 @app.route('/partner/<partner_code>', strict_slashes=False)
