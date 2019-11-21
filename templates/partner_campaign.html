@@ -326,18 +326,18 @@
   <div class="desktop-split clearfix">
     <div class="float-desktop">
       <section id="tagline">
-        <p>Get Origin Marketplace & earn</p>
+        <p>{{ gettext("Get Origin Marketplace & earn") }}</p>
       </section>
       <hr />
       <section id="callout">
-        <p><span class="value">{{ reward.value }}</span> Origin Tokens</p>
+        <p><span class="value">{{ reward.value }}</span> {{ gettext("Origin Tokens") }}</p>
       </section>
       <hr />
       <section id="intro">
-        <p>Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone.</p>
+        <p>{{ gettext("Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone.") }}</p>
       </section>
       <section id="download" class="hidden-desktop">
-        <button id="app-download-button" onclick="downloadApp()">[Download Graphic Button]</button>
+        <button id="app-download-button" onclick="downloadApp()"></button>
       </section>
       <section class="qrcode-wrapper hidden-mobile">
         <div id="qrcode1"></div>
@@ -346,7 +346,7 @@
     </div>
     <div class="float-desktop">
       <section id="download">
-        <button id="app-download-button" onclick="downloadApp()">[Download Graphic Button]</button>
+        <button id="app-download-button" onclick="downloadApp()"></button>
       </section>
       <section id="screenshot1">
         <img class="hidden-desktop" src="/static/img/partner/iphone-1.png" />
@@ -365,8 +365,8 @@
     </div>
     <div class="float-desktop">
       <section id="rewards">
-        <h2>What are Origin Rewards?</h2>
-        <p>Rent a home, buy concert tickets, or hire a contractor on Origin, the world’s first marketplace and crypto wallet all-in-one app.</p>
+        <h2>{{ gettext("What are Origin Rewards?") }}</h2>
+        <p>{{ gettext("Rent a home, buy concert tickets, or hire a contractor on Origin, the world’s first marketplace and crypto wallet all-in-one app.") }}</p>
       </section>
       <section id="screenshot2" class="hidden-desktop">
         <img src="/static/img/partner/iphone-2.png" />
@@ -379,17 +379,10 @@
       </section>
       <section class="qrcode-wrapper hidden-mobile">
         <div id="qrcode2"></div>
-        <p>Scan to install our app</p>
+        <p>{{ gettext("Scan to install our app") }}</p>
       </section>
     </div>
   </div>
-  <section id="testing">
-    testing button
-    <p>
-      <button id="test-button">COPY TO CLIPBOARD</button>
-      <input />
-    </p>
-  </section>
 </main>
 
 {% endblock %}

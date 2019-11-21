@@ -51,7 +51,7 @@ def load_campaign(code):
 
         with open(conf_file) as fil:
             config_string = fil.read(MAX_FILE_SIZE)
-        print 'config_string', config_string
+
         if not config_string:
             return None
 
@@ -60,7 +60,6 @@ def load_campaign(code):
             CACHED_CONFIG = json.loads(config_string)
         except Exception:
             pass
-        print 'config', CACHED_CONFIG
 
     return CACHED_CONFIG.get(code)
 
@@ -71,13 +70,11 @@ def partner(partner_code):
     """ Display partner onboarding page directing users to mobile download """
 
     if not partner_code:
-        print 'no code'
         return generic_response(404)
 
     conf = load_campaign(partner_code)
 
     if not conf:
-        print 'no config'
         return generic_response(404)
 
     return render_template(
