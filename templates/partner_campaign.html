@@ -198,7 +198,7 @@
   <script>
     const isIOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
     const referalCode = 'op:{{ referal_code }}'
-    const me = `https://www.originprotocol.com/partner/{{ referal_code }}`
+    const me = `${location.origin}/partner/{{ referal_code }}`
 
     const qrOptions = {
       text: me,
@@ -256,9 +256,9 @@
      * handle download button click and go to the appropriate download page
      */
     function downloadApp() {
-      let url = 'https://play.google.com/store/apps/details?id=com.origincatcher'
+      let url = '{{ play_store_url }}'
       if (isIOS) {
-        url = 'https://apps.apple.com/us/app/origin-marketplace/id1446091928'
+        url = '{{ app_store_url }}'
       }
       codeToClipboard(referalCode).then(() => {
         const win = window.open(url)
@@ -271,7 +271,6 @@
         console.error(err)
         window.location = url
       })
-      return false
     }
 
     /**

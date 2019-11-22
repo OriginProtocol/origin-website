@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from flask import render_template
 
 from app import app
+from config import universal
 
 MAX_FILE_SIZE = 1024*20  # 20KB
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -80,5 +81,7 @@ def partner(partner_code):
     return render_template(
         'partner_campaign.html',
         referal_code=partner_code,
+        app_store_url=universal.IOS_URL,
+        play_store_url=universal.ANDROID_URL,
         **conf
     )
