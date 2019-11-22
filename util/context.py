@@ -1,3 +1,4 @@
+import werkzeug
 from flask import url_for
 
 
@@ -19,5 +20,8 @@ def create_contexts(app):
                 view_args.update(req.view_args)
             view_args.update(kwargs)
 
-            return url_for(endpoint, **view_args)
+            try:
+                return url_for(endpoint, **view_args)
+            except werkzeug.routing.BuildError:
+                return url_for('index', **view_args)
         return {'url': url}
