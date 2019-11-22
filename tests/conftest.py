@@ -6,8 +6,14 @@ from app import app as flask_app
 from database import db as _db
 from config import constants
 
+from util.context import create_contexts
+
 # importing to register views
 from views import web_views # noqa
+from views import campaign_views # noqa
+
+
+create_contexts(flask_app)
 
 
 class TestConfig(object):

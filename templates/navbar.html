@@ -56,7 +56,7 @@
               {% if CURRENT_LANGUAGE == language[0] %}
                 <a class="nav-link selected">{{ language[1] }}</a>
               {% else %}
-                <a class="nav-link" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0], video_slug=single_video_slug if single_video_slug else "none", filename=filename if filename else "none") }}">{{ language[1] }}</a>
+                <a class="nav-link" href="{{ url(request, lang_code=language[0]) }}">{{ language[1] }}</a>
               {% endif %}
             </div>
             {% endfor %}
@@ -93,7 +93,7 @@
                 {% if CURRENT_LANGUAGE == language[0] %}
                   <div class="dropdown-item-selected">{{ language[1] }}</div>
                 {% else %}
-                  <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0], video_slug=single_video_slug if single_video_slug else "none", filename=filename if filename else "none") }}">{{ language[1] }}</a>
+                  <a class="dropdown-item" href="{{ url(request, lang_code=language[0]) }}">{{ language[1] }}</a>
                 {% endif %}
               {% endfor %}
             </div>
