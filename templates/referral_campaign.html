@@ -232,7 +232,6 @@
 
 {% block extra_scripts %}
   <script src="/static/js/qrcode.min.js" type="text/javascript"></script>
-  <script src="/static/js/growth.graphql.js" type="text/javascript"></script>
   <script>
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     const isIOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
@@ -376,12 +375,6 @@
       for (const el of values) {
         el.innerHTML = Number(el.innerHTML).toLocaleString()
       }
-
-      gquery(GROWTH_QUERIES.inviteInfo, {
-        inviteCode: referalCode
-      }, 'InviteInfo').then(dat => {
-        const { inviteInfo } = dat
-      })
     })
   </script>
 {% endblock %}
