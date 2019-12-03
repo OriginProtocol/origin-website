@@ -28,17 +28,19 @@
     border: 0;
   }
   #partner-campaign-header {
-    background: #fff;
     display: block;
+    /*background: #fff;
     width: 100%;
-    height: 90px;
+    height: 90px;*/
+    margin-top: 10px;
+    margin-left: 10px;
   }
   #partner-campaign-header .logo {
     display: block;
-    float: left;
+    /*float: left;
     text-align: center;
     width: 50%;
-    height: 90px;
+    height: 90px;*/
     margin: 10px 0;
     padding: 15px;
   }
@@ -50,14 +52,9 @@
   #partner-campaign-header .partner.logo {}
   #partner-campaign-header .origin.logo {}
   #tagline {
-    margin: 50px 25px 25px;
+    margin: 0 25px 25px;
   }
   #tagline p {
-
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 35px;
-    text-align: center;
   }
   #intro {}
   #intro p {
@@ -82,8 +79,8 @@
     text-align: center;
   }
   #app-download-button {
-    text-indent: -9999px;
     margin: 0 auto;
+    margin-bottom: 25px;
   }
   #rewards {
     font-family: Lato, sans-serif;
@@ -133,8 +130,38 @@
   }
   .desktop-split {}
   .float-desktop {}
+  .avatar-container {}
+  .avatar {
+    float: left;
+    height: 80px;
+    width: 80px;
+    border: 1px #fff solid;
+    border-radius: 40px;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+  }
+  .avatar img {
+    /*max-height: 80px;
+    max-width: 80px;*/
+  }
+  .avatar-container p {
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+    font-family: "Lato" sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: left;
+  }
 
   @media only screen and (min-width: 600px) {
+    .partner-campaign-page {
+      padding-bottom: 50px;
+      clear: both;
+    }
     #screenshot1 hr,
     #screenshot2 hr {
       display: none;
@@ -143,13 +170,22 @@
     #callout { font-size: 32px }
     #callout .value { font-size: 88px }
     #intro p { font-size: 18px; }
-    #partner-campaign-header .partner.logo { text-align: left; }
-    #partner-campaign-header .origin.logo { text-align: right; }
+    #partner-campaign-header {
+      margin-top: 100px;
+      margin-left: 30px;
+    }
+    #partner-campaign-header .origin.logo {}
 
     #screenshot1 img,
     #screenshot2 img,
     #screenshot2-desktop img { left: 75px; }
 
+    .avatar {
+      margin: 25px;
+    }
+    .avatar-container p {
+      padding-top: 30px;
+    }
     .qrcode-wrapper p {
       font-family: Lato, sans-serif;
       font-size: 14px;
@@ -176,6 +212,7 @@
       display: none;
     }
     .desktop-split {
+      clear: both;
       display: block;
       max-width: 1024px;
       margin: 0 auto;
@@ -196,9 +233,10 @@
 {% block extra_scripts %}
   <script src="/static/js/qrcode.min.js" type="text/javascript"></script>
   <script>
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     const isIOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
-    const referalCode = 'op:{{ referral_code }}'
-    const me = `${location.origin}/partner/{{ referral_code }}`
+    const referalCode = `{{ referral_code }}`
+    const me = `${location.origin}/referral/{{ referral_code }}`
 
     const qrOptions = {
       text: me,
@@ -215,7 +253,12 @@
      * Copy a string to the clipboard
      */
     function codeToClipboard(code) {
-      code = code || referalCode
+      if (!code) {
+        console.error('no code provided to copy to clipboard')
+        return
+      }
+      // Prefix it for mobile use
+      code = code.startsWith('or:') ? code : `or:${code}`
 
       // Use navigator.clipboard if available (cleaner)
       if (navigator.clipboard) {
@@ -240,7 +283,6 @@
 
         // Add the range to the selection
         sel.addRange(rng)
-        console.debug('selected: ', sel.getRangeAt(0).cloneContents())
 
         // Copy the text in the range
         const res = document.execCommand('copy')
@@ -255,58 +297,80 @@
     /**
      * handle download button click and go to the appropriate download page
      */
-    function downloadApp() {
-      let url = '{{ play_store_url }}'
-      if (isIOS) {
-        url = '{{ app_store_url }}'
-      }
-      codeToClipboard(referalCode).then(() => {
+    function continueReferral() {
+      if (isMobile) {
+        let url = '{{ play_store_url }}'
+        if (isIOS) {
+          url = '{{ app_store_url }}'
+        }
+        codeToClipboard(referalCode).then(() => {
+          const win = window.open(url)
+          // If we got snagged by a popup blocker(firefox) just go direct
+          if (!win) {
+            window.location = url
+          }
+        }).catch((err) => {
+          console.error('Problem copying code to clipboard')
+          console.error(err)
+          window.location = url
+        })
+      } else {
+        const url = `https://shoporigin.com/#/welcome/${referalCode}`
         const win = window.open(url)
         // If we got snagged by a popup blocker(firefox) just go direct
         if (!win) {
           window.location = url
         }
-      }).catch((err) => {
-        console.error('Problem copying code to clipboard')
-        console.error(err)
-        window.location = url
-      })
+      }
     }
 
     /**
      * Figure out which button to display
      */
-    function detectButton() {
+    function detectButton(code) {
+      if (!code) {
+        console.error('no code provided to detectButton')
+      }
+
       const button = document.getElementById('app-download-button')
       if (!button) {
         console.warn('Did not find #app-download-button')
         return
       }
-      if (isIOS) {
-        console.log('ios')
-        button.style.backgroundImage = 'url(/static/img/app-store.svg)'
+      if (isMobile) {
+        if (isIOS) {
+          console.log('ios')
+          button.style.backgroundImage = 'url(/static/img/app-store.svg)'
+        } else {
+          console.log('not-ios')
+          button.style.backgroundImage = 'url(/static/img/play-store.svg)'
+        }
       } else {
-        console.log('not-ios')
-        button.style.backgroundImage = 'url(/static/img/play-store.svg)'
+        button.innerHTML = 'Redeem on Desktop'
+        button.style.background = '#000'
+        button.style.color = '#fff'
+        button.style.fontSize = '22px'
+        button.style.fontWeight = 'bold'
+        button.style.borderRadius = '15px'
       }
       button.style.backgroundRepeat = 'no-repeat'
       button.style.height = '100px'
       button.style.width = '280px'
-      console.log('setting backgroundImage to: ', button.style.backgroundImage)
-
-      button.addEventListener('click', e => {
-        console.log('!!!!!')
-        codeToClipboard()
-      })
-      const testButton = document.getElementById('test-button')
-      testButton.addEventListener('click', e => {
-        console.log('!!!!!')
-        codeToClipboard().catch(err => console.error(err))
-      })
+      if (code) {
+        button.addEventListener('click', e => {
+          codeToClipboard(code)
+        })
+        const testButton = document.getElementById('test-button')
+        if (testButton) {
+          testButton.addEventListener('click', e => {
+            codeToClipboard(code).catch(err => console.error(err))
+          })
+        }
+      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      detectButton()
+      detectButton(referalCode)
       const values = document.getElementsByClassName('value')
       for (const el of values) {
         el.innerHTML = Number(el.innerHTML).toLocaleString()
@@ -318,34 +382,36 @@
 {% block content %}
 
 <main class="partner-campaign-page">
-  <div id="partner-campaign-header">
-    <div class="origin logo"><a href="/"><img src="/static/img/origin-logo-dark@3x.png" alt="Origin" /></a></div>
-    <div class="partner logo"><img src="{{ partner.logo }}" alt="{{ partner.name }}" /></div>
-  </div>
   <div class="desktop-split clearfix">
     <div class="float-desktop">
+      <div id="partner-campaign-header">
+        <div class="origin logo"><a href="/"><img src="/static/img/origin-logo@3x.png" alt="Origin" /></a></div>
+      </div>
       <section id="tagline">
-        <p>{{ gettext("Get Origin Marketplace & earn") }}</p>
+        <div class="avatar-container clearfix">
+          <div class="avatar" style="background-image: url({{ friend_avatar }})"></div>
+          <p class="avatar-text">{{ gettext("Your friend") }} {{ friend_name }} {{ gettext("has invited you to earn") }}</p>
+        </div>
       </section>
       <hr />
       <section id="callout">
-        <p><span class="value">{{ reward.value }}</span> {{ gettext("Origin Tokens") }}</p>
+        <p><span class="value">{{ reward_value }}</span> {{ gettext("Origin Tokens") }}</p>
       </section>
       <hr />
       <section id="intro">
         <p>{{ gettext("Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone.") }}</p>
       </section>
-      <section id="download" class="hidden-desktop">
-        <button id="app-download-button" onclick="downloadApp()"></button>
+      <section id="download">
+        <button id="app-download-button" onclick="continueReferral()"></button>
       </section>
       <section class="qrcode-wrapper hidden-mobile">
         <div id="qrcode1"></div>
-        <p>Scan to install our app</p>
+        <p>{{ gettext("Scan to install our mobile app") }}</p>
       </section>
     </div>
     <div class="float-desktop">
       <section id="download">
-        <button id="app-download-button" onclick="downloadApp()"></button>
+        <button id="app-download-button" onclick="continueReferral()"></button>
       </section>
       <section id="screenshot1">
         <img class="hidden-desktop" src="/static/img/partner/iphone-1.png" />
