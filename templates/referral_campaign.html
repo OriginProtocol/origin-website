@@ -327,9 +327,9 @@
     /**
      * Figure out which button to display
      */
-    function detectButtion(code) {
+    function detectButton(code) {
       if (!code) {
-        console.error('no code provided to detectButtion')
+        console.error('no code provided to detectButton')
       }
 
       const button = document.getElementById('app-download-button')
@@ -370,7 +370,7 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      detectButtion(referalCode)
+      detectButton(referalCode)
       const values = document.getElementsByClassName('value')
       for (const el of values) {
         el.innerHTML = Number(el.innerHTML).toLocaleString()
