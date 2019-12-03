@@ -504,7 +504,6 @@ def assets_all_javascript():
         "static/js/yt-player.js",
         "static/js/videos.js",
         "static/js/youkuPlayer.js",
-        "static/js/wechat-redirect.js"
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)
