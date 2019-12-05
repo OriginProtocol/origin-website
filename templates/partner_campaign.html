@@ -192,12 +192,10 @@
     /**
      * Copy a string to the clipboard
      */
-    function codeToClipboard(code) {
-      code = code || referralCode
-
+    function codeToClipboard() {
       // Use navigator.clipboard if available (cleaner)
       if (navigator.clipboard) {
-        return navigator.clipboard.writeText(code)
+        return navigator.clipboard.writeText(referralCode)
       }
 
       // The hard way because it's a crap browser
@@ -205,7 +203,7 @@
         // Create element
         const tmp = document.createElement('span')
         tmp.style.display = 'none'
-        tmp.textContent = code
+        tmp.textContent = referralCode
         document.body.appendChild(tmp)
 
         // Selection
@@ -238,7 +236,7 @@
       if (isIOS) {
         url = '{{ app_store_url }}'
       }
-      codeToClipboard(referralCode).then(() => {
+      codeToClipboard().then(() => {
         const win = window.open(url)
         // If we got snagged by a popup blocker(firefox) just go direct
         if (!win) {
@@ -278,13 +276,7 @@
       console.log('setting backgroundImage to: ', button.style.backgroundImage)
 
       button.addEventListener('click', e => {
-        console.log('!!!!!')
         codeToClipboard()
-      })
-      const testButton = document.getElementById('test-button')
-      testButton.addEventListener('click', e => {
-        console.log('!!!!!')
-        codeToClipboard().catch(err => console.error(err))
       })
     }
 

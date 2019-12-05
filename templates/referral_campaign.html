@@ -358,12 +358,6 @@
         button.addEventListener('click', e => {
           codeToClipboard(code)
         })
-        const testButton = document.getElementById('test-button')
-        if (testButton) {
-          testButton.addEventListener('click', e => {
-            codeToClipboard(code).catch(err => console.error(err))
-          })
-        }
       }
     }
 
