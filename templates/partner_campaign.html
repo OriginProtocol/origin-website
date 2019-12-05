@@ -202,6 +202,7 @@
       return new Promise((resolve, reject) => {
         // Create element
         const tmp = document.createElement('span')
+        tmp.contenteditable = 'true'
         tmp.style.display = 'none'
         tmp.textContent = referralCode
         document.body.appendChild(tmp)
