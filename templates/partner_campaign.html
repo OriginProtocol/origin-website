@@ -172,11 +172,13 @@
 {% endblock %}
 
 {% block extra_scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   <script src="/static/js/qrcode.min.js" type="text/javascript"></script>
   <script>
     const isIOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
     const referralCode = 'op:{{ referral_code }}'
     const me = `${location.origin}/partner/{{ referral_code }}`
+    const url = isIOS ? '{{ app_store_url }}' : '{{ play_store_url }}'
 
     const qrOptions = {
       text: me,
@@ -190,67 +192,6 @@
     const qrcode2 = new QRCode('qrcode2', qrOptions)
 
     /**
-     * Copy a string to the clipboard
-     */
-    function codeToClipboard() {
-      // Use navigator.clipboard if available (cleaner)
-      if (navigator.clipboard) {
-        return navigator.clipboard.writeText(referralCode)
-      }
-
-      // The hard way because it's a crap browser
-      return new Promise((resolve, reject) => {
-        // Create element
-        const tmp = document.createElement('span')
-        tmp.contenteditable = 'true'
-        tmp.style.display = 'none'
-        tmp.textContent = referralCode
-        document.body.appendChild(tmp)
-
-        // Selection
-        const sel = document.getSelection()
-        sel.removeAllRanges()
-
-        // Range
-        const rng = document.createRange()
-        rng.selectNodeContents(tmp)
-
-        // Add the range to the selection
-        sel.addRange(rng)
-        console.debug('selected: ', sel.getRangeAt(0).cloneContents())
-
-        // Copy the text in the range
-        const res = document.execCommand('copy')
-        document.body.removeChild(tmp)
-        if (!res) {
-          reject('Failed to execute copy of text')
-        }
-        resolve()
-      })
-    }
-
-    /**
-     * handle download button click and go to the appropriate download page
-     */
-    function downloadApp() {
-      let url = '{{ play_store_url }}'
-      if (isIOS) {
-        url = '{{ app_store_url }}'
-      }
-      codeToClipboard().then(() => {
-        const win = window.open(url)
-        // If we got snagged by a popup blocker(firefox) just go direct
-        if (!win) {
-          window.location = url
-        }
-      }).catch((err) => {
-        console.error('Problem copying code to clipboard')
-        console.error(err)
-        window.location = url
-      })
-    }
-
-    /**
      * Figure out which button to display
      */
     function detectButton() {
@@ -259,6 +200,22 @@
         console.warn('Did not find #app-download-button')
         return
       }
+
+      const clipboard = new ClipboardJS('#app-download-button')
+
+      clipboard.on('success', e => {
+        const opened = window.open(url)
+        // If we got snagged by a popup blocker(firefox) just go direct
+        if (!opened) {
+          window.location = url
+        }
+      })
+      clipboard.on('error', e => {
+        console.error('Problem copying code to clipboard')
+        console.error(e)
+        window.location = url
+      })
+
       button.style.backgroundRepeat = 'no-repeat'
       button.style.backgroundSize = 'cover'
       button.style.border = 'none'
@@ -324,7 +281,7 @@
             <p>{{ gettext("Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone.") }}</p>
           </section>
           <section id="download" class="d-md-none">
-            <button id="app-download-button" onclick="downloadApp()"></button>
+            <button id="app-download-button" data-clipboard-text="op:{{ referral_code }}"></button>
           </section>
           <section class="qrcode-wrapper d-none d-md-block">
             <div id="qrcode1"></div>

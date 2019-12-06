@@ -20,19 +20,26 @@
   }
   .referral-campaign-page .desktop {}
   #app-download-button {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 12px;
+    margin: 0 auto 50px;
+    width: 280px;
+  }
+  #desktop-signup-button {
     font-size: 1.125rem;
     width: 100%;
     border-radius: 26px;
     border: solid 1px var(--white);
     padding: 12px 0;
-    margin: 0 auto 50px;
+    margin: 0 auto;
     max-width: 350px;
     color: white;
     background-color: transparent;
     text-align: center;
-    visibility: hidden;
   }
-  #app-download-button:hover {
+  #desktop-signup-button:hover {
     background-color: #036ddd;
     cursor: pointer;
   }
@@ -147,9 +154,6 @@
       padding-bottom: 50px;
       clear: both;
     }
-    #app-download-button {
-      margin-bottom: 0;
-    }
     #screenshot1 {
       margin-top: 100px;
     }
@@ -227,13 +231,15 @@
 {% endblock %}
 
 {% block extra_scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   <script src="/static/js/qrcode.min.js" type="text/javascript"></script>
   <script>
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     const isIOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
-    const referalCode = `{{ referral_code }}`
-    const me = `${location.origin}/referral/{{ referral_code }}`
+    const rawCode = `{{ referral_code }}`
     const prefix = 'or:'
+    const referralCode = rawCode.startsWith(prefix) ? rawCode : `${prefix}${rawCode}`
+    const me = `${location.origin}/referral/{{ referral_code }}`
 
     const qrOptions = {
       text: me,
@@ -247,122 +253,65 @@
     const qrcode2 = new QRCode('qrcode2', qrOptions)
 
     /**
-     * Copy a string to the clipboard
+     * navigate to the DApp
      */
-    function codeToClipboard(code) {
-      if (!code) {
-        console.error('no code provided to copy to clipboard')
-        return
-      }
-      // Prefix it for mobile use
-      code = code.startsWith(prefix) ? code : `${prefix}${code}`
-
-      // Use navigator.clipboard if available (cleaner)
-      if (navigator.clipboard) {
-        return navigator.clipboard.writeText(code)
-      }
-
-      // The hard way because it's a crap browser
-      return new Promise((resolve, reject) => {
-        // Create element
-        const tmp = document.createElement('span')
-        tmp.style.display = 'none'
-        tmp.textContent = code
-        document.body.appendChild(tmp)
-
-        // Selection
-        const sel = document.getSelection()
-        sel.removeAllRanges()
-
-        // Range
-        const rng = document.createRange()
-        rng.selectNodeContents(tmp)
-
-        // Add the range to the selection
-        sel.addRange(rng)
-
-        // Copy the text in the range
-        const res = document.execCommand('copy')
-        document.body.removeChild(tmp)
-        if (!res) {
-          reject('Failed to execute copy of text')
-        }
-        resolve()
-      })
-    }
-
-    /**
-     * handle download button click and go to the appropriate download page
-     */
-    function continueReferral() {
-      if (isMobile) {
-        let url = '{{ play_store_url }}'
-        if (isIOS) {
-          url = '{{ app_store_url }}'
-        }
-        codeToClipboard(referalCode).then(() => {
-          const win = window.open(url)
-          // If we got snagged by a popup blocker(firefox) just go direct
-          if (!win) {
-            window.location = url
-          }
-        }).catch((err) => {
-          console.error('Problem copying code to clipboard')
-          console.error(err)
-          window.location = url
-        })
-      } else {
-        const url = `https://shoporigin.com/#/welcome/${referalCode}`
-        const win = window.open(url)
-        // If we got snagged by a popup blocker(firefox) just go direct
-        if (!win) {
-          window.location = url
-        }
+    function signUpOnDesktop() {
+      const url = `https://shoporigin.com/#/welcome/${referralCode}`
+      const win = window.open(url)
+      // If we got snagged by a popup blocker(firefox) just go direct
+      if (!win) {
+        window.location = url
       }
     }
 
     /**
      * Figure out which button to display
      */
-    function detectButton(code) {
-      if (!code) {
-        console.error('no code provided to detectButton')
-      }
-
+    function detectButton() {
       const button = document.getElementById('app-download-button')
       if (!button) {
         console.warn('Did not find #app-download-button')
         return
       }
-      button.style.visibility = 'visible'
-      if (isMobile) {
-        button.style.backgroundRepeat = 'no-repeat'
-        button.style.backgroundSize = 'cover'
-        button.style.border = 'none'
-        button.style.borderRadius = '12px'
-        button.style.width = '280px'
-        if (isIOS) {
-          console.log('ios')
-          button.style.backgroundImage = 'url(/static/img/app-store.svg)'
-          button.style.height = `${280 / 3}px`
-        } else {
-          console.log('not-ios')
-          button.style.backgroundImage = 'url(/static/img/play-store.svg)'
-          button.style.height = `${280 / 3.33}px`
-        }
-      } else {
-        button.innerHTML = 'Earn From Desktop'
-      }
 
-      if (code) {
-        button.addEventListener('click', e => {
-          codeToClipboard(code)
-        })
+      if (isIOS) {
+        console.log('ios')
+        button.style.backgroundImage = 'url(/static/img/app-store.svg)'
+        button.style.height = `${280 / 3}px`
+      } else {
+        console.log('not-ios')
+        button.style.backgroundImage = 'url(/static/img/play-store.svg)'
+        button.style.height = `${280 / 3.33}px`
       }
     }
 
+    function initClipboard() {
+      const clipboard = new ClipboardJS('#app-download-button', {
+        text: trigger => {
+          return referralCode
+        }
+      })
+      const url = isIOS ? '{{ app_store_url }}' : '{{ play_store_url }}'
+
+      clipboard.on('success', e => {
+        const opened = window.open(url)
+        // If we got snagged by a popup blocker(firefox) just go direct
+        if (!opened) {
+          window.location = url
+        }
+      })
+      clipboard.on('error', e => {
+        console.error('Problem copying code to clipboard')
+        console.error(e)
+        window.location = url
+      })
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
-      detectButton(referalCode)
+      isMobile && detectButton()
+
+      initClipboard()
+
       const values = document.getElementsByClassName('value')
       for (const el of values) {
         el.innerHTML = Number(el.innerHTML).toLocaleString()
@@ -400,7 +349,8 @@
         </section>
         <p id="conjunction" class="d-none d-md-block mb-2 mt-2 text-center">{{ gettext("or") }}</p>
         <section id="download">
-          <button id="app-download-button" onclick="continueReferral()"></button>
+          <button id="app-download-button" class="d-md-none"></button>
+          <button id="desktop-signup-button" class="d-none d-md-block" onclick="signUpOnDesktop()">Earn From Desktop</button>
         </section>
       </div>
       <div class="col-md-6">
