@@ -198,5 +198,5 @@ def referral(referral_code):
         play_store_url=universal.ANDROID_URL,
         reward_value=1000,  # TODO: Is this legit?
         friend_name=friend_name,
-        friend_avatar=friend_avatar or '/static/img/avatar-blue.svg'
+        friend_avatar=friend_avatar or '/static/img/profile-pic-placeholder.svg'
     )
