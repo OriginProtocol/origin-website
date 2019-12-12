@@ -256,7 +256,7 @@
      * navigate to the DApp
      */
     function signUpOnDesktop() {
-      const url = `https://shoporigin.com/#/welcome/${referralCode}`
+      const url = `https://shoporigin.com/#/welcome/${rawCode}`
       const win = window.open(url)
       // If we got snagged by a popup blocker(firefox) just go direct
       if (!win) {
