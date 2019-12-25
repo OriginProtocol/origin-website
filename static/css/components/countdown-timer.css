@@ -25,6 +25,10 @@
   flex-direction: column;
 }
 
+.countdown-timer.nav-timer .dial {
+  display: none !important;
+}
+
 .countdown-timer.large .dial {
   display: flex;
   align-items: center;
@@ -71,6 +75,20 @@
   flex-direction: column;
   justify-content: start;
   flex: 1;
+}
+  
+.countdown-timer.nav-timer .countdown-time-left .time-group .time-value {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.countdown-timer.nav-timer .countdown-time-left {
+  width: 280px;
+  max-width: 280px;
+}
+
+.countdown-timer.nav-timer {
+  margin-bottom: 0px;
 }
 
 .countdown-time-left .time-group .time-value {

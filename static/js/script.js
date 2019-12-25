@@ -51,6 +51,7 @@ function addToMailingList(event) {
 
 $("#mailing-list").submit(addToMailingList);
 $("#mailing-list-footer").submit(addToMailingList);
+$("#mailing-list-nav-bar").submit(addToMailingList);
 
 function presaleFormSubmit() {
   var emailList = document.getElementById('add-to-mailing-list')
