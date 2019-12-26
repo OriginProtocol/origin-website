@@ -155,12 +155,12 @@
   text-align: left;
 }
 
-.product-page .milestones-section .milestones-timeline {
+.milestones-section .milestones-timeline {
   max-width: 660px;
   margin: 3rem auto 5rem auto;
 }
 
-.product-page .milestones-timeline .milestone {
+.milestones-timeline .milestone {
   width: 50%;
   margin-right: auto;
   position: relative;
@@ -168,13 +168,13 @@
   padding: 0 4.5rem 0 0;
 }
 
-.product-page .milestones-timeline .milestone:nth-child(even) {
+.milestones-timeline .milestone:nth-child(even) {
   margin-left: auto;
   margin-right: 0;
   padding: 0 0 0 4.5rem;
 }
 
-.product-page .milestones-timeline .milestone:before {
+.milestones-timeline .milestone:before {
   content: '';
   position: absolute;
   right: -3.5px;
@@ -186,11 +186,11 @@
   border-radius: 50%;
 }
 
-.product-page .milestones-timeline .milestone:not(.completed):before {
+.milestones-timeline .milestone:not(.completed):before {
   background-color: #bdcbd5;
 }
 
-.product-page .milestones-timeline .milestone:not(:last-child):after {
+.milestones-timeline .milestone:not(:last-child):after {
   content: '';
   position: absolute;
   right: -1.5px;
@@ -202,22 +202,22 @@
   z-index: -1;
 }
 
-.product-page .milestones-timeline .milestone:not(.completed):after,
-.product-page .milestones-timeline .milestone.recent:after {
+.milestones-timeline .milestone:not(.completed):after,
+.milestones-timeline .milestone.recent:after {
   background-color: #bdcbd5;
 }
 
-.product-page .milestones-timeline .milestone:nth-child(even):before {
+.milestones-timeline .milestone:nth-child(even):before {
   left: -3.5px;
   right: unset;
 }
 
-.product-page .milestones-timeline .milestone:nth-child(even):after {
+.milestones-timeline .milestone:nth-child(even):after {
   left: -1.5px;
   right: unset;
 }
 
-.product-page .milestones-timeline .milestone .step {
+.milestones-timeline .milestone .step {
   background-color: #007cff;
   border-radius: 50%;
   width: 1.75rem;
@@ -229,11 +229,11 @@
   margin: 0 auto 1.25rem auto;
 }
 
-.product-page .milestones-timeline .milestone:not(.completed) .step {
+.milestones-timeline .milestone:not(.completed) .step {
   background-color: #bdcbd5;
 }
 
-.product-page .milestones-timeline .milestone .step:after {
+.milestones-timeline .milestone .step:after {
   position: absolute;
   right: 0;
   height: 1px;
@@ -245,32 +245,32 @@
   z-index: -1;
 }
 
-.product-page .milestones-timeline .milestone:nth-child(even) .step:after {
+.milestones-timeline .milestone:nth-child(even) .step:after {
   left: 0;
   right: calc(50% - 3rem);
 }
 
-.product-page .milestones-timeline .milestone:not(.completed) .step:after {
+.milestones-timeline .milestone:not(.completed) .step:after {
   background-color: #bdcbd5;
 }
 
-.product-page .milestones-timeline .milestone .timestamp {
+.milestones-timeline .milestone .timestamp {
   font-size: 1.125rem;
   color: #007cff;
   font-weight: normal;
 }
 
-.product-page .milestones-timeline .milestone:not(.completed) .timestamp {
+.milestones-timeline .milestone:not(.completed) .timestamp {
   color: #8fa7b7;
 }
 
-.product-page .milestones-timeline .milestone .title {
+.milestones-timeline .milestone .title {
   font-size: 1.125rem;
   font-weight: normal;
   color: #111d28;
 }
 
-.product-page .milestones-timeline .milestone .title > span:not(:last-child) {
+.milestones-timeline .milestone .title > span:not(:last-child) {
   display: block;
   margin-bottom: 1rem;
 }
@@ -328,19 +328,19 @@
     margin-bottom: 1rem;
   }
 
-  .product-page .milestones-timeline .milestone {
+  .milestones-timeline .milestone {
     padding: 0 1.5rem 0 0;
   }
   
-  .product-page .milestones-timeline .milestone:nth-child(even) {
+  .milestones-timeline .milestone:nth-child(even) {
     padding: 0 0 0 1.5rem;
   }
 
-  .product-page .milestones-timeline .milestone .step:after {
+  .milestones-timeline .milestone .step:after {
     left: calc(50% - 1.5rem);
   }
   
-  .product-page .milestones-timeline .milestone:nth-child(even) .step:after {
+  .milestones-timeline .milestone:nth-child(even) .step:after {
     right: calc(50% - 1.5rem);
   }
   
@@ -363,7 +363,7 @@
     margin-right: auto;
   }
 
-  .product-page .milestones-timeline .milestone .title {
+  .milestones-timeline .milestone .title {
     font-size: 1rem;
   }
 }
