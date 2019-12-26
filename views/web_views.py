@@ -465,6 +465,11 @@ def creator():
 #     flash(feedback)
 #     return jsonify("OK")
 
+@app.route('/whitepaper-v2', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper-v2', strict_slashes=False)
+def whitepaperv2():
+    return render_template('whitepaper.html')
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -488,7 +493,8 @@ def assets_all_styles():
         "static/css/pages/videos.css",
         "static/css/pages/investors.css",
         "static/css/pages/developers.css",
-        "static/css/pages/presale.css"
+        "static/css/pages/presale.css",
+        "static/css/pages/whitepaper.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)
@@ -505,6 +511,7 @@ def assets_all_javascript():
         "static/js/yt-player.js",
         "static/js/videos.js",
         "static/js/youkuPlayer.js",
+        "static/js/scrollspy.js",
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)
