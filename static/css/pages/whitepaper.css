@@ -40,15 +40,21 @@
   color: #638298;
   padding: 10px 0 0 28px;
   font-size: 0.75rem;
+  width: 100%;
 }
 
 .whitepaper-sidebar-nav a.active {
   color: #061d2a;
+  font-weight: 500;
 }
 
 a.whitepaper-nav-title {
   font-weight: bold;
   padding-left: 0;
+}
+
+.whitepaper-sidebar-nav a.active.whitepaper-nav-title {
+  font-weight: bold;
 }
 
 .whitepaper-nav-title .content-index {
@@ -59,6 +65,10 @@ a.whitepaper-nav-title {
 main section.whitepaper-container h1, main section.whitepaper-container h2 {
   text-align: left;
   font-weight: bold;
+}
+
+.whitepaper-content {
+  position: relative;
 }
 
 .whitepaper-content p {
