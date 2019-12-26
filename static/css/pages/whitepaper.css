@@ -122,3 +122,27 @@ main section.whitepaper-container h1, main section.whitepaper-container h2 {
   margin-top: 1rem;
   text-align: right;
 }
+
+.whitepaper-footnote-link {
+  vertical-align: super;
+  font-size: 50%;
+  color: #000000;
+}
+
+.whitepaper-footnotes {
+  color: #638298;
+  font-size: 0.75rem;
+  margin-bottom: 3rem;
+  counter-reset: footnotes;
+}
+
+.whitepaper-footnotes > div {
+  margin-bottom: 1rem;
+}
+
+.whitepaper-footnotes > div:before {
+  counter-increment: footnotes;
+  content: counter(footnotes);
+  font-size: 50%;
+  vertical-align: super;
+}
