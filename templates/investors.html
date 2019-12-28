@@ -155,153 +155,43 @@
     </div>
   </section>
   <section class="vc-section blue-section vc-firms">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-4">
-          <div class="country-name">{{gettext("United States")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/pantera@3x.png" />
-            <div class="firm-name">{{gettext("Pantera Capital")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/foundation-capital@3x.png" />
-            <div class="firm-name">{{gettext("Foundation Capital")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/blocktower-capital@3x.png" />
-            <div class="firm-name">{{gettext("Blocktower Capital")}}</div>
-          </div>
-          <div class="country-name">{{gettext("Germany")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/1-kx@3x.png" />
-            <div class="firm-name">{{gettext("1kx")}}</div>
-          </div>
-          <div class="country-name">{{gettext("United Kingdom")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/blockchain@3x.png" />
-            <div class="firm-name small">{{gettext("Blockchain.com")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/eterna-capital@3x.png" />
-            <div class="firm-name">{{gettext("Eterna Capital")}}</div>
-          </div>
-          <div class="country-name">{{gettext("Saudi Arabia")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/kbw-ventures@3x.png" />
-            <div class="firm-name">{{gettext("KBW Ventures")}}</div>
-          </div>
-          <div class="d-flex flex-column d-md-none">
-            <div class="country-name">{{gettext("Hong Kong")}}</div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/sora-ventures@3x.png" />
-              <div class="firm-name">{{gettext("Sora Ventures")}}</div>
-            </div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/kenetic-capital@3x.png" />
-              <div class="firm-name">{{gettext("Kenetic Capital")}}</div>
-            </div>
-            <div class="country-name">{{gettext("Korea")}}</div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/hashed@3x.png" />
-              <div class="firm-name">{{gettext("Hashed")}}</div>
-            </div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/metaps@3x.png" />
-              <div class="firm-name">{{gettext("Metaps+")}}</div>
-            </div>
-          </div>
+    <div class="container px-3">
+      <div class="row d-none d-md-flex">
+        <div class="col-4">
+          {% include 'vc-firms/usa.html' %}
+          {% include 'vc-firms/germany.html' %}
+          {% include 'vc-firms/uk.html' %}
+          {% include 'vc-firms/uae.html' %}
         </div>
-        <div class="col-6 col-md-4">
-          <div class="country-name">{{gettext("China")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/preangel@3x.png" />
-            <div class="firm-name">{{gettext("PreAngel Fund")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/fbg@3x.png" />
-            <div class="firm-name">{{gettext("FBG")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/snz-holdings@3x.png" />
-            <div class="firm-name">{{gettext("SNZ Holdings")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/continue-capital.png" />
-            <div class="firm-name">{{gettext("Continue Capital")}}</div>
-          </div>
-          <div class="ml-1 vc-firm smaller">
-            <img src="/static/img/investors/vc/block-assist@3x.png" />
-            <div class="firm-name">{{gettext("BlockAsset")}}</div>
-          </div>
-          <div class="ml-1 mt-3 vc-firm smaller">
-            <img src="/static/img/investors/vc/danhuacapital@3x.png" />
-            <div class="firm-name">{{gettext("Danhua Capital")}}</div>
-          </div>
-          <div class="country-name">{{gettext("Russia")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/cryptobazaar@3x.png" />
-            <div class="firm-name">{{gettext("Crypto Bazaar")}}</div>
-          </div>
-          <div class="d-flex flex-column d-md-none">
-            <div class="country-name">{{gettext("Japan")}}</div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/smart-contract@3x.png" />
-              <div class="firm-name">{{gettext("Smart Contract")}}</div>
-            </div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/gumi@3x.png" />
-              <div class="firm-name">{{gettext("Gumi")}}</div>
-            </div>
-            <div class="country-name">{{gettext("Singapore")}}</div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/spartan@3x.png" />
-              <div class="firm-name">{{gettext("Spartan")}}</div>
-            </div>
-            <div class="vc-firm">
-              <img src="/static/img/investors/vc/qcp@3x.png" />
-              <div class="firm-name">{{gettext("QCP Capital")}}</div>
-            </div>
-          </div>
+        <div class="col-4">
+          {% include 'vc-firms/china.html' %}
+          {% include 'vc-firms/russia.html' %}
+          {% include 'vc-firms/singapore.html' %}
         </div>
-        <div class="d-none flex-column col-md-4 d-md-flex">
-          <div class="country-name">{{gettext("Hong Kong")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/sora-ventures@3x.png" />
-            <div class="firm-name">{{gettext("Sora Ventures")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/kenetic-capital@3x.png" />
-            <div class="firm-name">{{gettext("Kenetic Capital")}}</div>
-          </div>
-          <div class="country-name">{{gettext("Korea")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/hashed@3x.png" />
-            <div class="firm-name">{{gettext("Hashed")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/metaps@3x.png" />
-            <div class="firm-name">{{gettext("Metaps+")}}</div>
-          </div>
-          <div class="country-name">{{gettext("Japan")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/smart-contract@3x.png" />
-            <div class="firm-name">{{gettext("Smart Contract")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/gumi@3x.png" />
-            <div class="firm-name">{{gettext("Gumi")}}</div>
-          </div>
-          <div class="country-name">{{gettext("Singapore")}}</div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/spartan@3x.png" />
-            <div class="firm-name">{{gettext("Spartan")}}</div>
-          </div>
-          <div class="vc-firm">
-            <img src="/static/img/investors/vc/qcp@3x.png" />
-            <div class="firm-name">{{gettext("QCP Capital")}}</div>
-          </div>
+        <div class="col-4">
+          {% include 'vc-firms/hongkong.html' %}
+          {% include 'vc-firms/korea.html' %}
+          {% include 'vc-firms/japan.html' %}
         </div>
       </div>
+
+      <div class="row d-flex d-md-none">
+        <div class="col-6">
+          {% include 'vc-firms/usa.html' %}
+          {% include 'vc-firms/germany.html' %}
+          {% include 'vc-firms/uk.html' %}
+          {% include 'vc-firms/uae.html' %}
+          {% include 'vc-firms/russia.html' %}
+          {% include 'vc-firms/singapore.html' %}
+        </div>
+        <div class="col-6">
+          {% include 'vc-firms/china.html' %}
+          {% include 'vc-firms/hongkong.html' %}
+          {% include 'vc-firms/korea.html' %}
+          {% include 'vc-firms/japan.html' %}
+        </div>
+      </div>
+
     </div>
   </section>
   <section class="individual-investors-section">
