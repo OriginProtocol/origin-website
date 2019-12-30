@@ -28,7 +28,7 @@
     return element
   }
 
-  function getDateDiff(date1, date2) {
+  function getDateDiff(date1, date2, omitDays) {
     var time1 = date1.getTime() / 1000
     var time2 = date2.getTime() / 1000
 
@@ -49,11 +49,19 @@
     var hours = Math.floor(diff / 3600) % 24
     var minutes = Math.floor(diff / 60) % 60
 
-    return {
-      seconds: String(seconds).padStart(2, '0'),
-      minutes: String(minutes).padStart(2, '0'),
-      hours: String(hours).padStart(2, '0'),
-      days: String(days).padStart(2, '0')
+    if (omitDays) {
+      return {
+        seconds: String(seconds).padStart(2, '0'),
+        minutes: String(minutes).padStart(2, '0'),
+        hours: String(Math.floor(diff / 3600)).padStart(2, '0'),
+      }
+    } else {
+      return {
+        seconds: String(seconds).padStart(2, '0'),
+        minutes: String(minutes).padStart(2, '0'),
+        hours: String(hours).padStart(2, '0'),
+        days: String(days).padStart(2, '0')
+      }
     }
   }
 
@@ -61,27 +69,34 @@
     return 100 * ((now - startTime) / (endTime - startTime))
   }
 
-  function buildTimeComponent(props) {
-    return createElement('div', {
-      class: 'countdown-time-left'
-    }, [
+  function buildTimeComponent(timeDiff, props) {
+    const timeElements = [
       createElement('div', { class: 'time-group' }, [
-        createElement('h1', { class: 'time-value' }, props.days),
-        createElement('div', { class: 'time-label' }, 'days')
-      ]),
-      createElement('div', { class: 'time-group' }, [
-        createElement('h1', { class: 'time-value' }, props.hours),
+        createElement('h1', { class: 'time-value' }, timeDiff.hours),
         createElement('div', { class: 'time-label' }, 'hours')
       ]),
+      createElement('div', { class: 'colon' }, ':'),
       createElement('div', { class: 'time-group' }, [
-        createElement('h1', { class: 'time-value' }, props.minutes),
+        createElement('h1', { class: 'time-value' }, timeDiff.minutes),
         createElement('div', { class: 'time-label' }, 'minutes')
       ]),
+      createElement('div', { class: 'colon' }, ':'),
       createElement('div', { class: 'time-group' }, [
-        createElement('h1', { class: 'time-value' }, props.seconds),
+        createElement('h1', { class: 'time-value' }, timeDiff.seconds),
         createElement('div', { class: 'time-label' }, 'seconds')
       ])
-    ])
+    ]
+
+    if (!props.nav) {
+      timeElements.unshift(createElement('div', { class: 'time-group' }, [
+        createElement('h1', { class: 'time-value' }, timeDiff.days),
+        createElement('div', { class: 'time-label' }, 'days')
+      ]))
+    }
+
+    return createElement('div', {
+      class: 'countdown-time-left'
+    }, timeElements)
   }
 
   function CountdownTimer(element, props) {
@@ -143,22 +158,22 @@
     element.appendChild(dial)
 
     var now = new Date(Date.now())
-    var diff = getDateDiff(now, props.endDate)
-    var timeComponent = buildTimeComponent(diff)
+    var diff = getDateDiff(now, props.endDate, props.nav)
+    var timeComponent = buildTimeComponent(diff, props)
 
     element.appendChild(timeComponent)
 
     const intervalFunction = function () {
       var now = new Date(Date.now())
 
-      var diff = getDateDiff(now, props.endDate)
+      var diff = getDateDiff(now, props.endDate, props.nav)
 
       if (diff.elapsed) {
         return clearInterval(interval)
       }
 
       element.removeChild(timeComponent)
-      timeComponent = buildTimeComponent(diff)
+      timeComponent = buildTimeComponent(diff, props)
       element.appendChild(timeComponent)
 
       var completed = getCompletionPercentage(props.startDate.getTime(), props.endDate.getTime(), now.getTime())
