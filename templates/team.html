@@ -1,7 +1,12 @@
 {% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - Team")
 }}{% endblock %} {% block meta_description %}{{ gettext("Origin Protocol -
-Team") }}{% endblock %} {% block content %} {% with theme_dark=True %} {%
-include 'navbar.html' %} {% endwith %}
+Team") }}{% endblock %} {% block content %}
+
+{% include 'countdown-bar.html' %}
+
+{% with theme_dark=True %} {%
+include 'navbar.html' %}
+{% endwith %}
 
 <main class="team-page">
   <div

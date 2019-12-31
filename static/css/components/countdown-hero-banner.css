@@ -1,0 +1,153 @@
+.countdown-hero-banner {
+  background-color: #007cff;
+  color: white;
+  position: relative;
+}
+
+.countdown-hero-banner .countdown-hero-banner-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 1px white;
+  background-color: transparent;
+  color: white;
+  font-size: 28px;
+  top: 50px;
+  right: 70px;
+  line-height: 1px;
+  cursor: pointer;
+}
+
+.countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left {
+  width: 215px;
+  max-width: 215px;
+}
+
+.countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .time-value,
+.countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .colon {
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 900;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.countdown-hero-banner .title {
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.09;
+  text-align: center;
+  max-width: 400px;
+}
+
+.countdown-hero-banner .horizontal-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #0066d2;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 315px;
+}
+
+.countdown-hero-banner .exclusively-on {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 15px;
+}
+
+.countdown-hero-banner .learn-more {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  border-radius: 26px;
+  background-color: #061d2a;
+  padding: 13px 85px;
+  white-space: nowrap;
+}
+
+.countdown-hero-banner .email-input.input-group .btn {
+  color: white;
+  border-color: white;
+  width: 32px;
+  height: 32px;
+  line-height: 1.75rem;
+  font-size: 14px;
+}
+
+.countdown-hero-banner p {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.countdown-hero-banner input::placeholder {
+  color: #8fc5ff;
+}
+
+.countdown-hero-banner .email-input.input-group input {
+  border-bottom: 1px solid #8fc5ff;
+}
+
+.countdown-hero-banner input {
+  padding: 0px;
+  margin-right: 10px !important;
+}
+
+.countdown-hero-banner .email-input.input-group {
+  margin-bottom: 90px;
+}
+
+@media (max-width: 575px) {
+  .countdown-hero-banner .horizontal-separator {
+    width: 100%;
+  }
+
+  .countdown-hero-banner .countdown-hero-banner-button {
+    top: 30px;
+    right: 30px;
+  }
+
+  .countdown-hero-banner .title {
+    font-size: 24px;
+    line-height: 1.13;
+    max-width: 280px;
+  }
+
+  .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .time-value,
+  .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .colon {
+    font-size: 38px;
+  }
+
+  .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left {
+    width: 170px;
+    max-width: 170px;
+  }
+
+  .countdown-hero-banner .learn-more {
+    width: 90%;
+  }
+
+  .countdown-hero-banner .exclusively-on {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .countdown-hero-banner p {
+    font-size: 14px;
+  }
+
+  .countdown-hero-banner .email-input.input-group {
+    margin-bottom: 40px;
+  }
+}
