@@ -17,7 +17,7 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 # we use our own database as the final source of truth for our mailing list
 # but we sync email signups and unsubscribes to sendgrid for convenience
 
-def add_sendgrid_contact(email, full_name=None, citizenship=None, dapp_user=None):
+def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=None):
     try:
         # pytest.skip("avoid making remote calls")
         sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
@@ -31,12 +31,13 @@ def add_sendgrid_contact(email, full_name=None, citizenship=None, dapp_user=None
             "email": email,
             "first_name": first_name,
             "last_name": last_name,
-            "country_code": citizenship,
+            "country_code": country_code,
             "dapp_user": dapp_user
         }]
         response = sg_api.client.contactdb.recipients.post(request_body=data)
-    except:
-        return False
+    except Exception as err:
+        print('SendGrid Add contact failed:%s' % err)
+        raise err
 
 def unsubscribe_sendgrid_contact(email):
     try:
@@ -47,27 +48,49 @@ def unsubscribe_sendgrid_contact(email):
             "recipient_emails": [email]
         }
         response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
-    except:
+    except Exception as err:
+        print('SendGrid Unsubscribe failed: %s' % err)
         return False
 
-def send_welcome(email, ip_addr):
-
+# Inserts or updates an entry in the email_list table.
+# Returns True if a new entry was added, False if the entry already existed.
+# Raises an exception in case of an error.
+def add_contact(email, first_name, last_name, ip_addr, country_code)
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-        return jsonify(success=False, message=gettext('Please enter a valid email address'))
+        raise Exception('Invalid email')
 
     try:
-        me = db_models.EmailList()
-        me.email = email
-        me.unsubscribed = False
-        me.ip_addr = ip_addr
-        db.session.add(me)
+        # Attempt to load any existing entry matching the email.
+        row = db_models.EmailList.query.filter_by(email=email).first()
+        if row:
+            # Update the existing entry.
+            new_contact = False
+            row.first_name = first_name
+            row.last_name = last_name
+            row.ip_addr = ip_addr
+            row.country_code = country_code
+        else:
+            # Insert a new entry.
+            new_contact = True
+            row = db_models.EmailList()
+            row.email = email
+            row.first_name = first_name
+            row.last_name = last_name
+            row.unsubscribed = False
+            row.ip_addr = ip_addr
+            row.country_code = country_code
+            db.session.add(row)
         db.session.commit()
-    except:
-        return jsonify(success=False, message=gettext('You are already signed up!'))
+    except Exception as err:
+        print('Add contact failed due to DB error: %s' % s)
+        raise err
 
+    return new_contact
+
+def send_welcome(email):
+    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return
     email_types.send_email_type('welcome1', DEFAULT_SENDER, email)
-
-    return jsonify(success=True, message=gettext('Thanks for signing up!'))
 
 def presale(full_name, email, desired_allocation, desired_allocation_currency, citizenship, sending_addr, ip_addr):
 
@@ -124,7 +147,7 @@ def unsubscribe(email):
             me.unsubscribed = True
             db.session.commit()
     except Exception as e:
-        print (e)
+        print('Unsubscribe failure: %s' % e)
         return gettext('Ooops, something went wrong')
 
     return gettext('You have been unsubscribed')

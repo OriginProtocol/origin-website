@@ -168,29 +168,58 @@ def product_brief():
 
 @app.route('/mailing-list/join', methods=['POST'], strict_slashes=False)
 def join_mailing_list():
-    if 'email' in request.form:
-        email = request.form['email']
-        # optional fields
-        full_name = request.form['name'] if 'name' in request.form else None
-        if not full_name:
-            first_name = request.form['first_name'] if 'first_name' in request.form else None
-            last_name = request.form['last_name'] if 'last_name' in request.form else None
-            full_name = ' '.join(filter(None, (first_name, last_name)))
-        full_name = None if full_name == '' else full_name
-        phone = request.form['phone'] if 'phone' in request.form else None
-        dapp_user = 1 if 'dapp_user' in request.form else 0
-        investor = 1 if 'investor' in request.form else 0
-        eth_address = request.form['eth_address'] if 'eth_address' in request.form else None
-        print('updating mailing list. email: %s name: %s phone: %s eth_address: %s' % (email, full_name, phone, eth_address))
-        if 'eth_address':
-            print('adding to wallet insights')
-            insight.add_contact(address=eth_address, dapp_user=dapp_user, investor=investor, name=full_name, email=email, phone=phone)
-        ip_addr = get_real_ip()
-        feedback = mailing_list.send_welcome(email, ip_addr)
-        mailing_list.add_sendgrid_contact(email=email, full_name=full_name, dapp_user=dapp_user)
-        return feedback
-    else:
+    if not 'email' in request.form:
         return jsonify(success=False, message=gettext("Missing email"))
+    email = request.form['email']
+    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return jsonify(success=False, message=gettext("Invalid email"))
+
+    # optional fields
+    first_name = request.form['first_name'] if 'first_name' in request.form else None
+    last_name = request.form['last_name'] if 'last_name' in request.form else None
+    full_name = request.form['name'] if 'name' in request.form else None
+    if not full_name:
+        full_name = ' '.join(filter(None, (first_name, last_name)))
+    full_name = None if full_name == '' else full_name
+    phone = request.form['phone'] if 'phone' in request.form else None
+    ip_addr = request.form['ip_addr'] if 'ip_addr' in request.form else get_real_ip()
+    country_code = request.form['country_code'] if 'country_code' in request.form else None
+    dapp_user = 1 if 'dapp_user' in request.form else 0
+    investor = 1 if 'investor' in request.form else 0
+    eth_address = request.form['eth_address'] if 'eth_address' in request.form else None
+
+    print('Updating mailing list. email: %s name: %s phone: %s eth_address: %s country: %s' % (email, full_name, phone, eth_address, country))
+
+    try:
+        # Add an entry to the eth_contact DB table.
+        if 'eth_address':
+            print('Adding to wallet insights')
+            insight.add_contact(
+                address=eth_address,
+                dapp_user=dapp_user,
+                investor=investor,
+                name=full_name,
+                email=email,
+                phone=phone,
+                country_code=country_code)
+
+        # Add an entry to the email_list table.
+        new_contact = mailing_list.add_contact(email, first_name, last_name, ip_addr, country_code)
+
+        # If it is a new contact, send a welcome email and add it to the SendGrid contact list.
+        if new_contact:
+            mailing_list.send_welcome(email)
+            mailing_list.add_sendgrid_contact(
+                email=email,
+                full_name=full_name,
+                country_code=country_code,
+                dapp_user=dapp_user)
+    except Exception as err:
+        print('Failure: %s' % err)
+        return jsonify(success=False, message=str(err))
+
+    return jsonify(success=True, message=gettext('Thanks for signing up!'))
+
 
 @app.route('/presale/join', methods=['POST'], strict_slashes=False)
 def join_presale():
