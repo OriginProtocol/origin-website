@@ -43,7 +43,6 @@
 }
 
 .countdown-hero-banner .horizontal-separator {
-  width: 90%;
   height: 1px;
   background-color: #0066d2;
   margin-bottom: 15px;
@@ -109,7 +108,11 @@
 
 @media (max-width: 575px) {
   .countdown-hero-banner .horizontal-separator {
-    width: 100%;
+    width: 90%;
+  }
+
+  .countdown-hero-banner .email-signup {
+    width: 90%;
   }
 
   .countdown-hero-banner .countdown-hero-banner-button {
