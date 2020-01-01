@@ -55,7 +55,7 @@ def unsubscribe_sendgrid_contact(email):
 # Inserts or updates an entry in the email_list table.
 # Returns True if a new entry was added, False if the entry already existed.
 # Raises an exception in case of an error.
-def add_contact(email, first_name, last_name, ip_addr, country_code)
+def add_contact(email, first_name, last_name, ip_addr, country_code):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         raise Exception('Invalid email')
 
