@@ -29,7 +29,7 @@ def test_old_urls(client):
     """ Make sure the old style URLs load properly (e.g. /team) """
     res = client.get(url_for('team', lang_code='en'))
     assert res.status_code == 200
-    assert 'team of distributed entrepreneurs' in res.get_data()
+    assert 'Our world-class team is led by entrepreneurs and engineers' in res.get_data()
 
 
 def test_index_returns_200(client):
@@ -69,6 +69,7 @@ def test_join_presale(mock_send_message, mock_captcha, session, client):
     assert res.status_code == 200
 
 
+@pytest.mark.skip(reason='Route deprecated. Re-enable this test if route gets re-activated')
 def test_partners_interest(mock_send_message, mock_captcha, session, client):
     data = InterestFactory.stub().__dict__
     data['confirm'] = True
