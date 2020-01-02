@@ -168,8 +168,6 @@ def product_brief():
 
 @app.route('/mailing-list/join', methods=['POST'], strict_slashes=False)
 def join_mailing_list():
-    log('IN MAILING LIST JOIN')
-
     if not 'email' in request.form:
         return jsonify(success=False, message=gettext("Missing email"))
     email = request.form['email']

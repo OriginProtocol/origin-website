@@ -8,10 +8,11 @@ import csv
 import requests
 import sys
 
-#URL = 'https://www.originprotocol.com/mailing-list/join'
-URL = 'http://localhost:5000/mailing-list/join'
+PROD_URL = 'https://www.originprotocol.com/mailing-list/join'
+STAGING_URL='https://staging.originprotocol.com/mailing-list/join'
+LOCAL_URL = 'http://localhost:5000/mailing-list/join'
 
-def process(eth_address, email, first_name, last_name, phone, country_code, ip):
+def process(url, eth_address, email, first_name, last_name, phone, country_code, ip):
     print('Adding entry %s %s' % (email, eth_address))
     data = {
         'eth_address': eth_address,
@@ -23,12 +24,12 @@ def process(eth_address, email, first_name, last_name, phone, country_code, ip):
         'ip_addr': ip,
         'dapp_user': 1
     }
-    response = requests.post(url=URL, data=data)
+    response = requests.post(url=url, data=data)
     data = response.json()
     print('Response=%s' % data)
     return data.get('success', False)
 
-def main(filename, do_it):
+def main(filename, url, do_it):
     print('Starting backfill. Loading data from %s' % filename)
 
     # Init stats.
@@ -60,7 +61,7 @@ def main(filename, do_it):
 
             # Process the entry.
             if do_it:
-                success = process(eth_address, email, first_name, last_name, phone, country_code, ip)
+                success = process(url, eth_address, email, first_name, last_name, phone, country_code, ip)
             else:
                 print('Dry-run: ', eth_address, email, first_name, last_name, phone, country_code, ip)
                 success = True
@@ -75,5 +76,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('filename')
     parser.add_argument('--do_it', action='store_true')
+    parser.add_argument('--prod', action='store_true')
+    parser.add_argument('--staging', action='store_true')
     args = parser.parse_args()
-    main(args.filename, args.do_it)
+    if args.prod:
+        url = PROD_URL
+    elif args.staging:
+        url = STAGING_URL
+    else:
+        url = LOCAL_URL
+    print('Using URL:', url)
+    main(args.filename, url, args.do_it)
