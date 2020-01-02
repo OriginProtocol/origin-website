@@ -1,4 +1,5 @@
 # test_app.py
+import pytest
 import random
 from faker import Faker
 
