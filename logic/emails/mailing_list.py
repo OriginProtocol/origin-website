@@ -11,6 +11,7 @@ from nameparser import HumanName
 import sendgrid
 from tools import db_utils
 from util import sendgrid_wrapper as sgw
+from util.misc import log
 
 DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 
@@ -35,8 +36,8 @@ def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=Non
             "dapp_user": dapp_user
         }]
         response = sg_api.client.contactdb.recipients.post(request_body=data)
-    except Exception as err:
-        print('SendGrid Add contact failed:%s' % err)
+    except Exception as e:
+        log('Error:', type(e), e)
         raise err
 
 def unsubscribe_sendgrid_contact(email):
@@ -48,8 +49,8 @@ def unsubscribe_sendgrid_contact(email):
             "recipient_emails": [email]
         }
         response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
-    except Exception as err:
-        print('SendGrid Unsubscribe failed: %s' % err)
+    except Exception as e:
+        log('Error:', type(e), e)
         return False
 
 # Inserts or updates an entry in the email_list table.
@@ -82,7 +83,7 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
             db.session.add(row)
         db.session.commit()
     except Exception as err:
-        print('Add contact failed due to DB error: %s' % s)
+        log('Error:', type(e), e)
         raise err
 
     return new_contact
@@ -112,7 +113,7 @@ def presale(full_name, email, desired_allocation, desired_allocation_currency, c
         db.session.add(me)
         db.session.commit()
     except Exception as e:
-        print (e)
+        log('Error:', type(e), e)
         return gettext('Ooops! Something went wrong.')
 
     if sending_addr:
@@ -147,7 +148,7 @@ def unsubscribe(email):
             me.unsubscribed = True
             db.session.commit()
     except Exception as e:
-        print('Unsubscribe failure: %s' % e)
+        log('Error:', type(e), e)
         return gettext('Ooops, something went wrong')
 
     return gettext('You have been unsubscribed')
@@ -157,7 +158,7 @@ def send_one_off(email_type):
     with db_utils.request_context():
         # the message log takes care of deduping emails that may appear in multiple tables
         for e in db_models.EmailList.query.filter_by(unsubscribed=False):
-            print e.email
+            log(e.email)
             email_types.send_email_type(email_type, DEFAULT_SENDER, e.email)
 
 
@@ -180,7 +181,7 @@ def partners_interest(name, company_name, email, website, note, ip_addr):
         db.session.add(me)
         db.session.commit()
     except Exception as e:
-        print (e)
+        log('Error:', type(e), e)
         return gettext('Ooops! Something went wrong.')
 
     message = "Name: %s<br>Company Name: %s<br>Email: %s<br>Website: %s<br>Note: %s" % (name, company_name,
