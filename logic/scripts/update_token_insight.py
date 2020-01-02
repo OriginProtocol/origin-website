@@ -39,7 +39,9 @@ def add_contact(address, **kwargs):
 
 	contact = db_common.get_or_create(db.session, db_models.EthContact, address=address.lower())
 
-	allowed_fields = ['name','email','phone','investor','presale_interest','investor_airdrop','dapp_user','employee','exchange','company_wallet','desc']
+	allowed_fields = [
+	    'name','email','phone','investor','presale_interest','investor_airdrop',
+	    'dapp_user','employee','exchange','company_wallet','desc', 'country_code']
 	for key, value in kwargs.items():
 		if key in allowed_fields:
 			if value:

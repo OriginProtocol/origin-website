@@ -1,3 +1,4 @@
+from __future__ import print_function # Necessary for the log method to use print as a function
 from pyuca import Collator
 
 from flask import request
@@ -7,6 +8,7 @@ from config import constants
 
 import re
 import os
+import sys
 
 def sort_language_constants():
     """
@@ -68,3 +70,8 @@ def concat_asset_files(filenames, joinWithSemicolon=False):
         return "\n\n;\n\n".join(contents) 
     else:
         return "\n\n\n\n".join(contents)
+
+# Print a log and flushes stdout.
+def log(*args, **kwargs):
+    print(*args, **kwargs)
+    sys.stdout.flush()
