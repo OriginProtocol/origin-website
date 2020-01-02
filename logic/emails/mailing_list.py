@@ -38,7 +38,7 @@ def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=Non
         response = sg_api.client.contactdb.recipients.post(request_body=data)
     except Exception as e:
         log('Error:', type(e), e)
-        raise e
+        return False
 
 def unsubscribe_sendgrid_contact(email):
     try:
