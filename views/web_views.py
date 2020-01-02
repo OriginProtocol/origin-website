@@ -179,9 +179,8 @@ def join_mailing_list():
     first_name = request.form.get('first_name')
     last_name = request.form.get('last_name')
     full_name = request.form.get('name')
-    if not full_name:
+    if not full_name and (first_name or last_name):
         full_name = ' '.join(filter(None, (first_name, last_name)))
-    full_name = None if full_name == '' else full_name
     phone = request.form.get('phone')
     ip_addr = request.form.get('ip_addr')
     country_code = request.form.get('country_code')
