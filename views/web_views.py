@@ -175,15 +175,15 @@ def join_mailing_list():
         return jsonify(success=False, message=gettext("Invalid email"))
 
     # optional fields
-    eth_address = request.form.get('eth_address')
-    first_name = request.form.get('first_name')
-    last_name = request.form.get('last_name')
-    full_name = request.form.get('name')
+    eth_address = request.form.get('eth_address') or None
+    first_name = request.form.get('first_name') or None
+    last_name = request.form.get('last_name') or None
+    full_name = request.form.get('name') or None
     if not full_name and (first_name or last_name):
         full_name = ' '.join(filter(None, (first_name, last_name)))
-    phone = request.form.get('phone')
-    ip_addr = request.form.get('ip_addr')
-    country_code = request.form.get('country_code')
+    phone = request.form.get('phone') or None
+    ip_addr = request.form.get('ip_addr') or None
+    country_code = request.form.get('country_code') or None
     dapp_user = 1 if 'dapp_user' in request.form else 0
     investor = 1 if 'investor' in request.form else 0
 
