@@ -4,15 +4,19 @@ msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-11-21 11:40-0700\n"
-"PO-Revision-Date: 2019-09-26 23:35+0000\n"
-"Last-Translator: OriginProtocol\n"
-"Language: it_IT\n"
+"PO-Revision-Date: 2019-12-23 06:36\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: originprotocolwebsite\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /master/messages.pot\n"
+"Language: it_IT\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -29,11 +33,11 @@ msgstr "Per favore inserisci un indirizzo email valido"
 
 #: logic/emails/mailing_list.py:66
 msgid "You are already signed up!"
-msgstr "Sei già iscritto!"
+msgstr "Hai già effettuato l'iscrizione!"
 
 #: logic/emails/mailing_list.py:70
 msgid "Thanks for signing up!"
-msgstr "Grazie per esserti iscritto!"
+msgstr "Grazie per aver effettuato l'iscrizione!"
 
 #: logic/emails/mailing_list.py:93 logic/emails/mailing_list.py:161
 msgid "Ooops! Something went wrong."
@@ -41,7 +45,7 @@ msgstr "Ooops! Qualcosa è andato storto."
 
 #: logic/emails/mailing_list.py:114 logic/emails/mailing_list.py:172
 msgid "Thanks! We'll be in touch soon."
-msgstr "Grazie! Saremo in contatto presto."
+msgstr "Grazie! Ti contatteremo presto."
 
 #: logic/emails/mailing_list.py:128
 msgid "Ooops, something went wrong"
@@ -49,7 +53,7 @@ msgstr "Ooops, qualcosa è andato storto"
 
 #: logic/emails/mailing_list.py:130
 msgid "You have been unsubscribed"
-msgstr "La tua iscrizione è stata tolta"
+msgstr "La tua iscrizione è stata cancellata"
 
 #: logic/emails/mailing_list.py:147
 msgid "Please enter a valid website address"
@@ -76,7 +80,7 @@ msgstr "Origin Protocol - Sviluppa su Origin"
 #: templates/about.html:16 templates/investors.html:16
 #: templates/landing.html:16 templates/team.html:16 templates/video.html:18
 msgid "Exit full screen"
-msgstr ""
+msgstr "Esci dalla modalità schermo intero"
 
 #: templates/about.html:26
 msgid "It’s time to build the sharing economy without intermediaries"
@@ -123,7 +127,9 @@ msgstr "Migliori incentivi"
 
 #: templates/about.html:71
 msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
-msgstr ""
+msgstr "Uber e Lyft hanno recentemente effettuato l'OPA.\n"
+"Airbnb presto seguirà il loro esempio.\n"
+"Nessuno dei primi utilizzatori di queste piattaforme ne trarrà benefici, nonostante siano stati fondamentali per il loro successo."
 
 #: templates/about.html:72
 msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
@@ -131,7 +137,7 @@ msgstr "Al contrario, Origin abilita chiunque a possedete una parte della rete. 
 
 #: templates/about.html:80 templates/landing.html:149
 msgid "Increased Access"
-msgstr "Aumenta Accesso"
+msgstr "Maggiore Inclusione"
 
 #: templates/about.html:81
 msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
@@ -151,7 +157,7 @@ msgstr "Airbnb è pesantemente regolamentato o vietato in città come Parigi, Be
 
 #: templates/about.html:101
 msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
-msgstr "I mercati decentralizzati promuovono commerci aperti e liberi. Diversamente dall'equivalenti centralizzati, non hanno singoli punti di fallimento, e non possono essere vietati o spenti. Il commercio decentralizzato è più resiliente e promuove mercati efficienti."
+msgstr "I marketplace decentralizzati promuovono il commercio aperto e libero. Diversamente dalle alternative centralizzate, non hanno singoli punti di fallimento, e non possono essere vietati o bloccati. Il commercio decentralizzato è più resiliente e promuove mercati efficienti."
 
 #: templates/about.html:110
 msgid "Origin in the Press"
@@ -163,15 +169,15 @@ msgstr "Noi abbiamo una Community ampia e in crescita di sviluppatori e di suppo
 
 #: templates/about.html:130
 msgid "Region-specific Channels"
-msgstr ""
+msgstr "Canali regionali"
 
 #: templates/aup.html:3 templates/aup.html:5
 msgid "Origin Protocol - Marketplace Acceptable Use Policy"
-msgstr "Origin Protocol - Criteri di utilizzo del Marketplace"
+msgstr "Origin Protocol - Condizioni di utilizzo del Marketplace"
 
 #: templates/aup.html:16
 msgid "Marketplace Acceptable Use Policy"
-msgstr "Criteri di utilizzo del Marketplace"
+msgstr "Condizioni di utilizzo del Marketplace"
 
 #: templates/creator.html:3 templates/creator.html:5
 msgid "Origin Protocol - Creator"
@@ -179,12 +185,12 @@ msgstr "Origin Protocollo - Creatore"
 
 #: templates/creator.html:20
 msgid "Build your<br>peer-to-peer<br>marketplace"
-msgstr "Costruisci il tuo <br>peer-to-peer<br>marketplace"
+msgstr "Costruisci il tuo marketplace <br>peer-to-peer<br>"
 
 #: templates/creator.html:21
 #, python-format
 msgid "Blockchain enabled.<br>No code required.<br>100%% free to operate."
-msgstr "Blockchain abilitato.<br>Nessun codice richiesto.<br>100%% liberi di operare."
+msgstr "Basato sulla blockchain.<br>Nessun codice richiesto.<br>Liberi di operare al 100%."
 
 #: templates/creator.html:24 templates/creator.html:100
 #: templates/creator.html:223
@@ -193,15 +199,15 @@ msgstr "Per iniziare"
 
 #: templates/creator.html:38
 msgid "Launch your decentralized goods or services marketplace today"
-msgstr "Lancia oggi il tuo mercato di beni o servizi decentralizzati"
+msgstr "Lancia oggi il tuo Marketplace di beni o servizi decentralizzati"
 
 #: templates/creator.html:52
 msgid "Sharing economy"
-msgstr "Economia di condivisione"
+msgstr "Sharing Economy"
 
 #: templates/creator.html:53
 msgid "Create a marketplace for homesharing, carsharing, contractor, or home services."
-msgstr "Crea un mercato per homesharing, car sharing, appaltatore o servizi per la casa."
+msgstr "Crea un mercato per extra alberghiero, car sharing, freelance o servizi per la casa."
 
 #: templates/creator.html:60
 msgid "Ecommerce"
@@ -225,7 +231,7 @@ msgstr "Gestisci un'attività decentralizzata e <span class='purple'>resistente 
 
 #: templates/creator.html:89
 msgid "Build a marketplace that can't be shut down by anyone...including us."
-msgstr "Costruisci un mercato che non può essere chiuso da nessuno... compresi noi."
+msgstr "Costruisci un marketplace che non può essere chiuso da nessuno... nemmeno da noi."
 
 #: templates/creator.html:96
 msgid "Earn <span class='blue'>Origin tokens</span>"
@@ -337,131 +343,131 @@ msgstr "Origin Protocol - Sviluppatori"
 
 #: templates/developers.html:13
 msgid "Our open-source codebase is being developed by a global network of contributors"
-msgstr ""
+msgstr "La nostra base di codice open-source è stata sviluppata da una rete globale di collaboratori"
 
 #: templates/developers.html:21 templates/developers.html:58
 msgid "Mobile Apps"
-msgstr ""
+msgstr "Apps mobile"
 
 #: templates/developers.html:24 templates/developers.html:59
 msgid "Native applications that offer fully-integrated marketplace experiences with a built-in Ethereum wallet"
-msgstr ""
+msgstr "Applicazioni native che offrono esperienze di mercato completamente integrate con un portafoglio Ethereum integrato"
 
 #: templates/developers.html:28 templates/developers.html:66
 msgid "DApps"
-msgstr ""
+msgstr "DApp"
 
 #: templates/developers.html:31 templates/developers.html:67
 msgid "Decentralized applications that enable true peer-to-peer commerce on the Origin platform"
-msgstr ""
+msgstr "Applicazioni decentralizzate che consentono un vero commercio peer-to-peer sulla piattaforma Origin"
 
 #: templates/developers.html:45 templates/developers.html:62
 msgid "Infrastructure"
-msgstr ""
+msgstr "Infrastruttura"
 
 #: templates/developers.html:46 templates/developers.html:63
 msgid "Services enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, messaging, and notifications"
-msgstr ""
+msgstr "Servizi che consentono funzionalità impossibili o impraticabili da eseguire direttamente sulla catena, come indicizzazione, messaggistica e notifiche"
 
 #: templates/developers.html:50 templates/developers.html:70
 msgid "Core Packages"
-msgstr ""
+msgstr "Pacchetti core"
 
 #: templates/developers.html:51 templates/developers.html:71
 msgid "A suite of smart contracts and standards for creating listings, offers, and identities on decentralized marketplaces"
-msgstr ""
+msgstr "Una suite di contratti intelligenti e standard per la creazione di annunci, offerte ed identità su mercati decentralizzati"
 
 #: templates/developers.html:76
 msgid "See the Code"
-msgstr ""
+msgstr "Vedi il codice"
 
 #: templates/developers.html:81
 msgid "Getting Involved"
-msgstr ""
+msgstr "Come Contribuire"
 
 #: templates/developers.html:83
 msgid "Our company has a culture of radical inclusion and transparency. Everyone is welcome to participate in our open-source engineering process and our product discussions, which are all public by default."
-msgstr ""
+msgstr "La nostra azienda ha una cultura di inclusione radicale e trasparenza. Tutti sono invitati a partecipare al nostro processo di ingegneria open source e alle discussioni sui prodotti, che sono tutti pubblici per impostazione predefinita."
 
 #: templates/developers.html:92
 msgid "Introduce yourself in our public Discord #engineering channel."
-msgstr ""
+msgstr "Presentati nel nostro canale Discord #engineering pubblico."
 
 #: templates/developers.html:100
 msgid "Find an open issue in our monorepo and tell us that you would like to solve it."
-msgstr ""
+msgstr "Trova un problema aperto nel nostro monorepo e dicci che vorresti risolverlo."
 
 #: templates/developers.html:108
 msgid "Merge your first pull request today."
-msgstr ""
+msgstr "Fai il tuo primo merge di una pull request oggi."
 
 #: templates/developers.html:115
 msgid "good first issue"
-msgstr ""
+msgstr "buon primo problema"
 
 #: templates/developers.html:118
 msgid "solidity"
-msgstr ""
+msgstr "solidità"
 
 #: templates/developers.html:121
 msgid "javascript"
-msgstr ""
+msgstr "javascript"
 
 #: templates/developers.html:124
 msgid "graphql"
-msgstr ""
+msgstr "graphql"
 
 #: templates/developers.html:127
 msgid "html/css"
-msgstr ""
+msgstr "html/css"
 
 #: templates/developers.html:131
 msgid "Join us on Discord"
-msgstr ""
+msgstr "Unisciti a noi su Discord"
 
 #: templates/developers.html:138
 msgid "Behind the Scenes"
-msgstr ""
+msgstr "Dietro le quinte"
 
 #: templates/developers.html:140
 msgid "Tune in to our public Google Hangout every Wednesday at 12:30PM PT, where we demonstrate our engineering progress and discuss upcoming features."
-msgstr ""
+msgstr "Sintonizzati sul nostro Hangout Google pubblico ogni mercoledì alle 12:30 PM PT, dove mostriamo i nostri progressi ingegneristici e discutiamo delle funzionalità imminenti."
 
 #: templates/developers.html:148
 msgid "San Francisco"
-msgstr ""
+msgstr "San Francisco"
 
 #: templates/developers.html:151
 msgid "Boulder"
-msgstr ""
+msgstr "Boulder"
 
 #: templates/developers.html:154
 msgid "New York"
-msgstr ""
+msgstr "New York"
 
 #: templates/developers.html:157
 msgid "Buenos Aires"
-msgstr ""
+msgstr "Buenos Aires"
 
 #: templates/developers.html:160
 msgid "London"
-msgstr ""
+msgstr "Londra"
 
 #: templates/developers.html:163
 msgid "Berlin"
-msgstr ""
+msgstr "Berlino"
 
 #: templates/developers.html:166
 msgid "Johannesburg"
-msgstr ""
+msgstr "Johannesburg"
 
 #: templates/developers.html:170
 msgid "Moscow"
-msgstr ""
+msgstr "Mosca"
 
 #: templates/developers.html:173
 msgid "New Delhi"
-msgstr ""
+msgstr "New Delhi"
 
 #: templates/developers.html:176 templates/investors.html:251
 #: templates/investors.html:290
@@ -470,11 +476,11 @@ msgstr "Singapore"
 
 #: templates/developers.html:179
 msgid "Seoul"
-msgstr ""
+msgstr "Seoul"
 
 #: templates/developers.html:182
 msgid "Tokyo"
-msgstr ""
+msgstr "Tokyo"
 
 #: templates/developers.html:185 templates/investors.html:194
 #: templates/investors.html:263
@@ -483,11 +489,11 @@ msgstr "Hong Kong"
 
 #: templates/developers.html:188
 msgid "Wellington"
-msgstr ""
+msgstr "Wellington"
 
 #: templates/developers.html:193
 msgid "Add to calendar"
-msgstr ""
+msgstr "Aggiungi al calendario"
 
 #: templates/flashes.html:4
 msgid "Buy or Sell on Origin"
@@ -512,7 +518,7 @@ msgstr "Scrivi la tua email"
 
 #: templates/footer.html:18 templates/footer.html:96 templates/mobile.html:31
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
-msgstr ""
+msgstr "Coyright © 2019 Origin Protocol Inc. Tutti i Diritti Riservati."
 
 #: templates/footer.html:21 templates/footer.html:99 templates/tos.html:16
 msgid "Terms of Service"
@@ -556,7 +562,7 @@ msgstr "Sviluppatori"
 
 #: templates/footer.html:44
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: templates/footer.html:45
 msgid "Docs"
@@ -572,7 +578,7 @@ msgstr "Team"
 
 #: templates/footer.html:51 templates/navbar.html:75
 msgid "Investors"
-msgstr "Investirori"
+msgstr "Investitori"
 
 #: templates/footer.html:52
 msgid "OGN"
@@ -820,15 +826,15 @@ msgstr "Investitori individuali"
 
 #: templates/investors.html:309
 msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
-msgstr ""
+msgstr "Siamo supportati da alcuni dei migliori business angel e founders di successo nella Silicon Valley."
 
 #: templates/investors.html:319
 msgid "Steve Chen"
-msgstr ""
+msgstr "Steve Chen"
 
 #: templates/investors.html:322
 msgid "Founder, YouTube"
-msgstr ""
+msgstr "Fondatore, YouTube"
 
 #: templates/investors.html:330
 msgid "Alexis Ohanian"
@@ -856,11 +862,11 @@ msgstr "Angel Investor"
 
 #: templates/investors.html:363
 msgid "Justin Blau"
-msgstr ""
+msgstr "Justin Blau"
 
 #: templates/investors.html:366
 msgid "Acclaimed DJ"
-msgstr ""
+msgstr "DJ acclamato"
 
 #: templates/investors.html:374
 msgid "Steve Jang"
@@ -872,15 +878,15 @@ msgstr "Advisor & Angel, Uber"
 
 #: templates/investors.html:385
 msgid "Kamal Ravikant"
-msgstr ""
+msgstr "Kamal Ravikant"
 
 #: templates/investors.html:388
 msgid "Serial Entrepreneur"
-msgstr ""
+msgstr "Imprenditore seriale"
 
 #: templates/investors.html:396
 msgid "Randall Kaplan"
-msgstr ""
+msgstr "Randall Kaplan"
 
 #: templates/investors.html:399
 msgid "Founder, Akamai"
@@ -916,7 +922,7 @@ msgstr "Compra e vendi su Origin"
 
 #: templates/landing.html:60
 msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
-msgstr "La piattaforma Origin abiliterà centinaia di mercati decentralizzati e peer-to-peer. Scarica oggi la nostra app di punta."
+msgstr "La piattaforma Origin abiliterà centinaia di marketplace decentralizzati e peer-to-peer. Scarica oggi la nostra App."
 
 #: templates/landing.html:64
 msgid "Origin Marketplace"
@@ -948,7 +954,7 @@ msgstr "La sharing economy è un'opportunità gigantesca che attende di essere v
 
 #: templates/landing.html:91
 msgid "Gross bookings are expected to reach $335B by 2025"
-msgstr "Il totale delle prenotazioni ci si aspetta raggiunga i 335B$ entro il 2025"
+msgstr "Si prevede che il totale delle prenotazioni raggiunga i $335 miliardi di dollari entro il 2025"
 
 #: templates/landing.html:98
 msgid "Percentage of total value of a booking Airbnb charged guests"
@@ -964,7 +970,7 @@ msgstr "Autisti che hanno valutato Uber meno di 3 stelle su 5 relativamente alla
 
 #: templates/landing.html:116
 msgid "Uber driver churn by quarter"
-msgstr ""
+msgstr "Turnover degli autisti di Uber per quadrimestre"
 
 #: templates/landing.html:120
 msgid "Airbnb Japan home-share listings removed in 2018"
@@ -972,11 +978,11 @@ msgstr "Annunci di case tolte da Airbnb Giappone nel 2018"
 
 #: templates/landing.html:128
 msgid "Decentralized marketplaces are inevitable"
-msgstr "I mercati decentralizzati sono inevitabili"
+msgstr "I marketplace decentralizzati sono inevitabili"
 
 #: templates/landing.html:129
 msgid "For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen."
-msgstr "Per la prima volta nella storia, la blockchain rende possibile per venditori e acquirenti l'incontrarsi e trasferire beni senza alcun intermediario."
+msgstr "Per la prima volta nella storia, la blockchain rende possibile per venditori e acquirenti incontrarsi e trasferire beni senza alcun intermediario."
 
 #: templates/landing.html:136
 #, python-format
@@ -989,11 +995,11 @@ msgstr "Ognuno può possedere una partecipazione nella rete contribuendo alla su
 
 #: templates/landing.html:150
 msgid "2 billion unbanked people can access new markets globally."
-msgstr ""
+msgstr "2 miliardi di persone senza banca possono accedere a nuovi mercati a livello globale."
 
 #: templates/landing.html:157
 msgid "Decentralized marketplaces can’t be banned or shut down."
-msgstr "I mercati decentralizzati non possono essere vietati o spenti."
+msgstr "I marketplace decentralizzati non possono essere vietati o bloccati."
 
 #: templates/landing.html:163
 msgid "Origin has a world-class team"
@@ -1001,7 +1007,7 @@ msgstr "Origin ha una squadra di prima classe"
 
 #: templates/landing.html:164
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
-msgstr ""
+msgstr "Il nostro team è guidato da imprenditori seriali, un fondatore di PayPal, primi dipendenti di YouTube e responsabili tecnici di Google e Dropbox."
 
 #: templates/landing.html:204
 msgid "Featured Partner"
@@ -1037,15 +1043,15 @@ msgstr "Notizie Recenti"
 
 #: templates/landing.html:246
 msgid "Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin"
-msgstr ""
+msgstr "Rodolfo Gonzalez Shares ci racconta le motivazioni dell'investimento di Foundation Capital in Origin"
 
 #: templates/landing.html:252
 msgid "Live on TV with HKB News in Korea"
-msgstr ""
+msgstr "In diretta televisiva con HKB News in Corea del Sud"
 
 #: templates/landing.html:258
 msgid "Doo Wan Nam Discusses Origin’s Partnership with MakerDAO"
-msgstr ""
+msgstr "Doo Wan Nam parla della partnership di Origin con MakerDAO"
 
 #: templates/landing.html:263
 msgid "Read more on Medium"
@@ -1057,7 +1063,7 @@ msgstr "Origin Protocol - Cellulare"
 
 #: templates/mobile.html:17
 msgid "Buy and Sell on the Origin Marketplace"
-msgstr ""
+msgstr "Compra e Vendi sul Marketplace Origin"
 
 #: templates/navbar.html:78
 msgid "Product"
@@ -1077,7 +1083,7 @@ msgstr "Origin Rewards"
 
 #: templates/ogn-token.html:43
 msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
-msgstr ""
+msgstr "Guadagna la tua partecipazione nella rete Origin oggi. Gli utenti possono guadagnare i token Origin (OGN) verificando i loro profili, indirizzando amici e parenti su Origin, condividendo notizie su Origin sui social media e facendo acquisti dai nostri venditori in primo piano."
 
 #: templates/ogn-token.html:45
 msgid "Not available in the United States"
@@ -1109,7 +1115,7 @@ msgstr "Nodi Origin"
 
 #: templates/ogn-token.html:105
 msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
-msgstr ""
+msgstr "Fai il tuo OGN per eseguire un nodo Origin e guadagnare più OGN aiutando a replicare e convalidare i dati del profilo e degli annunci sulla rete."
 
 #: templates/ogn-token.html:110
 msgid "Origin Relayer"
@@ -1117,7 +1123,7 @@ msgstr "Origin Relayer"
 
 #: templates/ogn-token.html:112
 msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
-msgstr ""
+msgstr "Gli sviluppatori possono pagare per l'utilizzo dei Meta Transactions Relayers di Origin con OGN. Le Meta Transactions riducono la friction e incoraggiano l'adozione e la retention."
 
 #: templates/ogn-token.html:117
 msgid "Governance"
@@ -1125,7 +1131,35 @@ msgstr "Governance"
 
 #: templates/ogn-token.html:119
 msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
-msgstr ""
+msgstr "Tutti hanno un voto sulla piattaforma Origin. I titolari di token parteciperanno a importanti votazioni della comunità per definire iniziative future."
+
+#: templates/partner_campaign.html:3 templates/partner_campaign.html:5
+msgid "Get Origin Protocol"
+msgstr "Entra in Origin Protocol"
+
+#: templates/partner_campaign.html:329
+msgid "Get Origin Marketplace & earn"
+msgstr "Entra nel Marketplace Origin & guadagna"
+
+#: templates/partner_campaign.html:333
+msgid "Origin Tokens"
+msgstr "I Token di Origin"
+
+#: templates/partner_campaign.html:337
+msgid "Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone."
+msgstr "Inizia scaricando il Marketplace Origin, l'app che ti consente di acquistare e vendere qualsiasi cosa usando cripto direttamente dal tuo telefono."
+
+#: templates/partner_campaign.html:368
+msgid "What are Origin Rewards?"
+msgstr "Cosa sono gli Origin Rewards?"
+
+#: templates/partner_campaign.html:369
+msgid "Rent a home, buy concert tickets, or hire a contractor on Origin, the world’s first marketplace and crypto wallet all-in-one app."
+msgstr "Affitta una casa, acquista i biglietti per i concerti o ingaggia un professionista su Origin, la prima app marketplace e wallet per criptovalute al mondo."
+
+#: templates/partner_campaign.html:382
+msgid "Scan to install our app"
+msgstr "Scansiona per installare la nostra app"
 
 #: templates/partner_campaign.html:3 templates/partner_campaign.html:5
 msgid "Get Origin Protocol"
@@ -1221,7 +1255,7 @@ msgstr "Origin Protocol - Informativa sulla privacy"
 
 #: templates/product.html:18
 msgid "Our platform will power decentralized marketplaces everywhere"
-msgstr "La nostra piattaforma abiliterà mercati decentralizzati ovunque"
+msgstr "La nostra piattaforma abiliterà marketplace decentralizzati ovunque"
 
 #: templates/product.html:28
 msgid "Apps built on our platform"
@@ -1349,7 +1383,7 @@ msgstr "Ottobre 2018"
 
 #: templates/product.html:196
 msgid "Launched Beta on Ethereum mainnet"
-msgstr "Lanciata Beta su manine Ethereum"
+msgstr "Lanciata Beta su Mainnet Ethereum"
 
 #: templates/product.html:200
 msgid "February 2019"
@@ -1445,7 +1479,7 @@ msgstr "Impara di più sui Token Origin"
 
 #: templates/singles.html:3 templates/singles.html:5
 msgid "Origin Protocol - imToken"
-msgstr ""
+msgstr "Origin Protocol - imToken"
 
 #: templates/team.html:3 templates/team.html:5
 msgid "Origin Protocol - Team"
@@ -1457,7 +1491,7 @@ msgstr "La nostra squadra di serie A è guidata da imprenditori e ingegneri che 
 
 #: templates/team.html:38
 msgid "Core team"
-msgstr ""
+msgstr "Core team"
 
 #: templates/team.html:48
 msgid "Josh Fraser"
@@ -1629,19 +1663,19 @@ msgstr "Aure è un Product Designer con oltre 10 anni di esperienza. Prima di un
 
 #: templates/team.html:336
 msgid "Community team"
-msgstr ""
+msgstr "Community team"
 
 #: templates/team.html:345
 msgid "Holly Gu"
-msgstr ""
+msgstr "Holly Gu"
 
 #: templates/team.html:353
 msgid "June Kim"
-msgstr ""
+msgstr "June Kim"
 
 #: templates/team.html:361
 msgid "Yeongin Lee"
-msgstr ""
+msgstr "Yeongin Lee"
 
 #: templates/team.html:372
 msgid "Advisors"
@@ -1694,7 +1728,7 @@ msgstr "Vuoi contribuire?"
 
 #: templates/team.html:469
 msgid "Visit our GitHub Repository"
-msgstr ""
+msgstr "Visita il nostro GitHub Repository"
 
 #: templates/team.html:470
 msgid "Join our #engineering channel on Discord"
@@ -1710,7 +1744,7 @@ msgstr "Noi siamo una squadra distribuita e stiamo assumendo in tutto il mondo."
 
 #: templates/team.html:488
 msgid "View job posts"
-msgstr ""
+msgstr "Visualizza le offerte di lavoro"
 
 #: templates/tokens.html:3 templates/tokens.html:5
 msgid "Origin Protocol - Tokens"
@@ -1748,7 +1782,7 @@ msgstr "Origin Protocol - Termini di servizio"
 
 #: templates/video.html:37
 msgid "Share"
-msgstr ""
+msgstr "Condividi"
 
 #: templates/videos.html:3 templates/videos.html:5
 msgid "Origin Protocol - Videos"
@@ -1756,11 +1790,11 @@ msgstr "Origin Protocol - Video"
 
 #: templates/videos.html:18 templates/videos.html:21
 msgid "Featured"
-msgstr ""
+msgstr "In primo piano"
 
 #: templates/videos.html:19
 msgid "Employee Videos"
-msgstr ""
+msgstr "Video dei dipendenti"
 
 #: templates/videos.html:20
 msgid "Meetup Videos"
@@ -1801,7 +1835,7 @@ msgstr "Origin Protocol è la piattaforma blockchain per la costruzione di merca
 
 #: views/web_views.py:193
 msgid "Missing email"
-msgstr ""
+msgstr "Email mancante"
 
 #: views/web_views.py:205
 msgid "Please enter your name"
@@ -1813,7 +1847,7 @@ msgstr "Per favore Inserisci la tua email"
 
 #: views/web_views.py:209
 msgid "Select your country of citizenship"
-msgstr ""
+msgstr "Seleziona la tua cittadinanza"
 
 #: views/web_views.py:211
 msgid "Please enter your desired allocation"
@@ -1821,7 +1855,7 @@ msgstr "Inserisci la quantità desiderata"
 
 #: views/web_views.py:213
 msgid "Select a currency"
-msgstr ""
+msgstr "Seleziona una valuta"
 
 #: views/web_views.py:215
 msgid "Please prove you are not a robot."
@@ -1829,7 +1863,7 @@ msgstr "Si prega di dimostrare che non sei un robot."
 
 #: views/web_views.py:220
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #~ msgid "Randall Kalpan"
 #~ msgstr "Randall Kalpan"
