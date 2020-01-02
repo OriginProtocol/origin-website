@@ -187,9 +187,7 @@ def join_mailing_list():
     dapp_user = 1 if 'dapp_user' in request.form else 0
     investor = 1 if 'investor' in request.form else 0
 
-    log('Updating mailing list. email: %s name: %s phone: %s eth_address: %s country: %s ip_addr=%s'
-        % (email, full_name, phone, eth_address, country_code, ip_addr))
-
+    log('Updating mailing list for', email)
     try:
         # Add an entry to the eth_contact DB table.
         if 'eth_address':
