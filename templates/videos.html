@@ -16,18 +16,18 @@
           <h1>Videos</h1>
           <div class="category-tab-groups">
             <a href="#" class="category-tab d-none d-md-flex" data-category-group="featured">{{ gettext("Featured") }}</a>
-            <!-- <a href="#" class="category-tab d-none d-md-flex" data-category-group="employee">{{ gettext("Employee Videos") }}</a>
-            <a href="#" class="category-tab d-none d-md-flex" data-category-group="meetup">{{ gettext("Meetup Videos") }}</a> -->
+            <a href="#" class="category-tab d-none d-md-flex" data-category-group="employee">{{ gettext("Employee Videos") }}</a>
+            <!-- <a href="#" class="category-tab d-none d-md-flex" data-category-group="meetup">{{ gettext("Meetup Videos") }}</a> -->
             <a href="#" class="category-tab d-flex d-md-none" data-category-group="featured">{{ gettext("Featured") }}</a>
-            <!-- <a href="#" class="category-tab d-flex d-md-none" data-category-group="employee">{{ gettext("Employees") }}</a>
-            <a href="#" class="category-tab d-flex d-md-none" data-category-group="meetup">{{ gettext("Meetups") }}</a> -->
+            <a href="#" class="category-tab d-flex d-md-none" data-category-group="employee">{{ gettext("Employees") }}</a>
+            <!-- <a href="#" class="category-tab d-flex d-md-none" data-category-group="meetup">{{ gettext("Meetups") }}</a> -->
           </div>
         </div>
       </div>
       <div class="row">
         {% for video in videos %}
           <div class="col-12 col-md-3 video-item" data-category="{{video.category}}">
-            <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
+            <a class="image-video-link" href="{{ url_for('video', lang_code=CURRENT_LANGUAGE, video_slug=video.slug) }}">
               <img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" />
               <div class="overlay hide hover-show justify-content-center align-items-center">
                 <img class="play" src="/static/img/landing/play-triangle.svg" />
@@ -36,7 +36,7 @@
                 <div class="duration mb-2 mr-2">{{video.duration}}</div>
               </div>
             </a>
-            <a href="{{ "/video/%s" % (video.hash)}}" class="title">
+            <a href="{{ "/video/%s" % (video.slug)}}" class="title">
               {{ gettext(video.title) }}
             </a>
           </div>

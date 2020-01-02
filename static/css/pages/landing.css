@@ -1,6 +1,5 @@
 .landing-page h1 {
   font-family: Poppins;
-  font-size: 1.9rem;
   font-weight: normal;
   text-align: center;
   line-height: normal;
@@ -21,6 +20,14 @@
 .vc-backed .bottom img {
   margin: 10px;
   max-height: 16px;
+}
+
+.buy-sell-block .bottom img.big {
+  max-height: 22px;
+}
+
+.vc-backed.video-block .contents {
+  margin-bottom: 0px;
 }
 
 .video-block .bottom.clickable img {
@@ -182,7 +189,7 @@
 .vc-backed .button,
 .buy-sell-block .marketplace .button {
   font-size: 1.125rem;
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   border-radius: 26px;
   border: solid 1px var(--white);
@@ -226,6 +233,10 @@
   margin-right: 10%;
 }
 
+.sharing-economy .segment-title {
+  max-width: 800px;
+}
+
 .sharing-economy .percentages {
   margin-top: 60px;
   margin-bottom: 95px;
@@ -233,6 +244,17 @@
 
 .sharing-economy .percentages-holder {
   width: 50%;
+}
+
+.sharing-economy .percentages-holder a {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.21;
+  margin-top: 10px;
+  color: #638298;
+  text-align: left;
+  width: 100%;
 }
 
 .sharing-economy .percentage {
@@ -253,8 +275,13 @@
 
 .sharing-economy .percentage .small {
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 500;
   vertical-align: 38%;
+}
+
+.sharing-economy .percentage .small_percent {
+  font-size: 2.2rem;
+  vertical-align: 20%;
 }
 
 .sharing-economy .subtitle1 {
@@ -326,10 +353,8 @@
 }
 
 .decentralised-marketplaces .tiles-holder .image-holder {
-  width: 220px;
-  height: 220px;
-  border: solid 1px #dbe6eb;
-  background-color: white;
+  width: 200px;
+  height: 200px;
 }
 
 .decentralised-marketplaces .tiles-holder .tile-name {
@@ -437,7 +462,7 @@
 }
 
 .featured-video .tiles-holder {
-  margin-bottom: 60px;
+  
 }
 
 .featured-video .tiles-holder .tile {
@@ -505,12 +530,12 @@
 }
 
 .recent-news .tiles-holder .tile img {
-  margin-bottom: 21px;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
 .recent-news .white-button-blue-border {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 70px;
 }
 
@@ -541,6 +566,10 @@
 
   .vc-backed .bottom {
     margin-bottom: 10rem;
+  }
+
+  .vc-backed.video-block .contents {
+    margin-bottom: 60px;
   }
 
   .landing-page .countdown-timer {
@@ -578,7 +607,7 @@
   }
 
   .sharing-economy .pies {
-    max-width: 540px;
+    max-width: 500px;
     margin-right: 0px;
   }
 
@@ -602,6 +631,18 @@
     max-width: 680px;
     margin-top: -15px;
   }
+
+  .recent-news .tiles-holder .tile img {
+    margin-bottom: 21px;
+  }
+
+  .featured-video .white-button-blue-border {
+    margin-top: 40px;
+  }
+
+  .recent-news .white-button-blue-border {
+    margin-top: 60px;
+  }
 }
 
 /* md + */
@@ -611,6 +652,10 @@
   .vc-backed .bottom img {
     margin: 21px;
     max-height: 26px;
+  }
+
+  .buy-sell-block .bottom img.big {
+    max-height: 36px;
   }
 
   .decentralised-marketplaces .tiles-holder {
@@ -632,6 +677,10 @@
 
   .sharing-economy .percentages-holder {
     width: 260px;
+  }
+
+  .sharing-economy .percentages-holder a {
+    text-align: center;
   }
 
   .sharing-economy .percentages .percentage {
@@ -659,5 +708,9 @@
   .vc-backed .bottom img {
     margin: 30px;
     max-height: 30px;
+  }
+
+  .buy-sell-block .bottom img.big {
+    max-height: 41px;
   }
 }

@@ -6,13 +6,16 @@
 
 {% block content %}
 
+{# include 'countdown-bar.html' #}
+
 {% with theme_dark=True %}
 {% include 'navbar.html' %}
 {% endwith %}  
 
 <main class="landing-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="landing-video" class="full-screen-video d-none" ></div>
+    <div id="landing-video" class="full-screen-video d-none"></div>
+    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
         <div id="landing-video-background" ></div>
@@ -58,29 +61,29 @@
     <h1>{{gettext("Buy and sell on Origin")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
     <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="mw-298 mw-md-568" src="/static/img/landing/origin-marketplace@3x.png">
+      <img class="mw-298 mw-md-568" src="/static/img/landing/origin-marketplace@2x.png">
       <div class="d-flex flex-column align-items-center align-items-md-start">
         <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
         <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
         {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
         <div class="d-flex mt-4">
-          <a class="pr-2 py-2" href="https://apps.apple.com/us/app/origin-marketplace/id1446091928" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
-          <a class="pl-2 py-2" href="https://play.google.com/store/apps/details?id=com.origincatcher" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
+          <a class="pr-2 py-2" href="{{ universal.IOS_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
+          <a class="pl-2 py-2" href="{{ universal.ANDROID_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
         </div>
         {% endif %}
         {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
-          <a class="button mt-4" href="/static/files/origin-marketplace-0.23.16.apk" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
+          <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
         {% endif %}
         <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
         <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
       </div>
     </div>
-    <div class="opaque mt-3">{{gettext("Available on")}}</div>
-    <div class="bottom d-flex justify-content-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
+    <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
+    <div class="bottom d-flex justify-content-center align-items-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
       <img src="/static/img/landing/coinbase-wallet@3x.png"/>
       <img src="/static/img/landing/imtoken.svg"/>
-      <img src="/static/img/landing/trustwallet.svg"/>
-      <img src="/static/img/landing/metamask.svg"/>
+      <img class="big" src="/static/img/landing/trustwallet.svg"/>
+      <img class="big" src="/static/img/landing/metamask.svg"/>
     </div>
   </div>
   <!-- The sharing economy section -->
@@ -106,17 +109,18 @@
         </div>
       </div>
       <div class="percentages d-flex justify-content-start justify-content-md-center flex-wrap">
-        <div class="d-flex flex-column percentages-holder align-items-center mb-5 mb-md-0 px-2 p-md-0">
-          <div class="percentage">70%</div>
+        <div class="d-flex flex-column percentages-holder align-items-start align-items-md-center mb-5 mb-md-0 px-2 p-md-0">
+          <div class="percentage mb-0">70<span class="small_percent">%</span></div>
           <div class="subtitle1 mb-auto">{{gettext("Drivers that rated Uber under 3 stars out of 5 for earnings satisfaction")}}</div>
         </div>
-        <div class="d-flex flex-column percentages-holder align-items-center mb-5 mb-md-0 px-2 p-md-0">
-          <div class="percentage">30%</div>
+        <div class="d-flex flex-column percentages-holder align-items-start align-items-md-center mb-5 mb-md-0 px-2 p-md-0">
+          <div class="percentage mb-0">30<span class="small_percent">%</span></div>
           <div class="subtitle1 mb-auto">{{gettext("Uber driver churn by quarter")}}</div>
         </div>
-        <div class="d-flex flex-column percentages-holder align-items-center mb-5 mb-md-0 px-2 p-md-0">
-          <div class="percentage">80%</div>
+        <div class="d-flex flex-column percentages-holder align-items-start align-items-md-center mb-5 mb-md-0 px-2 p-md-0">
+          <div class="percentage mb-0">80<span class="small_percent">%</span></div>
           <div class="subtitle1 mb-auto">{{gettext("Airbnb Japan home-share listings removed in 2018")}}</div>
+          <a target="_blank" href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings">asia.nikkei.com</a>
         </div>
       </div>
     </div>
@@ -128,28 +132,28 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img class="mw-220" src="/static/img/landing/lower-fees@3x.jpg"/>
+          <img class="mw-200" src="/static/img/landing/lower-fees@2x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Lower Fees")}}</div>
         <div class="tile-text">{{gettext("Buyers and sellers share 20-30%% in savings when middlemen are removed.")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img class="mw-220" src="/static/img/landing/better-incentives@3x.jpg"/>
+          <img class="mw-200" src="/static/img/landing/better-incentives@2x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Better Incentives")}}</div>
         <div class="tile-text">{{gettext("Everyone can own a stake in the network by contributing to its growth.")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img class="mw-220" src="/static/img/landing/increased-access@3x.jpg"/>
+          <img class="mw-200" src="/static/img/landing/increased-access@2x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("Increased Access")}}</div>
         <div class="tile-text">{{gettext("2 billion unbanked people can access new markets globally.")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
-          <img class="mw-220" src="/static/img/landing/more-resilience@3x.jpg"/>
+          <img class="mw-200" src="/static/img/landing/more-resilience@2x.jpg"/>
         </div>
         <div class="tile-name">{{gettext("More Resilience")}}</div>
         <div class="tile-text">{{gettext("Decentralized marketplaces can’t be banned or shut down.")}}</div>
@@ -182,8 +186,8 @@
     </div>
     <div class="video-overlay blue"></div>
     <div id="landing-video-poster2" class="video-overlay-poster"></div>
-    <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title mt-5 pt-4">{{gettext("We are backed by top venture capital firms and investors in Silicon Valley and around the world")}}</h1>
+    <div class="contents d-flex flex-column justify-content-between align-items-center">
+      <h1 class="video-title small mt-5 pt-4">{{gettext("We are backed by top venture capital firms and investors in Silicon Valley and around the world")}}</h1>
       <button id="landing-video-button2" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
@@ -207,7 +211,7 @@
         <div class="fname mt-auto">{{gettext("Luca De Giglio")}}</div>
         <div class="position">{{gettext("Founder, Trips Community")}}</div>
       </div>
-      <img class="col-12 col-md-6 p-0 align-self-center" src="/static/img/landing/luca-photo@3x.jpg"/>
+      <img class="col-12 col-md-6 p-0 align-self-center" src="/static/img/landing/luca-photo2@3x.jpg"/>
     </div>
   </div>
   <!-- Featured video -->
@@ -216,7 +220,7 @@
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       {% for video in featured_videos %}
         <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
-          <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
+          <a class="image-video-link" href="{{ url_for('video', lang_code=CURRENT_LANGUAGE, video_slug=video.slug) }}">
             <img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" />
             <div class="overlay hide hover-show justify-content-center align-items-center">
               <img class="play" src="/static/img/landing/play-triangle.svg" />
@@ -225,7 +229,7 @@
               <div class="duration mb-2 mr-2">{{video.duration}}</div>
             </div>
           </a>
-          <a href="{{ "/video/%s" % (video.hash)}}" class="title">
+          <a href="{{ "/video/%s" % (video.slug)}}" class="title">
             {{ gettext(video.title) }}
           </a>
         </div>
@@ -237,20 +241,20 @@
   <div class="recent-news d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Recent News")}}</h1>
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
-      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
+      <div class="d-flex flex-column tile align-items-center mb-1 mb-md-0">
         <a
           href="https://medium.com/originprotocol/rodolfo-gonzalez-shares-why-foundation-capital-invested-in-origin-bc512d377801">
           <img src="/static/img/landing/rodolfo.png" />
           <div class="tile-title">{{gettext("Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin")}}</div>
         </a>
       </div>
-      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
+      <div class="d-flex flex-column tile align-items-center mb-1 mb-md-0">
         <a href="https://medium.com/originprotocol/live-on-tv-with-hkb-news-in-korea-a6636be60eef"><img
             src="/static/img/landing/live-on-tv.png" />
           <div class="tile-title">{{gettext("Live on TV with HKB News in Korea")}}</div>
         </a>
       </div>
-      <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
+      <div class="d-flex flex-column tile align-items-center mb-1 mb-md-0">
         <a href="https://medium.com/originprotocol/doo-wan-nam-discusses-origins-partnership-with-makerdao-c89461572cf0">
           <img src="/static/img/landing/maker.png" />
           <div class="tile-title">{{gettext("Doo Wan Nam Discusses Origin’s Partnership with MakerDAO")}}</div>

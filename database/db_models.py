@@ -16,6 +16,7 @@ class EmailList(db.Model):
     unsubscribed = db.Column(db.Boolean())
     created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
     ip_addr = db.Column(db.String(100))
+    country_code = db.Column(db.String(2))
 
     def __str__(self):
         return '%s' % (self.email)
@@ -123,6 +124,7 @@ class EthContact(db.Model):
     tokens = db.Column(JSONB)
     last_updated = db.Column(db.DateTime(),server_default=db.func.now(), onupdate=db.func.now())
     created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+    country_code = db.Column(db.String(2))
 
     def __str__(self):
         return '%s' % (self.name)

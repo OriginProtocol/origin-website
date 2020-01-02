@@ -6,21 +6,25 @@
 
 {% block content %}
 
+{# include 'countdown-bar.html' #}
+
 {% with theme_dark=True %}
-  {% with single_video_id=video.hash %}
+  {% with single_video_slug=video.slug %}
     {% include 'navbar.html' %}
   {% endwith %}  
 {% endwith %}  
 
 <main class="video-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="video-page-video" data-video-source="{{"%s" % (video.hash)}}" class="full-screen-video d-none" ></div>
+    <div id="video-page-video" data-video-source-zh="{{"%s" % (video.youkuHash)}}" data-video-source="{{"%s" % (video.hash)}}" class="full-screen-video d-none" ></div>
+    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
     <div class="background-video">
       <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <img id="video-page-video-background" src="{{"/static/img/videos/%s.jpg" % (video.hash)}}"/>
+        <div id="video-page-video-background"></div>
       </div>
     </div>
     <div class="video-overlay"></div>
+    <div id="videos-video-poster" class="video-overlay-poster"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
       <button id="video-page-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
@@ -40,20 +44,22 @@
       </div>
       <div class="tiles-holder d-flex justify-content-start align-self-center flex-wrap">
         {% for video in featured_videos %}
-          <div class="col-12 col-md-3 video-item">
-            <a class="image-video-link" href="{{ "/video/%s" % (video.hash)}}">
-              <img src="{{"/static/img/videos/%s.jpg" % (video.hash)}}" />
-              <div class="overlay hide hover-show justify-content-center align-items-center">
-                <img class="play" src="/static/img/landing/play-triangle.svg" />
-              </div>
-              <div class="overlay d-flex justify-content-end align-items-end">
-                <div class="duration mb-2 mr-2">1:12</div>
-              </div>
-            </a>
-            <a href="{{ "/video/%s" % (video.hash)}}" class="title">
-              {{ gettext(video.title) }}
-            </a>
-          </div>
+          {% if loop.index <= 4 %}
+            <div class="col-12 col-md-3 video-item">
+              <a class="image-video-link" href="{{ "/video/%s" % (video.slug)}}">
+                <img src="{{"/static/img/videos/%s.jpg" % (video.hash)}}" />
+                <div class="overlay hide hover-show justify-content-center align-items-center">
+                  <img class="play" src="/static/img/landing/play-triangle.svg" />
+                </div>
+                <div class="overlay d-flex justify-content-end align-items-end">
+                  <div class="duration mb-2 mr-2">1:12</div>
+                </div>
+              </a>
+              <a href="{{ "/video/%s" % (video.slug)}}" class="title">
+                {{ gettext(video.title) }}
+              </a>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>

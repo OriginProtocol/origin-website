@@ -14,7 +14,7 @@ BASE_URL = 'https://' + constants.HOST if constants.HTTPS else 'http://' + const
 BUSINESS_NAME = 'Origin Protocol'
 CONTACT_EMAIL = 'info@originprotocol.com'
 
-WHITEPAPER_URL = BASE_URL + '/whitepaper'
+WHITEPAPER_URL = BASE_URL + '/whitepaper-v2'
 
 GITHUB_URL = 'https://github.com/originprotocol'
 DOCS_URL = 'https://docs.originprotocol.com'
@@ -29,6 +29,7 @@ TWITTER_URL = 'https://twitter.com/originprotocol'
 FACEBOOK_URL = 'https://www.facebook.com/originprotocol'
 IOS_URL = 'https://itunes.apple.com/app/origin-wallet/id1446091928'
 ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.origincatcher'
+APK_URL = '/static/files/origin-marketplace-0.23.16.apk'
 DAPP_URL = 'https://www.shoporigin.com'
 REWARDS_URL = 'https://www.shoporigin.com/#/welcome'
 FAUCET_URL = 'https://faucet.originprotocol.com'

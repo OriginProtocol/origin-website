@@ -88,7 +88,7 @@
           <div class="col-12 col-md-4">
             <div class="d-flex justify-content-center align-items-center number">1</div>
           </div>
-          <div class="col-12 col-md-8 subtext">
+          <div class="col-12 col-md-6 subtext">
             {{gettext("Introduce yourself in our public Discord #engineering channel.")}}</h1>
           </div>
         </div>
@@ -96,7 +96,7 @@
           <div class="col-12 col-md-4">
             <div class="d-flex justify-content-center align-items-center number">2</div>
           </div>
-          <div class="col-12 col-md-8 subtext">
+          <div class="col-12 col-md-6 subtext">
             {{gettext("Find an open issue in our monorepo and tell us that you would like to solve it.")}}</h1>
           </div>
         </div>
@@ -104,7 +104,7 @@
           <div class="col-12 col-md-4">
             <div class="d-flex justify-content-center align-items-center number">3</div>
           </div>
-          <div class="col-12 col-md-8 subtext">
+          <div class="col-12 col-md-6 subtext">
             {{gettext("Merge your first pull request today.")}}</h1>
           </div>
         </div>
@@ -141,52 +141,52 @@
       </div>
     </div>
     <div class="d-flex flex-column justify-content-start align-items-center">
-      <img class="d-none d-md-flex" src="/static/img/developers/map.svg"/>
+      <img class="d-none d-md-flex" src="{{desktopBackground}}"/>
       <div class="d-flex d-md-none mobile-map-holder flex-row mt-4">
         <div class="container d-flex">
           <div class="d-flex flex-column col-6 p-0">
             <div class="city">{{gettext("San Francisco")}}</div>
-            <div class="time">{{gettext("12:30PM")}}</div>
+            <div class="time">{{mobileTimes[0]}}</div>
 
             <div class="city">{{gettext("Boulder")}}</div>
-            <div class="time">{{gettext("1:30PM")}}</div>
+            <div class="time">{{mobileTimes[1]}}</div>
 
             <div class="city">{{gettext("New York")}}</div>
-            <div class="time">{{gettext("12:30PM")}}</div>
+            <div class="time">{{mobileTimes[2]}}</div>
 
             <div class="city">{{gettext("Buenos Aires")}}</div>
-            <div class="time">{{gettext("3:30PM")}}</div>
+            <div class="time">{{mobileTimes[3]}}</div>
 
             <div class="city">{{gettext("London")}}</div>
-            <div class="time">{{gettext("8:30PM")}}</div>
+            <div class="time">{{mobileTimes[4]}}</div>
 
             <div class="city">{{gettext("Berlin")}}</div>
-            <div class="time">{{gettext("9:30PM")}}</div>
+            <div class="time">{{mobileTimes[5]}}</div>
 
-            <div class="city">{{gettext("Johanesburg")}}</div>
-            <div class="time">{{gettext("8:30PM")}}</div>
+            <div class="city">{{gettext("Johannesburg")}}</div>
+            <div class="time">{{mobileTimes[6]}}</div>
           </div>
           <div class="d-flex flex-column col-6 p-0 pl-5">
-            <div class="city">{{gettext("Moscov")}}</div>
-            <div class="time">{{gettext("9:30PM")}}</div>
+            <div class="city">{{gettext("Moscow")}}</div>
+            <div class="time">{{mobileTimes[7]}}</div>
 
             <div class="city">{{gettext("New Delhi")}}</div>
-            <div class="time">{{gettext("12AM")}}</div>
+            <div class="time">{{mobileTimes[8]}}</div>
 
             <div class="city">{{gettext("Singapore")}}</div>
-            <div class="time">{{gettext("2:30AM")}}</div>
+            <div class="time">{{mobileTimes[9]}}</div>
 
             <div class="city">{{gettext("Seoul")}}</div>
-            <div class="time">{{gettext("3:30AM")}}</div>
+            <div class="time">{{mobileTimes[11]}}</div>
 
-            <div class="city">{{gettext("Yokyo")}}</div>
-            <div class="time">{{gettext("3:30AM")}}</div>
+            <div class="city">{{gettext("Tokyo")}}</div>
+            <div class="time">{{mobileTimes[12]}}</div>
 
             <div class="city">{{gettext("Hong Kong")}}</div>
-            <div class="time">{{gettext("2:30AM")}}</div>
+            <div class="time">{{mobileTimes[10]}}</div>
 
             <div class="city">{{gettext("Wellington")}}</div>
-            <div class="time">{{gettext("7:30AM")}}</div>
+            <div class="time">{{mobileTimes[13]}}</div>
           </div>
         </div>
       </div>

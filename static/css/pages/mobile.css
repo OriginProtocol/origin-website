@@ -1,0 +1,80 @@
+.mobile-page {
+  background-color: #007cff;
+  height: 100%;
+}
+
+.mobile-page .logo {
+  margin-top: 50px;
+  max-width: 120px;
+}
+
+.mobile-page .buy-sell-block .marketplace .title {
+  font-family: Poppins;
+  font-size: 2.375rem;
+  font-weight: normal;
+  max-width: 375px;
+  line-height: 45px;
+  margin-top: 30px;
+}
+
+.mobile-page .buy-sell-block .marketplace .text {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.39;
+  max-width: 415px;
+}
+
+.mobile-page .download img {
+  width: 180px;
+}
+
+.mobile-page .footnotes {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #bdcbd5;
+}
+
+.mobile-page .phone {
+  padding-right: 20px;
+}
+
+@media (max-width: 575px) {
+  .mobile-page {
+    padding: 0px 26px;
+  }
+
+  .mobile-page .buy-sell-block {
+    height: 100%;
+  }
+
+  .mobile-page .buy-sell-block .marketplace .title {
+    font-size: 1.75rem;
+    line-height: 35px;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-page .buy-sell-block .marketplace .text {
+    font-size: 0.875rem;
+  }
+
+  .mobile-page .download img {
+    width: 135px;
+  }
+
+  .mobile-page .footnotes {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .mobile-page .actions {
+    margin-top: -15px;
+  }
+
+  .mobile-page .phone {
+    padding-right: 0px;
+    margin-top: 2rem;
+  }
+}

@@ -2,6 +2,9 @@ from collections import OrderedDict
 from datetime import datetime
 import os
 
+import sys
+import calendar
+
 from app import app
 from database import db, db_models
 
@@ -55,6 +58,12 @@ def beforeRequest():
         # Use Accept-Languages header for fallback
         g.current_lang = get_locale()
 
+    g.metadata = {}
+    g.metadata['image'] = 'https://www.originprotocol.com/static/img/fb-og-img.png'
+    g.metadata['title'] = gettext('Origin Protocol')
+    g.metadata['description'] = gettext('Origin Protocol is the blockchain platform for building decentralized marketplaces')
+    g.metadata['url'] = 'https://www.originprotocol.com'
+
 @app.route('/', strict_slashes=False)
 def root():
     def filter_featured_videos(video):
@@ -76,6 +85,11 @@ def apple_app_site_association():
 @app.route('/<lang_code>/mobile', strict_slashes=False)
 def mobile():
     return render_template('mobile.html')
+
+@app.route('/singles', strict_slashes=False)
+@app.route('/<lang_code>/singles', strict_slashes=False)
+def singles():
+    return render_template('singles.html')
 
 @app.route('/mobile/apk', strict_slashes=False)
 @app.route('/<lang_code>/mobile/apk', strict_slashes=False)
@@ -157,14 +171,20 @@ def join_mailing_list():
     if 'email' in request.form:
         email = request.form['email']
         # optional fields
-        first_name = request.form['first_name'] if 'first_name' in request.form else None
-        last_name = request.form['last_name'] if 'last_name' in request.form else None
-        full_name = ' '.join(filter(None, (first_name, last_name)))
+        full_name = request.form['name'] if 'name' in request.form else None
+        if not full_name:
+            first_name = request.form['first_name'] if 'first_name' in request.form else None
+            last_name = request.form['last_name'] if 'last_name' in request.form else None
+            full_name = ' '.join(filter(None, (first_name, last_name)))
         full_name = None if full_name == '' else full_name
         phone = request.form['phone'] if 'phone' in request.form else None
         dapp_user = 1 if 'dapp_user' in request.form else 0
-        if 'eth_address' in request.form:
-            insight.add_contact(address=request.form['eth_address'], dapp_user=1, name=full_name, email=email, phone=phone)
+        investor = 1 if 'investor' in request.form else 0
+        eth_address = request.form['eth_address'] if 'eth_address' in request.form else None
+        print('updating mailing list. email: %s name: %s phone: %s eth_address: %s' % (email, full_name, phone, eth_address))
+        if 'eth_address':
+            print('adding to wallet insights')
+            insight.add_contact(address=eth_address, dapp_user=dapp_user, investor=investor, name=full_name, email=email, phone=phone)
         ip_addr = get_real_ip()
         feedback = mailing_list.send_welcome(email, ip_addr)
         mailing_list.add_sendgrid_contact(email=email, full_name=full_name, dapp_user=dapp_user)
@@ -205,7 +225,7 @@ def unsubscribe():
     feedback = mailing_list.unsubscribe(email)
     mailing_list.unsubscribe_sendgrid_contact(email)
     flash(feedback)
-    return redirect('/', code=302)
+    return redirect('/en/', code=302)
 
 @app.route('/social-stats', methods=['GET'], strict_slashes=False)
 @app.route('/<lang_code>/social-stats', methods=['GET'], strict_slashes=False)
@@ -216,12 +236,98 @@ def fetch_social_stats():
 @app.route('/build-on-origin', strict_slashes=False)
 @app.route('/<lang_code>/build-on-origin', strict_slashes=False)
 def build_on_origin():
-     return render_template('404.html'), 410
+    return render_template('404.html'), 410
 
 @app.route('/developers', strict_slashes=False)
 @app.route('/<lang_code>/developers', strict_slashes=False)
 def developers():
-    return render_template('developers.html')
+
+    class DatetimeRange:
+        def __init__(self, dt1, dt2):
+            self._dt1 = dt1
+            self._dt2 = dt2
+
+        def __contains__(self, dt):
+            return self._dt1 <= dt < self._dt2
+
+    def validSundaysFilter(sunday):
+        if(sunday != 0):
+            return True
+        else:
+            return False
+
+    def sundayInMonthToDay(year, month, sundayIndex):
+        return filter(validSundaysFilter, (week[-1] for week in calendar.monthcalendar(year, month)))[sundayIndex]
+
+    year = datetime.now().year
+    month = datetime.now().month
+
+    # see date range specs: https://docs.google.com/spreadsheets/d/1ACAH15qdfE8jrfMAHVjWzrGRBKo-gMaVmS-D7GnL6po/edit#gid=0
+    dateRanges = [
+        # first day of a year to second Sunday in March
+        DatetimeRange(
+            datetime(year=year, month=1, day=1),
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
+        ),
+        # second Sunday in March to last Sunday in March
+        DatetimeRange(
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1))
+        ),
+        # last Sunday in March to first Sunday in April
+        DatetimeRange(
+            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1)),
+            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0))
+        ),
+        # first Sunday in April last Sunday in September
+        DatetimeRange(  
+            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0)),
+            datetime(year=year, month=9, day=sundayInMonthToDay(year, 9, -1))
+        ),
+        # last Sunday in September to last Sunday in October
+        DatetimeRange(
+            datetime(year=year, month=9, day=sundayInMonthToDay(year, 9, -1)),
+            datetime(year=year, month=10, day=sundayInMonthToDay(year, 10, -1))
+        ),
+        # last Sunday in October to first Sunday in November
+        DatetimeRange(
+            datetime(year=year, month=10, day=sundayInMonthToDay(year, 10, -1)),
+            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0))
+        ),
+        # first Sunday in November to the end of the year
+        DatetimeRange(
+            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0)),
+            datetime(year=year, month=12, day=31)
+        )
+    ]
+
+    desktopImages = [
+        '/static/img/developers/1-st-sun-nov.svg',
+        '/static/img/developers/2-nd-sun-mar.svg',
+        '/static/img/developers/last-sun-mar.svg',
+        '/static/img/developers/1-st-sun-apr.svg',
+        '/static/img/developers/last-sun-sep.svg',
+        '/static/img/developers/last-sun-oct.svg',
+        '/static/img/developers/1-st-sun-nov.svg'
+    ]
+
+    mobileTimes = [
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '5:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '11:30 PM', '2:00 AM', '4:30 AM', '4:30 AM', '5:30 AM', '5:30 AM', '9:30 AM'],
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '7:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '8:30 PM', '9:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '8:30 PM', '9:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '7:30 AM'],
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '8:30 PM', '9:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '7:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
+        [ '12:30 PM', '1:30 PM', '3:30 PM', '5:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '11:30 PM', '2:00 AM', '4:30 AM', '4:30 AM', '5:30 AM', '5:30 AM', '9:30 AM']
+    ]
+
+    imageIndex = 0
+    while imageIndex < len(dateRanges):
+        if (datetime.now() in dateRanges[imageIndex]):
+            break
+        imageIndex += 1
+
+    return render_template('developers.html', desktopBackground=desktopImages[imageIndex], mobileTimes=mobileTimes[imageIndex])
 
 @app.route('/discord', strict_slashes=False)
 @app.route('/<lang_code>/discord', strict_slashes=False)
@@ -278,17 +384,17 @@ def product():
 def ogn_token():
     return render_template('ogn-token.html')
 
-@app.route('/video/<video_id>', strict_slashes=False)
-@app.route('/<lang_code>/video/<video_id>', strict_slashes=False)
-def video(video_id):
+@app.route('/video/<video_slug>', strict_slashes=False)
+@app.route('/<lang_code>/video/<video_slug>', strict_slashes=False)
+def video(video_slug):
     def remove_current_video(video):
-        if(video['hash'] == video_id):
+        if(video['slug'] == video_slug):
             return False
         else:
             return True
 
     def find_current_video(video):
-        if(video['hash'] == video_id):
+        if(video['slug'] == video_slug):
             return True
         else:
             return False
@@ -305,7 +411,11 @@ def video(video_id):
     if (len(videoList) == 0):
         return render_template('404.html'), 404
 
-    return render_template('video.html', featured_videos=featured_videos, video=videoList[0])
+    video=videoList[0]
+    g.metadata['image'] = 'https://www.originprotocol.com/static/img/videos/' + video['hash'] + '.jpg'
+    g.metadata['title'] = video['title']
+    g.metadata['url'] = 'https://www.originprotocol.com/video/' + video['slug']
+    return render_template('video.html', featured_videos=featured_videos, video=video)
 
 @app.route('/videos', strict_slashes=False)
 @app.route('/<lang_code>/videos', strict_slashes=False)
@@ -355,6 +465,11 @@ def creator():
 #     flash(feedback)
 #     return jsonify("OK")
 
+@app.route('/whitepaper-v2', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper-v2', strict_slashes=False)
+def whitepaperv2():
+    return render_template('whitepaper.html')
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -365,17 +480,21 @@ def assets_all_styles():
         "static/css/common.css",
         "static/css/footer.css",
         "static/css/components/countdown-timer.css",
+        "static/css/components/countdown-bar.css",
         "static/css/pages/common.css",
         "static/css/pages/team.css",
         "static/css/pages/token.css",
         "static/css/pages/product.css",
+        "static/css/pages/singles.css",
+        "static/css/pages/mobile.css",
         "static/css/pages/about.css",
         "static/css/pages/landing.css",
         "static/css/pages/video.css",
         "static/css/pages/videos.css",
         "static/css/pages/investors.css",
         "static/css/pages/developers.css",
-        "static/css/pages/presale.css"
+        "static/css/pages/presale.css",
+        "static/css/pages/whitepaper.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)
@@ -390,7 +509,9 @@ def assets_all_javascript():
         "static/js/script.js",
         "static/js/countdown-timer.js",
         "static/js/yt-player.js",
-        "static/js/videos.js"
+        "static/js/videos.js",
+        "static/js/youkuPlayer.js",
+        "static/js/scrollspy.js",
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)

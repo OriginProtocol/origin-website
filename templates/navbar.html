@@ -55,10 +55,8 @@
             <div class="col-6 col-md-4">
               {% if CURRENT_LANGUAGE == language[0] %}
                 <a class="nav-link selected">{{ language[1] }}</a>
-              {% elif single_video_id is not none %}
-                <a class="nav-link" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0], video_id=single_video_id) }}">{{ language[1] }}</a>
               {% else %}
-                <a class="nav-link" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
+                <a class="nav-link" href="{{ url(request, lang_code=language[0]) }}">{{ language[1] }}</a>
               {% endif %}
             </div>
             {% endfor %}
@@ -83,21 +81,19 @@
             <a class="nav-link{% if 'ogn_token' in request.path %} selected{% endif %}" href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN Token") }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" target="_blank">{{ gettext("Whitepaper") }}</a>
+            <a class="nav-link{% if 'whitepaper' in request.path %} selected{% endif %}" href="{{ url_for('whitepaperv2', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Whitepaper") }}</a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="https://www.shoporigin.com" target="_blank">{{ gettext("Shop") }}</a>
           </li>-->
           <li class="d-none d-lg-block nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
-            <div class="dropdown-menu language">
+            <div class="dropdown-menu language flex-wrap">
               {% for language in AVAILABLE_LANGUAGES.items() %}
                 {% if CURRENT_LANGUAGE == language[0] %}
                   <div class="dropdown-item-selected">{{ language[1] }}</div>
-                {% elif single_video_id is not none %}
-                  <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0], video_id=single_video_id) }}">{{ language[1] }}</a>
                 {% else %}
-                  <a class="dropdown-item" href="{{ url_for(request.url_rule.endpoint if request.url_rule else 'index', lang_code=language[0]) }}">{{ language[1] }}</a>
+                  <a class="dropdown-item" href="{{ url(request, lang_code=language[0]) }}">{{ language[1] }}</a>
                 {% endif %}
               {% endfor %}
             </div>

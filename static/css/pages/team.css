@@ -8,18 +8,26 @@
   margin: 0 auto;
 }
 
+/*
 .team-member {
   max-width: 230px;
   margin: 1.25rem 0 3rem 0;
 }
+*/
 
 .team-page .contributing-team-section h3 {
   font-family: Poppins;
   font-size: 1.5rem;
   font-weight: 500;
+  margin-top: 40px;
 }
 
-.advisor-team-section .team-member, .individual-investors-section .team-member {
+.community-team-section {
+  padding-bottom:60px;
+  border-bottom: 1px solid #e9f0f3;
+}
+
+.community-team-section .team-member, .advisor-team-section .team-member, .individual-investors-section .team-member {
   margin-bottom: 1.25rem;
   padding: 0 2.5rem;
 }
@@ -40,6 +48,11 @@
   border-radius: 100px;
   height: 100%;
   width: 100%;
+}
+
+.team-member.large .headshot-wrapper {
+  width: 200px;
+  height: 200px;
 }
 
 .team-member .headshot-wrapper-small {
@@ -135,6 +148,7 @@
   text-align: center;
   margin-bottom: 3.125rem;
   font-size: 1.125rem;
+  font-weight: normal;
 }
 
 @media (max-width: 575px) {

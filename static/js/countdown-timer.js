@@ -92,6 +92,7 @@
       endDate: new Date('10/15/2019')
     }, props)
 
+    console.log(props)
     var size = props.large ? 80 : 60
     var radius = size - 10
     var circumference = Math.PI * radius * 2
@@ -135,6 +136,9 @@
     }, svg)
     
     element.classList.add('countdown-timer')
+    if (props.nav) {
+      element.classList.add('nav-timer')
+    }
     props.large && element.classList.add('large')
     element.appendChild(dial)
 
@@ -183,6 +187,7 @@
   
       new CountdownTimer(timer, {
         large: timer.hasAttribute('data-large'),
+        nav: timer.hasAttribute('data-nav'),
         startDate: new Date(timer.getAttribute('data-startdate')),
         placeholder: timer.getAttribute('placeholder'),
         endDate: new Date(timer.getAttribute('data-enddate'))

@@ -1,30 +1,38 @@
-{% extends 'base.html' %}
-
-{% block title %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
-
-{% block meta_description %}{{ gettext("Origin Protocol - Team") }}{% endblock %}
-
-{% block content %}
-
-{% with theme_dark=True %}
-{% include 'navbar.html' %}
-{% endwith %}
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - Team")
+}}{% endblock %} {% block meta_description %}{{ gettext("Origin Protocol -
+Team") }}{% endblock %} {% block content %} {% with theme_dark=True %} {%
+include 'navbar.html' %} {% endwith %}
 
 <main class="team-page">
-  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="team-video" class="full-screen-video d-none" ></div>
+  <div
+    class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center"
+  >
+    <div id="team-video" class="full-screen-video d-none"></div>
+    <div id="exit-fullscreen-button" class="d-none">
+      {{gettext("Exit full screen")}}
+    </div>
     <div class="background-video">
-      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <div id="team-video-background" ></div>
+      <div
+        class="video-holder d-flex flex-column justify-content-end align-items-center"
+      >
+        <div id="team-video-background"></div>
       </div>
     </div>
     <div class="video-overlay"></div>
     <div class="video-overlay-gradient"></div>
     <div id="team-video-poster" class="video-overlay-poster"></div>
-    <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("Our world-class team is led by entrepreneurs and engineers from iconic tech companies")}}</h1>
-      <button id="team-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
-        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
+    <div
+      class="contents d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="video-title">
+        {{gettext("Our world-class team is led by entrepreneurs and engineers
+        from iconic tech companies")}}
+      </h1>
+      <button
+        id="team-video-button"
+        class="play-button d-flex justify-content-center align-items-center m-4"
+      >
+        <img class="ml-2" src="/static/img/landing/play-triangle.svg" />
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
     </div>
@@ -34,200 +42,200 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>{{gettext("Our Team")}}</h1>
+          <h1>{{gettext("Core team")}}</h1>
         </div>
         <div class="col-12">
           <div class="row team-members">
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-josh.jpg" class="headshot" alt="Josh Fraser headshot">
-                  </div>
-                  <div class="name">
-                    <a href="http://www.linkedin.com/in/joshuafraser" target="_blank" rel="noopener noreferrer">{{ gettext("Josh Fraser") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Cofounder") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Josh started coding at the age of 10. Prior to Origin, he co-founded three other venture-backed companies: EventVue, Torbit (acquired by Walmart Labs) &amp; Forage.") }}
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-matt.jpg" class="headshot" alt="Matthew Liu headshot">
-                  </div>
-                  <div class="name">
-                    <a href="http://www.linkedin.com/in/matthewliu" target="_blank" rel="noopener noreferrer">{{ gettext("Matthew Liu") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Cofounder") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Matt was the 3rd PM at YouTube (acquired by Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos (acquired by Walmart). He has an MS and BS from Stanford.") }}
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-coleman.jpg" class="headshot" alt="Coleman Maher headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://www.linkedin.com/in/coleman-maher-sf/" target="_blank" rel="noopener noreferrer">Coleman Maher
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Business Development") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley.") }}
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-yupan.jpg" class="headshot" alt="Yu Pan headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://en.wikipedia.org/wiki/Yu_Pan" target="_blank" rel="noopener noreferrer">{{ gettext("Yu Pan") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("R&D Engineer") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate.") }}
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-micah.jpg" class="headshot" alt="Micah Alcorn headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://twitter.com/micahalcorn" target="_blank" rel="noopener noreferrer">{{ gettext("Micah Alcorn") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Product Manager/Engineer") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code.") }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-kay.jpg" class="headshot" alt="Kay Yoo headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://www.linkedin.com/in/kay-yoo-53006960/" target="_blank" rel="noopener noreferrer">{{ gettext("Kay Yoo") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Finance & Operations") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada.") }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-franck.jpg" class="headshot" alt="Franck Chastagnol headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://www.linkedin.com/in/franckc/" target="_blank" rel="noopener noreferrer">{{ gettext("Franck Chastagnol") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Senior Engineer") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox.") }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-mila.jpg" class="headshot" alt="Mila Choi headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://www.linkedin.com/in/so-young-mila-choi-30514769/" target="_blank" rel="noopener noreferrer">{{ gettext("Mila Choi") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Regional Manager Korea") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam.") }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-tom.jpg" class="headshot" alt="Tom Linton headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://www.linkedin.com/in/tom-linton-68866b140/" target="_blank" rel="noopener noreferrer">{{ gettext("Tom Linton") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Senior Engineer") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm.") }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-4">
-                <div class="team-member">
-                  <div class="headshot-wrapper">
-                    <img src="/static/img/headshot-anna.jpg" class="headshot" alt="Anna Wang headshot">
-                  </div>
-                  <div class="name">
-                    <a href="https://www.linkedin.com/in/anna-wang-sijia/" target="_blank" rel="noopener noreferrer">{{ gettext("Anna Wang") }}
-                    </a>
-                  </div>
-                  <div class="title">
-                    {{ gettext("Regional Manager China") }}
-                  </div>
-                  <div class="bio">
-                    {{ gettext("Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia.") }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-4">
+            <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img src="/static/img/headshot-nick.jpeg" class="headshot" alt="Nick Poulden headshot">
+                  <img
+                    src="/static/img/headshot-josh.jpg"
+                    class="headshot"
+                    alt="Josh Fraser headshot"
+                  />
                 </div>
                 <div class="name">
-                  <a href="https://www.linkedin.com/in/nickpoulden/" target="_blank" rel="noopener noreferrer">{{ gettext("Nick Poulden") }}
+                  <a
+                    href="http://www.linkedin.com/in/joshuafraser"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Josh Fraser") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Cofounder") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Josh started coding at the age of 10. Prior to
+                  Origin, he co-founded three other venture-backed companies:
+                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage.") }}
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-matt.jpg"
+                    class="headshot"
+                    alt="Matthew Liu headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="http://www.linkedin.com/in/matthewliu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Matthew Liu") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Cofounder") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Matt was the 3rd PM at YouTube (acquired by
+                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos
+                  (acquired by Walmart). He has an MS and BS from Stanford.") }}
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-coleman.jpg"
+                    class="headshot"
+                    alt="Coleman Maher headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/coleman-maher-sf/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Coleman Maher
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Business Development") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Coleman is an active cryptocurrency investor and
+                  real estate entrepreneur, owning and managing multiple Airbnb
+                  properties. He studied mathematics at Berkeley.") }}
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-yupan.jpg"
+                    class="headshot"
+                    alt="Yu Pan headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://en.wikipedia.org/wiki/Yu_Pan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Yu Pan") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("R&D Engineer") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Yu Pan was one of the 6 founding team members of
+                  PayPal and was the 1st employee at YouTube. He is a former
+                  Google employee and co-founder of Kiwi Crate.") }}
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-micah.jpg"
+                    class="headshot"
+                    alt="Micah Alcorn headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://twitter.com/micahalcorn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Micah Alcorn") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Product Manager/Engineer") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Micah was the technical co-founder of
+                  WellAttended, a bootstrapped box office management platform.
+                  He worked as a commercial real estate broker while learning to
+                  code.") }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-kay.jpg"
+                    class="headshot"
+                    alt="Kay Yoo headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/kay-yoo-53006960/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Kay Yoo") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Finance & Operations") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Kay is a Chartered Professional Accountant (CPA).
+                  She previously worked as a Senior Accountant and then as a
+                  Senior Consultant at KPMG Canada.") }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-franck.jpg"
+                    class="headshot"
+                    alt="Franck Chastagnol headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/franckc/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Franck Chastagnol") }}
                   </a>
                 </div>
                 <div class="title">
                   {{ gettext("Senior Engineer") }}
                 </div>
                 <div class="bio">
-                  {{ gettext("Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks.") }}
+                  {{ gettext("Franck has had a successful career as an early
+                  employee at numerous high-profile companies. He previously led
+                  engineering teams at Inktomi, Paypal, YouTube, Google and
+                  Dropbox.") }}
                 </div>
               </div>
             </div>
@@ -235,17 +243,141 @@
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img src="/static/img/headshot-domen.jpg" class="headshot" alt="Domen Grabec headshot">
+                  <img
+                    src="/static/img/headshot-mila.jpg"
+                    class="headshot"
+                    alt="Mila Choi headshot"
+                  />
                 </div>
                 <div class="name">
-                  <a href="https://www.linkedin.com/in/domen-grabec-a5821a7/" target="_blank" rel="noopener noreferrer">{{ gettext("Domen Grabec") }}
+                  <a
+                    href="https://www.linkedin.com/in/so-young-mila-choi-30514769/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Mila Choi") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Regional Manager Korea") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Mila is leading our community efforts in South
+                  Korea. She previously organized blockhain hackathons and has
+                  degrees from Penn State and Erasmus University Rotterdam.") }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-tom.jpg"
+                    class="headshot"
+                    alt="Tom Linton headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/tom-linton-68866b140/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Tom Linton") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Senior Engineer") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Before Origin, Tom had a successful career as a
+                  solo startup founder. He has two Masters degrees in
+                  Distributed Systems from the Technical University of Berlin
+                  and KTH in Stockholm.") }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-anna.jpg"
+                    class="headshot"
+                    alt="Anna Wang headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/anna-wang-sijia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Anna Wang") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Regional Manager China") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Anna is leading our community efforts for Chinese
+                  speakers. Before Origin, Anna managed global social media at
+                  Exness, a leading forex broker. She also co-founded a
+                  non-profit in Australia.") }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-nick.jpeg"
+                    class="headshot"
+                    alt="Nick Poulden headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/nickpoulden/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Nick Poulden") }}
+                  </a>
+                </div>
+                <div class="title">
+                  {{ gettext("Senior Engineer") }}
+                </div>
+                <div class="bio">
+                  {{ gettext("Nick studied Computer Science at the University of
+                  Warwick. Prior to joining Origin, he worked as an engineer at
+                  Sencha, C3 Energy Network and Palo Alto Networks.") }}
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="team-member">
+                <div class="headshot-wrapper">
+                  <img
+                    src="/static/img/headshot-domen.jpg"
+                    class="headshot"
+                    alt="Domen Grabec headshot"
+                  />
+                </div>
+                <div class="name">
+                  <a
+                    href="https://www.linkedin.com/in/domen-grabec-a5821a7/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Domen Grabec") }}
                   </a>
                 </div>
                 <div class="title">
                   {{ gettext("Engineer") }}
                 </div>
                 <div class="bio">
-                  {{ gettext("Domen co-founded and led a team developing a mobile application with 2 chess Grandmasters. He previously had a successful career at Cetra, Zemanta and Peerindex.") }}
+                  {{ gettext("Domen co-founded and led a team developing a
+                  mobile application with 2 chess Grandmasters. He previously
+                  had a successful career at Cetra, Zemanta and Peerindex.") }}
                 </div>
               </div>
             </div>
@@ -253,17 +385,27 @@
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img src="/static/img/headshot-shahul.jpg" class="headshot" alt="Shahul Hameed headshot">
+                  <img
+                    src="/static/img/headshot-shahul.jpg"
+                    class="headshot"
+                    alt="Shahul Hameed headshot"
+                  />
                 </div>
                 <div class="name">
-                  <a href="https://www.linkedin.com/in/shahthepro/" target="_blank" rel="noopener noreferrer">{{ gettext("Shahul Hameed") }}
+                  <a
+                    href="https://www.linkedin.com/in/shahthepro/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Shahul Hameed") }}
                   </a>
                 </div>
                 <div class="title">
                   {{ gettext("Engineer") }}
                 </div>
                 <div class="bio">
-                  {{ gettext("Shahul is a fullstack engineer who started programming at age of 10. He previously worked as a freelancer and then joined Zoho as a front-end developer.") }}
+                  {{ gettext("Shahul is a fullstack engineer who started
+                  programming at age of 10. He previously worked as a freelancer
+                  and then joined Zoho as a front-end developer.") }}
                 </div>
               </div>
             </div>
@@ -271,17 +413,28 @@
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img src="/static/img/headshot-zaurbek.jpg" class="headshot" alt="Zaurbek Ivanov headshot">
+                  <img
+                    src="/static/img/headshot-zaurbek.jpg"
+                    class="headshot"
+                    alt="Zaurbek Ivanov headshot"
+                  />
                 </div>
                 <div class="name">
-                  <a href="https://vk.com/zaurbeksf" target="_blank" rel="noopener noreferrer">{{ gettext("Zaurbek Ivanov") }}
+                  <a
+                    href="https://vk.com/zaurbeksf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Zaurbek Ivanov") }}
                   </a>
                 </div>
                 <div class="title">
                   {{ gettext("Russia Community") }}
                 </div>
                 <div class="bio">
-                  {{ gettext("Zaurbek Ivanov studied Economics at Kabardino-Balkaria State Agrarian University in Nalchik, Russia. He has worked in the hospitality industry in the US and Russia.") }}
+                  {{ gettext("Zaurbek Ivanov studied Economics at
+                  Kabardino-Balkaria State Agrarian University in Nalchik,
+                  Russia. He has worked in the hospitality industry in the US
+                  and Russia.") }}
                 </div>
               </div>
             </div>
@@ -289,17 +442,28 @@
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img src="/static/img/headshot-mike.jpg" class="headshot" alt="Mike Shultz headshot">
+                  <img
+                    src="/static/img/headshot-mike.jpg"
+                    class="headshot"
+                    alt="Mike Shultz headshot"
+                  />
                 </div>
                 <div class="name">
-                  <a href="https://www.linkedin.com/in/shultzm/" target="_blank" rel="noopener noreferrer">{{ gettext("Mike Shultz") }}
+                  <a
+                    href="https://www.linkedin.com/in/shultzm/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Mike Shultz") }}
                   </a>
                 </div>
                 <div class="title">
                   {{ gettext("Engineer") }}
                 </div>
                 <div class="bio">
-                  {{ gettext("Mike is a long-time contributor to open-source. He created a dev toolkit for creating Ethereum smart contracts with Python and previously worked with Ethereum and IPFS at Lunyr.") }}
+                  {{ gettext("Mike is a long-time contributor to open-source. He
+                  created a dev toolkit for creating Ethereum smart contracts
+                  with Python and previously worked with Ethereum and IPFS at
+                  Lunyr.") }}
                 </div>
               </div>
             </div>
@@ -307,17 +471,28 @@
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img src="/static/img/headshot-aure.jpeg" class="headshot" alt="Aure Gimon headshot">
+                  <img
+                    src="/static/img/headshot-aure.jpeg"
+                    class="headshot"
+                    alt="Aure Gimon headshot"
+                  />
                 </div>
                 <div class="name">
-                  <a href="https://www.linkedin.com/in/aure-gimon-8501041/" target="_blank" rel="noopener noreferrer">{{ gettext("Aure Gimon") }}
+                  <a
+                    href="https://www.linkedin.com/in/aure-gimon-8501041/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ gettext("Aure Gimon") }}
                   </a>
                 </div>
                 <div class="title">
                   {{ gettext("Product Designer") }}
                 </div>
                 <div class="bio">
-                  {{ gettext("Aure is a product designer with 10+ years of experience. Prior to joining Origin, Aure worked at multiple startups and Fortune 500 companies. In a past life, he was also a software engineer.") }}
+                  {{ gettext("Aure is a product designer with 10+ years of
+                  experience. Prior to joining Origin, Aure worked at multiple
+                  startups and Fortune 500 companies. In a past life, he was
+                  also a software engineer.") }}
                 </div>
               </div>
             </div>
@@ -327,32 +502,112 @@
     </div>
   </section>
 
-  <section class="advisor-team-section grey-section">
+  <section class="community-team-section grey-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Community team")}}</h1>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around"
+      >
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/headshot-holly.jpg"
+              class="headshot"
+              alt="Holly Gu headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Holly Gu") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/headshot-june.png"
+              class="headshot"
+              alt="June Kim headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("June Kim") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/headshot-yeongin.png"
+              class="headshot"
+              alt="Yeongin Lee headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Yeongin Lee") }}
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/headshot-leslie.png"
+              class="headshot"
+              alt="Leslie Song headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Leslie Song") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advisor-team-section white-section">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <h1>{{gettext("Advisors")}}</h1>
         </div>
       </div>
-      <div class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around">
+      <div
+        class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around"
+      >
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img src="/static/img/headshot-addison.jpg" class="headshot" alt="Addison Huegel headshot">
+            <img
+              src="/static/img/headshot-addison.jpg"
+              class="headshot"
+              alt="Addison Huegel headshot"
+            />
           </div>
           <div class="name">
-            <a href="https://www.linkedin.com/in/addisonhuegel/" target="_blank" rel="noopener noreferrer">{{ gettext("Addison Huegel") }}
+            <a
+              href="https://www.linkedin.com/in/addisonhuegel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ gettext("Addison Huegel") }}
             </a>
           </div>
           <div class="title">
-          {{ gettext("PR") }}
+            {{ gettext("PR") }}
           </div>
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img src="/static/img/headshot-melody.jpg" class="headshot" alt="Melody He headshot">
+            <img
+              src="/static/img/headshot-melody.jpg"
+              class="headshot"
+              alt="Melody He headshot"
+            />
           </div>
           <div class="name">
-            <a href="https://www.linkedin.com/in/melody-he-497a5b25/" target="_blank" rel="noopener noreferrer">{{ gettext("Melody He") }}
+            <a
+              href="https://www.linkedin.com/in/melody-he-497a5b25/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ gettext("Melody He") }}
             </a>
           </div>
           <div class="title">
@@ -361,10 +616,18 @@
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img src="/static/img/headshot-paul.jpg" class="headshot" alt="Paul Veradittakit headshot">
+            <img
+              src="/static/img/headshot-paul.jpg"
+              class="headshot"
+              alt="Paul Veradittakit headshot"
+            />
           </div>
           <div class="name">
-            <a href="https://www.linkedin.com/in/veradittakit/" target="_blank" rel="noopener noreferrer">{{ gettext("Paul Veradittakit") }}
+            <a
+              href="https://www.linkedin.com/in/veradittakit/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ gettext("Paul Veradittakit") }}
             </a>
           </div>
           <div class="title">
@@ -373,10 +636,18 @@
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img src="/static/img/headshot-joey.jpg" class="headshot" alt="Joey Krug headshot">
+            <img
+              src="/static/img/headshot-joey.jpg"
+              class="headshot"
+              alt="Joey Krug headshot"
+            />
           </div>
           <div class="name">
-            <a href="https://www.linkedin.com/in/joeykrug/" target="_blank" rel="noopener noreferrer">{{ gettext("Joey Krug") }}
+            <a
+              href="https://www.linkedin.com/in/joeykrug/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ gettext("Joey Krug") }}
             </a>
           </div>
           <div class="title">
@@ -385,10 +656,18 @@
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img src="/static/img/headshot-andrew.jpg" class="headshot" alt="Andrew Hyde headshot">
+            <img
+              src="/static/img/headshot-andrew.jpg"
+              class="headshot"
+              alt="Andrew Hyde headshot"
+            />
           </div>
           <div class="name">
-            <a href="http://www.linkedin.com/in/andrewhyde" target="_blank" rel="noopener noreferrer">{{ gettext("Andrew Hyde") }}
+            <a
+              href="http://www.linkedin.com/in/andrewhyde"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ gettext("Andrew Hyde") }}
             </a>
           </div>
           <div class="title">
@@ -408,19 +687,26 @@
         </div>
       </div>
       <div class="d-flex flex-row flex-wrap justify-content-center">
-        {% for person in contributors %}
-          {% if person.avatar %}
-          <div class="p-0 px-md-3 col-3 col-md-2 col-lg-2 col-xl-2">
-            <div class="team-member">
-              <div class="headshot-wrapper-small">
-                <a href="https://github.com/{{ person.username }}" target="_blank" rel="noopener noreferrer">
-                  <img src="{{ person.avatar }}" class="headshot" alt="{{ person.username }}" title="{{ person.username }}">
-                </a>
-              </div>
+        {% for person in contributors %} {% if person.avatar %}
+        <div class="p-0 px-md-3 col-3 col-md-2 col-lg-2 col-xl-2">
+          <div class="team-member">
+            <div class="headshot-wrapper-small">
+              <a
+                href="https://github.com/{{ person.username }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="{{ person.avatar }}"
+                  class="headshot"
+                  alt="{{ person.username }}"
+                  title="{{ person.username }}"
+                />
+              </a>
             </div>
           </div>
-          {% endif %}
-        {% endfor %}
+        </div>
+        {% endif %} {% endfor %}
       </div>
       <div class="row">
         <div class="col-12">
@@ -428,8 +714,18 @@
         </div>
         <div class="col-12">
           <div class="action-buttons">
-            <a href="https://github.com/OriginProtocol" class="btn btn-primary btn-inverse" target="_blank" rel="noopener noreferrer">{{gettext("Visit our GitHub Repository")}}</a>
-            <a href="https://discord.gg/rZnxkSq" class="btn btn-primary btn-inverse">{{gettext("Join our #engineering channel on Discord")}}</a>
+            <a
+              href="https://github.com/OriginProtocol"
+              class="btn btn-primary btn-inverse"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{gettext("Visit our GitHub Repository")}}</a
+            >
+            <a
+              href="https://discord.gg/rZnxkSq"
+              class="btn btn-primary btn-inverse"
+              >{{gettext("Join our #engineering channel on Discord")}}</a
+            >
           </div>
         </div>
       </div>
@@ -437,27 +733,33 @@
   </section>
 
   <section class="join-team-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1>{{gettext("Interested in working at Origin?")}}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Interested in working at Origin?")}}</h1>
+        </div>
+        <div class="col-12">
+          <div class="subtitle">
+            {{gettext("We are a distributed team and are hiring all around the
+            world.")}}
           </div>
-          <div class="col-12">
-            <div class="subtitle">{{gettext("We are a distributed team and are hiring all around the world.")}}</div>
-          </div>
-          <div class="col-12">
-            <div class="action-buttons">
-              <a href="https://angel.co/jobs?slug=originprotocol" class="btn btn-primary" target="_blank" rel="noopener noreferrer">{{gettext("View job posts")}}</a>
-            </div>
+        </div>
+        <div class="col-12">
+          <div class="action-buttons">
+            <a
+              href="https://angel.co/jobs?slug=originprotocol"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{gettext("View job posts")}}</a
+            >
           </div>
         </div>
       </div>
+    </div>
   </section>
 
-{% include 'footer.html' %}
+  {% include 'footer.html' %}
 </main>
 
-{% endblock %}
-
-{% block extra_scripts %}
-{% endblock %}
+{% endblock %} {% block extra_scripts %} {% endblock %}
