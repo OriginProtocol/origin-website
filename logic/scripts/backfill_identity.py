@@ -1,7 +1,7 @@
+import argparse
 import csv
 import requests
-
-from database import db_models
+import sys
 
 URL = 'https://originprotocol.com/mailing-list/join'
 
@@ -21,8 +21,8 @@ def process(eth_address, email, first_name, last_name, phone, country_code)
     print('Response=%s' %s)
     return data.success
 
-def main(filename)
-    print('Starting backfill...')
+def main(filename, do_it)
+    print('Starting backfill. Loading data from %s' % filename)
 
     # Init stats.
     num = 0
@@ -50,6 +50,8 @@ def main(filename)
     print('Processed %d entries. %d successes %d failures' % (num, num_success, num_failure)
 
 if __name__ == '__main__':
-	# called via cron on Heroku
-	with db_utils.request_context():
-		main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('filename')
+    parser.add_argument('do_it')
+    args = parser.parse_args()
+	main(args.filename, args.do_it)
