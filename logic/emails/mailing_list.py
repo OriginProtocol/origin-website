@@ -49,7 +49,7 @@ def unsubscribe_sendgrid_contact(email):
             "recipient_emails": [email]
         }
         response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
-    except Exception as e
+    except Exception as e:
         log('ERROR unsubscribe_sendgrid_contact:', type(e), e)
         return False
 
