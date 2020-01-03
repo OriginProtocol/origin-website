@@ -213,7 +213,7 @@ def join_mailing_list():
 
         # Add the entry to the Sendgrid contact list.
         if new_contact:
-            log('Add to Sendgrid contact list')
+            log('Adding to Sendgrid contact list')
             mailing_list.add_sendgrid_contact(
                 email=email,
                 full_name=full_name,
