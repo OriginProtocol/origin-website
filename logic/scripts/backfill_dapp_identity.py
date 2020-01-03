@@ -17,7 +17,7 @@ LOCAL_URL = 'http://localhost:5000/mailing-list/join'
 # Rate limite the number of requests made to the mailing-list/jin endpoint to ~1 per sec.
 # This is necessary since internally that endpoint makes calls to the
 # SendGrid /contactdb/recipients API which itself is rate limited.
-SLEEP_SEC = 0.9 # 0.9 second
+SLEEP_SEC = 1.0 # 1 sec
 
 def process(url, eth_address, email, first_name, last_name, phone, country_code, ip):
     print('Adding entry %s %s' % (email, eth_address))
