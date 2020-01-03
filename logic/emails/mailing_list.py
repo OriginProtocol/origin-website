@@ -37,7 +37,7 @@ def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=Non
         }]
         response = sg_api.client.contactdb.recipients.post(request_body=data)
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR add_sendgrid_contact:', type(e), e)
         return False
 
 def unsubscribe_sendgrid_contact(email):
@@ -50,7 +50,7 @@ def unsubscribe_sendgrid_contact(email):
         }
         response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR unsubscribe_sendgrid_contact:', type(e), e)
         return False
 
 # Inserts or updates an entry in the email_list table.
@@ -83,7 +83,7 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
             db.session.add(row)
         db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR add_contact:', type(e), e)
         raise e
 
     return new_contact
@@ -113,7 +113,7 @@ def presale(full_name, email, desired_allocation, desired_allocation_currency, c
         db.session.add(me)
         db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR presale:', type(e), e)
         return gettext('Ooops! Something went wrong.')
 
     if sending_addr:
@@ -148,7 +148,7 @@ def unsubscribe(email):
             me.unsubscribed = True
             db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR unsubscribe:', type(e), e)
         return gettext('Ooops, something went wrong')
 
     return gettext('You have been unsubscribed')
@@ -181,7 +181,7 @@ def partners_interest(name, company_name, email, website, note, ip_addr):
         db.session.add(me)
         db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR partners_interest:', type(e), e)
         return gettext('Ooops! Something went wrong.')
 
     message = "Name: %s<br>Company Name: %s<br>Email: %s<br>Website: %s<br>Note: %s" % (name, company_name,
