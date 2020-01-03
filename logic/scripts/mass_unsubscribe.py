@@ -67,7 +67,6 @@ def main(filename, do_it):
 
             # Process the batch.
             success = process_batch(emails, do_it)
-
             if success:
                 num_success += len(emails)
             else:
@@ -84,7 +83,6 @@ def main(filename, do_it):
             num_success += len(emails)
         else:
             num_failure += len(emails)
-
 
     print('Processed %d entries. %s skipped %d successes %d failures' % (num, num_skip, num_success, num_failure))
 
