@@ -191,7 +191,7 @@ def join_mailing_list():
     log('Updating mailing list for', email, eth_address)
     try:
         # Add an entry to the eth_contact DB table.
-        if 'eth_address':
+        if eth_address:
             log('Adding to wallet insights')
             insight.add_contact(
                 address=eth_address,
