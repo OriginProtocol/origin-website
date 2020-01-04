@@ -182,7 +182,7 @@ def join_mailing_list():
     if not full_name and (first_name or last_name):
         full_name = ' '.join(filter(None, (first_name, last_name)))
     phone = request.form.get('phone') or None
-    ip_addr = request.form.get('ip_addr') or None
+    ip_addr = request.form.get('ip_addr') or get_real_ip()
     country_code = request.form.get('country_code') or None
     dapp_user = 1 if 'dapp_user' in request.form else 0
     investor = 1 if 'investor' in request.form else 0
