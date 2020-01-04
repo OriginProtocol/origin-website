@@ -39,6 +39,7 @@ def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=Non
     except Exception as e:
         log('ERROR add_sendgrid_contact:', type(e), e)
         return False
+    return True
 
 def unsubscribe_sendgrid_contact(email):
     try:
@@ -52,6 +53,22 @@ def unsubscribe_sendgrid_contact(email):
     except Exception as e:
         log('ERROR unsubscribe_sendgrid_contact:', type(e), e)
         return False
+    return True
+
+# Unsubscribe a list of emails.
+def mass_unsubscribe_sendgrid_contact(emails):
+    try:
+        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        unsubscribe_group = 51716 # Universal unsubscribe group
+
+        data = {
+            "recipient_emails": emails
+        }
+        response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
+    except Exception as e:
+        log('ERROR mass_unsubscribe_sendgrid_contact:', type(e), e)
+        return False
+    return True
 
 # Inserts or updates an entry in the email_list table.
 # Returns True if a new entry was added, False if the entry already existed.
@@ -144,7 +161,7 @@ def unsubscribe(email):
     try:
         me = db_models.EmailList.query.filter_by(email=email).first()
         if me:
-            # mark DB as unsubscribed in our DB
+            # mark the entry as unsubscribed in our DB
             me.unsubscribed = True
             db.session.commit()
     except Exception as e:
