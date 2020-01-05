@@ -19,6 +19,7 @@ from logic.scripts import update_token_insight as insight
 from logic.views import social_stats
 import requests
 
+from util.ip2geo import get_country
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files, log
 
 import google.oauth2.credentials
@@ -183,7 +184,7 @@ def join_mailing_list():
         full_name = ' '.join(filter(None, (first_name, last_name)))
     phone = request.form.get('phone') or None
     ip_addr = request.form.get('ip_addr') or get_real_ip()
-    country_code = request.form.get('country_code') or None
+    country_code = request.form.get('country_code') or get_country(ip_addr)
     dapp_user = 1 if 'dapp_user' in request.form else 0
     investor = 1 if 'investor' in request.form else 0
     backfill = request.form.get('backfill') or None # Indicates the request was made from an internal backfill script.
