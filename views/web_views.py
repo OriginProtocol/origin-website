@@ -144,8 +144,8 @@ def presale():
 def tokens():
     return redirect('/ogn-token', code=302)
 
-@app.route('/whitepaper', strict_slashes=False)
-@app.route('/<lang_code>/whitepaper', strict_slashes=False)
+@app.route('/whitepaper.pdf', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper.pdf', strict_slashes=False)
 def whitepaper():
     localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
@@ -500,8 +500,8 @@ def creator():
 #     flash(feedback)
 #     return jsonify("OK")
 
-@app.route('/whitepaper-v2', strict_slashes=False)
-@app.route('/<lang_code>/whitepaper-v2', strict_slashes=False)
+@app.route('/whitepaper', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper', strict_slashes=False)
 def whitepaperv2():
     return render_template('whitepaper.html')
 
