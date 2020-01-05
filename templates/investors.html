@@ -1,31 +1,38 @@
-{% extends 'base.html' %}
-
-{% block title %}{{ gettext("Origin Protocol - Investors") }}{% endblock %}
-
-{% block meta_description %}{{ gettext("Origin Protocol - Investors") }}{% endblock %}
-
-{% block content %}
-
-{% with theme_dark=True %}
-{% include 'navbar.html' %}
-{% endwith %}  
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol -
+Investors") }}{% endblock %} {% block meta_description %}{{ gettext("Origin
+Protocol is backed by top investors from all over the world") }}{% endblock %}
+{% block content %} {% with theme_dark=True %} {% include 'navbar.html' %} {%
+endwith %}
 
 <main class="investors-page">
-  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="investors-video" class="full-screen-video d-none" ></div>
-    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
+  <div
+    class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center"
+  >
+    <div id="investors-video" class="full-screen-video d-none"></div>
+    <div id="exit-fullscreen-button" class="d-none">
+      {{gettext("Exit full screen")}}
+    </div>
     <div class="background-video">
-      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <div id="investors-video-background" ></div>
+      <div
+        class="video-holder d-flex flex-column justify-content-end align-items-center"
+      >
+        <div id="investors-video-background"></div>
       </div>
     </div>
     <div class="video-overlay"></div>
     <div class="video-overlay-gradient"></div>
     <div id="investor-video-poster" class="video-overlay-poster"></div>
-    <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("We're backed by top investors from all over the world")}}</h1>
-      <button id="investors-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
-        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
+    <div
+      class="contents d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="video-title">
+        {{gettext("We're backed by top investors from all over the world")}}
+      </h1>
+      <button
+        id="investors-video-button"
+        class="play-button d-flex justify-content-center align-items-center m-4"
+      >
+        <img class="ml-2" src="/static/img/landing/play-triangle.svg" />
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
     </div>
@@ -36,12 +43,19 @@
       <div class="row">
         <div class="col-12">
           <h1>{{gettext("Fundraising")}}</h1>
-          <div class="section-desc">{{gettext("We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform.")}}</div>
+          <div class="section-desc">
+            {{gettext("We are a well-capitalized startup that has sold tokens in
+            three previous rounds to build our platform.")}}
+          </div>
           <!-- <img src="/static/img/investors/graph.svg" /> -->
         </div>
         <div class="col-12 col-md-6">
-          <div class="investment-counter investments">{{gettext("$38.1M")}}</div>
-          <div class="investment-caption">{{gettext("total raised to date")}}</div>
+          <div class="investment-counter investments">
+            {{gettext("$38.1M")}}
+          </div>
+          <div class="investment-caption">
+            {{gettext("total raised to date")}}
+          </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="investment-counter investors">{{gettext("800+")}}</div>
@@ -49,7 +63,8 @@
         </div>
         <div class="col-12">
           <div class="get-stake-desc">
-            {{gettext("Interested in getting a stake in Origin? Sign up to receive the latest updates.")}}
+            {{gettext("Interested in getting a stake in Origin? Sign up to
+            receive the latest updates.")}}
           </div>
           {% include 'components/email-input.html' %}
         </div>
@@ -63,18 +78,32 @@
           <h1>{{gettext("Featured Investor")}}</h1>
         </div>
         <div class="col-12">
-          <div id="featuredInvestors" class="carousel slide" data-touch="true" data-ride="carousel">
+          <div
+            id="featuredInvestors"
+            class="carousel slide"
+            data-touch="true"
+            data-ride="carousel"
+          >
             <ol class="carousel-indicators">
-              <li data-target="#featuredInvestors" data-slide-to="0" class="active"></li>
+              <li
+                data-target="#featuredInvestors"
+                data-slide-to="0"
+                class="active"
+              ></li>
               <li data-target="#featuredInvestors" data-slide-to="1"></li>
               <li data-target="#featuredInvestors" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="featured-investor d-flex flex-column-reverse justify-content-end flex-md-row">
+                <div
+                  class="featured-investor d-flex flex-column-reverse justify-content-end flex-md-row"
+                >
                   <div class="investor-data col-md-6">
                     <div class="investor-quote">
-                      {{gettext("\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\"")}}
+                      {{gettext("\"The reason we invested in Origin was
+                      primarily because of the team. They have amazing
+                      backgrounds and they come from iconic consumer
+                      companies.\"")}}
                     </div>
                     <div class="investor-info">
                       <div class="investor-name">
@@ -85,19 +114,35 @@
                       </div>
                     </div>
                     <div class="actions">
-                      <a href="{{ url_for('video', lang_code=CURRENT_LANGUAGE, video_slug='rodolfo-gonzalez-foundation-capital') }}" class="btn btn-primary-outline btn-inverse mx-0">Watch Rodolfo talk about Origin</a>
+                      <a
+                        href="{{ url_for('video', lang_code=CURRENT_LANGUAGE, video_slug='rodolfo-gonzalez-foundation-capital') }}"
+                        class="btn btn-primary-outline btn-inverse mx-0"
+                        >Watch Rodolfo talk about Origin</a
+                      >
                     </div>
                   </div>
                   <div class="investor-image col-md-6 p-0 d-flex">
-                    <img src="/static/img/investors/featured/rodolfo.jpg" srcset="/static/img/investors/featured/rodolfo@2x.jpg 2x, /static/img/investors/featured/rodolfo@3x.jpg 3x" class="rodolfo">
+                    <img
+                      src="/static/img/investors/featured/rodolfo.jpg"
+                      srcset="
+                        /static/img/investors/featured/rodolfo@2x.jpg 2x,
+                        /static/img/investors/featured/rodolfo@3x.jpg 3x
+                      "
+                      class="rodolfo"
+                    />
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="featured-investor d-flex flex-column-reverse flex-md-row">
+                <div
+                  class="featured-investor d-flex flex-column-reverse flex-md-row"
+                >
                   <div class="investor-data col-md-6">
                     <div class="investor-quote">
-                      {{gettext("\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\"")}}
+                      {{gettext("\"We're talking about over 100,000 members
+                      around the world that are hard-core fans of Origin. Origin
+                      has done a tremendous job executing at a global
+                      scale.\"")}}
                     </div>
                     <div class="investor-info">
                       <div class="investor-name">
@@ -117,10 +162,16 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="featured-investor d-flex flex-column-reverse flex-md-row">
+                <div
+                  class="featured-investor d-flex flex-column-reverse flex-md-row"
+                >
                   <div class="investor-data col-md-6">
                     <div class="investor-quote">
-                      {{gettext("\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\"")}}
+                      {{gettext("\"Origin stands out from any of the other
+                      decentralized applications that we've invested into,
+                      because they've gone out there and built probably the best
+                      community that we've seen. For us, that was a game
+                      changer.\"")}}
                     </div>
                     <div class="investor-info">
                       <div class="investor-name">
@@ -149,7 +200,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>{{gettext("We are backed by top venture capital firms and investors in Silicon Valley and around the world")}}</h1>
+          <h1>
+            {{gettext("We are backed by top venture capital firms and investors
+            in Silicon Valley and around the world")}}
+          </h1>
         </div>
       </div>
     </div>
@@ -158,40 +212,32 @@
     <div class="container px-3">
       <div class="row d-none d-md-flex">
         <div class="col-4">
-          {% include 'vc-firms/usa.html' %}
-          {% include 'vc-firms/germany.html' %}
-          {% include 'vc-firms/uk.html' %}
-          {% include 'vc-firms/uae.html' %}
+          {% include 'vc-firms/usa.html' %} {% include 'vc-firms/germany.html'
+          %} {% include 'vc-firms/uk.html' %} {% include 'vc-firms/uae.html' %}
         </div>
         <div class="col-4">
-          {% include 'vc-firms/china.html' %}
-          {% include 'vc-firms/russia.html' %}
-          {% include 'vc-firms/singapore.html' %}
+          {% include 'vc-firms/china.html' %} {% include 'vc-firms/russia.html'
+          %} {% include 'vc-firms/singapore.html' %}
         </div>
         <div class="col-4">
-          {% include 'vc-firms/hongkong.html' %}
-          {% include 'vc-firms/korea.html' %}
-          {% include 'vc-firms/japan.html' %}
+          {% include 'vc-firms/hongkong.html' %} {% include
+          'vc-firms/korea.html' %} {% include 'vc-firms/japan.html' %}
         </div>
       </div>
 
       <div class="row d-flex d-md-none">
         <div class="col-6">
-          {% include 'vc-firms/usa.html' %}
-          {% include 'vc-firms/germany.html' %}
-          {% include 'vc-firms/uk.html' %}
-          {% include 'vc-firms/uae.html' %}
-          {% include 'vc-firms/russia.html' %}
-          {% include 'vc-firms/singapore.html' %}
+          {% include 'vc-firms/usa.html' %} {% include 'vc-firms/germany.html'
+          %} {% include 'vc-firms/uk.html' %} {% include 'vc-firms/uae.html' %}
+          {% include 'vc-firms/russia.html' %} {% include
+          'vc-firms/singapore.html' %}
         </div>
         <div class="col-6">
-          {% include 'vc-firms/china.html' %}
-          {% include 'vc-firms/hongkong.html' %}
-          {% include 'vc-firms/korea.html' %}
-          {% include 'vc-firms/japan.html' %}
+          {% include 'vc-firms/china.html' %} {% include
+          'vc-firms/hongkong.html' %} {% include 'vc-firms/korea.html' %} {%
+          include 'vc-firms/japan.html' %}
         </div>
       </div>
-
     </div>
   </section>
   <section class="individual-investors-section">
@@ -200,107 +246,137 @@
         <div class="col-12">
           <h1>{{gettext("Individual Investors")}}</h1>
           <div class="section-desc">
-            {{gettext("We are supported by some of the best angel investors and previous founders in Silicon Valley.")}}
+            {{gettext("We are supported by some of the best angel investors and
+            previous founders in Silicon Valley.")}}
           </div>
         </div>
       </div>
       <div class="row">
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/steve.jpeg" class="headshot" alt="Steve Chens headshot">
+            <img
+              src="/static/img/investors/steve.jpeg"
+              class="headshot"
+              alt="Steve Chens headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Steve Chen") }}
           </div>
           <div class="title">
-          {{ gettext("Founder, YouTube") }}
+            {{ gettext("Founder, YouTube") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/alex.png" class="headshot" alt="Alexis Ohanian headshot">
+            <img
+              src="/static/img/investors/alex.png"
+              class="headshot"
+              alt="Alexis Ohanian headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Alexis Ohanian") }}
           </div>
           <div class="title">
-          {{ gettext("Founder, Reddit") }}
+            {{ gettext("Founder, Reddit") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/garry.png" class="headshot" alt="Garry Tan headshot">
+            <img
+              src="/static/img/investors/garry.png"
+              class="headshot"
+              alt="Garry Tan headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Garry Tan") }}
           </div>
           <div class="title">
-          {{ gettext("Partner, Y Combinator") }}
+            {{ gettext("Partner, Y Combinator") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/gil.png" class="headshot" alt="Gil Penchina headshot">
+            <img
+              src="/static/img/investors/gil.png"
+              class="headshot"
+              alt="Gil Penchina headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Gil Penchina") }}
           </div>
           <div class="title">
-          {{ gettext("Angel Investor") }}
+            {{ gettext("Angel Investor") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/justin.jpg" class="headshot" alt="Justin Blau headshot">
+            <img
+              src="/static/img/investors/justin.jpg"
+              class="headshot"
+              alt="Justin Blau headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Justin Blau") }}
           </div>
           <div class="title">
-          {{ gettext("Acclaimed DJ") }}
+            {{ gettext("Acclaimed DJ") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/steve.png" class="headshot" alt="Steve Jang headshot">
+            <img
+              src="/static/img/investors/steve.png"
+              class="headshot"
+              alt="Steve Jang headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Steve Jang") }}
           </div>
           <div class="title">
-          {{ gettext("Advisor & Angel, Uber") }}
+            {{ gettext("Advisor & Angel, Uber") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/kamal.png" class="headshot" alt="Kamal Ravikant headshot">
+            <img
+              src="/static/img/investors/kamal.png"
+              class="headshot"
+              alt="Kamal Ravikant headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Kamal Ravikant") }}
           </div>
           <div class="title">
-          {{ gettext("Serial Entrepreneur") }}
+            {{ gettext("Serial Entrepreneur") }}
           </div>
         </div>
         <div class="team-member col-12 col-md-3">
           <div class="headshot-wrapper">
-            <img src="/static/img/investors/randall.png" class="headshot" alt="Randall Kaplan headshot">
+            <img
+              src="/static/img/investors/randall.png"
+              class="headshot"
+              alt="Randall Kaplan headshot"
+            />
           </div>
           <div class="name">
             {{ gettext("Randall Kaplan") }}
           </div>
           <div class="title">
-          {{ gettext("Founder, Akamai") }}
+            {{ gettext("Founder, Akamai") }}
           </div>
         </div>
       </div>
     </div>
   </section>
 
-{% include 'footer.html' %}
+  {% include 'footer.html' %}
 </main>
 
-{% endblock %}
-
-{% block extra_scripts %}
-{% endblock %}
+{% endblock %} {% block extra_scripts %} {% endblock %}

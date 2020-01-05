@@ -1,26 +1,24 @@
-{% extends 'base.html' %}
-
-{% block title %}{{ gettext("Origin Protocol - OGN Token") }}{% endblock %}
-
-{% block meta_description %}{{ gettext("Origin Protocol - OGN Token") }}{% endblock %}
-
-{% block content %}
-
-{% with theme_dark=False %}
-{% include 'navbar.html' %}
-{% endwith %}  
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - OGN
+Token") }}{% endblock %} {% block meta_description %}{{ gettext("Origin Tokens
+(OGN) ensure the health and growth of the Origin network.") }}{% endblock %} {%
+block content %} {% with theme_dark=False %} {% include 'navbar.html' %} {%
+endwith %}
 
 <main class="tokens-page">
   <section class="countdown-section">
-    <div class="container d-flex flex-column justify-content-between align-items-center">
+    <div
+      class="container d-flex flex-column justify-content-between align-items-center"
+    >
       <h1>{{gettext("Origin Tokens are launching soon!")}}</h1>
-      <div class="segment-subtitle ml-3 mr-3">{{gettext("Subscribe to stay in touch. Your email will be kept private.")}}</div>  
+      <div class="segment-subtitle ml-3 mr-3">
+        {{gettext("Subscribe to stay in touch. Your email will be kept
+        private.")}}
+      </div>
       <!-- {% with timer_large=True %}
       {% include 'components/countdown-timer.html' %}
       {% endwith %} -->
       <div id="add-to-mailing-list" class="mailing-list">
-        {% with theme_dark=False %}
-          {% include 'components/email-input.html' %}
+        {% with theme_dark=False %} {% include 'components/email-input.html' %}
         {% endwith %}
       </div>
       <!--<div class="explanation">
@@ -40,22 +38,33 @@
         <div class="showcase-content higher">
           <h1 class="mb-1">{{gettext("Origin Rewards")}}</h1>
           <p>
-            {{gettext("Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers.")}}
+            {{gettext("Earn your stake in the Origin network today. Users can
+            earn Origin Tokens (OGN) by verifying their profiles, referring
+            friends and family to Origin, sharing news about Origin on social
+            media, and making purchases from our featured sellers.")}}
             <span class="unavailable-text">
               {{gettext("Not available in the United States")}}
             </span>
           </p>
-          <div class="actions d-flex justify-content-center justify-content-md-start">
-            <a 
+          <div
+            class="actions d-flex justify-content-center justify-content-md-start"
+          >
+            <a
               class="btn btn-primary btn-inverse"
               href="https://originrewards.com"
               target="_blank"
-            >Visit Origin Rewards</a>
+              >Visit Origin Rewards</a
+            >
           </div>
         </div>
         <div class="showcase-image">
-          <img src="/static/img/ognToken/origin-rewards.png" srcset="/static/img/ognToken/origin-rewards@2x.png 2x,
-                       /static/img/ognToken/origin-rewards@3x.png 3x">
+          <img
+            src="/static/img/ognToken/origin-rewards.png"
+            srcset="
+              /static/img/ognToken/origin-rewards@2x.png 2x,
+              /static/img/ognToken/origin-rewards@3x.png 3x
+            "
+          />
         </div>
       </div>
     </div>
@@ -64,13 +73,22 @@
     <div class="container">
       <div class="app-showcase image-first d-flex justify-content-center">
         <div class="showcase-image">
-          <img src="/static/img/ognToken/commissions.png" srcset="/static/img/ognToken/commissions@2x.png 2x,
-                       /static/img/ognToken/commissions@3x.png 3x">
+          <img
+            src="/static/img/ognToken/commissions.png"
+            srcset="
+              /static/img/ognToken/commissions@2x.png 2x,
+              /static/img/ognToken/commissions@3x.png 3x
+            "
+          />
         </div>
         <div class="showcase-content">
           <h1 class="mb-1">{{gettext("Commissions")}}</h1>
           <p>
-            {{gettext("Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales.")}}
+            {{gettext("Promote your listings across the Origin flagship app and
+            third-party apps with Origin Commissions. Pay with OGN to get
+            featured prominently in search results. Application developers and
+            marketplace operators earn Origin Tokens (OGN) by helping sellers
+            complete their sales.")}}
           </p>
         </div>
       </div>
@@ -82,12 +100,19 @@
         <div class="showcase-content">
           <h1 class="mb-1">{{gettext("Payments")}}</h1>
           <p>
-            {{gettext("Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method.")}}
+            {{gettext("Use the Origin Tokens (OGN) that you've earned in Origin
+            Rewards to pay for goods and services. Sellers earn larger stakes in
+            the network by accepting OGN as a preferred payment method.")}}
           </p>
         </div>
         <div class="showcase-image">
-          <img src="/static/img/ognToken/payments.png" srcset="/static/img/ognToken/payments@2x.png 2x,
-                       /static/img/ognToken/payments@3x.png 3x">
+          <img
+            src="/static/img/ognToken/payments.png"
+            srcset="
+              /static/img/ognToken/payments@2x.png 2x,
+              /static/img/ognToken/payments@3x.png 3x
+            "
+          />
         </div>
       </div>
     </div>
@@ -98,25 +123,37 @@
         <div class="col-12">
           <h1>{{gettext("Research and Development")}}</h1>
         </div>
-        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center">
+        <div
+          class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center"
+        >
           <img src="/static/img/ognToken/rd-1@2x.png" />
           <h3>{{gettext("Origin Nodes")}}</h3>
           <p>
-            {{gettext("Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network.")}}
+            {{gettext("Stake your OGN to run an Origin Node and earn more OGN by
+            helping to replicate and validate profile and listing data on the
+            network.")}}
           </p>
         </div>
-        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center">
+        <div
+          class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center"
+        >
           <img src="/static/img/ognToken/rd-2@2x.png" />
           <h3>{{gettext("Origin Relayer")}}</h3>
           <p>
-            {{gettext("Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention.")}}
+            {{gettext("Developers can pay for usage of Origin Meta Transactions
+            Relayers with OGN. Meta Transactions reduce user friction and
+            encourage adoption and retention.")}}
           </p>
         </div>
-        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center">
+        <div
+          class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center"
+        >
           <img src="/static/img/ognToken/rd-3@2x.png" />
           <h3>{{gettext("Governance")}}</h3>
           <p>
-            {{gettext("Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives.")}}
+            {{gettext("Everyone has a vote on the Origin Platform. Token holders
+            will participate in important community votes to define future
+            initiatives.")}}
           </p>
         </div>
       </div>
