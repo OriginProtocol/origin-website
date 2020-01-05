@@ -1,4 +1,8 @@
+{% if launched==True %}
+<div id="countdown-hero-banner" class="countdown-hero-banner d-flex justify-content-center align-items-center launched">
+{% else %}
 <div id="countdown-hero-banner" class="countdown-hero-banner d-flex justify-content-center align-items-center">
+{% endif %}
   <button
     id="countdown-hero-banner-button"
     class="countdown-hero-banner-button"
@@ -7,7 +11,8 @@
   </button>
   <div class="container d-flex flex-column justify-content-between align-items-center">
     <div class="d-flex flex-column">
-      <img class="video-tokens d-none d-md-flex" src="/static/img/ogn-launch-graphic-1.svg" />
+      <img class="rocket-launchpad" src="/static/img/rocket-launchpad.svg" />
+      <img class="rocket-launched" src="/static/img/rocket-launched.svg" />
       <div class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start">
         <div class="title">{{gettext("Origin Tokens (OGN) are launching soon!")}}</div>
       </div>

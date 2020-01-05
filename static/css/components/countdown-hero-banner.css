@@ -1,7 +1,32 @@
 .countdown-hero-banner {
   background-color: #007cff;
+  background-image: url("/static/img/rocket-launchpad-rays.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: white;
   position: relative;
+}
+
+.countdown-hero-banner .rocket-launchpad {
+  margin-top: 18px;
+  margin-bottom: 27px;
+}
+
+.countdown-hero-banner.launched {
+  background-image: url("/static/img/rocket-launchpad-lines.svg");
+}
+
+.countdown-hero-banner .rocket-launched {
+  display: none;
+}
+
+.countdown-hero-banner.launched .rocket-launchpad {
+  display: none;
+}
+
+.countdown-hero-banner.launched .rocket-launched {
+  display: flex;
 }
 
 .countdown-hero-banner .countdown-hero-banner-button {

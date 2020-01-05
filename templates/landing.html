@@ -6,11 +6,13 @@
 
 {% block content %}
 
+{% with launched=False %}
 {% include 'countdown-hero-banner.html' %}
+{% endwith %}
 
 {% with theme_dark=True %}
 {% include 'navbar.html' %}
-{% endwith %}  
+{% endwith %}
 
 <main class="landing-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
