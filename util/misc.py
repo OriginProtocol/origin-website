@@ -28,10 +28,10 @@ def get_real_ip():
     """
     Returns the client IP from the headers, fallbacks to remote_addr
     """
-    if not request.headers.getlist("X-Forwarded-For"):
+    if not request.headers.get("X-Forwarded-For"):
         ip = request.remote_addr
     else:
-        ip = request.headers.getlist("X-Forwarded-For")[0]
+        ip = request.headers.get("X-Forwarded-For").split(',')[0]
     return ip
 
 def resolve_inline_css_imports(filename, file_contents):
