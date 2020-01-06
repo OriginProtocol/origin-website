@@ -162,7 +162,7 @@ def unsubscribe(email):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         raise Exception('Invalid email address')
 
-    me = db_models.EmailList.query.filter_by(email=email.lower().first()
+    me = db_models.EmailList.query.filter_by(email=email.lower()).first()
     if not me:
         return
 
