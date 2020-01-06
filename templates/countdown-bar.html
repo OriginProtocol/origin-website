@@ -3,15 +3,25 @@
     <div class="title d-flex">
       <img class="video-tokens d-none d-md-flex" src="/static/img/ogn.png" />
       <div class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start">
-        <div class="wider">{{gettext("Origin Tokens (OGN) are launching soon!")}}</div>
+        {% if launched==True %}
+          <div class="title">{{gettext("Origin Tokens (OGN) have launched!")}}</div>
+        {% else %}
+          <div class="title">{{gettext("Origin Tokens (OGN) are launching soon!")}}</div>
+        {% endif %}
       </div>
     </div>
-    <div class="clock d-flex align-items-center justify-content-center">
-      {% with timer_nav=True %}
-      {% include 'components/countdown-timer.html' %}
-      {% endwith %}
-    </div>
-    <a href="/#" class="learn-more">{{gettext("Learn more")}}</a>
+    {% if launched != True %}
+      <div class="clock d-flex align-items-center justify-content-center">
+        {% with timer_nav=True %}
+          {% include 'components/countdown-timer.html' %}
+        {% endwith %}
+      </div>
+    {% endif %}
+    {% if launched==True %}
+      <a href="/#" class="learn-more">{{gettext("Visit site")}}</a>
+    {% else %}
+      <a href="/#" class="learn-more">{{gettext("Learn more")}}</a>
+    {% endif %}
     <div class="vertical-separator d-none d-md-flex mx-2"></div>
     <div class="d-flex flex-row flex-md-column pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on">
       <div class="mr-1">{{gettext("Exclusively on")}}</div>

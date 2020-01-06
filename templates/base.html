@@ -49,7 +49,9 @@
   {% block body %}
     {# Very hacky way of checking if we are not on homepage #}
     {% if request.path.count('/') != 1 %}
-      {% include 'countdown-bar.html' %}
+      {% with launched=OGN_ALREADY_LAUNCHED %}
+        {% include 'countdown-bar.html' %}
+      {% endwith %}
     {% endif %}
 
     {% block content %}

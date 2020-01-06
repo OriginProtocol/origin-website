@@ -542,8 +542,15 @@ def inject_conf_var():
                          for lang in sort_language_constants()])
     except:
         available_languages = {'en': "English"}
+
+    startDate = '2020/1/6 1:0:0'
+    launchDate = '2020/1/8 10:0:0'
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
         AVAILABLE_LANGUAGES=available_languages,
-        DOMAIN=request.headers['Host'])
+        DOMAIN=request.headers['Host'],
+        OGN_LAUNCH_START_DATE=startDate,
+        OGN_LAUNCH_DATE=launchDate,
+        OGN_ALREADY_LAUNCHED=datetime.strptime(launchDate, '%Y/%m/%d %H:%M:%S') < datetime.now(),
+    )

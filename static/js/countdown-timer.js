@@ -154,7 +154,10 @@
     if (props.nav) {
       element.classList.add('nav-timer')
     }
+    
     props.large && element.classList.add('large')
+    !props.large && !props.nav && element.classList.add('medium')
+
     element.appendChild(dial)
 
     var now = new Date(Date.now())
