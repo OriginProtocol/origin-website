@@ -199,28 +199,14 @@
   margin-bottom: 20px;
 }
 
-.country-section {
-  margin-bottom: 2rem;
-}
-
 @media (max-width: 575px) {
   .investors-page .vc-section.vc-firms .container {
-    padding: 0 1rem 5rem 1rem;
-    margin-top: -1px;
-  }
-
-  .investors-page .vc-section .country-name {
-    font-size: 0.675rem;
-  }
-
-  .investors-page .vc-section .vc-firm .firm-name,
-  .investors-page .vc-section .vc-firm .firm-name.small {
-    font-size: 0.75rem;
+    padding: 0 2rem 5rem 2rem;
   }
 
   .investors-page .vc-section.vc-firms {
-    background-size: auto 450px;
-    background-position: center 25px;
+    background-size: cover;
+    background-position: center;
   }  
 
   .investors-page .section-desc {
@@ -244,9 +230,9 @@
 
   .investors-page .vc-firm img {
     margin-right: 0.5rem;
-    flex: 30px 0 0 !important;
-    width: 30px !important;
-    height: 30px !important;
+    flex: 50px 0 0;
+    width: 50px;
+    height: 50px;
   }
 
   .investors-page .vc-firm .firm-name {
@@ -279,19 +265,15 @@
   }
 
   .investors-page .vc-firm .firm-name {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   .investors-page .vc-firm .firm-name.small {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .investors-page .featured-investor-section .featured-investor {
     min-height: 770px;
     height: auto;
-  }
-
-  .investors-page .vc-section.vc-firms .container {
-    padding: 0 1rem 5rem 1rem;
   }
 }
