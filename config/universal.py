@@ -14,7 +14,7 @@ BASE_URL = 'https://' + constants.HOST if constants.HTTPS else 'http://' + const
 BUSINESS_NAME = 'Origin Protocol'
 CONTACT_EMAIL = 'info@originprotocol.com'
 
-WHITEPAPER_URL = BASE_URL + '/whitepaper'
+WHITEPAPER_URL = BASE_URL + '/whitepaper-v2'
 
 GITHUB_URL = 'https://github.com/originprotocol'
 DOCS_URL = 'https://docs.originprotocol.com'

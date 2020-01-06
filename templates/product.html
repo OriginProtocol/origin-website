@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Product") }}{% endblock %}
 
-{% block meta_description %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol's platform powers true peer-to-peer marketplaces everywhere.") }}{% endblock %}
 
 {% block content %}
 
@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-7 d-flex align-items-start align-items-lg-center">
-          <h1 class="title big">{{gettext("Our platform will power decentralized marketplaces everywhere")}}</h1>
+          <h1 class="title big">{{gettext("Our platform will power peer-to-peer marketplaces everywhere")}}</h1>
         </div>
       </div>
     </div>
@@ -161,7 +161,7 @@
         </div>
         <div class="col-12 p-0">
           <div class="action-buttons">
-            <a href="{{ url_for('whitepaper', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-outline-primary">{{gettext("Read our whitepaper")}}</a>
+            <a href="{{ url_for('whitepaperv2', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-outline-primary">{{gettext("Read our whitepaper")}}</a>
           </div>
         </div>
       </div>
@@ -206,7 +206,10 @@
             <div class="milestone completed">
               <div class="step">6</div>
               <div class="timestamp">{{gettext("April 2019")}}</div>
-              <div class="title">{{gettext("Launched Origin Rewards")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched Origin Rewards")}}</span>
+                <span>{{gettext("Launched stablecoin payments")}}</span>
+              </div>
             </div>
             <div class="milestone completed">
               <div class="step">7</div>
@@ -216,14 +219,26 @@
                 <span>{{gettext("Launched Meta Transactions")}}</span>
               </div>
             </div>
-            <div class="milestone completed recent">
+            <div class="milestone completed">
               <div class="step">8</div>
               <div class="timestamp">{{gettext("September 2019")}}</div>
-              <div class="title">{{gettext("Launched OGN Commissions")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched upgraded meta-transactions infrastructure")}}</span>
+                <span>{{gettext("Launched gift card and video streaming marketplace apps")}}</span>
+              </div>
+            </div>
+            <div class="milestone completed recent">
+              <div class="step">9</div>
+              <div class="timestamp">{{gettext("November 2019")}}</div>
+              <div class="title">
+                <span>{{gettext("Launched Origin Commissions")}}</span>
+                <span>{{gettext("Launched decentralized e-commerce store platform")}}</span>
+                <span>{{gettext("Launched off-chain payments")}}</span>
+              </div>
             </div>
             <div class="milestone future">
-              <div class="step">9</div>
-              <div class="timestamp">{{gettext("Q4 2019")}}</div>
+              <div class="step">10</div>
+              <div class="timestamp">{{gettext("Q1 2020")}}</div>
               <div class="title">
                   <span>{{gettext("Launch Mainnet 1.0")}}</span>
                   <span>{{gettext("Launch OGN as payment token")}}</span>
@@ -231,24 +246,26 @@
               </div>
             </div>
             <div class="milestone future">
-              <div class="step">10</div>
-              <div class="timestamp">{{gettext("Q1 2020")}}</div>
-              <div class="title">
-                <span>{{gettext("Increase the decentralization of the Origin network with Origin Nodes and other research initiatives")}}</span>
-              </div>
-            </div>
-            <div class="milestone future">
               <div class="step">11</div>
               <div class="timestamp">{{gettext("Q2 2020")}}</div>
               <div class="title">
-                  <span>{{gettext("Focus on expanding developer adoption with new developer tools and APIs")}}</span>
+                <span>{{gettext("Launch additional internal marketplace and e-commerce apps")}}</span>
+                <span>{{gettext("Support partner launches of decentralized e-commerce stores")}}</span>
+                <span>{{gettext("Launch OGN staking model")}}</span>
               </div>
             </div>
             <div class="milestone future">
               <div class="step">12</div>
-              <div class="timestamp">{{gettext("Q3 2020 and beyond")}}</div>
+              <div class="timestamp">{{gettext("Q3 2020")}}</div>
               <div class="title">
-                {{gettext("Continued development of the Origin platform with a focus on achieving decentralized governance")}}
+                  <span>{{gettext("Launch new developer tools and expand developer adoption")}}</span>
+              </div>
+            </div>
+            <div class="milestone future">
+              <div class="step">13</div>
+              <div class="timestamp">{{gettext("Q4 2020")}}</div>
+              <div class="title">
+                {{gettext("Launch OGN as a governance token")}}
               </div>
             </div>
           </div>

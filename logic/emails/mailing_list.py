@@ -37,8 +37,9 @@ def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=Non
         }]
         response = sg_api.client.contactdb.recipients.post(request_body=data)
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR add_sendgrid_contact:', type(e), e)
         return False
+    return True
 
 def unsubscribe_sendgrid_contact(email):
     try:
@@ -50,8 +51,24 @@ def unsubscribe_sendgrid_contact(email):
         }
         response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR unsubscribe_sendgrid_contact:', type(e), e)
         return False
+    return True
+
+# Unsubscribe a list of emails.
+def mass_unsubscribe_sendgrid_contact(emails):
+    try:
+        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        unsubscribe_group = 51716 # Universal unsubscribe group
+
+        data = {
+            "recipient_emails": emails
+        }
+        response = sg_api.client.asm.groups._(unsubscribe_group).suppressions.post(request_body=data)
+    except Exception as e:
+        log('ERROR mass_unsubscribe_sendgrid_contact:', type(e), e)
+        return False
+    return True
 
 # Inserts or updates an entry in the email_list table.
 # Returns True if a new entry was added, False if the entry already existed.
@@ -60,6 +77,8 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         raise Exception('Invalid email')
 
+    # Emails are stored normalized to lowercase in the DB.
+    email = email.lower()
     try:
         # Attempt to load any existing entry matching the email.
         row = db_models.EmailList.query.filter_by(email=email).first()
@@ -83,7 +102,7 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
             db.session.add(row)
         db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR add_contact:', type(e), e)
         raise e
 
     return new_contact
@@ -113,7 +132,7 @@ def presale(full_name, email, desired_allocation, desired_allocation_currency, c
         db.session.add(me)
         db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR presale:', type(e), e)
         return gettext('Ooops! Something went wrong.')
 
     if sending_addr:
@@ -137,22 +156,18 @@ def presale(full_name, email, desired_allocation, desired_allocation_currency, c
 
     return gettext('Thanks! We\'ll be in touch soon.')
 
+# Mark an email as unsubscribed in our DB.
+# Raises an exception in case of an error.
 def unsubscribe(email):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-        return 'Please enter a valid email address'
+        raise Exception('Invalid email address')
 
-    try:
-        me = db_models.EmailList.query.filter_by(email=email).first()
-        if me:
-            # mark DB as unsubscribed in our DB
-            me.unsubscribed = True
-            db.session.commit()
-    except Exception as e:
-        log('Error:', type(e), e)
-        return gettext('Ooops, something went wrong')
+    me = db_models.EmailList.query.filter_by(email=email.lower()).first()
+    if not me:
+        return
 
-    return gettext('You have been unsubscribed')
-
+    me.unsubscribed = True
+    db.session.commit()
 
 def send_one_off(email_type):
     with db_utils.request_context():
@@ -181,7 +196,7 @@ def partners_interest(name, company_name, email, website, note, ip_addr):
         db.session.add(me)
         db.session.commit()
     except Exception as e:
-        log('Error:', type(e), e)
+        log('ERROR partners_interest:', type(e), e)
         return gettext('Ooops! Something went wrong.')
 
     message = "Name: %s<br>Company Name: %s<br>Email: %s<br>Website: %s<br>Note: %s" % (name, company_name,

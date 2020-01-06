@@ -1,134 +1,378 @@
-{% extends 'base.html' %}
-
-{% block title %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
-
-{% block meta_description %}{{ gettext("Origin Protocol - Build on Origin") }}{% endblock %}
-
-{% block content %}
-
-{% with theme_dark=True %}
-{% include 'navbar.html' %}
-{% endwith %}  
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - About")
+}}{% endblock %} {% block meta_description %}{{ gettext("Origin Protocol enables
+true peer-to-peer commerce.") }}{% endblock %} {% block content %} {% with
+theme_dark=True %} {% include 'navbar.html' %} {% endwith %}
 
 <main class="about-page">
-  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="about-video" class="full-screen-video d-none" ></div>
-    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
+  <div
+    class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center"
+  >
+    <div id="about-video" class="full-screen-video d-none"></div>
+    <div id="exit-fullscreen-button" class="d-none">
+      {{gettext("Exit full screen")}}
+    </div>
     <div class="background-video">
-      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <div id="about-video-background" ></div>
+      <div
+        class="video-holder d-flex flex-column justify-content-end align-items-center"
+      >
+        <div id="about-video-background"></div>
       </div>
     </div>
     <div class="video-overlay"></div>
     <div id="about-video-poster" class="video-overlay-poster"></div>
     <div class="video-overlay-gradient"></div>
-    <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("It’s time to build the sharing economy without intermediaries")}}</h1>
-      <button id="about-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
-        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
+    <div
+      class="contents d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="video-title">
+        {{gettext("It’s time to build the sharing economy without
+        intermediaries")}}
+      </h1>
+      <button
+        id="about-video-button"
+        class="play-button d-flex justify-content-center align-items-center m-4"
+      >
+        <img class="ml-2" src="/static/img/landing/play-triangle.svg" />
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
     </div>
   </div>
   <!-- Origin enables true peer to peer commerce -->
-  <div class="world-class d-flex flex-column justify-content-center align-items-center">
-    <h1 class="segment-title ml-4 mr-4">{{gettext("Origin enables true peer-to-peer commerce")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world.")}}</div>
-    <div class="d-flex justify-content-center mt-4 pt-2 flex-column flex-md-row">
-      <a class="white-button-blue-border m-2" href="/team">{{gettext("Learn more about our team")}}</a>
-      <a class="white-button-blue-border m-2" href="/investors">{{gettext("Learn more about our investors")}}</a>
+  <div
+    class="world-class d-flex flex-column justify-content-center align-items-center"
+  >
+    <h1 class="segment-title ml-4 mr-4">
+      {{gettext("Origin enables true peer-to-peer commerce")}}
+    </h1>
+    <div class="segment-subtitle ml-3 mr-3">
+      {{gettext("Origin is a startup headquartered in San Francisco, but we also
+      have team members in China, Korea, Russia, India, New Zealand, and even
+      Slovenia. Our 800+ investors include top venture capitalists and
+      cryptocurrency funds all over the world.")}}
+    </div>
+    <div
+      class="d-flex justify-content-center mt-4 pt-2 flex-column flex-md-row"
+    >
+      <a class="white-button-blue-border m-2" href="/team"
+        >{{gettext("Learn more about our team")}}</a
+      >
+      <a class="white-button-blue-border m-2" href="/investors"
+        >{{gettext("Learn more about our investors")}}</a
+      >
     </div>
     <div class="mw-940 d-flex justify-content-center">
-      <img class="team-photo align-self-center" src="/static/img/about/team-photo-2@2x.jpg"/>
+      <img
+        class="team-photo align-self-center"
+        src="/static/img/about/team-photo-2@2x.jpg"
+      />
     </div>
   </div>
   <!-- Lower fees section -->
-  <div class="blue-section d-flex screen-size-segment justify-content-center align-items-center">
-    <div class="section-content d-flex justify-content-between flex-column flex-md-row">
-      <div class="text-block col-12 col-md-6 d-flex flex-column justify-content-center">
+  <div
+    class="blue-section d-flex screen-size-segment justify-content-center align-items-center"
+  >
+    <div
+      class="section-content d-flex justify-content-between flex-column flex-md-row"
+    >
+      <div
+        class="text-block col-12 col-md-6 d-flex flex-column justify-content-center"
+      >
         <div class="section-name">{{gettext("Lower Fees")}}</div>
-        <div class="section-text mb-0">{{gettext("Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020.")}}</div>
-        <div class="section-text">{{gettext("By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators.")}}</div>
-        <div class="d-flex justify-content-between links mt-md-4 pt-3 flex-column flex-md-row">
-          <a class="p-1 p-md-0" href="https://skift.com/2019/01/16/airbnb-claims-it-was-profitable-in-2018/" target="_blank" rel="noopener noreferrer">www.skift.com</a>
-          <a class="p-1 p-md-0" href="https://www.reuters.com/article/us-uber-results/uber-posts-50-billion-in-annual-bookings-as-profit-remains-elusive-ahead-of-ipo-idUSKCN1Q42CI" target="_blank" rel="noopener noreferrer">www.reuters.com</a>
-          <a class="p-1 p-md-0" href="https://www.juniperresearch.com/press/press-releases/sharing-economy-revenues-to-double-by-2022" target="_blank" rel="noopener noreferrer">www.juniperresearch.com</a>
+        <div class="section-text mb-0">
+          {{gettext("Centralized intermediaries often charge 20-30%% in
+          transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber
+          took home a monumental $11.8B in fees in 2018. Total sharing economy
+          fees are expected to cross $40B by 2020.")}}
+        </div>
+        <div class="section-text">
+          {{gettext("By removing the middlemen, Origin removes these fees.
+          Buyers and sellers can now share the savings from the fees that are no
+          longer paid to traditional marketplace operators.")}}
+        </div>
+        <div
+          class="d-flex justify-content-between links mt-md-4 pt-3 flex-column flex-md-row"
+        >
+          <a
+            class="p-1 p-md-0"
+            href="https://skift.com/2019/01/16/airbnb-claims-it-was-profitable-in-2018/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.skift.com</a
+          >
+          <a
+            class="p-1 p-md-0"
+            href="https://www.reuters.com/article/us-uber-results/uber-posts-50-billion-in-annual-bookings-as-profit-remains-elusive-ahead-of-ipo-idUSKCN1Q42CI"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.reuters.com</a
+          >
+          <a
+            class="p-1 p-md-0"
+            href="https://www.juniperresearch.com/press/press-releases/sharing-economy-revenues-to-double-by-2022"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.juniperresearch.com</a
+          >
         </div>
       </div>
-      <div class="image col-12 col-md-8 d-flex justify-content-center justify-content-md-start pt-0 pt-md-4">
-        <img class="mw-lg-562 align-self-center" src="/static/img/about/fees@2x.png"/>
+      <div
+        class="image col-12 col-md-8 d-flex justify-content-center justify-content-md-start pt-0 pt-md-4"
+      >
+        <img
+          class="mw-lg-562 align-self-center"
+          src="/static/img/about/fees@2x.png"
+        />
       </div>
     </div>
   </div>
   <!-- Better incentives -->
-  <div class="better-incentives white-section d-flex screen-size-segment justify-content-center align-items-center">
-    <div class="section-content d-flex justify-content-between flex-column-reverse flex-md-row">
-      <div class="image col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-        <img class="mw-lg-561 align-self-center" src="/static/img/about/incentives@2x.png"/>
+  <div
+    class="better-incentives white-section d-flex screen-size-segment justify-content-center align-items-center"
+  >
+    <div
+      class="section-content d-flex justify-content-between flex-column-reverse flex-md-row"
+    >
+      <div
+        class="image col-12 col-md-6 d-flex justify-content-center justify-content-md-end"
+      >
+        <img
+          class="mw-lg-561 align-self-center"
+          src="/static/img/about/incentives@2x.png"
+        />
       </div>
-      <div class="text-block col-12 col-md-6 d-flex flex-column justify-content-center pl-md-5">
+      <div
+        class="text-block col-12 col-md-6 d-flex flex-column justify-content-center pl-md-5"
+      >
         <div class="section-name">{{gettext("Better Incentives")}}</div>
-        <div class="section-text mb-0">{{gettext("Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success.")}}</div>
-        <div class="section-text">{{gettext("In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. ")}}</div>
+        <div class="section-text mb-0">
+          {{gettext("Uber and Lyft recently IPOed. WeWork and Airbnb are soon to
+          follow suit. None of the early participants on these platforms
+          benefited despite being critical to their success.")}}
+        </div>
+        <div class="section-text">
+          {{gettext("In contrast, Origin enables everyone to own a piece of the
+          network. Buyers and sellers can earn Origin Tokens (OGN) simply by
+          using Origin-enabled applications to transact with one another.
+          Developers, affiliates, and marketplace operators can earn OGN by
+          promoting and marketing sellers' listings. When everyone owns a piece
+          of the network, ecosystem participants are incentivized to promote the
+          health and growth of Origin. ")}}
+        </div>
       </div>
     </div>
   </div>
   <!-- Increased access section -->
-  <div class="access-section blue-section d-flex screen-size-segment justify-content-center align-items-center">
-    <div class="section-content d-flex justify-content-between flex-column flex-md-row">
-      <div class="text-block col-12 col-md-6 d-flex flex-column justify-content-center">
+  <div
+    class="access-section blue-section d-flex screen-size-segment justify-content-center align-items-center"
+  >
+    <div
+      class="section-content d-flex justify-content-between flex-column flex-md-row"
+    >
+      <div
+        class="text-block col-12 col-md-6 d-flex flex-column justify-content-center"
+      >
         <div class="section-name">{{gettext("Increased Access")}}</div>
-        <div class="section-text mb-0">{{gettext("2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay.")}}</div>
-        <div class="section-text">{{gettext("With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems.")}}</div>
-        <div class="d-flex justify-content-start links mt-4 pt-3 flex-column flex-md-row">
-          <a class="p-2 p-md-0" href="https://www.businessinsider.com" target="_blank" rel="noopener noreferrer">www.businessinsider.com</a>
+        <div class="section-text mb-0">
+          {{gettext("2 billion people around the world are currently unbanked.
+          They do not have checking accounts, credit cards, AliPay, or Apple
+          Pay.")}}
+        </div>
+        <div class="section-text">
+          {{gettext("With the advent of cryptocurrencies and the proliferation
+          of inexpensive smartphones, now is the time to enable the unbanked to
+          participate in the new Internet economy. Users from all over the world
+          are now able to transact with each other on Origin-powered
+          marketplaces even if they do not have stable, local banking
+          systems.")}}
+        </div>
+        <div
+          class="d-flex justify-content-start links mt-4 pt-3 flex-column flex-md-row"
+        >
+          <a
+            class="p-2 p-md-0"
+            href="https://www.businessinsider.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.businessinsider.com</a
+          >
         </div>
       </div>
-      <div class="image col-12 col-md-8 d-flex justify-content-center justify-content-md-start pt-0 mb-auto">
-        <img class="mw-lg-549 align-self-center" src="/static/img/about/access@2x.png"/>
+      <div
+        class="image col-12 col-md-8 d-flex justify-content-center justify-content-md-start pt-0 mb-auto"
+      >
+        <img
+          class="mw-lg-549 align-self-center"
+          src="/static/img/about/access@2x.png"
+        />
       </div>
     </div>
   </div>
   <!-- More resilience -->
-  <div class="more-resilience white-section d-flex screen-size-segment justify-content-center align-items-center">
-    <div class="section-content d-flex justify-content-between flex-column-reverse flex-md-row">
-      <div class="image col-12 col-md-6 d-flex justify-content-center justify-content-md-end mr-md-4 pt-0 pt-md-4">
-        <img class="mw-lg-460 align-self-center" src="/static/img/about/resilience@2x.png"/>
+  <div
+    class="more-resilience white-section d-flex screen-size-segment justify-content-center align-items-center"
+  >
+    <div
+      class="section-content d-flex justify-content-between flex-column-reverse flex-md-row"
+    >
+      <div
+        class="image col-12 col-md-6 d-flex justify-content-center justify-content-md-end mr-md-4 pt-0 pt-md-4"
+      >
+        <img
+          class="mw-lg-460 align-self-center"
+          src="/static/img/about/resilience@2x.png"
+        />
       </div>
-      <div class="text-block col-12 col-md-6 d-flex flex-column justify-content-center">
+      <div
+        class="text-block col-12 col-md-6 d-flex flex-column justify-content-center"
+      >
         <div class="section-name">{{gettext("More Resilience")}}</div>
-        <div class="section-text mb-0">{{gettext("Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco.")}}</div>
-        <div class="section-text">{{gettext("Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets.")}}</div>
-        <div class="d-flex justify-content-start links mt-4 pt-3 flex-column flex-md-row">
-          <a class="p-2 p-md-0" href="https://www.telegraph.co.uk" target="_blank" rel="noopener noreferrer">www.telegraph.co.uk</a>
+        <div class="section-text mb-0">
+          {{gettext("Airbnb is heavily regulated or banned in cities like Paris,
+          Berlin, Tokyo, New York, and even its home city of San Francisco.")}}
+        </div>
+        <div class="section-text">
+          {{gettext("Decentralized marketplaces promote open and free commerce.
+          Unlike centralized alternatives, they are not single points of failure
+          and can't be banned or shut down. Decentralized commerce is more
+          resilient and promotes efficient markets.")}}
+        </div>
+        <div
+          class="d-flex justify-content-start links mt-4 pt-3 flex-column flex-md-row"
+        >
+          <a
+            class="p-2 p-md-0"
+            href="https://www.telegraph.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.telegraph.co.uk</a
+          >
         </div>
       </div>
     </div>
   </div>
   <!-- Origin in the press section -->
-  <div class="the-press d-flex flex-column justify-content-center align-items-center">
+  <div
+    class="the-press d-flex flex-column justify-content-center align-items-center"
+  >
     <h1 class="segment-title ml-4 mr-4">{{gettext("Origin in the Press")}}</h1>
-    <div class="content d-flex flex-wrap align-items-center justify-content-center">
-      <div class="d-flex justify-content-center coindesk" ><a href="https://www.coindesk.com/tag/origin-protocol" target="_blank" rel="noopener noreferrer"><img class="w-201" src="/static/img/about/coindesk@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.wsj.com/articles/origin-protocol-nabs-28-million-for-peer-to-peer-blockchain-platform-1524700028" target="_blank" rel="noopener noreferrer"><img class="w-86" src="/static/img/about/wsj@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.nasdaq.com/articles/blockchain-solutions-are-changing-sharing-economy-2018-05-18" target="_blank" rel="noopener noreferrer"><img class="w-179" src="/static/img/about/nasdaq@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://thenextweb.com/cryptocurrency/2018/02/05/beauty-and-the-blockchain-this-company-aims-do-decentralize-cosmetic-the-industry/" target="_blank" rel="noopener noreferrer"><img class="w-140" src="/static/img/about/tnw@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.fastcompany.com/40578033/five-ways-blockchain-could-disrupt-the-sharing-economys-disrupters" target="_blank" rel="noopener noreferrer"><img class="w-187" src="/static/img/about/fast-company@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.vice.com/en_us/article/j5aj3y/how-the-blockchain-will-change-uber-lyft-peer-to-peer-transportation-startups" target="_blank" rel="noopener noreferrer"><img class="w-111" src="/static/img/about/vice@2x.png"/></a></div>
-      <div class="d-flex justify-content-center cointelegraph" ><a href="https://cointelegraph.com/news/startup-to-give-beauty-industry-a-blockchain-facelift" target="_blank" rel="noopener noreferrer"><img class="w-205" src="/static/img/about/cointelegraph@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.wired.it/economia/finanza/2018/05/29/blockchain-airbnb/" target="_blank" rel="noopener noreferrer"><img class="w-161" src="/static/img/about/wired@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://bitcoinmagazine.com/articles/decentralizing-sharing-economy-blockchain-technology/" target="_blank" rel="noopener noreferrer"><img class="w-164" src="/static/img/about/bitcoinmag@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.inc.com/joel-comm/why-best-blockchain-is-an-invisible-blockchain.html" target="_blank" rel="noopener noreferrer"><img class="w-114" src="/static/img/about/inc@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://www.forbes.com/sites/leslieankney/2019/01/21/why-these-innovators-left-facebook-google-and-more-for-crypto/#6f0bf6e85a06" target="_blank" rel="noopener noreferrer"><img class="w-152" src="/static/img/about/forbes@2x.png"/></a></div>
-      <div class="d-flex justify-content-center" ><a href="https://techcrunch.com/2018/10/10/origin-protocol/" target="_blank" rel="noopener noreferrer"><img class="w-189" src="/static/img/about/techcrunch@2x.png"/></a></div>
+    <div
+      class="content d-flex flex-wrap align-items-center justify-content-center"
+    >
+      <div class="d-flex justify-content-center coindesk">
+        <a
+          href="https://www.coindesk.com/tag/origin-protocol"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-201" src="/static/img/about/coindesk@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.wsj.com/articles/origin-protocol-nabs-28-million-for-peer-to-peer-blockchain-platform-1524700028"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-86" src="/static/img/about/wsj@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.nasdaq.com/articles/blockchain-solutions-are-changing-sharing-economy-2018-05-18"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-179" src="/static/img/about/nasdaq@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://thenextweb.com/cryptocurrency/2018/02/05/beauty-and-the-blockchain-this-company-aims-do-decentralize-cosmetic-the-industry/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-140" src="/static/img/about/tnw@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.fastcompany.com/40578033/five-ways-blockchain-could-disrupt-the-sharing-economys-disrupters"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-187" src="/static/img/about/fast-company@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.vice.com/en_us/article/j5aj3y/how-the-blockchain-will-change-uber-lyft-peer-to-peer-transportation-startups"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-111" src="/static/img/about/vice@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center cointelegraph">
+        <a
+          href="https://cointelegraph.com/news/startup-to-give-beauty-industry-a-blockchain-facelift"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-205" src="/static/img/about/cointelegraph@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.wired.it/economia/finanza/2018/05/29/blockchain-airbnb/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-161" src="/static/img/about/wired@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://bitcoinmagazine.com/articles/decentralizing-sharing-economy-blockchain-technology/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-164" src="/static/img/about/bitcoinmag@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.inc.com/joel-comm/why-best-blockchain-is-an-invisible-blockchain.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-114" src="/static/img/about/inc@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.forbes.com/sites/leslieankney/2019/01/21/why-these-innovators-left-facebook-google-and-more-for-crypto/#6f0bf6e85a06"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-152" src="/static/img/about/forbes@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://techcrunch.com/2018/10/10/origin-protocol/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-189" src="/static/img/about/techcrunch@2x.png"
+        /></a>
+      </div>
     </div>
   </div>
   <!-- Social media section -->
-  <div class="social-media-section d-flex flex-column justify-content-between align-items-center">
-    <h1>{{gettext("We have a large and growing community of developers and supporters")}}</h1>
-    <div id="social-media-list" class="d-flex flex-wrap justify-content-center"></div>
+  <div
+    class="social-media-section d-flex flex-column justify-content-between align-items-center"
+  >
+    <h1>
+      {{gettext("We have a large and growing community of developers and
+      supporters")}}
+    </h1>
+    <div
+      id="social-media-list"
+      class="d-flex flex-wrap justify-content-center"
+    ></div>
     <h2>{{gettext("Region-specific Channels")}}</h2>
-    <div id="social-media-list-country-specific" class="d-flex flex-wrap justify-content-center"></div>
+    <div
+      id="social-media-list-country-specific"
+      class="d-flex flex-wrap justify-content-center"
+    ></div>
   </div>
   {% include 'footer.html' %}
 </main>

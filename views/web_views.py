@@ -19,6 +19,7 @@ from logic.scripts import update_token_insight as insight
 from logic.views import social_stats
 import requests
 
+from util.ip2geo import get_country
 from util.misc import sort_language_constants, get_real_ip, concat_asset_files, log
 
 import google.oauth2.credentials
@@ -144,8 +145,8 @@ def presale():
 def tokens():
     return redirect('/ogn-token', code=302)
 
-@app.route('/whitepaper', strict_slashes=False)
-@app.route('/<lang_code>/whitepaper', strict_slashes=False)
+@app.route('/whitepaper.pdf', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper.pdf', strict_slashes=False)
 def whitepaper():
     localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
     whitepaper_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
@@ -182,15 +183,16 @@ def join_mailing_list():
     if not full_name and (first_name or last_name):
         full_name = ' '.join(filter(None, (first_name, last_name)))
     phone = request.form.get('phone') or None
-    ip_addr = request.form.get('ip_addr') or None
-    country_code = request.form.get('country_code') or None
+    ip_addr = request.form.get('ip_addr') or get_real_ip()
+    country_code = request.form.get('country_code') or get_country(ip_addr)
     dapp_user = 1 if 'dapp_user' in request.form else 0
     investor = 1 if 'investor' in request.form else 0
+    backfill = request.form.get('backfill') or None # Indicates the request was made from an internal backfill script.
 
-    log('Updating mailing list for', email)
+    log('Updating mailing list for', email, eth_address)
     try:
         # Add an entry to the eth_contact DB table.
-        if 'eth_address':
+        if eth_address:
             log('Adding to wallet insights')
             insight.add_contact(
                 address=eth_address,
@@ -202,16 +204,23 @@ def join_mailing_list():
                 country_code=country_code)
 
         # Add an entry to the email_list table.
+        log('Adding to mailing list')
         new_contact = mailing_list.add_contact(email, first_name, last_name, ip_addr, country_code)
 
-        # If it is a new contact, send a welcome email and add it to the SendGrid contact list.
-        if new_contact:
+        # If it is a new contact and not a backfill, send a welcome email.
+        if new_contact and not backfill:
+            log('Sending welcome email')
             mailing_list.send_welcome(email)
+
+        # Add the entry to the Sendgrid contact list.
+        if new_contact:
+            log('Adding to Sendgrid contact list')
             mailing_list.add_sendgrid_contact(
                 email=email,
                 full_name=full_name,
                 country_code=country_code,
                 dapp_user=dapp_user)
+
     except Exception as err:
         log('Failure: %s' % err)
         return jsonify(success=False, message=str(err))
@@ -249,8 +258,16 @@ def join_presale():
 @app.route('/mailing-list/unsubscribe', methods=['GET'], strict_slashes=False)
 def unsubscribe():
     email = request.args.get("email")
-    feedback = mailing_list.unsubscribe(email)
-    mailing_list.unsubscribe_sendgrid_contact(email)
+    if not email or not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return gettext('Please enter a valid email address')
+
+    try:
+        mailing_list.unsubscribe(email)
+        mailing_list.unsubscribe_sendgrid_contact(email)
+        feedback = gettext('You have been unsubscribed')
+    except Exception as err:
+        log('Failure: %s' % err)
+        feedback = gettext('Ooops, something went wrong')
     flash(feedback)
     return redirect('/en/', code=302)
 
@@ -492,8 +509,8 @@ def creator():
 #     flash(feedback)
 #     return jsonify("OK")
 
-@app.route('/whitepaper-v2', strict_slashes=False)
-@app.route('/<lang_code>/whitepaper-v2', strict_slashes=False)
+@app.route('/whitepaper', strict_slashes=False)
+@app.route('/<lang_code>/whitepaper', strict_slashes=False)
 def whitepaperv2():
     return render_template('whitepaper.html')
 
