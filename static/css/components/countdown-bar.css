@@ -10,6 +10,10 @@
   margin-right: 25px;
 }
 
+.countdown-bar .the-logo {
+  width: 120px;
+}
+
 .countdown-bar .title {
   font-family: Lato;
   font-size: 18px;
@@ -33,13 +37,13 @@
 
 .countdown-bar .learn-more {
   font-family: Lato;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   text-align: center;
   color: white;
   border-radius: 18px;
   background-color: #061d2a;
-  padding: 5px 15px;
+  padding: 5px 17px 6px 17px;
   white-space: nowrap;
 }
 
@@ -90,6 +94,10 @@
   line-height: 1.2;
 }
 
+.countdown-bar .countdown-timer {
+  padding-top: 0.7rem;
+}
+
 .countdown-bar .countdown-time-left {
   width: 165px !important;
   margin-bottom: 9px;
@@ -112,6 +120,10 @@
 }
 
 @media (max-width: 575px) {
+  .countdown-bar .countdown-timer {
+    margin-bottom: 0.5rem;
+  }
+
   .countdown-bar {
     height: auto;
   }
