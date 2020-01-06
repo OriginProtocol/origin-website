@@ -47,6 +47,11 @@
 </head>
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
   {% block body %}
+    {# Very hacky way of checking if we are not on homepage #}
+    {% if request.path.count('/') != 1 %}
+      {% include 'countdown-bar.html' %}
+    {% endif %}
+
     {% block content %}
     {% endblock %}
 
