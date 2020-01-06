@@ -45,6 +45,9 @@ def add_contact(address, **kwargs):
 	for key, value in kwargs.items():
 		if key in allowed_fields:
 			if value:
+			    # Normalize email to lower case before storing in the DB.
+			    if key == 'email':
+			        value = value.lower()
 				setattr(contact, key, value)
 		else:
 			raise Exception("Unknown field")

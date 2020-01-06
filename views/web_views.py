@@ -258,8 +258,16 @@ def join_presale():
 @app.route('/mailing-list/unsubscribe', methods=['GET'], strict_slashes=False)
 def unsubscribe():
     email = request.args.get("email")
-    feedback = mailing_list.unsubscribe(email)
-    mailing_list.unsubscribe_sendgrid_contact(email)
+    if not email or not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return gettext('Please enter a valid email address')
+
+    try:
+        mailing_list.unsubscribe(email)
+        mailing_list.unsubscribe_sendgrid_contact(email)
+        feedback = gettext('You have been unsubscribed')
+    except Exception as err:
+        log('Failure: %s' % err)
+        feedback = gettext('Ooops, something went wrong')
     flash(feedback)
     return redirect('/en/', code=302)
 
