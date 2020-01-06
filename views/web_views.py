@@ -543,8 +543,11 @@ def inject_conf_var():
     except:
         available_languages = {'en': "English"}
 
-    startDate = '2020/1/6 1:0:0'
-    launchDate = '2020/1/8 10:0:0'
+    # important (!) date needs to be in that exact format (along with minutes/seconds present). 
+    # also enter the date in UTC format -> greenwich mean time
+    startDate = '2020/1/7 3:00:00 GMT'
+    launchDate = '2020/1/9 3:00:00 GMT'
+    
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
@@ -552,5 +555,5 @@ def inject_conf_var():
         DOMAIN=request.headers['Host'],
         OGN_LAUNCH_START_DATE=startDate,
         OGN_LAUNCH_DATE=launchDate,
-        OGN_ALREADY_LAUNCHED=datetime.strptime(launchDate, '%Y/%m/%d %H:%M:%S') < datetime.now(),
+        OGN_ALREADY_LAUNCHED=datetime.strptime(launchDate, '%Y/%m/%d %H:%M:%S GMT') < datetime.utcnow(),
     )
