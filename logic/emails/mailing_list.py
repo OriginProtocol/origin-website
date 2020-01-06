@@ -77,6 +77,8 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         raise Exception('Invalid email')
 
+    # Emails are stored normalized to lowercase in the DB.
+    email = email.lower()
     try:
         # Attempt to load any existing entry matching the email.
         row = db_models.EmailList.query.filter_by(email=email).first()
@@ -154,22 +156,18 @@ def presale(full_name, email, desired_allocation, desired_allocation_currency, c
 
     return gettext('Thanks! We\'ll be in touch soon.')
 
+# Mark an email as unsubscribed in our DB.
+# Raises an exception in case of an error.
 def unsubscribe(email):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-        return 'Please enter a valid email address'
+        raise Exception('Invalid email address')
 
-    try:
-        me = db_models.EmailList.query.filter_by(email=email).first()
-        if me:
-            # mark the entry as unsubscribed in our DB
-            me.unsubscribed = True
-            db.session.commit()
-    except Exception as e:
-        log('ERROR unsubscribe:', type(e), e)
-        return gettext('Ooops, something went wrong')
+    me = db_models.EmailList.query.filter_by(email=email.lower().first()
+    if not me:
+        return
 
-    return gettext('You have been unsubscribed')
-
+    me.unsubscribed = True
+    db.session.commit()
 
 def send_one_off(email_type):
     with db_utils.request_context():
