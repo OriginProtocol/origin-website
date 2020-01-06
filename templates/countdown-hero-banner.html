@@ -10,19 +10,30 @@
     &times;
   </button>
   <div class="container d-flex flex-column justify-content-between align-items-center">
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column justify-content-center align-items-center">
       <img class="rocket-launchpad" src="/static/img/rocket-launchpad.svg" />
       <img class="rocket-launched" src="/static/img/rocket-launched.svg" />
+      <img class="rocket-launched-mobile" src="/static/img/rocket-launched-mobile.svg" />
       <div class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start">
-        <div class="title">{{gettext("Origin Tokens (OGN) are launching soon!")}}</div>
+        {% if launched==True %}
+          <div class="title">{{gettext("Origin Tokens (OGN) have launched!")}}</div>
+        {% else %}
+          <div class="title">{{gettext("Origin Tokens (OGN) are launching soon!")}}</div>
+        {% endif %}
       </div>
     </div>
-    <div class="clock d-flex align-items-center justify-content-center">
-      {% with timer_nav=True %}
-      {% include 'components/countdown-timer.html' %}
-      {% endwith %}
-    </div>
-    <a href="/#" class="learn-more">{{gettext("Learn more")}}</a>
+    {% if launched==False %}
+      <div class="clock d-flex align-items-center justify-content-center">
+        {% with timer_nav=True %}
+        {% include 'components/countdown-timer.html' %}
+        {% endwith %}
+      </div>
+    {% endif %}
+    {% if launched==True %}
+      <a href="/#" class="learn-more">{{gettext("Visit site")}}</a>
+    {% else %}
+      <a href="/#" class="learn-more">{{gettext("Learn more")}}</a>
+    {% endif %}
     <div class="d-flex pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on">
       <div class="mr-1">{{gettext("Exclusively on")}}</div>
       <div class="ml-1">TODO: LOGO HERE</div>

@@ -14,10 +14,14 @@
 }
 
 .countdown-hero-banner.launched {
-  background-image: url("/static/img/rocket-launchpad-lines.svg");
+  background-image: url("/static/img/rocket-launched-lines.svg");
 }
 
 .countdown-hero-banner .rocket-launched {
+  display: none;
+}
+
+.countdown-hero-banner .rocket-launched-mobile {
   display: none;
 }
 
@@ -26,7 +30,8 @@
 }
 
 .countdown-hero-banner.launched .rocket-launched {
-  display: flex;
+  display: block;
+  padding-right: 220px;
 }
 
 .countdown-hero-banner .countdown-hero-banner-button {
@@ -35,7 +40,7 @@
   height: 32px;
   border-radius: 16px;
   border: solid 1px white;
-  background-color: transparent;
+  background-color: #007cff;
   color: white;
   font-size: 28px;
   top: 50px;
@@ -56,6 +61,13 @@
   font-weight: 900;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.countdown-hero-banner.launched .title {
+  margin-bottom: 33px;
+  margin-top: -80px;
+  font-size: 48px;
+  max-width: 600px;
 }
 
 .countdown-hero-banner .title {
@@ -132,8 +144,25 @@
 }
 
 @media (max-width: 575px) {
+  .countdown-hero-banner {
+    background-position: 50% -30px;
+  }
   .countdown-hero-banner .horizontal-separator {
     width: 90%;
+  }
+
+  .countdown-hero-banner.launched .rocket-launched-mobile {
+    display: block;
+  }
+
+  .countdown-hero-banner .rocket-launched, 
+  .countdown-hero-banner.launched .rocket-launched {
+    display: none;
+  }
+
+  .countdown-hero-banner .rocket-launchpad {
+    width: 185px;
+    margin-top: 30px;
   }
 
   .countdown-hero-banner .email-signup {
@@ -149,6 +178,13 @@
     font-size: 24px;
     line-height: 1.13;
     max-width: 280px;
+  }
+
+  .countdown-hero-banner.launched .title {
+    margin-top: -80px;
+    font-size: 28px;
+    max-width: 320px;
+    margin-bottom: 13px;
   }
 
   .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .time-value,
