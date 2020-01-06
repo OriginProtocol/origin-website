@@ -1,3 +1,4 @@
+from __future__ import print_function # Necessary for the log method to use print as a function
 from pyuca import Collator
 
 from flask import request
@@ -7,6 +8,7 @@ from config import constants
 
 import re
 import os
+import sys
 
 def sort_language_constants():
     """
@@ -26,10 +28,11 @@ def get_real_ip():
     """
     Returns the client IP from the headers, fallbacks to remote_addr
     """
-    if 'X-Forwarded-For' in request.headers:
-        return request.headers.getlist("X-Forwarded-For")[0].rpartition(' ')[-1]
+    if not request.headers.get("X-Forwarded-For"):
+        ip = request.remote_addr
     else:
-        return request.remote_addr or 'untrackable'
+        ip = request.headers.get("X-Forwarded-For").split(',')[0]
+    return ip
 
 def resolve_inline_css_imports(filename, file_contents):
     """
@@ -68,3 +71,8 @@ def concat_asset_files(filenames, joinWithSemicolon=False):
         return "\n\n;\n\n".join(contents) 
     else:
         return "\n\n\n\n".join(contents)
+
+# Print a log and flushes stdout.
+def log(*args, **kwargs):
+    print(*args, **kwargs)
+    sys.stdout.flush()

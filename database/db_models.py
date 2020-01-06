@@ -17,6 +17,8 @@ class EmailList(db.Model):
     created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
     ip_addr = db.Column(db.String(100))
     country_code = db.Column(db.String(2))
+    first_name = db.Column(db.String(255))
+    last_name = db.Column(db.String(255))
 
     def __str__(self):
         return '%s' % (self.email)
