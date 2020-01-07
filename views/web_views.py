@@ -589,7 +589,7 @@ def inject_conf_var():
 
     # important (!) date needs to be in that exact format (along with minutes/seconds present). 
     # also enter the date in UTC format -> greenwich mean time
-    startDate = '2020/1/7 3:00:00 GMT'
+    startDate = '2020/1/7 3:30:00 GMT'
     launchDate = '2020/1/9 3:00:00 GMT'
     
     return dict(
