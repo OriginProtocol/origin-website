@@ -1,24 +1,24 @@
 {% if timer_nav==True %}
 <div 
   data-countdown-timer 
-  data-startdate="2019/12/01" 
-  data-enddate="2020/2/15"
+  data-startdate="{{OGN_LAUNCH_START_DATE}}"
+  data-enddate="{{OGN_LAUNCH_DATE}}"
   data-nav
   placeholder="{{gettext("To be Announced")}}">
  </div>
 {% elif timer_large==True %}
 <div 
   data-countdown-timer 
-  data-startdate="2019/12/01" 
-  data-enddate="2020/2/15"
+  data-startdate="{{OGN_LAUNCH_START_DATE}}"
+  data-enddate="{{OGN_LAUNCH_DATE}}"
   data-large
   placeholder="{{gettext("To be Announced")}}">
  </div>
 {% else %}
 <div 
   data-countdown-timer 
-  data-startdate="2019/12/01" 
-  data-enddate="2020/2/15"
+  data-startdate="{{OGN_LAUNCH_START_DATE}}"
+  data-enddate="{{OGN_LAUNCH_DATE}}"
   placeholder="{{gettext("To be Announced")}}">
  </div>
 {% endif %}

@@ -47,6 +47,13 @@
 </head>
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
   {% block body %}
+    {# Very hacky way of checking if we are not on homepage #}
+    {% if request.path.count('/') != 1 %}
+      {% with launched=OGN_ALREADY_LAUNCHED %}
+        {% include 'countdown-bar.html' %}
+      {% endwith %}
+    {% endif %}
+
     {% block content %}
     {% endblock %}
 

@@ -5,33 +5,6 @@ block content %} {% with theme_dark=False %} {% include 'navbar.html' %} {%
 endwith %}
 
 <main class="tokens-page">
-  <section class="countdown-section">
-    <div
-      class="container d-flex flex-column justify-content-between align-items-center"
-    >
-      <h1>{{gettext("Origin Tokens are launching soon!")}}</h1>
-      <div class="segment-subtitle ml-3 mr-3">
-        {{gettext("Subscribe to stay in touch. Your email will be kept
-        private.")}}
-      </div>
-      <!-- {% with timer_large=True %}
-      {% include 'components/countdown-timer.html' %}
-      {% endwith %} -->
-      <div id="add-to-mailing-list" class="mailing-list">
-        {% with theme_dark=False %} {% include 'components/email-input.html' %}
-        {% endwith %}
-      </div>
-      <!--<div class="explanation">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </div>-->
-      <div id="presale-mailing-list" class="presale-mailing-list">
-        {% include 'components/presale-form.html' %}
-      </div>
-      <!-- <div class="primary-cta">
-        <button class="btn btn-dark">Lorem Ipsum</button>
-      </div> -->
-    </div>
-  </section>
   <section class="rewards-section blue-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">

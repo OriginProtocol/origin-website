@@ -56,6 +56,12 @@ function addToMailingList(event) {
   );
 }
 
+function closeOgnOverlay(event) {
+  event.preventDefault();
+  $("#countdown-hero-banner").addClass("d-none").removeClass("d-flex")
+}
+
+$("#countdown-hero-banner-button").click(closeOgnOverlay);
 $("#mailing-list").submit(addToMailingList);
 $("#mailing-list-footer").submit(addToMailingList);
 $("#mailing-list-nav-bar").submit(addToMailingList);

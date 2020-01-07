@@ -78,8 +78,18 @@
 }
   
 .countdown-timer.nav-timer .countdown-time-left .time-group .time-value {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.countdown-timer.nav-timer .countdown-time-left .colon {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Poppins';
+}
+
+.countdown-timer.medium .countdown-time-left .colon {
+  padding-bottom: 30px;
 }
 
 .countdown-timer.nav-timer .countdown-time-left {
@@ -105,12 +115,13 @@
   text-align: center;
 }
 
-.countdown-time-left .time-group:not(:first-child):not(:last-child) .time-value:after {
-  position: absolute;
-  content: ':';
-  top: 0;
-  bottom: 0;
-  right: -0.375rem;
+.countdown-timer.nav-timer .countdown-time-left .time-group .time-label {
+  display: none;
+}
+
+.countdown-time-left .colon {
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 
