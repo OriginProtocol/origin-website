@@ -189,6 +189,8 @@ def join_mailing_list():
     investor = 1 if 'investor' in request.form else 0
     backfill = request.form.get('backfill') or None # Indicates the request was made from an internal backfill script.
 
+    new_user = False
+
     log('Updating mailing list for', email, eth_address)
     try:
         # Add an entry to the eth_contact DB table.
@@ -214,6 +216,7 @@ def join_mailing_list():
 
         # Add the entry to the Sendgrid contact list.
         if new_contact:
+            new_user = True
             log('Adding to Sendgrid contact list')
             mailing_list.add_sendgrid_contact(
                 email=email,
@@ -224,6 +227,9 @@ def join_mailing_list():
     except Exception as err:
         log('Failure: %s' % err)
         return jsonify(success=False, message=str(err))
+
+    if not new_user:
+        return jsonify(success=True, message=gettext('You\'re already registered!'))
 
     return jsonify(success=True, message=gettext('Thanks for signing up!'))
 
