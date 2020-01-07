@@ -1,0 +1,229 @@
+.countdown-hero-banner {
+  background-color: #007cff;
+  background-image: url("/static/img/rocket-launchpad-rays.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.countdown-hero-banner .rocket-launchpad {
+  margin-top: 18px;
+  margin-bottom: 27px;
+}
+
+.countdown-hero-banner .the-logo {
+  width: 140px;
+}
+
+.countdown-hero-banner .countdown-timer {
+  margin-bottom: 0.3rem;
+}
+
+.countdown-hero-banner.launched {
+  background-image: url("/static/img/rocket-launched-lines.svg");
+}
+
+.countdown-hero-banner .rocket-launched {
+  display: none;
+}
+
+.countdown-hero-banner .rocket-launched-mobile {
+  display: none;
+}
+
+.countdown-hero-banner.launched .rocket-launchpad {
+  display: none;
+}
+
+.countdown-hero-banner.launched .rocket-launched {
+  display: block;
+  padding-right: 220px;
+}
+
+.countdown-hero-banner .countdown-hero-banner-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 1px white;
+  background-color: #007cff;
+  color: white;
+  font-size: 28px;
+  top: 50px;
+  right: 70px;
+  line-height: 1px;
+  cursor: pointer;
+}
+
+.countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left {
+  width: 215px;
+  max-width: 215px;
+}
+
+.countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .time-value,
+.countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .colon {
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 900;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.countdown-hero-banner.launched .title {
+  margin-bottom: 33px;
+  margin-top: -80px;
+  font-size: 48px;
+  max-width: 600px;
+}
+
+.countdown-hero-banner .title {
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.09;
+  text-align: center;
+  max-width: 400px;
+}
+
+.countdown-hero-banner .horizontal-separator {
+  height: 1px;
+  background-color: #0066d2;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 315px;
+}
+
+.countdown-hero-banner .exclusively-on {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 15px;
+}
+
+.countdown-hero-banner .learn-more {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  border-radius: 26px;
+  background-color: #061d2a;
+  padding: 13px 85px;
+  white-space: nowrap;
+}
+
+.countdown-hero-banner .email-input.input-group .btn {
+  color: white;
+  border-color: white;
+  width: 32px;
+  height: 32px;
+  line-height: 1.75rem;
+  font-size: 14px;
+}
+
+.countdown-hero-banner p {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.countdown-hero-banner input::placeholder {
+  color: #8fc5ff;
+}
+
+.countdown-hero-banner .email-input.input-group input {
+  border-bottom: 1px solid #8fc5ff;
+}
+
+.countdown-hero-banner input {
+  padding: 0px;
+  margin-right: 10px !important;
+}
+
+.countdown-hero-banner .email-input.input-group {
+  margin-bottom: 90px;
+}
+
+@media (max-width: 575px) {
+  .countdown-hero-banner {
+    background-position: 50% -30px;
+  }
+  .countdown-hero-banner .horizontal-separator {
+    width: 90%;
+  }
+
+  .countdown-hero-banner.launched .rocket-launched-mobile {
+    display: block;
+  }
+
+  .countdown-hero-banner .rocket-launched, 
+  .countdown-hero-banner.launched .rocket-launched {
+    display: none;
+  }
+
+  .countdown-hero-banner .rocket-launchpad {
+    width: 185px;
+    margin-top: 30px;
+  }
+
+  .countdown-hero-banner .email-signup {
+    width: 90%;
+  }
+
+  .countdown-hero-banner .countdown-timer {
+    margin-bottom: 0.55rem;
+  }
+
+  .countdown-hero-banner .countdown-hero-banner-button {
+    top: 30px;
+    right: 30px;
+  }
+
+  .countdown-hero-banner .title {
+    font-size: 24px;
+    line-height: 1.13;
+    max-width: 280px;
+  }
+
+  .countdown-hero-banner.launched .title {
+    margin-top: -80px;
+    font-size: 28px;
+    max-width: 320px;
+    margin-bottom: 13px;
+  }
+
+  .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .time-value,
+  .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left .colon {
+    font-size: 38px;
+  }
+
+  .countdown-hero-banner .countdown-timer.nav-timer .countdown-time-left {
+    width: 170px;
+    max-width: 170px;
+  }
+
+  .countdown-hero-banner .learn-more {
+    width: 90%;
+  }
+
+  .countdown-hero-banner .exclusively-on {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .countdown-hero-banner p {
+    font-size: 14px;
+  }
+
+  .countdown-hero-banner .email-input.input-group {
+    margin-bottom: 40px;
+  }
+}

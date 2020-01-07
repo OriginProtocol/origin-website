@@ -525,6 +525,7 @@ def assets_all_styles():
         "static/css/footer.css",
         "static/css/components/countdown-timer.css",
         "static/css/components/countdown-bar.css",
+        "static/css/components/countdown-hero-banner.css",
         "static/css/pages/common.css",
         "static/css/pages/team.css",
         "static/css/pages/token.css",
@@ -585,8 +586,18 @@ def inject_conf_var():
                          for lang in sort_language_constants()])
     except:
         available_languages = {'en': "English"}
+
+    # important (!) date needs to be in that exact format (along with minutes/seconds present). 
+    # also enter the date in UTC format -> greenwich mean time
+    startDate = '2020/1/7 3:30:00 GMT'
+    launchDate = '2020/1/9 3:00:00 GMT'
+    
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
         AVAILABLE_LANGUAGES=available_languages,
-        DOMAIN=request.headers['Host'])
+        DOMAIN=request.headers['Host'],
+        OGN_LAUNCH_START_DATE=startDate,
+        OGN_LAUNCH_DATE=launchDate,
+        OGN_ALREADY_LAUNCHED=datetime.strptime(launchDate, '%Y/%m/%d %H:%M:%S GMT') < datetime.utcnow(),
+    )
