@@ -91,6 +91,13 @@ sites.append({
     'json': False,
 })
 sites.append({
+    'name': 'Telegram (Indonesia)',
+    'url': 'https://t.me/OriginProtocol_IDN',
+    'selector': 'div.tgme_page_extra',
+    'pattern': '([\d\s]+)\s*members',
+    'json': False,
+})
+sites.append({
     'name': 'Reddit',
     'url': 'https://old.reddit.com/r/originprotocol/',
     'selector': 'span.number',
