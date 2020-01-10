@@ -755,6 +755,12 @@ $(function() {
       link: "https://t.me/OriginProtocolvn",
       regionSpecific: true
     },
+    "Telegram (Indonesia)": {
+      img: "/static/img/about/indonesia-telegram.svg",
+      countLabel: "members",
+      link: "https://t.me/OriginProtocol_IDN",
+      regionSpecific: true
+    },
     Wechat: {
       img: "/static/img/about/china-wechat.svg",
       countLabel: "followers",
