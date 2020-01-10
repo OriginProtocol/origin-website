@@ -1,54 +1,91 @@
 {% if launched==True %}
-<div id="countdown-hero-banner" class="countdown-hero-banner d-flex justify-content-center align-items-center launched">
-{% else %}
-<div id="countdown-hero-banner" class="countdown-hero-banner d-flex justify-content-center align-items-center">
-{% endif %}
-  <button
-    id="countdown-hero-banner-button"
-    class="countdown-hero-banner-button"
+<div
+  id="countdown-hero-banner"
+  class="countdown-hero-banner d-flex justify-content-center align-items-center launched"
+>
+  {% else %}
+  <div
+    id="countdown-hero-banner"
+    class="countdown-hero-banner d-flex justify-content-center align-items-center"
   >
-    &times;
-  </button>
-  <div class="container d-flex flex-column justify-content-between align-items-center">
-    <div class="d-flex flex-column justify-content-center align-items-center">
-      <img class="rocket-launchpad" src="/static/img/rocket-launchpad.svg" />
-      <img class="rocket-launched" src="/static/img/rocket-launched.svg" />
-      <img class="rocket-launched-mobile" src="/static/img/rocket-launched-mobile.svg" />
-      <div class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start">
-        {% if launched==True %}
-          <div class="title">{{gettext("Origin Tokens (OGN) have launched!")}}</div>
-        {% else %}
-          <div class="title">{{gettext("Origin Tokens (OGN) are launching soon!")}}</div>
-        {% endif %}
-      </div>
-    </div>
-    {% if launched==False %}
-      <div class="clock d-flex align-items-center justify-content-center">
-        {% with timer_nav=True %}
-          {% include 'components/countdown-timer.html' %}
-        {% endwith %}
-      </div>
     {% endif %}
-    {% if launched==True %}
-      <a href="https://www.binance.com/en/register?ref=38914658" class="learn-more" target="_blank" rel="noopener noreferrer">{{gettext("Visit site")}}</a>
-    {% else %}
-      <a href="https://www.binance.com/en/register?ref=38914658" class="learn-more" target="_blank" rel="noopener noreferrer">{{gettext("Learn more")}}</a>
-    {% endif %}
-    <div class="d-flex pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on">
-      <div class="mr-1">{{gettext("Exclusively on")}}</div>
-      <img class="ml-1 the-logo" src="/static/img/the-logo.svg"/>
-    </div>
-    <div class="horizontal-separator"></div>
-    <div class="d-flex flex-column justify-content-center email-signup">
-      <p>{{gettext("Subscribe to stay in touch.")}}</p>
-      <form id="mailing-list-nav-bar" class="email-input input-group" method="post" action="/mailing-list/join">
-        <input id="email" name="email" type="email" class="form-control" placeholder="{{gettext("Your email")}}" aria-label="Your email" aria-describedby="basic-addon2">
-        <div class="input-group-append d-flex align-items-end">
-          <button class="btn btn-outline-primary" type="submit">
-            <i class="fas fa-arrow-right"></i>
-          </button>
+    <button
+      id="countdown-hero-banner-button"
+      class="countdown-hero-banner-button"
+    >
+      &times;
+    </button>
+    <div
+      class="container d-flex flex-column justify-content-between align-items-center"
+    >
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <img class="rocket-launchpad" src="/static/img/rocket-launchpad.svg" />
+        <img class="rocket-launched" src="/static/img/rocket-launched.svg" />
+        <img
+          class="rocket-launched-mobile"
+          src="/static/img/rocket-launched-mobile.svg"
+        />
+        <div
+          class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start"
+        >
+          {% if launched==True %}
+          <div class="title">
+            {{gettext("Origin Tokens (OGN) have launched!")}}
+          </div>
+          {% else %}
+          <div class="title">
+            {{gettext("Origin Tokens (OGN) are launching soon!")}}
+          </div>
+          {% endif %}
         </div>
-      </form>
+      </div>
+      {% if launched==False %}
+      <div class="clock d-flex align-items-center justify-content-center">
+        {% with timer_nav=True %} {% include 'components/countdown-timer.html'
+        %} {% endwith %}
+      </div>
+      {% endif %} {% if launched==True %}
+      <a
+        href="https://www.binance.com/en/register?ref=38914658"
+        class="learn-more"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{gettext("Buy OGN on Binance")}}</a
+      >
+      {% else %}
+      <a
+        href="https://www.binance.com/en/register?ref=38914658"
+        class="learn-more"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{gettext("Learn more")}}</a
+      >
+      {% endif %}
+      <div
+        class="d-flex pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on"
+      >
+        <div class="mr-1">{{gettext("Exclusively on")}}</div>
+        <img class="ml-1 the-logo" src="/static/img/the-logo.svg" />
+      </div>
+      <div class="horizontal-separator"></div>
+      <div class="d-flex flex-column justify-content-center email-signup">
+        <p>{{gettext("Subscribe to stay in touch.")}}</p>
+        <form
+          id="mailing-list-nav-bar"
+          class="email-input input-group"
+          method="post"
+          action="/mailing-list/join"
+        >
+          <input id="email" name="email" type="email" class="form-control"
+          placeholder="{{gettext("Your email")}}" aria-label="Your email"
+          aria-describedby="basic-addon2">
+          <div class="input-group-append d-flex align-items-end">
+            <button class="btn btn-outline-primary" type="submit">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
