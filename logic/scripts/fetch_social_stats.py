@@ -85,14 +85,14 @@ sites.append({
 })
 sites.append({
     'name': 'Telegram (Vietnam)',
-    'url': 'https://t.me/originprotocolvn',
+    'url': 'https://t.me/originprotocolvietnam',
     'selector': 'div.tgme_page_extra',
     'pattern': '([\d\s]+)\s*members',
     'json': False,
 })
 sites.append({
     'name': 'Telegram (Indonesia)',
-    'url': 'https://t.me/OriginProtocol_IDN',
+    'url': 'https://t.me/originprotocolindonesia',
     'selector': 'div.tgme_page_extra',
     'pattern': '([\d\s]+)\s*members',
     'json': False,
