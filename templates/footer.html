@@ -95,6 +95,9 @@
         <div class="copyright-text d-flex flex-column">
           <div>{{gettext("Copyright © 2019 Origin Protocol Inc. All rights reserved.")}}</div>
           <div class="mt-2">
+            <a class="pr-2" href="https://help.originprotocol.com">
+              {{ gettext("Help") }}
+            </a>
             <a class="pr-2" href="{{ url_for('tos', lang_code=CURRENT_LANGUAGE) }}">
               {{ gettext("Terms of Service") }}
             </a>
