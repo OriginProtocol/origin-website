@@ -1,26 +1,65 @@
 <div class="countdown-bar d-flex justify-content-center align-items-center">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+  <div
+    class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+  >
     <div class="title d-flex">
       <img class="video-tokens d-none d-md-flex" src="/static/img/ogn.png" />
-      <div class="d-flex flex-column py-4 py-md-0 align-items-center align-items-md-start">
-        <div>{{gettext("Origin Tokens are launching soon!")}}</div>
-        <div class="d-flex">
-          {{gettext("Exclusively on ")}}
-          <!-- TODO: add exchange logo -->
+      <div
+        class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start justify-content-center"
+      >
+        {% if launched==True %}
+        <div class="title">
+          {{gettext("Origin Tokens (OGN) have launched!")}}
         </div>
+        {% else %}
+        <div class="title">
+          {{gettext("Origin Tokens (OGN) are launching soon!")}}
+        </div>
+        {% endif %}
       </div>
     </div>
+    {% if launched != True %}
     <div class="clock d-flex align-items-center justify-content-center">
-      {% with timer_nav=True %}
-      {% include 'components/countdown-timer.html' %}
+      {% with timer_nav=True %} {% include 'components/countdown-timer.html' %}
       {% endwith %}
+    </div>
+    {% endif %} {% if launched==True %}
+    <a
+      href="https://www.binance.com/en/register?ref=38914658"
+      class="learn-more"
+      target="_blank"
+      rel="noopener noreferrer"
+      >{{gettext("Buy OGN on Binance")}}</a
+    >
+    {% else %}
+    <a
+      href="https://www.binance.com/en/register?ref=38914658"
+      class="learn-more"
+      target="_blank"
+      rel="noopener noreferrer"
+      >{{gettext("Learn more")}}</a
+    >
+    {% endif %}
+    <div class="vertical-separator d-none d-md-flex mx-2"></div>
+    <div
+      class="d-flex flex-row flex-md-column pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on"
+    >
+      <div class="mr-1">{{gettext("Exclusively on")}}</div>
+      <img class="the-logo mt-md-1" src="/static/img/the-logo.svg" />
     </div>
     <div class="vertical-separator d-none d-md-flex mr-2"></div>
     <div class="horizontal-separator d-flex d-md-none"></div>
     <div class="d-flex flex-column justify-content-center">
       <p>{{gettext("Subscribe to stay in touch.")}}</p>
-      <form id="mailing-list-nav-bar" class="email-input input-group" method="post" action="/mailing-list/join">
-        <input id="email" name="email" type="email" class="form-control" placeholder="{{gettext("Your email")}}" aria-label="Your email" aria-describedby="basic-addon2">
+      <form
+        id="mailing-list-nav-bar"
+        class="email-input input-group"
+        method="post"
+        action="/mailing-list/join"
+      >
+        <input id="email" name="email" type="email" class="form-control"
+        placeholder="{{gettext("Your email")}}" aria-label="Your email"
+        aria-describedby="basic-addon2">
         <div class="input-group-append d-flex align-items-end">
           <button class="btn btn-outline-primary" type="submit">
             <i class="fas fa-arrow-right"></i>

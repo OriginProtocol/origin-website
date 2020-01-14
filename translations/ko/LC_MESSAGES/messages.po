@@ -1,20 +1,18 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: originprotocolwebsite\n"
+"Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:51+0530\n"
-"PO-Revision-Date: 2020-01-06 22:43\n"
+"POT-Creation-Date: 2020-01-06 23:08+0000\n"
+"PO-Revision-Date: 2020-01-06 22:43+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Korean\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: originprotocolwebsite\n"
-"X-Crowdin-Language: ko\n"
-"X-Crowdin-File: /master/messages.pot\n"
 "Language: ko_KR\n"
+"Language-Team: Korean\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -24,27 +22,20 @@ msgstr "기술 파트너"
 msgid "Building on Origin"
 msgstr "오리진(Origin)기반 구축"
 
-#: logic/emails/mailing_list.py:99 logic/emails/mailing_list.py:168
+#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:183
+#: views/web_views.py:262
 msgid "Please enter a valid email address"
 msgstr "사용 가능한 이메일 주소를 입력 해주세요."
 
-#: logic/emails/mailing_list.py:117 logic/emails/mailing_list.py:185
+#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:200
 msgid "Ooops! Something went wrong."
 msgstr "이런! 뭔가 잘못되었습니다."
 
-#: logic/emails/mailing_list.py:138 logic/emails/mailing_list.py:196
+#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:211
 msgid "Thanks! We'll be in touch soon."
 msgstr "감사합니다! 곧 연락 드리겠습니다."
 
-#: logic/emails/mailing_list.py:152
-msgid "Ooops, something went wrong"
-msgstr "이런! 뭔가 잘못되었습니다."
-
-#: logic/emails/mailing_list.py:154
-msgid "You have been unsubscribed"
-msgstr "구독이 취소되었습니다."
-
-#: logic/emails/mailing_list.py:171
+#: logic/emails/mailing_list.py:186
 msgid "Please enter a valid website address"
 msgstr "사용 가능한 웹사이트 주소를 입력 해주세요."
 
@@ -60,102 +51,145 @@ msgstr "여러분이 찾고 있는 페이지는 더 이상 여기에 존재하�
 msgid "Go Home"
 msgstr "홈으로 이동"
 
-#: templates/about.html:3 templates/about.html:5 templates/ogn-token.html:3
-#: templates/ogn-token.html:5 templates/partners.html:3
-#: templates/partners.html:5 templates/product.html:3 templates/product.html:5
-msgid "Origin Protocol - Build on Origin"
-msgstr "Origin Protocol - Origin 상에 만들어짐"
+#: templates/about.html:1
+msgid "Origin Protocol - About"
+msgstr ""
 
-#: templates/about.html:16 templates/investors.html:16
-#: templates/landing.html:18 templates/team.html:12 templates/video.html:20
+#: templates/about.html:2
+msgid ""
+"Origin Protocol enables\n"
+"true peer-to-peer commerce."
+msgstr ""
+
+#: templates/about.html:12 templates/investors.html:13
+#: templates/landing.html:18 templates/team.html:13 templates/video.html:20
 msgid "Exit full screen"
 msgstr "전체 화면 종료"
 
-#: templates/about.html:26
-msgid "It’s time to build the sharing economy without intermediaries"
-msgstr "이제 중개자없는 공유 경제 시장을 구축 할 때 입니다."
+#: templates/about.html:28
+msgid ""
+"It’s time to build the sharing economy without\n"
+"        intermediaries"
+msgstr ""
 
-#: templates/about.html:30 templates/investors.html:30
-#: templates/landing.html:32 templates/landing.html:194 templates/team.html:37
+#: templates/about.html:37 templates/investors.html:37
+#: templates/landing.html:32 templates/landing.html:194 templates/team.html:38
 #: templates/video.html:32
 msgid "Watch the video"
 msgstr "비디오 보기"
 
-#: templates/about.html:35
+#: templates/about.html:45
 msgid "Origin enables true peer-to-peer commerce"
 msgstr "오리진은 미래 버전의 P2P 거래를 가능하게합니다."
 
-#: templates/about.html:36
-msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
-msgstr "오리진(Origin) 은 샌프란시스코에 본사를 둔 스타트업이자 중국, 한국, 러시아, 인도, 뉴질랜드 및 슬로베니아에 팀원을 보유한 글로벌 회사입니다. \n"
-"또한, 800명이 넘는 전 세계 최고의 벤처 캐피털리스트 및 크립토 펀드 투자자들과 함께합니다."
+#: templates/about.html:48
+msgid ""
+"Origin is a startup headquartered in San Francisco, but we also\n"
+"      have team members in China, Korea, Russia, India, New Zealand, and even\n"
+"      Slovenia. Our 800+ investors include top venture capitalists and\n"
+"      cryptocurrency funds all over the world."
+msgstr ""
 
-#: templates/about.html:38 templates/landing.html:173
+#: templates/about.html:57 templates/landing.html:173
 msgid "Learn more about our team"
 msgstr "오리진(Origin) 팀에 대해 알아보기"
 
-#: templates/about.html:39 templates/landing.html:201
+#: templates/about.html:60 templates/landing.html:201
 msgid "Learn more about our investors"
 msgstr "오리진(Origin) 투자자들에 대해 알아보기"
 
-#: templates/about.html:49 templates/landing.html:137
+#: templates/about.html:80 templates/landing.html:137
 msgid "Lower Fees"
 msgstr "수수료 절감"
 
-#: templates/about.html:50
+#: templates/about.html:82
 #, python-format
-msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020."
-msgstr "중앙집권적 형태의 사업에서 중개인은 종종 20-30 %%의 거래 수수료를 청구합니다. 에어비앤비(Airbnb) 는 2017년에 26억 달러의 수수료로 이득을 취했으며, 우버(Uber) 는 2018년에 11.8억 달러의 수수료를 창출하였습니다. 2020 년까지 총 공유 경제 시장에서 발생 될 수수료는 약 400억 달러를 넘어 설 것으로 예상됩니다."
+msgid ""
+"Centralized intermediaries often charge 20-30%% in\n"
+"          transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber\n"
+"          took home a monumental $11.8B in fees in 2018. Total sharing economy\n"
+"          fees are expected to cross $40B by 2020."
+msgstr ""
 
-#: templates/about.html:51
-msgid "By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators."
-msgstr "오리진에서는 중개인을 제거하고 수수료를 지불하지 않도록 합니다. 이제 더 이상 구매자와 판매자는 거래시 중개인에게 수수료를 지불하지 않아도 되며, 오리진을 통해 수수료 절감의 혜택을 누릴 수 있습니다."
+#: templates/about.html:88
+msgid ""
+"By removing the middlemen, Origin removes these fees.\n"
+"          Buyers and sellers can now share the savings from the fees that are no\n"
+"          longer paid to traditional marketplace operators."
+msgstr ""
 
-#: templates/about.html:70 templates/landing.html:144
+#: templates/about.html:146 templates/landing.html:144
 msgid "Better Incentives"
 msgstr "더 많은 혜택"
 
-#: templates/about.html:71
-msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
-msgstr "최근 우버(Uber) 와 리프트(Lyft) 가 상장(IPO) 을 했습니다. 위워크(WeWork) 와 어비앤비(Airbnb) 가 곧 뒤따를 것입니다. 하지만 이 플랫폼들의 성공에 결정적인 영향을 미친 초기 참여자 중 그 누구도 혜택을 받지 못했습니다."
+#: templates/about.html:148
+msgid ""
+"Uber and Lyft recently IPOed. WeWork and Airbnb are soon to\n"
+"          follow suit. None of the early participants on these platforms\n"
+"          benefited despite being critical to their success."
+msgstr ""
 
-#: templates/about.html:72
-msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
-msgstr "반대로 오리진(Origin) 에서는 모든 사용자가 오리진 네트워크의 일부를 소유할 수 있습니다. 구매자와 판매자는 오리진(Origin) 기반의 애플리케이션을 사용하여 서로 거래를 완료할 시, 오리진 토큰(OGN) 을 얻을 수 있습니다. 개발자, 제휴업체 및 마켓플레이스 운영자는 판매자의 상품 목록을 홍보하고 마케팅을 도와줌으로써 OGN을 얻을 수 있습니다. 모든 사람이 오리진 네트워크를 소유할 때, 오리진 생태계 참여자들은 오리진의 건전한 오리진 커뮤니티 성장을 촉진하기 위한 인센티브를 받게 됩니다."
+#: templates/about.html:153
+msgid ""
+"In contrast, Origin enables everyone to own a piece of the\n"
+"          network. Buyers and sellers can earn Origin Tokens (OGN) simply by\n"
+"          using Origin-enabled applications to transact with one another.\n"
+"          Developers, affiliates, and marketplace operators can earn OGN by\n"
+"          promoting and marketing sellers' listings. When everyone owns a piece\n"
+"          of the network, ecosystem participants are incentivized to promote the\n"
+"          health and growth of Origin. "
+msgstr ""
 
-#: templates/about.html:80 templates/landing.html:151
+#: templates/about.html:174 templates/landing.html:151
 msgid "Increased Access"
 msgstr "접근성 향상"
 
-#: templates/about.html:81
-msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
-msgstr "오늘날 전 세계 20억 명의 사람들이 은행 계좌를 가지고 있지 않습니다. 그들은 은행 계좌, 신용 카드, 삼성 페이(Samsung Pay) 또는 Ali Pay 등이 없습니다."
+#: templates/about.html:176
+msgid ""
+"2 billion people around the world are currently unbanked.\n"
+"          They do not have checking accounts, credit cards, AliPay, or Apple\n"
+"          Pay."
+msgstr ""
 
-#: templates/about.html:82
-msgid "With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems."
-msgstr "암호화폐의 출현과 저렴한 스마트폰의 확산으로 은행 계좌를 가지고 있지 않은 사람들(unbancked) 도 새로운 형태의 인터넷 경제에 참여할 수 있는 시대에 도달하였습니다. 전 세계에 있는 오리진(Origin) 사용자들은 안정적인 은행 시스템이 없는 상황에서도 오리진(Origin) 기반의 마켓플레이스를 통해 서로 거래 할 수 있습니다."
+#: templates/about.html:181
+msgid ""
+"With the advent of cryptocurrencies and the proliferation\n"
+"          of inexpensive smartphones, now is the time to enable the unbanked to\n"
+"          participate in the new Internet economy. Users from all over the world\n"
+"          are now able to transact with each other on Origin-powered\n"
+"          marketplaces even if they do not have stable, local banking\n"
+"          systems."
+msgstr ""
 
-#: templates/about.html:99 templates/landing.html:158
+#: templates/about.html:228 templates/landing.html:158
 msgid "More Resilience"
 msgstr "자유로운 시장"
 
-#: templates/about.html:100
-msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
-msgstr "에어비앤비(Airbnb) 는 파리, 베를린, 도쿄, 뉴욕, 심지어 본사가 위치한 샌프란시스코와 같은 도시에서도 엄격하게 규제되거나 금지되었습니다."
+#: templates/about.html:230
+msgid ""
+"Airbnb is heavily regulated or banned in cities like Paris,\n"
+"          Berlin, Tokyo, New York, and even its home city of San Francisco."
+msgstr ""
 
-#: templates/about.html:101
-msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
-msgstr "탈중앙화된 시장은 개방적이고 자유로운 상거래를 장려합니다. 중앙집권형태의 시장과 달리 단일 장애 지점(single points of failure)이 존재하지 않기 때문에 금지 또는 폐지될 수 없습니다. 탈중앙화된 상거래는 보다 자유롭고 효율적인 시장을 장려합니다."
+#: templates/about.html:234
+msgid ""
+"Decentralized marketplaces promote open and free commerce.\n"
+"          Unlike centralized alternatives, they are not single points of failure\n"
+"          and can't be banned or shut down. Decentralized commerce is more\n"
+"          resilient and promotes efficient markets."
+msgstr ""
 
-#: templates/about.html:110
+#: templates/about.html:257
 msgid "Origin in the Press"
 msgstr "언론보도"
 
-#: templates/about.html:128
-msgid "We have a large and growing community of developers and supporters"
-msgstr "오리진에는 나날히 성장 중인 개발자 그리고 후원자 커뮤니티가 있습니다."
+#: templates/about.html:364
+msgid ""
+"We have a large and growing community of developers and\n"
+"      supporters"
+msgstr ""
 
-#: templates/about.html:130
+#: templates/about.html:371
 msgid "Region-specific Channels"
 msgstr "지역별 채널"
 
@@ -168,7 +202,7 @@ msgid "Marketplace Acceptable Use Policy"
 msgstr "마켓 플레이스 이용약관"
 
 #: templates/countdown-bar.html:6 templates/landing.html:44
-#: templates/ogn-token.html:16 templates/tokens.html:16
+#: templates/ogn-token.html:12 templates/tokens.html:16
 msgid "Origin Tokens are launching soon!"
 msgstr "오리진(Origin)  토큰이 곧 출시됩니다!"
 
@@ -195,7 +229,7 @@ msgstr "<br>피어 투 피어<br>마켓 플레이스 구축"
 #: templates/creator.html:21
 #, python-format
 msgid "Blockchain enabled.<br>No code required.<br>100%% free to operate."
-msgstr "블록체인 기능 사용.<br>코드가 필요하지 않습니다.<br>100% 무료로 운영할수 있습니다."
+msgstr "블록체인 기능 사용.<br>코드가 필요하지 않습니다.<br>100%% 무료로 운영할수 있습니다."
 
 #: templates/creator.html:24 templates/creator.html:100
 #: templates/creator.html:223
@@ -342,9 +376,13 @@ msgstr "질문이 있으세요?"
 msgid "Get in touch"
 msgstr "연락 하기"
 
-#: templates/developers.html:2 templates/developers.html:3
+#: templates/developers.html:2
 msgid "Origin Protocol - Developers"
 msgstr "Origin 프로토콜 - 개발자"
+
+#: templates/developers.html:3
+msgid "Origin Protocol's open-source codebase is being developed by a global network of contributors"
+msgstr ""
 
 #: templates/developers.html:13
 msgid "Our open-source codebase is being developed by a global network of contributors"
@@ -511,7 +549,6 @@ msgid "Stay in touch"
 msgstr "오리진과 계속 함께해주세요"
 
 #: templates/footer.html:7 templates/landing.html:45
-#: templates/ogn-token.html:17
 msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr "오리진의 뉴스레터를 구독하세요. 사용자 이메일은 비공개로 유지됩니다."
 
@@ -629,159 +666,188 @@ msgstr "디스코드(Discord)"
 msgid "VK"
 msgstr "VK"
 
-#: templates/investors.html:3 templates/investors.html:5
-msgid "Origin Protocol - Investors"
-msgstr "오리진 프로토콜 - 투자자"
+#: templates/investors.html:1
+msgid ""
+"Origin Protocol -\n"
+"Investors"
+msgstr ""
 
-#: templates/investors.html:26
+#: templates/investors.html:2
+msgid ""
+"Origin\n"
+"Protocol is backed by top investors from all over the world"
+msgstr ""
+
+#: templates/investors.html:29
 msgid "We're backed by top investors from all over the world"
 msgstr "전 세계 최고의 투자자들이 오리진(Origin) 을 후원합니다"
 
-#: templates/investors.html:38
+#: templates/investors.html:45
 msgid "Fundraising"
 msgstr "펀드레이징"
 
-#: templates/investors.html:39
-msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
-msgstr "오리진(Origin) 은 자사 플랫폼 구축을 위해 앞서 진행한 3번의 라운드에서 토큰을 판매하여 충분한 자금을 확보한 스타트업 입니다."
+#: templates/investors.html:47
+msgid ""
+"We are a well-capitalized startup that has sold tokens in\n"
+"            three previous rounds to build our platform."
+msgstr ""
 
-#: templates/investors.html:43
+#: templates/investors.html:54
 msgid "$38.1M"
 msgstr "38.1백만 달러"
 
-#: templates/investors.html:44
+#: templates/investors.html:57
 msgid "total raised to date"
 msgstr "현재까지의 모금액"
 
-#: templates/investors.html:47
+#: templates/investors.html:61
 msgid "800+"
 msgstr "800+"
 
-#: templates/investors.html:48
+#: templates/investors.html:62
 msgid "investors"
 msgstr "투자자"
 
-#: templates/investors.html:52
-msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
-msgstr "오리진(Origin) 네트워크의 지분을 얻는 데 관심 있으신가요? 최신 업데이트를 받으려면 가입하세요."
+#: templates/investors.html:66
+msgid ""
+"Interested in getting a stake in Origin? Sign up to\n"
+"            receive the latest updates."
+msgstr ""
 
-#: templates/investors.html:63
+#: templates/investors.html:78
 msgid "Featured Investor"
 msgstr "주요 투자자"
 
-#: templates/investors.html:77
-msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
-msgstr "\"오리진(Origin) 에 투자 시 가장 중요하게 본 요인은 오리진(Origin) 팀입니다. 이들은 상징적인 소비재 기업들에서 일한 놀라운 경험들을 가지고 있습니다."
+#: templates/investors.html:103
+msgid ""
+"\"The reason we invested in Origin was\n"
+"                      primarily because of the team. They have amazing\n"
+"                      backgrounds and they come from iconic consumer\n"
+"                      companies.\""
+msgstr ""
 
-#: templates/investors.html:81
+#: templates/investors.html:110
 msgid "Rodolfo Gonzalez"
 msgstr "로돌포 곤잘레스(Rodolfo Gonzalez)"
 
-#: templates/investors.html:84
+#: templates/investors.html:113
 msgid "Partner, Foundation Capital"
 msgstr "파트너, Foundation Capital"
 
-#: templates/investors.html:100
-msgid "\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\""
-msgstr "\"제가 지금 이야기 하는 것은 전세계에 있는 100,000명이 넘는 오리진 커뮤니티 사람들입니다. 그들은 오리진(Origin) 에 미치도록 열광하는 오리진(Origin) 팬들로, 오리진(Origin) 은 글로벌 진출을 굉장히 성공적으로 해냈다고 생각합니다.\""
+#: templates/investors.html:142
+msgid ""
+"\"We're talking about over 100,000 members\n"
+"                      around the world that are hard-core fans of Origin. Origin\n"
+"                      has done a tremendous job executing at a global\n"
+"                      scale.\""
+msgstr ""
 
-#: templates/investors.html:104
+#: templates/investors.html:149
 msgid "Sophie Liao"
 msgstr "소피 리아오(Sophie Liao)"
 
-#: templates/investors.html:107
+#: templates/investors.html:152
 msgid "Founding Partner, Oyster VC"
 msgstr "창업 파트너, Oyster VC"
 
-#: templates/investors.html:123
-msgid "\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\""
-msgstr "\"오리진(Origin) 은 저희가 투자하는 모든 탈중앙화된 애플리케이션 프로젝트들 중, 가장 돋보이는 프로젝트입니다. 왜냐하면, 저희가 본 프로젝트들 중 가장 최고의 커뮤니티를 구축해냈기 때문이죠. 저희는 오리진(Origin) 이 게임 체인저(Game Changer) 가 될 것이라 믿습니다.\""
+#: templates/investors.html:170
+msgid ""
+"\"Origin stands out from any of the other\n"
+"                      decentralized applications that we've invested into,\n"
+"                      because they've gone out there and built probably the best\n"
+"                      community that we've seen. For us, that was a game\n"
+"                      changer.\""
+msgstr ""
 
-#: templates/investors.html:127 templates/team.html:630
+#: templates/investors.html:178 templates/team.html:631
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/investors.html:130
+#: templates/investors.html:181
 msgid "Co-investment Officer at Pantera Capital"
 msgstr "공동 투자 책임자, Pantera Capital"
 
-#: templates/investors.html:152 templates/landing.html:190
-msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
-msgstr "오리진은 실리콘 밸리와 전 세계 최고의 벤처 캐피탈 회사들, 또 투자자의 지원을 받고 있습니다."
+#: templates/investors.html:204
+msgid ""
+"We are backed by top venture capital firms and investors\n"
+"            in Silicon Valley and around the world"
+msgstr ""
 
-#: templates/investors.html:201
+#: templates/investors.html:247
 msgid "Individual Investors"
 msgstr "개인 투자자"
 
-#: templates/investors.html:203
-msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
-msgstr "오리진(Origin) 은 실리콘 밸리 최고의 엔젤 투자자 및 이전 창업자들의 지원을 받고 있습니다."
+#: templates/investors.html:249
+msgid ""
+"We are supported by some of the best angel investors and\n"
+"            previous founders in Silicon Valley."
+msgstr ""
 
-#: templates/investors.html:213
+#: templates/investors.html:264
 msgid "Steve Chen"
 msgstr "스티브 첸"
 
-#: templates/investors.html:216
+#: templates/investors.html:267
 msgid "Founder, YouTube"
 msgstr "YouTube 설립자"
 
-#: templates/investors.html:224
+#: templates/investors.html:279
 msgid "Alexis Ohanian"
 msgstr "Alexis Ohanian"
 
-#: templates/investors.html:227
+#: templates/investors.html:282
 msgid "Founder, Reddit"
 msgstr "창업자, Reddit"
 
-#: templates/investors.html:235
+#: templates/investors.html:294
 msgid "Garry Tan"
 msgstr "Garry Tan"
 
-#: templates/investors.html:238
+#: templates/investors.html:297
 msgid "Partner, Y Combinator"
 msgstr "파트너, Y Combinator"
 
-#: templates/investors.html:246
+#: templates/investors.html:309
 msgid "Gil Penchina"
 msgstr "Gil Penchina"
 
-#: templates/investors.html:249
+#: templates/investors.html:312
 msgid "Angel Investor"
 msgstr "엔젤 투자자"
 
-#: templates/investors.html:257
+#: templates/investors.html:324
 msgid "Justin Blau"
 msgstr "저스틴 블라 우"
 
-#: templates/investors.html:260
+#: templates/investors.html:327
 msgid "Acclaimed DJ"
 msgstr "찬란한 DJ"
 
-#: templates/investors.html:268
+#: templates/investors.html:339
 msgid "Steve Jang"
 msgstr "Steve Jang"
 
-#: templates/investors.html:271
+#: templates/investors.html:342
 msgid "Advisor & Angel, Uber"
 msgstr "고문 및 엔젤 투자자, Uber"
 
-#: templates/investors.html:279
+#: templates/investors.html:354
 msgid "Kamal Ravikant"
 msgstr "카말 라비 칸트"
 
-#: templates/investors.html:282
+#: templates/investors.html:357
 msgid "Serial Entrepreneur"
 msgstr "연쇄 창업가"
 
-#: templates/investors.html:290
+#: templates/investors.html:369
 msgid "Randall Kaplan"
 msgstr "랜달 카플란"
 
-#: templates/investors.html:293
+#: templates/investors.html:372
 msgid "Founder, Akamai"
 msgstr "창업자, Akamai"
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:63
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:64
 msgid "Origin Protocol"
 msgstr "오리진 프로토콜(Origin Protocol)"
 
@@ -871,7 +937,7 @@ msgstr "역사상 처음으로 구매자와 판매자는 블록체인을 통해 
 #: templates/landing.html:138
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed."
-msgstr "중개인 없는 거래에서 구매자와 판매자는 20-30%의 금전적 절약에 대한 혜택을 나눠 갖게 됩니다."
+msgstr "중개인 없는 거래에서 구매자와 판매자는 20-30%%의 금전적 절약에 대한 혜택을 나눠 갖게 됩니다."
 
 #: templates/landing.html:145
 msgid "Everyone can own a stake in the network by contributing to its growth."
@@ -892,6 +958,10 @@ msgstr "오리진(Origin) 은 세계 최고 수준의 팀원들과 함께합니�
 #: templates/landing.html:166
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr "오리진(Origin)은 성공적인 창업 경험을 보유한 페이팔(PayPal)의 창립자, 유투브(Youtube)의 초기 직원, 구글(Google) 및 드랍박스(Dropbox) 출신의 개발자와 매니저들이 주축이 되어 팀을 이끌고 있습니다."
+
+#: templates/landing.html:190
+msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
+msgstr "오리진은 실리콘 밸리와 전 세계 최고의 벤처 캐피탈 회사들, 또 투자자의 지원을 받고 있습니다."
 
 #: templates/landing.html:206
 msgid "Featured Partner"
@@ -961,61 +1031,100 @@ msgstr "OGN 토큰"
 msgid "Shop"
 msgstr "샵 (Shop)"
 
-#: templates/ogn-token.html:41 templates/whitepaper/platform.html:109
+#: templates/ogn-token.html:1
+msgid ""
+"Origin Protocol - OGN\n"
+"Token"
+msgstr ""
+
+#: templates/ogn-token.html:2
+msgid ""
+"Origin Tokens\n"
+"(OGN) ensure the health and growth of the Origin network."
+msgstr ""
+
+#: templates/ogn-token.html:14
+msgid ""
+"Subscribe to stay in touch. Your email will be kept\n"
+"        private."
+msgstr ""
+
+#: templates/ogn-token.html:39 templates/whitepaper/platform.html:109
 msgid "Origin Rewards"
 msgstr "오리진 리워드"
 
-#: templates/ogn-token.html:43
-msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
-msgstr "지금 오리진(Origin) 네트워크의 지분을 얻을 수 있습니다. 사용자 프로필 인증, 친구 및 가족에게 오리진(Origin) 추천, 소셜 미디어에서 오리진에 대한 뉴스를 공유, 주요 판매자들의 상품을 구매와 같은 방법을 통해 오리진 토큰(OGN) 을 모아보세요."
+#: templates/ogn-token.html:41
+msgid ""
+"Earn your stake in the Origin network today. Users can\n"
+"            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
+"            friends and family to Origin, sharing news about Origin on social\n"
+"            media, and making purchases from our featured sellers."
+msgstr ""
 
-#: templates/ogn-token.html:45
+#: templates/ogn-token.html:46
 msgid "Not available in the United States"
 msgstr "미국에서는 사용할 수 없습니다"
 
-#: templates/ogn-token.html:71
+#: templates/ogn-token.html:85
 msgid "Commissions"
 msgstr "수수료"
 
-#: templates/ogn-token.html:73
-msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
-msgstr "오리진 커미션(Commission) 을 사용하여 오리진 본사 앱 및 타사 앱에서 상품 목록을 홍보하세요. 검색 결과 목록에서 주요 결과로 노출 되는 것을 원하신다면, OGN을 사용해보세요. 애플리케이션 개발자 및 마켓플레이스 운영자는 판매자가 상품 판매를 완료할 수 있도록 도와줌으로써, 오리진 토큰(OGN) 을 얻을 수 있습니다."
+#: templates/ogn-token.html:87
+msgid ""
+"Promote your listings across the Origin flagship app and\n"
+"            third-party apps with Origin Commissions. Pay with OGN to get\n"
+"            featured prominently in search results. Application developers and\n"
+"            marketplace operators earn Origin Tokens (OGN) by helping sellers\n"
+"            complete their sales."
+msgstr ""
 
-#: templates/ogn-token.html:83
+#: templates/ogn-token.html:101
 msgid "Payments"
 msgstr "지불"
 
-#: templates/ogn-token.html:85
-msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
-msgstr "오리진 리워드(Origin Rewards) 에서 획득한 오리진 토큰(OGN) 을 사용하여 상품 및 서비스에 대한 비용을 지불하세요. 판매자는 선호 지불 방법으로 OGN을 수락하여 네트워크에서 더 큰 지분을 얻습니다."
+#: templates/ogn-token.html:103
+msgid ""
+"Use the Origin Tokens (OGN) that you've earned in Origin\n"
+"            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
+"            the network by accepting OGN as a preferred payment method."
+msgstr ""
 
-#: templates/ogn-token.html:99
+#: templates/ogn-token.html:124
 msgid "Research and Development"
 msgstr "연구 개발"
 
-#: templates/ogn-token.html:103
+#: templates/ogn-token.html:130
 msgid "Origin Nodes"
 msgstr "오리진 노드(Origin Nodes)"
 
-#: templates/ogn-token.html:105
-msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
-msgstr "OGN을 활용하여 오리진 노드(Origin Node) 를 실행하고 오리진(Origin)네트워크 상에서 프로필 및 상품 목록 데이터를 복제 및 검증함으로써 더 많은 OGN을 얻을 수 있습니다."
+#: templates/ogn-token.html:132
+msgid ""
+"Stake your OGN to run an Origin Node and earn more OGN by\n"
+"            helping to replicate and validate profile and listing data on the\n"
+"            network."
+msgstr ""
 
-#: templates/ogn-token.html:110
+#: templates/ogn-token.html:141
 msgid "Origin Relayer"
 msgstr "오리진 릴레이어(Relayer)"
 
-#: templates/ogn-token.html:112
-msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
-msgstr "개발자는 오리진 메타 트렌젝션(Origin Meta Transactions) 사용 비용을 OGN으로 지불 할 수 있습니다. 메타 트랜잭션은 사용자의 마찰을 줄이고 채택 및 유지를 장려합니다."
+#: templates/ogn-token.html:143
+msgid ""
+"Developers can pay for usage of Origin Meta Transactions\n"
+"            Relayers with OGN. Meta Transactions reduce user friction and\n"
+"            encourage adoption and retention."
+msgstr ""
 
-#: templates/ogn-token.html:117
+#: templates/ogn-token.html:152
 msgid "Governance"
 msgstr "거버넌스(Governance)"
 
-#: templates/ogn-token.html:119
-msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
-msgstr "모든 사람들이 오리진 플렛폼 (Origin Platform) 에 대한 투표를 할 수 있습니다. 토큰 소지자는 향후 계획을 결정하는 중요한 커뮤니티 투표에 참여하게 됩니다."
+#: templates/ogn-token.html:154
+msgid ""
+"Everyone has a vote on the Origin Platform. Token holders\n"
+"            will participate in important community votes to define future\n"
+"            initiatives."
+msgstr ""
 
 #: templates/partner_campaign.html:3 templates/partner_campaign.html:5
 #: templates/referral_campaign.html:3 templates/referral_campaign.html:5
@@ -1046,6 +1155,10 @@ msgstr "OGN은 오리진 사용자에게 주어지는 암호화폐 보상입니�
 #: templates/referral_campaign.html:385
 msgid "Scan to install our app"
 msgstr "스캔하여 앱 설치"
+
+#: templates/partners.html:3 templates/partners.html:5
+msgid "Origin Protocol - Build on Origin"
+msgstr "Origin Protocol - Origin 상에 만들어짐"
 
 #: templates/partners.html:16
 msgid "Build on Origin"
@@ -1111,9 +1224,17 @@ msgstr "파트너 신청하기"
 msgid "Origin Protocol - Privacy Policy"
 msgstr "오리진 프로토콜 - 개인 정보 보호 정책"
 
+#: templates/product.html:3
+msgid "Origin Protocol - Product"
+msgstr ""
+
+#: templates/product.html:5
+msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
+msgstr ""
+
 #: templates/product.html:18
-msgid "Our platform will power decentralized marketplaces everywhere"
-msgstr "OGN을 활용하여 오리진 노드(Origin Node) 를 실행하고 오리진(Origin) 네트워크 상에서 프로필 및 상품 목록 데이터를 복제 및 검증함으로써 더 많은 OGN을 얻을 수 있습니다."
+msgid "Our platform will power peer-to-peer marketplaces everywhere"
+msgstr ""
 
 #: templates/product.html:28
 msgid "Apps built on our platform"
@@ -1388,324 +1509,348 @@ msgid "Origin Protocol - Team"
 msgstr "Origin 프로토콜 - 팀"
 
 #: templates/team.html:2
-msgid "Origin Protocol -\n"
-"Team"
-msgstr "오리진(Origin) 프로토콜 - 팀"
+msgid ""
+"Origin Protocol's\n"
+"world-class team is led by entrepreneurs and engineers from iconic tech\n"
+"companies"
+msgstr ""
 
-#: templates/team.html:28
-msgid "Our world-class team is led by entrepreneurs and engineers\n"
+#: templates/team.html:29
+msgid ""
+"Our world-class team is led by entrepreneurs and engineers\n"
 "        from iconic tech companies"
 msgstr "전 세계적으로 유망한 기술 회사에서 근무하였던 창업가와 개발자들이 세계 최고 수준의 오리진(Origin) 팀을 이끌고 있습니다."
 
-#: templates/team.html:45 templates/whitepaper/sidebar.html:50
+#: templates/team.html:46 templates/whitepaper/sidebar.html:50
 msgid "Core team"
 msgstr "핵심 팀"
 
-#: templates/team.html:63 templates/whitepaper/team.html:31
+#: templates/team.html:64 templates/whitepaper/team.html:31
 msgid "Josh Fraser"
 msgstr "조쉬 프레이저"
 
-#: templates/team.html:67 templates/team.html:94
+#: templates/team.html:68 templates/team.html:95
 msgid "Cofounder"
 msgstr "공동설립자"
 
-#: templates/team.html:70
-msgid "Josh started coding at the age of 10. Prior to\n"
+#: templates/team.html:71
+msgid ""
+"Josh started coding at the age of 10. Prior to\n"
 "                  Origin, he co-founded three other venture-backed companies:\n"
 "                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "조쉬(Josh) 는 10살의 나이에 처음으로 코딩을 시작했습니다. 오리진(Origin)에 합류하기 전, 그는 다음 세 곳의 VC 투자를 받은 회사를 공동 설립한 경험이 있습니다: EventVue, Torbit (Walmart Labs에 피인수) &amp; Forage."
 
-#: templates/team.html:90 templates/whitepaper/team.html:13
+#: templates/team.html:91 templates/whitepaper/team.html:13
 msgid "Matthew Liu"
 msgstr "매튜 리우(Matthew Liu)"
 
-#: templates/team.html:97
-msgid "Matt was the 3rd PM at YouTube (acquired by\n"
+#: templates/team.html:98
+msgid ""
+"Matt was the 3rd PM at YouTube (acquired by\n"
 "                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
 "                  (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "매튜(Matt)는 Youtube (Google에 피인수)의 세번째 PM이었고 Qwiki (Yahoo에 피인수)와 Bonobos (Walmart에 피인수)의 VP PM이었습니다. 그는 스탠포드에서 학사와 석사 학위를 취득했습니다."
 
-#: templates/team.html:121 templates/whitepaper/team.html:96
+#: templates/team.html:122 templates/whitepaper/team.html:96
 msgid "Business Development"
 msgstr "사업 개발"
 
-#: templates/team.html:124
-msgid "Coleman is an active cryptocurrency investor and\n"
+#: templates/team.html:125
+msgid ""
+"Coleman is an active cryptocurrency investor and\n"
 "                  real estate entrepreneur, owning and managing multiple Airbnb\n"
 "                  properties. He studied mathematics at Berkeley."
 msgstr "콜맨(Coleman)은 활발한 암호화폐 투자자이며 부동산 기업가입니다. 그는 여러 에어비엔비(Airbnb) 매물을 소유 및 관리하고 있습니다. 그는 UC 버클리에서 수학을 공부했습니다."
 
-#: templates/team.html:144 templates/whitepaper/team.html:56
+#: templates/team.html:145 templates/whitepaper/team.html:56
 msgid "Yu Pan"
 msgstr "유팬 (Yu Pan)"
 
-#: templates/team.html:148 templates/whitepaper/team.html:60
+#: templates/team.html:149 templates/whitepaper/team.html:60
 msgid "R&D Engineer"
 msgstr "R&D 엔지니어"
 
-#: templates/team.html:151
-msgid "Yu Pan was one of the 6 founding team members of\n"
+#: templates/team.html:152
+msgid ""
+"Yu Pan was one of the 6 founding team members of\n"
 "                  PayPal and was the 1st employee at YouTube. He is a former\n"
 "                  Google employee and co-founder of Kiwi Crate."
 msgstr "유팬(Yu Pan)은 페이팔의 창립멤버 6명 중 하나였으며 유투브의 첫 번째 직원이었습니다. 그는 Google에서 일했었으며 Kiwi Crated의 공동 창업자입니다."
 
-#: templates/team.html:171 templates/whitepaper/team.html:110
+#: templates/team.html:172 templates/whitepaper/team.html:110
 msgid "Micah Alcorn"
 msgstr "마이카 알콘(Micah Alcorn)"
 
-#: templates/team.html:175 templates/whitepaper/team.html:114
+#: templates/team.html:176 templates/whitepaper/team.html:114
 msgid "Product Manager/Engineer"
 msgstr "제품 관리자 / 엔지니어"
 
-#: templates/team.html:178
-msgid "Micah was the technical co-founder of\n"
+#: templates/team.html:179
+msgid ""
+"Micah was the technical co-founder of\n"
 "                  WellAttended, a bootstrapped box office management platform.\n"
 "                  He worked as a commercial real estate broker while learning to\n"
 "                  code."
 msgstr "마이카(Micah) 는 부트스트랩 매표소 관리 플랫폼 WellAttended의 기술 공동 창업자였습니다. 마이카는 코딩하는 법을 익히며, 상업 부동산 브로커로 근무한 경력이 있습니다."
 
-#: templates/team.html:200 templates/whitepaper/team.html:128
+#: templates/team.html:201 templates/whitepaper/team.html:128
 msgid "Kay Yoo"
 msgstr "케이 유(Kay Yoo)"
 
-#: templates/team.html:204 templates/whitepaper/team.html:132
+#: templates/team.html:205 templates/whitepaper/team.html:132
 msgid "Finance & Operations"
 msgstr "재무 및 운영"
 
-#: templates/team.html:207
-msgid "Kay is a Chartered Professional Accountant (CPA).\n"
+#: templates/team.html:208
+msgid ""
+"Kay is a Chartered Professional Accountant (CPA).\n"
 "                  She previously worked as a Senior Accountant and then as a\n"
 "                  Senior Consultant at KPMG Canada."
 msgstr "케이(Kay) 는 공인 회계사 (CPA) 입니다. 그녀는 이전에는 KPMG 캐나다에서 회계사 및 컨설턴트로 근무했습니다."
 
-#: templates/team.html:228 templates/whitepaper/team.html:74
+#: templates/team.html:229 templates/whitepaper/team.html:74
 msgid "Franck Chastagnol"
 msgstr "프랑크 차스타뇰(Franck Chastagnol)"
 
-#: templates/team.html:232 templates/team.html:289 templates/team.html:347
+#: templates/team.html:233 templates/team.html:290 templates/team.html:348
 #: templates/whitepaper/team.html:78 templates/whitepaper/team.html:186
 #: templates/whitepaper/team.html:204
 msgid "Senior Engineer"
 msgstr "시니어 엔지니어"
 
-#: templates/team.html:235
-msgid "Franck has had a successful career as an early\n"
+#: templates/team.html:236
+msgid ""
+"Franck has had a successful career as an early\n"
 "                  employee at numerous high-profile companies. He previously led\n"
 "                  engineering teams at Inktomi, Paypal, YouTube, Google and\n"
 "                  Dropbox."
 msgstr "프랑크(Franck) 는 수많은 유명 기업에서 초기 직원으로 성공적인 경력을 쌓았습니다. 그는 이전에 인크토미(Inktomi), 페이팔(Paypal), 유투브(YouTube), 구글(Google) 및 드랍박스(Dropbox) 의 엔지니어링 팀을 이끌었습니다."
 
-#: templates/team.html:257 templates/whitepaper/team.html:164
+#: templates/team.html:258 templates/whitepaper/team.html:164
 msgid "Mila Choi"
 msgstr "밀라 최"
 
-#: templates/team.html:261 templates/whitepaper/team.html:168
+#: templates/team.html:262 templates/whitepaper/team.html:168
 msgid "Regional Manager Korea"
 msgstr "한국 지역 담당자"
 
-#: templates/team.html:264
-msgid "Mila is leading our community efforts in South\n"
+#: templates/team.html:265
+msgid ""
+"Mila is leading our community efforts in South\n"
 "                  Korea. She previously organized blockhain hackathons and has\n"
 "                  degrees from Penn State and Erasmus University Rotterdam."
 msgstr "밀라(Mila) 는 오리진의 한국 커뮤니티를 구축하고 있습니다. 그녀는 이전에 블록체인 해커톤을 기획했으며 펜실베니아 주립대학교과 Erasmus University Rotterdam에서 학위를 받았습니다."
 
-#: templates/team.html:285 templates/whitepaper/team.html:182
+#: templates/team.html:286 templates/whitepaper/team.html:182
 msgid "Tom Linton"
 msgstr "톰 린톤"
 
-#: templates/team.html:292
-msgid "Before Origin, Tom had a successful career as a\n"
+#: templates/team.html:293
+msgid ""
+"Before Origin, Tom had a successful career as a\n"
 "                  solo startup founder. He has two Masters degrees in\n"
 "                  Distributed Systems from the Technical University of Berlin\n"
 "                  and KTH in Stockholm."
 msgstr "오리진(Origin) 전에 탐(Tom) 은 솔로 스타트 업 창업자로서 성공적인 경력을 쌓았습니다. 그는 베를린 공대 (University of Berlin) 와 스톡홀름 (Stockholm) 의 KTH에서 두 가지 석사 학위를 받았습니다."
 
-#: templates/team.html:314 templates/whitepaper/team.html:218
+#: templates/team.html:315 templates/whitepaper/team.html:218
 msgid "Anna Wang"
 msgstr "애나 왕(Anna Wang)"
 
-#: templates/team.html:318 templates/whitepaper/team.html:222
+#: templates/team.html:319 templates/whitepaper/team.html:222
 msgid "Regional Manager China"
 msgstr "중국 지역 담당자"
 
-#: templates/team.html:321
-msgid "Anna is leading our community efforts for Chinese\n"
+#: templates/team.html:322
+msgid ""
+"Anna is leading our community efforts for Chinese\n"
 "                  speakers. Before Origin, Anna managed global social media at\n"
 "                  Exness, a leading forex broker. She also co-founded a\n"
 "                  non-profit in Australia."
 msgstr "애나(Anna) 는 중국인을 대상으로 한 커뮤니티 활동을 이끌고 있습니다. 오리진(Origin) 전에 애나는 세계적인 소셜 미디어 미디어 인 엑스네스(Exness) 를 관리했습니다. 그녀는 또한 호주에서 비영리 단체를 공동 창립했습니다."
 
-#: templates/team.html:343 templates/whitepaper/team.html:200
+#: templates/team.html:344 templates/whitepaper/team.html:200
 msgid "Nick Poulden"
 msgstr "닉 폴든 (Nick Poulden)"
 
-#: templates/team.html:350
-msgid "Nick studied Computer Science at the University of\n"
+#: templates/team.html:351
+msgid ""
+"Nick studied Computer Science at the University of\n"
 "                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "                  Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr "닉(Nick)은 University of Warwick에서 컴퓨터 과학을 전공했습니다. 오리진에 입사하기 전, 그는 Sencha, C3 Energy Network 및 Palo Alto Networks의 엔지니어로 일했습니다."
 
-#: templates/team.html:371 templates/whitepaper/team.html:236
+#: templates/team.html:372 templates/whitepaper/team.html:236
 msgid "Domen Grabec"
 msgstr "도멘 그라백(Domen Grabec)"
 
-#: templates/team.html:375 templates/team.html:403 templates/team.html:460
+#: templates/team.html:376 templates/team.html:404 templates/team.html:461
 #: templates/whitepaper/team.html:240 templates/whitepaper/team.html:258
 #: templates/whitepaper/team.html:294
 msgid "Engineer"
 msgstr "엔지니어"
 
-#: templates/team.html:378
-msgid "Domen co-founded and led a team developing a\n"
+#: templates/team.html:379
+msgid ""
+"Domen co-founded and led a team developing a\n"
 "                  mobile application with 2 chess Grandmasters. He previously\n"
 "                  had a successful career at Cetra, Zemanta and Peerindex."
 msgstr "도맨(Domen) 은 2 명의 체스 그랜드마스터즈와 함께 모바일 어플리케이션을 개발하는 팀을 공동 창립하고 이끌었습니다. 그는 이전에 세트라(Cetra), 제만타(Zemanta) 및 피어인덱스(Peerindex) 에서 성공적인 경력을 쌓았습니다."
 
-#: templates/team.html:399 templates/whitepaper/team.html:254
+#: templates/team.html:400 templates/whitepaper/team.html:254
 msgid "Shahul Hameed"
 msgstr "샤훌 하메드(Shahul Hameed)"
 
-#: templates/team.html:406
-msgid "Shahul is a fullstack engineer who started\n"
+#: templates/team.html:407
+msgid ""
+"Shahul is a fullstack engineer who started\n"
 "                  programming at age of 10. He previously worked as a freelancer\n"
 "                  and then joined Zoho as a front-end developer."
 msgstr "샤훌(Shahul) 은 10살 때 프로그래밍을 시작한 풀 스택 개발자입니다. 그는 프리랜서로 근무한 후 조호(Zoho) 에 프론트 엔드 개발자로 합류했습니다."
 
-#: templates/team.html:427 templates/whitepaper/team.html:272
+#: templates/team.html:428 templates/whitepaper/team.html:272
 msgid "Zaurbek Ivanov"
 msgstr "자르베크 이바노프 (Zaurbek Ivanov)"
 
-#: templates/team.html:431 templates/whitepaper/team.html:276
+#: templates/team.html:432 templates/whitepaper/team.html:276
 msgid "Russia Community"
 msgstr "러시아 커뮤니티"
 
-#: templates/team.html:434
-msgid "Zaurbek Ivanov studied Economics at\n"
+#: templates/team.html:435
+msgid ""
+"Zaurbek Ivanov studied Economics at\n"
 "                  Kabardino-Balkaria State Agrarian University in Nalchik,\n"
 "                  Russia. He has worked in the hospitality industry in the US\n"
 "                  and Russia."
 msgstr "자르베크 이바노프 (Zaurbek Ivanov) 는 러시아 날 치크의 Kabardino-Balkaria State Agrarian University에서 경제학을 전공했습니다. 그는 미국과 러시아의 관광 산업에서 일한 경험이 있습니다."
 
-#: templates/team.html:456 templates/whitepaper/team.html:290
+#: templates/team.html:457 templates/whitepaper/team.html:290
 msgid "Mike Shultz"
 msgstr "마이크 슐츠(Mike Shultz)"
 
-#: templates/team.html:463
-msgid "Mike is a long-time contributor to open-source. He\n"
+#: templates/team.html:464
+msgid ""
+"Mike is a long-time contributor to open-source. He\n"
 "                  created a dev toolkit for creating Ethereum smart contracts\n"
 "                  with Python and previously worked with Ethereum and IPFS at\n"
 "                  Lunyr."
 msgstr "마이크(Mike) 는 오픈 소스 커뮤니티에서 오랫동안 활동했던 개발자입니다. 그는 파이썬(Python) 과 이더리움(Ethereum) 스마트 계약을 작성하기위한 개발 툴킷을 작성했으며, 이전에는 루니어(Lunyr) 에서 이더리움(Ethereum) 및 IPFS와 함께 작업했습니다."
 
-#: templates/team.html:485 templates/whitepaper/team.html:146
+#: templates/team.html:486 templates/whitepaper/team.html:146
 msgid "Aure Gimon"
 msgstr "오리 기몬(Aure Gimon)"
 
-#: templates/team.html:489 templates/whitepaper/team.html:150
+#: templates/team.html:490 templates/whitepaper/team.html:150
 msgid "Product Designer"
 msgstr "제품 디자이너"
 
-#: templates/team.html:492
-msgid "Aure is a product designer with 10+ years of\n"
+#: templates/team.html:493
+msgid ""
+"Aure is a product designer with 10+ years of\n"
 "                  experience. Prior to joining Origin, Aure worked at multiple\n"
 "                  startups and Fortune 500 companies. In a past life, he was\n"
 "                  also a software engineer."
 msgstr "오리(Aure)는 10 년 이상의 경험을 가진 제품 디자이너입니다. 오리진(Origin) 에 합류하기 전엔 여러 스타트업 및 Fortune 500 대기업에서 근무했습니다. 또한, 제품 디자이너 이전에 소프트웨어 엔지니어이기도 하였습니다."
 
-#: templates/team.html:509
+#: templates/team.html:510
 msgid "Community team"
 msgstr "커뮤니티 팀"
 
-#: templates/team.html:524 templates/whitepaper/team.html:330
+#: templates/team.html:525 templates/whitepaper/team.html:330
 msgid "Holly Gu"
 msgstr "홀리 구"
 
-#: templates/team.html:536 templates/whitepaper/team.html:342
+#: templates/team.html:537 templates/whitepaper/team.html:342
 msgid "June Kim"
 msgstr "김준"
 
-#: templates/team.html:548 templates/whitepaper/team.html:354
+#: templates/team.html:549 templates/whitepaper/team.html:354
 msgid "Yeongin Lee"
 msgstr "이영인"
 
-#: templates/team.html:560 templates/whitepaper/team.html:366
+#: templates/team.html:561 templates/whitepaper/team.html:366
 msgid "Leslie Song"
 msgstr "레슬리 송(Leslie Song)"
 
-#: templates/team.html:571
+#: templates/team.html:572
 msgid "Advisors"
 msgstr "어드바이저"
 
-#: templates/team.html:590
+#: templates/team.html:591
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:594
+#: templates/team.html:595
 msgid "PR"
 msgstr "PR"
 
-#: templates/team.html:610
+#: templates/team.html:611
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:614
+#: templates/team.html:615
 msgid "International BD"
 msgstr "해외 사업개발"
 
-#: templates/team.html:634 templates/team.html:654
+#: templates/team.html:635 templates/team.html:655
 msgid "Advisor"
 msgstr "어드바이저"
 
-#: templates/team.html:650
+#: templates/team.html:651
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:670
+#: templates/team.html:671
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:674 templates/whitepaper/sidebar.html:53
+#: templates/team.html:675 templates/whitepaper/sidebar.html:53
 #: templates/whitepaper/team.html:317
 msgid "Community"
 msgstr "커뮤니티"
 
-#: templates/team.html:685
+#: templates/team.html:686
 #, python-format
 msgid "100%% open-source."
-msgstr "100% 오픈소스."
+msgstr "100%% 오픈소스."
 
-#: templates/team.html:686
+#: templates/team.html:687
 msgid " contributors."
 msgstr " 기여자"
 
-#: templates/team.html:713
+#: templates/team.html:714
 msgid "Want to contribute?"
 msgstr "오리진(Origin) 기여하고 싶으신가요?"
 
-#: templates/team.html:722
+#: templates/team.html:723
 msgid "Visit our GitHub Repository"
 msgstr "GitHub 리포지토리 방문"
 
-#: templates/team.html:727
+#: templates/team.html:728
 msgid "Join our #engineering channel on Discord"
 msgstr "디스코드(Discord) 의 #engineering 채널에 참여하세요"
 
-#: templates/team.html:739
+#: templates/team.html:740
 msgid "Interested in working at Origin?"
 msgstr "오리진(Origin) 에서 일하고 싶으세요?"
 
-#: templates/team.html:743
-msgid "We are a distributed team and are hiring all around the\n"
+#: templates/team.html:744
+msgid ""
+"We are a distributed team and are hiring all around the\n"
 "            world."
 msgstr "오리진(Origin) 은 탈중앙화된 팀 으로, 전 세계에 있는 우수한 인재들을 채용하고 있습니다."
 
-#: templates/team.html:754
+#: templates/team.html:755
 msgid "View job posts"
 msgstr "채용 공고보기"
 
-#: templates/tokens.html:3 templates/tokens.html:5
-msgid "Origin Protocol - Tokens"
-msgstr "Origin 프로토콜 - 토큰"
+#: templates/tokens.html:3
+msgid "Origin Protocol - Buy Origin Tokens (OGN)"
+msgstr ""
+
+#: templates/tokens.html:5
+msgid "Origin Tokens (OGN) are launching soon!"
+msgstr ""
 
 #: templates/tokens.html:18
 msgid "Interested in Origin tokens?"
@@ -1741,9 +1886,13 @@ msgstr "오리진 프로토콜 - 서비스 약관"
 msgid "Share"
 msgstr "공유"
 
-#: templates/videos.html:3 templates/videos.html:5
+#: templates/videos.html:3
 msgid "Origin Protocol - Videos"
 msgstr "오리진(Origin) 프로토콜 - 비디오"
+
+#: templates/videos.html:5
+msgid "Watch videos featuring Origin's top investors, employees, and other supporters."
+msgstr ""
 
 #: templates/videos.html:18 templates/videos.html:21
 msgid "Featured"
@@ -1786,8 +1935,8 @@ msgid "Origin Protocol - Whitepaper"
 msgstr "오리진 프로토콜 - 백서"
 
 #: templates/whitepaper.html:20
-msgid "The sharing economy without intermediaries"
-msgstr "중개인 없는 공유경제"
+msgid "Enabling true peer-to-peer commerce"
+msgstr ""
 
 #: templates/components/countdown-timer.html:7
 #: templates/components/countdown-timer.html:15
@@ -1916,14 +2065,16 @@ msgid "Blocktower Capital"
 msgstr "Blocktower Capital"
 
 #: templates/whitepaper/disclaimer.html:4
-msgid "Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
+msgid ""
+"Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
 "    performance objectives of the Company, involve known and unknown risks, uncertainties, and other important factors that could cause the actual results of\n"
 "    the Company to differ materially from any future results expressed or implied by such forward-looking statements. Accordingly, readers should not place\n"
 "    undue reliance on forward-looking statements. No representation or warranty is made as to future performance or such forward-looking statements."
 msgstr "해당 백서에 기제된 특정 문구는 미래를 예측하는 내용들을 담고 있습니다. 미래를 예측하는 문구들은 다음과 같은 의도가 담긴 행동들 즉,  회사의 성과와 목표에 대해 명시적 또는 묵시적 위험성에 대한 내용과 불확실성에 대한 부분 향후 회사의 성과적 측면에서 실질적으로 현재 미래를 예측하고 있는 문구들과는 다른 결과로 발생될 수 있는 다른 요인들을 포함하고 있습니다. 이에 따라, 이 글을 읽는 독자는 미래 예측에 관한 문구들을 과도하게 신뢰해서는 안 됩니다. 회사에서는 미래의 성과적 측면 그리고 미래 예측 문구와 이에 대한 내용에 대해 그 어떠한 보증도 하지 않습니다."
 
 #: templates/whitepaper/disclaimer.html:11
-msgid "This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
+msgid ""
+"This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
 "    the most up to date information on our product development and business strategy, please refer to our website at originprotocol.com. For the latest technical\n"
 "    information, please reference our Github account at <a href='https://github.com/OriginProtocol' target='_blank' rel='noreferrer noopener'>www.github.com/OriginProtocol</a>. To use our flagship marketplace application, please download our mobile apps\n"
 "    (<a href='https://www.originprotocol.com/mobile' target='_blank'>www.originprotocol.com/mobile</a>) or visit our DApp ((<a href='https://www.shoporigin.com' target='_blank' rel='noreferrer noopener'>www.shoporigin.com</a>) with a web3-enabled DApp browser.\n"
@@ -1939,7 +2090,8 @@ msgid "Executive Summary"
 msgstr "전체 개요"
 
 #: templates/whitepaper/exec-summary.html:4
-msgid "Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
+msgid ""
+"Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
 "    fractional use goods and services (car-sharing, service-based tasks, home-sharing, etc.) to transact on\n"
 "    the distributed, open web. Using the Ethereum blockchain and Interplanetary File System (IPFS), the\n"
 "    platform and its community participants can interact in a peer-to-peer fashion, allowing for the creation and booking of\n"
@@ -2033,7 +2185,7 @@ msgstr "...컨벤셔널 위스덤(conventional wisdom)은 크레이그리스트(
 #: templates/whitepaper/footnote.html:27
 #, python-format
 msgid " We...found the median ‘real commission’ over the course of 37 rides in San Francisco was 39.01%%. "
-msgstr " 우리는... 샌프란시스코에서 37번의 공유 차량을 이용하는 동안 탑승에 대한 '실제 수수료' 가 평균 39.01%에 달한다는 것을 발견하였습니다. - 라이더셰어 가이(The Rideshare Guy) "
+msgstr " 우리는... 샌프란시스코에서 37번의 공유 차량을 이용하는 동안 탑승에 대한 '실제 수수료' 가 평균 39.01%%에 달한다는 것을 발견하였습니다. - 라이더셰어 가이(The Rideshare Guy) "
 
 #: templates/whitepaper/footnote.html:31
 msgid " Airbnb has canceled a number of accounts and bookings associated with the Unite the Right Free Speech Rally"
@@ -2042,12 +2194,12 @@ msgstr " 에어비엔비는 Unite the Right Free Speech Rally와 관련된 다�
 #: templates/whitepaper/footnote.html:35
 #, python-format
 msgid "San Francisco estimates that more than 50%% of current Airbnb listings in the city aren't eligible to be registered and thus would need to stop hosting visitors unless they can comply"
-msgstr "샌프란시스코에서는 현재 시내에 있는 에어비엔비(Airbnb) 목록의 50%이상이 등록 가능한 대상이 아니라고 추정하고 있으며, 이에 따라 이들이 해당 규칙을 준수할 수 없다면 방문자 호스팅을 중단해야 한다고 이야기 합니다. - USA Today"
+msgstr "샌프란시스코에서는 현재 시내에 있는 에어비엔비(Airbnb) 목록의 50%%이상이 등록 가능한 대상이 아니라고 추정하고 있으며, 이에 따라 이들이 해당 규칙을 준수할 수 없다면 방문자 호스팅을 중단해야 한다고 이야기 합니다. - USA Today"
 
 #: templates/whitepaper/footnote.html:39
 #, python-format
 msgid "TIME’s poll of 3,000 people, conducted by Penn Schoen Berland in late November, found that 22%% of American adults, or 45 million people, have already offered some kind of good or service in this economy. "
-msgstr "타임지(TIME) 는 11월 말 펜 숄더 버랜드(Penn Schoen Berland) 가 3,000명을 대상으로 실시한 여론 조사에서, 미국 성인의 22%에 해당하는 4천5백만 명이 이미 해당 경제에서 일종의 거래 또는 서비스를 제공했본 경험이 있다는 결과를 밝혔습니다. - 타임(Time) "
+msgstr "타임지(TIME) 는 11월 말 펜 숄더 버랜드(Penn Schoen Berland) 가 3,000명을 대상으로 실시한 여론 조사에서, 미국 성인의 22%%에 해당하는 4천5백만 명이 이미 해당 경제에서 일종의 거래 또는 서비스를 제공했본 경험이 있다는 결과를 밝혔습니다. - 타임(Time) "
 
 #: templates/whitepaper/footnote.html:43
 msgid "The sharing economy is estimated to grow from $14 billion in 2014 to $335 billion by 2025"
@@ -2059,12 +2211,12 @@ msgstr "공유 경제에 대한 새로운 연구 결과는 다음과 같습니�
 
 #: templates/whitepaper/footnote.html:51
 msgid "property managers...will be charged a 14 percent host-only fee by default. Until now, the default was that Airbnb charged hosts a 3 to 5 percent fixed fee"
-msgstr "부동산 관리자들은...기본적으로 14%에 달하는 호스트 정찰 요금이 부과됩니다. 지금까지는 에어비엔비(Airbnb)가 호스트들에게 3-5%에 달하는 고정적 수수료를 부과하고 있었던 것입니다.- 스키프트(Skift)"
+msgstr "부동산 관리자들은...기본적으로 14%%에 달하는 호스트 정찰 요금이 부과됩니다. 지금까지는 에어비엔비(Airbnb)가 호스트들에게 3-5%%에 달하는 고정적 수수료를 부과하고 있었던 것입니다.- 스키프트(Skift)"
 
 #: templates/whitepaper/footnote.html:55
 #, python-format
 msgid "TNCs can take as much as 42.75%% from a minimum fare ride in San Francisco"
-msgstr "TNCs는 샌프란시스코에서 최저 교통 운임 비용으로 42.75%까지 이용할 수 있습니다."
+msgstr "TNCs는 샌프란시스코에서 최저 교통 운임 비용으로 42.75%%까지 이용할 수 있습니다."
 
 #: templates/whitepaper/footnote.html:59
 msgid "Projects built on IPFS"
@@ -2129,7 +2281,7 @@ msgstr "오리진 디앱(DApp) 은 오리진 플랫폼에서 경량 클라이언
 #: templates/whitepaper/platform.html:35
 #, python-format
 msgid "Of particular note is that we don’t intend for the Origin DApp to be the only way to access user and transaction data. Our code, protocols, and specifications are all 100%% open-source, and we expect and hope that others will extend and fork the code to create their own frontend experiences. Already, we have had over 170 open-source contributors participate in improving our core libraries and initial marketplace app. There are already multiple third-party DApps running on the Origin Platform across numerous verticals such as home-sharing, luxury ecommerce, and fine art."
-msgstr "특히 사용자 및 거래 데이터에 액세스할 수 있는 유일한 방법은 오리진 디앱(DApp) 에 있지 않습니다. 자사의 코드, 프로토콜 및 사양은 모두 100% 오픈 소스이며, 다른 사용자들이 자사의 코드를 확장하고 포크하여 그들 스스로 자체 프론트 엔드 환경을 구축해 나가기를 기대합니다. 이미 170명 이상의 오픈 소스 기여자들이 핵심 라이브러리와 초기 마켓플레이스 어플리케이션의 개발 과정에 참여하고 있습니다. 이미 오리진 플랫폼에서는 숙박 공유, 고급 전자 상거래 및 미술품과 같은 다양한 제품군을 활용하여 사업을 진행하고 있는 여러개의 타사 디앱들이 실행되고 있습니다."
+msgstr "특히 사용자 및 거래 데이터에 액세스할 수 있는 유일한 방법은 오리진 디앱(DApp) 에 있지 않습니다. 자사의 코드, 프로토콜 및 사양은 모두 100%% 오픈 소스이며, 다른 사용자들이 자사의 코드를 확장하고 포크하여 그들 스스로 자체 프론트 엔드 환경을 구축해 나가기를 기대합니다. 이미 170명 이상의 오픈 소스 기여자들이 핵심 라이브러리와 초기 마켓플레이스 어플리케이션의 개발 과정에 참여하고 있습니다. 이미 오리진 플랫폼에서는 숙박 공유, 고급 전자 상거래 및 미술품과 같은 다양한 제품군을 활용하여 사업을 진행하고 있는 여러개의 타사 디앱들이 실행되고 있습니다."
 
 #: templates/whitepaper/platform.html:37
 msgid "We see the Origin flagship marketplace app as just the first way to interact with the Origin protocols. In the coming months and years after our 1.0 launch, we expect hundreds of third-party websites, mobile apps, and even new APIs to be built on top of the network."
@@ -2172,8 +2324,8 @@ msgid "Origin Identity Contract"
 msgstr "오리진(Origin) 신원 계약"
 
 #: templates/whitepaper/platform.html:61
-msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
-msgstr "사용자 및 거래 데이터는 이더리움 블록체인(Ethereum blockchain) 및 IPFS에 저장됩니다. 이는 제 3자 누구나 오리진 플랫폼 상에서 현재 사용 가능한 목록, 이전 거래 기록 및 생태계 구축에 기여한 다양한 구매자 및 판매자에 대한 리뷰 및 평판에 대해 대중적으로 공개된 내용들을 이더리움 블록체인 및 IPFS 네트워크 상에서 조회할 수 있음을 의미합니다."
+msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers."
+msgstr ""
 
 #: templates/whitepaper/platform.html:63
 msgid "This creates several benefits. First, the corpus of data is open and immutable, which means it can be trusted without requiring the traditional third-party intermediary that imposes its “trust tax”. Second, it levels the competitive playing field and allows for new teams of developers, entrepreneurs, and organizations to compete with each other off of this shared data, and ultimately creates greater value for the platform. After our 1.0 launch, we anticipate that much of the development of the Origin Platform will come from third-party developers that make use of this open data layer."
@@ -2630,12 +2782,12 @@ msgstr "현재 보고된 바로 380 억 달러 규모의 비즈니스를 구축�
 #: templates/whitepaper/why.html:60
 #, python-format
 msgid "Today, the technology platform has been built and the marketplace grows organically with new hosts and users both proactively seeking out Airbnb’s website and mobile app. Airbnb charges guests 5-15%% and hosts 3-5%% of every booking. This means Airbnb will capture as much as 20%% of the value of every transaction regardless of whether additional work is being done by the company. Airbnb also automatically withholds local taxes as well, which can be significant. For example, the hotel taxes in Chicago, Atlanta, and Seattle are 16%%."
-msgstr "오늘날 기술 플랫폼이 구축되었으며 새로운 주인과 사용자가 에어비앤비의 웹사이트와 모바일 앱을 적극적으로 찾음으로써 마켓플레이스가 유기적으로 성장하고 있습니다. 에어비앤비는 손님에게 5-15%의 요금을 부과하고 모든 예약의 3-5%를 호스팅합니다. 즉, 회사에서 추가 업무를 수행하는지 여부에 관계없이 에어비앤비는 모든 거래 비용의 20%를 획득합니다. 에어비앤비는 또한 자동으로 지방세를 공제받으며 이는 상당할 수 있습니다. 예를 들어, 시카고, 애틀랜타 및 시애틀의 호텔 세금은 16%입니다."
+msgstr "오늘날 기술 플랫폼이 구축되었으며 새로운 주인과 사용자가 에어비앤비의 웹사이트와 모바일 앱을 적극적으로 찾음으로써 마켓플레이스가 유기적으로 성장하고 있습니다. 에어비앤비는 손님에게 5-15%%의 요금을 부과하고 모든 예약의 3-5%%를 호스팅합니다. 즉, 회사에서 추가 업무를 수행하는지 여부에 관계없이 에어비앤비는 모든 거래 비용의 20%%를 획득합니다. 에어비앤비는 또한 자동으로 지방세를 공제받으며 이는 상당할 수 있습니다. 예를 들어, 시카고, 애틀랜타 및 시애틀의 호텔 세금은 16%%입니다."
 
 #: templates/whitepaper/why.html:62
 #, python-format
 msgid "It’s worth noting that Airbnb is not alone in charging egregious fees for its matching service. Online travel agencies like Booking.com and Expedia charge affiliate hotels 15-30%% of transaction value<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
-msgstr "매칭 서비스에 대해 엄청난 수수료를 청구하는 회사는 에어비앤비 뿐만이 아니라는 점에 주목할 필요가 있습니다. Booking.com 및 익스피디아와 같은 온라인 여행사는 제휴 호텔에 거래 금액의 15-30%의 수수료를 청구합니다<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
+msgstr "매칭 서비스에 대해 엄청난 수수료를 청구하는 회사는 에어비앤비 뿐만이 아니라는 점에 주목할 필요가 있습니다. Booking.com 및 익스피디아와 같은 온라인 여행사는 제휴 호텔에 거래 금액의 15-30%%의 수수료를 청구합니다<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
 
 #: templates/whitepaper/why.html:66
 msgid "In this case, while buyer and seller are both better off than they would be without Airbnb, they are leaving money on the table since both sides would be willing to meet at a price somewhere in the middle. A more efficient market would exist if the transaction fees were removed or even decreased. Buyer and seller will both be better off economically as Airbnb is disintermediated."
@@ -2700,7 +2852,7 @@ msgstr "시장들이 개별 기업들에 의해 지배될 때, 이 기업들은 
 #: templates/whitepaper/why.html:106
 #, python-format
 msgid "As sharing economy marketplaces grow, suppliers and buyers increasingly become abstracted away into the numbers, and some are left feeling like they are “cogs in the wheel”. Uber has increased their take from drivers from 15%% all the way to 30%% over the years<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, and drivers have no ability to impact these decisions. Many early Uber drivers now feel that they have been taken advantage of as the ride-sharing giant has scaled its operations."
-msgstr "공유경제 마켓플레이스가 성장함에 따라 공급자와 구매자는 점차 숫자로 추상화되고 일부는 \"바퀴에 달린 톱니바퀴\"와 같다는 느낌을 갖게 됩니다. 우버는 운전자에게서 가져가는 수수료를 15%에서 30%로 늘렸지만<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, 운전자는 이러한 결정에 영향을 줄 수 없습니다. 많은 초창기 우버 운전자들은 이제 거대한 차량 공유 기업이 확장함에 따라 자신들이 이용되었다고 생각합니다."
+msgstr "공유경제 마켓플레이스가 성장함에 따라 공급자와 구매자는 점차 숫자로 추상화되고 일부는 \"바퀴에 달린 톱니바퀴\"와 같다는 느낌을 갖게 됩니다. 우버는 운전자에게서 가져가는 수수료를 15%%에서 30%%로 늘렸지만<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, 운전자는 이러한 결정에 영향을 줄 수 없습니다. 많은 초창기 우버 운전자들은 이제 거대한 차량 공유 기업이 확장함에 따라 자신들이 이용되었다고 생각합니다."
 
 #: templates/whitepaper/why.html:108
 msgid "In 2017, Airbnb made the news for kicking guests out of rented properties and canceled their accounts after discovering those guests were planning to attend a Ku Klux Klan (KKK) rally<a class='whitepaper-footnote-link' href='#footnote8'>8</a>. While few people sympathize with klan members that promote racist and violent ideology, it’s a slippery slope for Airbnb to start taking an opinionated stance on who is allowed to use their service. What about members of controversial political and religious groups? The personal leanings of a marketplace’s founders, no matter how mainstream, should not interfere with the decisions of marketplace buyers and sellers."
@@ -2729,7 +2881,7 @@ msgstr "이제 변화의 <span>시간입니다</span>"
 #: templates/whitepaper/why.html:124
 #, python-format
 msgid "The market is ready for a new peer-to-peer form of commerce. The world is moving to a gig economy where more and more individuals provide goods and services as their primary or supplemental way of earning income. Over 22%% of US adults have become suppliers to the sharing economy as of 2016<a class='whitepaper-footnote-link' href='#footnote10'>10</a> and this number is expected to increase over time. These suppliers will hugely benefit from an open network that does not charge exorbitant transaction and service fees."
-msgstr "시장은 새로운 피어투피어(P2P) 형태의 상거래를 준비하고 있습니다. 세계는 점점 더 많은 사람들이 소득을 얻는 기본적 또는 보충적 방법으로 상품과 서비스를 제공하는 긱 경제(Gig Economy) 로 이동하고 있습니다. 미국 성인의 22% 명 이상이 2016년 기준으로 <a class='whitepaper-footnote-link' href='#footnote10'>10</a> 공유경제의 제공자가 되었으며 이 숫자는 시간이 지남에 따라 증가 할 것으로 예상됩니다. 이러한 공급 업체는 엄청난 거래 및 서비스 수수료를 청구하지 않는 개방형 네트워크의 이점을 크게 누릴 수 있습니다."
+msgstr "시장은 새로운 피어투피어(P2P) 형태의 상거래를 준비하고 있습니다. 세계는 점점 더 많은 사람들이 소득을 얻는 기본적 또는 보충적 방법으로 상품과 서비스를 제공하는 긱 경제(Gig Economy) 로 이동하고 있습니다. 미국 성인의 22%% 명 이상이 2016년 기준으로 <a class='whitepaper-footnote-link' href='#footnote10'>10</a> 공유경제의 제공자가 되었으며 이 숫자는 시간이 지남에 따라 증가 할 것으로 예상됩니다. 이러한 공급 업체는 엄청난 거래 및 서비스 수수료를 청구하지 않는 개방형 네트워크의 이점을 크게 누릴 수 있습니다."
 
 #: templates/whitepaper/why.html:126
 msgid "Gross bookings on the sharing economy are expected to exceed $335B by 2025<a class='whitepaper-footnote-link' href='#footnote11'>11</a>. Platform revenues (mostly fees taken by the companies) for the sharing economy are expected to more than double to $40.2B in the next five years<a class='whitepaper-footnote-link' href='#footnote12'>12</a>."
@@ -2738,7 +2890,7 @@ msgstr "공유 경제 상품 및 서비스 사용을 목적으로 하는 총 예
 #: templates/whitepaper/why.html:130
 #, python-format
 msgid "While the overall market continues to boom, value capture has only shifted in favor to the regional monopolies. Recently, Airbnb dramatically increased fees for hosts in many global regions, from 3 to 5 percent to 14 percent<a class='whitepaper-footnote-link' href='#footnote13'>13</a>. Similarly, Uber’s advertised 25%% commission rate is actually significantly higher when factoring in additional fees that are passed onto their drivers. For example, the median commission that Uber charges in San Francisco was recently estimated at 39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>"
-msgstr "시장 전반은 지속적으로 호황을 누리고 있지만, 가치 포착은 지역 독점에 유리한 방향으로 바뀌고 있습니다. 최근 에어비앤비는 전세계 여러 지역의 호스트에 대한 수수료를 3-5 %에서 14 %<a class='whitepaper-footnote-link' href='#footnote13'>13</a>로 대폭 증가시켰습니다. 마찬가지로 우버의 광고 된 25% 커미션 요금은 운전자에게 전달되는 추가 수수료를 고려할 때 실제로 상당히 높습니다. 예를 들어, 우버가 샌프란시스코에서 청구하는 중앙 수수료는 최근에 39%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>로 추정되었습니다."
+msgstr "시장 전반은 지속적으로 호황을 누리고 있지만, 가치 포착은 지역 독점에 유리한 방향으로 바뀌고 있습니다. 최근 에어비앤비는 전세계 여러 지역의 호스트에 대한 수수료를 3-5 %%에서 14 %%<a class='whitepaper-footnote-link' href='#footnote13'>13</a>로 대폭 증가시켰습니다. 마찬가지로 우버의 광고 된 25%% 커미션 요금은 운전자에게 전달되는 추가 수수료를 고려할 때 실제로 상당히 높습니다. 예를 들어, 우버가 샌프란시스코에서 청구하는 중앙 수수료는 최근에 39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>로 추정되었습니다."
 
 #: templates/whitepaper/why.html:132
 msgid "The world is also moving more and more to global versus local commerce. Sellers are able to provide services (and many times products and goods) to customers across the world. Currently, a Lyft passenger would not be able to ride on the Didi ChuXing ride-sharing network (China’s largest ride-sharing company) save for the fact that the two companies signed a deep partnership that was months in the making and involved a mutual investor pouring hundreds of millions of dollars into both companies. In a global, but openly distributed marketplace, a customer would be able to purchase services from suppliers without a need for new accounts, complicated currency exchanges, or prerequisite negotiated deals."
@@ -2764,47 +2916,146 @@ msgstr "이 두 가지 기본 기술 위에 구축 된 오리진 플랫폼은 �
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "오리진은 지금이 바로 피어투피어(P2P) 시장과 전자 상거래 시장을 발전시켜 시장 수요 증가와 유망한 기술 혁신을 활용할 수있는 완벽한 시기라고 생각합니다."
 
-#: views/web_views.py:64
+#: views/web_views.py:65
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "오리진 프로토콜은 블록체인을 기반으로 탈 중앙화된 마켓 플레이스를 구축합니다."
 
-#: views/web_views.py:172
+#: views/web_views.py:173
 msgid "Missing email"
 msgstr "이메일이 없습니다"
 
-#: views/web_views.py:175
+#: views/web_views.py:176
 msgid "Invalid email"
 msgstr "잘못된 이메일"
 
-#: views/web_views.py:219
+#: views/web_views.py:228
 msgid "Thanks for signing up!"
 msgstr "가입해주셔서 감사합니다!"
 
-#: views/web_views.py:232
+#: views/web_views.py:241
 msgid "Please enter your name"
 msgstr "이름을 입력해 주세요"
 
-#: views/web_views.py:234
+#: views/web_views.py:243
 msgid "Please enter your email"
 msgstr "이메일 주소를 입력해 주세요"
 
-#: views/web_views.py:236
+#: views/web_views.py:245
 msgid "Select your country of citizenship"
 msgstr "시민권 국가를 선택하십시오"
 
-#: views/web_views.py:238
+#: views/web_views.py:247
 msgid "Please enter your desired allocation"
 msgstr "원하시는 할당량을 입력 해 주세요"
 
-#: views/web_views.py:240
+#: views/web_views.py:249
 msgid "Select a currency"
 msgstr "통화를 선택하십시오"
 
-#: views/web_views.py:242
+#: views/web_views.py:251
 msgid "Please prove you are not a robot."
 msgstr "당신이 로봇이 아니라는 것을 증명 하세요"
 
-#: views/web_views.py:247
+#: views/web_views.py:256
 msgid "OK"
 msgstr "승인"
+
+#: views/web_views.py:267
+msgid "You have been unsubscribed"
+msgstr "구독이 취소되었습니다."
+
+#: views/web_views.py:270
+msgid "Ooops, something went wrong"
+msgstr "이런! 뭔가 잘못되었습니다."
+
+#~ msgid "It’s time to build the sharing economy without intermediaries"
+#~ msgstr "이제 중개자없는 공유 경제 시장을 구축 할 때 입니다."
+
+#~ msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
+#~ msgstr ""
+#~ "오리진(Origin) 은 샌프란시스코에 본사를 둔 스타트업이자 중국, 한국, 러시아, 인도, 뉴질랜드 및 슬로베니아에 팀원을 보유한 글로벌 회사입니다. \n"
+#~ "또한, 800명이 넘는 전 세계 최고의 벤처 캐피털리스트 및 크립토 펀드 투자자들과 함께합니다."
+
+#~ msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020."
+#~ msgstr "중앙집권적 형태의 사업에서 중개인은 종종 20-30 %%의 거래 수수료를 청구합니다. 에어비앤비(Airbnb) 는 2017년에 26억 달러의 수수료로 이득을 취했으며, 우버(Uber) 는 2018년에 11.8억 달러의 수수료를 창출하였습니다. 2020 년까지 총 공유 경제 시장에서 발생 될 수수료는 약 400억 달러를 넘어 설 것으로 예상됩니다."
+
+#~ msgid "By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators."
+#~ msgstr "오리진에서는 중개인을 제거하고 수수료를 지불하지 않도록 합니다. 이제 더 이상 구매자와 판매자는 거래시 중개인에게 수수료를 지불하지 않아도 되며, 오리진을 통해 수수료 절감의 혜택을 누릴 수 있습니다."
+
+#~ msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
+#~ msgstr "최근 우버(Uber) 와 리프트(Lyft) 가 상장(IPO) 을 했습니다. 위워크(WeWork) 와 어비앤비(Airbnb) 가 곧 뒤따를 것입니다. 하지만 이 플랫폼들의 성공에 결정적인 영향을 미친 초기 참여자 중 그 누구도 혜택을 받지 못했습니다."
+
+#~ msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
+#~ msgstr "반대로 오리진(Origin) 에서는 모든 사용자가 오리진 네트워크의 일부를 소유할 수 있습니다. 구매자와 판매자는 오리진(Origin) 기반의 애플리케이션을 사용하여 서로 거래를 완료할 시, 오리진 토큰(OGN) 을 얻을 수 있습니다. 개발자, 제휴업체 및 마켓플레이스 운영자는 판매자의 상품 목록을 홍보하고 마케팅을 도와줌으로써 OGN을 얻을 수 있습니다. 모든 사람이 오리진 네트워크를 소유할 때, 오리진 생태계 참여자들은 오리진의 건전한 오리진 커뮤니티 성장을 촉진하기 위한 인센티브를 받게 됩니다."
+
+#~ msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
+#~ msgstr "오늘날 전 세계 20억 명의 사람들이 은행 계좌를 가지고 있지 않습니다. 그들은 은행 계좌, 신용 카드, 삼성 페이(Samsung Pay) 또는 Ali Pay 등이 없습니다."
+
+#~ msgid "With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems."
+#~ msgstr "암호화폐의 출현과 저렴한 스마트폰의 확산으로 은행 계좌를 가지고 있지 않은 사람들(unbancked) 도 새로운 형태의 인터넷 경제에 참여할 수 있는 시대에 도달하였습니다. 전 세계에 있는 오리진(Origin) 사용자들은 안정적인 은행 시스템이 없는 상황에서도 오리진(Origin) 기반의 마켓플레이스를 통해 서로 거래 할 수 있습니다."
+
+#~ msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
+#~ msgstr "에어비앤비(Airbnb) 는 파리, 베를린, 도쿄, 뉴욕, 심지어 본사가 위치한 샌프란시스코와 같은 도시에서도 엄격하게 규제되거나 금지되었습니다."
+
+#~ msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
+#~ msgstr "탈중앙화된 시장은 개방적이고 자유로운 상거래를 장려합니다. 중앙집권형태의 시장과 달리 단일 장애 지점(single points of failure)이 존재하지 않기 때문에 금지 또는 폐지될 수 없습니다. 탈중앙화된 상거래는 보다 자유롭고 효율적인 시장을 장려합니다."
+
+#~ msgid "We have a large and growing community of developers and supporters"
+#~ msgstr "오리진에는 나날히 성장 중인 개발자 그리고 후원자 커뮤니티가 있습니다."
+
+#~ msgid "Origin Protocol - Investors"
+#~ msgstr "오리진 프로토콜 - 투자자"
+
+#~ msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
+#~ msgstr "오리진(Origin) 은 자사 플랫폼 구축을 위해 앞서 진행한 3번의 라운드에서 토큰을 판매하여 충분한 자금을 확보한 스타트업 입니다."
+
+#~ msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
+#~ msgstr "오리진(Origin) 네트워크의 지분을 얻는 데 관심 있으신가요? 최신 업데이트를 받으려면 가입하세요."
+
+#~ msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
+#~ msgstr "\"오리진(Origin) 에 투자 시 가장 중요하게 본 요인은 오리진(Origin) 팀입니다. 이들은 상징적인 소비재 기업들에서 일한 놀라운 경험들을 가지고 있습니다."
+
+#~ msgid "\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\""
+#~ msgstr "\"제가 지금 이야기 하는 것은 전세계에 있는 100,000명이 넘는 오리진 커뮤니티 사람들입니다. 그들은 오리진(Origin) 에 미치도록 열광하는 오리진(Origin) 팬들로, 오리진(Origin) 은 글로벌 진출을 굉장히 성공적으로 해냈다고 생각합니다.\""
+
+#~ msgid "\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\""
+#~ msgstr "\"오리진(Origin) 은 저희가 투자하는 모든 탈중앙화된 애플리케이션 프로젝트들 중, 가장 돋보이는 프로젝트입니다. 왜냐하면, 저희가 본 프로젝트들 중 가장 최고의 커뮤니티를 구축해냈기 때문이죠. 저희는 오리진(Origin) 이 게임 체인저(Game Changer) 가 될 것이라 믿습니다.\""
+
+#~ msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
+#~ msgstr "오리진(Origin) 은 실리콘 밸리 최고의 엔젤 투자자 및 이전 창업자들의 지원을 받고 있습니다."
+
+#~ msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
+#~ msgstr "지금 오리진(Origin) 네트워크의 지분을 얻을 수 있습니다. 사용자 프로필 인증, 친구 및 가족에게 오리진(Origin) 추천, 소셜 미디어에서 오리진에 대한 뉴스를 공유, 주요 판매자들의 상품을 구매와 같은 방법을 통해 오리진 토큰(OGN) 을 모아보세요."
+
+#~ msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
+#~ msgstr "오리진 커미션(Commission) 을 사용하여 오리진 본사 앱 및 타사 앱에서 상품 목록을 홍보하세요. 검색 결과 목록에서 주요 결과로 노출 되는 것을 원하신다면, OGN을 사용해보세요. 애플리케이션 개발자 및 마켓플레이스 운영자는 판매자가 상품 판매를 완료할 수 있도록 도와줌으로써, 오리진 토큰(OGN) 을 얻을 수 있습니다."
+
+#~ msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
+#~ msgstr "오리진 리워드(Origin Rewards) 에서 획득한 오리진 토큰(OGN) 을 사용하여 상품 및 서비스에 대한 비용을 지불하세요. 판매자는 선호 지불 방법으로 OGN을 수락하여 네트워크에서 더 큰 지분을 얻습니다."
+
+#~ msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
+#~ msgstr "OGN을 활용하여 오리진 노드(Origin Node) 를 실행하고 오리진(Origin)네트워크 상에서 프로필 및 상품 목록 데이터를 복제 및 검증함으로써 더 많은 OGN을 얻을 수 있습니다."
+
+#~ msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
+#~ msgstr "개발자는 오리진 메타 트렌젝션(Origin Meta Transactions) 사용 비용을 OGN으로 지불 할 수 있습니다. 메타 트랜잭션은 사용자의 마찰을 줄이고 채택 및 유지를 장려합니다."
+
+#~ msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
+#~ msgstr "모든 사람들이 오리진 플렛폼 (Origin Platform) 에 대한 투표를 할 수 있습니다. 토큰 소지자는 향후 계획을 결정하는 중요한 커뮤니티 투표에 참여하게 됩니다."
+
+#~ msgid "Our platform will power decentralized marketplaces everywhere"
+#~ msgstr "OGN을 활용하여 오리진 노드(Origin Node) 를 실행하고 오리진(Origin) 네트워크 상에서 프로필 및 상품 목록 데이터를 복제 및 검증함으로써 더 많은 OGN을 얻을 수 있습니다."
+
+#~ msgid ""
+#~ "Origin Protocol -\n"
+#~ "Team"
+#~ msgstr "오리진(Origin) 프로토콜 - 팀"
+
+#~ msgid "Origin Protocol - Tokens"
+#~ msgstr "Origin 프로토콜 - 토큰"
+
+#~ msgid "The sharing economy without intermediaries"
+#~ msgstr "중개인 없는 공유경제"
+
+#~ msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
+#~ msgstr "사용자 및 거래 데이터는 이더리움 블록체인(Ethereum blockchain) 및 IPFS에 저장됩니다. 이는 제 3자 누구나 오리진 플랫폼 상에서 현재 사용 가능한 목록, 이전 거래 기록 및 생태계 구축에 기여한 다양한 구매자 및 판매자에 대한 리뷰 및 평판에 대해 대중적으로 공개된 내용들을 이더리움 블록체인 및 IPFS 네트워크 상에서 조회할 수 있음을 의미합니다."
 

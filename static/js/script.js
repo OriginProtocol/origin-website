@@ -56,6 +56,12 @@ function addToMailingList(event) {
   );
 }
 
+function closeOgnOverlay(event) {
+  event.preventDefault();
+  $("#countdown-hero-banner").addClass("d-none").removeClass("d-flex")
+}
+
+$("#countdown-hero-banner-button").click(closeOgnOverlay);
 $("#mailing-list").submit(addToMailingList);
 $("#mailing-list-footer").submit(addToMailingList);
 $("#mailing-list-nav-bar").submit(addToMailingList);
@@ -708,7 +714,7 @@ $(function() {
   var hardcodedStats = [
     {
       name: "Discord",
-      subscribed_count: 3283
+      subscribed_count: 3549
     },
     {
       name: "Wechat",
@@ -716,7 +722,7 @@ $(function() {
     },
     {
       name: "Vk",
-      subscribed_count: 36
+      subscribed_count: 333
     },
     {
       name: "Blockfolio",
@@ -740,13 +746,19 @@ $(function() {
     "Telegram (Korean)": {
       img: "/static/img/about/korean-telegram.svg",
       countLabel: "members",
-      link: "https://t.me/OriginProtocolKorea",
+      link: "https://t.me/originprotocolkorea",
       regionSpecific: true
     },
     "Telegram (Vietnam)": {
       img: "/static/img/about/vietnam-telegram.svg",
       countLabel: "members",
-      link: "https://t.me/OriginProtocolvn",
+      link: "https://t.me/originprotocolvietnam",
+      regionSpecific: true
+    },
+    "Telegram (Indonesia)": {
+      img: "/static/img/about/indonesia-telegram.svg",
+      countLabel: "members",
+      link: "https://t.me/originprotocolindonesia",
       regionSpecific: true
     },
     Wechat: {

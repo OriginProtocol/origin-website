@@ -6,11 +6,9 @@
 
 {% block content %}
 
-{# include 'countdown-bar.html' #}
-
 {% with theme_dark=True %}
 {% include 'navbar.html' %}
-{% endwith %}  
+{% endwith %}
 
 <main class="landing-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
@@ -41,13 +39,18 @@
   </div>
   <!-- Countdown section -->
   <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
-    <h1 class="clock-title">{{gettext("Origin Tokens are launching soon!")}}</h1>
+    {% if OGN_ALREADY_LAUNCHED %}
+      <h1 class="clock-title">{{gettext("Origin Tokens have launched!")}}</h1>
+    {% else %}
+      <h1 class="clock-title mb-0">{{gettext("Participate in the Origin Token (OGN) distribution")}}</h1>
+      <div class="clock d-flex align-items-center justify-content-center mt-0">
+        {% with timer_large=False %}
+        {% include 'components/countdown-timer.html' %}
+        {% endwith %}
+      </div>
+    {% endif %}
+
     <div class="segment-subtitle ml-3 mr-3">{{gettext("Subscribe to stay in touch. Your email will be kept private.")}}</div>
-    <!-- <div class="clock d-flex align-items-center justify-content-center">
-      {% with timer_large=False %}
-      {% include 'components/countdown-timer.html' %}
-      {% endwith %}
-    </div> -->
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
         <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Email")}}">

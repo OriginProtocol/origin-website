@@ -1,5 +1,5 @@
 .countdown-bar {
-  height: 140px;
+  height: 130px;
   background-color: #007cff;
   color: white;
 }
@@ -10,12 +10,16 @@
   margin-right: 25px;
 }
 
+.countdown-bar .the-logo {
+  width: 120px;
+}
+
 .countdown-bar .title {
   font-family: Lato;
   font-size: 18px;
   font-weight: bold;
-  line-height: 1.56;
-  max-width: 390px;
+  line-height: 1.36;
+  max-width: 300px;
 }
 
 .countdown-bar p {
@@ -29,6 +33,30 @@
   min-width: 150px;
   max-width: 250px;
   margin-right: 10px !important;
+}
+
+.countdown-bar .learn-more {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  border-radius: 18px;
+  background-color: #061d2a;
+  padding: 5px 17px 6px 17px;
+  white-space: nowrap;
+}
+
+.countdown-bar .exclusively-on {
+  font-family: Lato;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.36;
+  color: white;
+}
+
+.countdown-bar .exclusively-on > div {
+  padding: 4px;
 }
 
 .countdown-bar form {
@@ -66,9 +94,19 @@
   line-height: 1.2;
 }
 
+.countdown-bar .countdown-timer {
+  padding-top: 0.6rem;
+}
+
 .countdown-bar .countdown-time-left {
-  width: 235px !important;
+  width: 165px !important;
   margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-bar .countdown-time-left .time-group {
+  max-width: 40px;
 }
 
 .countdown-bar .countdown-time-left .time-group:not(:first-child):not(:last-child) .time-value:after {
@@ -82,6 +120,10 @@
 }
 
 @media (max-width: 575px) {
+  .countdown-bar .countdown-timer {
+    margin-bottom: 0.5rem;
+  }
+
   .countdown-bar {
     height: auto;
   }
@@ -96,5 +138,20 @@
 
   .countdown-bar p {
     text-align: center;
+    font-size: 14px;
+  }
+
+  .countdown-bar .title {
+    font-size: 17px;
+    text-align: center;
+    max-width: 170px;
+  }
+
+  .countdown-bar .title .wider {
+    width: 110%;
+  }
+
+  .countdown-bar .learn-more {
+    width: 90%;
   }
 }

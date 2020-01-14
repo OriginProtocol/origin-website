@@ -159,13 +159,7 @@ def whitepaper():
 @app.route('/product-brief', strict_slashes=False)
 @app.route('/<lang_code>/product-brief', strict_slashes=False)
 def product_brief():
-    localized_filename = 'whitepaper_v18_%s.pdf' % g.current_lang.lower()
-    product_brief_path = (os.path.join(app.root_path, '..', 'static', 'docs', localized_filename))
-    if os.path.isfile(product_brief_path):
-        return app.send_static_file('docs/%s' % localized_filename)
-    else:
-        # Default to English
-        return app.send_static_file('docs/whitepaper_v19.pdf')
+    return redirect('/whitepaper', code=302)
 
 @app.route('/mailing-list/join', methods=['POST'], strict_slashes=False)
 def join_mailing_list():
@@ -188,6 +182,8 @@ def join_mailing_list():
     dapp_user = 1 if 'dapp_user' in request.form else 0
     investor = 1 if 'investor' in request.form else 0
     backfill = request.form.get('backfill') or None # Indicates the request was made from an internal backfill script.
+
+    new_user = False
 
     log('Updating mailing list for', email, eth_address)
     try:
@@ -214,6 +210,7 @@ def join_mailing_list():
 
         # Add the entry to the Sendgrid contact list.
         if new_contact:
+            new_user = True
             log('Adding to Sendgrid contact list')
             mailing_list.add_sendgrid_contact(
                 email=email,
@@ -224,6 +221,9 @@ def join_mailing_list():
     except Exception as err:
         log('Failure: %s' % err)
         return jsonify(success=False, message=str(err))
+
+    if not new_user:
+        return jsonify(success=True, message=gettext('You\'re already registered!'))
 
     return jsonify(success=True, message=gettext('Thanks for signing up!'))
 
@@ -525,6 +525,7 @@ def assets_all_styles():
         "static/css/footer.css",
         "static/css/components/countdown-timer.css",
         "static/css/components/countdown-bar.css",
+        "static/css/components/countdown-hero-banner.css",
         "static/css/pages/common.css",
         "static/css/pages/team.css",
         "static/css/pages/token.css",
@@ -585,8 +586,18 @@ def inject_conf_var():
                          for lang in sort_language_constants()])
     except:
         available_languages = {'en': "English"}
+
+    # important (!) date needs to be in that exact format (along with minutes/seconds present). 
+    # also enter the date in UTC format -> greenwich mean time
+    startDate = '2020/1/7 3:30:00 GMT'
+    launchDate = '2020/1/9 3:00:00 GMT'
+    
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
         AVAILABLE_LANGUAGES=available_languages,
-        DOMAIN=request.headers['Host'])
+        DOMAIN=request.headers['Host'],
+        OGN_LAUNCH_START_DATE=startDate,
+        OGN_LAUNCH_DATE=launchDate,
+        OGN_ALREADY_LAUNCHED=datetime.strptime(launchDate, '%Y/%m/%d %H:%M:%S GMT') < datetime.utcnow(),
+    )
