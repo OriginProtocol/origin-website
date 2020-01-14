@@ -7,23 +7,11 @@
       <div
         class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start justify-content-center"
       >
-        {% if launched==True %}
         <div class="title">
           {{gettext("Origin Tokens (OGN) have launched!")}}
         </div>
-        {% else %}
-        <div class="title">
-          {{gettext("Origin Tokens (OGN) are launching soon!")}}
-        </div>
-        {% endif %}
       </div>
     </div>
-    {% if launched != True %}
-    <div class="clock d-flex align-items-center justify-content-center">
-      {% with timer_nav=True %} {% include 'components/countdown-timer.html' %}
-      {% endwith %}
-    </div>
-    {% endif %} {% if launched==True %}
     <a
       href="https://www.binance.com/en/register?ref=38914658"
       class="learn-more"
@@ -31,15 +19,6 @@
       rel="noopener noreferrer"
       >{{gettext("Buy OGN on Binance")}}</a
     >
-    {% else %}
-    <a
-      href="https://www.binance.com/en/register?ref=38914658"
-      class="learn-more"
-      target="_blank"
-      rel="noopener noreferrer"
-      >{{gettext("Learn more")}}</a
-    >
-    {% endif %}
     <div class="vertical-separator d-none d-md-flex mx-2"></div>
     <div
       class="d-flex flex-row flex-md-column pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on"
