@@ -1,18 +1,20 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  originprotocolwebsite\n"
+"Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 23:08+0000\n"
-"PO-Revision-Date: 2020-01-06 22:44+0000\n"
+"POT-Creation-Date: 2020-01-06 09:51+0530\n"
+"PO-Revision-Date: 2020-01-16 02:43\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: id_ID\n"
 "Language-Team: Indonesian\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: originprotocolwebsite\n"
+"X-Crowdin-Language: id\n"
+"X-Crowdin-File: /master/messages.pot\n"
+"Language: id_ID\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -22,20 +24,27 @@ msgstr "Mitra Teknologi"
 msgid "Building on Origin"
 msgstr "Bangun di Origin"
 
-#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:183
-#: views/web_views.py:262
+#: logic/emails/mailing_list.py:99 logic/emails/mailing_list.py:168
 msgid "Please enter a valid email address"
 msgstr "Silakan masukkan alamat email yang benar"
 
-#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:200
+#: logic/emails/mailing_list.py:117 logic/emails/mailing_list.py:185
 msgid "Ooops! Something went wrong."
 msgstr "Ooops! Terdapat kesalahan."
 
-#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:211
+#: logic/emails/mailing_list.py:138 logic/emails/mailing_list.py:196
 msgid "Thanks! We'll be in touch soon."
 msgstr "Terima kasih! Kami akan segera menghubungi."
 
-#: logic/emails/mailing_list.py:186
+#: logic/emails/mailing_list.py:152
+msgid "Ooops, something went wrong"
+msgstr "Ooops, terdapat kesalahan"
+
+#: logic/emails/mailing_list.py:154
+msgid "You have been unsubscribed"
+msgstr "Anda telah berhenti berlangganan"
+
+#: logic/emails/mailing_list.py:171
 msgid "Please enter a valid website address"
 msgstr "Silakan masukkan alamat situs web yang benar"
 
@@ -51,145 +60,101 @@ msgstr ""
 msgid "Go Home"
 msgstr "Ke halaman utama"
 
-#: templates/about.html:1
-msgid "Origin Protocol - About"
-msgstr ""
+#: templates/about.html:3 templates/about.html:5 templates/ogn-token.html:3
+#: templates/ogn-token.html:5 templates/partners.html:3
+#: templates/partners.html:5 templates/product.html:3 templates/product.html:5
+msgid "Origin Protocol - Build on Origin"
+msgstr "Origin Protocol - Bangun di Origin"
 
-#: templates/about.html:2
-msgid ""
-"Origin Protocol enables\n"
-"true peer-to-peer commerce."
-msgstr ""
-
-#: templates/about.html:12 templates/investors.html:13
-#: templates/landing.html:18 templates/team.html:13 templates/video.html:20
+#: templates/about.html:16 templates/investors.html:16
+#: templates/landing.html:18 templates/team.html:12 templates/video.html:20
 msgid "Exit full screen"
 msgstr "Keluar dari layar penuh"
 
-#: templates/about.html:28
-msgid ""
-"It’s time to build the sharing economy without\n"
-"        intermediaries"
+#: templates/about.html:26
+msgid "It’s time to build the sharing economy without intermediaries"
 msgstr ""
 
-#: templates/about.html:37 templates/investors.html:37
-#: templates/landing.html:32 templates/landing.html:194 templates/team.html:38
+#: templates/about.html:30 templates/investors.html:30
+#: templates/landing.html:32 templates/landing.html:194 templates/team.html:37
 #: templates/video.html:32
 msgid "Watch the video"
 msgstr ""
 
-#: templates/about.html:45
+#: templates/about.html:35
 msgid "Origin enables true peer-to-peer commerce"
 msgstr ""
 
-#: templates/about.html:48
-msgid ""
-"Origin is a startup headquartered in San Francisco, but we also\n"
-"      have team members in China, Korea, Russia, India, New Zealand, and even\n"
-"      Slovenia. Our 800+ investors include top venture capitalists and\n"
-"      cryptocurrency funds all over the world."
+#: templates/about.html:36
+msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
 msgstr ""
 
-#: templates/about.html:57 templates/landing.html:173
+#: templates/about.html:38 templates/landing.html:173
 msgid "Learn more about our team"
 msgstr ""
 
-#: templates/about.html:60 templates/landing.html:201
+#: templates/about.html:39 templates/landing.html:201
 msgid "Learn more about our investors"
 msgstr ""
 
-#: templates/about.html:80 templates/landing.html:137
+#: templates/about.html:49 templates/landing.html:137
 msgid "Lower Fees"
 msgstr ""
 
-#: templates/about.html:82
+#: templates/about.html:50
 #, python-format
-msgid ""
-"Centralized intermediaries often charge 20-30%% in\n"
-"          transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber\n"
-"          took home a monumental $11.8B in fees in 2018. Total sharing economy\n"
-"          fees are expected to cross $40B by 2020."
+msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020."
 msgstr ""
 
-#: templates/about.html:88
-msgid ""
-"By removing the middlemen, Origin removes these fees.\n"
-"          Buyers and sellers can now share the savings from the fees that are no\n"
-"          longer paid to traditional marketplace operators."
+#: templates/about.html:51
+msgid "By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators."
 msgstr ""
 
-#: templates/about.html:146 templates/landing.html:144
+#: templates/about.html:70 templates/landing.html:144
 msgid "Better Incentives"
 msgstr ""
 
-#: templates/about.html:148
-msgid ""
-"Uber and Lyft recently IPOed. WeWork and Airbnb are soon to\n"
-"          follow suit. None of the early participants on these platforms\n"
-"          benefited despite being critical to their success."
+#: templates/about.html:71
+msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
 msgstr ""
 
-#: templates/about.html:153
-msgid ""
-"In contrast, Origin enables everyone to own a piece of the\n"
-"          network. Buyers and sellers can earn Origin Tokens (OGN) simply by\n"
-"          using Origin-enabled applications to transact with one another.\n"
-"          Developers, affiliates, and marketplace operators can earn OGN by\n"
-"          promoting and marketing sellers' listings. When everyone owns a piece\n"
-"          of the network, ecosystem participants are incentivized to promote the\n"
-"          health and growth of Origin. "
+#: templates/about.html:72
+msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
 msgstr ""
 
-#: templates/about.html:174 templates/landing.html:151
+#: templates/about.html:80 templates/landing.html:151
 msgid "Increased Access"
 msgstr ""
 
-#: templates/about.html:176
-msgid ""
-"2 billion people around the world are currently unbanked.\n"
-"          They do not have checking accounts, credit cards, AliPay, or Apple\n"
-"          Pay."
+#: templates/about.html:81
+msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
 msgstr ""
 
-#: templates/about.html:181
-msgid ""
-"With the advent of cryptocurrencies and the proliferation\n"
-"          of inexpensive smartphones, now is the time to enable the unbanked to\n"
-"          participate in the new Internet economy. Users from all over the world\n"
-"          are now able to transact with each other on Origin-powered\n"
-"          marketplaces even if they do not have stable, local banking\n"
-"          systems."
+#: templates/about.html:82
+msgid "With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems."
 msgstr ""
 
-#: templates/about.html:228 templates/landing.html:158
+#: templates/about.html:99 templates/landing.html:158
 msgid "More Resilience"
 msgstr ""
 
-#: templates/about.html:230
-msgid ""
-"Airbnb is heavily regulated or banned in cities like Paris,\n"
-"          Berlin, Tokyo, New York, and even its home city of San Francisco."
+#: templates/about.html:100
+msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
 msgstr ""
 
-#: templates/about.html:234
-msgid ""
-"Decentralized marketplaces promote open and free commerce.\n"
-"          Unlike centralized alternatives, they are not single points of failure\n"
-"          and can't be banned or shut down. Decentralized commerce is more\n"
-"          resilient and promotes efficient markets."
+#: templates/about.html:101
+msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
 msgstr ""
 
-#: templates/about.html:257
+#: templates/about.html:110
 msgid "Origin in the Press"
 msgstr ""
 
-#: templates/about.html:364
-msgid ""
-"We have a large and growing community of developers and\n"
-"      supporters"
+#: templates/about.html:128
+msgid "We have a large and growing community of developers and supporters"
 msgstr ""
 
-#: templates/about.html:371
+#: templates/about.html:130
 msgid "Region-specific Channels"
 msgstr "Saluran khusus wilayah"
 
@@ -202,7 +167,7 @@ msgid "Marketplace Acceptable Use Policy"
 msgstr "Kebijakan Penggunaan yang Dapat Diterima Marketplace"
 
 #: templates/countdown-bar.html:6 templates/landing.html:44
-#: templates/ogn-token.html:12 templates/tokens.html:16
+#: templates/ogn-token.html:16 templates/tokens.html:16
 msgid "Origin Tokens are launching soon!"
 msgstr ""
 
@@ -376,13 +341,9 @@ msgstr "Punya pertanyaan?"
 msgid "Get in touch"
 msgstr "Berhubungan"
 
-#: templates/developers.html:2
+#: templates/developers.html:2 templates/developers.html:3
 msgid "Origin Protocol - Developers"
 msgstr "Origin Protocol - Pengembang"
-
-#: templates/developers.html:3
-msgid "Origin Protocol's open-source codebase is being developed by a global network of contributors"
-msgstr ""
 
 #: templates/developers.html:13
 msgid "Our open-source codebase is being developed by a global network of contributors"
@@ -549,6 +510,7 @@ msgid "Stay in touch"
 msgstr ""
 
 #: templates/footer.html:7 templates/landing.html:45
+#: templates/ogn-token.html:17
 msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr ""
 
@@ -666,188 +628,159 @@ msgstr "Perselisihan"
 msgid "VK"
 msgstr ""
 
-#: templates/investors.html:1
-msgid ""
-"Origin Protocol -\n"
-"Investors"
+#: templates/investors.html:3 templates/investors.html:5
+msgid "Origin Protocol - Investors"
 msgstr ""
 
-#: templates/investors.html:2
-msgid ""
-"Origin\n"
-"Protocol is backed by top investors from all over the world"
-msgstr ""
-
-#: templates/investors.html:29
+#: templates/investors.html:26
 msgid "We're backed by top investors from all over the world"
 msgstr ""
 
-#: templates/investors.html:45
+#: templates/investors.html:38
 msgid "Fundraising"
 msgstr ""
 
-#: templates/investors.html:47
-msgid ""
-"We are a well-capitalized startup that has sold tokens in\n"
-"            three previous rounds to build our platform."
+#: templates/investors.html:39
+msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
 msgstr ""
 
-#: templates/investors.html:54
+#: templates/investors.html:43
 msgid "$38.1M"
 msgstr ""
 
-#: templates/investors.html:57
+#: templates/investors.html:44
 msgid "total raised to date"
 msgstr ""
 
-#: templates/investors.html:61
+#: templates/investors.html:47
 msgid "800+"
 msgstr ""
 
-#: templates/investors.html:62
+#: templates/investors.html:48
 msgid "investors"
 msgstr ""
 
-#: templates/investors.html:66
-msgid ""
-"Interested in getting a stake in Origin? Sign up to\n"
-"            receive the latest updates."
+#: templates/investors.html:52
+msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
 msgstr ""
 
-#: templates/investors.html:78
+#: templates/investors.html:63
 msgid "Featured Investor"
 msgstr ""
 
-#: templates/investors.html:103
-msgid ""
-"\"The reason we invested in Origin was\n"
-"                      primarily because of the team. They have amazing\n"
-"                      backgrounds and they come from iconic consumer\n"
-"                      companies.\""
+#: templates/investors.html:77
+msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
 msgstr ""
 
-#: templates/investors.html:110
+#: templates/investors.html:81
 msgid "Rodolfo Gonzalez"
 msgstr ""
 
-#: templates/investors.html:113
+#: templates/investors.html:84
 msgid "Partner, Foundation Capital"
 msgstr ""
 
-#: templates/investors.html:142
-msgid ""
-"\"We're talking about over 100,000 members\n"
-"                      around the world that are hard-core fans of Origin. Origin\n"
-"                      has done a tremendous job executing at a global\n"
-"                      scale.\""
+#: templates/investors.html:100
+msgid "\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\""
 msgstr ""
 
-#: templates/investors.html:149
+#: templates/investors.html:104
 msgid "Sophie Liao"
 msgstr ""
 
-#: templates/investors.html:152
+#: templates/investors.html:107
 msgid "Founding Partner, Oyster VC"
 msgstr ""
 
-#: templates/investors.html:170
-msgid ""
-"\"Origin stands out from any of the other\n"
-"                      decentralized applications that we've invested into,\n"
-"                      because they've gone out there and built probably the best\n"
-"                      community that we've seen. For us, that was a game\n"
-"                      changer.\""
+#: templates/investors.html:123
+msgid "\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\""
 msgstr ""
 
-#: templates/investors.html:178 templates/team.html:631
+#: templates/investors.html:127 templates/team.html:630
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
-#: templates/investors.html:181
+#: templates/investors.html:130
 msgid "Co-investment Officer at Pantera Capital"
 msgstr ""
 
-#: templates/investors.html:204
-msgid ""
-"We are backed by top venture capital firms and investors\n"
-"            in Silicon Valley and around the world"
+#: templates/investors.html:152 templates/landing.html:190
+msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
 msgstr ""
 
-#: templates/investors.html:247
+#: templates/investors.html:201
 msgid "Individual Investors"
 msgstr "Investor Perorangan"
 
-#: templates/investors.html:249
-msgid ""
-"We are supported by some of the best angel investors and\n"
-"            previous founders in Silicon Valley."
+#: templates/investors.html:203
+msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
 msgstr ""
 
-#: templates/investors.html:264
+#: templates/investors.html:213
 msgid "Steve Chen"
 msgstr "Steve Chen"
 
-#: templates/investors.html:267
+#: templates/investors.html:216
 msgid "Founder, YouTube"
 msgstr "Pendiri, YouTube"
 
-#: templates/investors.html:279
+#: templates/investors.html:224
 msgid "Alexis Ohanian"
 msgstr "Alexis Ohanian"
 
-#: templates/investors.html:282
+#: templates/investors.html:227
 msgid "Founder, Reddit"
 msgstr ""
 
-#: templates/investors.html:294
+#: templates/investors.html:235
 msgid "Garry Tan"
 msgstr "Garry Tan"
 
-#: templates/investors.html:297
+#: templates/investors.html:238
 msgid "Partner, Y Combinator"
 msgstr ""
 
-#: templates/investors.html:309
+#: templates/investors.html:246
 msgid "Gil Penchina"
 msgstr "Gil Penchina"
 
-#: templates/investors.html:312
+#: templates/investors.html:249
 msgid "Angel Investor"
 msgstr ""
 
-#: templates/investors.html:324
+#: templates/investors.html:257
 msgid "Justin Blau"
 msgstr "Justin Blau"
 
-#: templates/investors.html:327
+#: templates/investors.html:260
 msgid "Acclaimed DJ"
 msgstr "DJ yang diakui"
 
-#: templates/investors.html:339
+#: templates/investors.html:268
 msgid "Steve Jang"
 msgstr "Steve Jang"
 
-#: templates/investors.html:342
+#: templates/investors.html:271
 msgid "Advisor & Angel, Uber"
 msgstr ""
 
-#: templates/investors.html:354
+#: templates/investors.html:279
 msgid "Kamal Ravikant"
 msgstr "Kamal Ravikant"
 
-#: templates/investors.html:357
+#: templates/investors.html:282
 msgid "Serial Entrepreneur"
 msgstr "Pengusaha Serial"
 
-#: templates/investors.html:369
+#: templates/investors.html:290
 msgid "Randall Kaplan"
 msgstr "Randall Kaplan"
 
-#: templates/investors.html:372
+#: templates/investors.html:293
 msgid "Founder, Akamai"
 msgstr ""
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:64
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:63
 msgid "Origin Protocol"
 msgstr "Origin Protocol"
 
@@ -959,10 +892,6 @@ msgstr ""
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr ""
 
-#: templates/landing.html:190
-msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
-msgstr ""
-
 #: templates/landing.html:206
 msgid "Featured Partner"
 msgstr ""
@@ -1031,99 +960,60 @@ msgstr ""
 msgid "Shop"
 msgstr "Toko"
 
-#: templates/ogn-token.html:1
-msgid ""
-"Origin Protocol - OGN\n"
-"Token"
-msgstr ""
-
-#: templates/ogn-token.html:2
-msgid ""
-"Origin Tokens\n"
-"(OGN) ensure the health and growth of the Origin network."
-msgstr ""
-
-#: templates/ogn-token.html:14
-msgid ""
-"Subscribe to stay in touch. Your email will be kept\n"
-"        private."
-msgstr ""
-
-#: templates/ogn-token.html:39 templates/whitepaper/platform.html:109
+#: templates/ogn-token.html:41 templates/whitepaper/platform.html:109
 msgid "Origin Rewards"
 msgstr ""
 
-#: templates/ogn-token.html:41
-msgid ""
-"Earn your stake in the Origin network today. Users can\n"
-"            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
-"            friends and family to Origin, sharing news about Origin on social\n"
-"            media, and making purchases from our featured sellers."
+#: templates/ogn-token.html:43
+msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
 msgstr ""
 
-#: templates/ogn-token.html:46
+#: templates/ogn-token.html:45
 msgid "Not available in the United States"
 msgstr ""
 
-#: templates/ogn-token.html:85
+#: templates/ogn-token.html:71
 msgid "Commissions"
 msgstr ""
 
-#: templates/ogn-token.html:87
-msgid ""
-"Promote your listings across the Origin flagship app and\n"
-"            third-party apps with Origin Commissions. Pay with OGN to get\n"
-"            featured prominently in search results. Application developers and\n"
-"            marketplace operators earn Origin Tokens (OGN) by helping sellers\n"
-"            complete their sales."
+#: templates/ogn-token.html:73
+msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
 msgstr ""
 
-#: templates/ogn-token.html:101
+#: templates/ogn-token.html:83
 msgid "Payments"
 msgstr ""
 
-#: templates/ogn-token.html:103
-msgid ""
-"Use the Origin Tokens (OGN) that you've earned in Origin\n"
-"            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
-"            the network by accepting OGN as a preferred payment method."
+#: templates/ogn-token.html:85
+msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
 msgstr ""
 
-#: templates/ogn-token.html:124
+#: templates/ogn-token.html:99
 msgid "Research and Development"
 msgstr ""
 
-#: templates/ogn-token.html:130
+#: templates/ogn-token.html:103
 msgid "Origin Nodes"
 msgstr ""
 
-#: templates/ogn-token.html:132
-msgid ""
-"Stake your OGN to run an Origin Node and earn more OGN by\n"
-"            helping to replicate and validate profile and listing data on the\n"
-"            network."
+#: templates/ogn-token.html:105
+msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
 msgstr ""
 
-#: templates/ogn-token.html:141
+#: templates/ogn-token.html:110
 msgid "Origin Relayer"
 msgstr ""
 
-#: templates/ogn-token.html:143
-msgid ""
-"Developers can pay for usage of Origin Meta Transactions\n"
-"            Relayers with OGN. Meta Transactions reduce user friction and\n"
-"            encourage adoption and retention."
+#: templates/ogn-token.html:112
+msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
 msgstr ""
 
-#: templates/ogn-token.html:152
+#: templates/ogn-token.html:117
 msgid "Governance"
 msgstr ""
 
-#: templates/ogn-token.html:154
-msgid ""
-"Everyone has a vote on the Origin Platform. Token holders\n"
-"            will participate in important community votes to define future\n"
-"            initiatives."
+#: templates/ogn-token.html:119
+msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
 msgstr ""
 
 #: templates/partner_campaign.html:3 templates/partner_campaign.html:5
@@ -1155,10 +1045,6 @@ msgstr "OGN adalah cryptocurrency penghargaan yang diterima oleh pengguna Asal. 
 #: templates/referral_campaign.html:385
 msgid "Scan to install our app"
 msgstr "Pindai untuk menginstal aplikasi kami"
-
-#: templates/partners.html:3 templates/partners.html:5
-msgid "Origin Protocol - Build on Origin"
-msgstr "Origin Protocol - Bangun di Origin"
 
 #: templates/partners.html:16
 msgid "Build on Origin"
@@ -1214,8 +1100,7 @@ msgstr "https://namasitus.com"
 
 #: templates/partners.html:141
 msgid "<strong>Anything else we should know?</strong> (optional)"
-msgstr ""
-"<strong>Apa yang harus kami ketahui?\n"
+msgstr "<strong>Apa yang harus kami ketahui?\n"
 "</strong> (opsional)"
 
 #: templates/partners.html:153
@@ -1226,16 +1111,8 @@ msgstr "Menjadi Mitra"
 msgid "Origin Protocol - Privacy Policy"
 msgstr "Origin Protocol - Kebijakan Privasi"
 
-#: templates/product.html:3
-msgid "Origin Protocol - Product"
-msgstr ""
-
-#: templates/product.html:5
-msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
-msgstr ""
-
 #: templates/product.html:18
-msgid "Our platform will power peer-to-peer marketplaces everywhere"
+msgid "Our platform will power decentralized marketplaces everywhere"
 msgstr ""
 
 #: templates/product.html:28
@@ -1324,11 +1201,11 @@ msgstr ""
 
 #: templates/product.html:160
 msgid "Check out our updated whitepaper"
-msgstr ""
+msgstr "Lihat pembaharuan whitepaper kami"
 
 #: templates/product.html:164
 msgid "Read our whitepaper"
-msgstr ""
+msgstr "Baca whitepaper kami"
 
 #: templates/product.html:174
 msgid "Milestones"
@@ -1348,7 +1225,7 @@ msgstr "September 2017"
 
 #: templates/product.html:186 templates/whitepaper/roadmap.html:13
 msgid "Released initial whitepaper"
-msgstr ""
+msgstr "Whitepaper awal telah diliris"
 
 #: templates/product.html:190 templates/whitepaper/roadmap.html:22
 msgid "December 2017"
@@ -1511,407 +1388,366 @@ msgid "Origin Protocol - Team"
 msgstr "Origin Protocol - Tim"
 
 #: templates/team.html:2
-msgid ""
-"Origin Protocol's\n"
-"world-class team is led by entrepreneurs and engineers from iconic tech\n"
-"companies"
-msgstr ""
+msgid "Origin Protocol -\n"
+"Team"
+msgstr "Protokol Asal -\n"
+"Tim"
 
-#: templates/team.html:29
-msgid ""
-"Our world-class team is led by entrepreneurs and engineers\n"
+#: templates/team.html:28
+msgid "Our world-class team is led by entrepreneurs and engineers\n"
 "        from iconic tech companies"
-msgstr ""
-"Tim kelas dunia kami dipimpin oleh pengusaha dan insinyur\n"
+msgstr "Tim kelas dunia kami dipimpin oleh pengusaha dan insinyur\n"
 "        dari perusahaan teknologi ternama"
 
-#: templates/team.html:46 templates/whitepaper/sidebar.html:50
+#: templates/team.html:45 templates/whitepaper/sidebar.html:50
 msgid "Core team"
 msgstr "Tim inti"
 
-#: templates/team.html:64 templates/whitepaper/team.html:31
+#: templates/team.html:63 templates/whitepaper/team.html:31
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:68 templates/team.html:95
+#: templates/team.html:67 templates/team.html:94
 msgid "Cofounder"
 msgstr "Co-founder"
 
-#: templates/team.html:71
-msgid ""
-"Josh started coding at the age of 10. Prior to\n"
+#: templates/team.html:70
+msgid "Josh started coding at the age of 10. Prior to\n"
 "                  Origin, he co-founded three other venture-backed companies:\n"
 "                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
-msgstr ""
-"Josh mulai menulis kode pada usia 10 tahun. Sebelum\n"
+msgstr "Josh mulai menulis kode pada usia 10 tahun. Sebelum\n"
 "                  Origin, dia ikut mendirikan tiga perusahaan yang didukung oleh usaha lain:\n"
 "                  EventVue, Torbit (diakuisisi oleh Walmart Labs) &amp; Forage."
 
-#: templates/team.html:91 templates/whitepaper/team.html:13
+#: templates/team.html:90 templates/whitepaper/team.html:13
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:98
-msgid ""
-"Matt was the 3rd PM at YouTube (acquired by\n"
+#: templates/team.html:97
+msgid "Matt was the 3rd PM at YouTube (acquired by\n"
 "                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
 "                  (acquired by Walmart). He has an MS and BS from Stanford."
-msgstr ""
-"Matt adalah PM ke-3 di YouTube (diakuisisi oleh\n"
+msgstr "Matt adalah PM ke-3 di YouTube (diakuisisi oleh\n"
 "                  Google) dan Wakil Presiden di Qwiki (diakuisisi oleh Yahoo) dan Bonobos\n"
 "                  (diakuisisi oleh Walmart). Dia memiliki MS dan BS dari Stanford."
 
-#: templates/team.html:122 templates/whitepaper/team.html:96
+#: templates/team.html:121 templates/whitepaper/team.html:96
 msgid "Business Development"
 msgstr "Pengembang bisnis"
 
-#: templates/team.html:125
-msgid ""
-"Coleman is an active cryptocurrency investor and\n"
+#: templates/team.html:124
+msgid "Coleman is an active cryptocurrency investor and\n"
 "                  real estate entrepreneur, owning and managing multiple Airbnb\n"
 "                  properties. He studied mathematics at Berkeley."
-msgstr ""
-"Coleman adalah investor cryptocurrency aktif dan\n"
+msgstr "Coleman adalah investor cryptocurrency aktif dan\n"
 "                  pengusaha real estat, yang memiliki dan mengelola beberapa properti Airbnb\n"
 "                  . Ia belajar matematika di Berkeley."
 
-#: templates/team.html:145 templates/whitepaper/team.html:56
+#: templates/team.html:144 templates/whitepaper/team.html:56
 msgid "Yu Pan"
 msgstr "Yu Pan"
 
-#: templates/team.html:149 templates/whitepaper/team.html:60
+#: templates/team.html:148 templates/whitepaper/team.html:60
 msgid "R&D Engineer"
 msgstr "R&D Engineer"
 
-#: templates/team.html:152
-msgid ""
-"Yu Pan was one of the 6 founding team members of\n"
+#: templates/team.html:151
+msgid "Yu Pan was one of the 6 founding team members of\n"
 "                  PayPal and was the 1st employee at YouTube. He is a former\n"
 "                  Google employee and co-founder of Kiwi Crate."
-msgstr ""
-"Yu Pan adalah salah satu dari 6 anggota tim pendiri\n"
+msgstr "Yu Pan adalah salah satu dari 6 anggota tim pendiri\n"
 "                  PayPal dan merupakan karyawan pertama di YouTube. Dia adalah mantan\n"
 "                  karyawan Google dan salah satu pendiri Kiwi Crate."
 
-#: templates/team.html:172 templates/whitepaper/team.html:110
+#: templates/team.html:171 templates/whitepaper/team.html:110
 msgid "Micah Alcorn"
 msgstr "Micah Alcorn"
 
-#: templates/team.html:176 templates/whitepaper/team.html:114
+#: templates/team.html:175 templates/whitepaper/team.html:114
 msgid "Product Manager/Engineer"
 msgstr "Manajer Produk / Insinyur"
 
-#: templates/team.html:179
-msgid ""
-"Micah was the technical co-founder of\n"
+#: templates/team.html:178
+msgid "Micah was the technical co-founder of\n"
 "                  WellAttended, a bootstrapped box office management platform.\n"
 "                  He worked as a commercial real estate broker while learning to\n"
 "                  code."
-msgstr ""
-"Micah adalah pendiri teknis\n"
+msgstr "Micah adalah pendiri teknis\n"
 "                  WellAttended, platform manajemen box office yang bootstrap.\n"
 "                  Dia bekerja sebagai broker real estat komersial sambil belajar\n"
 "                  kode."
 
-#: templates/team.html:201 templates/whitepaper/team.html:128
+#: templates/team.html:200 templates/whitepaper/team.html:128
 msgid "Kay Yoo"
 msgstr "Kay Yoo"
 
-#: templates/team.html:205 templates/whitepaper/team.html:132
+#: templates/team.html:204 templates/whitepaper/team.html:132
 msgid "Finance & Operations"
 msgstr "Keuangan & Operasi"
 
-#: templates/team.html:208
-msgid ""
-"Kay is a Chartered Professional Accountant (CPA).\n"
+#: templates/team.html:207
+msgid "Kay is a Chartered Professional Accountant (CPA).\n"
 "                  She previously worked as a Senior Accountant and then as a\n"
 "                  Senior Consultant at KPMG Canada."
-msgstr ""
-"Kay adalah Chartered Professional Accountant (CPA).\n"
+msgstr "Kay adalah Chartered Professional Accountant (CPA).\n"
 "                  Dia sebelumnya bekerja sebagai Akuntan Senior dan kemudian sebagai\n"
 "                  Konsultan Senior di KPMG Kanada."
 
-#: templates/team.html:229 templates/whitepaper/team.html:74
+#: templates/team.html:228 templates/whitepaper/team.html:74
 msgid "Franck Chastagnol"
 msgstr "Franck Chastagnol"
 
-#: templates/team.html:233 templates/team.html:290 templates/team.html:348
+#: templates/team.html:232 templates/team.html:289 templates/team.html:347
 #: templates/whitepaper/team.html:78 templates/whitepaper/team.html:186
 #: templates/whitepaper/team.html:204
 msgid "Senior Engineer"
 msgstr "Senior Engineer"
 
-#: templates/team.html:236
-msgid ""
-"Franck has had a successful career as an early\n"
+#: templates/team.html:235
+msgid "Franck has had a successful career as an early\n"
 "                  employee at numerous high-profile companies. He previously led\n"
 "                  engineering teams at Inktomi, Paypal, YouTube, Google and\n"
 "                  Dropbox."
-msgstr ""
-"Franck telah memiliki karir yang sukses sebagai awal\n"
+msgstr "Franck telah memiliki karir yang sukses sebagai awal\n"
 "                  karyawan di berbagai perusahaan-profil tinggi. Dia sebelumnya memimpin\n"
 "                  tim teknik di Inktomi, Paypal, YouTube, Google dan\n"
 "                  Dropbox."
 
-#: templates/team.html:258 templates/whitepaper/team.html:164
+#: templates/team.html:257 templates/whitepaper/team.html:164
 msgid "Mila Choi"
 msgstr "Mila Choi"
 
-#: templates/team.html:262 templates/whitepaper/team.html:168
+#: templates/team.html:261 templates/whitepaper/team.html:168
 msgid "Regional Manager Korea"
 msgstr "Manajer Regional Korea"
 
-#: templates/team.html:265
-msgid ""
-"Mila is leading our community efforts in South\n"
+#: templates/team.html:264
+msgid "Mila is leading our community efforts in South\n"
 "                  Korea. She previously organized blockhain hackathons and has\n"
 "                  degrees from Penn State and Erasmus University Rotterdam."
-msgstr ""
-"Mila memimpin upaya masyarakat kami di Selatan\n"
+msgstr "Mila memimpin upaya masyarakat kami di Selatan\n"
 "                  Korea. Dia sebelumnya menyelenggarakan hackathons blockhain dan memiliki\n"
 "                  gelar dari Penn State dan Erasmus University Rotterdam."
 
-#: templates/team.html:286 templates/whitepaper/team.html:182
+#: templates/team.html:285 templates/whitepaper/team.html:182
 msgid "Tom Linton"
 msgstr "Tom Linton"
 
-#: templates/team.html:293
-msgid ""
-"Before Origin, Tom had a successful career as a\n"
+#: templates/team.html:292
+msgid "Before Origin, Tom had a successful career as a\n"
 "                  solo startup founder. He has two Masters degrees in\n"
 "                  Distributed Systems from the Technical University of Berlin\n"
 "                  and KTH in Stockholm."
-msgstr ""
-"Sebelum Asal, Tom memiliki karir yang sukses sebagai\n"
+msgstr "Sebelum Asal, Tom memiliki karir yang sukses sebagai\n"
 "                  pendiri tunggal startup. Ia memiliki dua gelar Master dalam\n"
 "                  Sistem Terdistribusi dari Technical University of Berlin\n"
 "                  dan KTH di Stockholm."
 
-#: templates/team.html:315 templates/whitepaper/team.html:218
+#: templates/team.html:314 templates/whitepaper/team.html:218
 msgid "Anna Wang"
 msgstr "Anna Wang"
 
-#: templates/team.html:319 templates/whitepaper/team.html:222
+#: templates/team.html:318 templates/whitepaper/team.html:222
 msgid "Regional Manager China"
 msgstr "Manajer Regional Cina"
 
-#: templates/team.html:322
-msgid ""
-"Anna is leading our community efforts for Chinese\n"
+#: templates/team.html:321
+msgid "Anna is leading our community efforts for Chinese\n"
 "                  speakers. Before Origin, Anna managed global social media at\n"
 "                  Exness, a leading forex broker. She also co-founded a\n"
 "                  non-profit in Australia."
-msgstr ""
-"Anna memimpin upaya komunitas kami untuk\n"
+msgstr "Anna memimpin upaya komunitas kami untuk\n"
 "                  penutur bahasa Mandarin. Sebelum Origin, Anna mengelola media sosial global di\n"
 "                  Exness, broker forex terkemuka. Dia juga ikut mendirikan\n"
 "                  nirlaba di Australia."
 
-#: templates/team.html:344 templates/whitepaper/team.html:200
+#: templates/team.html:343 templates/whitepaper/team.html:200
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:351
-msgid ""
-"Nick studied Computer Science at the University of\n"
+#: templates/team.html:350
+msgid "Nick studied Computer Science at the University of\n"
 "                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "                  Sencha, C3 Energy Network and Palo Alto Networks."
-msgstr ""
-"Nick belajar Ilmu Komputer di University of\n"
+msgstr "Nick belajar Ilmu Komputer di University of\n"
 "                  Warwick. Sebelum bergabung dengan Origin, ia bekerja sebagai insinyur di\n"
 "                  Sencha, C3 Energy Network dan Palo Alto Networks."
 
-#: templates/team.html:372 templates/whitepaper/team.html:236
+#: templates/team.html:371 templates/whitepaper/team.html:236
 msgid "Domen Grabec"
 msgstr "Domen Grabec"
 
-#: templates/team.html:376 templates/team.html:404 templates/team.html:461
+#: templates/team.html:375 templates/team.html:403 templates/team.html:460
 #: templates/whitepaper/team.html:240 templates/whitepaper/team.html:258
 #: templates/whitepaper/team.html:294
 msgid "Engineer"
 msgstr "Insinyur"
 
-#: templates/team.html:379
-msgid ""
-"Domen co-founded and led a team developing a\n"
+#: templates/team.html:378
+msgid "Domen co-founded and led a team developing a\n"
 "                  mobile application with 2 chess Grandmasters. He previously\n"
 "                  had a successful career at Cetra, Zemanta and Peerindex."
-msgstr ""
-"Domen ikut mendirikan dan memimpin tim yang mengembangkan aplikasi\n"
+msgstr "Domen ikut mendirikan dan memimpin tim yang mengembangkan aplikasi\n"
 "                  mobile dengan 2 Grandmaster catur. Dia sebelumnya\n"
 "                  memiliki karir yang sukses di Cetra, Zemanta dan Peerindex."
 
-#: templates/team.html:400 templates/whitepaper/team.html:254
+#: templates/team.html:399 templates/whitepaper/team.html:254
 msgid "Shahul Hameed"
 msgstr "Shahul Hameed"
 
-#: templates/team.html:407
-msgid ""
-"Shahul is a fullstack engineer who started\n"
+#: templates/team.html:406
+msgid "Shahul is a fullstack engineer who started\n"
 "                  programming at age of 10. He previously worked as a freelancer\n"
 "                  and then joined Zoho as a front-end developer."
-msgstr ""
-"Shahul adalah insinyur fullstack yang memulai\n"
+msgstr "Shahul adalah insinyur fullstack yang memulai\n"
 "                  pemrograman pada usia 10 tahun. Dia sebelumnya bekerja sebagai freelancer\n"
 "                  dan kemudian bergabung dengan Zoho sebagai pengembang front-end."
 
-#: templates/team.html:428 templates/whitepaper/team.html:272
+#: templates/team.html:427 templates/whitepaper/team.html:272
 msgid "Zaurbek Ivanov"
 msgstr "Zaurbek Ivanov"
 
-#: templates/team.html:432 templates/whitepaper/team.html:276
+#: templates/team.html:431 templates/whitepaper/team.html:276
 msgid "Russia Community"
 msgstr "Komunitas Rusia"
 
-#: templates/team.html:435
-msgid ""
-"Zaurbek Ivanov studied Economics at\n"
+#: templates/team.html:434
+msgid "Zaurbek Ivanov studied Economics at\n"
 "                  Kabardino-Balkaria State Agrarian University in Nalchik,\n"
 "                  Russia. He has worked in the hospitality industry in the US\n"
 "                  and Russia."
-msgstr ""
-"Zaurbek Ivanov belajar Ekonomi di\n"
+msgstr "Zaurbek Ivanov belajar Ekonomi di\n"
 "                  Universitas Negeri Agraria Kabardino-Balkaria di Nalchik,\n"
 "                  Rusia. Dia telah bekerja di industri perhotelan di AS\n"
 "                  dan Rusia."
 
-#: templates/team.html:457 templates/whitepaper/team.html:290
+#: templates/team.html:456 templates/whitepaper/team.html:290
 msgid "Mike Shultz"
 msgstr "Mike Shultz"
 
-#: templates/team.html:464
-msgid ""
-"Mike is a long-time contributor to open-source. He\n"
+#: templates/team.html:463
+msgid "Mike is a long-time contributor to open-source. He\n"
 "                  created a dev toolkit for creating Ethereum smart contracts\n"
 "                  with Python and previously worked with Ethereum and IPFS at\n"
 "                  Lunyr."
-msgstr ""
-"Mike adalah kontributor lama untuk open-source. Dia\n"
+msgstr "Mike adalah kontributor lama untuk open-source. Dia\n"
 "                  menciptakan dev toolkit untuk membuat kontrak pintar Ethereum\n"
 "                  dengan Python dan sebelumnya bekerja dengan Ethereum dan IPFS di\n"
 "                  Lunyr."
 
-#: templates/team.html:486 templates/whitepaper/team.html:146
+#: templates/team.html:485 templates/whitepaper/team.html:146
 msgid "Aure Gimon"
 msgstr ""
 
-#: templates/team.html:490 templates/whitepaper/team.html:150
+#: templates/team.html:489 templates/whitepaper/team.html:150
 msgid "Product Designer"
 msgstr ""
 
-#: templates/team.html:493
-msgid ""
-"Aure is a product designer with 10+ years of\n"
+#: templates/team.html:492
+msgid "Aure is a product designer with 10+ years of\n"
 "                  experience. Prior to joining Origin, Aure worked at multiple\n"
 "                  startups and Fortune 500 companies. In a past life, he was\n"
 "                  also a software engineer."
-msgstr ""
-"Aure adalah desainer produk dengan 10+ tahun pengalaman\n"
+msgstr "Aure adalah desainer produk dengan 10+ tahun pengalaman\n"
 "                  . Sebelum bergabung dengan Origin, Aure bekerja di beberapa\n"
 "                  startup dan perusahaan Fortune 500. Di kehidupan sebelumnya, ia\n"
 "                  juga seorang insinyur perangkat lunak."
 
-#: templates/team.html:510
+#: templates/team.html:509
 msgid "Community team"
 msgstr "Tim komunitas"
 
-#: templates/team.html:525 templates/whitepaper/team.html:330
+#: templates/team.html:524 templates/whitepaper/team.html:330
 msgid "Holly Gu"
 msgstr "Holly Gu"
 
-#: templates/team.html:537 templates/whitepaper/team.html:342
+#: templates/team.html:536 templates/whitepaper/team.html:342
 msgid "June Kim"
 msgstr "Kim Juni"
 
-#: templates/team.html:549 templates/whitepaper/team.html:354
+#: templates/team.html:548 templates/whitepaper/team.html:354
 msgid "Yeongin Lee"
 msgstr "Yeongin Lee"
 
-#: templates/team.html:561 templates/whitepaper/team.html:366
+#: templates/team.html:560 templates/whitepaper/team.html:366
 msgid "Leslie Song"
 msgstr "Leslie Song"
 
-#: templates/team.html:572
+#: templates/team.html:571
 msgid "Advisors"
 msgstr "Penasehat"
 
-#: templates/team.html:591
+#: templates/team.html:590
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:595
+#: templates/team.html:594
 msgid "PR"
 msgstr ""
 
-#: templates/team.html:611
+#: templates/team.html:610
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:615
+#: templates/team.html:614
 msgid "International BD"
 msgstr ""
 
-#: templates/team.html:635 templates/team.html:655
+#: templates/team.html:634 templates/team.html:654
 msgid "Advisor"
 msgstr "Penasehat"
 
-#: templates/team.html:651
+#: templates/team.html:650
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:671
+#: templates/team.html:670
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:675 templates/whitepaper/sidebar.html:53
+#: templates/team.html:674 templates/whitepaper/sidebar.html:53
 #: templates/whitepaper/team.html:317
 msgid "Community"
 msgstr "Komunitas"
 
-#: templates/team.html:686
+#: templates/team.html:685
 #, python-format
 msgid "100%% open-source."
 msgstr ""
 
-#: templates/team.html:687
+#: templates/team.html:686
 msgid " contributors."
 msgstr ""
 
-#: templates/team.html:714
+#: templates/team.html:713
 msgid "Want to contribute?"
 msgstr ""
 
-#: templates/team.html:723
+#: templates/team.html:722
 msgid "Visit our GitHub Repository"
 msgstr "Kunjungi Gudang GitHub kami"
 
-#: templates/team.html:728
+#: templates/team.html:727
 msgid "Join our #engineering channel on Discord"
 msgstr ""
 
-#: templates/team.html:740
+#: templates/team.html:739
 msgid "Interested in working at Origin?"
 msgstr ""
 
-#: templates/team.html:744
-msgid ""
-"We are a distributed team and are hiring all around the\n"
+#: templates/team.html:743
+msgid "We are a distributed team and are hiring all around the\n"
 "            world."
-msgstr ""
-"Kami adalah tim didistribusikan dan mempekerjakan seluruh\n"
+msgstr "Kami adalah tim didistribusikan dan mempekerjakan seluruh\n"
 "            dunia."
 
-#: templates/team.html:755
+#: templates/team.html:754
 msgid "View job posts"
 msgstr ""
 
-#: templates/tokens.html:3
-msgid "Origin Protocol - Buy Origin Tokens (OGN)"
-msgstr ""
-
-#: templates/tokens.html:5
-msgid "Origin Tokens (OGN) are launching soon!"
-msgstr ""
+#: templates/tokens.html:3 templates/tokens.html:5
+msgid "Origin Protocol - Tokens"
+msgstr "Protokol Asal - Token"
 
 #: templates/tokens.html:18
 msgid "Interested in Origin tokens?"
@@ -1947,12 +1783,8 @@ msgstr "Protokol Asal - Ketentuan Layanan"
 msgid "Share"
 msgstr ""
 
-#: templates/videos.html:3
+#: templates/videos.html:3 templates/videos.html:5
 msgid "Origin Protocol - Videos"
-msgstr ""
-
-#: templates/videos.html:5
-msgid "Watch videos featuring Origin's top investors, employees, and other supporters."
 msgstr ""
 
 #: templates/videos.html:18 templates/videos.html:21
@@ -1996,8 +1828,8 @@ msgid "Origin Protocol - Whitepaper"
 msgstr "Protokol Asal - Whitepaper"
 
 #: templates/whitepaper.html:20
-msgid "Enabling true peer-to-peer commerce"
-msgstr ""
+msgid "The sharing economy without intermediaries"
+msgstr "Ekonomi berbagi tanpa perantara"
 
 #: templates/components/countdown-timer.html:7
 #: templates/components/countdown-timer.html:15
@@ -2126,26 +1958,22 @@ msgid "Blocktower Capital"
 msgstr ""
 
 #: templates/whitepaper/disclaimer.html:4
-msgid ""
-"Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
+msgid "Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
 "    performance objectives of the Company, involve known and unknown risks, uncertainties, and other important factors that could cause the actual results of\n"
 "    the Company to differ materially from any future results expressed or implied by such forward-looking statements. Accordingly, readers should not place\n"
 "    undue reliance on forward-looking statements. No representation or warranty is made as to future performance or such forward-looking statements."
-msgstr ""
-"Pernyataan tertentu dalam whitepaper ini merupakan pernyataan berwawasan ke depan. Pernyataan berwawasan ke depan seperti itu, termasuk tindakan yang dimaksudkan dan\n"
+msgstr "Pernyataan tertentu dalam whitepaper ini merupakan pernyataan berwawasan ke depan. Pernyataan berwawasan ke depan seperti itu, termasuk tindakan yang dimaksudkan dan\n"
 "    tujuan kinerja Perusahaan, melibatkan risiko yang diketahui dan tidak diketahui, ketidakpastian, dan faktor-faktor penting lainnya yang dapat menyebabkan hasil aktual\n"
 "    Perusahaan berbeda secara material dari hasil di masa depan yang dinyatakan atau tersirat. oleh pernyataan berwawasan ke depan seperti itu. Oleh karena itu, pembaca tidak boleh menempatkan\n"
 "    ketergantungan yang tidak semestinya pada pernyataan berwawasan ke depan. Tidak ada representasi atau jaminan yang dibuat untuk kinerja masa depan atau pernyataan berwawasan ke depan tersebut."
 
 #: templates/whitepaper/disclaimer.html:11
-msgid ""
-"This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
+msgid "This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
 "    the most up to date information on our product development and business strategy, please refer to our website at originprotocol.com. For the latest technical\n"
 "    information, please reference our Github account at <a href='https://github.com/OriginProtocol' target='_blank' rel='noreferrer noopener'>www.github.com/OriginProtocol</a>. To use our flagship marketplace application, please download our mobile apps\n"
 "    (<a href='https://www.originprotocol.com/mobile' target='_blank'>www.originprotocol.com/mobile</a>) or visit our DApp ((<a href='https://www.shoporigin.com' target='_blank' rel='noreferrer noopener'>www.shoporigin.com</a>) with a web3-enabled DApp browser.\n"
 "    To use our decentralized Shopify alternative, visit <a href='https://originswag.eth.link' target='_blank' rel='noreferrer noopener'>originswag.eth.link</a>."
-msgstr ""
-"Buku putih ini pertama kali diterbitkan pada bulan September 2017, sebelum Origin Platform dibangun dan digunakan di Ethereum Mainnet pada bulan Oktober 2018. Untuk\n"
+msgstr "Buku putih ini pertama kali diterbitkan pada bulan September 2017, sebelum Origin Platform dibangun dan digunakan di Ethereum Mainnet pada bulan Oktober 2018. Untuk\n"
 "    informasi terkini tentang pengembangan produk dan strategi bisnis kami, silakan merujuk ke situs web kami di originprotocol. com. Untuk informasi teknis\n"
 "    terbaru, silakan merujuk akun Github kami di <a href='https://github.com/OriginProtocol' target='_blank' rel='noreferrer noopener'>www.github.com/OriginProtocol</a>. Untuk menggunakan aplikasi pasar unggulan kami, silakan unduh aplikasi seluler kami\n"
 "    (<a href='https://www.originprotocol.com/mobile' target='_blank'>www.originprotocol.com/mobile</a>) atau kunjungi DApp kami ((<a href='https://www.shoporigin.com' target='_blank' rel='noreferrer noopener'>www.shoporigin.com</a>) dengan browser DApp yang mendukung web3.\n"
@@ -2160,14 +1988,12 @@ msgid "Executive Summary"
 msgstr "Ringkasan bisnis plan"
 
 #: templates/whitepaper/exec-summary.html:4
-msgid ""
-"Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
+msgid "Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
 "    fractional use goods and services (car-sharing, service-based tasks, home-sharing, etc.) to transact on\n"
 "    the distributed, open web. Using the Ethereum blockchain and Interplanetary File System (IPFS), the\n"
 "    platform and its community participants can interact in a peer-to-peer fashion, allowing for the creation and booking of\n"
 "    services and goods without traditional intermediaries. "
-msgstr ""
-"Origin adalah platform sumber terbuka yang memungkinkan penciptaan pasar peer-to-peer dan aplikasi e-commerce. The Origin Platform awalnya menargetkan ekonomi berbagi global, yang memungkinkan pembeli dan penjual\n"
+msgstr "Origin adalah platform sumber terbuka yang memungkinkan penciptaan pasar peer-to-peer dan aplikasi e-commerce. The Origin Platform awalnya menargetkan ekonomi berbagi global, yang memungkinkan pembeli dan penjual\n"
 "    barang dan layanan penggunaan fraksional (pembagian mobil, tugas berbasis layanan, pembagian rumah, dll.) Untuk bertransaksi pada\n"
 "    web terbuka yang didistribusikan. Menggunakan blockchain Ethereum dan Sistem File Antarplanet (IPFS), platform\n"
 "    dan peserta komunitasnya dapat berinteraksi secara peer-to-peer, memungkinkan untuk membuat dan memesan\n"
@@ -2399,8 +2225,8 @@ msgid "Origin Identity Contract"
 msgstr "Kontrak Identitas Asal"
 
 #: templates/whitepaper/platform.html:61
-msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers."
-msgstr ""
+msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
+msgstr "Data pengguna dan transaksi disimpan di blockchain Ethereum dan IPFS. Ini berarti bahwa pihak ketiga dapat meminta blockchain Ethereum publik dan jaringan IPFS untuk daftar yang tersedia saat ini, riwayat transaksi sebelumnya, dan reputasi berbagai pembeli dan penjual ekosistem"
 
 #: templates/whitepaper/platform.html:63
 msgid "This creates several benefits. First, the corpus of data is open and immutable, which means it can be trusted without requiring the traditional third-party intermediary that imposes its “trust tax”. Second, it levels the competitive playing field and allows for new teams of developers, entrepreneurs, and organizations to compete with each other off of this shared data, and ultimately creates greater value for the platform. After our 1.0 launch, we anticipate that much of the development of the Origin Platform will come from third-party developers that make use of this open data layer."
@@ -2991,146 +2817,47 @@ msgstr "Dibangun di atas dua teknologi yang mendasari ini, Platform Asal telah h
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "Kami percaya bahwa sekarang adalah waktu yang tepat untuk mendorong pasar peer-to-peer dan pasar e-commerce untuk mengambil keuntungan dari permintaan pasar yang berkembang dan inovasi teknologi yang menjanjikan."
 
-#: views/web_views.py:65
+#: views/web_views.py:64
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "Origin Protocol adalah platform blockchain untuk membangun pasar yang terdesentralisasi"
 
-#: views/web_views.py:173
+#: views/web_views.py:172
 msgid "Missing email"
 msgstr "Email tidak ada"
 
-#: views/web_views.py:176
+#: views/web_views.py:175
 msgid "Invalid email"
 msgstr "Email tidak valid"
 
-#: views/web_views.py:228
+#: views/web_views.py:219
 msgid "Thanks for signing up!"
 msgstr "Terima kasih telah mendaftar!"
 
-#: views/web_views.py:241
+#: views/web_views.py:232
 msgid "Please enter your name"
 msgstr "Silakan masukkan nama anda"
 
-#: views/web_views.py:243
+#: views/web_views.py:234
 msgid "Please enter your email"
 msgstr "Silakan masukkan email anda"
 
-#: views/web_views.py:245
+#: views/web_views.py:236
 msgid "Select your country of citizenship"
 msgstr "Pilih negara kewarganegaraan Anda"
 
-#: views/web_views.py:247
+#: views/web_views.py:238
 msgid "Please enter your desired allocation"
 msgstr "Harap masukkan alokasi yang Anda inginkan"
 
-#: views/web_views.py:249
+#: views/web_views.py:240
 msgid "Select a currency"
 msgstr "Pilih mata uang"
 
-#: views/web_views.py:251
+#: views/web_views.py:242
 msgid "Please prove you are not a robot."
 msgstr "Tolong buktikan bahwa anda bukan robot."
 
-#: views/web_views.py:256
+#: views/web_views.py:247
 msgid "OK"
 msgstr "baik"
-
-#: views/web_views.py:267
-msgid "You have been unsubscribed"
-msgstr "Anda telah berhenti berlangganan"
-
-#: views/web_views.py:270
-msgid "Ooops, something went wrong"
-msgstr "Ooops, terdapat kesalahan"
-
-#~ msgid "It’s time to build the sharing economy without intermediaries"
-#~ msgstr ""
-
-#~ msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
-#~ msgstr ""
-
-#~ msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020."
-#~ msgstr ""
-
-#~ msgid "By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators."
-#~ msgstr ""
-
-#~ msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
-#~ msgstr ""
-
-#~ msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
-#~ msgstr ""
-
-#~ msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
-#~ msgstr ""
-
-#~ msgid "With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems."
-#~ msgstr ""
-
-#~ msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
-#~ msgstr ""
-
-#~ msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
-#~ msgstr ""
-
-#~ msgid "We have a large and growing community of developers and supporters"
-#~ msgstr ""
-
-#~ msgid "Origin Protocol - Investors"
-#~ msgstr ""
-
-#~ msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
-#~ msgstr ""
-
-#~ msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
-#~ msgstr ""
-
-#~ msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
-#~ msgstr ""
-
-#~ msgid "\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\""
-#~ msgstr ""
-
-#~ msgid "\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\""
-#~ msgstr ""
-
-#~ msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
-#~ msgstr ""
-
-#~ msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
-#~ msgstr ""
-
-#~ msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
-#~ msgstr ""
-
-#~ msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
-#~ msgstr ""
-
-#~ msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
-#~ msgstr ""
-
-#~ msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
-#~ msgstr ""
-
-#~ msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
-#~ msgstr ""
-
-#~ msgid "Our platform will power decentralized marketplaces everywhere"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Origin Protocol -\n"
-#~ "Team"
-#~ msgstr ""
-#~ "Protokol Asal -\n"
-#~ "Tim"
-
-#~ msgid "Origin Protocol - Tokens"
-#~ msgstr "Protokol Asal - Token"
-
-#~ msgid "The sharing economy without intermediaries"
-#~ msgstr "Ekonomi berbagi tanpa perantara"
-
-#~ msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
-#~ msgstr "Data pengguna dan transaksi disimpan di blockchain Ethereum dan IPFS. Ini berarti bahwa pihak ketiga dapat meminta blockchain Ethereum publik dan jaringan IPFS untuk daftar yang tersedia saat ini, riwayat transaksi sebelumnya, dan reputasi berbagai pembeli dan penjual ekosistem"
 
