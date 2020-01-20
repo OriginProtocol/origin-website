@@ -10,7 +10,7 @@ from database import db, db_models
 
 from config import constants, universal, partner_details
 from flask import (jsonify, redirect, render_template,
-                   request, flash, g, url_for, Response,
+                   request, flash, g, url_for, Response, make_response,
                    stream_with_context, session)
 from flask_babel import gettext, Babel, Locale
 from util.recaptcha import ReCaptcha
@@ -270,6 +270,19 @@ def unsubscribe():
         feedback = gettext('Ooops, something went wrong')
     flash(feedback)
     return redirect('/en/', code=302)
+
+# do not remove
+# used by coinmarketcap.com to calculate total supply and circulating supply of OGN
+@app.route('/total-ogn', methods=['GET'], strict_slashes=False)
+@app.route('/<lang_code>/total-ogn', methods=['GET'], strict_slashes=False)
+def total_ogn():
+    try:
+        response = requests.get('https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x8207c1ffc5b6804f6024322ccf34f29c3541ae26&apikey=%s', constants.ETHERSCAN_KEY)
+        wei = response.json()['result']
+        ether = int(wei[:-18])
+        return make_response(ether, 200)
+    except: 
+        return make_response('1000000000', 200)
 
 @app.route('/social-stats', methods=['GET'], strict_slashes=False)
 @app.route('/<lang_code>/social-stats', methods=['GET'], strict_slashes=False)
