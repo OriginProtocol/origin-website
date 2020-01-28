@@ -105,6 +105,20 @@ sites.append({
     'json': False,
 })
 sites.append({
+    'name': 'Telegram (Announcements)',
+    'url': 'https://t.me/originprotocolannouncements',
+    'selector': 'div.tgme_page_extra',
+    'pattern': '([\d\s]+)\s*members',
+    'json': False,
+})
+sites.append({
+    'name': 'Telegram (Trading)',
+    'url': 'https://t.me/ogntrading',
+    'selector': 'div.tgme_page_extra',
+    'pattern': '([\d\s]+)\s*members',
+    'json': False,
+})
+sites.append({
     'name': 'Reddit',
     'url': 'https://old.reddit.com/r/originprotocol/',
     'selector': 'span.number',
