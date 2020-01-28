@@ -761,6 +761,12 @@ $(function() {
       link: "https://t.me/originprotocolindonesia",
       regionSpecific: true
     },
+    "Telegram (Russia)": {
+      img: "/static/img/about/russia-telegram.svg",
+      countLabel: "members",
+      link: "https://t.me/originprotocolrussia",
+      regionSpecific: true
+    },
     Wechat: {
       img: "/static/img/about/china-wechat.svg",
       countLabel: "followers",
