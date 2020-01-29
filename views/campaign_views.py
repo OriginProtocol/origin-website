@@ -158,6 +158,7 @@ def partner(partner_code):
         referral_code=partner_code,
         app_store_url=universal.IOS_URL,
         play_store_url=universal.ANDROID_URL,
+        hide_ogn_banner=True,
         **conf
     )
 
@@ -198,5 +199,6 @@ def referral(referral_code):
         play_store_url=universal.ANDROID_URL,
         reward_value=1000,  # TODO: Is this legit?
         friend_name=friend_name,
+        hide_ogn_banner=True,
         friend_avatar=friend_avatar or '/static/img/profile-pic-placeholder.svg'
     )
