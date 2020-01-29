@@ -416,6 +416,11 @@ def dapp():
 def rewards():
     return redirect(universal.REWARDS_URL, code=301)
 
+@app.route('/reward/swag/fabruary_2020', strict_slashes=False)
+@app.route('/<lang_code>/reward/swag/fabruary_2020', strict_slashes=False)
+def swagRewards():
+    return render_template('swagStore.html', hide_ogn_banner=True)
+
 @app.route('/partners', strict_slashes=False)
 @app.route('/<lang_code>/partners', strict_slashes=False)
 def partners():
