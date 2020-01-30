@@ -714,19 +714,19 @@ $(function() {
   var hardcodedStats = [
     {
       name: "Discord",
-      subscribed_count: 3549
+      subscribed_count: 4240
     },
     {
       name: "Wechat",
-      subscribed_count: 1100
+      subscribed_count: 2531
     },
     {
       name: "Vk",
-      subscribed_count: 333
+      subscribed_count: 527
     },
     {
       name: "Blockfolio",
-      subscribed_count: 41163
+      subscribed_count: 64185
     }
   ];
 
@@ -759,6 +759,12 @@ $(function() {
       img: "/static/img/about/indonesia-telegram.svg",
       countLabel: "members",
       link: "https://t.me/originprotocolindonesia",
+      regionSpecific: true
+    },
+    "Telegram (Russia)": {
+      img: "/static/img/about/russia-telegram.svg",
+      countLabel: "members",
+      link: "https://t.me/originprotocolrussia",
       regionSpecific: true
     },
     Wechat: {
