@@ -167,6 +167,7 @@ def unsubscribe(email):
         return
 
     me.unsubscribed = True
+    db.session.add(me)
     db.session.commit()
 
 def send_one_off(email_type):
