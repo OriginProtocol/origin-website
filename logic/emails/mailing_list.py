@@ -164,8 +164,10 @@ def unsubscribe(email):
 
     me = db_models.EmailList.query.filter_by(email=email.lower()).first()
     if not me:
+        print("returning not me")
         return
 
+    print("unsubscribing...")
     me.unsubscribed = True
     db.session.add(me)
     db.session.commit()
