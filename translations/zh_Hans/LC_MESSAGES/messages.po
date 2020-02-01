@@ -1,18 +1,20 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  originprotocolwebsite\n"
+"Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 23:08+0000\n"
-"PO-Revision-Date: 2020-01-06 12:54+0000\n"
+"POT-Creation-Date: 2020-02-01 01:30+0000\n"
+"PO-Revision-Date: 2020-02-01 01:44\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh_Hans_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: originprotocolwebsite\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/messages.pot\n"
+"Language: zh_CN\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -22,20 +24,20 @@ msgstr "技术合作伙伴"
 msgid "Building on Origin"
 msgstr "在Origin上进行开发"
 
-#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:183
+#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:186
 #: views/web_views.py:262
 msgid "Please enter a valid email address"
 msgstr "请输入有效的邮箱地址"
 
-#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:200
+#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:203
 msgid "Ooops! Something went wrong."
 msgstr "哎呀！出了些问题。"
 
-#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:211
+#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:214
 msgid "Thanks! We'll be in touch soon."
 msgstr "谢谢！我们会尽快联系您的。"
 
-#: logic/emails/mailing_list.py:186
+#: logic/emails/mailing_list.py:189
 msgid "Please enter a valid website address"
 msgstr "请输入有效的邮箱地址"
 
@@ -55,26 +57,24 @@ msgstr "回到首页"
 msgid "Origin Protocol - About"
 msgstr ""
 
-#: templates/about.html:2
-msgid ""
-"Origin Protocol enables\n"
+#: templates/about.html:2 templates/swagStore.html:2
+msgid "Origin Protocol enables\n"
 "true peer-to-peer commerce."
 msgstr ""
 
 #: templates/about.html:12 templates/investors.html:13
-#: templates/landing.html:18 templates/team.html:13 templates/video.html:20
+#: templates/landing.html:16 templates/team.html:15 templates/video.html:18
 msgid "Exit full screen"
 msgstr "退出全屏"
 
 #: templates/about.html:28
-msgid ""
-"It’s time to build the sharing economy without\n"
+msgid "It’s time to build the sharing economy without\n"
 "        intermediaries"
 msgstr ""
 
 #: templates/about.html:37 templates/investors.html:37
-#: templates/landing.html:32 templates/landing.html:194 templates/team.html:38
-#: templates/video.html:32
+#: templates/landing.html:30 templates/landing.html:197 templates/team.html:40
+#: templates/video.html:30
 msgid "Watch the video"
 msgstr "观看视频"
 
@@ -83,55 +83,50 @@ msgid "Origin enables true peer-to-peer commerce"
 msgstr "Origin实现了真正的点对点共享经济"
 
 #: templates/about.html:48
-msgid ""
-"Origin is a startup headquartered in San Francisco, but we also\n"
+msgid "Origin is a startup headquartered in San Francisco, but we also\n"
 "      have team members in China, Korea, Russia, India, New Zealand, and even\n"
 "      Slovenia. Our 800+ investors include top venture capitalists and\n"
 "      cryptocurrency funds all over the world."
 msgstr ""
 
-#: templates/about.html:57 templates/landing.html:173
+#: templates/about.html:57 templates/landing.html:176
 msgid "Learn more about our team"
 msgstr "了解更多关于团队的信息"
 
-#: templates/about.html:60 templates/landing.html:201
+#: templates/about.html:60 templates/landing.html:204
 msgid "Learn more about our investors"
 msgstr "了解投资方"
 
-#: templates/about.html:80 templates/landing.html:137
+#: templates/about.html:80 templates/landing.html:140
 msgid "Lower Fees"
 msgstr "降低费用"
 
 #: templates/about.html:82
 #, python-format
-msgid ""
-"Centralized intermediaries often charge 20-30%% in\n"
+msgid "Centralized intermediaries often charge 20-30%% in\n"
 "          transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber\n"
 "          took home a monumental $11.8B in fees in 2018. Total sharing economy\n"
 "          fees are expected to cross $40B by 2020."
 msgstr ""
 
 #: templates/about.html:88
-msgid ""
-"By removing the middlemen, Origin removes these fees.\n"
+msgid "By removing the middlemen, Origin removes these fees.\n"
 "          Buyers and sellers can now share the savings from the fees that are no\n"
 "          longer paid to traditional marketplace operators."
 msgstr ""
 
-#: templates/about.html:146 templates/landing.html:144
+#: templates/about.html:146 templates/landing.html:147
 msgid "Better Incentives"
 msgstr "更好的激励措施"
 
 #: templates/about.html:148
-msgid ""
-"Uber and Lyft recently IPOed. WeWork and Airbnb are soon to\n"
+msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to\n"
 "          follow suit. None of the early participants on these platforms\n"
 "          benefited despite being critical to their success."
 msgstr ""
 
 #: templates/about.html:153
-msgid ""
-"In contrast, Origin enables everyone to own a piece of the\n"
+msgid "In contrast, Origin enables everyone to own a piece of the\n"
 "          network. Buyers and sellers can earn Origin Tokens (OGN) simply by\n"
 "          using Origin-enabled applications to transact with one another.\n"
 "          Developers, affiliates, and marketplace operators can earn OGN by\n"
@@ -140,20 +135,18 @@ msgid ""
 "          health and growth of Origin. "
 msgstr ""
 
-#: templates/about.html:174 templates/landing.html:151
+#: templates/about.html:174 templates/landing.html:154
 msgid "Increased Access"
 msgstr "提供更多商品服务"
 
 #: templates/about.html:176
-msgid ""
-"2 billion people around the world are currently unbanked.\n"
+msgid "2 billion people around the world are currently unbanked.\n"
 "          They do not have checking accounts, credit cards, AliPay, or Apple\n"
 "          Pay."
 msgstr ""
 
 #: templates/about.html:181
-msgid ""
-"With the advent of cryptocurrencies and the proliferation\n"
+msgid "With the advent of cryptocurrencies and the proliferation\n"
 "          of inexpensive smartphones, now is the time to enable the unbanked to\n"
 "          participate in the new Internet economy. Users from all over the world\n"
 "          are now able to transact with each other on Origin-powered\n"
@@ -161,19 +154,17 @@ msgid ""
 "          systems."
 msgstr ""
 
-#: templates/about.html:228 templates/landing.html:158
+#: templates/about.html:228 templates/landing.html:161
 msgid "More Resilience"
 msgstr "更具韧性"
 
 #: templates/about.html:230
-msgid ""
-"Airbnb is heavily regulated or banned in cities like Paris,\n"
+msgid "Airbnb is heavily regulated or banned in cities like Paris,\n"
 "          Berlin, Tokyo, New York, and even its home city of San Francisco."
 msgstr ""
 
 #: templates/about.html:234
-msgid ""
-"Decentralized marketplaces promote open and free commerce.\n"
+msgid "Decentralized marketplaces promote open and free commerce.\n"
 "          Unlike centralized alternatives, they are not single points of failure\n"
 "          and can't be banned or shut down. Decentralized commerce is more\n"
 "          resilient and promotes efficient markets."
@@ -184,8 +175,7 @@ msgid "Origin in the Press"
 msgstr "有关Origin的新闻"
 
 #: templates/about.html:364
-msgid ""
-"We have a large and growing community of developers and\n"
+msgid "We have a large and growing community of developers and\n"
 "      supporters"
 msgstr ""
 
@@ -201,22 +191,33 @@ msgstr "Origin 起源协议 - 电商品台可接受使用政策"
 msgid "Marketplace Acceptable Use Policy"
 msgstr "电商品台可接受使用政策"
 
-#: templates/countdown-bar.html:6 templates/landing.html:44
-#: templates/ogn-token.html:12 templates/tokens.html:16
-msgid "Origin Tokens are launching soon!"
-msgstr "Origin 即将发币了！"
+#: templates/countdown-bar.html:11 templates/countdown-hero-banner.html:33
+msgid "Origin Tokens (OGN) have launched!"
+msgstr ""
 
-#: templates/countdown-bar.html:8
-msgid "Exclusively on "
-msgstr "独家在 "
+#: templates/countdown-bar.html:20 templates/countdown-hero-banner.html:53
+msgid "Buy OGN on Binance"
+msgstr ""
 
-#: templates/countdown-bar.html:21
+#: templates/countdown-bar.html:26 templates/countdown-hero-banner.html:67
+msgid "Exclusively on"
+msgstr ""
+
+#: templates/countdown-bar.html:32 templates/countdown-hero-banner.html:72
 msgid "Subscribe to stay in touch."
 msgstr "订阅以保持联系。"
 
-#: templates/countdown-bar.html:23
+#: templates/countdown-bar.html:40 templates/countdown-hero-banner.html:80
 msgid "Your email"
 msgstr "您的邮件地址"
+
+#: templates/countdown-hero-banner.html:37 templates/tokens.html:5
+msgid "Origin Tokens (OGN) are launching soon!"
+msgstr ""
+
+#: templates/countdown-hero-banner.html:61
+msgid "Learn more"
+msgstr ""
 
 #: templates/creator.html:3 templates/creator.html:5
 msgid "Origin Protocol - Creator"
@@ -548,7 +549,7 @@ msgstr "下载APP"
 msgid "Stay in touch"
 msgstr "保持联系"
 
-#: templates/footer.html:7 templates/landing.html:45
+#: templates/footer.html:7 templates/landing.html:53
 msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr "订阅我们的快讯和我们保持联系。您的邮件将被保密。"
 
@@ -556,125 +557,127 @@ msgstr "订阅我们的快讯和我们保持联系。您的邮件将被保密。
 msgid "Enter your email"
 msgstr "输入电邮地址"
 
-#: templates/footer.html:18 templates/footer.html:96 templates/mobile.html:31
+#: templates/footer.html:18 templates/footer.html:99 templates/mobile.html:31
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 
-#: templates/footer.html:21 templates/footer.html:99 templates/tos.html:16
+#: templates/footer.html:21 templates/footer.html:102
+msgid "Help"
+msgstr ""
+
+#: templates/footer.html:24 templates/footer.html:105 templates/tos.html:16
 msgid "Terms of Service"
 msgstr "服务条款"
 
-#: templates/footer.html:24 templates/footer.html:102 templates/privacy.html:16
+#: templates/footer.html:27 templates/footer.html:108 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr "隐私权政策"
 
-#: templates/footer.html:33
+#: templates/footer.html:36
 msgid "Overview"
 msgstr "简介"
 
-#: templates/footer.html:34
+#: templates/footer.html:37
 msgid "iOS"
 msgstr "iOS版"
 
-#: templates/footer.html:35
+#: templates/footer.html:38
 msgid "Android"
 msgstr "安卓版"
 
-#: templates/footer.html:36
+#: templates/footer.html:39
 msgid "DApp"
 msgstr "DApp"
 
-#: templates/footer.html:37
+#: templates/footer.html:40
 msgid "Creator"
 msgstr "市场创建工具"
 
-#: templates/footer.html:41
+#: templates/footer.html:44
 msgid "Videos"
 msgstr "视频"
 
-#: templates/footer.html:42 templates/navbar.html:84
+#: templates/footer.html:45 templates/navbar.html:84
 #: templates/whitepaper.html:19
 msgid "Whitepaper"
 msgstr "白皮书"
 
-#: templates/footer.html:43
+#: templates/footer.html:46
 msgid "Developers"
 msgstr "开发 人员"
 
-#: templates/footer.html:44
+#: templates/footer.html:47
 msgid "GitHub"
 msgstr "Github"
 
-#: templates/footer.html:45
+#: templates/footer.html:48
 msgid "Docs"
 msgstr "文档"
 
-#: templates/footer.html:49 templates/navbar.html:69
+#: templates/footer.html:52 templates/navbar.html:69
 msgid "About"
 msgstr "关于我们"
 
-#: templates/footer.html:50 templates/navbar.html:72
+#: templates/footer.html:53 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:44 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr "团队"
 
-#: templates/footer.html:51 templates/navbar.html:75
+#: templates/footer.html:54 templates/navbar.html:75
 msgid "Investors"
 msgstr "投资方"
 
-#: templates/footer.html:52
+#: templates/footer.html:55
 msgid "OGN"
 msgstr "OGN"
 
-#: templates/footer.html:53
+#: templates/footer.html:56
 msgid "Jobs"
 msgstr "工作"
 
-#: templates/footer.html:57
+#: templates/footer.html:60
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:60
+#: templates/footer.html:63
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:63
+#: templates/footer.html:66
 msgid "Medium"
 msgstr "Medium"
 
-#: templates/footer.html:66
+#: templates/footer.html:69
 msgid "Youtube"
 msgstr "Youtube"
 
-#: templates/footer.html:69
+#: templates/footer.html:72
 msgid "Instagram"
 msgstr "Instagram"
 
-#: templates/footer.html:72
+#: templates/footer.html:75
 msgid "Telegram"
 msgstr "电报"
 
-#: templates/footer.html:75
+#: templates/footer.html:78
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:78
+#: templates/footer.html:81
 msgid "Discord"
 msgstr "Discord"
 
-#: templates/footer.html:88
+#: templates/footer.html:91
 msgid "VK"
 msgstr "VK"
 
 #: templates/investors.html:1
-msgid ""
-"Origin Protocol -\n"
+msgid "Origin Protocol -\n"
 "Investors"
 msgstr ""
 
 #: templates/investors.html:2
-msgid ""
-"Origin\n"
+msgid "Origin\n"
 "Protocol is backed by top investors from all over the world"
 msgstr ""
 
@@ -687,8 +690,7 @@ msgid "Fundraising"
 msgstr "融资"
 
 #: templates/investors.html:47
-msgid ""
-"We are a well-capitalized startup that has sold tokens in\n"
+msgid "We are a well-capitalized startup that has sold tokens in\n"
 "            three previous rounds to build our platform."
 msgstr ""
 
@@ -709,8 +711,7 @@ msgid "investors"
 msgstr "投资者"
 
 #: templates/investors.html:66
-msgid ""
-"Interested in getting a stake in Origin? Sign up to\n"
+msgid "Interested in getting a stake in Origin? Sign up to\n"
 "            receive the latest updates."
 msgstr ""
 
@@ -719,8 +720,7 @@ msgid "Featured Investor"
 msgstr "项目投资方"
 
 #: templates/investors.html:103
-msgid ""
-"\"The reason we invested in Origin was\n"
+msgid "\"The reason we invested in Origin was\n"
 "                      primarily because of the team. They have amazing\n"
 "                      backgrounds and they come from iconic consumer\n"
 "                      companies.\""
@@ -735,8 +735,7 @@ msgid "Partner, Foundation Capital"
 msgstr "Foundation Capital 资本合伙人"
 
 #: templates/investors.html:142
-msgid ""
-"\"We're talking about over 100,000 members\n"
+msgid "\"We're talking about over 100,000 members\n"
 "                      around the world that are hard-core fans of Origin. Origin\n"
 "                      has done a tremendous job executing at a global\n"
 "                      scale.\""
@@ -751,15 +750,14 @@ msgid "Founding Partner, Oyster VC"
 msgstr "Oyster VC 创始合伙人"
 
 #: templates/investors.html:170
-msgid ""
-"\"Origin stands out from any of the other\n"
+msgid "\"Origin stands out from any of the other\n"
 "                      decentralized applications that we've invested into,\n"
 "                      because they've gone out there and built probably the best\n"
 "                      community that we've seen. For us, that was a game\n"
 "                      changer.\""
 msgstr ""
 
-#: templates/investors.html:178 templates/team.html:631
+#: templates/investors.html:178 templates/team.html:633
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
@@ -768,8 +766,7 @@ msgid "Co-investment Officer at Pantera Capital"
 msgstr "Pantera Capital 联合首席投资官"
 
 #: templates/investors.html:204
-msgid ""
-"We are backed by top venture capital firms and investors\n"
+msgid "We are backed by top venture capital firms and investors\n"
 "            in Silicon Valley and around the world"
 msgstr ""
 
@@ -778,8 +775,7 @@ msgid "Individual Investors"
 msgstr "个人投资者"
 
 #: templates/investors.html:249
-msgid ""
-"We are supported by some of the best angel investors and\n"
+msgid "We are supported by some of the best angel investors and\n"
 "            previous founders in Silicon Valley."
 msgstr ""
 
@@ -855,159 +851,167 @@ msgstr "起源协议"
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "没有中间人的共享经济。 Origin是使用以太坊区块链和IPFS创建共享经济市场的协议。"
 
-#: templates/landing.html:28
+#: templates/landing.html:26
 msgid "The blockchain platform for building decentralized marketplaces"
 msgstr "Origin 允许任何人在区块链上建立完全去中心化的市场"
 
+#: templates/landing.html:43
+msgid "Origin Tokens have launched!"
+msgstr ""
+
+#: templates/landing.html:45
+msgid "Participate in the Origin Token (OGN) distribution"
+msgstr ""
+
 #: templates/components/presale-form.html:9
-#: templates/components/presale-form.html:10 templates/landing.html:53
+#: templates/components/presale-form.html:10 templates/landing.html:56
 #: templates/partners.html:133 templates/tokens.html:46
 #: templates/tokens.html:47
 msgid "Email"
 msgstr "电子邮件"
 
-#: templates/landing.html:61
+#: templates/landing.html:64
 msgid "Buy and sell on Origin"
 msgstr "在Origin上买卖"
 
-#: templates/landing.html:62
+#: templates/landing.html:65
 msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr "Origin平台将为数百个点对点去中心化市场提供支持。立即下载我们的旗舰版应用。"
 
-#: templates/landing.html:66
+#: templates/landing.html:69
 msgid "Origin Marketplace"
 msgstr "Origin 旗舰版应用"
 
-#: templates/landing.html:67 templates/mobile.html:18
+#: templates/landing.html:70 templates/mobile.html:18
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr "使用建立在Origin平台之上的旗舰版应用租个假日屋，购买演唱会门票或雇佣承包商。"
 
-#: templates/landing.html:75 templates/mobile.html:27
+#: templates/landing.html:78 templates/mobile.html:27
 msgid "Download Android App"
 msgstr "下载安卓APP"
 
-#: templates/landing.html:77
+#: templates/landing.html:80
 msgid "Visit us on the web"
 msgstr "使用桌面版"
 
-#: templates/landing.html:78
+#: templates/landing.html:81
 msgid "shoporigin.com"
 msgstr "shoporigin.com"
 
-#: templates/landing.html:81
+#: templates/landing.html:84
 msgid "Available on"
 msgstr "也可以通过以下方式使用Origin"
 
-#: templates/landing.html:92
+#: templates/landing.html:95
 msgid "The sharing economy is a massive opportunity waiting to be disrupted"
 msgstr "共享经济带来了非常大的机遇"
 
-#: templates/landing.html:93
+#: templates/landing.html:96
 msgid "Gross bookings are expected to reach $335B by 2025"
 msgstr "截至 2025 年, 全球共享经济的预订额将达到3350亿美元"
 
-#: templates/landing.html:100
+#: templates/landing.html:103
 msgid "Percentage of total value of a booking Airbnb charged guests"
 msgstr "Airbnb对于每笔订单，对房客收的费用"
 
-#: templates/landing.html:105
+#: templates/landing.html:108
 msgid "Uber's average take per ride"
 msgstr "Uber对于每笔订单收取的费用"
 
-#: templates/landing.html:114
+#: templates/landing.html:117
 msgid "Drivers that rated Uber under 3 stars out of 5 for earnings satisfaction"
 msgstr "对于收入满意度而给Uber评三星（满分五星）以下的司机"
 
-#: templates/landing.html:118
+#: templates/landing.html:121
 msgid "Uber driver churn by quarter"
 msgstr "Uber每季度的司机流失率"
 
-#: templates/landing.html:122
+#: templates/landing.html:125
 msgid "Airbnb Japan home-share listings removed in 2018"
 msgstr "2018年日本Airbnb删除的服务列表"
 
-#: templates/landing.html:130
+#: templates/landing.html:133
 msgid "Decentralized marketplaces are inevitable"
 msgstr "去中心化的市场是必然的趋势"
 
-#: templates/landing.html:131
+#: templates/landing.html:134
 msgid "For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen."
 msgstr "有史以来第一次，卖家和买家可以在没有中间商的情况下安全的进行交易。"
 
-#: templates/landing.html:138
+#: templates/landing.html:141
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed."
 msgstr "通过去除中间商，买卖双方节省了20-30%%的中介费。"
 
-#: templates/landing.html:145
+#: templates/landing.html:148
 msgid "Everyone can own a stake in the network by contributing to its growth."
 msgstr "所有为网络创造的价值的网络参与者都可以拥有网络的股份。"
 
-#: templates/landing.html:152
+#: templates/landing.html:155
 msgid "2 billion unbanked people can access new markets globally."
 msgstr "为20亿没有银行账户的人开辟新市场."
 
-#: templates/landing.html:159
+#: templates/landing.html:162
 msgid "Decentralized marketplaces can’t be banned or shut down."
 msgstr "真正去中心化的平台是不能被禁止或关闭的。"
 
-#: templates/landing.html:165
+#: templates/landing.html:168
 msgid "Origin has a world-class team"
 msgstr "Origin有一个世界级的团队"
 
-#: templates/landing.html:166
+#: templates/landing.html:169
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr "我们的团队领导层由众多连续创业者组成,他们包括Paypal创始人、YouTube的几位早期员工以及Google和Dropbox的工程经理。"
 
-#: templates/landing.html:190
+#: templates/landing.html:193
 msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
 msgstr "我们得到了全球顶级风险投资公司和顶级硅谷投资者的支持"
 
-#: templates/landing.html:206
+#: templates/landing.html:209
 msgid "Featured Partner"
 msgstr "项目合作伙伴"
 
-#: templates/landing.html:207
+#: templates/landing.html:210
 msgid "Trips Community is building a homesharing DApp in Italy with 3,000 hosts."
 msgstr "Trips Community是一家拥有3000名业主的意大利房屋分享Dapp应用。"
 
-#: templates/landing.html:210
+#: templates/landing.html:213
 msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
 msgstr "“短期租赁市场的高速增长促进了业务创新和市场竞争。中立和开放的平台能使租客、业主和渠道合作伙伴共同受益，增强竞争力。我们很高兴能与Origin合作，在家庭居住领域掀起一股创新的商务热潮”。"
 
-#: templates/landing.html:211
+#: templates/landing.html:214
 msgid "Luca De Giglio"
 msgstr "Luca De Giglio"
 
-#: templates/landing.html:212
+#: templates/landing.html:215
 msgid "Founder, Trips Community"
 msgstr "Trips Community 创始人"
 
-#: templates/landing.html:219
+#: templates/landing.html:222
 msgid "Featured Videos"
 msgstr "特色视频"
 
-#: templates/landing.html:238
+#: templates/landing.html:241
 msgid "Watch more videos"
 msgstr "更多视频"
 
-#: templates/landing.html:242
+#: templates/landing.html:245
 msgid "Recent News"
 msgstr "最新消息"
 
-#: templates/landing.html:248
+#: templates/landing.html:251
 msgid "Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin"
 msgstr "Rodolfo Gonzalez讨论Foundation Capital为什么投资Origin"
 
-#: templates/landing.html:254
+#: templates/landing.html:257
 msgid "Live on TV with HKB News in Korea"
 msgstr "韩国HKB News频道现场直播"
 
-#: templates/landing.html:260
+#: templates/landing.html:263
 msgid "Doo Wan Nam Discusses Origin’s Partnership with MakerDAO"
 msgstr "Doo Wan Nam 讨论与Origin的合作"
 
-#: templates/landing.html:265
+#: templates/landing.html:268
 msgid "Read more on Medium"
 msgstr "在Medium上了解更多"
 
@@ -1032,96 +1036,82 @@ msgid "Shop"
 msgstr "浏览"
 
 #: templates/ogn-token.html:1
-msgid ""
-"Origin Protocol - OGN\n"
+msgid "Origin Protocol - OGN\n"
 "Token"
 msgstr ""
 
 #: templates/ogn-token.html:2
-msgid ""
-"Origin Tokens\n"
+msgid "Origin Tokens\n"
 "(OGN) ensure the health and growth of the Origin network."
 msgstr ""
 
-#: templates/ogn-token.html:14
-msgid ""
-"Subscribe to stay in touch. Your email will be kept\n"
-"        private."
-msgstr ""
-
-#: templates/ogn-token.html:39 templates/whitepaper/platform.html:109
+#: templates/ogn-token.html:12 templates/whitepaper/platform.html:109
 msgid "Origin Rewards"
 msgstr "Origin 奖励计划"
 
-#: templates/ogn-token.html:41
-msgid ""
-"Earn your stake in the Origin network today. Users can\n"
+#: templates/ogn-token.html:14
+msgid "Earn your stake in the Origin network today. Users can\n"
 "            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
 "            friends and family to Origin, sharing news about Origin on social\n"
 "            media, and making purchases from our featured sellers."
 msgstr ""
 
-#: templates/ogn-token.html:46
+#: templates/ogn-token.html:19
 msgid "Not available in the United States"
 msgstr "在美国地区不可参与"
 
-#: templates/ogn-token.html:85
+#: templates/ogn-token.html:58
 msgid "Commissions"
 msgstr "手续费"
 
-#: templates/ogn-token.html:87
-msgid ""
-"Promote your listings across the Origin flagship app and\n"
+#: templates/ogn-token.html:60
+msgid "Promote your listings across the Origin flagship app and\n"
 "            third-party apps with Origin Commissions. Pay with OGN to get\n"
 "            featured prominently in search results. Application developers and\n"
 "            marketplace operators earn Origin Tokens (OGN) by helping sellers\n"
 "            complete their sales."
 msgstr ""
 
-#: templates/ogn-token.html:101
+#: templates/ogn-token.html:74
 msgid "Payments"
 msgstr "支付"
 
-#: templates/ogn-token.html:103
-msgid ""
-"Use the Origin Tokens (OGN) that you've earned in Origin\n"
+#: templates/ogn-token.html:76
+msgid "Use the Origin Tokens (OGN) that you've earned in Origin\n"
 "            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
 "            the network by accepting OGN as a preferred payment method."
 msgstr ""
 
-#: templates/ogn-token.html:124
+#: templates/ogn-token.html:97
 msgid "Research and Development"
 msgstr "研究与开发"
 
-#: templates/ogn-token.html:130
+#: templates/ogn-token.html:103
 msgid "Origin Nodes"
 msgstr "Origin节点"
 
-#: templates/ogn-token.html:132
-msgid ""
-"Stake your OGN to run an Origin Node and earn more OGN by\n"
+#: templates/ogn-token.html:105
+msgid "Stake your OGN to run an Origin Node and earn more OGN by\n"
 "            helping to replicate and validate profile and listing data on the\n"
 "            network."
 msgstr ""
 
-#: templates/ogn-token.html:141
+#: templates/ogn-token.html:114
 msgid "Origin Relayer"
 msgstr "Origin 中继器"
 
-#: templates/ogn-token.html:143
-msgid ""
-"Developers can pay for usage of Origin Meta Transactions\n"
+#: templates/ogn-token.html:116
+msgid "Developers can pay for usage of Origin Meta Transactions\n"
 "            Relayers with OGN. Meta Transactions reduce user friction and\n"
 "            encourage adoption and retention."
 msgstr ""
 
-#: templates/ogn-token.html:152
+#: templates/ogn-token.html:125
 msgid "Governance"
 msgstr "治理模式"
 
-#: templates/ogn-token.html:154
-msgid ""
-"Everyone has a vote on the Origin Platform. Token holders\n"
+#: templates/ogn-token.html:127
+msgid "Everyone has a vote on the Origin Platform. Token holders\n"
 "            will participate in important community votes to define future\n"
 "            initiatives."
 msgstr ""
@@ -1504,343 +1494,368 @@ msgstr "或"
 msgid "Origin Protocol - imToken"
 msgstr "Origin Protocol - imToken"
 
-#: templates/team.html:1
+#: templates/swagStore.html:1
+msgid "Origin Protocol - February Rewards"
+msgstr ""
+
+#: templates/swagStore.html:151
+msgid "February 2020"
+msgstr ""
+
+#: templates/swagStore.html:154
+msgid "Shop at the Origin Swag Store and Earn OGN"
+msgstr ""
+
+#: templates/swagStore.html:155
+msgid "For this month’s Origin Rewards campaign, it’s all about our Origin Swag Store. To celebrate the launch and our recent OGN listing on Binance, we have committed a total of 15,000 OGN to give away to our Origin community!"
+msgstr ""
+
+#: templates/swagStore.html:157 templates/swagStore.html:200
+msgid "Visit Origin Swag Store"
+msgstr ""
+
+#: templates/swagStore.html:161
+msgid "in total prizes"
+msgstr ""
+
+#: templates/swagStore.html:162
+msgid "Purchase your favorite items at the Origin Swag Store today and be entered for a chance to win up to 3,000 OGN. This campaign will last until Feb 29th 11:59PM PST, and there will be thirty lucky winners."
+msgstr ""
+
+#: templates/swagStore.html:202
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/swagStore.html:203
+msgid "Please note that Origin Rewards is currently available in most countries in the world. One notable exception is the United States & countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result."
+msgstr ""
+
+#: templates/swagStore.html:204
+msgid "Tokens earned in Feb will be distributed after the first week of March (subject to terms and conditions)."
+msgstr ""
+
+#: templates/swagStore.html:205
+msgid "Shop at the Origin Swag Store today, and enter for a chance to win up to 3,000 OGN!"
+msgstr ""
+
+#: templates/team.html:3
 msgid "Origin Protocol - Team"
 msgstr "Origin Protocol - 团队"
 
-#: templates/team.html:2
-msgid ""
-"Origin Protocol's\n"
+#: templates/team.html:4
+msgid "Origin Protocol's\n"
 "world-class team is led by entrepreneurs and engineers from iconic tech\n"
 "companies"
 msgstr ""
 
-#: templates/team.html:29
-msgid ""
-"Our world-class team is led by entrepreneurs and engineers\n"
+#: templates/team.html:31
+msgid "Our world-class team is led by entrepreneurs and engineers\n"
 "        from iconic tech companies"
 msgstr "我们世界级团队是由来自于标志性技术公司的企业家和程序员带领组成的"
 
-#: templates/team.html:46 templates/whitepaper/sidebar.html:50
+#: templates/team.html:48 templates/whitepaper/sidebar.html:50
 msgid "Core team"
 msgstr "核心团队"
 
-#: templates/team.html:64 templates/whitepaper/team.html:31
+#: templates/team.html:66 templates/whitepaper/team.html:31
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:68 templates/team.html:95
+#: templates/team.html:70 templates/team.html:97
 msgid "Cofounder"
 msgstr "联合创始人"
 
-#: templates/team.html:71
-msgid ""
-"Josh started coding at the age of 10. Prior to\n"
+#: templates/team.html:73
+msgid "Josh started coding at the age of 10. Prior to\n"
 "                  Origin, he co-founded three other venture-backed companies:\n"
 "                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr "Josh在10岁开始编码。在Origin之前，他共同创办了三家风险投资公司：EventVue，Torbit（被沃尔玛实验室收购） &amp; Forage。                  "
 
-#: templates/team.html:91 templates/whitepaper/team.html:13
+#: templates/team.html:93 templates/whitepaper/team.html:13
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:98
-msgid ""
-"Matt was the 3rd PM at YouTube (acquired by\n"
+#: templates/team.html:100
+msgid "Matt was the 3rd PM at YouTube (acquired by\n"
 "                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
 "                  (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "Matt是YouTube（被谷歌收购）的第3个PM, Qwiki（被雅虎收购）的VP PM和Bonobos（被沃尔玛收购）。他拥有斯坦福大学的硕士和学士学位。"
 
-#: templates/team.html:122 templates/whitepaper/team.html:96
+#: templates/team.html:124 templates/whitepaper/team.html:96
 msgid "Business Development"
 msgstr "商业开发"
 
-#: templates/team.html:125
-msgid ""
-"Coleman is an active cryptocurrency investor and\n"
+#: templates/team.html:127
+msgid "Coleman is an active cryptocurrency investor and\n"
 "                  real estate entrepreneur, owning and managing multiple Airbnb\n"
 "                  properties. He studied mathematics at Berkeley."
 msgstr "Coleman是一位活跃的加密数字货币投资人和房地产企业家，拥有和管理多个Airbnb房产。 他曾在伯克利学习数学。"
 
-#: templates/team.html:145 templates/whitepaper/team.html:56
+#: templates/team.html:147 templates/whitepaper/team.html:56
 msgid "Yu Pan"
 msgstr "潘宇"
 
-#: templates/team.html:149 templates/whitepaper/team.html:60
+#: templates/team.html:151 templates/whitepaper/team.html:60
 msgid "R&D Engineer"
 msgstr "研发工程师"
 
-#: templates/team.html:152
-msgid ""
-"Yu Pan was one of the 6 founding team members of\n"
+#: templates/team.html:154
+msgid "Yu Pan was one of the 6 founding team members of\n"
 "                  PayPal and was the 1st employee at YouTube. He is a former\n"
 "                  Google employee and co-founder of Kiwi Crate."
 msgstr "潘宇是PayPal的6位创始团队成员之一，也是YouTube的第一位员工。他是Google的前员工，也是Kiwi Crate的共同创始人。"
 
-#: templates/team.html:172 templates/whitepaper/team.html:110
+#: templates/team.html:174 templates/whitepaper/team.html:110
 msgid "Micah Alcorn"
 msgstr "Micah Alcorn"
 
-#: templates/team.html:176 templates/whitepaper/team.html:114
+#: templates/team.html:178 templates/whitepaper/team.html:114
 msgid "Product Manager/Engineer"
 msgstr "产品经理/工程师"
 
-#: templates/team.html:179
-msgid ""
-"Micah was the technical co-founder of\n"
+#: templates/team.html:181
+msgid "Micah was the technical co-founder of\n"
 "                  WellAttended, a bootstrapped box office management platform.\n"
 "                  He worked as a commercial real estate broker while learning to\n"
 "                  code."
 msgstr "Micah是WellAttended的技术联合创始人，WellAttended是一个自助式票房管理平台。在学习编码的同时，他还是一名商业房地产经纪人。"
 
-#: templates/team.html:201 templates/whitepaper/team.html:128
+#: templates/team.html:203 templates/whitepaper/team.html:128
 msgid "Kay Yoo"
 msgstr "Kay Yoo"
 
-#: templates/team.html:205 templates/whitepaper/team.html:132
+#: templates/team.html:207 templates/whitepaper/team.html:132
 msgid "Finance & Operations"
 msgstr "财务和运营"
 
-#: templates/team.html:208
-msgid ""
-"Kay is a Chartered Professional Accountant (CPA).\n"
+#: templates/team.html:210
+msgid "Kay is a Chartered Professional Accountant (CPA).\n"
 "                  She previously worked as a Senior Accountant and then as a\n"
 "                  Senior Consultant at KPMG Canada."
 msgstr "Kay是特许专业会计师（CPA）。之前曾在毕马威加拿大担任高级会计师，之后担任高级顾问。"
 
-#: templates/team.html:229 templates/whitepaper/team.html:74
+#: templates/team.html:231 templates/whitepaper/team.html:74
 msgid "Franck Chastagnol"
 msgstr "Franck Chastagnol"
 
-#: templates/team.html:233 templates/team.html:290 templates/team.html:348
+#: templates/team.html:235 templates/team.html:292 templates/team.html:350
 #: templates/whitepaper/team.html:78 templates/whitepaper/team.html:186
 #: templates/whitepaper/team.html:204
 msgid "Senior Engineer"
 msgstr "高级工程师"
 
-#: templates/team.html:236
-msgid ""
-"Franck has had a successful career as an early\n"
+#: templates/team.html:238
+msgid "Franck has had a successful career as an early\n"
 "                  employee at numerous high-profile companies. He previously led\n"
 "                  engineering teams at Inktomi, Paypal, YouTube, Google and\n"
 "                  Dropbox."
 msgstr "Franck作为众多知名公司的早期员工，已经取得了成功的职业生涯。他之前曾在Inktomi，Paypal，YouTube，Google和Dropbox领导工程团队。"
 
-#: templates/team.html:258 templates/whitepaper/team.html:164
+#: templates/team.html:260 templates/whitepaper/team.html:164
 msgid "Mila Choi"
 msgstr "Mila Choi"
 
-#: templates/team.html:262 templates/whitepaper/team.html:168
+#: templates/team.html:264 templates/whitepaper/team.html:168
 msgid "Regional Manager Korea"
 msgstr "韩国总经理"
 
-#: templates/team.html:265
-msgid ""
-"Mila is leading our community efforts in South\n"
+#: templates/team.html:267
+msgid "Mila is leading our community efforts in South\n"
 "                  Korea. She previously organized blockhain hackathons and has\n"
 "                  degrees from Penn State and Erasmus University Rotterdam."
 msgstr "Mila正在领导我们在韩国的社区工作。她之前曾组织过区块链黑客马拉松，并拥有宾夕法尼亚州立大学和鹿特丹伊拉斯姆斯大学的学位。"
 
-#: templates/team.html:286 templates/whitepaper/team.html:182
+#: templates/team.html:288 templates/whitepaper/team.html:182
 msgid "Tom Linton"
 msgstr "Tom Linton"
 
-#: templates/team.html:293
-msgid ""
-"Before Origin, Tom had a successful career as a\n"
+#: templates/team.html:295
+msgid "Before Origin, Tom had a successful career as a\n"
 "                  solo startup founder. He has two Masters degrees in\n"
 "                  Distributed Systems from the Technical University of Berlin\n"
 "                  and KTH in Stockholm."
 msgstr "在Origin之前，Tom作为一名独立创业公司创立了一个成功的职业生涯。他拥有柏林技术大学和斯德哥尔摩KTH两个分布式系统硕士学位。"
 
-#: templates/team.html:315 templates/whitepaper/team.html:218
+#: templates/team.html:317 templates/whitepaper/team.html:218
 msgid "Anna Wang"
 msgstr "王思嘉"
 
-#: templates/team.html:319 templates/whitepaper/team.html:222
+#: templates/team.html:321 templates/whitepaper/team.html:222
 msgid "Regional Manager China"
 msgstr "大中华区总经理"
 
-#: templates/team.html:322
-msgid ""
-"Anna is leading our community efforts for Chinese\n"
+#: templates/team.html:324
+msgid "Anna is leading our community efforts for Chinese\n"
 "                  speakers. Before Origin, Anna managed global social media at\n"
 "                  Exness, a leading forex broker. She also co-founded a\n"
 "                  non-profit in Australia."
 msgstr "Anna负责推动中国和华语社区与生态建设。在Origin之前，她负责管理外汇经纪商Exness全球的社交媒体，也在澳大利亚联合创办了一家非营利组织。"
 
-#: templates/team.html:344 templates/whitepaper/team.html:200
+#: templates/team.html:346 templates/whitepaper/team.html:200
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:351
-msgid ""
-"Nick studied Computer Science at the University of\n"
+#: templates/team.html:353
+msgid "Nick studied Computer Science at the University of\n"
 "                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "                  Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr "尼克拥有华威大学的计算机科学学位。在加入Origin之前，他曾在Sencha，C3 Energy Network和Palo Alto Networks担任工程师。"
 
-#: templates/team.html:372 templates/whitepaper/team.html:236
+#: templates/team.html:374 templates/whitepaper/team.html:236
 msgid "Domen Grabec"
 msgstr "Domen Grabec"
 
-#: templates/team.html:376 templates/team.html:404 templates/team.html:461
+#: templates/team.html:378 templates/team.html:406 templates/team.html:463
 #: templates/whitepaper/team.html:240 templates/whitepaper/team.html:258
 #: templates/whitepaper/team.html:294
 msgid "Engineer"
 msgstr "工程师"
 
-#: templates/team.html:379
-msgid ""
-"Domen co-founded and led a team developing a\n"
+#: templates/team.html:381
+msgid "Domen co-founded and led a team developing a\n"
 "                  mobile application with 2 chess Grandmasters. He previously\n"
 "                  had a successful career at Cetra, Zemanta and Peerindex."
 msgstr "Domen与两位国际象棋大师共同创办并领导了一个移动应用程序的开发团队。他也曾在Cetra，Zemanta和Peerindex有着成功的职业生涯。"
 
-#: templates/team.html:400 templates/whitepaper/team.html:254
+#: templates/team.html:402 templates/whitepaper/team.html:254
 msgid "Shahul Hameed"
 msgstr "Shahul Hameed"
 
-#: templates/team.html:407
-msgid ""
-"Shahul is a fullstack engineer who started\n"
+#: templates/team.html:409
+msgid "Shahul is a fullstack engineer who started\n"
 "                  programming at age of 10. He previously worked as a freelancer\n"
 "                  and then joined Zoho as a front-end developer."
 msgstr "Shahul是一名全栈工程师，10岁就开始编程。加入Origin之前他是一名自由职业者，也在Zoho担任前端开发者。"
 
-#: templates/team.html:428 templates/whitepaper/team.html:272
+#: templates/team.html:430 templates/whitepaper/team.html:272
 msgid "Zaurbek Ivanov"
 msgstr "Zaurbek Ivanov"
 
-#: templates/team.html:432 templates/whitepaper/team.html:276
+#: templates/team.html:434 templates/whitepaper/team.html:276
 msgid "Russia Community"
 msgstr "俄罗斯社区"
 
-#: templates/team.html:435
-msgid ""
-"Zaurbek Ivanov studied Economics at\n"
+#: templates/team.html:437
+msgid "Zaurbek Ivanov studied Economics at\n"
 "                  Kabardino-Balkaria State Agrarian University in Nalchik,\n"
 "                  Russia. He has worked in the hospitality industry in the US\n"
 "                  and Russia."
 msgstr "Zaurbek Ivanov在俄罗斯卡巴迪诺巴尔卡里亚州农业大学主修了经济学。他之前在美国和俄罗斯有过服务业的工作经历。"
 
-#: templates/team.html:457 templates/whitepaper/team.html:290
+#: templates/team.html:459 templates/whitepaper/team.html:290
 msgid "Mike Shultz"
 msgstr "Mike Shultz"
 
-#: templates/team.html:464
-msgid ""
-"Mike is a long-time contributor to open-source. He\n"
+#: templates/team.html:466
+msgid "Mike is a long-time contributor to open-source. He\n"
 "                  created a dev toolkit for creating Ethereum smart contracts\n"
 "                  with Python and previously worked with Ethereum and IPFS at\n"
 "                  Lunyr."
 msgstr "Mike是长期的开源贡献者。他创建了一个允许开发者使用Python来创建以太坊智能合约的开发工具包，之前也在Lunyr做以太坊和IPFS方面的工作。"
 
-#: templates/team.html:486 templates/whitepaper/team.html:146
+#: templates/team.html:488 templates/whitepaper/team.html:146
 msgid "Aure Gimon"
 msgstr "Aure Gimon"
 
-#: templates/team.html:490 templates/whitepaper/team.html:150
+#: templates/team.html:492 templates/whitepaper/team.html:150
 msgid "Product Designer"
 msgstr "产品设计师"
 
-#: templates/team.html:493
-msgid ""
-"Aure is a product designer with 10+ years of\n"
+#: templates/team.html:495
+msgid "Aure is a product designer with 10+ years of\n"
 "                  experience. Prior to joining Origin, Aure worked at multiple\n"
 "                  startups and Fortune 500 companies. In a past life, he was\n"
 "                  also a software engineer."
 msgstr "Aure是个拥有十多年经验的产品设计师。在Origin之前，他在许多初创公司和世界500强企业工作。他也曾担任过软件工程师。"
 
-#: templates/team.html:510
+#: templates/team.html:512
 msgid "Community team"
 msgstr "社区团队"
 
-#: templates/team.html:525 templates/whitepaper/team.html:330
+#: templates/team.html:527 templates/whitepaper/team.html:330
 msgid "Holly Gu"
 msgstr "谷冬青"
 
-#: templates/team.html:537 templates/whitepaper/team.html:342
+#: templates/team.html:539 templates/whitepaper/team.html:342
 msgid "June Kim"
 msgstr "六月·金"
 
-#: templates/team.html:549 templates/whitepaper/team.html:354
+#: templates/team.html:551 templates/whitepaper/team.html:354
 msgid "Yeongin Lee"
 msgstr "李英仁"
 
-#: templates/team.html:561 templates/whitepaper/team.html:366
+#: templates/team.html:563 templates/whitepaper/team.html:366
 msgid "Leslie Song"
 msgstr "Leslie Song"
 
-#: templates/team.html:572
+#: templates/team.html:574
 msgid "Advisors"
 msgstr "顾问"
 
-#: templates/team.html:591
+#: templates/team.html:593
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:595
+#: templates/team.html:597
 msgid "PR"
 msgstr "公关"
 
-#: templates/team.html:611
+#: templates/team.html:613
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:615
+#: templates/team.html:617
 msgid "International BD"
 msgstr "国际业务"
 
-#: templates/team.html:635 templates/team.html:655
+#: templates/team.html:637 templates/team.html:657
 msgid "Advisor"
 msgstr "顾问"
 
-#: templates/team.html:651
+#: templates/team.html:653
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:671
+#: templates/team.html:673
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:675 templates/whitepaper/sidebar.html:53
+#: templates/team.html:677 templates/whitepaper/sidebar.html:53
 #: templates/whitepaper/team.html:317
 msgid "Community"
 msgstr "社区"
 
-#: templates/team.html:686
+#: templates/team.html:688
 #, python-format
 msgid "100%% open-source."
-msgstr "100%% 开源。"
+msgstr "100% 开源。"
 
-#: templates/team.html:687
+#: templates/team.html:689
 msgid " contributors."
 msgstr "贡献者。"
 
-#: templates/team.html:714
+#: templates/team.html:716
 msgid "Want to contribute?"
 msgstr "想为Origin做出贡献吗？"
 
-#: templates/team.html:723
+#: templates/team.html:725
 msgid "Visit our GitHub Repository"
 msgstr "访问我们的Github仓库"
 
-#: templates/team.html:728
+#: templates/team.html:730
 msgid "Join our #engineering channel on Discord"
 msgstr "加入我们Discord上的#engineering（工程师）频道"
 
-#: templates/team.html:740
+#: templates/team.html:742
 msgid "Interested in working at Origin?"
 msgstr "有兴趣加入Origin团队？"
 
-#: templates/team.html:744
-msgid ""
-"We are a distributed team and are hiring all around the\n"
+#: templates/team.html:746
+msgid "We are a distributed team and are hiring all around the\n"
 "            world."
 msgstr "我们开放和分布式的团队正在寻找世界各地的开拓性人才。"
 
-#: templates/team.html:755
+#: templates/team.html:757
 msgid "View job posts"
 msgstr "招聘岗位"
 
@@ -1848,9 +1863,9 @@ msgstr "招聘岗位"
 msgid "Origin Protocol - Buy Origin Tokens (OGN)"
 msgstr ""
 
-#: templates/tokens.html:5
-msgid "Origin Tokens (OGN) are launching soon!"
-msgstr ""
+#: templates/tokens.html:16
+msgid "Origin Tokens are launching soon!"
+msgstr "Origin 即将发币了！"
 
 #: templates/tokens.html:18
 msgid "Interested in Origin tokens?"
@@ -1882,7 +1897,7 @@ msgstr "提交"
 msgid "Origin Protocol - Terms of Service"
 msgstr "Origin 起源协议 - 服务条款"
 
-#: templates/video.html:39
+#: templates/video.html:37
 msgid "Share"
 msgstr "分享"
 
@@ -2065,16 +2080,14 @@ msgid "Blocktower Capital"
 msgstr "Blocktower Capital"
 
 #: templates/whitepaper/disclaimer.html:4
-msgid ""
-"Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
+msgid "Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
 "    performance objectives of the Company, involve known and unknown risks, uncertainties, and other important factors that could cause the actual results of\n"
 "    the Company to differ materially from any future results expressed or implied by such forward-looking statements. Accordingly, readers should not place\n"
 "    undue reliance on forward-looking statements. No representation or warranty is made as to future performance or such forward-looking statements."
 msgstr "本文档中的某些陈述构成前瞻性陈述。此类前瞻性陈述，包括公司的预期行动和绩效目标，涉及已知和未知的风险、不确定性以及可能导致公司实际结果与此类前瞻性陈述明示或暗示的任何未来结果有所差异。因此，读者不应过于依赖前瞻性陈述。对于未来性能或此类前瞻性陈述，不作任何陈述或保证。"
 
 #: templates/whitepaper/disclaimer.html:11
-msgid ""
-"This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
+msgid "This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
 "    the most up to date information on our product development and business strategy, please refer to our website at originprotocol.com. For the latest technical\n"
 "    information, please reference our Github account at <a href='https://github.com/OriginProtocol' target='_blank' rel='noreferrer noopener'>www.github.com/OriginProtocol</a>. To use our flagship marketplace application, please download our mobile apps\n"
 "    (<a href='https://www.originprotocol.com/mobile' target='_blank'>www.originprotocol.com/mobile</a>) or visit our DApp ((<a href='https://www.shoporigin.com' target='_blank' rel='noreferrer noopener'>www.shoporigin.com</a>) with a web3-enabled DApp browser.\n"
@@ -2090,8 +2103,7 @@ msgid "Executive Summary"
 msgstr "摘要"
 
 #: templates/whitepaper/exec-summary.html:4
-msgid ""
-"Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
+msgid "Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
 "    fractional use goods and services (car-sharing, service-based tasks, home-sharing, etc.) to transact on\n"
 "    the distributed, open web. Using the Ethereum blockchain and Interplanetary File System (IPFS), the\n"
 "    platform and its community participants can interact in a peer-to-peer fashion, allowing for the creation and booking of\n"
@@ -2749,8 +2761,7 @@ msgstr "通过在私人住宅创造出一个公开市场，P2P住宿网站（如
 
 #: templates/whitepaper/why.html:39
 msgid "Don Tapscott, author of “Blockchain Revolution,” says that the technology underlying Bitcoin could be used to disrupt the likes of Uber and Airbnb. - Wall Street Journal"
-msgstr ""
-"《区块链革命》一书的作者Don Tapscott表示，使用比特币的底层技术，可以颠覆类似Uber和Airbnb这\n"
+msgstr "《区块链革命》一书的作者Don Tapscott表示，使用比特币的底层技术，可以颠覆类似Uber和Airbnb这\n"
 "样的企业。- 华尔街日报"
 
 #: templates/whitepaper/why.html:42
@@ -2892,7 +2903,7 @@ msgstr "到2025年，共享经济的总预订额预计将超过3,350亿美元<a 
 #: templates/whitepaper/why.html:130
 #, python-format
 msgid "While the overall market continues to boom, value capture has only shifted in favor to the regional monopolies. Recently, Airbnb dramatically increased fees for hosts in many global regions, from 3 to 5 percent to 14 percent<a class='whitepaper-footnote-link' href='#footnote13'>13</a>. Similarly, Uber’s advertised 25%% commission rate is actually significantly higher when factoring in additional fees that are passed onto their drivers. For example, the median commission that Uber charges in San Francisco was recently estimated at 39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>"
-msgstr "虽然整个市场持续蓬勃增长，但价值获取都被区域垄断者捕捉了。最近，Airbnb全球许多地区的房东费用大幅增加，从 3%% 到 5%% 到 14%%<a class='whitepaper-footnote-link' href='#footnote13'>13</a>。同样，如果考虑到转嫁到司机身上的额外费用，Uber所宣传的25%%佣金率实际上要高得多。举个例，Uber在旧金山收取的佣金中位数最近估计为39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>。"
+msgstr "虽然整个市场持续蓬勃增长，但价值获取都被区域垄断者捕捉了。最近，Airbnb全球许多地区的房东费用大幅增加，从 3% 到 5% 到 14%<a class='whitepaper-footnote-link' href='#footnote13'>13</a>。同样，如果考虑到转嫁到司机身上的额外费用，Uber所宣传的25%%佣金率实际上要高得多。举个例，Uber在旧金山收取的佣金中位数最近估计为39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>。"
 
 #: templates/whitepaper/why.html:132
 msgid "The world is also moving more and more to global versus local commerce. Sellers are able to provide services (and many times products and goods) to customers across the world. Currently, a Lyft passenger would not be able to ride on the Didi ChuXing ride-sharing network (China’s largest ride-sharing company) save for the fact that the two companies signed a deep partnership that was months in the making and involved a mutual investor pouring hundreds of millions of dollars into both companies. In a global, but openly distributed marketplace, a customer would be able to purchase services from suppliers without a need for new accounts, complicated currency exchanges, or prerequisite negotiated deals."
@@ -2922,13 +2933,17 @@ msgstr "我们相信，要推动点对点市场和电商市场，从而利用不
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "Origin 允许开发者和企业在区块链上建立完全去中心化的电商平台"
 
-#: views/web_views.py:173
+#: views/web_views.py:167
 msgid "Missing email"
 msgstr "请提供电邮地址"
 
-#: views/web_views.py:176
+#: views/web_views.py:170
 msgid "Invalid email"
 msgstr "电邮地址无效"
+
+#: views/web_views.py:226
+msgid "You're already registered!"
+msgstr ""
 
 #: views/web_views.py:228
 msgid "Thanks for signing up!"
@@ -2969,93 +2984,4 @@ msgstr "您已经取消订阅"
 #: views/web_views.py:270
 msgid "Ooops, something went wrong"
 msgstr "哎呀！出了些问题。"
-
-#~ msgid "It’s time to build the sharing economy without intermediaries"
-#~ msgstr "是时候建立没有中介的共享经济了"
-
-#~ msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
-#~ msgstr "Origin是一家位于旧金山的初创公司，团队成员遍布在中国、韩国、俄罗斯、印度、新西兰甚至斯洛文尼亚。我们的800多名投资者包括了全球著名风险投资机构以及重量级加密货币投资基金。"
-
-#~ msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020."
-#~ msgstr "集中垄断的中介机构通常收取20-30%%的交易费。Airbnb2017年的收费总额为26亿美元，Uber2018年赚取的费用高达118亿美元。到2020年，共享经济费用总额预计将超过400亿美元。"
-
-#~ msgid "By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators."
-#~ msgstr "通过去除中介，Origin节省了这些费用。现在买方和卖方不必再支付给传统市场运营商昂贵的交易费。"
-
-#~ msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
-#~ msgstr "Uber和Lyft最近刚刚上市，WeWork和Airbnb也将很快跟进。尽管这些平台的早期参与者对其成功上市至关重要，但他们都没有从中受益。"
-
-#~ msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
-#~ msgstr "相比之下，Origin使人人都是参与者，也都是受益者。买家和卖家只需使用Origin应用程序相互交易，就可以赚取OGN代币。开发人员、网络联盟公司和市场运营商可以通过推销卖家的商品来赢得OGN。当每个人都是网络参与者时，将推动整个Origin生态系统的健康成长。 "
-
-#~ msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
-#~ msgstr "全球有20亿人目前没有银行账户。他们没有支票账户、信用卡、支付宝或苹果支付。"
-
-#~ msgid "With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems."
-#~ msgstr "随着密码货币的出现和廉价智能手机的普及，让这些没有银行账户的人有机会参与到新的互联网经济。来自世界各地的用户现在可以在建立在Origin之上的市场上进行交易，即便他们没有当地银行账户。"
-
-#~ msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
-#~ msgstr "Airbnb在巴黎、柏林、东京、纽约，甚至其家乡旧金山等城市都受到严格监管或禁止。"
-
-#~ msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
-#~ msgstr "分散的市场促进开放和自由的商业，与集中式替代方案不同，它们不存在单点故障，不能被禁止或关闭。分散的商业更有韧性，促进高效的市场。"
-
-#~ msgid "We have a large and growing community of developers and supporters"
-#~ msgstr "我们拥有广泛的支持者和开发者，以及一个庞大且快速发展的社区"
-
-#~ msgid "Origin Protocol - Investors"
-#~ msgstr "Origin 起源协议 - 投资方"
-
-#~ msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
-#~ msgstr "我们是一家资金雄厚的初创企业，在之前的三轮融资中通过出售代币来构建我们的平台。"
-
-#~ msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
-#~ msgstr "对Origin的融资发行感兴趣吗？请注册获取最新消息。"
-
-#~ msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
-#~ msgstr "“我们投资Origin的原因主要是因为这个团队。他们有着惊人的背景，来自标志性的消费公司。”"
-
-#~ msgid "\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\""
-#~ msgstr "”我们谈论的是世界各地超过10万名成员，他们都是Origin的铁杆粉丝。Origin在全球范围内进行了大量的工作。“"
-
-#~ msgid "\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\""
-#~ msgstr "“Origin在我们投资的其他分散应用程序中脱颖而出，因为他们已经有了一套体系并且建立了我们见过的最好的社区。对我们来说，他们是一个游戏规则的改变者。”"
-
-#~ msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
-#~ msgstr "我们拥有硅谷最好的一些天使投资者和创始人的支持。"
-
-#~ msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
-#~ msgstr "现在在Origin网络上获得你的股份。用户们可以通过身份验证，向朋友和家人推荐Origin ，在社交媒体分享关于Origin的消息，与特色卖家达成交易等方式来获得Origin代币。"
-
-#~ msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
-#~ msgstr "通过Origin手续费在Origin旗舰App和第三方App来宣传你的商业列表。用ORN来支付的话会在搜索结果中突出显示。应用程序开发者和市场运营商会通过帮助卖方达成交易得到Origin代币（OGN）。"
-
-#~ msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
-#~ msgstr "使用在Origin奖励活动获得的Origin代币（OGN）来购买商品和服务.卖房可以通过接受OGN为优先付款方式来获得更多的股份。"
-
-#~ msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
-#~ msgstr "把OGN押在一个Origin节点并且通过在网络上帮助复制和验证用户配置文件及商务列表数据来获得更多的OGN。"
-
-#~ msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
-#~ msgstr "开发者可以通过OGN来支付对元交易继电器的使用。元交易继电器减少了用户之间的摩擦并鼓励采取和保留。"
-
-#~ msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
-#~ msgstr "每个人都可以在Origin平台上投票。代币持有者会参与重要的社群投票来明确未来发展。"
-
-#~ msgid "Our platform will power decentralized marketplaces everywhere"
-#~ msgstr "我们的平台将推动全世界的去中心化市场"
-
-#~ msgid ""
-#~ "Origin Protocol -\n"
-#~ "Team"
-#~ msgstr "Origin Protocol - 团队"
-
-#~ msgid "Origin Protocol - Tokens"
-#~ msgstr "原始协议 - 令牌"
-
-#~ msgid "The sharing economy without intermediaries"
-#~ msgstr "没有中介的共享经济"
-
-#~ msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
-#~ msgstr "用户和交易的数据存储在以太坊和IPFS上，这意味着第三方可以通过以太坊区块链和IPFS网络查询当前可用的列表、交易历史以及生态中各种买家和卖家的声誉。"
 
