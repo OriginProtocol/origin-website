@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:51+0530\n"
+"POT-Creation-Date: 2020-02-01 01:30+0000\n"
 "PO-Revision-Date: 2020-01-31 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: id\n"
@@ -26,27 +26,20 @@ msgstr ""
 msgid "Building on Origin"
 msgstr ""
 
-#: logic/emails/mailing_list.py:99 logic/emails/mailing_list.py:168
+#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:186
+#: views/web_views.py:262
 msgid "Please enter a valid email address"
 msgstr ""
 
-#: logic/emails/mailing_list.py:117 logic/emails/mailing_list.py:185
+#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:203
 msgid "Ooops! Something went wrong."
 msgstr ""
 
-#: logic/emails/mailing_list.py:138 logic/emails/mailing_list.py:196
+#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:214
 msgid "Thanks! We'll be in touch soon."
 msgstr ""
 
-#: logic/emails/mailing_list.py:152
-msgid "Ooops, something went wrong"
-msgstr ""
-
-#: logic/emails/mailing_list.py:154
-msgid "You have been unsubscribed"
-msgstr ""
-
-#: logic/emails/mailing_list.py:171
+#: logic/emails/mailing_list.py:189
 msgid "Please enter a valid website address"
 msgstr ""
 
@@ -55,145 +48,152 @@ msgid "How did I get here?"
 msgstr ""
 
 #: templates/404.html:19
-msgid ""
-"The page you’re looking for is no longer here, maybe it was never here in"
-" the first place.<br>In any case, we sincerely apologize if it’s us and "
-"we forgive you if it’s you :)"
+msgid "The page you’re looking for is no longer here, maybe it was never here in the first place.<br>In any case, we sincerely apologize if it’s us and we forgive you if it’s you :)"
 msgstr ""
 
 #: templates/404.html:22
 msgid "Go Home"
 msgstr ""
 
-#: templates/about.html:3 templates/about.html:5 templates/ogn-token.html:3
-#: templates/ogn-token.html:5 templates/partners.html:3
-#: templates/partners.html:5 templates/product.html:3 templates/product.html:5
-msgid "Origin Protocol - Build on Origin"
+#: templates/about.html:1
+msgid "Origin Protocol - About"
 msgstr ""
 
-#: templates/about.html:16 templates/investors.html:16
-#: templates/landing.html:18 templates/team.html:12 templates/video.html:20
+#: templates/about.html:2 templates/swagStore.html:2
+msgid ""
+"Origin Protocol enables\n"
+"true peer-to-peer commerce."
+msgstr ""
+
+#: templates/about.html:12 templates/investors.html:13
+#: templates/landing.html:16 templates/team.html:15 templates/video.html:18
 msgid "Exit full screen"
 msgstr ""
 
-#: templates/about.html:26
-msgid "It’s time to build the sharing economy without intermediaries"
+#: templates/about.html:28
+msgid ""
+"It’s time to build the sharing economy without\n"
+"        intermediaries"
 msgstr ""
 
-#: templates/about.html:30 templates/investors.html:30
-#: templates/landing.html:32 templates/landing.html:194 templates/team.html:37
-#: templates/video.html:32
+#: templates/about.html:37 templates/investors.html:37
+#: templates/landing.html:30 templates/landing.html:197 templates/team.html:40
+#: templates/video.html:30
 msgid "Watch the video"
 msgstr ""
 
-#: templates/about.html:35
+#: templates/about.html:45
 msgid "Origin enables true peer-to-peer commerce"
 msgstr ""
 
-#: templates/about.html:36
+#: templates/about.html:48
 msgid ""
-"Origin is a startup headquartered in San Francisco, but we also have team"
-" members in China, Korea, Russia, India, New Zealand, and even Slovenia. "
-"Our 800+ investors include top venture capitalists and cryptocurrency "
-"funds all over the world."
+"Origin is a startup headquartered in San Francisco, but we also\n"
+"      have team members in China, Korea, Russia, India, New Zealand, and even\n"
+"      Slovenia. Our 800+ investors include top venture capitalists and\n"
+"      cryptocurrency funds all over the world."
 msgstr ""
 
-#: templates/about.html:38 templates/landing.html:173
+#: templates/about.html:57 templates/landing.html:176
 msgid "Learn more about our team"
 msgstr ""
 
-#: templates/about.html:39 templates/landing.html:201
+#: templates/about.html:60 templates/landing.html:204
 msgid "Learn more about our investors"
 msgstr ""
 
-#: templates/about.html:49 templates/landing.html:137
+#: templates/about.html:80 templates/landing.html:140
 msgid "Lower Fees"
 msgstr ""
 
-#: templates/about.html:50
+#: templates/about.html:82
 #, python-format
 msgid ""
-"Centralized intermediaries often charge 20-30%% in transaction fees. "
-"Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental "
-"$11.8B in fees in 2018. Total sharing economy fees are expected to cross "
-"$40B by 2020."
+"Centralized intermediaries often charge 20-30%% in\n"
+"          transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber\n"
+"          took home a monumental $11.8B in fees in 2018. Total sharing economy\n"
+"          fees are expected to cross $40B by 2020."
 msgstr ""
 
-#: templates/about.html:51
+#: templates/about.html:88
 msgid ""
-"By removing the middlemen, Origin removes these fees. Buyers and sellers "
-"can now share the savings from the fees that are no longer paid to "
-"traditional marketplace operators."
+"By removing the middlemen, Origin removes these fees.\n"
+"          Buyers and sellers can now share the savings from the fees that are no\n"
+"          longer paid to traditional marketplace operators."
 msgstr ""
 
-#: templates/about.html:70 templates/landing.html:144
+#: templates/about.html:146 templates/landing.html:147
 msgid "Better Incentives"
 msgstr ""
 
-#: templates/about.html:71
+#: templates/about.html:148
 msgid ""
-"Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. "
-"None of the early participants on these platforms benefited despite being"
-" critical to their success."
+"Uber and Lyft recently IPOed. WeWork and Airbnb are soon to\n"
+"          follow suit. None of the early participants on these platforms\n"
+"          benefited despite being critical to their success."
 msgstr ""
 
-#: templates/about.html:72
+#: templates/about.html:153
 msgid ""
-"In contrast, Origin enables everyone to own a piece of the network. "
-"Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-"
-"enabled applications to transact with one another. Developers, "
-"affiliates, and marketplace operators can earn OGN by promoting and "
-"marketing sellers' listings. When everyone owns a piece of the network, "
-"ecosystem participants are incentivized to promote the health and growth "
-"of Origin. "
+"In contrast, Origin enables everyone to own a piece of the\n"
+"          network. Buyers and sellers can earn Origin Tokens (OGN) simply by\n"
+"          using Origin-enabled applications to transact with one another.\n"
+"          Developers, affiliates, and marketplace operators can earn OGN by\n"
+"          promoting and marketing sellers' listings. When everyone owns a piece\n"
+"          of the network, ecosystem participants are incentivized to promote the\n"
+"          health and growth of Origin. "
 msgstr ""
 
-#: templates/about.html:80 templates/landing.html:151
+#: templates/about.html:174 templates/landing.html:154
 msgid "Increased Access"
 msgstr ""
 
-#: templates/about.html:81
+#: templates/about.html:176
 msgid ""
-"2 billion people around the world are currently unbanked. They do not "
-"have checking accounts, credit cards, AliPay, or Apple Pay."
+"2 billion people around the world are currently unbanked.\n"
+"          They do not have checking accounts, credit cards, AliPay, or Apple\n"
+"          Pay."
 msgstr ""
 
-#: templates/about.html:82
+#: templates/about.html:181
 msgid ""
-"With the advent of cryptocurrencies and the proliferation of inexpensive "
-"smartphones, now is the time to enable the unbanked to participate in the"
-" new Internet economy. Users from all over the world are now able to "
-"transact with each other on Origin-powered marketplaces even if they do "
-"not have stable, local banking systems."
+"With the advent of cryptocurrencies and the proliferation\n"
+"          of inexpensive smartphones, now is the time to enable the unbanked to\n"
+"          participate in the new Internet economy. Users from all over the world\n"
+"          are now able to transact with each other on Origin-powered\n"
+"          marketplaces even if they do not have stable, local banking\n"
+"          systems."
 msgstr ""
 
-#: templates/about.html:99 templates/landing.html:158
+#: templates/about.html:228 templates/landing.html:161
 msgid "More Resilience"
 msgstr ""
 
-#: templates/about.html:100
+#: templates/about.html:230
 msgid ""
-"Airbnb is heavily regulated or banned in cities like Paris, Berlin, "
-"Tokyo, New York, and even its home city of San Francisco."
+"Airbnb is heavily regulated or banned in cities like Paris,\n"
+"          Berlin, Tokyo, New York, and even its home city of San Francisco."
 msgstr ""
 
-#: templates/about.html:101
+#: templates/about.html:234
 msgid ""
-"Decentralized marketplaces promote open and free commerce. Unlike "
-"centralized alternatives, they are not single points of failure and can't"
-" be banned or shut down. Decentralized commerce is more resilient and "
-"promotes efficient markets."
+"Decentralized marketplaces promote open and free commerce.\n"
+"          Unlike centralized alternatives, they are not single points of failure\n"
+"          and can't be banned or shut down. Decentralized commerce is more\n"
+"          resilient and promotes efficient markets."
 msgstr ""
 
-#: templates/about.html:110
+#: templates/about.html:257
 msgid "Origin in the Press"
 msgstr ""
 
-#: templates/about.html:128
-msgid "We have a large and growing community of developers and supporters"
+#: templates/about.html:364
+msgid ""
+"We have a large and growing community of developers and\n"
+"      supporters"
 msgstr ""
 
-#: templates/about.html:130
+#: templates/about.html:371
 msgid "Region-specific Channels"
 msgstr ""
 
@@ -205,21 +205,32 @@ msgstr ""
 msgid "Marketplace Acceptable Use Policy"
 msgstr ""
 
-#: templates/countdown-bar.html:6 templates/landing.html:44
-#: templates/ogn-token.html:16 templates/tokens.html:16
-msgid "Origin Tokens are launching soon!"
+#: templates/countdown-bar.html:11 templates/countdown-hero-banner.html:33
+msgid "Origin Tokens (OGN) have launched!"
 msgstr ""
 
-#: templates/countdown-bar.html:8
-msgid "Exclusively on "
+#: templates/countdown-bar.html:20 templates/countdown-hero-banner.html:53
+msgid "Buy OGN on Binance"
 msgstr ""
 
-#: templates/countdown-bar.html:21
+#: templates/countdown-bar.html:26 templates/countdown-hero-banner.html:67
+msgid "Exclusively on"
+msgstr ""
+
+#: templates/countdown-bar.html:32 templates/countdown-hero-banner.html:72
 msgid "Subscribe to stay in touch."
 msgstr ""
 
-#: templates/countdown-bar.html:23
+#: templates/countdown-bar.html:40 templates/countdown-hero-banner.html:80
 msgid "Your email"
+msgstr ""
+
+#: templates/countdown-hero-banner.html:37 templates/tokens.html:5
+msgid "Origin Tokens (OGN) are launching soon!"
+msgstr ""
+
+#: templates/countdown-hero-banner.html:61
+msgid "Learn more"
 msgstr ""
 
 #: templates/creator.html:3 templates/creator.html:5
@@ -249,9 +260,7 @@ msgid "Sharing economy"
 msgstr ""
 
 #: templates/creator.html:53
-msgid ""
-"Create a marketplace for homesharing, carsharing, contractor, or home "
-"services."
+msgid "Create a marketplace for homesharing, carsharing, contractor, or home services."
 msgstr ""
 
 #: templates/creator.html:60
@@ -267,15 +276,11 @@ msgid "Local marketplaces"
 msgstr ""
 
 #: templates/creator.html:69
-msgid ""
-"Build a better Craigslist or Airbnb for your country or city quickly and "
-"easily."
+msgid "Build a better Craigslist or Airbnb for your country or city quickly and easily."
 msgstr ""
 
 #: templates/creator.html:88
-msgid ""
-"Run a decentralized & <span class='purple'>censorship-resistant "
-"business</span>"
+msgid "Run a decentralized & <span class='purple'>censorship-resistant business</span>"
 msgstr ""
 
 #: templates/creator.html:89
@@ -287,10 +292,7 @@ msgid "Earn <span class='blue'>Origin tokens</span>"
 msgstr ""
 
 #: templates/creator.html:97
-msgid ""
-"List goods and services from Origin’s existing base of sellers. Earn "
-"Origin token commissions from sellers looking to reach a wider audience "
-"on your marketplace."
+msgid "List goods and services from Origin’s existing base of sellers. Earn Origin token commissions from sellers looking to reach a wider audience on your marketplace."
 msgstr ""
 
 #: templates/creator.html:113
@@ -298,21 +300,15 @@ msgid "Bootstrap your <span class='red'>marketplace</span>"
 msgstr ""
 
 #: templates/creator.html:114
-msgid ""
-"Tap into our shared data layer that gives you existing users and "
-"inventory from other marketplaces."
+msgid "Tap into our shared data layer that gives you existing users and inventory from other marketplaces."
 msgstr ""
 
 #: templates/creator.html:122
-msgid ""
-"Harness the power of <span class='green'>borderless and permissionless "
-"payments</span>"
+msgid "Harness the power of <span class='green'>borderless and permissionless payments</span>"
 msgstr ""
 
 #: templates/creator.html:123
-msgid ""
-"Be on the cutting edge of the cryptocurrency revolution. Your DApp is "
-"compatible with Metamask and popular mobile wallets out of the box."
+msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr ""
 
 #: templates/creator.html:135 templates/product.html:48
@@ -395,14 +391,16 @@ msgstr ""
 msgid "Get in touch"
 msgstr ""
 
-#: templates/developers.html:2 templates/developers.html:3
+#: templates/developers.html:2
 msgid "Origin Protocol - Developers"
 msgstr ""
 
+#: templates/developers.html:3
+msgid "Origin Protocol's open-source codebase is being developed by a global network of contributors"
+msgstr ""
+
 #: templates/developers.html:13
-msgid ""
-"Our open-source codebase is being developed by a global network of "
-"contributors"
+msgid "Our open-source codebase is being developed by a global network of contributors"
 msgstr ""
 
 #: templates/developers.html:21 templates/developers.html:58
@@ -410,9 +408,7 @@ msgid "Mobile Apps"
 msgstr ""
 
 #: templates/developers.html:24 templates/developers.html:59
-msgid ""
-"Native applications that offer fully-integrated marketplace experiences "
-"with a built-in Ethereum wallet"
+msgid "Native applications that offer fully-integrated marketplace experiences with a built-in Ethereum wallet"
 msgstr ""
 
 #: templates/developers.html:28 templates/developers.html:66
@@ -420,9 +416,7 @@ msgid "DApps"
 msgstr ""
 
 #: templates/developers.html:31 templates/developers.html:67
-msgid ""
-"Decentralized applications that enable true peer-to-peer commerce on the "
-"Origin platform"
+msgid "Decentralized applications that enable true peer-to-peer commerce on the Origin platform"
 msgstr ""
 
 #: templates/developers.html:45 templates/developers.html:62
@@ -430,9 +424,7 @@ msgid "Infrastructure"
 msgstr ""
 
 #: templates/developers.html:46 templates/developers.html:63
-msgid ""
-"Services enabling functionality that is either impossible or impractical "
-"to do directly on-chain, such as indexing, messaging, and notifications"
+msgid "Services enabling functionality that is either impossible or impractical to do directly on-chain, such as indexing, messaging, and notifications"
 msgstr ""
 
 #: templates/developers.html:50 templates/developers.html:70
@@ -440,9 +432,7 @@ msgid "Core Packages"
 msgstr ""
 
 #: templates/developers.html:51 templates/developers.html:71
-msgid ""
-"A suite of smart contracts and standards for creating listings, offers, "
-"and identities on decentralized marketplaces"
+msgid "A suite of smart contracts and standards for creating listings, offers, and identities on decentralized marketplaces"
 msgstr ""
 
 #: templates/developers.html:76
@@ -454,10 +444,7 @@ msgid "Getting Involved"
 msgstr ""
 
 #: templates/developers.html:83
-msgid ""
-"Our company has a culture of radical inclusion and transparency. Everyone"
-" is welcome to participate in our open-source engineering process and our"
-" product discussions, which are all public by default."
+msgid "Our company has a culture of radical inclusion and transparency. Everyone is welcome to participate in our open-source engineering process and our product discussions, which are all public by default."
 msgstr ""
 
 #: templates/developers.html:92
@@ -465,9 +452,7 @@ msgid "Introduce yourself in our public Discord #engineering channel."
 msgstr ""
 
 #: templates/developers.html:100
-msgid ""
-"Find an open issue in our monorepo and tell us that you would like to "
-"solve it."
+msgid "Find an open issue in our monorepo and tell us that you would like to solve it."
 msgstr ""
 
 #: templates/developers.html:108
@@ -503,9 +488,7 @@ msgid "Behind the Scenes"
 msgstr ""
 
 #: templates/developers.html:140
-msgid ""
-"Tune in to our public Google Hangout every Wednesday at 12:30PM PT, where"
-" we demonstrate our engineering progress and discuss upcoming features."
+msgid "Tune in to our public Google Hangout every Wednesday at 12:30PM PT, where we demonstrate our engineering progress and discuss upcoming features."
 msgstr ""
 
 #: templates/developers.html:148
@@ -580,8 +563,7 @@ msgstr ""
 msgid "Stay in touch"
 msgstr ""
 
-#: templates/footer.html:7 templates/landing.html:45
-#: templates/ogn-token.html:17
+#: templates/footer.html:7 templates/landing.html:53
 msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr ""
 
@@ -589,457 +571,470 @@ msgstr ""
 msgid "Enter your email"
 msgstr ""
 
-#: templates/footer.html:18 templates/footer.html:96 templates/mobile.html:31
+#: templates/footer.html:18 templates/footer.html:99 templates/mobile.html:31
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr ""
 
-#: templates/footer.html:21 templates/footer.html:99 templates/tos.html:16
+#: templates/footer.html:21 templates/footer.html:102
+msgid "Help"
+msgstr ""
+
+#: templates/footer.html:24 templates/footer.html:105 templates/tos.html:16
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/footer.html:24 templates/footer.html:102 templates/privacy.html:16
+#: templates/footer.html:27 templates/footer.html:108 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr ""
 
-#: templates/footer.html:33
+#: templates/footer.html:36
 msgid "Overview"
 msgstr ""
 
-#: templates/footer.html:34
+#: templates/footer.html:37
 msgid "iOS"
 msgstr ""
 
-#: templates/footer.html:35
+#: templates/footer.html:38
 msgid "Android"
 msgstr ""
 
-#: templates/footer.html:36
+#: templates/footer.html:39
 msgid "DApp"
 msgstr ""
 
-#: templates/footer.html:37
+#: templates/footer.html:40
 msgid "Creator"
 msgstr ""
 
-#: templates/footer.html:41
+#: templates/footer.html:44
 msgid "Videos"
 msgstr ""
 
-#: templates/footer.html:42 templates/navbar.html:84
+#: templates/footer.html:45 templates/navbar.html:84
 #: templates/whitepaper.html:19
 msgid "Whitepaper"
 msgstr ""
 
-#: templates/footer.html:43
+#: templates/footer.html:46
 msgid "Developers"
 msgstr ""
 
-#: templates/footer.html:44
+#: templates/footer.html:47
 msgid "GitHub"
 msgstr ""
 
-#: templates/footer.html:45
+#: templates/footer.html:48
 msgid "Docs"
 msgstr ""
 
-#: templates/footer.html:49 templates/navbar.html:69
+#: templates/footer.html:52 templates/navbar.html:69
 msgid "About"
 msgstr ""
 
-#: templates/footer.html:50 templates/navbar.html:72
+#: templates/footer.html:53 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:44 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr ""
 
-#: templates/footer.html:51 templates/navbar.html:75
+#: templates/footer.html:54 templates/navbar.html:75
 msgid "Investors"
 msgstr ""
 
-#: templates/footer.html:52
+#: templates/footer.html:55
 msgid "OGN"
 msgstr ""
 
-#: templates/footer.html:53
+#: templates/footer.html:56
 msgid "Jobs"
 msgstr ""
 
-#: templates/footer.html:57
+#: templates/footer.html:60
 msgid "Facebook"
 msgstr ""
 
-#: templates/footer.html:60
+#: templates/footer.html:63
 msgid "Twitter"
 msgstr ""
 
-#: templates/footer.html:63
+#: templates/footer.html:66
 msgid "Medium"
 msgstr ""
 
-#: templates/footer.html:66
+#: templates/footer.html:69
 msgid "Youtube"
 msgstr ""
 
-#: templates/footer.html:69
+#: templates/footer.html:72
 msgid "Instagram"
 msgstr ""
 
-#: templates/footer.html:72
+#: templates/footer.html:75
 msgid "Telegram"
 msgstr ""
 
-#: templates/footer.html:75
+#: templates/footer.html:78
 msgid "Reddit"
 msgstr ""
 
-#: templates/footer.html:78
+#: templates/footer.html:81
 msgid "Discord"
 msgstr ""
 
-#: templates/footer.html:88
+#: templates/footer.html:91
 msgid "VK"
 msgstr ""
 
-#: templates/investors.html:3 templates/investors.html:5
-msgid "Origin Protocol - Investors"
+#: templates/investors.html:1
+msgid ""
+"Origin Protocol -\n"
+"Investors"
 msgstr ""
 
-#: templates/investors.html:26
+#: templates/investors.html:2
+msgid ""
+"Origin\n"
+"Protocol is backed by top investors from all over the world"
+msgstr ""
+
+#: templates/investors.html:29
 msgid "We're backed by top investors from all over the world"
 msgstr ""
 
-#: templates/investors.html:38
+#: templates/investors.html:45
 msgid "Fundraising"
 msgstr ""
 
-#: templates/investors.html:39
+#: templates/investors.html:47
 msgid ""
-"We are a well-capitalized startup that has sold tokens in three previous "
-"rounds to build our platform."
+"We are a well-capitalized startup that has sold tokens in\n"
+"            three previous rounds to build our platform."
 msgstr ""
 
-#: templates/investors.html:43
+#: templates/investors.html:54
 msgid "$38.1M"
 msgstr ""
 
-#: templates/investors.html:44
+#: templates/investors.html:57
 msgid "total raised to date"
 msgstr ""
 
-#: templates/investors.html:47
+#: templates/investors.html:61
 msgid "800+"
 msgstr ""
 
-#: templates/investors.html:48
+#: templates/investors.html:62
 msgid "investors"
 msgstr ""
 
-#: templates/investors.html:52
+#: templates/investors.html:66
 msgid ""
-"Interested in getting a stake in Origin? Sign up to receive the latest "
-"updates."
+"Interested in getting a stake in Origin? Sign up to\n"
+"            receive the latest updates."
 msgstr ""
 
-#: templates/investors.html:63
+#: templates/investors.html:78
 msgid "Featured Investor"
 msgstr ""
 
-#: templates/investors.html:77
+#: templates/investors.html:103
 msgid ""
-"\"The reason we invested in Origin was primarily because of the team. "
-"They have amazing backgrounds and they come from iconic consumer "
-"companies.\""
+"\"The reason we invested in Origin was\n"
+"                      primarily because of the team. They have amazing\n"
+"                      backgrounds and they come from iconic consumer\n"
+"                      companies.\""
 msgstr ""
 
-#: templates/investors.html:81
+#: templates/investors.html:110
 msgid "Rodolfo Gonzalez"
 msgstr ""
 
-#: templates/investors.html:84
+#: templates/investors.html:113
 msgid "Partner, Foundation Capital"
 msgstr ""
 
-#: templates/investors.html:100
+#: templates/investors.html:142
 msgid ""
-"\"We're talking about over 100,000 members around the world that are "
-"hard-core fans of Origin. Origin has done a tremendous job executing at a"
-" global scale.\""
+"\"We're talking about over 100,000 members\n"
+"                      around the world that are hard-core fans of Origin. Origin\n"
+"                      has done a tremendous job executing at a global\n"
+"                      scale.\""
 msgstr ""
 
-#: templates/investors.html:104
+#: templates/investors.html:149
 msgid "Sophie Liao"
 msgstr ""
 
-#: templates/investors.html:107
+#: templates/investors.html:152
 msgid "Founding Partner, Oyster VC"
 msgstr ""
 
-#: templates/investors.html:123
+#: templates/investors.html:170
 msgid ""
-"\"Origin stands out from any of the other decentralized applications that"
-" we've invested into, because they've gone out there and built probably "
-"the best community that we've seen. For us, that was a game changer.\""
+"\"Origin stands out from any of the other\n"
+"                      decentralized applications that we've invested into,\n"
+"                      because they've gone out there and built probably the best\n"
+"                      community that we've seen. For us, that was a game\n"
+"                      changer.\""
 msgstr ""
 
-#: templates/investors.html:127 templates/team.html:630
+#: templates/investors.html:178 templates/team.html:633
 msgid "Paul Veradittakit"
 msgstr ""
 
-#: templates/investors.html:130
+#: templates/investors.html:181
 msgid "Co-investment Officer at Pantera Capital"
 msgstr ""
 
-#: templates/investors.html:152 templates/landing.html:190
+#: templates/investors.html:204
 msgid ""
-"We are backed by top venture capital firms and investors in Silicon "
-"Valley and around the world"
+"We are backed by top venture capital firms and investors\n"
+"            in Silicon Valley and around the world"
 msgstr ""
 
-#: templates/investors.html:201
+#: templates/investors.html:247
 msgid "Individual Investors"
 msgstr ""
 
-#: templates/investors.html:203
+#: templates/investors.html:249
 msgid ""
-"We are supported by some of the best angel investors and previous "
-"founders in Silicon Valley."
+"We are supported by some of the best angel investors and\n"
+"            previous founders in Silicon Valley."
 msgstr ""
 
-#: templates/investors.html:213
+#: templates/investors.html:264
 msgid "Steve Chen"
 msgstr ""
 
-#: templates/investors.html:216
+#: templates/investors.html:267
 msgid "Founder, YouTube"
 msgstr ""
 
-#: templates/investors.html:224
+#: templates/investors.html:279
 msgid "Alexis Ohanian"
 msgstr ""
 
-#: templates/investors.html:227
+#: templates/investors.html:282
 msgid "Founder, Reddit"
 msgstr ""
 
-#: templates/investors.html:235
+#: templates/investors.html:294
 msgid "Garry Tan"
 msgstr ""
 
-#: templates/investors.html:238
+#: templates/investors.html:297
 msgid "Partner, Y Combinator"
 msgstr ""
 
-#: templates/investors.html:246
+#: templates/investors.html:309
 msgid "Gil Penchina"
 msgstr ""
 
-#: templates/investors.html:249
+#: templates/investors.html:312
 msgid "Angel Investor"
 msgstr ""
 
-#: templates/investors.html:257
+#: templates/investors.html:324
 msgid "Justin Blau"
 msgstr ""
 
-#: templates/investors.html:260
+#: templates/investors.html:327
 msgid "Acclaimed DJ"
 msgstr ""
 
-#: templates/investors.html:268
+#: templates/investors.html:339
 msgid "Steve Jang"
 msgstr ""
 
-#: templates/investors.html:271
+#: templates/investors.html:342
 msgid "Advisor & Angel, Uber"
 msgstr ""
 
-#: templates/investors.html:279
+#: templates/investors.html:354
 msgid "Kamal Ravikant"
 msgstr ""
 
-#: templates/investors.html:282
+#: templates/investors.html:357
 msgid "Serial Entrepreneur"
 msgstr ""
 
-#: templates/investors.html:290
+#: templates/investors.html:369
 msgid "Randall Kaplan"
 msgstr ""
 
-#: templates/investors.html:293
+#: templates/investors.html:372
 msgid "Founder, Akamai"
 msgstr ""
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:63
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:64
 msgid "Origin Protocol"
 msgstr ""
 
 #: templates/landing.html:5
-msgid ""
-"The sharing economy without intermediaries. Origin is a protocol for "
-"creating sharing economy marketplaces using the Ethereum blockchain and "
-"IPFS."
+msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr ""
 
-#: templates/landing.html:28
+#: templates/landing.html:26
 msgid "The blockchain platform for building decentralized marketplaces"
 msgstr ""
 
+#: templates/landing.html:43
+msgid "Origin Tokens have launched!"
+msgstr ""
+
+#: templates/landing.html:45
+msgid "Participate in the Origin Token (OGN) distribution"
+msgstr ""
+
 #: templates/components/presale-form.html:9
-#: templates/components/presale-form.html:10 templates/landing.html:53
+#: templates/components/presale-form.html:10 templates/landing.html:56
 #: templates/partners.html:133 templates/tokens.html:46
 #: templates/tokens.html:47
 msgid "Email"
 msgstr ""
 
-#: templates/landing.html:61
+#: templates/landing.html:64
 msgid "Buy and sell on Origin"
 msgstr ""
 
-#: templates/landing.html:62
-msgid ""
-"The Origin platform will power hundreds of decentralized, peer-to-peer "
-"marketplaces. Download our flagship app today."
+#: templates/landing.html:65
+msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr ""
 
-#: templates/landing.html:66
+#: templates/landing.html:69
 msgid "Origin Marketplace"
 msgstr ""
 
-#: templates/landing.html:67 templates/mobile.html:18
-msgid ""
-"Rent a home, buy concert tickets, or hire a contractor on our flagship "
-"app, built on the Origin platform."
+#: templates/landing.html:70 templates/mobile.html:18
+msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr ""
 
-#: templates/landing.html:75 templates/mobile.html:27
+#: templates/landing.html:78 templates/mobile.html:27
 msgid "Download Android App"
 msgstr ""
 
-#: templates/landing.html:77
+#: templates/landing.html:80
 msgid "Visit us on the web"
 msgstr ""
 
-#: templates/landing.html:78
+#: templates/landing.html:81
 msgid "shoporigin.com"
 msgstr ""
 
-#: templates/landing.html:81
+#: templates/landing.html:84
 msgid "Available on"
 msgstr ""
 
-#: templates/landing.html:92
+#: templates/landing.html:95
 msgid "The sharing economy is a massive opportunity waiting to be disrupted"
 msgstr ""
 
-#: templates/landing.html:93
+#: templates/landing.html:96
 msgid "Gross bookings are expected to reach $335B by 2025"
 msgstr ""
 
-#: templates/landing.html:100
+#: templates/landing.html:103
 msgid "Percentage of total value of a booking Airbnb charged guests"
 msgstr ""
 
-#: templates/landing.html:105
+#: templates/landing.html:108
 msgid "Uber's average take per ride"
 msgstr ""
 
-#: templates/landing.html:114
+#: templates/landing.html:117
 msgid "Drivers that rated Uber under 3 stars out of 5 for earnings satisfaction"
 msgstr ""
 
-#: templates/landing.html:118
+#: templates/landing.html:121
 msgid "Uber driver churn by quarter"
 msgstr ""
 
-#: templates/landing.html:122
+#: templates/landing.html:125
 msgid "Airbnb Japan home-share listings removed in 2018"
 msgstr ""
 
-#: templates/landing.html:130
+#: templates/landing.html:133
 msgid "Decentralized marketplaces are inevitable"
 msgstr ""
 
-#: templates/landing.html:131
-msgid ""
-"For the first time in history, the blockchain enables buyers and sellers "
-"to securely meet and transact without any middlemen."
+#: templates/landing.html:134
+msgid "For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen."
 msgstr ""
 
-#: templates/landing.html:138
+#: templates/landing.html:141
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed."
 msgstr ""
 
-#: templates/landing.html:145
+#: templates/landing.html:148
 msgid "Everyone can own a stake in the network by contributing to its growth."
 msgstr ""
 
-#: templates/landing.html:152
+#: templates/landing.html:155
 msgid "2 billion unbanked people can access new markets globally."
 msgstr ""
 
-#: templates/landing.html:159
+#: templates/landing.html:162
 msgid "Decentralized marketplaces can’t be banned or shut down."
 msgstr ""
 
-#: templates/landing.html:165
+#: templates/landing.html:168
 msgid "Origin has a world-class team"
 msgstr ""
 
-#: templates/landing.html:166
-msgid ""
-"Our team is led by serial entrepreneurs, a founder of PayPal, early "
-"employees at YouTube, and engineering managers at Google and Dropbox."
+#: templates/landing.html:169
+msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr ""
 
-#: templates/landing.html:206
+#: templates/landing.html:193
+msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
+msgstr ""
+
+#: templates/landing.html:209
 msgid "Featured Partner"
 msgstr ""
 
-#: templates/landing.html:207
+#: templates/landing.html:210
 msgid "Trips Community is building a homesharing DApp in Italy with 3,000 hosts."
 msgstr ""
 
-#: templates/landing.html:210
-msgid ""
-"“The short-term rentals space is exploding and needs more innovation and "
-"competition. A neutral and open platform will empower renters, hosts, and"
-" channel partners. We are excited to partner with Origin to create this "
-"new wave of innovation in homesharing.”"
+#: templates/landing.html:213
+msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
 msgstr ""
 
-#: templates/landing.html:211
+#: templates/landing.html:214
 msgid "Luca De Giglio"
 msgstr ""
 
-#: templates/landing.html:212
+#: templates/landing.html:215
 msgid "Founder, Trips Community"
 msgstr ""
 
-#: templates/landing.html:219
+#: templates/landing.html:222
 msgid "Featured Videos"
 msgstr ""
 
-#: templates/landing.html:238
+#: templates/landing.html:241
 msgid "Watch more videos"
 msgstr ""
 
-#: templates/landing.html:242
+#: templates/landing.html:245
 msgid "Recent News"
 msgstr ""
 
-#: templates/landing.html:248
+#: templates/landing.html:251
 msgid "Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin"
 msgstr ""
 
-#: templates/landing.html:254
+#: templates/landing.html:257
 msgid "Live on TV with HKB News in Korea"
 msgstr ""
 
-#: templates/landing.html:260
+#: templates/landing.html:263
 msgid "Doo Wan Nam Discusses Origin’s Partnership with MakerDAO"
 msgstr ""
 
-#: templates/landing.html:265
+#: templates/landing.html:268
 msgid "Read more on Medium"
 msgstr ""
 
@@ -1063,46 +1058,59 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: templates/ogn-token.html:41 templates/whitepaper/platform.html:109
+#: templates/ogn-token.html:1
+msgid ""
+"Origin Protocol - OGN\n"
+"Token"
+msgstr ""
+
+#: templates/ogn-token.html:2
+msgid ""
+"Origin Tokens\n"
+"(OGN) ensure the health and growth of the Origin network."
+msgstr ""
+
+#: templates/ogn-token.html:12 templates/whitepaper/platform.html:109
 msgid "Origin Rewards"
 msgstr ""
 
-#: templates/ogn-token.html:43
+#: templates/ogn-token.html:14
 msgid ""
-"Earn your stake in the Origin network today. Users can earn Origin Tokens"
-" (OGN) by verifying their profiles, referring friends and family to "
-"Origin, sharing news about Origin on social media, and making purchases "
-"from our featured sellers."
+"Earn your stake in the Origin network today. Users can\n"
+"            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
+"            friends and family to Origin, sharing news about Origin on social\n"
+"            media, and making purchases from our featured sellers."
 msgstr ""
 
-#: templates/ogn-token.html:45
+#: templates/ogn-token.html:19
 msgid "Not available in the United States"
 msgstr ""
 
-#: templates/ogn-token.html:71
+#: templates/ogn-token.html:58
 msgid "Commissions"
 msgstr ""
 
-#: templates/ogn-token.html:73
+#: templates/ogn-token.html:60
 msgid ""
-"Promote your listings across the Origin flagship app and third-party apps"
-" with Origin Commissions. Pay with OGN to get featured prominently in "
-"search results. Application developers and marketplace operators earn "
-"Origin Tokens (OGN) by helping sellers complete their sales."
+"Promote your listings across the Origin flagship app and\n"
+"            third-party apps with Origin Commissions. Pay with OGN to get\n"
+"            featured prominently in search results. Application developers and\n"
+"            marketplace operators earn Origin Tokens (OGN) by helping sellers\n"
+"            complete their sales."
 msgstr ""
 
-#: templates/ogn-token.html:83
+#: templates/ogn-token.html:74
 msgid "Payments"
 msgstr ""
 
-#: templates/ogn-token.html:85
+#: templates/ogn-token.html:76
 msgid ""
-"Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay "
-"for goods and services. Sellers earn larger stakes in the network by "
-"accepting OGN as a preferred payment method."
+"Use the Origin Tokens (OGN) that you've earned in Origin\n"
+"            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
+"            the network by accepting OGN as a preferred payment method."
 msgstr ""
 
-#: templates/ogn-token.html:99
+#: templates/ogn-token.html:97
 msgid "Research and Development"
 msgstr ""
 
@@ -1112,29 +1120,31 @@ msgstr ""
 
 #: templates/ogn-token.html:105
 msgid ""
-"Stake your OGN to run an Origin Node and earn more OGN by helping to "
-"replicate and validate profile and listing data on the network."
+"Stake your OGN to run an Origin Node and earn more OGN by\n"
+"            helping to replicate and validate profile and listing data on the\n"
+"            network."
 msgstr ""
 
-#: templates/ogn-token.html:110
+#: templates/ogn-token.html:114
 msgid "Origin Relayer"
 msgstr ""
 
-#: templates/ogn-token.html:112
+#: templates/ogn-token.html:116
 msgid ""
-"Developers can pay for usage of Origin Meta Transactions Relayers with "
-"OGN. Meta Transactions reduce user friction and encourage adoption and "
-"retention."
+"Developers can pay for usage of Origin Meta Transactions\n"
+"            Relayers with OGN. Meta Transactions reduce user friction and\n"
+"            encourage adoption and retention."
 msgstr ""
 
-#: templates/ogn-token.html:117
+#: templates/ogn-token.html:125
 msgid "Governance"
 msgstr ""
 
-#: templates/ogn-token.html:119
+#: templates/ogn-token.html:127
 msgid ""
-"Everyone has a vote on the Origin Platform. Token holders will "
-"participate in important community votes to define future initiatives."
+"Everyone has a vote on the Origin Platform. Token holders\n"
+"            will participate in important community votes to define future\n"
+"            initiatives."
 msgstr ""
 
 #: templates/partner_campaign.html:3 templates/partner_campaign.html:5
@@ -1151,9 +1161,7 @@ msgid "Origin Tokens"
 msgstr ""
 
 #: templates/partner_campaign.html:281 templates/referral_campaign.html:344
-msgid ""
-"Get started by downloading Origin Marketplace - the app that allows you "
-"to buy and sell anything using crypto right from your phone."
+msgid "Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone."
 msgstr ""
 
 #: templates/partner_campaign.html:310 templates/referral_campaign.html:376
@@ -1161,10 +1169,7 @@ msgid "What are Origin Rewards?"
 msgstr ""
 
 #: templates/partner_campaign.html:311 templates/referral_campaign.html:377
-msgid ""
-"OGN is a rewards cryptocurrency earned by Origin users. Earn rewards when"
-" you verify your account or invite your friends to join Origin. Even get "
-"OGN as cash back when you buy and sell."
+msgid "OGN is a rewards cryptocurrency earned by Origin users. Earn rewards when you verify your account or invite your friends to join Origin. Even get OGN as cash back when you buy and sell."
 msgstr ""
 
 #: templates/partner_campaign.html:319 templates/referral_campaign.html:348
@@ -1172,15 +1177,16 @@ msgstr ""
 msgid "Scan to install our app"
 msgstr ""
 
+#: templates/partners.html:3 templates/partners.html:5
+msgid "Origin Protocol - Build on Origin"
+msgstr ""
+
 #: templates/partners.html:16
 msgid "Build on Origin"
 msgstr ""
 
 #: templates/partners.html:22
-msgid ""
-"<strong>Teams all over the world are building their projects using "
-"Origin’s protocols. We are looking for more amazing people to <a "
-"href='#join_our_mission'>join our mission</a>.</strong>"
+msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr ""
 
 #: templates/partners.html:87
@@ -1196,10 +1202,7 @@ msgid "Join our mission!"
 msgstr ""
 
 #: templates/partners.html:121
-msgid ""
-"Whether you’re an existing blockchain company or a traditional "
-"marketplace thinking about blockchain technology, we’d love to hear from "
-"you. Fill out the form below and we will get back to you shortly."
+msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
 msgstr ""
 
 #: templates/partners.html:125
@@ -1242,8 +1245,16 @@ msgstr ""
 msgid "Origin Protocol - Privacy Policy"
 msgstr ""
 
+#: templates/product.html:3
+msgid "Origin Protocol - Product"
+msgstr ""
+
+#: templates/product.html:5
+msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
+msgstr ""
+
 #: templates/product.html:18
-msgid "Our platform will power decentralized marketplaces everywhere"
+msgid "Our platform will power peer-to-peer marketplaces everywhere"
 msgstr ""
 
 #: templates/product.html:28
@@ -1267,9 +1278,7 @@ msgid "Self-sovereign Identity"
 msgstr ""
 
 #: templates/product.html:57
-msgid ""
-"Own and protect your own data. Your profile is portable and can be used "
-"across any Origin-enabled application."
+msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
 msgstr ""
 
 #: templates/product.html:66
@@ -1285,9 +1294,7 @@ msgid "Permissionless Payments"
 msgstr ""
 
 #: templates/product.html:79
-msgid ""
-"Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to "
-"buy and sell."
+msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
 msgstr ""
 
 #: templates/product.html:88
@@ -1295,9 +1302,7 @@ msgid "Reputation Systems"
 msgstr ""
 
 #: templates/product.html:90
-msgid ""
-"Give ratings and leave reviews for your transactions just like you would "
-"on a centralized app."
+msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
 msgstr ""
 
 #: templates/product.html:99
@@ -1305,9 +1310,7 @@ msgid "Blockchain-Powered Transactions"
 msgstr ""
 
 #: templates/product.html:101
-msgid ""
-"Funds are escrowed on our marketplace smart contract. Buy and sell "
-"without intermediaries."
+msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
 msgstr ""
 
 #: templates/product.html:110
@@ -1315,9 +1318,7 @@ msgid "Arbitration Services"
 msgstr ""
 
 #: templates/product.html:112
-msgid ""
-"Use Origin or select a third-party arbitration service to keep both "
-"counterparties safe."
+msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
 msgstr ""
 
 #: templates/product.html:123
@@ -1325,27 +1326,19 @@ msgid "How it works"
 msgstr ""
 
 #: templates/product.html:132
-msgid ""
-"Buyers search and browse for sellers' listings on the blockchain through "
-"DApps"
+msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
 msgstr ""
 
 #: templates/product.html:138
-msgid ""
-"Buyers submit offers and escrowed payments to our marketplace smart "
-"contract"
+msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
 msgstr ""
 
 #: templates/product.html:144
-msgid ""
-"Sellers accept or reject offers from prospective buyers, then fulfill "
-"active offers"
+msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
 msgstr ""
 
 #: templates/product.html:150
-msgid ""
-"After offers are finalized, the smart contract releases escrowed payments"
-" to sellers"
+msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
 msgstr ""
 
 #: templates/product.html:160
@@ -1509,9 +1502,7 @@ msgid "Origin Token"
 msgstr ""
 
 #: templates/product.html:283
-msgid ""
-"Origin Token (OGN) is an incentive token that ensures the health and "
-"growth of the network."
+msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr ""
 
 #: templates/product.html:287
@@ -1534,371 +1525,396 @@ msgstr ""
 msgid "Origin Protocol - imToken"
 msgstr ""
 
-#: templates/team.html:1
+#: templates/swagStore.html:1
+msgid "Origin Protocol - February Rewards"
+msgstr ""
+
+#: templates/swagStore.html:151
+msgid "February 2020"
+msgstr ""
+
+#: templates/swagStore.html:154
+msgid "Shop at the Origin Swag Store and Earn OGN"
+msgstr ""
+
+#: templates/swagStore.html:155
+msgid "For this month’s Origin Rewards campaign, it’s all about our Origin Swag Store. To celebrate the launch and our recent OGN listing on Binance, we have committed a total of 15,000 OGN to give away to our Origin community!"
+msgstr ""
+
+#: templates/swagStore.html:157 templates/swagStore.html:200
+msgid "Visit Origin Swag Store"
+msgstr ""
+
+#: templates/swagStore.html:161
+msgid "in total prizes"
+msgstr ""
+
+#: templates/swagStore.html:162
+msgid "Purchase your favorite items at the Origin Swag Store today and be entered for a chance to win up to 3,000 OGN. This campaign will last until Feb 29th 11:59PM PST, and there will be thirty lucky winners."
+msgstr ""
+
+#: templates/swagStore.html:202
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/swagStore.html:203
+msgid "Please note that Origin Rewards is currently available in most countries in the world. One notable exception is the United States & countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result."
+msgstr ""
+
+#: templates/swagStore.html:204
+msgid "Tokens earned in Feb will be distributed after the first week of March (subject to terms and conditions)."
+msgstr ""
+
+#: templates/swagStore.html:205
+msgid "Shop at the Origin Swag Store today, and enter for a chance to win up to 3,000 OGN!"
+msgstr ""
+
+#: templates/team.html:3
 msgid "Origin Protocol - Team"
 msgstr ""
 
-#: templates/team.html:2
+#: templates/team.html:4
 msgid ""
-"Origin Protocol -\n"
-"Team"
+"Origin Protocol's\n"
+"world-class team is led by entrepreneurs and engineers from iconic tech\n"
+"companies"
 msgstr ""
 
-#: templates/team.html:28
+#: templates/team.html:31
 msgid ""
 "Our world-class team is led by entrepreneurs and engineers\n"
 "        from iconic tech companies"
 msgstr ""
 
-#: templates/team.html:45 templates/whitepaper/sidebar.html:50
+#: templates/team.html:48 templates/whitepaper/sidebar.html:50
 msgid "Core team"
 msgstr ""
 
-#: templates/team.html:63 templates/whitepaper/team.html:31
+#: templates/team.html:66 templates/whitepaper/team.html:31
 msgid "Josh Fraser"
 msgstr ""
 
-#: templates/team.html:67 templates/team.html:94
+#: templates/team.html:70 templates/team.html:97
 msgid "Cofounder"
 msgstr ""
 
-#: templates/team.html:70
+#: templates/team.html:73
 msgid ""
 "Josh started coding at the age of 10. Prior to\n"
-"                  Origin, he co-founded three other venture-backed "
-"companies:\n"
-"                  EventVue, Torbit (acquired by Walmart Labs) &amp; "
-"Forage."
+"                  Origin, he co-founded three other venture-backed companies:\n"
+"                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
 msgstr ""
 
-#: templates/team.html:90 templates/whitepaper/team.html:13
+#: templates/team.html:93 templates/whitepaper/team.html:13
 msgid "Matthew Liu"
 msgstr ""
 
-#: templates/team.html:97
+#: templates/team.html:100
 msgid ""
 "Matt was the 3rd PM at YouTube (acquired by\n"
-"                  Google) and VP PM at Qwiki (acquired by Yahoo) and "
-"Bonobos\n"
-"                  (acquired by Walmart). He has an MS and BS from "
-"Stanford."
+"                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
+"                  (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr ""
 
-#: templates/team.html:121 templates/whitepaper/team.html:96
+#: templates/team.html:124 templates/whitepaper/team.html:96
 msgid "Business Development"
 msgstr ""
 
-#: templates/team.html:124
+#: templates/team.html:127
 msgid ""
 "Coleman is an active cryptocurrency investor and\n"
-"                  real estate entrepreneur, owning and managing multiple "
-"Airbnb\n"
+"                  real estate entrepreneur, owning and managing multiple Airbnb\n"
 "                  properties. He studied mathematics at Berkeley."
 msgstr ""
 
-#: templates/team.html:144 templates/whitepaper/team.html:56
+#: templates/team.html:147 templates/whitepaper/team.html:56
 msgid "Yu Pan"
 msgstr ""
 
-#: templates/team.html:148 templates/whitepaper/team.html:60
+#: templates/team.html:151 templates/whitepaper/team.html:60
 msgid "R&D Engineer"
 msgstr ""
 
-#: templates/team.html:151
+#: templates/team.html:154
 msgid ""
 "Yu Pan was one of the 6 founding team members of\n"
-"                  PayPal and was the 1st employee at YouTube. He is a "
-"former\n"
+"                  PayPal and was the 1st employee at YouTube. He is a former\n"
 "                  Google employee and co-founder of Kiwi Crate."
 msgstr ""
 
-#: templates/team.html:171 templates/whitepaper/team.html:110
+#: templates/team.html:174 templates/whitepaper/team.html:110
 msgid "Micah Alcorn"
 msgstr ""
 
-#: templates/team.html:175 templates/whitepaper/team.html:114
+#: templates/team.html:178 templates/whitepaper/team.html:114
 msgid "Product Manager/Engineer"
 msgstr ""
 
-#: templates/team.html:178
+#: templates/team.html:181
 msgid ""
 "Micah was the technical co-founder of\n"
-"                  WellAttended, a bootstrapped box office management "
-"platform.\n"
-"                  He worked as a commercial real estate broker while "
-"learning to\n"
+"                  WellAttended, a bootstrapped box office management platform.\n"
+"                  He worked as a commercial real estate broker while learning to\n"
 "                  code."
 msgstr ""
 
-#: templates/team.html:200 templates/whitepaper/team.html:128
+#: templates/team.html:203 templates/whitepaper/team.html:128
 msgid "Kay Yoo"
 msgstr ""
 
-#: templates/team.html:204 templates/whitepaper/team.html:132
+#: templates/team.html:207 templates/whitepaper/team.html:132
 msgid "Finance & Operations"
 msgstr ""
 
-#: templates/team.html:207
+#: templates/team.html:210
 msgid ""
 "Kay is a Chartered Professional Accountant (CPA).\n"
-"                  She previously worked as a Senior Accountant and then "
-"as a\n"
+"                  She previously worked as a Senior Accountant and then as a\n"
 "                  Senior Consultant at KPMG Canada."
 msgstr ""
 
-#: templates/team.html:228 templates/whitepaper/team.html:74
+#: templates/team.html:231 templates/whitepaper/team.html:74
 msgid "Franck Chastagnol"
 msgstr ""
 
-#: templates/team.html:232 templates/team.html:289 templates/team.html:347
+#: templates/team.html:235 templates/team.html:292 templates/team.html:350
 #: templates/whitepaper/team.html:78 templates/whitepaper/team.html:186
 #: templates/whitepaper/team.html:204
 msgid "Senior Engineer"
 msgstr ""
 
-#: templates/team.html:235
+#: templates/team.html:238
 msgid ""
 "Franck has had a successful career as an early\n"
-"                  employee at numerous high-profile companies. He "
-"previously led\n"
-"                  engineering teams at Inktomi, Paypal, YouTube, Google "
-"and\n"
+"                  employee at numerous high-profile companies. He previously led\n"
+"                  engineering teams at Inktomi, Paypal, YouTube, Google and\n"
 "                  Dropbox."
 msgstr ""
 
-#: templates/team.html:257 templates/whitepaper/team.html:164
+#: templates/team.html:260 templates/whitepaper/team.html:164
 msgid "Mila Choi"
 msgstr ""
 
-#: templates/team.html:261 templates/whitepaper/team.html:168
+#: templates/team.html:264 templates/whitepaper/team.html:168
 msgid "Regional Manager Korea"
 msgstr ""
 
-#: templates/team.html:264
+#: templates/team.html:267
 msgid ""
 "Mila is leading our community efforts in South\n"
-"                  Korea. She previously organized blockhain hackathons "
-"and has\n"
-"                  degrees from Penn State and Erasmus University "
-"Rotterdam."
+"                  Korea. She previously organized blockhain hackathons and has\n"
+"                  degrees from Penn State and Erasmus University Rotterdam."
 msgstr ""
 
-#: templates/team.html:285 templates/whitepaper/team.html:182
+#: templates/team.html:288 templates/whitepaper/team.html:182
 msgid "Tom Linton"
 msgstr ""
 
-#: templates/team.html:292
+#: templates/team.html:295
 msgid ""
 "Before Origin, Tom had a successful career as a\n"
 "                  solo startup founder. He has two Masters degrees in\n"
-"                  Distributed Systems from the Technical University of "
-"Berlin\n"
+"                  Distributed Systems from the Technical University of Berlin\n"
 "                  and KTH in Stockholm."
 msgstr ""
 
-#: templates/team.html:314 templates/whitepaper/team.html:218
+#: templates/team.html:317 templates/whitepaper/team.html:218
 msgid "Anna Wang"
 msgstr ""
 
-#: templates/team.html:318 templates/whitepaper/team.html:222
+#: templates/team.html:321 templates/whitepaper/team.html:222
 msgid "Regional Manager China"
 msgstr ""
 
-#: templates/team.html:321
+#: templates/team.html:324
 msgid ""
 "Anna is leading our community efforts for Chinese\n"
-"                  speakers. Before Origin, Anna managed global social "
-"media at\n"
+"                  speakers. Before Origin, Anna managed global social media at\n"
 "                  Exness, a leading forex broker. She also co-founded a\n"
 "                  non-profit in Australia."
 msgstr ""
 
-#: templates/team.html:343 templates/whitepaper/team.html:200
+#: templates/team.html:346 templates/whitepaper/team.html:200
 msgid "Nick Poulden"
 msgstr ""
 
-#: templates/team.html:350
+#: templates/team.html:353
 msgid ""
 "Nick studied Computer Science at the University of\n"
-"                  Warwick. Prior to joining Origin, he worked as an "
-"engineer at\n"
+"                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "                  Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr ""
 
-#: templates/team.html:371 templates/whitepaper/team.html:236
+#: templates/team.html:374 templates/whitepaper/team.html:236
 msgid "Domen Grabec"
 msgstr ""
 
-#: templates/team.html:375 templates/team.html:403 templates/team.html:460
+#: templates/team.html:378 templates/team.html:406 templates/team.html:463
 #: templates/whitepaper/team.html:240 templates/whitepaper/team.html:258
 #: templates/whitepaper/team.html:294
 msgid "Engineer"
 msgstr ""
 
-#: templates/team.html:378
+#: templates/team.html:381
 msgid ""
 "Domen co-founded and led a team developing a\n"
-"                  mobile application with 2 chess Grandmasters. He "
-"previously\n"
+"                  mobile application with 2 chess Grandmasters. He previously\n"
 "                  had a successful career at Cetra, Zemanta and Peerindex."
 msgstr ""
 
-#: templates/team.html:399 templates/whitepaper/team.html:254
+#: templates/team.html:402 templates/whitepaper/team.html:254
 msgid "Shahul Hameed"
 msgstr ""
 
-#: templates/team.html:406
+#: templates/team.html:409
 msgid ""
 "Shahul is a fullstack engineer who started\n"
-"                  programming at age of 10. He previously worked as a "
-"freelancer\n"
+"                  programming at age of 10. He previously worked as a freelancer\n"
 "                  and then joined Zoho as a front-end developer."
 msgstr ""
 
-#: templates/team.html:427 templates/whitepaper/team.html:272
+#: templates/team.html:430 templates/whitepaper/team.html:272
 msgid "Zaurbek Ivanov"
 msgstr ""
 
-#: templates/team.html:431 templates/whitepaper/team.html:276
+#: templates/team.html:434 templates/whitepaper/team.html:276
 msgid "Russia Community"
 msgstr ""
 
-#: templates/team.html:434
+#: templates/team.html:437
 msgid ""
 "Zaurbek Ivanov studied Economics at\n"
-"                  Kabardino-Balkaria State Agrarian University in "
-"Nalchik,\n"
-"                  Russia. He has worked in the hospitality industry in "
-"the US\n"
+"                  Kabardino-Balkaria State Agrarian University in Nalchik,\n"
+"                  Russia. He has worked in the hospitality industry in the US\n"
 "                  and Russia."
 msgstr ""
 
-#: templates/team.html:456 templates/whitepaper/team.html:290
+#: templates/team.html:459 templates/whitepaper/team.html:290
 msgid "Mike Shultz"
 msgstr ""
 
-#: templates/team.html:463
+#: templates/team.html:466
 msgid ""
 "Mike is a long-time contributor to open-source. He\n"
-"                  created a dev toolkit for creating Ethereum smart "
-"contracts\n"
-"                  with Python and previously worked with Ethereum and "
-"IPFS at\n"
+"                  created a dev toolkit for creating Ethereum smart contracts\n"
+"                  with Python and previously worked with Ethereum and IPFS at\n"
 "                  Lunyr."
 msgstr ""
 
-#: templates/team.html:485 templates/whitepaper/team.html:146
+#: templates/team.html:488 templates/whitepaper/team.html:146
 msgid "Aure Gimon"
 msgstr ""
 
-#: templates/team.html:489 templates/whitepaper/team.html:150
+#: templates/team.html:492 templates/whitepaper/team.html:150
 msgid "Product Designer"
 msgstr ""
 
-#: templates/team.html:492
+#: templates/team.html:495
 msgid ""
 "Aure is a product designer with 10+ years of\n"
-"                  experience. Prior to joining Origin, Aure worked at "
-"multiple\n"
-"                  startups and Fortune 500 companies. In a past life, he "
-"was\n"
+"                  experience. Prior to joining Origin, Aure worked at multiple\n"
+"                  startups and Fortune 500 companies. In a past life, he was\n"
 "                  also a software engineer."
 msgstr ""
 
-#: templates/team.html:509
+#: templates/team.html:512
 msgid "Community team"
 msgstr ""
 
-#: templates/team.html:524 templates/whitepaper/team.html:330
+#: templates/team.html:527 templates/whitepaper/team.html:330
 msgid "Holly Gu"
 msgstr ""
 
-#: templates/team.html:536 templates/whitepaper/team.html:342
+#: templates/team.html:539 templates/whitepaper/team.html:342
 msgid "June Kim"
 msgstr ""
 
-#: templates/team.html:548 templates/whitepaper/team.html:354
+#: templates/team.html:551 templates/whitepaper/team.html:354
 msgid "Yeongin Lee"
 msgstr ""
 
-#: templates/team.html:560 templates/whitepaper/team.html:366
+#: templates/team.html:563 templates/whitepaper/team.html:366
 msgid "Leslie Song"
 msgstr ""
 
-#: templates/team.html:571
+#: templates/team.html:574
 msgid "Advisors"
 msgstr ""
 
-#: templates/team.html:590
+#: templates/team.html:593
 msgid "Addison Huegel"
 msgstr ""
 
-#: templates/team.html:594
+#: templates/team.html:597
 msgid "PR"
 msgstr ""
 
-#: templates/team.html:610
+#: templates/team.html:613
 msgid "Melody He"
 msgstr ""
 
-#: templates/team.html:614
+#: templates/team.html:617
 msgid "International BD"
 msgstr ""
 
-#: templates/team.html:634 templates/team.html:654
+#: templates/team.html:637 templates/team.html:657
 msgid "Advisor"
 msgstr ""
 
-#: templates/team.html:650
+#: templates/team.html:653
 msgid "Joey Krug"
 msgstr ""
 
-#: templates/team.html:670
+#: templates/team.html:673
 msgid "Andrew Hyde"
 msgstr ""
 
-#: templates/team.html:674 templates/whitepaper/sidebar.html:53
+#: templates/team.html:677 templates/whitepaper/sidebar.html:53
 #: templates/whitepaper/team.html:317
 msgid "Community"
 msgstr ""
 
-#: templates/team.html:685
+#: templates/team.html:688
 #, python-format
 msgid "100%% open-source."
 msgstr ""
 
-#: templates/team.html:686
+#: templates/team.html:689
 msgid " contributors."
 msgstr ""
 
-#: templates/team.html:713
+#: templates/team.html:716
 msgid "Want to contribute?"
 msgstr ""
 
-#: templates/team.html:722
+#: templates/team.html:725
 msgid "Visit our GitHub Repository"
 msgstr ""
 
-#: templates/team.html:727
+#: templates/team.html:730
 msgid "Join our #engineering channel on Discord"
 msgstr ""
 
-#: templates/team.html:739
+#: templates/team.html:742
 msgid "Interested in working at Origin?"
 msgstr ""
 
-#: templates/team.html:743
+#: templates/team.html:746
 msgid ""
 "We are a distributed team and are hiring all around the\n"
 "            world."
 msgstr ""
 
-#: templates/team.html:754
+#: templates/team.html:757
 msgid "View job posts"
 msgstr ""
 
-#: templates/tokens.html:3 templates/tokens.html:5
-msgid "Origin Protocol - Tokens"
+#: templates/tokens.html:3
+msgid "Origin Protocol - Buy Origin Tokens (OGN)"
+msgstr ""
+
+#: templates/tokens.html:16
+msgid "Origin Tokens are launching soon!"
 msgstr ""
 
 #: templates/tokens.html:18
@@ -1931,12 +1947,16 @@ msgstr ""
 msgid "Origin Protocol - Terms of Service"
 msgstr ""
 
-#: templates/video.html:39
+#: templates/video.html:37
 msgid "Share"
 msgstr ""
 
-#: templates/videos.html:3 templates/videos.html:5
+#: templates/videos.html:3
 msgid "Origin Protocol - Videos"
+msgstr ""
+
+#: templates/videos.html:5
+msgid "Watch videos featuring Origin's top investors, employees, and other supporters."
 msgstr ""
 
 #: templates/videos.html:18 templates/videos.html:21
@@ -1960,10 +1980,7 @@ msgid "Meetups"
 msgstr ""
 
 #: templates/warning.html:9
-msgid ""
-"<strong>Don't get phished!</strong> The only official URL for Origin "
-"Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and "
-"be careful of similar looking URLs."
+msgid "<strong>Don't get phished!</strong> The only official URL for Origin Protocol is <strong>www.originprotocol.com</strong>. Please bookmark and be careful of similar looking URLs."
 msgstr ""
 
 #: templates/warning.html:20
@@ -1971,9 +1988,7 @@ msgid "Earn Free Origin Tokens Today"
 msgstr ""
 
 #: templates/warning.html:21
-msgid ""
-"Participate in our campaigns and complete tasks on our DApp to earn "
-"Origin Tokens."
+msgid "Participate in our campaigns and complete tasks on our DApp to earn Origin Tokens."
 msgstr ""
 
 #: templates/warning.html:24
@@ -1985,7 +2000,7 @@ msgid "Origin Protocol - Whitepaper"
 msgstr ""
 
 #: templates/whitepaper.html:20
-msgid "The sharing economy without intermediaries"
+msgid "Enabling true peer-to-peer commerce"
 msgstr ""
 
 #: templates/components/countdown-timer.html:7
@@ -2116,39 +2131,19 @@ msgstr ""
 
 #: templates/whitepaper/disclaimer.html:4
 msgid ""
-"Certain statements in this whitepaper constitute forward-looking "
-"statements. Such forward-looking statements, including the intended "
-"actions and\n"
-"    performance objectives of the Company, involve known and unknown "
-"risks, uncertainties, and other important factors that could cause the "
-"actual results of\n"
-"    the Company to differ materially from any future results expressed or"
-" implied by such forward-looking statements. Accordingly, readers should "
-"not place\n"
-"    undue reliance on forward-looking statements. No representation or "
-"warranty is made as to future performance or such forward-looking "
-"statements."
+"Certain statements in this whitepaper constitute forward-looking statements. Such forward-looking statements, including the intended actions and\n"
+"    performance objectives of the Company, involve known and unknown risks, uncertainties, and other important factors that could cause the actual results of\n"
+"    the Company to differ materially from any future results expressed or implied by such forward-looking statements. Accordingly, readers should not place\n"
+"    undue reliance on forward-looking statements. No representation or warranty is made as to future performance or such forward-looking statements."
 msgstr ""
 
 #: templates/whitepaper/disclaimer.html:11
 msgid ""
-"This whitepaper was first published in September 2017, before the Origin "
-"Platform was built and deployed on the Ethereum Mainnet in October of "
-"2018. For\n"
-"    the most up to date information on our product development and "
-"business strategy, please refer to our website at originprotocol.com. For"
-" the latest technical\n"
-"    information, please reference our Github account at <a "
-"href='https://github.com/OriginProtocol' target='_blank' rel='noreferrer "
-"noopener'>www.github.com/OriginProtocol</a>. To use our flagship "
-"marketplace application, please download our mobile apps\n"
-"    (<a href='https://www.originprotocol.com/mobile' "
-"target='_blank'>www.originprotocol.com/mobile</a>) or visit our DApp ((<a"
-" href='https://www.shoporigin.com' target='_blank' rel='noreferrer "
-"noopener'>www.shoporigin.com</a>) with a web3-enabled DApp browser.\n"
-"    To use our decentralized Shopify alternative, visit <a "
-"href='https://originswag.eth.link' target='_blank' rel='noreferrer "
-"noopener'>originswag.eth.link</a>."
+"This whitepaper was first published in September 2017, before the Origin Platform was built and deployed on the Ethereum Mainnet in October of 2018. For\n"
+"    the most up to date information on our product development and business strategy, please refer to our website at originprotocol.com. For the latest technical\n"
+"    information, please reference our Github account at <a href='https://github.com/OriginProtocol' target='_blank' rel='noreferrer noopener'>www.github.com/OriginProtocol</a>. To use our flagship marketplace application, please download our mobile apps\n"
+"    (<a href='https://www.originprotocol.com/mobile' target='_blank'>www.originprotocol.com/mobile</a>) or visit our DApp ((<a href='https://www.shoporigin.com' target='_blank' rel='noreferrer noopener'>www.shoporigin.com</a>) with a web3-enabled DApp browser.\n"
+"    To use our decentralized Shopify alternative, visit <a href='https://originswag.eth.link' target='_blank' rel='noreferrer noopener'>originswag.eth.link</a>."
 msgstr ""
 
 #: templates/whitepaper/disclaimer.html:19
@@ -2161,16 +2156,10 @@ msgstr ""
 
 #: templates/whitepaper/exec-summary.html:4
 msgid ""
-"Origin is an open-source platform that enables the creation of peer-to-"
-"peer marketplaces and e-commerce applications. The Origin Platform "
-"initially targets the global sharing economy, allowing buyers and sellers"
-" of\n"
-"    fractional use goods and services (car-sharing, service-based tasks, "
-"home-sharing, etc.) to transact on\n"
-"    the distributed, open web. Using the Ethereum blockchain and "
-"Interplanetary File System (IPFS), the\n"
-"    platform and its community participants can interact in a peer-to-"
-"peer fashion, allowing for the creation and booking of\n"
+"Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of\n"
+"    fractional use goods and services (car-sharing, service-based tasks, home-sharing, etc.) to transact on\n"
+"    the distributed, open web. Using the Ethereum blockchain and Interplanetary File System (IPFS), the\n"
+"    platform and its community participants can interact in a peer-to-peer fashion, allowing for the creation and booking of\n"
 "    services and goods without traditional intermediaries. "
 msgstr ""
 
@@ -2179,63 +2168,35 @@ msgid "We intend to enable a large-scale commerce network that:"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:13
-msgid ""
-"Transfers direct financial value (listing, transaction, and service fees)"
-" from large corporations like Airbnb, Craigslist, Postmates, etc. to "
-"individual buyers and sellers"
+msgid "Transfers direct financial value (listing, transaction, and service fees) from large corporations like Airbnb, Craigslist, Postmates, etc. to individual buyers and sellers"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:14
-msgid ""
-"Transfers indirect financial and strategic value (privately aggregated "
-"silos of customer and transaction data) from those same corporations to "
-"the entire ecosystem"
+msgid "Transfers indirect financial and strategic value (privately aggregated silos of customer and transaction data) from those same corporations to the entire ecosystem"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:15
-msgid ""
-"Creates new financial value for marketplace participants that contribute "
-"to the growth of the network (e.g. building new technology for the Origin"
-" Platform, bootstrapping new product verticals, and referring new users "
-"and businesses)"
+msgid "Creates new financial value for marketplace participants that contribute to the growth of the network (e.g. building new technology for the Origin Platform, bootstrapping new product verticals, and referring new users and businesses)"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:16
-msgid ""
-"Is built on an open, distributed, and shared data layer to promote "
-"transparency and collaboration"
+msgid "Is built on an open, distributed, and shared data layer to promote transparency and collaboration"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:17
-msgid ""
-"Immediately allows buyers and sellers across the world to do business "
-"with each other without difficult currency conversions or tariffs"
+msgid "Immediately allows buyers and sellers across the world to do business with each other without difficult currency conversions or tariffs"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:18
-msgid ""
-"Promotes personal liberty by not allowing a central corporation or "
-"government to impose arbitrary and oftentimes onerous rules on how to do "
-"business"
+msgid "Promotes personal liberty by not allowing a central corporation or government to impose arbitrary and oftentimes onerous rules on how to do business"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:22
-msgid ""
-"To accomplish these ambitious goals, we have created the Origin Platform "
-"with incentives that encourage other technologists, businesses, and "
-"consumers to build, contribute to, and extend the ecosystem with us. We "
-"imagine a broad collection of vertical use cases (e.g short-term vacation"
-" rentals, freelance software engineering, tutoring for hire) that are "
-"built on top of Origin standards and shared data."
+msgid "To accomplish these ambitious goals, we have created the Origin Platform with incentives that encourage other technologists, businesses, and consumers to build, contribute to, and extend the ecosystem with us. We imagine a broad collection of vertical use cases (e.g short-term vacation rentals, freelance software engineering, tutoring for hire) that are built on top of Origin standards and shared data."
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:26
-msgid ""
-"As of this writing, the Origin Platform is currently in Mainnet Beta. The"
-" 1.0 platform launch is scheduled in Q1 of 2020. While much of the "
-"engineering work has thus far been shouldered by our core engineering "
-"team, we anticipate that a significant amount of future development after"
-" the 1.0 launch will come from our growing open-source community"
+msgid "As of this writing, the Origin Platform is currently in Mainnet Beta. The 1.0 platform launch is scheduled in Q1 of 2020. While much of the engineering work has thus far been shouldered by our core engineering team, we anticipate that a significant amount of future development after the 1.0 launch will come from our growing open-source community"
 msgstr ""
 
 #: templates/whitepaper/exec-summary.html:30
@@ -2263,102 +2224,58 @@ msgid "An overview of the Origin team and community"
 msgstr ""
 
 #: templates/whitepaper/footnote.html:3
-msgid ""
-"Ridesharing, apartment/home lending, peer-to-peer lending, reselling, "
-"coworking, talent-sharing… The sharing economy, sometimes also called the"
-" collaboration economy, is taking off in all sorts of niches."
+msgid "Ridesharing, apartment/home lending, peer-to-peer lending, reselling, coworking, talent-sharing… The sharing economy, sometimes also called the collaboration economy, is taking off in all sorts of niches."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:7
-msgid ""
-"Buyers prefer a large number of sellers, and, meanwhile, sellers prefer a"
-" large number of buyers, such that the members in one group can easily "
-"find their trading partners from the other group. Therefore, the cross-"
-"side network effect is positive."
+msgid "Buyers prefer a large number of sellers, and, meanwhile, sellers prefer a large number of buyers, such that the members in one group can easily find their trading partners from the other group. Therefore, the cross-side network effect is positive."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:11
-msgid ""
-"Most competition in Silicon Valley now heads toward there being one "
-"monopolistic winner. And that is why it is hard not to see that, right "
-"now, the only competition that matters in ride-sharing is between the two"
-" largest companies: Uber and Lyft."
+msgid "Most competition in Silicon Valley now heads toward there being one monopolistic winner. And that is why it is hard not to see that, right now, the only competition that matters in ride-sharing is between the two largest companies: Uber and Lyft."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:15
-msgid ""
-"Years — and over 4 million listings — later, Airbnb doesn’t need to meet "
-"hosts in person anymore; the flywheel is officially spinning."
+msgid "Years — and over 4 million listings — later, Airbnb doesn’t need to meet hosts in person anymore; the flywheel is officially spinning."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:19
-msgid ""
-"Locations in popular tourist destinations such as New York, London, and "
-"Paris will also have higher commission rates than less-known areas due to"
-" greater competition, and upscale properties with higher profit margins "
-"on average will have a higher commission rate than properties such as "
-"hostels, motels, etc. that have thinner margins."
+msgid "Locations in popular tourist destinations such as New York, London, and Paris will also have higher commission rates than less-known areas due to greater competition, and upscale properties with higher profit margins on average will have a higher commission rate than properties such as hostels, motels, etc. that have thinner margins."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:23
-msgid ""
-"...conventional wisdom suggests Craigslist should have vanished long ago."
-" Launched by Craig Newmark in 1995, the website, which has kept roughly "
-"the same design through the years and now has some 55 million visitors a "
-"month, has not only survived but also thrived...Craigslist's "
-"effectiveness cannot be understated...Last year, it took in upwards of "
-"$690 million in revenue, according to an estimate by the AIM Group, a "
-"research firm in Altamonte Springs, Florida."
+msgid "...conventional wisdom suggests Craigslist should have vanished long ago. Launched by Craig Newmark in 1995, the website, which has kept roughly the same design through the years and now has some 55 million visitors a month, has not only survived but also thrived...Craigslist's effectiveness cannot be understated...Last year, it took in upwards of $690 million in revenue, according to an estimate by the AIM Group, a research firm in Altamonte Springs, Florida."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:27
 #, python-format
-msgid ""
-" We...found the median ‘real commission’ over the course of 37 rides in "
-"San Francisco was 39.01%%. "
+msgid " We...found the median ‘real commission’ over the course of 37 rides in San Francisco was 39.01%%. "
 msgstr ""
 
 #: templates/whitepaper/footnote.html:31
-msgid ""
-" Airbnb has canceled a number of accounts and bookings associated with "
-"the Unite the Right Free Speech Rally"
+msgid " Airbnb has canceled a number of accounts and bookings associated with the Unite the Right Free Speech Rally"
 msgstr ""
 
 #: templates/whitepaper/footnote.html:35
 #, python-format
-msgid ""
-"San Francisco estimates that more than 50%% of current Airbnb listings in"
-" the city aren't eligible to be registered and thus would need to stop "
-"hosting visitors unless they can comply"
+msgid "San Francisco estimates that more than 50%% of current Airbnb listings in the city aren't eligible to be registered and thus would need to stop hosting visitors unless they can comply"
 msgstr ""
 
 #: templates/whitepaper/footnote.html:39
 #, python-format
-msgid ""
-"TIME’s poll of 3,000 people, conducted by Penn Schoen Berland in late "
-"November, found that 22%% of American adults, or 45 million people, have "
-"already offered some kind of good or service in this economy. "
+msgid "TIME’s poll of 3,000 people, conducted by Penn Schoen Berland in late November, found that 22%% of American adults, or 45 million people, have already offered some kind of good or service in this economy. "
 msgstr ""
 
 #: templates/whitepaper/footnote.html:43
-msgid ""
-"The sharing economy is estimated to grow from $14 billion in 2014 to $335"
-" billion by 2025"
+msgid "The sharing economy is estimated to grow from $14 billion in 2014 to $335 billion by 2025"
 msgstr ""
 
 #: templates/whitepaper/footnote.html:47
-msgid ""
-"The new research, Sharing Economy: Opportunities, Impacts & Disruptors "
-"2017-2022, forecasts that the sharing economy will reach $40.2 billion in"
-" 2022, in terms of platform provider revenues, up from $18.6 billion in "
-"2017."
+msgid "The new research, Sharing Economy: Opportunities, Impacts & Disruptors 2017-2022, forecasts that the sharing economy will reach $40.2 billion in 2022, in terms of platform provider revenues, up from $18.6 billion in 2017."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:51
-msgid ""
-"property managers...will be charged a 14 percent host-only fee by "
-"default. Until now, the default was that Airbnb charged hosts a 3 to 5 "
-"percent fixed fee"
+msgid "property managers...will be charged a 14 percent host-only fee by default. Until now, the default was that Airbnb charged hosts a 3 to 5 percent fixed fee"
 msgstr ""
 
 #: templates/whitepaper/footnote.html:55
@@ -2371,24 +2288,11 @@ msgid "Projects built on IPFS"
 msgstr ""
 
 #: templates/whitepaper/footnote.html:63
-msgid ""
-"...consider how easy it is to switch from Poloniex to GDAX, or to any of "
-"the dozens of cryptocurrency exchanges out there, and vice-versa in large"
-" part because they all have equal and free access to the underlying data,"
-" blockchain transactions. Here you have several competing, non-"
-"cooperating services which are interoperable with each other by virtue of"
-" building their services on top of the same open protocols. This forces "
-"the market to find ways to reduce costs, build better products, and "
-"invent radical new ones to succeed."
+msgid "...consider how easy it is to switch from Poloniex to GDAX, or to any of the dozens of cryptocurrency exchanges out there, and vice-versa in large part because they all have equal and free access to the underlying data, blockchain transactions. Here you have several competing, non-cooperating services which are interoperable with each other by virtue of building their services on top of the same open protocols. This forces the market to find ways to reduce costs, build better products, and invent radical new ones to succeed."
 msgstr ""
 
 #: templates/whitepaper/footnote.html:67
-msgid ""
-"This relationship between protocols and applications is reversed in the "
-"blockchain application stack. Value concentrates at the shared protocol "
-"layer and only a fraction of that value is distributed along at the "
-"applications layer. It's a stack with \"fat\" protocols and \"thin\" "
-"applications."
+msgid "This relationship between protocols and applications is reversed in the blockchain application stack. Value concentrates at the shared protocol layer and only a fraction of that value is distributed along at the applications layer. It's a stack with \"fat\" protocols and \"thin\" applications."
 msgstr ""
 
 #: templates/whitepaper/platform.html:2 templates/whitepaper/sidebar.html:25
@@ -2400,13 +2304,7 @@ msgid "Enabling <span>Decentralized Marketplaces</span>"
 msgstr ""
 
 #: templates/whitepaper/platform.html:9
-msgid ""
-"Our vision is to promote the open and free exchange of services in the "
-"new Internet. To do this, we have built a platform that replicates much, "
-"if not all, of the functionality of third-party intermediaries on the "
-"blockchain and other distributed systems. This is an ambitious goal and a"
-" technically difficult engineering challenge, but we have already hit "
-"early milestones to prove out our technology and early use cases."
+msgid "Our vision is to promote the open and free exchange of services in the new Internet. To do this, we have built a platform that replicates much, if not all, of the functionality of third-party intermediaries on the blockchain and other distributed systems. This is an ambitious goal and a technically difficult engineering challenge, but we have already hit early milestones to prove out our technology and early use cases."
 msgstr ""
 
 #: templates/whitepaper/platform.html:11
@@ -2426,116 +2324,52 @@ msgid "Origin protocols"
 msgstr ""
 
 #: templates/whitepaper/platform.html:23
-msgid ""
-"The Origin flagship marketplace app is our consumer marketplace product "
-"that allows buyers and sellers on the network to do business. It is "
-"available today on the web at shoporigin.com and on both iOS and Android "
-"mobile devices at originprotocol.com/mobile."
+msgid "The Origin flagship marketplace app is our consumer marketplace product that allows buyers and sellers on the network to do business. It is available today on the web at shoporigin.com and on both iOS and Android mobile devices at originprotocol.com/mobile."
 msgstr ""
 
 #: templates/whitepaper/platform.html:27
-msgid ""
-"Today, there is one primary Origin marketplace decentralized app (DApp), "
-"though there are multiple vertical-specific DApps (e.g. in the home-"
-"sharing or services verticals) that are currently being actively "
-"developed. There are also multiple third-party applications already "
-"running on the Origin Platform."
+msgid "Today, there is one primary Origin marketplace decentralized app (DApp), though there are multiple vertical-specific DApps (e.g. in the home-sharing or services verticals) that are currently being actively developed. There are also multiple third-party applications already running on the Origin Platform."
 msgstr ""
 
 #: templates/whitepaper/platform.html:29
-msgid ""
-"Users can use the Origin flagship marketplace app provided they have the "
-"Origin Mobile app or an Ethereum wallet and a web3-enabled browser like "
-"Coinbase Wallet, imToken, Trust Wallet, or Metamask."
+msgid "Users can use the Origin flagship marketplace app provided they have the Origin Mobile app or an Ethereum wallet and a web3-enabled browser like Coinbase Wallet, imToken, Trust Wallet, or Metamask."
 msgstr ""
 
 #: templates/whitepaper/platform.html:31
-msgid ""
-"Sellers can create listings, set availability of their offerings, and "
-"accept payment. Buyers can browse and search a full index of all goods "
-"and services offered on the Origin marketplace DApp, and most "
-"importantly, make purchases."
+msgid "Sellers can create listings, set availability of their offerings, and accept payment. Buyers can browse and search a full index of all goods and services offered on the Origin marketplace DApp, and most importantly, make purchases."
 msgstr ""
 
 #: templates/whitepaper/platform.html:33
-msgid ""
-"The Origin DApp serves as a lightweight client on the Origin Platform. "
-"The frontend code can even be hosted and distributed on the open IPFS "
-"network."
+msgid "The Origin DApp serves as a lightweight client on the Origin Platform. The frontend code can even be hosted and distributed on the open IPFS network."
 msgstr ""
 
 #: templates/whitepaper/platform.html:35
 #, python-format
-msgid ""
-"Of particular note is that we don’t intend for the Origin DApp to be the "
-"only way to access user and transaction data. Our code, protocols, and "
-"specifications are all 100%% open-source, and we expect and hope that "
-"others will extend and fork the code to create their own frontend "
-"experiences. Already, we have had over 170 open-source contributors "
-"participate in improving our core libraries and initial marketplace app. "
-"There are already multiple third-party DApps running on the Origin "
-"Platform across numerous verticals such as home-sharing, luxury "
-"ecommerce, and fine art."
+msgid "Of particular note is that we don’t intend for the Origin DApp to be the only way to access user and transaction data. Our code, protocols, and specifications are all 100%% open-source, and we expect and hope that others will extend and fork the code to create their own frontend experiences. Already, we have had over 170 open-source contributors participate in improving our core libraries and initial marketplace app. There are already multiple third-party DApps running on the Origin Platform across numerous verticals such as home-sharing, luxury ecommerce, and fine art."
 msgstr ""
 
 #: templates/whitepaper/platform.html:37
-msgid ""
-"We see the Origin flagship marketplace app as just the first way to "
-"interact with the Origin protocols. In the coming months and years after "
-"our 1.0 launch, we expect hundreds of third-party websites, mobile apps, "
-"and even new APIs to be built on top of the network."
+msgid "We see the Origin flagship marketplace app as just the first way to interact with the Origin protocols. In the coming months and years after our 1.0 launch, we expect hundreds of third-party websites, mobile apps, and even new APIs to be built on top of the network."
 msgstr ""
 
 #: templates/whitepaper/platform.html:39
-msgid ""
-"To that end, we expect new and better user experiences that focus on "
-"specific verticals (e.g. home-sharing vs. tasks) or regions (e.g. Brazil "
-"vs. Switzerland) to be created that can drill deeper on custom features "
-"and localization. These third-party developer applications will take "
-"advantage of all or parts of the underlying Origin developer "
-"infrastructure and protocols. We intend to support fully decentralized "
-"applications, partially decentralized applications (e.g. applications "
-"that use managed wallets), and even mostly-centralized applications that "
-"are still focused on peer-to-peer commerce (e.g. applications that "
-"utilize the Origin Token for incentives that are hosted on traditional "
-"infrastructure)."
+msgid "To that end, we expect new and better user experiences that focus on specific verticals (e.g. home-sharing vs. tasks) or regions (e.g. Brazil vs. Switzerland) to be created that can drill deeper on custom features and localization. These third-party developer applications will take advantage of all or parts of the underlying Origin developer infrastructure and protocols. We intend to support fully decentralized applications, partially decentralized applications (e.g. applications that use managed wallets), and even mostly-centralized applications that are still focused on peer-to-peer commerce (e.g. applications that utilize the Origin Token for incentives that are hosted on traditional infrastructure)."
 msgstr ""
 
 #: templates/whitepaper/platform.html:43
-msgid ""
-"We intend to build a robust developer ecosystem that results in many "
-"successful third-party applications. As blockchain and distributed "
-"technologies are still nascent and challenging to work with for most "
-"developers, Origin intends to release easy-to-use developer libraries "
-"that simplify the development process for third-parties. By implementing "
-"an easy-to-use abstraction layer, we hope to attract many more developers"
-" that have experience in traditional web and mobile technologies, but may"
-" not be familiar with blockchain programming"
+msgid "We intend to build a robust developer ecosystem that results in many successful third-party applications. As blockchain and distributed technologies are still nascent and challenging to work with for most developers, Origin intends to release easy-to-use developer libraries that simplify the development process for third-parties. By implementing an easy-to-use abstraction layer, we hope to attract many more developers that have experience in traditional web and mobile technologies, but may not be familiar with blockchain programming"
 msgstr ""
 
 #: templates/whitepaper/platform.html:45
-msgid ""
-"The first of these libraries will be a Javascript GraphQL library that "
-"web developers can use in their web applications. Future libraries may "
-"include mobile libraries for popular mobile operating systems like "
-"Apple’s iOS and Google’s Android."
+msgid "The first of these libraries will be a Javascript GraphQL library that web developers can use in their web applications. Future libraries may include mobile libraries for popular mobile operating systems like Apple’s iOS and Google’s Android."
 msgstr ""
 
 #: templates/whitepaper/platform.html:47
-msgid ""
-"In addition, we expect that some marketplace operators will want to get "
-"started without spending as much time and effort engineering fully-"
-"customized apps. As such, we’ve also launched an early version of our "
-"Marketplace Creator (creator.originprotocol.com) that enables marketplace"
-" operators to launch marketplaces with little or no programming required."
+msgid "In addition, we expect that some marketplace operators will want to get started without spending as much time and effort engineering fully-customized apps. As such, we’ve also launched an early version of our Marketplace Creator (creator.originprotocol.com) that enables marketplace operators to launch marketplaces with little or no programming required."
 msgstr ""
 
 #: templates/whitepaper/platform.html:51
-msgid ""
-"Origin protocols encompass our open-source standards for many marketplace"
-" features, including user identity, publishing listings, and peer-to-peer"
-" transactions. The Protocols also include an open and shared data layer "
-"of users, listings, and other data on our Marketplace contract."
+msgid "Origin protocols encompass our open-source standards for many marketplace features, including user identity, publishing listings, and peer-to-peer transactions. The Protocols also include an open and shared data layer of users, listings, and other data on our Marketplace contract."
 msgstr ""
 
 #: templates/whitepaper/platform.html:53
@@ -2555,45 +2389,19 @@ msgid "Origin Identity Contract"
 msgstr ""
 
 #: templates/whitepaper/platform.html:61
-msgid ""
-"User and transaction data is stored on the Ethereum blockchain and IPFS. "
-"This means that third-parties can query the public Ethereum blockchain "
-"and IPFS network for currently available listings, a history of previous "
-"transactions, and the reputations of various ecosystem buyers and sellers"
+msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers."
 msgstr ""
 
 #: templates/whitepaper/platform.html:63
-msgid ""
-"This creates several benefits. First, the corpus of data is open and "
-"immutable, which means it can be trusted without requiring the "
-"traditional third-party intermediary that imposes its “trust tax”. "
-"Second, it levels the competitive playing field and allows for new teams "
-"of developers, entrepreneurs, and organizations to compete with each "
-"other off of this shared data, and ultimately creates greater value for "
-"the platform. After our 1.0 launch, we anticipate that much of the "
-"development of the Origin Platform will come from third-party developers "
-"that make use of this open data layer."
+msgid "This creates several benefits. First, the corpus of data is open and immutable, which means it can be trusted without requiring the traditional third-party intermediary that imposes its “trust tax”. Second, it levels the competitive playing field and allows for new teams of developers, entrepreneurs, and organizations to compete with each other off of this shared data, and ultimately creates greater value for the platform. After our 1.0 launch, we anticipate that much of the development of the Origin Platform will come from third-party developers that make use of this open data layer."
 msgstr ""
 
 #: templates/whitepaper/platform.html:65
-msgid ""
-"The best precedent of this is Bitcoin itself. An open, immutable "
-"transaction history allowed many Bitcoin exchanges to pop up worldwide. "
-"They now compete for customers and trading volume with no single party "
-"having the luxury of benefiting off of private data. Far from giving away"
-" the keys to the kingdom, this has encouraged exchanges to compete on "
-"security, user experience, marketing, and fees<a class='whitepaper-"
-"footnote-link' href='#footnote16'>16</a>. The aggregate efforts have "
-"pushed Bitcoin and cryptocurrency immeasurably further than if a single "
-"company had tried to pioneer a private digital currency and exchange"
+msgid "The best precedent of this is Bitcoin itself. An open, immutable transaction history allowed many Bitcoin exchanges to pop up worldwide. They now compete for customers and trading volume with no single party having the luxury of benefiting off of private data. Far from giving away the keys to the kingdom, this has encouraged exchanges to compete on security, user experience, marketing, and fees<a class='whitepaper-footnote-link' href='#footnote16'>16</a>. The aggregate efforts have pushed Bitcoin and cryptocurrency immeasurably further than if a single company had tried to pioneer a private digital currency and exchange"
 msgstr ""
 
 #: templates/whitepaper/platform.html:67
-msgid ""
-"Again, the intended goal is to have many minds collectively tackle the "
-"problem of building the right infrastructure, data models, information "
-"architecture, etc. to organize and consume data for the decentralized "
-"sharing economy."
+msgid "Again, the intended goal is to have many minds collectively tackle the problem of building the right infrastructure, data models, information architecture, etc. to organize and consume data for the decentralized sharing economy."
 msgstr ""
 
 #: templates/whitepaper/platform.html:72
@@ -2601,79 +2409,31 @@ msgid "Key Product Features <span>& Benefits</span>"
 msgstr ""
 
 #: templates/whitepaper/platform.html:74
-msgid ""
-"To recap, at a high-level, the Origin Platform and third-party "
-"applications built on top of it have several intended advantages when "
-"compared to existing sharing economy marketplaces."
+msgid "To recap, at a high-level, the Origin Platform and third-party applications built on top of it have several intended advantages when compared to existing sharing economy marketplaces."
 msgstr ""
 
 #: templates/whitepaper/platform.html:76
-msgid ""
-"Of paramount importance is the ability to cut out almost all of the "
-"transaction fees associated from bookings between buyers and suppliers. "
-"Because of the Fat Protocol phenomenon, the value of the network lies "
-"mostly in the value of the protocol layer<a class='whitepaper-footnote-"
-"link' href='#footnote17'>17</a>, and less on the applications layer (in "
-"this case, websites that would otherwise charge fees). Our incentives are"
-" to build a rich ecosystem of buyers and sellers, so we do not intend to "
-"charge onerous transaction fees on the protocol level."
+msgid "Of paramount importance is the ability to cut out almost all of the transaction fees associated from bookings between buyers and suppliers. Because of the Fat Protocol phenomenon, the value of the network lies mostly in the value of the protocol layer<a class='whitepaper-footnote-link' href='#footnote17'>17</a>, and less on the applications layer (in this case, websites that would otherwise charge fees). Our incentives are to build a rich ecosystem of buyers and sellers, so we do not intend to charge onerous transaction fees on the protocol level."
 msgstr ""
 
 #: templates/whitepaper/platform.html:78
-msgid ""
-"Note that this does not necessarily prohibit transaction fees charged by "
-"third-party application developers. Today, Origin Tokens are used as an "
-"incentive mechanism that provides third-party marketplace operators with "
-"a revenue stream via Origin Commissions. Sellers can choose to promote "
-"their listings, providing an optional commission to the marketplace "
-"operator that helps connect them with a buyer. While we expect these fees"
-" to be significantly lower than existing centralized incumbents, it’s "
-"important that marketplace operators and e-commerce merchants have an "
-"incentive to build feature-rich dedicated experiences on top of the "
-"Origin developer libraries and protocols. "
+msgid "Note that this does not necessarily prohibit transaction fees charged by third-party application developers. Today, Origin Tokens are used as an incentive mechanism that provides third-party marketplace operators with a revenue stream via Origin Commissions. Sellers can choose to promote their listings, providing an optional commission to the marketplace operator that helps connect them with a buyer. While we expect these fees to be significantly lower than existing centralized incumbents, it’s important that marketplace operators and e-commerce merchants have an incentive to build feature-rich dedicated experiences on top of the Origin developer libraries and protocols. "
 msgstr ""
 
 #: templates/whitepaper/platform.html:80
-msgid ""
-"We turn again to examples of highly verticalized sites (e.g. dog sitting)"
-" and regional players (e.g. bikesharing in Boulder, CO) as potential use "
-"cases that would benefit from a more specialized experience than what the"
-" default Origin flagship marketplace app or decentralized e-commerce "
-"store creator currently offer."
+msgid "We turn again to examples of highly verticalized sites (e.g. dog sitting) and regional players (e.g. bikesharing in Boulder, CO) as potential use cases that would benefit from a more specialized experience than what the default Origin flagship marketplace app or decentralized e-commerce store creator currently offer."
 msgstr ""
 
 #: templates/whitepaper/platform.html:82
-msgid ""
-"Today, if you wanted to start a traditional company to compete in the "
-"global economy, you would have to set up banking arrangements one country"
-" at a time and deal with all the related financial regulations. This "
-"creates a non-trivial barrier to entry for most startups looking to "
-"expand internationally. In fact, we often see regional clones who are "
-"able to launch faster in specific regions than the company that came up "
-"with the original idea. However, cryptocurrency is a global phenomenon. "
-"Thanks to the widespread availability of the Internet, the Origin "
-"platform and flagship marketplace app were immediately available in "
-"nearly every country in the world when we launched on the Ethereum "
-"mainnet. We view this as a significant advantage."
+msgid "Today, if you wanted to start a traditional company to compete in the global economy, you would have to set up banking arrangements one country at a time and deal with all the related financial regulations. This creates a non-trivial barrier to entry for most startups looking to expand internationally. In fact, we often see regional clones who are able to launch faster in specific regions than the company that came up with the original idea. However, cryptocurrency is a global phenomenon. Thanks to the widespread availability of the Internet, the Origin platform and flagship marketplace app were immediately available in nearly every country in the world when we launched on the Ethereum mainnet. We view this as a significant advantage."
 msgstr ""
 
 #: templates/whitepaper/platform.html:84
-msgid ""
-"Other high-level benefits include having a built-in mechanism to "
-"incentivize early ecosystem participants who hold and use Origin Tokens "
-"(OGN). We are constantly thinking about the right incentives that will "
-"encourage ecosystem participants like developers, individual buyers and "
-"sellers, and others to use and promote the Platform. We intend to reward "
-"behavior that encourages new referrals to the Platform and builds "
-"marketing, operational, and trust/safety infrastructure for the Platform."
-" You can see these economic incentives in action with our initial "
-"implementation of Origin Rewards."
+msgid "Other high-level benefits include having a built-in mechanism to incentivize early ecosystem participants who hold and use Origin Tokens (OGN). We are constantly thinking about the right incentives that will encourage ecosystem participants like developers, individual buyers and sellers, and others to use and promote the Platform. We intend to reward behavior that encourages new referrals to the Platform and builds marketing, operational, and trust/safety infrastructure for the Platform. You can see these economic incentives in action with our initial implementation of Origin Rewards."
 msgstr ""
 
 #: templates/whitepaper/platform.html:86
-msgid ""
-"At a lower-level, Origin has built upon existing product paradigms and "
-"user features. These features include:"
+msgid "At a lower-level, Origin has built upon existing product paradigms and user features. These features include:"
 msgstr ""
 
 #: templates/whitepaper/platform.html:89
@@ -2685,9 +2445,7 @@ msgid "Listing of for sale goods and fractional use of assets and services"
 msgstr ""
 
 #: templates/whitepaper/platform.html:91
-msgid ""
-"Escrow of funds for deposits, with release of funds upon completion of "
-"services or exchange of goods"
+msgid "Escrow of funds for deposits, with release of funds upon completion of services or exchange of goods"
 msgstr ""
 
 #: templates/whitepaper/platform.html:92
@@ -2707,67 +2465,35 @@ msgid "Origin <span>Token (OGN)</span>"
 msgstr ""
 
 #: templates/whitepaper/platform.html:103
-msgid ""
-"The Origin Token (also known as OGN) is a utility token that serves "
-"multiple purposes in ensuring the health and growth of the network. The "
-"ERC20 contract is live on the Ethereum network today at: "
-"0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26."
+msgid "The Origin Token (also known as OGN) is a utility token that serves multiple purposes in ensuring the health and growth of the network. The ERC20 contract is live on the Ethereum network today at: 0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26."
 msgstr ""
 
 #: templates/whitepaper/platform.html:105
-msgid ""
-"At a high-level, this native token is intended to serve several key "
-"functions on the platform. First, OGN is a multi-purpose incentive token "
-"that drives behavior for end users, developers, marketplace operators, "
-"and other ecosystem participants. In addition, OGN is a medium-of-"
-"exchange token that can be used for payments between buyers and sellers "
-"on the platform. Finally, it is intended that OGN will serve a critical "
-"piece in the future governance of the network."
+msgid "At a high-level, this native token is intended to serve several key functions on the platform. First, OGN is a multi-purpose incentive token that drives behavior for end users, developers, marketplace operators, and other ecosystem participants. In addition, OGN is a medium-of-exchange token that can be used for payments between buyers and sellers on the platform. Finally, it is intended that OGN will serve a critical piece in the future governance of the network."
 msgstr ""
 
 #: templates/whitepaper/platform.html:107
-msgid ""
-"Since April of 2019, Origin Tokens have already been used to incentivize "
-"various forms of participation from the Platform’s ecosystem "
-"participants. Origin Tokens are used to reward users, developers, "
-"marketplace operators, and/or other participants to perform actions and "
-"services that are beneficial to the health and growth of the Platform. "
+msgid "Since April of 2019, Origin Tokens have already been used to incentivize various forms of participation from the Platform’s ecosystem participants. Origin Tokens are used to reward users, developers, marketplace operators, and/or other participants to perform actions and services that are beneficial to the health and growth of the Platform. "
 msgstr ""
 
 #: templates/whitepaper/platform.html:111
-msgid ""
-"Origin Rewards (originrewards.com) is an incentive program targeted at "
-"end users on the Platform. Buyers and sellers on the platform have been "
-"able to earn OGN since our inaugural Origin Rewards campaign in April of "
-"2019. Origin Rewards enables everyone to have a stake in the network. "
-"We’ve intentionally designed the program so that even novice, non-"
-"technical users can participate."
+msgid "Origin Rewards (originrewards.com) is an incentive program targeted at end users on the Platform. Buyers and sellers on the platform have been able to earn OGN since our inaugural Origin Rewards campaign in April of 2019. Origin Rewards enables everyone to have a stake in the network. We’ve intentionally designed the program so that even novice, non-technical users can participate."
 msgstr ""
 
 #: templates/whitepaper/platform.html:113
-msgid ""
-"With Origin Rewards, users can receive OGN for creating user profiles and"
-" verifying their identities."
+msgid "With Origin Rewards, users can receive OGN for creating user profiles and verifying their identities."
 msgstr ""
 
 #: templates/whitepaper/platform.html:117
-msgid ""
-"One of the best ways to grow the network is through referrals. As such, "
-"end users can also earn tokens by inviting new users to the network. This"
-" creates more trust between buyers and sellers on the network."
+msgid "One of the best ways to grow the network is through referrals. As such, end users can also earn tokens by inviting new users to the network. This creates more trust between buyers and sellers on the network."
 msgstr ""
 
 #: templates/whitepaper/platform.html:121
-msgid ""
-"Users can also earn OGN by following Origin’s social media accounts or "
-"promoting news about the project on public channels."
+msgid "Users can also earn OGN by following Origin’s social media accounts or promoting news about the project on public channels."
 msgstr ""
 
 #: templates/whitepaper/platform.html:125
-msgid ""
-"To encourage transaction volume on the Origin Platform, we are also "
-"offering “cashback” mechanisms to users that purchase from our trusted "
-"network of top sellers."
+msgid "To encourage transaction volume on the Origin Platform, we are also offering “cashback” mechanisms to users that purchase from our trusted network of top sellers."
 msgstr ""
 
 #: templates/whitepaper/platform.html:129
@@ -2775,62 +2501,27 @@ msgid "Origin Commissions"
 msgstr ""
 
 #: templates/whitepaper/platform.html:131
-msgid ""
-"It is essential that we also incentivize developers and marketplace "
-"operators to use the Origin Platform. As such, we have launched an "
-"advertising and promotions program that creates a built-in business model"
-" for the decentralized marketplaces operating on Origin."
+msgid "It is essential that we also incentivize developers and marketplace operators to use the Origin Platform. As such, we have launched an advertising and promotions program that creates a built-in business model for the decentralized marketplaces operating on Origin."
 msgstr ""
 
 #: templates/whitepaper/platform.html:133
-msgid ""
-"Sellers on Origin-enabled applications can promote their listings with "
-"OGN to get higher visibility on the search and browse results on our "
-"flagship app and partner apps. Currently, the only way to participate in "
-"this program is to pay with OGN. When sellers create listings, they can "
-"add OGN commissions to their listings. This OGN is placed into escrow in "
-"our Marketplace Smart Contract"
+msgid "Sellers on Origin-enabled applications can promote their listings with OGN to get higher visibility on the search and browse results on our flagship app and partner apps. Currently, the only way to participate in this program is to pay with OGN. When sellers create listings, they can add OGN commissions to their listings. This OGN is placed into escrow in our Marketplace Smart Contract"
 msgstr ""
 
 #: templates/whitepaper/platform.html:137
-msgid ""
-"Then, when sales are finalized, OGN commissions are given to the apps "
-"that brought counterparties (the buyers) to fulfill the sales. This gives"
-" developers incentives to promote these seller listings, as well as "
-"compete amongst themselves to drive the most sales for sellers. "
+msgid "Then, when sales are finalized, OGN commissions are given to the apps that brought counterparties (the buyers) to fulfill the sales. This gives developers incentives to promote these seller listings, as well as compete amongst themselves to drive the most sales for sellers. "
 msgstr ""
 
 #: templates/whitepaper/platform.html:141
-msgid ""
-"To give a more specific example, let’s assume that a NYC-based home owner"
-" wants to put her apartment up for home-sharing on the Origin network. "
-"She inputs that she is willing to pay a 20 OGN commission every single "
-"time her apartment is rented out for one evening. Multiple home-sharing "
-"applications are now incentivized to feature her apartment so that they "
-"can compete for the OGN commissions. When one application acts as the "
-"final point of sale for a booking by finding the seller a renter, the "
-"application developer is rewarded the 20 OGN that she has offered up as "
-"commission"
+msgid "To give a more specific example, let’s assume that a NYC-based home owner wants to put her apartment up for home-sharing on the Origin network. She inputs that she is willing to pay a 20 OGN commission every single time her apartment is rented out for one evening. Multiple home-sharing applications are now incentivized to feature her apartment so that they can compete for the OGN commissions. When one application acts as the final point of sale for a booking by finding the seller a renter, the application developer is rewarded the 20 OGN that she has offered up as commission"
 msgstr ""
 
 #: templates/whitepaper/platform.html:143
-msgid ""
-"In the future, it is intended that other types of commission earners like"
-" bloggers, social media influencers, and other affiliates will be able to"
-" earn OGN commissions from sellers. "
+msgid "In the future, it is intended that other types of commission earners like bloggers, social media influencers, and other affiliates will be able to earn OGN commissions from sellers. "
 msgstr ""
 
 #: templates/whitepaper/platform.html:145
-msgid ""
-"Origin Commissions is a new advertising and promotions model that is "
-"superior to traditional paid marketing (CPC and CPM) models. Advertisers "
-"(sellers) only pay in OGN tokens when successful sales have occurred. "
-"Similarly, the publishers (application creators, bloggers, other "
-"affiliates, etc.) are only paid when real transactions happen. This "
-"creates a much more efficient attribution model than the one that "
-"traditional advertising offers. Origin Commissions aligns the interests "
-"of sellers, application creators, and other affiliates to promote "
-"listings to buyers across the Origin network."
+msgid "Origin Commissions is a new advertising and promotions model that is superior to traditional paid marketing (CPC and CPM) models. Advertisers (sellers) only pay in OGN tokens when successful sales have occurred. Similarly, the publishers (application creators, bloggers, other affiliates, etc.) are only paid when real transactions happen. This creates a much more efficient attribution model than the one that traditional advertising offers. Origin Commissions aligns the interests of sellers, application creators, and other affiliates to promote listings to buyers across the Origin network."
 msgstr ""
 
 #: templates/whitepaper/platform.html:147
@@ -2838,27 +2529,15 @@ msgid "OGN as a payment token"
 msgstr ""
 
 #: templates/whitepaper/platform.html:149
-msgid ""
-"Today, users of the platform are able to transact using ETH or DAI. After"
-" our 1.0 platform launch in Q1 of 2020, OGN will be enabled as one of the"
-" preferred payment methods between buyers and sellers on the platform."
+msgid "Today, users of the platform are able to transact using ETH or DAI. After our 1.0 platform launch in Q1 of 2020, OGN will be enabled as one of the preferred payment methods between buyers and sellers on the platform."
 msgstr ""
 
 #: templates/whitepaper/platform.html:151
-msgid ""
-"For example, users that earn OGN through Origin Rewards will be able to "
-"instantly use their tokens to purchase goods and services on our flagship"
-" marketplace, decentralized e-commerce platform and other future "
-"applications. This lowers the user friction of users having to acquire "
-"ETH or DAI outside of the platform before they are able to be viable "
-"buyers in the system."
+msgid "For example, users that earn OGN through Origin Rewards will be able to instantly use their tokens to purchase goods and services on our flagship marketplace, decentralized e-commerce platform and other future applications. This lowers the user friction of users having to acquire ETH or DAI outside of the platform before they are able to be viable buyers in the system."
 msgstr ""
 
 #: templates/whitepaper/platform.html:153
-msgid ""
-"In addition, we anticipate offering the ability for users to instantly "
-"acquire OGN via one or more decentralized exchange smart contracts to use"
-" when they do not have enough OGN in their wallets."
+msgid "In addition, we anticipate offering the ability for users to instantly acquire OGN via one or more decentralized exchange smart contracts to use when they do not have enough OGN in their wallets."
 msgstr ""
 
 #: templates/whitepaper/platform.html:155
@@ -2866,43 +2545,23 @@ msgid "Origin Staking"
 msgstr ""
 
 #: templates/whitepaper/platform.html:157
-msgid ""
-"After our 1.0 launch, we intend to collaborate with our large community "
-"on several new token use case initiatives. Origin is currently "
-"researching and developing new staking models that will generate yields "
-"for token holders in exchange for powering and supporting other parts of "
-"the network."
+msgid "After our 1.0 launch, we intend to collaborate with our large community on several new token use case initiatives. Origin is currently researching and developing new staking models that will generate yields for token holders in exchange for powering and supporting other parts of the network."
 msgstr ""
 
 #: templates/whitepaper/platform.html:159
-msgid ""
-"For example, we intend for Origin to be a highly scalable and performant "
-"platform. We intend to incentivize developers and other participants to "
-"run Origin infrastructure, such as Origin Nodes."
+msgid "For example, we intend for Origin to be a highly scalable and performant platform. We intend to incentivize developers and other participants to run Origin infrastructure, such as Origin Nodes."
 msgstr ""
 
 #: templates/whitepaper/platform.html:161
-msgid ""
-"Currently, we run Origin Nodes that store, update, and validate profile, "
-"listing, and reputation metadata across the web. In the future, it is "
-"intended that third-party node operators will be able to stake OGN for "
-"the right to “do work” in validating and replicating data across the "
-"system as well; as they perform these operations, they will be rewarded "
-"their pro rata shares of OGN rewards based on the amount of work they do "
-"in every given node operation interval."
+msgid "Currently, we run Origin Nodes that store, update, and validate profile, listing, and reputation metadata across the web. In the future, it is intended that third-party node operators will be able to stake OGN for the right to “do work” in validating and replicating data across the system as well; as they perform these operations, they will be rewarded their pro rata shares of OGN rewards based on the amount of work they do in every given node operation interval."
 msgstr ""
 
 #: templates/whitepaper/platform.html:163
-msgid ""
-"In addition, we are also researching several consumer staking models that"
-" will enable end users to earn OGN returns for holding and locking their "
-"tokens within Origin applications."
+msgid "In addition, we are also researching several consumer staking models that will enable end users to earn OGN returns for holding and locking their tokens within Origin applications."
 msgstr ""
 
 #: templates/whitepaper/platform.html:165
-msgid ""
-"Origin staking models are currently an active area of research and "
-"development."
+msgid "Origin staking models are currently an active area of research and development."
 msgstr ""
 
 #: templates/whitepaper/platform.html:167
@@ -2910,25 +2569,15 @@ msgid "OGN as a governance token"
 msgstr ""
 
 #: templates/whitepaper/platform.html:169
-msgid ""
-"Origin Tokens are intended to be used for governance of the Origin "
-"Platform. At a later date, it is intended that Origin Token holders will "
-"be able to influence the direction of software development and business "
-"policies on the Origin Platform."
+msgid "Origin Tokens are intended to be used for governance of the Origin Platform. At a later date, it is intended that Origin Token holders will be able to influence the direction of software development and business policies on the Origin Platform."
 msgstr ""
 
 #: templates/whitepaper/platform.html:171
-msgid ""
-"Token holders will be able to cast votes that are proportional to their "
-"stake in the network on important community governance issues"
+msgid "Token holders will be able to cast votes that are proportional to their stake in the network on important community governance issues"
 msgstr ""
 
 #: templates/whitepaper/platform.html:173
-msgid ""
-"As network governance becomes increasingly important as our token holder "
-"numbers increase, we anticipate that we will collaborate with the "
-"community on rolling out this OGN use case as the network continues to "
-"mature."
+msgid "As network governance becomes increasingly important as our token holder numbers increase, we anticipate that we will collaborate with the community on rolling out this OGN use case as the network continues to mature."
 msgstr ""
 
 #: templates/whitepaper/roadmap.html:2
@@ -3008,31 +2657,15 @@ msgid "Summary"
 msgstr ""
 
 #: templates/whitepaper/summary.html:4
-msgid ""
-"For the past two decades, Internet marketplaces and e-commerce stores "
-"have changed the way that buyers and sellers connect, creating new "
-"opportunities for the exchange of goods and services. However, these "
-"marketplaces have always been governed by centralized companies that "
-"maintain their individual monopolies on data, transaction and other "
-"service fees, and ultimately, user choice. With blockchain and other "
-"distributed technologies beginning to hit the mainstream, the world is "
-"poised for a new wave of decentralized commerce."
+msgid "For the past two decades, Internet marketplaces and e-commerce stores have changed the way that buyers and sellers connect, creating new opportunities for the exchange of goods and services. However, these marketplaces have always been governed by centralized companies that maintain their individual monopolies on data, transaction and other service fees, and ultimately, user choice. With blockchain and other distributed technologies beginning to hit the mainstream, the world is poised for a new wave of decentralized commerce."
 msgstr ""
 
 #: templates/whitepaper/summary.html:5
-msgid ""
-"Origin is bringing change and innovation to the global peer-to-peer "
-"economy. We're excited by the opportunity to lower fees, increase "
-"innovation, free customer and transaction data, and decrease censorship "
-"and unnecessary regulation."
+msgid "Origin is bringing change and innovation to the global peer-to-peer economy. We're excited by the opportunity to lower fees, increase innovation, free customer and transaction data, and decrease censorship and unnecessary regulation."
 msgstr ""
 
 #: templates/whitepaper/summary.html:6
-msgid ""
-"We are building a platform that invites other interested parties "
-"including developers and entrepreneurs to build this technology and "
-"community with us, altogether working to create the peer-to-peer economy "
-"of tomorrow. We hope you’ll join us on this exciting journey"
+msgid "We are building a platform that invites other interested parties including developers and entrepreneurs to build this technology and community with us, altogether working to create the peer-to-peer economy of tomorrow. We hope you’ll join us on this exciting journey"
 msgstr ""
 
 #: templates/whitepaper/team.html:17 templates/whitepaper/team.html:35
@@ -3040,64 +2673,31 @@ msgid "Co-founder"
 msgstr ""
 
 #: templates/whitepaper/team.html:21
-msgid ""
-"Matthew Liu is co-founder of Origin Protocol and is an experienced "
-"product and business executive and full-stack software engineer. He "
-"became interested in cryptocurrency after investing in the Ethereum "
-"crowdsale, and has been investing in blockchain and token projects ever "
-"since."
+msgid "Matthew Liu is co-founder of Origin Protocol and is an experienced product and business executive and full-stack software engineer. He became interested in cryptocurrency after investing in the Ethereum crowdsale, and has been investing in blockchain and token projects ever since."
 msgstr ""
 
 #: templates/whitepaper/team.html:22
-msgid ""
-"Liu was one of the earliest product managers/25th employee at YouTube "
-"(acquired by Google), and was a founding member of YouTube’s monetization"
-" team that eventually built a multi-billion dollar advertising business."
+msgid "Liu was one of the earliest product managers/25th employee at YouTube (acquired by Google), and was a founding member of YouTube’s monetization team that eventually built a multi-billion dollar advertising business."
 msgstr ""
 
 #: templates/whitepaper/team.html:23
-msgid ""
-"He later served as Vice President of Product at Qwiki (acquired by Yahoo)"
-" and Vice President of Product at Bonobos (acquired by Walmart). "
-"Together, Liu and Fraser have founded several profitable bootstrapped "
-"Internet businesses in the growth marketing (7-figure annual recurring "
-"revenue) and personal finance (acquired) spaces over the past three "
-"years."
+msgid "He later served as Vice President of Product at Qwiki (acquired by Yahoo) and Vice President of Product at Bonobos (acquired by Walmart). Together, Liu and Fraser have founded several profitable bootstrapped Internet businesses in the growth marketing (7-figure annual recurring revenue) and personal finance (acquired) spaces over the past three years."
 msgstr ""
 
 #: templates/whitepaper/team.html:24
-msgid ""
-"In 2014, as CEO of Unicycle Labs, Liu built a real-time comparison tool "
-"for ride-sharing that was widely adopted and then promptly given a cease "
-"and desist by Uber for scraping their data and using their trademarks. "
-"This was one of his first inspirations to fight for open data, pricing "
-"transparency, and fair consumer practices in the sharing economy."
+msgid "In 2014, as CEO of Unicycle Labs, Liu built a real-time comparison tool for ride-sharing that was widely adopted and then promptly given a cease and desist by Uber for scraping their data and using their trademarks. This was one of his first inspirations to fight for open data, pricing transparency, and fair consumer practices in the sharing economy."
 msgstr ""
 
 #: templates/whitepaper/team.html:39
-msgid ""
-"Joshua Fraser is co-founder of Origin Protocol and is a serial "
-"entrepreneur and experienced technical executive. He mined his first "
-"bitcoin in 2010 and is an active member of the cryptocurrency community. "
-"He has contributed and led several open-source projects as well as "
-"innovative protocols like PubSubHubbub. "
+msgid "Joshua Fraser is co-founder of Origin Protocol and is a serial entrepreneur and experienced technical executive. He mined his first bitcoin in 2010 and is an active member of the cryptocurrency community. He has contributed and led several open-source projects as well as innovative protocols like PubSubHubbub. "
 msgstr ""
 
 #: templates/whitepaper/team.html:40
-msgid ""
-"He previously served as founder and CTO of Eventvue (social networking "
-"for events) and Forage/Din (healthy gourmet meal kits). Fraser was also "
-"founder and CEO of Torbit where he developed an expertise in networking "
-"infrastructure, web performance and internet security before selling the "
-"company to Walmart Labs."
+msgid "He previously served as founder and CTO of Eventvue (social networking for events) and Forage/Din (healthy gourmet meal kits). Fraser was also founder and CEO of Torbit where he developed an expertise in networking infrastructure, web performance and internet security before selling the company to Walmart Labs."
 msgstr ""
 
 #: templates/whitepaper/team.html:41
-msgid ""
-"Fraser has founded several bootstrapped, profitable businesses with Liu, "
-"one of which was PriceSlash (acquired by BillShark). As a former Airbnb "
-"host, he has experienced first-hand the downsides of marketplace "
-"intermediaries (large fees, arbitrary rules, and government regulation)."
+msgid "Fraser has founded several bootstrapped, profitable businesses with Liu, one of which was PriceSlash (acquired by BillShark). As a former Airbnb host, he has experienced first-hand the downsides of marketplace intermediaries (large fees, arbitrary rules, and government regulation)."
 msgstr ""
 
 #: templates/whitepaper/team.html:45
@@ -3105,108 +2705,63 @@ msgid "Core <span>team</span>"
 msgstr ""
 
 #: templates/whitepaper/team.html:47
-msgid ""
-"Origin’s headquarters are in San Francisco, CA, USA. However, we have "
-"team members across the globe and run an efficient and open distributed "
-"company. Our full-time staff of 16 is currently situated across 4 "
-"continents."
+msgid "Origin’s headquarters are in San Francisco, CA, USA. However, we have team members across the globe and run an efficient and open distributed company. Our full-time staff of 16 is currently situated across 4 continents."
 msgstr ""
 
 #: templates/whitepaper/team.html:63
-msgid ""
-"Yu Pan was one of the 6 founding team members of PayPal and was the 1st "
-"employee at YouTube. He is a former Google employee and co-founder of "
-"Kiwi Crate."
+msgid "Yu Pan was one of the 6 founding team members of PayPal and was the 1st employee at YouTube. He is a former Google employee and co-founder of Kiwi Crate."
 msgstr ""
 
 #: templates/whitepaper/team.html:81
-msgid ""
-"Franck has had a successful career as an early employee at numerous high-"
-"profile companies. He previously led engineering teams at Inktomi, "
-"Paypal, YouTube, Google and Dropbox."
+msgid "Franck has had a successful career as an early employee at numerous high-profile companies. He previously led engineering teams at Inktomi, Paypal, YouTube, Google and Dropbox."
 msgstr ""
 
 #: templates/whitepaper/team.html:99
-msgid ""
-"Coleman is an active cryptocurrency investor and real estate "
-"entrepreneur, owning and managing multiple Airbnb properties. He studied "
-"mathematics at Berkeley."
+msgid "Coleman is an active cryptocurrency investor and real estate entrepreneur, owning and managing multiple Airbnb properties. He studied mathematics at Berkeley."
 msgstr ""
 
 #: templates/whitepaper/team.html:117
-msgid ""
-"Micah was the technical co-founder of WellAttended, a bootstrapped box "
-"office management platform. He worked as a commercial real estate broker "
-"while learning to code."
+msgid "Micah was the technical co-founder of WellAttended, a bootstrapped box office management platform. He worked as a commercial real estate broker while learning to code."
 msgstr ""
 
 #: templates/whitepaper/team.html:135
-msgid ""
-"Kay is a Chartered Professional Accountant (CPA). She previously worked "
-"as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
+msgid "Kay is a Chartered Professional Accountant (CPA). She previously worked as a Senior Accountant and then as a Senior Consultant at KPMG Canada."
 msgstr ""
 
 #: templates/whitepaper/team.html:153
-msgid ""
-"Aure is a product designer with 10+ years of experience. Prior to joining"
-" Origin, Aure worked at multiple startups and Fortune 500 companies. In a"
-" past life, he was also a software engineer."
+msgid "Aure is a product designer with 10+ years of experience. Prior to joining Origin, Aure worked at multiple startups and Fortune 500 companies. In a past life, he was also a software engineer."
 msgstr ""
 
 #: templates/whitepaper/team.html:171
-msgid ""
-"Mila is leading our community efforts in South Korea. She previously "
-"organized blockhain hackathons and has degrees from Penn State and "
-"Erasmus University Rotterdam."
+msgid "Mila is leading our community efforts in South Korea. She previously organized blockhain hackathons and has degrees from Penn State and Erasmus University Rotterdam."
 msgstr ""
 
 #: templates/whitepaper/team.html:189
-msgid ""
-"Before Origin, Tom had a successful career as a solo startup founder. He "
-"has two Masters degrees in Distributed Systems from the Technical "
-"University of Berlin and KTH in Stockholm."
+msgid "Before Origin, Tom had a successful career as a solo startup founder. He has two Masters degrees in Distributed Systems from the Technical University of Berlin and KTH in Stockholm."
 msgstr ""
 
 #: templates/whitepaper/team.html:207
-msgid ""
-"Nick studied Computer Science at the University of Warwick. Prior to "
-"joining Origin, he worked as an engineer at Sencha, C3 Energy Network and"
-" Palo Alto Networks."
+msgid "Nick studied Computer Science at the University of Warwick. Prior to joining Origin, he worked as an engineer at Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr ""
 
 #: templates/whitepaper/team.html:225
-msgid ""
-"Anna is leading our community efforts for Chinese speakers. Before "
-"Origin, Anna managed global social media at Exness, a leading forex "
-"broker. She also co-founded a non-profit in Australia."
+msgid "Anna is leading our community efforts for Chinese speakers. Before Origin, Anna managed global social media at Exness, a leading forex broker. She also co-founded a non-profit in Australia."
 msgstr ""
 
 #: templates/whitepaper/team.html:243
-msgid ""
-"Domen co-founded and led a team developing a mobile application with 2 "
-"chess Grandmasters. He previously had a successful career at Cetra, "
-"Zemanta and Peerindex."
+msgid "Domen co-founded and led a team developing a mobile application with 2 chess Grandmasters. He previously had a successful career at Cetra, Zemanta and Peerindex."
 msgstr ""
 
 #: templates/whitepaper/team.html:261
-msgid ""
-"Shahul is a fullstack engineer who started programming at age of 10. He "
-"previously worked as a freelancer and then joined Zoho as a front-end "
-"developer."
+msgid "Shahul is a fullstack engineer who started programming at age of 10. He previously worked as a freelancer and then joined Zoho as a front-end developer."
 msgstr ""
 
 #: templates/whitepaper/team.html:279
-msgid ""
-"Zaurbek Ivanov studied Economics at Kabardino-Balkaria State Agrarian "
-"University in Nalchik, Russia. He has worked in the hospitality industry "
-"in the US and Russia."
+msgid "Zaurbek Ivanov studied Economics at Kabardino-Balkaria State Agrarian University in Nalchik, Russia. He has worked in the hospitality industry in the US and Russia."
 msgstr ""
 
 #: templates/whitepaper/team.html:297
-msgid ""
-"Mike is a long-time contributor to open-source. He created a dev toolkit "
-"for creating Ethereum smart contracts with Python and previously worked "
-"with Ethereum and IPFS at Lunyr."
+msgid "Mike is a long-time contributor to open-source. He created a dev toolkit for creating Ethereum smart contracts with Python and previously worked with Ethereum and IPFS at Lunyr."
 msgstr ""
 
 #: templates/whitepaper/team.html:373
@@ -3214,46 +2769,23 @@ msgid "Developer <span>community</span>"
 msgstr ""
 
 #: templates/whitepaper/team.html:375
-msgid ""
-"In addition to our full-time staff, Origin has a very active open-source "
-"developer community. Since the project’s inception, we’ve had over 170 "
-"contributors to our Github repository. We anticipate the number of "
-"developers and supporters to increase dramatically after our 1.0 launch "
-"in Q1 of 2020. "
+msgid "In addition to our full-time staff, Origin has a very active open-source developer community. Since the project’s inception, we’ve had over 170 contributors to our Github repository. We anticipate the number of developers and supporters to increase dramatically after our 1.0 launch in Q1 of 2020. "
 msgstr ""
 
 #: templates/whitepaper/why.html:7
-msgid ""
-"Since the advent of the Internet, digital marketplaces have paired buyers"
-" and sellers of goods and services to enable transactions that were never"
-" before possible. Craigslist launched in 1995 and for years dominated in "
-"local and neighborhood commerce. That same year, eBay was started and "
-"created an entirely new category of auction-based sales, creating a more "
-"market-efficient way to do business."
+msgid "Since the advent of the Internet, digital marketplaces have paired buyers and sellers of goods and services to enable transactions that were never before possible. Craigslist launched in 1995 and for years dominated in local and neighborhood commerce. That same year, eBay was started and created an entirely new category of auction-based sales, creating a more market-efficient way to do business."
 msgstr ""
 
 #: templates/whitepaper/why.html:8
-msgid ""
-"Fast forward 20 years, and countless Internet marketplace businesses in "
-"both the B2C and B2B categories have flourished."
+msgid "Fast forward 20 years, and countless Internet marketplace businesses in both the B2C and B2B categories have flourished."
 msgstr ""
 
 #: templates/whitepaper/why.html:9
-msgid ""
-"In recent times, sharing economy marketplaces like Airbnb, Uber, "
-"Getaround, Fiverr, and TaskRabbit have paired buyers and sellers of the "
-"sharing economy<a class='whitepaper-footnote-link' "
-"href='#footnote1'>1</a> with great success. Fractional usage of assets "
-"can now be “sold” just as easily as atomic items, and people all over the"
-" world are exchanging their excess inventory, time, and skills for "
-"financial gain."
+msgid "In recent times, sharing economy marketplaces like Airbnb, Uber, Getaround, Fiverr, and TaskRabbit have paired buyers and sellers of the sharing economy<a class='whitepaper-footnote-link' href='#footnote1'>1</a> with great success. Fractional usage of assets can now be “sold” just as easily as atomic items, and people all over the world are exchanging their excess inventory, time, and skills for financial gain."
 msgstr ""
 
 #: templates/whitepaper/why.html:20
-msgid ""
-"These new marketplaces that focus on gigs, services, and fractional asset"
-" use are particularly well-suited for disruption by peer-to-peer systems "
-"built on the blockchain."
+msgid "These new marketplaces that focus on gigs, services, and fractional asset use are particularly well-suited for disruption by peer-to-peer systems built on the blockchain."
 msgstr ""
 
 #: templates/whitepaper/why.html:21
@@ -3261,98 +2793,39 @@ msgid "Most sharing economy businesses have several things in common."
 msgstr ""
 
 #: templates/whitepaper/why.html:23
-msgid ""
-"First, as a collection, these companies have created tremendous impact to"
-" the world. Consumers of marketplaces have been able to improve their "
-"lives with access to products and services that were not available "
-"previously. Suppliers have used these platforms to reach customers at "
-"greater scale and ease than before. Each marketplace creates a “home” for"
-" buyer and supplier to come together and transact, creating liquidity for"
-" that market."
+msgid "First, as a collection, these companies have created tremendous impact to the world. Consumers of marketplaces have been able to improve their lives with access to products and services that were not available previously. Suppliers have used these platforms to reach customers at greater scale and ease than before. Each marketplace creates a “home” for buyer and supplier to come together and transact, creating liquidity for that market."
 msgstr ""
 
 #: templates/whitepaper/why.html:24
-msgid ""
-"Second, most sharing economy businesses follow the same growth lifecycle."
-" Save for a few exceptions, these marketplaces are notoriously difficult "
-"to start and grow. Marketplace businesses oftentimes require millions of "
-"dollars to just get off the ground and, in the case of Uber and Airbnb, "
-"billions to scale. It’s the norm for these businesses to run at a deep "
-"loss in the early days. In effect, the corporation is subsidizing the "
-"usage of the marketplace for the participants. However, because of highly"
-" positive cross-side network effects<a class='whitepaper-footnote-link' "
-"href='#footnote2'>2</a>, successful marketplace businesses are able to "
-"grow revenue exponentially over time, usually by charging a service fee "
-"for every transaction that happens on network. Network effect businesses,"
-" like sharing economy marketplaces, are usually winner-takes-all "
-"businesses<a class='whitepaper-footnote-link' href='#footnote3'>3</a> and"
-" at mature stages extract a disproportionate amount of value from the "
-"network forthe managing corporations and their shareholders. In many "
-"ways, they begin looking like monopolies once they reach scale."
+msgid "Second, most sharing economy businesses follow the same growth lifecycle. Save for a few exceptions, these marketplaces are notoriously difficult to start and grow. Marketplace businesses oftentimes require millions of dollars to just get off the ground and, in the case of Uber and Airbnb, billions to scale. It’s the norm for these businesses to run at a deep loss in the early days. In effect, the corporation is subsidizing the usage of the marketplace for the participants. However, because of highly positive cross-side network effects<a class='whitepaper-footnote-link' href='#footnote2'>2</a>, successful marketplace businesses are able to grow revenue exponentially over time, usually by charging a service fee for every transaction that happens on network. Network effect businesses, like sharing economy marketplaces, are usually winner-takes-all businesses<a class='whitepaper-footnote-link' href='#footnote3'>3</a> and at mature stages extract a disproportionate amount of value from the network forthe managing corporations and their shareholders. In many ways, they begin looking like monopolies once they reach scale."
 msgstr ""
 
 #: templates/whitepaper/why.html:28
-msgid ""
-"Finally, while there are very significant differences in user experience,"
-" business mechanics, and vertical-specific features among Internet "
-"marketplace companies, they all share many pieces that have been built "
-"and rebuilt many times. Lyft, Postmates, and DoorDash have each "
-"individually engineered their own solutions to user and supplier "
-"profiles, purchase experiences, matching algorithms, and reviews and "
-"ratings. This is valuable proprietary technology on the one hand. On the "
-"other, it is a wasteful use of time and effort to reinvent the wheel each"
-" time to create a new marketplace vertical. Consumers are also left "
-"creating and managing dozens of accounts on these marketplace companies, "
-"each of which owns their personal data and transaction history."
+msgid "Finally, while there are very significant differences in user experience, business mechanics, and vertical-specific features among Internet marketplace companies, they all share many pieces that have been built and rebuilt many times. Lyft, Postmates, and DoorDash have each individually engineered their own solutions to user and supplier profiles, purchase experiences, matching algorithms, and reviews and ratings. This is valuable proprietary technology on the one hand. On the other, it is a wasteful use of time and effort to reinvent the wheel each time to create a new marketplace vertical. Consumers are also left creating and managing dozens of accounts on these marketplace companies, each of which owns their personal data and transaction history."
 msgstr ""
 
 #: templates/whitepaper/why.html:32
-msgid ""
-"For several years now, blockchain innovators and investors have called "
-"for teams to build peer-to-peer versions of existing sharing economy "
-"businesses and create an even more efficient way to conduct Internet "
-"commerce."
+msgid "For several years now, blockchain innovators and investors have called for teams to build peer-to-peer versions of existing sharing economy businesses and create an even more efficient way to conduct Internet commerce."
 msgstr ""
 
 #: templates/whitepaper/why.html:35
-msgid ""
-"P2P lodging sites like Airbnb have already begun to transform the lodging"
-" industry by making a public market in private housing. However, adoption"
-" may be limited by concerns about safety and security (guests) and "
-"property damage (hosts). By enabling a secure, tamper-proof system for "
-"managing digital credentials and reputation, we believe blockchain could "
-"help accelerate the adoption of P2P lodging."
+msgid "P2P lodging sites like Airbnb have already begun to transform the lodging industry by making a public market in private housing. However, adoption may be limited by concerns about safety and security (guests) and property damage (hosts). By enabling a secure, tamper-proof system for managing digital credentials and reputation, we believe blockchain could help accelerate the adoption of P2P lodging."
 msgstr ""
 
 #: templates/whitepaper/why.html:39
-msgid ""
-"Don Tapscott, author of “Blockchain Revolution,” says that the technology"
-" underlying Bitcoin could be used to disrupt the likes of Uber and "
-"Airbnb. - Wall Street Journal"
+msgid "Don Tapscott, author of “Blockchain Revolution,” says that the technology underlying Bitcoin could be used to disrupt the likes of Uber and Airbnb. - Wall Street Journal"
 msgstr ""
 
 #: templates/whitepaper/why.html:42
-msgid ""
-"It will be very difficult for intermediaries to have sustainable business"
-" cases,” [Fritz Joussen] he said. “These platforms [travel "
-"intermediaries] build reach by spending billions on advertising, and then"
-" they create monopolistic margins on top of what they have as sales and "
-"marketing. They do offer great sales and marketing. Booking.com is a "
-"great brand, but they create superior margins because they have "
-"monopolistic structures. Blockchain destroys this."
+msgid "It will be very difficult for intermediaries to have sustainable business cases,” [Fritz Joussen] he said. “These platforms [travel intermediaries] build reach by spending billions on advertising, and then they create monopolistic margins on top of what they have as sales and marketing. They do offer great sales and marketing. Booking.com is a great brand, but they create superior margins because they have monopolistic structures. Blockchain destroys this."
 msgstr ""
 
 #: templates/whitepaper/why.html:46
-msgid ""
-"However, much of the infrastructure and plumbing to build distributed "
-"marketplace apps did not exist prior to Origin."
+msgid "However, much of the infrastructure and plumbing to build distributed marketplace apps did not exist prior to Origin."
 msgstr ""
 
 #: templates/whitepaper/why.html:48
-msgid ""
-"We aim to address the shortcomings of existing marketplace companies and "
-"are excited that we have launched the Origin Platform as the way to usher"
-" in peer-to-peer commerce at scale."
+msgid "We aim to address the shortcomings of existing marketplace companies and are excited that we have launched the Origin Platform as the way to usher in peer-to-peer commerce at scale."
 msgstr ""
 
 #: templates/whitepaper/why.html:52
@@ -3364,83 +2837,37 @@ msgid "Unfair value capture"
 msgstr ""
 
 #: templates/whitepaper/why.html:56
-msgid ""
-"Value taken by today’s trusted intermediaries is oftentimes not "
-"commensurate with the value they create. In addition, value capture is "
-"concentrated to the network operators and not to the network "
-"participants."
+msgid "Value taken by today’s trusted intermediaries is oftentimes not commensurate with the value they create. In addition, value capture is concentrated to the network operators and not to the network participants."
 msgstr ""
 
 #: templates/whitepaper/why.html:58
-msgid ""
-"As an example, we can examine Airbnb, which has built a business "
-"currently valued at a reported $38 billion. Airbnb has built an "
-"impressive technology platform that facilitates online bookings and "
-"reviews, as well as launched local operations teams to bootstrap and "
-"cultivate local markets. Even in 2017, the company boasted 4M short-term "
-"rental listings<a class='whitepaper-footnote-link' "
-"href='#footnote4'>4</a>. There’s no denying that Airbnb has added immense"
-" value to the ecosystem by supplying both bits and blocks to the "
-"ecosystem. The short-term home rental market would not exist without "
-"Airbnb having created it."
+msgid "As an example, we can examine Airbnb, which has built a business currently valued at a reported $38 billion. Airbnb has built an impressive technology platform that facilitates online bookings and reviews, as well as launched local operations teams to bootstrap and cultivate local markets. Even in 2017, the company boasted 4M short-term rental listings<a class='whitepaper-footnote-link' href='#footnote4'>4</a>. There’s no denying that Airbnb has added immense value to the ecosystem by supplying both bits and blocks to the ecosystem. The short-term home rental market would not exist without Airbnb having created it."
 msgstr ""
 
 #: templates/whitepaper/why.html:60
 #, python-format
-msgid ""
-"Today, the technology platform has been built and the marketplace grows "
-"organically with new hosts and users both proactively seeking out "
-"Airbnb’s website and mobile app. Airbnb charges guests 5-15%% and hosts "
-"3-5%% of every booking. This means Airbnb will capture as much as 20%% of"
-" the value of every transaction regardless of whether additional work is "
-"being done by the company. Airbnb also automatically withholds local "
-"taxes as well, which can be significant. For example, the hotel taxes in "
-"Chicago, Atlanta, and Seattle are 16%%."
+msgid "Today, the technology platform has been built and the marketplace grows organically with new hosts and users both proactively seeking out Airbnb’s website and mobile app. Airbnb charges guests 5-15%% and hosts 3-5%% of every booking. This means Airbnb will capture as much as 20%% of the value of every transaction regardless of whether additional work is being done by the company. Airbnb also automatically withholds local taxes as well, which can be significant. For example, the hotel taxes in Chicago, Atlanta, and Seattle are 16%%."
 msgstr ""
 
 #: templates/whitepaper/why.html:62
 #, python-format
-msgid ""
-"It’s worth noting that Airbnb is not alone in charging egregious fees for"
-" its matching service. Online travel agencies like Booking.com and "
-"Expedia charge affiliate hotels 15-30%% of transaction value<a class"
-"='whitepaper-footnote-link' href='#footnote5'>5</a>"
+msgid "It’s worth noting that Airbnb is not alone in charging egregious fees for its matching service. Online travel agencies like Booking.com and Expedia charge affiliate hotels 15-30%% of transaction value<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
 msgstr ""
 
 #: templates/whitepaper/why.html:66
-msgid ""
-"In this case, while buyer and seller are both better off than they would "
-"be without Airbnb, they are leaving money on the table since both sides "
-"would be willing to meet at a price somewhere in the middle. A more "
-"efficient market would exist if the transaction fees were removed or even"
-" decreased. Buyer and seller will both be better off economically as "
-"Airbnb is disintermediated."
+msgid "In this case, while buyer and seller are both better off than they would be without Airbnb, they are leaving money on the table since both sides would be willing to meet at a price somewhere in the middle. A more efficient market would exist if the transaction fees were removed or even decreased. Buyer and seller will both be better off economically as Airbnb is disintermediated."
 msgstr ""
 
 #: templates/whitepaper/why.html:69
-msgid ""
-"What if efficient marketplaces could be built that do not charge "
-"expensive transaction fees?"
+msgid "What if efficient marketplaces could be built that do not charge expensive transaction fees?"
 msgstr ""
 
 #: templates/whitepaper/why.html:72
-msgid ""
-"Further, as Airbnb has thrived, it is the company’s shareholders that "
-"will reap the handsome rewards. The company’s founders, venture "
-"capitalists, and employees will make an immense amount of money in an IPO"
-" that is anticipated in 2020. But what about Airbnb’s earliest hosts that"
-" supplied liquidity to the market? Sure, they benefited by making revenue"
-" on the platform, but they are not getting outsized rewards for their "
-"integral contributions in the early days of the marketplace like "
-"employees and investors are. In a somewhat exaggerated analogy, the "
-"company is running a feudal system where its hosts act as serfs to "
-"overfill the network owner’s coffers."
+msgid "Further, as Airbnb has thrived, it is the company’s shareholders that will reap the handsome rewards. The company’s founders, venture capitalists, and employees will make an immense amount of money in an IPO that is anticipated in 2020. But what about Airbnb’s earliest hosts that supplied liquidity to the market? Sure, they benefited by making revenue on the platform, but they are not getting outsized rewards for their integral contributions in the early days of the marketplace like employees and investors are. In a somewhat exaggerated analogy, the company is running a feudal system where its hosts act as serfs to overfill the network owner’s coffers."
 msgstr ""
 
 #: templates/whitepaper/why.html:75
-msgid ""
-"How do we allow early contributors to important networks capture value "
-"more fairly?"
+msgid "How do we allow early contributors to important networks capture value more fairly?"
 msgstr ""
 
 #: templates/whitepaper/why.html:78
@@ -3448,30 +2875,15 @@ msgid "Data is siloed by private corporations"
 msgstr ""
 
 #: templates/whitepaper/why.html:80
-msgid ""
-"Each marketplace operator controls a valuable, but closed store of user "
-"and transaction data. We believe users should be able to own and control "
-"their own data. We also believe that transparency is critical for trust. "
-"Too often corporations control access to their users’ own data for their "
-"own benefit. When guests set up a methamphetamine lab in an early Airbnb "
-"apartment, Airbnb’s team of lawyers immediately descended with non-"
-"disclosure agreements and hush money to stop the negative press from "
-"getting out. That might have been the right decision for Airbnb, but the "
-"company’s customers deserve to know the truth so they can make informed "
-"decisions with whom to transact business. With the blockchain, everything"
-" is public and immutable, so transparency is a default feature."
+msgid "Each marketplace operator controls a valuable, but closed store of user and transaction data. We believe users should be able to own and control their own data. We also believe that transparency is critical for trust. Too often corporations control access to their users’ own data for their own benefit. When guests set up a methamphetamine lab in an early Airbnb apartment, Airbnb’s team of lawyers immediately descended with non-disclosure agreements and hush money to stop the negative press from getting out. That might have been the right decision for Airbnb, but the company’s customers deserve to know the truth so they can make informed decisions with whom to transact business. With the blockchain, everything is public and immutable, so transparency is a default feature."
 msgstr ""
 
 #: templates/whitepaper/why.html:82
-msgid ""
-"Open, shared data also has the positive externality of encouraging "
-"competition and ever-improving updates to the community"
+msgid "Open, shared data also has the positive externality of encouraging competition and ever-improving updates to the community"
 msgstr ""
 
 #: templates/whitepaper/why.html:85
-msgid ""
-"What if network data was owned by the community and not a private "
-"operator?"
+msgid "What if network data was owned by the community and not a private operator?"
 msgstr ""
 
 #: templates/whitepaper/why.html:88
@@ -3479,42 +2891,19 @@ msgid "Potential lack of innovation"
 msgstr ""
 
 #: templates/whitepaper/why.html:90
-msgid ""
-"Once a category winner has been defined in marketplace verticals, that "
-"company is usually able to maintain a (mostly) monopolistic position. "
-"Having more buyers and sellers means more capital to further grow the "
-"business. Having invaluable troves of data, marketing dollars, and brand "
-"recognition are all powerful moats that prevent competitors from entering"
-" the market, thereby stifling innovation. The most salient example is "
-"probably Craigslist, the first mainstream services and goods marketplace "
-"on the Internet, which has thrived for over 20 years despite having an "
-"outdated user experience, lacking a dependable and trustworthy reputation"
-" system, and even failing to provide a native way to pay for transactions"
-" safely and easily<a class='whitepaper-footnote-link' "
-"href='#footnote6'>6</a>."
+msgid "Once a category winner has been defined in marketplace verticals, that company is usually able to maintain a (mostly) monopolistic position. Having more buyers and sellers means more capital to further grow the business. Having invaluable troves of data, marketing dollars, and brand recognition are all powerful moats that prevent competitors from entering the market, thereby stifling innovation. The most salient example is probably Craigslist, the first mainstream services and goods marketplace on the Internet, which has thrived for over 20 years despite having an outdated user experience, lacking a dependable and trustworthy reputation system, and even failing to provide a native way to pay for transactions safely and easily<a class='whitepaper-footnote-link' href='#footnote6'>6</a>."
 msgstr ""
 
 #: templates/whitepaper/why.html:92
-msgid ""
-"There have been a countless number of Craigslist competitors that fell "
-"flat despite offering buyers and sellers a safer, easier buying "
-"experience simply because Craigslist had first mover advantage and "
-"ingrained network effects. The buyers go where the sellers are, and "
-"sellers go where the buyers are."
+msgid "There have been a countless number of Craigslist competitors that fell flat despite offering buyers and sellers a safer, easier buying experience simply because Craigslist had first mover advantage and ingrained network effects. The buyers go where the sellers are, and sellers go where the buyers are."
 msgstr ""
 
 #: templates/whitepaper/why.html:97
-msgid ""
-"What if buyers and sellers met on an open, decentralized network that "
-"created incentives for everyone to work together and innovate for the "
-"community interest?"
+msgid "What if buyers and sellers met on an open, decentralized network that created incentives for everyone to work together and innovate for the community interest?"
 msgstr ""
 
 #: templates/whitepaper/why.html:100
-msgid ""
-"We envision a future where innovations are constantly made to underlying "
-"infrastructure, product features, and business mechanics to the benefit "
-"of the entire network of buyers and sellers."
+msgid "We envision a future where innovations are constantly made to underlying infrastructure, product features, and business mechanics to the benefit of the entire network of buyers and sellers."
 msgstr ""
 
 #: templates/whitepaper/why.html:102
@@ -3522,84 +2911,32 @@ msgid "Arbitrary rule changes and censorship"
 msgstr ""
 
 #: templates/whitepaper/why.html:104
-msgid ""
-"When marketplaces are governed by individual corporations, these "
-"corporations can and will change policies and rules on a whim. In many "
-"cases, they have the best intentions of the community in mind. In others,"
-" they have much more selfish interests. There are countless examples of "
-"marketplace operators spiting the very members that have created great "
-"value for them."
+msgid "When marketplaces are governed by individual corporations, these corporations can and will change policies and rules on a whim. In many cases, they have the best intentions of the community in mind. In others, they have much more selfish interests. There are countless examples of marketplace operators spiting the very members that have created great value for them."
 msgstr ""
 
 #: templates/whitepaper/why.html:106
 #, python-format
-msgid ""
-"As sharing economy marketplaces grow, suppliers and buyers increasingly "
-"become abstracted away into the numbers, and some are left feeling like "
-"they are “cogs in the wheel”. Uber has increased their take from drivers "
-"from 15%% all the way to 30%% over the years<a class='whitepaper-"
-"footnote-link' href='#footnote7'>7</a>, and drivers have no ability to "
-"impact these decisions. Many early Uber drivers now feel that they have "
-"been taken advantage of as the ride-sharing giant has scaled its "
-"operations."
+msgid "As sharing economy marketplaces grow, suppliers and buyers increasingly become abstracted away into the numbers, and some are left feeling like they are “cogs in the wheel”. Uber has increased their take from drivers from 15%% all the way to 30%% over the years<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, and drivers have no ability to impact these decisions. Many early Uber drivers now feel that they have been taken advantage of as the ride-sharing giant has scaled its operations."
 msgstr ""
 
 #: templates/whitepaper/why.html:108
-msgid ""
-"In 2017, Airbnb made the news for kicking guests out of rented properties"
-" and canceled their accounts after discovering those guests were planning"
-" to attend a Ku Klux Klan (KKK) rally<a class='whitepaper-footnote-link' "
-"href='#footnote8'>8</a>. While few people sympathize with klan members "
-"that promote racist and violent ideology, it’s a slippery slope for "
-"Airbnb to start taking an opinionated stance on who is allowed to use "
-"their service. What about members of controversial political and "
-"religious groups? The personal leanings of a marketplace’s founders, no "
-"matter how mainstream, should not interfere with the decisions of "
-"marketplace buyers and sellers."
+msgid "In 2017, Airbnb made the news for kicking guests out of rented properties and canceled their accounts after discovering those guests were planning to attend a Ku Klux Klan (KKK) rally<a class='whitepaper-footnote-link' href='#footnote8'>8</a>. While few people sympathize with klan members that promote racist and violent ideology, it’s a slippery slope for Airbnb to start taking an opinionated stance on who is allowed to use their service. What about members of controversial political and religious groups? The personal leanings of a marketplace’s founders, no matter how mainstream, should not interfere with the decisions of marketplace buyers and sellers."
 msgstr ""
 
 #: templates/whitepaper/why.html:110
-msgid ""
-"Many Etsy sellers live in constant fear of their stores being shut down "
-"for copyright violations or breaking arbitrary rules like having "
-"duplicate listings or failing to disclose team members. There are many "
-"stories of store owners having their livelihoods extinguished with little"
-" to no recourse. Similar stories of platforms shutting down accounts or "
-"seizing funds are all too common on eBay, Amazon, and many other popular "
-"marketplaces. Sellers complain of course, but few realistic alternatives "
-"exist."
+msgid "Many Etsy sellers live in constant fear of their stores being shut down for copyright violations or breaking arbitrary rules like having duplicate listings or failing to disclose team members. There are many stories of store owners having their livelihoods extinguished with little to no recourse. Similar stories of platforms shutting down accounts or seizing funds are all too common on eBay, Amazon, and many other popular marketplaces. Sellers complain of course, but few realistic alternatives exist."
 msgstr ""
 
 #: templates/whitepaper/why.html:112
-msgid ""
-"Tampering of rules is not reserved only for private corporations that "
-"manage the marketplace. Airbnb’s home city of San Francisco has passed "
-"local ordinances forbidding the home-rental company from taking bookings "
-"from hosts who have not properly registered their homes<a class"
-"='whitepaper-footnote-link' href='#footnote9'>9</a>. The new regulations "
-"are so restrictive that thousands of rental properties in San Francisco "
-"have now been banned from the platform. Dozens of other cities followed "
-"San Francisco’s actions and used them as a model for how to pass their "
-"own restrictions concerning home-sharing. Airbnb represents a single "
-"point of failure in this case, and hotel industry lobbyists can attack "
-"this valuable industry easily and effectively."
+msgid "Tampering of rules is not reserved only for private corporations that manage the marketplace. Airbnb’s home city of San Francisco has passed local ordinances forbidding the home-rental company from taking bookings from hosts who have not properly registered their homes<a class='whitepaper-footnote-link' href='#footnote9'>9</a>. The new regulations are so restrictive that thousands of rental properties in San Francisco have now been banned from the platform. Dozens of other cities followed San Francisco’s actions and used them as a model for how to pass their own restrictions concerning home-sharing. Airbnb represents a single point of failure in this case, and hotel industry lobbyists can attack this valuable industry easily and effectively."
 msgstr ""
 
 #: templates/whitepaper/why.html:114
-msgid ""
-"Finally, as an oft-cited example of the importance of cryptocurrencies, "
-"Wikileaks was able to survive the US banking blockade due to Bitcoin "
-"donations from their supporters. By building tools for people to transact"
-" with each other in a trustless, distributed fashion, we can eliminate "
-"these single points of failure in our systems that undermine our personal"
-" liberties."
+msgid "Finally, as an oft-cited example of the importance of cryptocurrencies, Wikileaks was able to survive the US banking blockade due to Bitcoin donations from their supporters. By building tools for people to transact with each other in a trustless, distributed fashion, we can eliminate these single points of failure in our systems that undermine our personal liberties."
 msgstr ""
 
 #: templates/whitepaper/why.html:117
-msgid ""
-"What if goods and services that added value to the ecosystem could freely"
-" trade at their fair market prices and quantities without tampering from "
-"biased third parties?"
+msgid "What if goods and services that added value to the ecosystem could freely trade at their fair market prices and quantities without tampering from biased third parties?"
 msgstr ""
 
 #: templates/whitepaper/why.html:122
@@ -3608,138 +2945,187 @@ msgstr ""
 
 #: templates/whitepaper/why.html:124
 #, python-format
-msgid ""
-"The market is ready for a new peer-to-peer form of commerce. The world is"
-" moving to a gig economy where more and more individuals provide goods "
-"and services as their primary or supplemental way of earning income. Over"
-" 22%% of US adults have become suppliers to the sharing economy as of "
-"2016<a class='whitepaper-footnote-link' href='#footnote10'>10</a> and "
-"this number is expected to increase over time. These suppliers will "
-"hugely benefit from an open network that does not charge exorbitant "
-"transaction and service fees."
+msgid "The market is ready for a new peer-to-peer form of commerce. The world is moving to a gig economy where more and more individuals provide goods and services as their primary or supplemental way of earning income. Over 22%% of US adults have become suppliers to the sharing economy as of 2016<a class='whitepaper-footnote-link' href='#footnote10'>10</a> and this number is expected to increase over time. These suppliers will hugely benefit from an open network that does not charge exorbitant transaction and service fees."
 msgstr ""
 
 #: templates/whitepaper/why.html:126
-msgid ""
-"Gross bookings on the sharing economy are expected to exceed $335B by "
-"2025<a class='whitepaper-footnote-link' href='#footnote11'>11</a>. "
-"Platform revenues (mostly fees taken by the companies) for the sharing "
-"economy are expected to more than double to $40.2B in the next five "
-"years<a class='whitepaper-footnote-link' href='#footnote12'>12</a>."
+msgid "Gross bookings on the sharing economy are expected to exceed $335B by 2025<a class='whitepaper-footnote-link' href='#footnote11'>11</a>. Platform revenues (mostly fees taken by the companies) for the sharing economy are expected to more than double to $40.2B in the next five years<a class='whitepaper-footnote-link' href='#footnote12'>12</a>."
 msgstr ""
 
 #: templates/whitepaper/why.html:130
 #, python-format
-msgid ""
-"While the overall market continues to boom, value capture has only "
-"shifted in favor to the regional monopolies. Recently, Airbnb "
-"dramatically increased fees for hosts in many global regions, from 3 to 5"
-" percent to 14 percent<a class='whitepaper-footnote-link' "
-"href='#footnote13'>13</a>. Similarly, Uber’s advertised 25%% commission "
-"rate is actually significantly higher when factoring in additional fees "
-"that are passed onto their drivers. For example, the median commission "
-"that Uber charges in San Francisco was recently estimated at 39%%<a class"
-"='whitepaper-footnote-link' href='#footnote14'>14</a>"
+msgid "While the overall market continues to boom, value capture has only shifted in favor to the regional monopolies. Recently, Airbnb dramatically increased fees for hosts in many global regions, from 3 to 5 percent to 14 percent<a class='whitepaper-footnote-link' href='#footnote13'>13</a>. Similarly, Uber’s advertised 25%% commission rate is actually significantly higher when factoring in additional fees that are passed onto their drivers. For example, the median commission that Uber charges in San Francisco was recently estimated at 39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>"
 msgstr ""
 
 #: templates/whitepaper/why.html:132
-msgid ""
-"The world is also moving more and more to global versus local commerce. "
-"Sellers are able to provide services (and many times products and goods) "
-"to customers across the world. Currently, a Lyft passenger would not be "
-"able to ride on the Didi ChuXing ride-sharing network (China’s largest "
-"ride-sharing company) save for the fact that the two companies signed a "
-"deep partnership that was months in the making and involved a mutual "
-"investor pouring hundreds of millions of dollars into both companies. In "
-"a global, but openly distributed marketplace, a customer would be able to"
-" purchase services from suppliers without a need for new accounts, "
-"complicated currency exchanges, or prerequisite negotiated deals."
+msgid "The world is also moving more and more to global versus local commerce. Sellers are able to provide services (and many times products and goods) to customers across the world. Currently, a Lyft passenger would not be able to ride on the Didi ChuXing ride-sharing network (China’s largest ride-sharing company) save for the fact that the two companies signed a deep partnership that was months in the making and involved a mutual investor pouring hundreds of millions of dollars into both companies. In a global, but openly distributed marketplace, a customer would be able to purchase services from suppliers without a need for new accounts, complicated currency exchanges, or prerequisite negotiated deals."
 msgstr ""
 
 #: templates/whitepaper/why.html:134
-msgid ""
-"Concurrently, the technology is finally starting to be in place to "
-"support large-scale decentralized commerce."
+msgid "Concurrently, the technology is finally starting to be in place to support large-scale decentralized commerce."
 msgstr ""
 
 #: templates/whitepaper/why.html:136
-msgid ""
-"With the official launch of Ethereum in July 2015, the world was given "
-"its first widely-adopted blockchain that supported smart contracts. "
-"Ethereum has created “programmable money” and just as importantly, a "
-"community of developers, evangelists, and investors that are committed to"
-" furthering the technology stack and use cases."
+msgid "With the official launch of Ethereum in July 2015, the world was given its first widely-adopted blockchain that supported smart contracts. Ethereum has created “programmable money” and just as importantly, a community of developers, evangelists, and investors that are committed to furthering the technology stack and use cases."
 msgstr ""
 
 #: templates/whitepaper/why.html:138
-msgid ""
-"On the data storage side, the Interplanetary File System (IPFS) has "
-"gained traction<a class='whitepaper-footnote-link' "
-"href='#footnote15'>15</a> as a distributed data repository for the open, "
-"persistent web. With the expected future launch of FileCoin and their "
-"Proof-of-Replication (PoR) and Proof-of-Spacetime (PoSt), large amounts "
-"of data will be able to be stored in a distributed and trustless fashion "
-"with the right incentive model to make it work."
+msgid "On the data storage side, the Interplanetary File System (IPFS) has gained traction<a class='whitepaper-footnote-link' href='#footnote15'>15</a> as a distributed data repository for the open, persistent web. With the expected future launch of FileCoin and their Proof-of-Replication (PoR) and Proof-of-Spacetime (PoSt), large amounts of data will be able to be stored in a distributed and trustless fashion with the right incentive model to make it work."
 msgstr ""
 
 #: templates/whitepaper/why.html:140
-msgid ""
-"Built on top of these two underlying technologies, the Origin Platform "
-"has been live in Beta for nearly a year. After getting valuable feedback "
-"from thousands of early users, we are launching the 1.0 version of the "
-"Origin Platform in Q1 of 2020."
+msgid "Built on top of these two underlying technologies, the Origin Platform has been live in Beta for nearly a year. After getting valuable feedback from thousands of early users, we are launching the 1.0 version of the Origin Platform in Q1 of 2020."
 msgstr ""
 
 #: templates/whitepaper/why.html:144
-msgid ""
-"We believe that now is the perfect time to push forward the peer-to-peer "
-"marketplace and e-commerce markets to take advantage of growing market "
-"demands and promising technology innovations."
+msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr ""
 
-#: views/web_views.py:64
-msgid ""
-"Origin Protocol is the blockchain platform for building decentralized "
-"marketplaces"
+#: views/web_views.py:65
+msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr ""
 
-#: views/web_views.py:172
+#: views/web_views.py:167
 msgid "Missing email"
 msgstr ""
 
-#: views/web_views.py:175
+#: views/web_views.py:170
 msgid "Invalid email"
 msgstr ""
 
-#: views/web_views.py:219
+#: views/web_views.py:226
+msgid "You're already registered!"
+msgstr ""
+
+#: views/web_views.py:228
 msgid "Thanks for signing up!"
 msgstr ""
 
-#: views/web_views.py:232
+#: views/web_views.py:241
 msgid "Please enter your name"
 msgstr ""
 
-#: views/web_views.py:234
+#: views/web_views.py:243
 msgid "Please enter your email"
 msgstr ""
 
-#: views/web_views.py:236
+#: views/web_views.py:245
 msgid "Select your country of citizenship"
 msgstr ""
 
-#: views/web_views.py:238
+#: views/web_views.py:247
 msgid "Please enter your desired allocation"
 msgstr ""
 
-#: views/web_views.py:240
+#: views/web_views.py:249
 msgid "Select a currency"
 msgstr ""
 
-#: views/web_views.py:242
+#: views/web_views.py:251
 msgid "Please prove you are not a robot."
 msgstr ""
 
-#: views/web_views.py:247
+#: views/web_views.py:256
 msgid "OK"
 msgstr ""
+
+#: views/web_views.py:267
+msgid "You have been unsubscribed"
+msgstr ""
+
+#: views/web_views.py:270
+msgid "Ooops, something went wrong"
+msgstr ""
+
+#~ msgid "It’s time to build the sharing economy without intermediaries"
+#~ msgstr ""
+
+#~ msgid "Origin is a startup headquartered in San Francisco, but we also have team members in China, Korea, Russia, India, New Zealand, and even Slovenia. Our 800+ investors include top venture capitalists and cryptocurrency funds all over the world."
+#~ msgstr ""
+
+#~ msgid "Centralized intermediaries often charge 20-30%% in transaction fees. Airbnb grossed $2.6B in fees in 2017, while Uber took home a monumental $11.8B in fees in 2018. Total sharing economy fees are expected to cross $40B by 2020."
+#~ msgstr ""
+
+#~ msgid "By removing the middlemen, Origin removes these fees. Buyers and sellers can now share the savings from the fees that are no longer paid to traditional marketplace operators."
+#~ msgstr ""
+
+#~ msgid "Uber and Lyft recently IPOed. WeWork and Airbnb are soon to follow suit. None of the early participants on these platforms benefited despite being critical to their success."
+#~ msgstr ""
+
+#~ msgid "In contrast, Origin enables everyone to own a piece of the network. Buyers and sellers can earn Origin Tokens (OGN) simply by using Origin-enabled applications to transact with one another. Developers, affiliates, and marketplace operators can earn OGN by promoting and marketing sellers' listings. When everyone owns a piece of the network, ecosystem participants are incentivized to promote the health and growth of Origin. "
+#~ msgstr ""
+
+#~ msgid "2 billion people around the world are currently unbanked. They do not have checking accounts, credit cards, AliPay, or Apple Pay."
+#~ msgstr ""
+
+#~ msgid "With the advent of cryptocurrencies and the proliferation of inexpensive smartphones, now is the time to enable the unbanked to participate in the new Internet economy. Users from all over the world are now able to transact with each other on Origin-powered marketplaces even if they do not have stable, local banking systems."
+#~ msgstr ""
+
+#~ msgid "Airbnb is heavily regulated or banned in cities like Paris, Berlin, Tokyo, New York, and even its home city of San Francisco."
+#~ msgstr ""
+
+#~ msgid "Decentralized marketplaces promote open and free commerce. Unlike centralized alternatives, they are not single points of failure and can't be banned or shut down. Decentralized commerce is more resilient and promotes efficient markets."
+#~ msgstr ""
+
+#~ msgid "We have a large and growing community of developers and supporters"
+#~ msgstr ""
+
+#~ msgid "Exclusively on "
+#~ msgstr ""
+
+#~ msgid "Origin Protocol - Investors"
+#~ msgstr ""
+
+#~ msgid "We are a well-capitalized startup that has sold tokens in three previous rounds to build our platform."
+#~ msgstr ""
+
+#~ msgid "Interested in getting a stake in Origin? Sign up to receive the latest updates."
+#~ msgstr ""
+
+#~ msgid "\"The reason we invested in Origin was primarily because of the team. They have amazing backgrounds and they come from iconic consumer companies.\""
+#~ msgstr ""
+
+#~ msgid "\"We're talking about over 100,000 members around the world that are hard-core fans of Origin. Origin has done a tremendous job executing at a global scale.\""
+#~ msgstr ""
+
+#~ msgid "\"Origin stands out from any of the other decentralized applications that we've invested into, because they've gone out there and built probably the best community that we've seen. For us, that was a game changer.\""
+#~ msgstr ""
+
+#~ msgid "We are supported by some of the best angel investors and previous founders in Silicon Valley."
+#~ msgstr ""
+
+#~ msgid "Earn your stake in the Origin network today. Users can earn Origin Tokens (OGN) by verifying their profiles, referring friends and family to Origin, sharing news about Origin on social media, and making purchases from our featured sellers."
+#~ msgstr ""
+
+#~ msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn Origin Tokens (OGN) by helping sellers complete their sales."
+#~ msgstr ""
+
+#~ msgid "Use the Origin Tokens (OGN) that you've earned in Origin Rewards to pay for goods and services. Sellers earn larger stakes in the network by accepting OGN as a preferred payment method."
+#~ msgstr ""
+
+#~ msgid "Stake your OGN to run an Origin Node and earn more OGN by helping to replicate and validate profile and listing data on the network."
+#~ msgstr ""
+
+#~ msgid "Developers can pay for usage of Origin Meta Transactions Relayers with OGN. Meta Transactions reduce user friction and encourage adoption and retention."
+#~ msgstr ""
+
+#~ msgid "Everyone has a vote on the Origin Platform. Token holders will participate in important community votes to define future initiatives."
+#~ msgstr ""
+
+#~ msgid "Our platform will power decentralized marketplaces everywhere"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Origin Protocol -\n"
+#~ "Team"
+#~ msgstr ""
+
+#~ msgid "Origin Protocol - Tokens"
+#~ msgstr ""
+
+#~ msgid "The sharing economy without intermediaries"
+#~ msgstr ""
+
+#~ msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
+#~ msgstr ""
 
