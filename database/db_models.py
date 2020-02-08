@@ -19,6 +19,11 @@ class EmailList(db.Model):
     country_code = db.Column(db.String(2))
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
+    # sendgrid feedback loop
+    bounced = db.Column(db.Boolean())
+    spam_report = db.Column(db.Boolean())
+    blocked = db.Column(db.Boolean())
+    invalid = db.Column(db.Boolean())
 
     def __str__(self):
         return '%s' % (self.email)
