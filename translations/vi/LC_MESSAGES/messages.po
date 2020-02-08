@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 23:08+0000\n"
+"POT-Creation-Date: 2020-02-01 01:30+0000\n"
 "PO-Revision-Date: 2020-01-06 22:44+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: vi_VN\n"
@@ -22,20 +22,20 @@ msgstr "Các đối tác công nghệ"
 msgid "Building on Origin"
 msgstr "Xây dựng dựa trên Origin"
 
-#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:183
+#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:186
 #: views/web_views.py:262
 msgid "Please enter a valid email address"
 msgstr "Vui lòng nhập một địa chỉ email hợp lệ"
 
-#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:200
+#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:203
 msgid "Ooops! Something went wrong."
 msgstr "Rất tiếc! Đã xảy ra sự cố."
 
-#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:211
+#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:214
 msgid "Thanks! We'll be in touch soon."
 msgstr "Cảm ơn! Chúng tôi sẽ sớm liên lạc."
 
-#: logic/emails/mailing_list.py:186
+#: logic/emails/mailing_list.py:189
 msgid "Please enter a valid website address"
 msgstr "Vui lòng nhập một địa chỉ trang web hợp lệ"
 
@@ -55,14 +55,14 @@ msgstr "Về Trang chủ"
 msgid "Origin Protocol - About"
 msgstr ""
 
-#: templates/about.html:2
+#: templates/about.html:2 templates/swagStore.html:2
 msgid ""
 "Origin Protocol enables\n"
 "true peer-to-peer commerce."
 msgstr ""
 
 #: templates/about.html:12 templates/investors.html:13
-#: templates/landing.html:18 templates/team.html:13 templates/video.html:20
+#: templates/landing.html:16 templates/team.html:15 templates/video.html:18
 msgid "Exit full screen"
 msgstr "Thoát toàn màn hình"
 
@@ -73,8 +73,8 @@ msgid ""
 msgstr ""
 
 #: templates/about.html:37 templates/investors.html:37
-#: templates/landing.html:32 templates/landing.html:194 templates/team.html:38
-#: templates/video.html:32
+#: templates/landing.html:30 templates/landing.html:197 templates/team.html:40
+#: templates/video.html:30
 msgid "Watch the video"
 msgstr "Xem video"
 
@@ -90,15 +90,15 @@ msgid ""
 "      cryptocurrency funds all over the world."
 msgstr ""
 
-#: templates/about.html:57 templates/landing.html:173
+#: templates/about.html:57 templates/landing.html:176
 msgid "Learn more about our team"
 msgstr "Tìm hiểu về đội ngũ của chúng tôi"
 
-#: templates/about.html:60 templates/landing.html:201
+#: templates/about.html:60 templates/landing.html:204
 msgid "Learn more about our investors"
 msgstr "Các nhà đầu tư"
 
-#: templates/about.html:80 templates/landing.html:137
+#: templates/about.html:80 templates/landing.html:140
 msgid "Lower Fees"
 msgstr "Phí thấp hơn"
 
@@ -118,7 +118,7 @@ msgid ""
 "          longer paid to traditional marketplace operators."
 msgstr ""
 
-#: templates/about.html:146 templates/landing.html:144
+#: templates/about.html:146 templates/landing.html:147
 msgid "Better Incentives"
 msgstr "Mô hình khuyến khích tốt hơn"
 
@@ -140,7 +140,7 @@ msgid ""
 "          health and growth of Origin. "
 msgstr ""
 
-#: templates/about.html:174 templates/landing.html:151
+#: templates/about.html:174 templates/landing.html:154
 msgid "Increased Access"
 msgstr "Nâng cao truy cập"
 
@@ -161,7 +161,7 @@ msgid ""
 "          systems."
 msgstr ""
 
-#: templates/about.html:228 templates/landing.html:158
+#: templates/about.html:228 templates/landing.html:161
 msgid "More Resilience"
 msgstr "Khả năng thích nghi cao"
 
@@ -201,22 +201,33 @@ msgstr "Giao thức Origin - Chính sách sử dụng được chấp nhận tr�
 msgid "Marketplace Acceptable Use Policy"
 msgstr "Chính sách sử dụng được chấp nhận trên thị trường"
 
-#: templates/countdown-bar.html:6 templates/landing.html:44
-#: templates/ogn-token.html:12 templates/tokens.html:16
-msgid "Origin Tokens are launching soon!"
-msgstr "Origin Token sẽ được ra mắt sớm trong thời gian tới!"
+#: templates/countdown-bar.html:11 templates/countdown-hero-banner.html:33
+msgid "Origin Tokens (OGN) have launched!"
+msgstr ""
 
-#: templates/countdown-bar.html:8
-msgid "Exclusively on "
-msgstr "Độc quyền trên "
+#: templates/countdown-bar.html:20 templates/countdown-hero-banner.html:53
+msgid "Buy OGN on Binance"
+msgstr ""
 
-#: templates/countdown-bar.html:21
+#: templates/countdown-bar.html:26 templates/countdown-hero-banner.html:67
+msgid "Exclusively on"
+msgstr ""
+
+#: templates/countdown-bar.html:32 templates/countdown-hero-banner.html:72
 msgid "Subscribe to stay in touch."
 msgstr "Đăng kí để giữ liên lạc."
 
-#: templates/countdown-bar.html:23
+#: templates/countdown-bar.html:40 templates/countdown-hero-banner.html:80
 msgid "Your email"
 msgstr "Email của bạn"
+
+#: templates/countdown-hero-banner.html:37 templates/tokens.html:5
+msgid "Origin Tokens (OGN) are launching soon!"
+msgstr ""
+
+#: templates/countdown-hero-banner.html:61
+msgid "Learn more"
+msgstr ""
 
 #: templates/creator.html:3 templates/creator.html:5
 msgid "Origin Protocol - Creator"
@@ -548,7 +559,7 @@ msgstr "Dowload App"
 msgid "Stay in touch"
 msgstr "Giữ liên lạc"
 
-#: templates/footer.html:7 templates/landing.html:45
+#: templates/footer.html:7 templates/landing.html:53
 msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr "Đăng kí để biết thêm thông tin chi tiết. Email của bạn sẽ được giữ bí mật."
 
@@ -556,113 +567,117 @@ msgstr "Đăng kí để biết thêm thông tin chi tiết. Email của bạn s
 msgid "Enter your email"
 msgstr "Nhập địa chỉ email"
 
-#: templates/footer.html:18 templates/footer.html:96 templates/mobile.html:31
+#: templates/footer.html:18 templates/footer.html:99 templates/mobile.html:31
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr "Bản quyền thuộc về Origin Protocol Inc © 2019."
 
-#: templates/footer.html:21 templates/footer.html:99 templates/tos.html:16
+#: templates/footer.html:21 templates/footer.html:102
+msgid "Help"
+msgstr ""
+
+#: templates/footer.html:24 templates/footer.html:105 templates/tos.html:16
 msgid "Terms of Service"
 msgstr "Điều khoản Dịch vụ"
 
-#: templates/footer.html:24 templates/footer.html:102 templates/privacy.html:16
+#: templates/footer.html:27 templates/footer.html:108 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr "Chính sách bảo mật"
 
-#: templates/footer.html:33
+#: templates/footer.html:36
 msgid "Overview"
 msgstr "Tổng quan"
 
-#: templates/footer.html:34
+#: templates/footer.html:37
 msgid "iOS"
 msgstr "iOS"
 
-#: templates/footer.html:35
+#: templates/footer.html:38
 msgid "Android"
 msgstr "Android"
 
-#: templates/footer.html:36
+#: templates/footer.html:39
 msgid "DApp"
 msgstr "DApp"
 
-#: templates/footer.html:37
+#: templates/footer.html:40
 msgid "Creator"
 msgstr "Người sáng lập"
 
-#: templates/footer.html:41
+#: templates/footer.html:44
 msgid "Videos"
 msgstr "Video"
 
-#: templates/footer.html:42 templates/navbar.html:84
+#: templates/footer.html:45 templates/navbar.html:84
 #: templates/whitepaper.html:19
 msgid "Whitepaper"
 msgstr "Sách trắng"
 
-#: templates/footer.html:43
+#: templates/footer.html:46
 msgid "Developers"
 msgstr "Nhà phát triển"
 
-#: templates/footer.html:44
+#: templates/footer.html:47
 msgid "GitHub"
 msgstr "GitHub"
 
-#: templates/footer.html:45
+#: templates/footer.html:48
 msgid "Docs"
 msgstr "Văn bản"
 
-#: templates/footer.html:49 templates/navbar.html:69
+#: templates/footer.html:52 templates/navbar.html:69
 msgid "About"
 msgstr "Giới thiệu"
 
-#: templates/footer.html:50 templates/navbar.html:72
+#: templates/footer.html:53 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:44 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr "Đội nhóm"
 
-#: templates/footer.html:51 templates/navbar.html:75
+#: templates/footer.html:54 templates/navbar.html:75
 msgid "Investors"
 msgstr "Nhà đầu tư"
 
-#: templates/footer.html:52
+#: templates/footer.html:55
 msgid "OGN"
 msgstr "OGN"
 
-#: templates/footer.html:53
+#: templates/footer.html:56
 msgid "Jobs"
 msgstr "Việc làm"
 
-#: templates/footer.html:57
+#: templates/footer.html:60
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:60
+#: templates/footer.html:63
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:63
+#: templates/footer.html:66
 msgid "Medium"
 msgstr "Medium"
 
-#: templates/footer.html:66
+#: templates/footer.html:69
 msgid "Youtube"
 msgstr "Youtube"
 
-#: templates/footer.html:69
+#: templates/footer.html:72
 msgid "Instagram"
 msgstr "Instagram"
 
-#: templates/footer.html:72
+#: templates/footer.html:75
 msgid "Telegram"
 msgstr "Telegram"
 
-#: templates/footer.html:75
+#: templates/footer.html:78
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:78
+#: templates/footer.html:81
 msgid "Discord"
 msgstr "Discord"
 
-#: templates/footer.html:88
+#: templates/footer.html:91
 msgid "VK"
 msgstr "VK"
 
@@ -759,7 +774,7 @@ msgid ""
 "                      changer.\""
 msgstr ""
 
-#: templates/investors.html:178 templates/team.html:631
+#: templates/investors.html:178 templates/team.html:633
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
@@ -855,159 +870,167 @@ msgstr "Origin Protocol"
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "Nền kinh tế mở không có trung gian. Origin là một giao thức nhằm phục vụ việc tạo ra các thị trường kinh tế mở bằng cách sử dụng blockchain của Ethereum và IPFS."
 
-#: templates/landing.html:28
+#: templates/landing.html:26
 msgid "The blockchain platform for building decentralized marketplaces"
 msgstr "Origin Protocol là nền tảng blockchain để xây dựng các thị trường phi tập trung"
 
+#: templates/landing.html:43
+msgid "Origin Tokens have launched!"
+msgstr ""
+
+#: templates/landing.html:45
+msgid "Participate in the Origin Token (OGN) distribution"
+msgstr ""
+
 #: templates/components/presale-form.html:9
-#: templates/components/presale-form.html:10 templates/landing.html:53
+#: templates/components/presale-form.html:10 templates/landing.html:56
 #: templates/partners.html:133 templates/tokens.html:46
 #: templates/tokens.html:47
 msgid "Email"
 msgstr "Email"
 
-#: templates/landing.html:61
+#: templates/landing.html:64
 msgid "Buy and sell on Origin"
 msgstr "Mua và bán trên Origin"
 
-#: templates/landing.html:62
+#: templates/landing.html:65
 msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr "Origin sẽ cung cấp sức mạnh cho hàng trăm thị trường giao dịch ngang hàng, phi tập trung. Download ứng dụng ngay hôm nay."
 
-#: templates/landing.html:66
+#: templates/landing.html:69
 msgid "Origin Marketplace"
 msgstr "Origin Marketplace"
 
-#: templates/landing.html:67 templates/mobile.html:18
+#: templates/landing.html:70 templates/mobile.html:18
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr "Thuê nhà, mua vé xem hòa nhạc hoặc thuê người đấu thầu trên ứng dụng trên Origin."
 
-#: templates/landing.html:75 templates/mobile.html:27
+#: templates/landing.html:78 templates/mobile.html:27
 msgid "Download Android App"
 msgstr "Download Android App"
 
-#: templates/landing.html:77
+#: templates/landing.html:80
 msgid "Visit us on the web"
 msgstr "Ghé thăm website"
 
-#: templates/landing.html:78
+#: templates/landing.html:81
 msgid "shoporigin.com"
 msgstr "shoporigin.com"
 
-#: templates/landing.html:81
+#: templates/landing.html:84
 msgid "Available on"
 msgstr "Có mặt trên"
 
-#: templates/landing.html:92
+#: templates/landing.html:95
 msgid "The sharing economy is a massive opportunity waiting to be disrupted"
 msgstr "Nền kinh tế chia sẻ là một cơ hội lớn sẵn sàng cho sự thay đổi"
 
-#: templates/landing.html:93
+#: templates/landing.html:96
 msgid "Gross bookings are expected to reach $335B by 2025"
 msgstr "Doanh thu trong lĩnh vực đặt phòng kì vọng sẽ đạt 335 tỷ Usd vào năm 2025"
 
-#: templates/landing.html:100
+#: templates/landing.html:103
 msgid "Percentage of total value of a booking Airbnb charged guests"
 msgstr "Phần trăm giá trị booking của Airbnb do khách hàng trả"
 
-#: templates/landing.html:105
+#: templates/landing.html:108
 msgid "Uber's average take per ride"
 msgstr "Trung bình mỗi chuyến đi của Uber"
 
-#: templates/landing.html:114
+#: templates/landing.html:117
 msgid "Drivers that rated Uber under 3 stars out of 5 for earnings satisfaction"
 msgstr "Các tài xế đánh giá Uber dưới 3 sao trên 5 sao về mức độ hài lòng về thu nhập"
 
-#: templates/landing.html:118
+#: templates/landing.html:121
 msgid "Uber driver churn by quarter"
 msgstr "Tài xế Uber thay đổi công việc theo quý"
 
-#: templates/landing.html:122
+#: templates/landing.html:125
 msgid "Airbnb Japan home-share listings removed in 2018"
 msgstr "Danh sách home-share của Airbnb Japan bị loại bỏ trong năm 2018"
 
-#: templates/landing.html:130
+#: templates/landing.html:133
 msgid "Decentralized marketplaces are inevitable"
 msgstr "Thị trường phi tập trung là điều không thể tránh khỏi"
 
-#: templates/landing.html:131
+#: templates/landing.html:134
 msgid "For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen."
 msgstr "Lần đầu tiên trong lịch sử, blockchain cho phép người mua và người bán gặp gỡ và giao dịch một cách an toàn mà không cần bất kỳ bên trung gian nào."
 
-#: templates/landing.html:138
+#: templates/landing.html:141
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed."
 msgstr "Người mua và người bán chia sẻ 20-30 %% tiền tiết kiệm khi bên trung gian bị loại bỏ."
 
-#: templates/landing.html:145
+#: templates/landing.html:148
 msgid "Everyone can own a stake in the network by contributing to its growth."
 msgstr "Bất cứ ai cũng có thể nắm giữ một phần mạng lưới bằng cách đóng góp vào sự phát triển của nó."
 
-#: templates/landing.html:152
+#: templates/landing.html:155
 msgid "2 billion unbanked people can access new markets globally."
 msgstr "2 tỷ người không được tiếp cận với hệ thống tài chính, ngân hàng sẵn sàng tham gia vào thị trường toàn cầu."
 
-#: templates/landing.html:159
+#: templates/landing.html:162
 msgid "Decentralized marketplaces can’t be banned or shut down."
 msgstr "Thị trường phi tập trung không thể bị cấm hay xóa bỏ."
 
-#: templates/landing.html:165
+#: templates/landing.html:168
 msgid "Origin has a world-class team"
 msgstr "Origin bao gồm đội ngũ hàng đầu thế giới"
 
-#: templates/landing.html:166
+#: templates/landing.html:169
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr "Đôi ngũ được dẫn dắt bởi các doanh nhân hàng đầu, đồng sáng lập của PayPal, nhân viên đầu tiên tại YouTube và các nhà quản lý kỹ thuật tại Google và Dropbox."
 
-#: templates/landing.html:190
+#: templates/landing.html:193
 msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
 msgstr "Chúng tôi được hỗ chỗ bởi Top những quỹ, nhà đầu tư hàng đầu tại thung lũng Silicon và trên toàn thế giới"
 
-#: templates/landing.html:206
+#: templates/landing.html:209
 msgid "Featured Partner"
 msgstr "Đối tác hàng đầu"
 
-#: templates/landing.html:207
+#: templates/landing.html:210
 msgid "Trips Community is building a homesharing DApp in Italy with 3,000 hosts."
 msgstr "Trips Community đang xây dựng một ứng dụng home-sharing tại Ý với trên 3,000 chủ nhà, khách sạn."
 
-#: templates/landing.html:210
+#: templates/landing.html:213
 msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
 msgstr "\"Thị trường cho thuê nhà ngắn hạn đang bùng nổ và cần nhiều sự đổi mới và cạnh tranh. Một nền tảng mở trung lập sẽ thúc đẩy người thuê, chủ nhà và các đối tác lại gần nhau. Chúng tôi rất vui mừng được hợp tác với Origin để tạo ra làn sóng đổi mới mới này trong lĩnh vực home -sharing.\""
 
-#: templates/landing.html:211
+#: templates/landing.html:214
 msgid "Luca De Giglio"
 msgstr "Luca De Giglio"
 
-#: templates/landing.html:212
+#: templates/landing.html:215
 msgid "Founder, Trips Community"
 msgstr "Founder, Trips Community"
 
-#: templates/landing.html:219
+#: templates/landing.html:222
 msgid "Featured Videos"
 msgstr "Video nổi bật"
 
-#: templates/landing.html:238
+#: templates/landing.html:241
 msgid "Watch more videos"
 msgstr "Xem nhiều video hơn"
 
-#: templates/landing.html:242
+#: templates/landing.html:245
 msgid "Recent News"
 msgstr "Tin mới nhất"
 
-#: templates/landing.html:248
+#: templates/landing.html:251
 msgid "Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin"
 msgstr "Rodolfo Gonzalez chia sẻ về việc vì sao Foundation Capital đầu tư vào Origin"
 
-#: templates/landing.html:254
+#: templates/landing.html:257
 msgid "Live on TV with HKB News in Korea"
 msgstr "Live trên TC với HKB News tại Hàn Quốc"
 
-#: templates/landing.html:260
+#: templates/landing.html:263
 msgid "Doo Wan Nam Discusses Origin’s Partnership with MakerDAO"
 msgstr "Doo Wan Nam thảo luận về việc Origin đối tác với MakerDAO"
 
-#: templates/landing.html:265
+#: templates/landing.html:268
 msgid "Read more on Medium"
 msgstr "Đọc thêm trên Medium"
 
@@ -1043,17 +1066,11 @@ msgid ""
 "(OGN) ensure the health and growth of the Origin network."
 msgstr ""
 
-#: templates/ogn-token.html:14
-msgid ""
-"Subscribe to stay in touch. Your email will be kept\n"
-"        private."
-msgstr ""
-
-#: templates/ogn-token.html:39 templates/whitepaper/platform.html:109
+#: templates/ogn-token.html:12 templates/whitepaper/platform.html:109
 msgid "Origin Rewards"
 msgstr "Origin Rewards"
 
-#: templates/ogn-token.html:41
+#: templates/ogn-token.html:14
 msgid ""
 "Earn your stake in the Origin network today. Users can\n"
 "            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
@@ -1061,15 +1078,15 @@ msgid ""
 "            media, and making purchases from our featured sellers."
 msgstr ""
 
-#: templates/ogn-token.html:46
+#: templates/ogn-token.html:19
 msgid "Not available in the United States"
 msgstr "Không có sẵn tại Mỹ"
 
-#: templates/ogn-token.html:85
+#: templates/ogn-token.html:58
 msgid "Commissions"
 msgstr "Hoa hồng"
 
-#: templates/ogn-token.html:87
+#: templates/ogn-token.html:60
 msgid ""
 "Promote your listings across the Origin flagship app and\n"
 "            third-party apps with Origin Commissions. Pay with OGN to get\n"
@@ -1078,48 +1095,48 @@ msgid ""
 "            complete their sales."
 msgstr ""
 
-#: templates/ogn-token.html:101
+#: templates/ogn-token.html:74
 msgid "Payments"
 msgstr "Thanh toán"
 
-#: templates/ogn-token.html:103
+#: templates/ogn-token.html:76
 msgid ""
 "Use the Origin Tokens (OGN) that you've earned in Origin\n"
 "            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
 "            the network by accepting OGN as a preferred payment method."
 msgstr ""
 
-#: templates/ogn-token.html:124
+#: templates/ogn-token.html:97
 msgid "Research and Development"
 msgstr "Nghiên cứu và phát triển"
 
-#: templates/ogn-token.html:130
+#: templates/ogn-token.html:103
 msgid "Origin Nodes"
 msgstr "Origin Nodes"
 
-#: templates/ogn-token.html:132
+#: templates/ogn-token.html:105
 msgid ""
 "Stake your OGN to run an Origin Node and earn more OGN by\n"
 "            helping to replicate and validate profile and listing data on the\n"
 "            network."
 msgstr ""
 
-#: templates/ogn-token.html:141
+#: templates/ogn-token.html:114
 msgid "Origin Relayer"
 msgstr "Origin Relayer"
 
-#: templates/ogn-token.html:143
+#: templates/ogn-token.html:116
 msgid ""
 "Developers can pay for usage of Origin Meta Transactions\n"
 "            Relayers with OGN. Meta Transactions reduce user friction and\n"
 "            encourage adoption and retention."
 msgstr ""
 
-#: templates/ogn-token.html:152
+#: templates/ogn-token.html:125
 msgid "Governance"
 msgstr "Quản trị"
 
-#: templates/ogn-token.html:154
+#: templates/ogn-token.html:127
 msgid ""
 "Everyone has a vote on the Origin Platform. Token holders\n"
 "            will participate in important community votes to define future\n"
@@ -1504,36 +1521,80 @@ msgstr "hoặc là"
 msgid "Origin Protocol - imToken"
 msgstr "Giao thức gốc - imToken"
 
-#: templates/team.html:1
+#: templates/swagStore.html:1
+msgid "Origin Protocol - February Rewards"
+msgstr ""
+
+#: templates/swagStore.html:151
+msgid "February 2020"
+msgstr ""
+
+#: templates/swagStore.html:154
+msgid "Shop at the Origin Swag Store and Earn OGN"
+msgstr ""
+
+#: templates/swagStore.html:155
+msgid "For this month’s Origin Rewards campaign, it’s all about our Origin Swag Store. To celebrate the launch and our recent OGN listing on Binance, we have committed a total of 15,000 OGN to give away to our Origin community!"
+msgstr ""
+
+#: templates/swagStore.html:157 templates/swagStore.html:200
+msgid "Visit Origin Swag Store"
+msgstr ""
+
+#: templates/swagStore.html:161
+msgid "in total prizes"
+msgstr ""
+
+#: templates/swagStore.html:162
+msgid "Purchase your favorite items at the Origin Swag Store today and be entered for a chance to win up to 3,000 OGN. This campaign will last until Feb 29th 11:59PM PST, and there will be thirty lucky winners."
+msgstr ""
+
+#: templates/swagStore.html:202
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/swagStore.html:203
+msgid "Please note that Origin Rewards is currently available in most countries in the world. One notable exception is the United States & countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result."
+msgstr ""
+
+#: templates/swagStore.html:204
+msgid "Tokens earned in Feb will be distributed after the first week of March (subject to terms and conditions)."
+msgstr ""
+
+#: templates/swagStore.html:205
+msgid "Shop at the Origin Swag Store today, and enter for a chance to win up to 3,000 OGN!"
+msgstr ""
+
+#: templates/team.html:3
 msgid "Origin Protocol - Team"
 msgstr "Origin Protocol - Đội ngũ"
 
-#: templates/team.html:2
+#: templates/team.html:4
 msgid ""
 "Origin Protocol's\n"
 "world-class team is led by entrepreneurs and engineers from iconic tech\n"
 "companies"
 msgstr ""
 
-#: templates/team.html:29
+#: templates/team.html:31
 msgid ""
 "Our world-class team is led by entrepreneurs and engineers\n"
 "        from iconic tech companies"
 msgstr "Đội ngũ đẳng cấp thế giới của chúng tôi được lãnh đạo bởi các doanh nhân, kĩ sư                                                                                                 từ các công ty công nghệ thông tin nổi tiếng"
 
-#: templates/team.html:46 templates/whitepaper/sidebar.html:50
+#: templates/team.html:48 templates/whitepaper/sidebar.html:50
 msgid "Core team"
 msgstr "Đội ngũ nòng cốt"
 
-#: templates/team.html:64 templates/whitepaper/team.html:31
+#: templates/team.html:66 templates/whitepaper/team.html:31
 msgid "Josh Fraser"
 msgstr "Josh Fraser"
 
-#: templates/team.html:68 templates/team.html:95
+#: templates/team.html:70 templates/team.html:97
 msgid "Cofounder"
 msgstr "Đồng sáng lập"
 
-#: templates/team.html:71
+#: templates/team.html:73
 msgid ""
 "Josh started coding at the age of 10. Prior to\n"
 "                  Origin, he co-founded three other venture-backed companies:\n"
@@ -1542,22 +1603,22 @@ msgstr ""
 "Josh bắt đầu lập trình từ năm 10 tuổi. Trước khi sáng lập                                                                                                             Origin, anh là đồng sáng lập ba công ty được hỗ trợ bởi các công ty mạo hiểm khác như:\n"
 "                  EventVue, Torbit (được Walmart Labs mua lại) &amp; Forage."
 
-#: templates/team.html:91 templates/whitepaper/team.html:13
+#: templates/team.html:93 templates/whitepaper/team.html:13
 msgid "Matthew Liu"
 msgstr "Matthew Liu"
 
-#: templates/team.html:98
+#: templates/team.html:100
 msgid ""
 "Matt was the 3rd PM at YouTube (acquired by\n"
 "                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
 "                  (acquired by Walmart). He has an MS and BS from Stanford."
 msgstr "Matt là một trong ba người đứng đầu của YouTube (được mua lại bởi                                                       Google) là phó giám đốc của Qwiki (được mua lại bởi Yahoo) và Bonobos                                     (được Walmart mua lại). Ông tốt nghiệp cử nhân và học lên thạc sỹ tại Đại học Stanford."
 
-#: templates/team.html:122 templates/whitepaper/team.html:96
+#: templates/team.html:124 templates/whitepaper/team.html:96
 msgid "Business Development"
 msgstr "Phát triển kinh doanh"
 
-#: templates/team.html:125
+#: templates/team.html:127
 msgid ""
 "Coleman is an active cryptocurrency investor and\n"
 "                  real estate entrepreneur, owning and managing multiple Airbnb\n"
@@ -1567,15 +1628,15 @@ msgstr ""
 "                  là doanh nhân bất động sản, sở hữu và quản lý một số lượng lớn tài sản của Airbnb. \n"
 "                  Ông học Toán học tại Đại học Berkeley."
 
-#: templates/team.html:145 templates/whitepaper/team.html:56
+#: templates/team.html:147 templates/whitepaper/team.html:56
 msgid "Yu Pan"
 msgstr "Yu Pan"
 
-#: templates/team.html:149 templates/whitepaper/team.html:60
+#: templates/team.html:151 templates/whitepaper/team.html:60
 msgid "R&D Engineer"
 msgstr "Kỹ sư nghiên cứu và phát triển"
 
-#: templates/team.html:152
+#: templates/team.html:154
 msgid ""
 "Yu Pan was one of the 6 founding team members of\n"
 "                  PayPal and was the 1st employee at YouTube. He is a former\n"
@@ -1585,15 +1646,15 @@ msgstr ""
 "                   và là nhân viên đầu tiên tại YouTube. \n"
 "                  Ông là cựu nhân viên của Google và là người đồng sáng lập Kiwi Crate."
 
-#: templates/team.html:172 templates/whitepaper/team.html:110
+#: templates/team.html:174 templates/whitepaper/team.html:110
 msgid "Micah Alcorn"
 msgstr "Micah Alcorn"
 
-#: templates/team.html:176 templates/whitepaper/team.html:114
+#: templates/team.html:178 templates/whitepaper/team.html:114
 msgid "Product Manager/Engineer"
 msgstr "Giám đốc quản lý sản phẩm/Kĩ sư"
 
-#: templates/team.html:179
+#: templates/team.html:181
 msgid ""
 "Micah was the technical co-founder of\n"
 "                  WellAttended, a bootstrapped box office management platform.\n"
@@ -1604,15 +1665,15 @@ msgstr ""
 "                  một nền tảng quản lý phòng vé tối ưu. \n"
 "                  Ông làm việc như một nhà môi giới bất động sản thương mại trong thời gian học lập trình."
 
-#: templates/team.html:201 templates/whitepaper/team.html:128
+#: templates/team.html:203 templates/whitepaper/team.html:128
 msgid "Kay Yoo"
 msgstr "Kay Yoo"
 
-#: templates/team.html:205 templates/whitepaper/team.html:132
+#: templates/team.html:207 templates/whitepaper/team.html:132
 msgid "Finance & Operations"
 msgstr "Tài chính & Vận hành"
 
-#: templates/team.html:208
+#: templates/team.html:210
 msgid ""
 "Kay is a Chartered Professional Accountant (CPA).\n"
 "                  She previously worked as a Senior Accountant and then as a\n"
@@ -1622,17 +1683,17 @@ msgstr ""
 "                  Trước đây cô làm Kế toán cao cấp\n"
 "                  và sau đó là Tư vấn viên cao cấp tại KPMG Canada."
 
-#: templates/team.html:229 templates/whitepaper/team.html:74
+#: templates/team.html:231 templates/whitepaper/team.html:74
 msgid "Franck Chastagnol"
 msgstr "Franck Chastagnol"
 
-#: templates/team.html:233 templates/team.html:290 templates/team.html:348
+#: templates/team.html:235 templates/team.html:292 templates/team.html:350
 #: templates/whitepaper/team.html:78 templates/whitepaper/team.html:186
 #: templates/whitepaper/team.html:204
 msgid "Senior Engineer"
 msgstr "Kỹ sư cao cấp"
 
-#: templates/team.html:236
+#: templates/team.html:238
 msgid ""
 "Franck has had a successful career as an early\n"
 "                  employee at numerous high-profile companies. He previously led\n"
@@ -1643,15 +1704,15 @@ msgstr ""
 "                  Trước đây ông đã lãnh đạo các nhóm kỹ thuật\n"
 "                   tại Inktomi, Paypal, YouTube, Google và Dropbox."
 
-#: templates/team.html:258 templates/whitepaper/team.html:164
+#: templates/team.html:260 templates/whitepaper/team.html:164
 msgid "Mila Choi"
 msgstr "Mila Choi"
 
-#: templates/team.html:262 templates/whitepaper/team.html:168
+#: templates/team.html:264 templates/whitepaper/team.html:168
 msgid "Regional Manager Korea"
 msgstr "Giám đốc bộ phận Hàn Quốc"
 
-#: templates/team.html:265
+#: templates/team.html:267
 msgid ""
 "Mila is leading our community efforts in South\n"
 "                  Korea. She previously organized blockhain hackathons and has\n"
@@ -1661,11 +1722,11 @@ msgstr ""
 "                  Trước đây, cô đã tổ chức hackhons hackhons\n"
 "                  và có bằng cấp của Đại học bang Pennsylvania và Đại học Erasmus Rotterdam."
 
-#: templates/team.html:286 templates/whitepaper/team.html:182
+#: templates/team.html:288 templates/whitepaper/team.html:182
 msgid "Tom Linton"
 msgstr "Tom Linton"
 
-#: templates/team.html:293
+#: templates/team.html:295
 msgid ""
 "Before Origin, Tom had a successful career as a\n"
 "                  solo startup founder. He has two Masters degrees in\n"
@@ -1677,15 +1738,15 @@ msgstr ""
 "                  Ông có hai bằng Thạc sĩ về Hệ thống phân tán \n"
 "                  của Đại học Kỹ thuật Berlin và KTH tại Stockholm."
 
-#: templates/team.html:315 templates/whitepaper/team.html:218
+#: templates/team.html:317 templates/whitepaper/team.html:218
 msgid "Anna Wang"
 msgstr "Anna Vương"
 
-#: templates/team.html:319 templates/whitepaper/team.html:222
+#: templates/team.html:321 templates/whitepaper/team.html:222
 msgid "Regional Manager China"
 msgstr "Giám đốc quản lý bộ phận Trung Quốc"
 
-#: templates/team.html:322
+#: templates/team.html:324
 msgid ""
 "Anna is leading our community efforts for Chinese\n"
 "                  speakers. Before Origin, Anna managed global social media at\n"
@@ -1697,11 +1758,11 @@ msgstr ""
 "                  một nhà môi giới ngoại hối hàng đầu. \n"
 "                  Cô cũng đồng sáng lập một tổ chức phi lợi nhuận ở Úc."
 
-#: templates/team.html:344 templates/whitepaper/team.html:200
+#: templates/team.html:346 templates/whitepaper/team.html:200
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:351
+#: templates/team.html:353
 msgid ""
 "Nick studied Computer Science at the University of\n"
 "                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
@@ -1711,17 +1772,17 @@ msgstr ""
 "                  Trước khi gia nhập Origin, anh từng làm kỹ sư tại Sencha, Mạng lưới năng lượng C3 \n"
 "                  và Palo Alto Networks."
 
-#: templates/team.html:372 templates/whitepaper/team.html:236
+#: templates/team.html:374 templates/whitepaper/team.html:236
 msgid "Domen Grabec"
 msgstr "Domen Grabec"
 
-#: templates/team.html:376 templates/team.html:404 templates/team.html:461
+#: templates/team.html:378 templates/team.html:406 templates/team.html:463
 #: templates/whitepaper/team.html:240 templates/whitepaper/team.html:258
 #: templates/whitepaper/team.html:294
 msgid "Engineer"
 msgstr "Kỹ sư"
 
-#: templates/team.html:379
+#: templates/team.html:381
 msgid ""
 "Domen co-founded and led a team developing a\n"
 "                  mobile application with 2 chess Grandmasters. He previously\n"
@@ -1731,11 +1792,11 @@ msgstr ""
 "                  cùng với 2 đại kiện tướng cờ vua. \n"
 "                  Ông được biết đến khá thành công tại Cetra, Zemanta và Peerindex."
 
-#: templates/team.html:400 templates/whitepaper/team.html:254
+#: templates/team.html:402 templates/whitepaper/team.html:254
 msgid "Shahul Hameed"
 msgstr "Shahul Hameed"
 
-#: templates/team.html:407
+#: templates/team.html:409
 msgid ""
 "Shahul is a fullstack engineer who started\n"
 "                  programming at age of 10. He previously worked as a freelancer\n"
@@ -1745,15 +1806,15 @@ msgstr ""
 "                  Trước đây anh đã từng làm tự do \n"
 "                  và sau đó trở thành lập trình viên đầu - cuối cho Zoho."
 
-#: templates/team.html:428 templates/whitepaper/team.html:272
+#: templates/team.html:430 templates/whitepaper/team.html:272
 msgid "Zaurbek Ivanov"
 msgstr "Zaurbek Ivanov"
 
-#: templates/team.html:432 templates/whitepaper/team.html:276
+#: templates/team.html:434 templates/whitepaper/team.html:276
 msgid "Russia Community"
 msgstr "Cộng đồng Nga"
 
-#: templates/team.html:435
+#: templates/team.html:437
 msgid ""
 "Zaurbek Ivanov studied Economics at\n"
 "                  Kabardino-Balkaria State Agrarian University in Nalchik,\n"
@@ -1763,11 +1824,11 @@ msgstr ""
 "Zaurbek Ivanov từng học kinh tế ở Kabardino-Balkaria State Agrarian University tại Nalchik, Nga. \n"
 "                  Anh đã có nhiều năm kinh nghiệm làm việc trong nghành công nghiệp khách sạn tại Mỹ và Nga."
 
-#: templates/team.html:457 templates/whitepaper/team.html:290
+#: templates/team.html:459 templates/whitepaper/team.html:290
 msgid "Mike Shultz"
 msgstr "Mike Shultz"
 
-#: templates/team.html:464
+#: templates/team.html:466
 msgid ""
 "Mike is a long-time contributor to open-source. He\n"
 "                  created a dev toolkit for creating Ethereum smart contracts\n"
@@ -1778,15 +1839,15 @@ msgstr ""
 "                  Anh đã tạo ra bộ công cụ hỗ trợ lập trình hợp đồng thông minh của Ethereum với Python \n"
 "                  và trước đây từng lập trình cho Ethereum, IPFS tại Lunyr."
 
-#: templates/team.html:486 templates/whitepaper/team.html:146
+#: templates/team.html:488 templates/whitepaper/team.html:146
 msgid "Aure Gimon"
 msgstr "Aure Gimon"
 
-#: templates/team.html:490 templates/whitepaper/team.html:150
+#: templates/team.html:492 templates/whitepaper/team.html:150
 msgid "Product Designer"
 msgstr "Nhà Thiết kế Sản phẩm"
 
-#: templates/team.html:493
+#: templates/team.html:495
 msgid ""
 "Aure is a product designer with 10+ years of\n"
 "                  experience. Prior to joining Origin, Aure worked at multiple\n"
@@ -1798,89 +1859,89 @@ msgstr ""
 "                  Aure đã làm việc tại nhiều công ty khởi nghiệp và công ty Fortune 500. \n"
 "                  Trước đó, anh cũng là một Kỹ sư phần mềm."
 
-#: templates/team.html:510
+#: templates/team.html:512
 msgid "Community team"
 msgstr "Nhóm cộng đồng"
 
-#: templates/team.html:525 templates/whitepaper/team.html:330
+#: templates/team.html:527 templates/whitepaper/team.html:330
 msgid "Holly Gu"
 msgstr "Holly Gu"
 
-#: templates/team.html:537 templates/whitepaper/team.html:342
+#: templates/team.html:539 templates/whitepaper/team.html:342
 msgid "June Kim"
 msgstr "Kim tháng sáu"
 
-#: templates/team.html:549 templates/whitepaper/team.html:354
+#: templates/team.html:551 templates/whitepaper/team.html:354
 msgid "Yeongin Lee"
 msgstr "Yeongin Lee"
 
-#: templates/team.html:561 templates/whitepaper/team.html:366
+#: templates/team.html:563 templates/whitepaper/team.html:366
 msgid "Leslie Song"
 msgstr "Leslie Song"
 
-#: templates/team.html:572
+#: templates/team.html:574
 msgid "Advisors"
 msgstr "Nhà cố vấn"
 
-#: templates/team.html:591
+#: templates/team.html:593
 msgid "Addison Huegel"
 msgstr "Addison Huegel"
 
-#: templates/team.html:595
+#: templates/team.html:597
 msgid "PR"
 msgstr "PR"
 
-#: templates/team.html:611
+#: templates/team.html:613
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:615
+#: templates/team.html:617
 msgid "International BD"
 msgstr "Phát triển Kinh doanh Quốc tế"
 
-#: templates/team.html:635 templates/team.html:655
+#: templates/team.html:637 templates/team.html:657
 msgid "Advisor"
 msgstr "Cố vấn"
 
-#: templates/team.html:651
+#: templates/team.html:653
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:671
+#: templates/team.html:673
 msgid "Andrew Hyde"
 msgstr "Andrew Hyde"
 
-#: templates/team.html:675 templates/whitepaper/sidebar.html:53
+#: templates/team.html:677 templates/whitepaper/sidebar.html:53
 #: templates/whitepaper/team.html:317
 msgid "Community"
 msgstr "Cộng đồng"
 
-#: templates/team.html:686
+#: templates/team.html:688
 #, python-format
 msgid "100%% open-source."
 msgstr "100%% mã nguồn mở."
 
-#: templates/team.html:687
+#: templates/team.html:689
 msgid " contributors."
 msgstr "người đóng góp."
 
-#: templates/team.html:714
+#: templates/team.html:716
 msgid "Want to contribute?"
 msgstr "Bạn muốn đóng góp?"
 
-#: templates/team.html:723
+#: templates/team.html:725
 msgid "Visit our GitHub Repository"
 msgstr "Ghé thăm GitHub Repository của chúng tôi"
 
-#: templates/team.html:728
+#: templates/team.html:730
 msgid "Join our #engineering channel on Discord"
 msgstr "Tham gia kênh #enginerring của chúng tôi tại Discord"
 
-#: templates/team.html:740
+#: templates/team.html:742
 msgid "Interested in working at Origin?"
 msgstr "Quan tâm tới việc làm tại Origin?"
 
-#: templates/team.html:744
+#: templates/team.html:746
 msgid ""
 "We are a distributed team and are hiring all around the\n"
 "            world."
@@ -1888,7 +1949,7 @@ msgstr ""
 "Chúng tôi là một đội ngũ phân tán \n"
 "            và đang tuyển dụng trên toàn thế giới."
 
-#: templates/team.html:755
+#: templates/team.html:757
 msgid "View job posts"
 msgstr "Xem các bài viết tuyển dụng"
 
@@ -1896,9 +1957,9 @@ msgstr "Xem các bài viết tuyển dụng"
 msgid "Origin Protocol - Buy Origin Tokens (OGN)"
 msgstr ""
 
-#: templates/tokens.html:5
-msgid "Origin Tokens (OGN) are launching soon!"
-msgstr ""
+#: templates/tokens.html:16
+msgid "Origin Tokens are launching soon!"
+msgstr "Origin Token sẽ được ra mắt sớm trong thời gian tới!"
 
 #: templates/tokens.html:18
 msgid "Interested in Origin tokens?"
@@ -1930,7 +1991,7 @@ msgstr "Gửi"
 msgid "Origin Protocol - Terms of Service"
 msgstr "Giao thức gốc - Điều khoản dịch vụ"
 
-#: templates/video.html:39
+#: templates/video.html:37
 msgid "Share"
 msgstr "Chia sẻ"
 
@@ -2981,13 +3042,17 @@ msgstr "Chúng tôi tin rằng bây giờ là thời điểm hoàn hảo để t
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "Origin Protocol là nền tảng blockchain để xây dựng các thị trường phi tập trung"
 
-#: views/web_views.py:173
+#: views/web_views.py:167
 msgid "Missing email"
 msgstr "Email nhỡ"
 
-#: views/web_views.py:176
+#: views/web_views.py:170
 msgid "Invalid email"
 msgstr "Email không hợp lệ"
+
+#: views/web_views.py:226
+msgid "You're already registered!"
+msgstr ""
 
 #: views/web_views.py:228
 msgid "Thanks for signing up!"
@@ -3117,4 +3182,12 @@ msgstr "Rất tiếc, đã xảy ra sự cố"
 
 #~ msgid "User and transaction data is stored on the Ethereum blockchain and IPFS. This means that third-parties can query the public Ethereum blockchain and IPFS network for currently available listings, a history of previous transactions, and the reputations of various ecosystem buyers and sellers"
 #~ msgstr "Dữ liệu về người dùng và giao dịch sẽ được lưu trữ trên mạng Etherem và IPFS. Đồng nghĩa bên thứ 3 có thể truy vấn mạng IPFS và Ethereum blockchain để lấy các danh sách hiện tại, lịch sử của các giao dịch trước đó và độ đảm bảo của người mua và người bán trên nhiều hệ sinh thái"
+
+#~ msgid "Exclusively on "
+#~ msgstr "Độc quyền trên "
+
+#~ msgid ""
+#~ "Subscribe to stay in touch. Your email will be kept\n"
+#~ "        private."
+#~ msgstr ""
 

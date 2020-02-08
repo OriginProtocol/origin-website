@@ -81,7 +81,8 @@ LANGUAGES = [
     'he',
     'hr',
     'nl',
-    'vi'
+    'vi',
+    'id'
 ]
 
 # LANGUAGES = {
