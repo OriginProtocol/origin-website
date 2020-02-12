@@ -222,7 +222,7 @@ def list_cleanup():
             email = person['email'].lower()
             contact = db_models.EmailList.query.filter_by(email=email).first()
             # remove them from our marketing lists
-            unsubscribe_sendgrid_contact(email)
+            # unsubscribe_sendgrid_contact(email)
             print(person['email'])
             if contact:
                 contact.spam_report = True
@@ -236,7 +236,7 @@ def list_cleanup():
             email = person['email'].lower()
             contact = db_models.EmailList.query.filter_by(email=email).first()
             # remove them from our marketing lists
-            unsubscribe_sendgrid_contact(email)
+            # unsubscribe_sendgrid_contact(email)
             print(person['email'])
             if contact:
                 contact.invalid = True
@@ -250,7 +250,7 @@ def list_cleanup():
             email = person['email'].lower()
             contact = db_models.EmailList.query.filter_by(email=email).first()
             # remove them from our marketing lists
-            unsubscribe_sendgrid_contact(email)
+            # unsubscribe_sendgrid_contact(email)
             print(person['email'])
             if contact:
                 contact.blocked = True
@@ -264,7 +264,7 @@ def list_cleanup():
         email = person['email'].lower()
         contact = db_models.EmailList.query.filter_by(email=email).first()
         # remove them from our marketing lists
-        unsubscribe_sendgrid_contact(email)
+        # unsubscribe_sendgrid_contact(email)
         print(person['email'])
         if contact:
             contact.bounced = True
