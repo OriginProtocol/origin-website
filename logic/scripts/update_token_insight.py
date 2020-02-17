@@ -243,10 +243,10 @@ def fetch_ogn_transactions():
 
         # send an email alert every time OGN tokens are moved
         # only alert once & ignore marketplace transactions which show up as 0 OGN
-        if (tx.amount > 0 and not tx.notification_sent):
+        if (tx.amount > 1000 and not tx.notification_sent):
             to_details = lookup_details(tx.to_address)
             from_details = lookup_details(tx.from_address)
-
+            
             if from_details.name and to_details.name:
                 subject = "%s moved %g OGN to %s" % (from_details.name, tx.amount, to_details.name)
             elif from_details.name:
