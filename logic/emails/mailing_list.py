@@ -212,3 +212,62 @@ def partners_interest(name, company_name, email, website, note, ip_addr):
                                                                                                   company_name=company_name))
 
     return gettext('Thanks! We\'ll be in touch soon.')
+
+def list_cleanup():
+    sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+    response = sg_api.client.suppression.spam_reports.get()
+    people = json.loads(response.body)
+    print("Unsubscribing the following spam reporting email addresses:")
+    for person in people:
+            email = person['email'].lower()
+            contact = db_models.EmailList.query.filter_by(email=email).first()
+            # remove them from our marketing lists
+            # unsubscribe_sendgrid_contact(email)
+            print(person['email'])
+            if contact:
+                contact.spam_report = True
+                contact.unsubscribed = True
+                db.session.add(contact)
+                db.session.commit()
+    response = sg_api.client.suppression.invalid_emails.get()
+    people = json.loads(response.body)
+    print("Unsubscribing the following invalid email addresses:")
+    for person in people:
+            email = person['email'].lower()
+            contact = db_models.EmailList.query.filter_by(email=email).first()
+            # remove them from our marketing lists
+            # unsubscribe_sendgrid_contact(email)
+            print(person['email'])
+            if contact:
+                contact.invalid = True
+                contact.unsubscribed = True
+                db.session.add(contact)
+                db.session.commit()
+    response = sg_api.client.suppression.blocks.get()
+    people = json.loads(response.body)
+    print("Unsubscribing the following blocked email addresses:")
+    for person in people:
+            email = person['email'].lower()
+            contact = db_models.EmailList.query.filter_by(email=email).first()
+            # remove them from our marketing lists
+            # unsubscribe_sendgrid_contact(email)
+            print(person['email'])
+            if contact:
+                contact.blocked = True
+                contact.unsubscribed = True
+                db.session.add(contact)
+                db.session.commit()
+    response = sg_api.client.suppression.bounces.get()
+    people = json.loads(response.body)
+    print("Unsubscribing the following bounced email addresses:")
+    for person in people:
+        email = person['email'].lower()
+        contact = db_models.EmailList.query.filter_by(email=email).first()
+        # remove them from our marketing lists
+        # unsubscribe_sendgrid_contact(email)
+        print(person['email'])
+        if contact:
+            contact.bounced = True
+            contact.unsubscribed = True
+            db.session.add(contact)
+            db.session.commit()
