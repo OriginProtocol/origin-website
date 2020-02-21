@@ -404,6 +404,11 @@ def videos():
 def privacy():
     return render_template('privacy.html')
 
+@app.route('/privacy/extension', strict_slashes=False)
+@app.route('/<lang_code>/privacy/extension', strict_slashes=False)
+def extension_privacy():
+    return render_template('privacy-extension.html')
+
 @app.route('/tos', strict_slashes=False)
 @app.route('/<lang_code>/tos', strict_slashes=False)
 def tos():
@@ -519,11 +524,11 @@ def inject_conf_var():
     except:
         available_languages = {'en': "English"}
 
-    # important (!) date needs to be in that exact format (along with minutes/seconds present). 
+    # important (!) date needs to be in that exact format (along with minutes/seconds present).
     # also enter the date in UTC format -> greenwich mean time
     startDate = '2020/1/7 3:30:00 GMT'
     launchDate = '2020/1/9 3:00:00 GMT'
-    
+
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,
