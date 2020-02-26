@@ -11,6 +11,7 @@ theme_dark=True %} {% endwith %}
     background-image: url('/static/img/rewards/rays.svg');
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: 150%;
     color: white;
     font-family: "Lato";
     font-size: 21px;
@@ -62,7 +63,7 @@ theme_dark=True %} {% endwith %}
     font-family: "Poppins";
     font-size: 58px;
     font-weight: bold;
-    line-height: 0.5;
+    line-height: 1;
     text-align: center;
     margin-top: 30px;
   }
@@ -142,8 +143,8 @@ theme_dark=True %} {% endwith %}
       max-width: 100%;
     }
 
-    .hero-holder .title {
-      margin-top: -81px;
+    body {
+      background-size: 100%;
     }
   }
 </style>
@@ -160,7 +161,8 @@ theme_dark=True %} {% endwith %}
     <div class="ogn-amount">150,000 OGN</div>
     <div class="ogn-amount-sub">{{gettext("Total Reward Pool")}}</div>
     <div class="row my-4">
-      <div class="col">
+      <div class="col my-5">
+	<img src="/static/img/chrome.svg" />
 	<div class="my-4">
 	  <strong>{{gettext("Origin Chrome Extension")}}</strong>
 	</div>
@@ -168,7 +170,8 @@ theme_dark=True %} {% endwith %}
 	  {{gettext("Download")}}
 	</a>
       </div>
-      <div class="col">
+      <div class="col my-5">
+	<img src="/static/img/firefox.svg" />
 	<div class="my-4">
 	  <strong>{{gettext("Origin Firefox Extension")}}</strong>
 	</div>
@@ -176,7 +179,8 @@ theme_dark=True %} {% endwith %}
 	  {{gettext("Download")}}
 	</a>
       </div>
-      <div class="col">
+      <div class="col my-5">
+	<img src="/static/img/brave.svg" />
 	<div class="my-4">
 	  <strong>{{gettext("Origin Brave Extension")}}</strong>
 	</div>
