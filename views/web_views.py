@@ -335,6 +335,11 @@ def rewards():
 def swagRewards():
     return render_template('swagStore.html', hide_ogn_banner=True)
 
+@app.route('/reward/extension/march_2020', strict_slashes=False)
+@app.route('/<lang_code>/reward/extension/march_2020', strict_slashes=False)
+def extension_rewardsj():
+    return render_template('extension-rewards.html', hide_ogn_banner=True)
+
 @app.route('/partners', strict_slashes=False)
 @app.route('/<lang_code>/partners', strict_slashes=False)
 def partners():

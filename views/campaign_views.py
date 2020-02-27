@@ -155,7 +155,6 @@ def partner(partner_code):
     if not conf:
         return generic_response(404)
 
-    
     return render_template(
         'partner_campaign.html',
         referral_code=partner_code,
