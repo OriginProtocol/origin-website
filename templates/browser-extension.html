@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}{{ gettext("Origin Browser Extension")}}{% endblock %} 
+{% block meta_description %}{{ gettext("Origin Browser Extension") }}{% endblock %} 
+{% block content %} 
+
+<main class="browser-extension-page">
+  <section class="extension-section">
+    <div class="container">
+      <div class="extension-info-container">
+        <div class="image">
+          <img src="/static/img/browser/entension-graphic.svg" />
+        </div>
+        <div class="info">
+          <h2>{{gettext("Origin Browser Extension")}}</h2>
+          <p class="subtext">
+            {{gettext("Our browser extension is a playground where our most adventurous users can play around with prototypes of some of our wild and crazy ideas. You'll be among the first to see our new products and have the chance to offer feedback directly to the engineers who developed them.")}}
+          </p>
+          <div class="actions">
+            <a rel="noopener noreferrer" target="_blank" href="{{ universal.CHROME_EXTENSION_URL }}">
+              <img src="/static/img/chrome.svg" />
+              <span>{{gettext("Download for Chrome")}}</span>
+            </a>
+            <a rel="noopener noreferrer" target="_blank" href="{{ universal.FIREFOX_EXTENSION_URL }}">
+              <img src="/static/img/firefox.svg" />
+              <span>{{gettext("Download for Firefox")}}</span>
+            </a>
+            <a rel="noopener noreferrer" target="_blank" href="{{ universal.CHROME_EXTENSION_URL }}">
+              <img src="/static/img/brave.svg" />
+              <span>{{gettext("Download for Brave")}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %} 
+{% block extra_scripts %} 
+{% endblock %}

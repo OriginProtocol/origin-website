@@ -36,3 +36,6 @@ FAUCET_URL = 'https://faucet.originprotocol.com'
 
 DEFAULT_SHARE_MSG = quote('Check out ' + BUSINESS_NAME + ', an exciting blockchain project that will decentralize the sharing economy.')
 DEFAULT_PARTICLE_ICON = constants.DEFAULT_PARTICLE_ICON
+
+CHROME_EXTENSION_URL = constants.CHROME_EXTENSION_URL
+FIREFOX_EXTENSION_URL = constants.FIREFOX_EXTENSION_URL
