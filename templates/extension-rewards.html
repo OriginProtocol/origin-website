@@ -170,7 +170,7 @@ theme_dark=True %} {% endwith %}
 	<div class="my-4">
 	  <strong>{{gettext("Origin Chrome Extension")}}</strong>
 	</div>
-	<a href="https://chrome.google.com/webstore/detail/origin-browser-extension/pplcajdkcpaefgdadbbfchogccbieoae" class="download-link" target=_"blank">
+	<a href="{{ universal.CHROME_EXTENSION_URL }}" class="download-link" target=_"blank">
 	  {{gettext("Download")}}
 	</a>
       </div>
@@ -179,7 +179,7 @@ theme_dark=True %} {% endwith %}
 	<div class="my-4">
 	  <strong>{{gettext("Origin Firefox Extension")}}</strong>
 	</div>
-	<a href="https://addons.mozilla.org/en-US/firefox/addon/origin-browser-extension/" class="download-link" target="_blank">
+	<a href="{{ universal.FIREFOX_EXTENSION_URL }}" class="download-link" target="_blank">
 	  {{gettext("Download")}}
 	</a>
       </div>
@@ -188,7 +188,7 @@ theme_dark=True %} {% endwith %}
 	<div class="my-4">
 	  <strong>{{gettext("Origin Brave Extension")}}</strong>
 	</div>
-	<a href="https://chrome.google.com/webstore/detail/origin-browser-extension/pplcajdkcpaefgdadbbfchogccbieoae" class="download-link" target="_blank">
+	<a href="{{ universal.CHROME_EXTENSION_URL }}" class="download-link" target="_blank">
 	  {{gettext("Download")}}
 	</a>
       </div>
