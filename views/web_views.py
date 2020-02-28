@@ -456,6 +456,11 @@ def creator():
 def whitepaperv2():
     return render_template('whitepaper.html')
 
+@app.route('/browser-extension', strict_slashes=False)
+@app.route('/<lang_code>/browser-extension', strict_slashes=False)
+def browser_extension():
+    return render_template('browser-extension.html', hide_ogn_banner=True)
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -481,7 +486,8 @@ def assets_all_styles():
         "static/css/pages/investors.css",
         "static/css/pages/developers.css",
         "static/css/pages/presale.css",
-        "static/css/pages/whitepaper.css"
+        "static/css/pages/whitepaper.css",
+        "static/css/pages/browser-extension.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)

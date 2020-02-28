@@ -1,0 +1,105 @@
+.browser-extension-page {
+  background-color: #007cff;
+  height: 100%;
+}
+
+.browser-extension-page .container {
+  height: 100%;
+}
+
+.extension-info-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;;
+  align-items: center;
+}
+
+.extension-section {
+  height: 100%;
+}
+
+.extension-info-container .image {
+  flex: 1 0 0;
+}
+
+.extension-info-container .image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.extension-info-container .info {
+  flex: 1 0 0;
+}
+
+.extension-info-container .info h2 {
+  font-family: Poppins;
+  font-size: 2.375rem;
+  font-weight: normal;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.extension-info-container .info .subtext {
+  font-family: Lato;
+  font-size: 1.125rem;
+  color: var(--white);
+  margin-bottom: 2.375rem;
+}
+
+.extension-info-container .info a {
+  width: 350px;
+  border-radius: 26px;
+  border: solid 1px var(--white);
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  padding: 0.75rem 0.875rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.extension-info-container .info a img {
+  width: 28px;
+  height: 28px;
+  flex: 28px 0 0;
+}
+
+.extension-info-container .info a span {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .browser-extension-page {
+    padding-top: 40px;
+  }
+
+  .extension-info-container {
+    flex-direction: column-reverse;
+  }
+
+  .browser-extension-page, .browser-extension-page .container {
+    min-height: 100%;
+    height: auto;
+    overflow-y: scroll;
+  }
+
+  .extension-info-container .info h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .extension-info-container .info .subtext {
+    font-size: 0.875rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  .extension-info-container .info a {
+    width: 100%;
+  }
+
+  .extension-info-container .image {
+    margin: 2rem -1rem 0 -1rem;
+  }
+}
