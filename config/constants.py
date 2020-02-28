@@ -59,6 +59,9 @@ ETHPLORER_KEY = dotenv.get('ETHPLORER_KEY')
 
 APK_URL = dotenv.get('APK_URL')
 
+FIREFOX_EXTENSION_URL = dotenv.get('FIREFOX_EXTENSION_URL')
+CHROME_EXTENSION_URL = dotenv.get('CHROME_EXTENSION_URL')
+
 # Language option constants
 
 LANGUAGES = [
