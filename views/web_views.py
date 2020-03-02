@@ -459,7 +459,7 @@ def whitepaperv2():
 @app.route('/browser-extension', strict_slashes=False)
 @app.route('/<lang_code>/browser-extension', strict_slashes=False)
 def browser_extension():
-    return render_template('browser-extension.html', hide_ogn_banner=True)
+    return render_template('browser-extension.html', hide_ogn_banner=False)
 
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
