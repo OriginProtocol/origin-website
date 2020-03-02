@@ -88,6 +88,30 @@ LANGUAGES = [
     'id'
 ]
 
+BINANCE_LOCALE_MAP = {
+    'ar': 'en',
+    'de': 'de',
+    'en': 'en',
+    'es': 'es',
+    'fr': 'fr',
+    'fil': 'en',
+    'it': 'it',
+    'ja': 'en',
+    'ko': 'kr',
+    'pt': 'pt',
+    'ru': 'ru',
+    'th': 'tw',
+    'tr': 'tr',
+    'zh_Hans': 'cn',
+    'zh_Hant': 'cn',
+    'el': 'en',
+    'he': 'en',
+    'hr': 'en',
+    'nl': 'nl',
+    'vi': 'vn',
+    'id': 'en',
+}
+
 # LANGUAGES = {
 #     'ar': 'Arabic',
 #     'de': 'German',
