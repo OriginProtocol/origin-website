@@ -5,6 +5,49 @@ block content %} {% with theme_dark=False %} {% include 'navbar.html' %} {%
 endwith %}
 
 <main class="tokens-page">
+  <section class="exchanges-section">
+    <div class="container">
+      <div class="token-stack-image text-center my-5">
+        <img src="/static/img/ognToken/token-stack.svg" class="mx-auto" />
+      </div>
+      <h2>{{gettext("OGN are now available on these top exchanges")}}</h2>
+      <div class="row d-flex flex-column flex-md-row justify-content-around mb-4">
+        <div class="col-md-3">
+          <div class="token-exchange">
+            <img src="/static/img/ognToken/binance.svg" />
+            <a 
+              class="btn btn-outline-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658"
+            >{{gettext("Visit Site")}}</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="token-exchange">
+            <img src="/static/img/ognToken/coinone.svg" />
+            <a 
+              class="btn btn-outline-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://coinone.co.kr/"
+            >{{gettext("Visit Site")}}</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="token-exchange">
+            <img src="/static/img/ognToken/gopax.svg" />
+            <a 
+              class="btn btn-outline-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.gopax.co.kr/signup?refCode=ORIGIN"
+            >{{gettext("Visit Site")}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="rewards-section blue-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">
