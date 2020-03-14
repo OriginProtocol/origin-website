@@ -10,39 +10,65 @@ endwith %}
       <div class="token-stack-image text-center my-5">
         <img src="/static/img/ognToken/token-stack.svg" class="mx-auto" />
       </div>
-      <h2>{{gettext("OGN are now available on these top exchanges")}}</h2>
-      <div class="row d-flex flex-column flex-md-row justify-content-around mb-4">
-        <div class="col-md-3">
+      <h2>
+        {{gettext("Origin Tokens (OGN) are currently trading on the following
+        exchanges")}}
+      </h2>
+      <div
+        class="row d-flex flex-column flex-md-row justify-content-around mb-4"
+      >
+        <div class="col-lg-3 col-md-6">
           <div class="token-exchange">
-            <img src="/static/img/ognToken/binance.svg" />
-            <a 
-              class="btn btn-outline-primary"
+            <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658"
-            >{{gettext("Visit Site")}}</a>
+              ><img src="/static/img/ognToken/binance.svg"
+            /></a>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6">
           <div class="token-exchange">
-            <img src="/static/img/ognToken/coinone.svg" />
-            <a 
-              class="btn btn-outline-primary"
+            <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://coinone.co.kr/"
-            >{{gettext("Visit Site")}}</a>
+            >
+              <img src="/static/img/ognToken/coinone.svg" />
+            </a>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6">
           <div class="token-exchange">
-            <img src="/static/img/ognToken/gopax.svg" />
-            <a 
-              class="btn btn-outline-primary"
+            <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.gopax.co.kr/signup?refCode=ORIGIN"
-            >{{gettext("Visit Site")}}</a>
+            >
+              <img src="/static/img/ognToken/gopax.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="token-exchange">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://kyberswap.com"
+            >
+              <img src="/static/img/ognToken/kyber.png" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="token-exchange">
+            <a
+              class="btn btn-outline-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://coinmarketcap.com/currencies/origin-protocol/markets/"
+              >{{gettext("See more")}}</a
+            >
           </div>
         </div>
       </div>
