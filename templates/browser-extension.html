@@ -2,11 +2,12 @@
 {% block title %}{{ gettext("Origin Browser Extension")}}{% endblock %} 
 {% block meta_description %}{{ gettext("Origin Browser Extension") }}{% endblock %} 
 {% block content %} 
+{% with theme_dark=True %} {% include 'navbar.html' %} {% endwith %}
 
 <main class="browser-extension-page">
   <section class="extension-section">
     <div class="container">
-      <div class="extension-info-container">
+      <div class="extension-info-container pt-4 pt-md-0">
         <div class="image">
           <img src="/static/img/browser/entension-graphic.svg" />
         </div>
@@ -33,6 +34,7 @@
       </div>
     </div>
   </section>
+  {% include 'footer.html' %}
 </main>
 
 {% endblock %} 
