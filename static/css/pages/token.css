@@ -144,6 +144,34 @@
   opacity: 1;
 }
 
+.tokens-page .token-exchange {
+  margin: 1rem 1.5rem;
+}
+
+.tokens-page .token-exchange.feat {
+  margin: 1rem 3rem;
+}
+
+.tokens-page .exchanges-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.25rem;
+}
+
+.tokens-page .token-exchange img {
+  width: 80px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.tokens-page .token-exchange.feat img {
+  width: 225px;
+}
+
+.tokens-page .token-exchange .btn {
+  width: 100%;
+}
+
 @media (max-width: 575px) {
   .tokens-page .app-showcase {
     flex-direction: column;
@@ -213,4 +241,19 @@
   .tokens-page .app-showcase .showcase-image + .showcase-content {
     margin-left: 10px;
   }
+
+  .tokens-page .token-exchange {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .tokens-page .token-exchange img,
+  .tokens-page .token-exchange.feat img {
+    width: 175px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
