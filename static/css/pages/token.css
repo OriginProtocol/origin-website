@@ -145,11 +145,11 @@
 }
 
 .tokens-page .token-exchange {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+  margin: 1rem 1.5rem;
+}
+
+.tokens-page .token-exchange.feat {
+  margin: 1rem 3rem;
 }
 
 .tokens-page .exchanges-section h2 {
@@ -159,8 +159,13 @@
 }
 
 .tokens-page .token-exchange img {
-  height: 43px;
+  width: 80px;
+  object-fit: contain;
   margin-bottom: 1.5rem;
+}
+
+.tokens-page .token-exchange.feat img {
+  width: 225px;
 }
 
 .tokens-page .token-exchange .btn {
@@ -236,4 +241,19 @@
   .tokens-page .app-showcase .showcase-image + .showcase-content {
     margin-left: 10px;
   }
+
+  .tokens-page .token-exchange {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .tokens-page .token-exchange img,
+  .tokens-page .token-exchange.feat img {
+    width: 175px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }

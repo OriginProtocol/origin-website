@@ -5,73 +5,88 @@ block content %} {% with theme_dark=False %} {% include 'navbar.html' %} {%
 endwith %}
 
 <main class="tokens-page">
-  <section class="exchanges-section">
+  <section class="exchanges-section my-5 py-3">
     <div class="container">
-      <div class="token-stack-image text-center my-5">
-        <img src="/static/img/ognToken/token-stack.svg" class="mx-auto" />
-      </div>
-      <h2>
-        {{gettext("Origin Tokens (OGN) are currently trading on the following
-        exchanges")}}
-      </h2>
-      <div
-        class="row d-flex flex-column flex-md-row justify-content-around mb-4"
-      >
-        <div class="col-lg-3 col-md-6">
-          <div class="token-exchange">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658"
-              ><img src="/static/img/ognToken/binance.svg"
-            /></a>
-          </div>
+      <h2>{{gettext("OGN is now available on these top exchanges")}}</h2>
+
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-5">
+        <div class="token-exchange feat">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658"
+          >
+            <img src="/static/img/ognToken/binance.svg" />
+          </a>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="token-exchange">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://coinone.co.kr/"
-            >
-              <img src="/static/img/ognToken/coinone.svg" />
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="token-exchange">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.gopax.co.kr/signup?refCode=ORIGIN"
-            >
-              <img src="/static/img/ognToken/gopax.svg" />
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="token-exchange">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://kyberswap.com"
-            >
-              <img src="/static/img/ognToken/kyber.png" />
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="token-exchange">
-            <a
-              class="btn btn-outline-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://coinmarketcap.com/currencies/origin-protocol/markets/"
-              >{{gettext("See more")}}</a
-            >
-          </div>
+        <div class="token-exchange feat">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://coinone.co.kr/"
+          >
+            <img src="/static/img/ognToken/coinone.svg" />
+          </a>
         </div>
       </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-4">
+        <div class="token-exchange">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.mxc.com/trade/pro#OGN_USDT"
+          >
+            <img src="/static/img/ognToken/mxc.svg" />
+          </a>
+        </div>
+        <div class="token-exchange">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://kyber.network/"
+          >
+            <img src="/static/img/ognToken/kyber.svg" />
+          </a>
+        </div>
+        <div class="token-exchange">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="#"
+          >
+            <img src="/static/img/ognToken/gopax.svg" />
+          </a>
+        </div>
+        <div class="token-exchange">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.hotbit.io/exchange?symbol=OGN_USDT"
+          >
+            <img src="/static/img/ognToken/hotbit.svg" />
+          </a>
+        </div>
+        <div class="token-exchange">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.biki.com/trade/OGN_USDT"
+          >
+            <img src="/static/img/ognToken/biki.svg" />
+          </a>
+        </div>
+        <div class="token-exchange">
+          <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://tokocrypto.com/id/dashboard/OGNIDR"
+          >
+            <img src="/static/img/ognToken/tokocrypto.svg" />
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
   <section class="rewards-section blue-section">
