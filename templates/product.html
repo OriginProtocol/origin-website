@@ -14,24 +14,97 @@
   <section class="product-title-section blue-section screen-size-segment d-flex flex-column justify-content-start justify-content-md-center">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-7 d-flex align-items-start align-items-lg-center">
-          <h1 class="title big">{{gettext("Our platform will power peer-to-peer marketplaces everywhere")}}</h1>
+        <div class="col-12 col-md-6 d-flex align-items-start align-items-lg-center">
+          <!-- the &#8209; below is a non breakable hyphen -->
+          <h1 class="title big">{{gettext("Our platform will power peer&#8209;to&#8209;peer commerce everywhere")}}</h1>
+        </div>
+        <div class="col-12 col-md-6 d-flex align-items-center hero-image-holder justify-content-center mb-4 mb-md-0">
+          <img src="/static/img/product/origin-stack.png" srcset="/static/img/product/origin-stack@2x.png 2x, /static/img/product/origin-stack@3x.png 3x" />
         </div>
       </div>
     </div>
   </section>
+  <div class="dshop-section d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+    <h1>{{gettext("Dshop")}}</h1>
+    <img class="" src="/static/img/landing/toodo.png">
+
+    <div class="sub-title mt-5 mt-md-3">{{gettext("A decentralized and open source e-commerce platform that allows anyone to create an online store easily")}}</div>
+    <div class="checked-items d-flex justify-content-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
+      <div class="d-flex checked-item">
+        <img src="/static/img/check.svg">
+        {{gettext("No transaction fees")}}
+      </div>
+      <div class="d-flex checked-item">
+        <img src="/static/img/check.svg">
+        {{gettext("Fully customizeable")}}
+      </div>
+      <div class="d-flex checked-item">
+        <img src="/static/img/check.svg">
+        {{gettext("Supports credit card payments")}}
+      </div>
+      <div class="d-flex checked-item">
+        <img src="/static/img/check.svg">
+        {{gettext("Free to run")}}
+      </div>
+    </div>
+
+    <a
+      href="hhttps://docs.google.com/forms/d/e/1FAIpQLSf04ewVRNyyyPRHKXOioNAHlEe-ayN9cdLPzEmqmNKs8PtbgQ/viewform?usp=sf_link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-primary">
+      {{gettext("Request Free Demo")}}
+    </a>
+    <div class="sub-title mt-5 mt-md-3">{{gettext("Online stores created with Dshop")}}</div>
+    <div class="bottom d-flex justify-content-center align-items-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
+      <img src="/static/img/product/brave-logo.svg"/>
+      <img class="mt-3" src="/static/img/product/origin-swag-logo.svg"/>
+    </div>
+  </div>
+  <!-- Buy and Sell on Origin section -->
+  <!-- origin-marketplace-0.23.16.apk -->
+  <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+    <h1>{{gettext("Buy and sell on Origin")}}</h1>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
+    <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
+      <img class="mw-298 mw-md-568" src="/static/img/landing/origin-marketplace@2x.png">
+      <div class="d-flex flex-column align-items-center align-items-md-start">
+        <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
+        <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
+        {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
+        <div class="d-flex mt-4">
+          <a class="pr-2 py-2" href="{{ universal.IOS_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
+          <a class="pl-2 py-2" href="{{ universal.ANDROID_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
+        </div>
+        {% endif %}
+        {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
+          <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
+        {% endif %}
+        <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
+        <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
+      </div>
+    </div>
+    <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
+    <div class="bottom d-flex justify-content-center align-items-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
+      <img src="/static/img/landing/coinbase-wallet@3x.png"/>
+      <img src="/static/img/landing/imtoken.svg"/>
+      <img src="/static/img/landing/trustwallet.svg"/>
+      <img src="/static/img/landing/metamask.svg"/>
+      <img src="/static/img/landing/atomic.svg"/>
+    </div>
+  </div>
 
   <section class="marketplaces-section white-section">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h1>{{gettext("Apps built on our platform")}}</h1>
+          <h1>{{gettext("Decentralized marketplaces powered by Origin")}}</h1>
           <img src="/static/img/product/shoporigin-laptop@2x.png" />
           <h3>{{gettext("See the Origin Platform in action at shoporigin.com")}}</h3>
           <a href="https://shoporigin.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             {{gettext("Buy and sell today")}}
           </a>
-          <h3>{{gettext("Other apps built on the Origin Platform")}}</h3>
+          <h3>{{gettext("Other marketplaces built on the Origin Platform")}}</h3>
           <div class="marketplace-images">
             <img src="/static/img/product/peerart.svg" />
             <img src="/static/img/product/trips.svg" />
@@ -41,7 +114,7 @@
       </div>
     </div>
   </section>
-  <section class="features-section grey-section">
+ <!-- <section class="features-section grey-section">
     <div class="container pb-4 pb-md-5">
       <div class="row">
         <div class="col-12">
@@ -153,7 +226,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
   <section class="whitepaper-section grey-section">
     <div class="d-flex flex-column">
         <div class="col-12 p-0">
