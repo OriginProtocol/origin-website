@@ -335,6 +335,11 @@ def rewards():
 def swagRewards():
     return render_template('swagStore.html', hide_ogn_banner=True)
 
+@app.route('/reward/stay_home_shop/april_2020', strict_slashes=False)
+@app.route('/<lang_code>/reward/stay_home_shop/april_2020', strict_slashes=False)
+def stayHomeRewards():
+    return render_template('stayHomeStore.html', hide_ogn_banner=True)
+
 @app.route('/reward/extension/march_2020', strict_slashes=False)
 @app.route('/<lang_code>/reward/extension/march_2020', strict_slashes=False)
 def extension_rewardsj():
