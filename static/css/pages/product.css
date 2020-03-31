@@ -26,6 +26,10 @@
   background-color: white;
 }
 
+.dshop-section .bottom {
+  margin-bottom: 80px;
+}
+
 .buy-sell-block {
   background-color: #007cff;
   color: white;
@@ -251,7 +255,7 @@
 }
 
 .milestones-timeline {
-  max-width: 660px;
+  max-width: 680px;
   margin: 3rem auto 5rem auto;
 }
 
@@ -363,15 +367,20 @@
   font-size: 1.125rem;
   font-weight: normal;
   color: #111d28;
+  line-height: 1.2;
 }
 
 .milestones-timeline .milestone .title > span:not(:last-child) {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .product-page .btn {
   width: 310px
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 /* sm + */
@@ -506,8 +515,20 @@
     margin-right: auto;
   }
 
+  .product-page .dshop-image {
+    max-width: 100%;
+  }
+
   .milestones-timeline .milestone .title {
     font-size: 1rem;
+  }
+
+  .product-page .dshop-section .btn {
+    margin-bottom: 15px;
+  }
+
+  .product-page .dshop-section .bottom img.swag {
+    margin-left: 50px;
   }
 }
 
