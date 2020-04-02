@@ -245,6 +245,21 @@ theme_dark=True %} {% endwith %}
     padding: 9px 15px;
   }
 
+  .title.ogn {
+    font-family: Poppins;
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    color: #333333;
+  }
+
+  .title.small {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 500;
+    color: #333333;
+  }
+
   @media (max-width: 730px) {
     .bordered {
       white-space: normal;
@@ -291,22 +306,19 @@ theme_dark=True %} {% endwith %}
   <div class="container d-flex flex-column align-items-center">
     <div class="text1 black first">{{gettext("STAY AT HOME WITH ORIGIN")}}</div>
     <div class="text1 last">{{gettext("Earn OGN for Referring Buyers")}}</div>
-    <div class="bordered">{{gettext("100%% of all sales from this month's campaign will be donated to CEPI to find a vaccine for COVID-19.")}}</div>
-    <div class="mt-3">{{gettext("Many people’s lives have been upended by COVID-19, and with governments and global healthcare systems stretched to their limits, we wanted to do our part for the community.")}}</div>
-    <div class="mt-3">{{gettext("For this month’s Origin Rewards campaign, we have set up a Stay At Home Shop featuring coronavirus-related merchandise.")}}</div>
+    <div class="mt-3">{{gettext("For April’s Origin Rewards campaign, we will be donating 100%% of all proceeds* from the ‘Stay At Home’ Shop to The Coalition for Epidemic Preparedness Innovations (CEPI), who is developing a vaccine for COVID-19.")}}</div>
+    <div class="mt-3">{{gettext("In addition, to thank you for supporting our fundraising efforts, we have committed <b>50,000 OGN</b> to give away to our Origin community!")}}</div>
     <a href="https://www.stayathomeshop.co" target="_blank" rel="noopener noreferrer" class="store-link first">
       {{gettext("Visit the Store")}}
     </a>
-    <div class="mt-3">{{gettext("We will be donating 100%% of all sales* to CEPI (The Coalition for Epidemic Preparedness Innovations), who is developing a vaccine against COVID-19. CEPI is currently working closely with the Bill & Melinda Gates Foundation on their vaccine development programs.")}}</div>
-    <div class="mt-3">{{gettext("As part of this campaign, we have also committed 50,000 OGN to give away to our Origin community.")}}</div>
 
-    <div class="separator"></div>
-    <img class="shirts" src="/static/img/rewards/teeshirts.svg"/>
+    <img class="shirts mt-4 mb-3" src="/static/img/rewards/teeshirts.svg"/>
+
     <div class="grey-box">
-      <div class="title left mb-3">{{gettext("Share with Friends and Earn OGN!")}}</div>
-      <div class="left mb-3">{{gettext("For every friend who used your unique invite link and shops at the Let’s Fight COVID-19 Store, we will give you 1 OGN for every $2 spent by your friend.")}}</div>
-      <div class="left mb-3">{{gettext("Please note that you will need an existing Origin Rewards account to participate in this program and receive your free OGN.")}}</div>
-      <div class="left mb-5">{{gettext("We have committed a total of 50,000 OGN as a way to drive donations and reach our goal of raising $100,000 USD.")}}</div>
+      <div class="title left mb-3">{{gettext("Earn OGN with Origin Affiliates")}}</div>
+      <div class="left mb-3">{{gettext("Join the Affiliate program and earn 1 OGN for every $2 spent by friends who make a purchase at the ‘Stay At Home’ Shop using your unique invite link!")}}</div>
+      <div class="left mb-3">{{gettext("You will need an existing Origin Rewards account to participate in this program and receive your free OGN.")}}</div>
+      <div class="left mb-5">{{gettext("Head over to the ‘Stay At Home’ Shop and start earning OGN now.")}}</div>
       <a href="https://www.stayathomeshop.co" target="_blank" rel="noopener noreferrer" class="store-link">
         {{gettext("Visit the Store")}}
       </a>
@@ -318,7 +330,6 @@ theme_dark=True %} {% endwith %}
     <div class="footer-title terms">{{gettext("Terms and Conditions")}}</div>
     <div class="footer-text terms">{{gettext("Please note that Origin Rewards is currently available in most countries in the world, except countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result.")}}</div>
     <div class="footer-text terms">{{gettext("Tokens earned from both completed purchases and commissions in April will be distributed after the first week of May (subject to terms and conditions).")}}</div>
-    <div class="footer-text terms">{{gettext("Shop at the Let’s Fight COVID-19 Store today and earn OGN now!")}}</div>
     <div class="footer-text terms">{{gettext("*We have committed a total of USD $100,000 for donation to CEPI")}}</div>
   </div>
   <div class="bottom-coins"></div>
