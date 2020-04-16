@@ -22,6 +22,14 @@
   max-height: 22px;
 }
 
+.buy-sell-block .btn-dark {
+  width: 330px;
+  font-size: 1rem;
+  background-color: #061d2a;
+  padding: 1rem;
+  margin: 3rem 0 5rem 0;
+}
+
 .dshop-section {
   background-color: white;
 }
@@ -316,6 +324,14 @@
   right: unset;
 }
 
+.milestones-timeline .milestone.completed.recent:after {
+  background-color: #00db8d;
+}
+
+.milestones-timeline .milestone.completed.recent + .milestone.future:before {
+  background-color: #00db8d;
+}
+
 .milestones-timeline .milestone .step {
   background-color: #007cff;
   border-radius: 50%;
@@ -353,6 +369,18 @@
   background-color: #bdcbd5;
 }
 
+.milestones-timeline .milestone.completed.recent + .milestone.future .step {
+  background-color: #00db8d;
+}
+
+.milestones-timeline .milestone.completed.recent + .milestone.future .timestamp {
+  color: #00db8d;
+}
+
+.milestones-timeline .milestone.completed.recent + .milestone.future .step:after {
+  background-color: #00db8d;
+}
+
 .milestones-timeline .milestone .timestamp {
   font-size: 1.125rem;
   color: #007cff;
@@ -381,6 +409,21 @@
 
 .nowrap {
   white-space: nowrap;
+}
+
+.ext-availability img {
+  height: 25px;
+  width: 25px;
+  margin: 0 0 2rem 10px;
+  object-fit: contain;
+}
+
+.white-section h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  color: #061d2a;
 }
 
 /* sm + */
