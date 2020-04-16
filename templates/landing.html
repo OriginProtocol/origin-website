@@ -61,33 +61,13 @@
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->
   <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Buy and sell on Origin")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
+    <h1>{{gettext("Origin Products")}}</h1>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Origin’s suite of products is revolutionizing how people shop and conduct business online. Buy and sell on our marketplace app, create a decentralized e-commerce store, or stake OGN for great deals.")}}</div>
     <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="mw-298 mw-md-568" src="/static/img/landing/origin-marketplace@2x.png">
-      <div class="d-flex flex-column align-items-center align-items-md-start">
-        <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
-        <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
-        {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
-        <div class="d-flex mt-4">
-          <a class="pr-2 py-2" href="{{ universal.IOS_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
-          <a class="pl-2 py-2" href="{{ universal.ANDROID_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
-        </div>
-        {% endif %}
-        {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
-          <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
-        {% endif %}
-        <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
-        <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
-      </div>
+      <img src="/static/img/product/origin-products.png" srcset="/static/img/product/origin-products@2x.png 2x, /static/img/product/origin-products@3x.png 3x" >
     </div>
-    <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
-    <div class="bottom d-flex justify-content-center align-items-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
-      <img src="/static/img/landing/coinbase-wallet@3x.png"/>
-      <img src="/static/img/landing/imtoken.svg"/>
-      <img src="/static/img/landing/trustwallet.svg"/>
-      <img src="/static/img/landing/metamask.svg"/>
-      <img src="/static/img/landing/atomic.svg"/>
+    <div class="my-3 my-md-3">
+      <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-dark btn-inverse">Check out our products</a>
     </div>
   </div>
   <!-- The sharing economy section -->
