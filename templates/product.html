@@ -32,11 +32,9 @@
       <h3 class="sub-title mt-3">
         {{gettext("Stake Origin Tokens (OGN) and get up to 20%% off products from Amazon")}}
       </h3>
-      <div class="actions">
-        <a rel="noopener noreferrer" target="_blank" href="https://origindeals.com" class="btn btn-primary">
-          {{gettext("Try Origin Deals now")}}
-        </a>
-      </div>
+      <a rel="noopener noreferrer" target="_blank" href="https://origindeals.com" class="btn btn-primary">
+        {{gettext("Try Origin Deals now")}}
+      </a>
     </div>
   </section>
 
@@ -59,11 +57,9 @@
           <img src="/static/img/brave.svg" />
         </a>
       </div>
-      <div class="actions">
-        <a href="{{ url_for('browser_extension', lang_code=CURRENT_LANGUAGE) }}" id="installExtensionLink" class="btn btn-dark btn-inverse">
-          {{gettext("Install the Extension")}}
-        </a>
-      </div>
+      <a href="{{ url_for('browser_extension', lang_code=CURRENT_LANGUAGE) }}" id="installExtensionLink" class="btn btn-dark btn-inverse">
+        {{gettext("Install the Extension")}}
+      </a>
     </div>
   </section>
 
