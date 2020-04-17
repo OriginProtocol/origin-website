@@ -511,6 +511,13 @@
     margin-left: 0px;
     padding-left: 50px;
   }
+  
+  .buy-sell-block .prod-image,
+  .od-section .od-image,
+  .od-ext-section .od-ext-image {
+    max-width: 100%;
+    width: 100%;
+  }
 } 
 
 @media (max-width: 575px) {
@@ -572,6 +579,17 @@
 
   .product-page .dshop-section .bottom img.swag {
     margin-left: 50px;
+  }
+
+  .btn.btn-dark.btn-inverse {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product-page .od-section .btn, 
+  .product-page .od-ext-section .btn {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
