@@ -1,5 +1,5 @@
 function toggleElementsState(elements, disabled) {
-  Array.from(elements).forEach(function(el) {
+  Array.from(elements).forEach(function (el) {
     if (disabled) {
       el.setAttribute("disabled", true);
       el.disabled = true;
@@ -26,7 +26,7 @@ function addToMailingList(event) {
   $.post(
     "/mailing-list/join",
     inputData,
-    function(data) {
+    function (data) {
       if (data.success && isTokensPage) {
         var presaleMailingList = document.getElementById(
           "presale-mailing-list"
@@ -77,7 +77,7 @@ function presaleFormSubmit() {
   $.post(
     "/presale/join",
     inputData,
-    function(data) {
+    function (data) {
       if (data.success) {
         var presaleMailingList = document.getElementById(
           "presale-mailing-list"
@@ -104,7 +104,7 @@ function partnerFormSubmit(event) {
   $.post(
     "/partners/interest",
     $("form").serialize(),
-    function(data) {
+    function (data) {
       if (data == "OK") {
         fbq("track", "Lead");
         window.location = "/";
@@ -115,8 +115,8 @@ function partnerFormSubmit(event) {
   );
 }
 
-$(function() {
-  $(".dropdown-menu a").click(function() {
+$(function () {
+  $(".dropdown-menu a").click(function () {
     $("input[name='desired_allocation_currency']").val($(this).text());
     $("#desired_allocation_currency").text($(this).text());
     $("#desired_allocation_currency").val($(this).text());
@@ -124,9 +124,9 @@ $(function() {
 });
 
 // mobile navbar
-$(function() {
+$(function () {
   // toggle button icons
-  $(".navbar-toggler").on("click", function() {
+  $(".navbar-toggler").on("click", function () {
     var target = $(this);
     var other = $(".navbar-toggler").not(this);
 
@@ -146,7 +146,7 @@ $(function() {
   });
 
   // prevent simulataneous navbar menus
-  $(".navbar-origin .navbar-collapse").on("show.bs.collapse", function() {
+  $(".navbar-origin .navbar-collapse").on("show.bs.collapse", function () {
     // ensure that menu is not hidden
     $(this).removeClass("obscured");
     // hide immediately to disguise 'hide' transition
@@ -160,7 +160,7 @@ $(function() {
   });
 
   // ensure that hidden menus can be shown
-  $(".navbar-origin .navbar-collapse").on("hidden.bs.collapse", function() {
+  $(".navbar-origin .navbar-collapse").on("hidden.bs.collapse", function () {
     $(".navbar-origin .navbar-collapse")
       .not(".show")
       .removeClass("obscured");
@@ -168,8 +168,8 @@ $(function() {
 });
 
 // partners logos
-$(function() {
-  $(".collapse.logos").on("hidden.bs.collapse", function() {
+$(function () {
+  $(".collapse.logos").on("hidden.bs.collapse", function () {
     $(".more")
       .addClass("d-block")
       .removeClass("d-none");
@@ -178,7 +178,7 @@ $(function() {
       .removeClass("d-block");
   });
 
-  $(".collapse.logos").on("shown.bs.collapse", function() {
+  $(".collapse.logos").on("shown.bs.collapse", function () {
     $(".more")
       .addClass("d-none")
       .removeClass("d-block");
@@ -194,7 +194,7 @@ $('[data-toggle="tooltip"]').tooltip({
 });
 
 // REDESIGN 2019 START
-$(function() {
+$(function () {
   function createElement(tag, props, children) {
     var namespace;
 
@@ -202,9 +202,9 @@ $(function() {
       namespace = "http://www.w3.org/2000/svg";
     }
 
-    var element = namespace
-      ? document.createElementNS(namespace, tag)
-      : document.createElement(tag);
+    var element = namespace ?
+      document.createElementNS(namespace, tag) :
+      document.createElement(tag);
 
     var attributes = Object.keys(props);
     for (var i = 0; i < attributes.length; i++) {
@@ -292,16 +292,16 @@ $(function() {
 
     var fullScreenPlayerOpts = {};
     var currentLang = document.body.parentElement.getAttribute("lang");
-    var currentVideoSource = videoSources[currentLang]
-      ? videoSources[currentLang]
-      : videoSources.default;
+    var currentVideoSource = videoSources[currentLang] ?
+      videoSources[currentLang] :
+      videoSources.default;
 
     var videoSource = currentVideoSource.videoSource;
     var backgroundVideoSource =
       currentVideoSource.alternateBackgroundSource || videoSource;
-    videoSource = isChineseLanguage
-      ? currentVideoSource.videoSourceYouku
-      : videoSource;
+    videoSource = isChineseLanguage ?
+      currentVideoSource.videoSourceYouku :
+      videoSource;
 
     var aspectRatio = currentVideoSource.aspectRatio;
     var startTime = currentVideoSource.startTime || 0;
@@ -323,9 +323,9 @@ $(function() {
     let videoPageVideoSourceEn;
     if (!bgElementIsVideo) {
       const videoElement = $("#video-page-video");
-      videoPageVideoSource = isChineseLanguage
-        ? videoElement.attr("data-video-source-zh")
-        : videoElement.attr("data-video-source");
+      videoPageVideoSource = isChineseLanguage ?
+        videoElement.attr("data-video-source-zh") :
+        videoElement.attr("data-video-source");
       videoPageVideoSourceEn = videoElement.attr("data-video-source");
     }
 
@@ -339,12 +339,14 @@ $(function() {
       });
       let posterImgSrc = videoPageVideoSourceEn;
       if (bgElementIsVideo) {
-        posterImgSrc = currentVideoSource.posterImageOverride
-          ? currentVideoSource.posterImageOverride
-          : currentVideoSource.videoSource;
+        posterImgSrc = currentVideoSource.posterImageOverride ?
+          currentVideoSource.posterImageOverride :
+          currentVideoSource.videoSource;
       }
       posterImgSrc = `/static/img/videos/${posterImgSrc}.jpg`;
-      posterImage = createElement("img", { src: posterImgSrc });
+      posterImage = createElement("img", {
+        src: posterImgSrc
+      });
       posterImageHolder.appendChild(posterRelativeHolder);
       posterRelativeHolder.appendChild(posterImage);
     }
@@ -413,10 +415,10 @@ $(function() {
       });
 
       // // show full screen button with slight delay
-      setTimeout(function() {
+      setTimeout(function () {
         exitFullScreenButton.setAttribute("class", "");
       }, 3000);
-      $(exitFullScreenButton).click(function() {
+      $(exitFullScreenButton).click(function () {
         closeFullScreen();
       });
 
@@ -461,6 +463,7 @@ $(function() {
     }
 
     var isFullScreen = false;
+
     function closeFullScreen() {
       if (!isFullScreen) {
         return;
@@ -518,8 +521,8 @@ $(function() {
         return;
       }
       var flag = false;
-      promise.then(function() {
-        el.onfullscreenchange = function() {
+      promise.then(function () {
+        el.onfullscreenchange = function () {
           if (!flag) {
             // Hack to ignore the first fullscreen change event
             // We cannot differentiate fullscreen enter/exit otherwise
@@ -531,7 +534,7 @@ $(function() {
       });
     }
 
-    $(document).keyup(function(e) {
+    $(document).keyup(function (e) {
       if (e.key === "Escape") {
         closeFullScreen();
       }
@@ -557,7 +560,7 @@ $(function() {
     window.onresize = callHandleVideoResize;
     callHandleVideoResize();
 
-    $("#" + videoButtonId).click(function() {
+    $("#" + videoButtonId).click(function () {
       if (fullYoutubePlayer) {
         fullYoutubePlayer.play();
       }
@@ -703,7 +706,7 @@ $(function() {
   });
 });
 
-$(function() {
+$(function () {
   var socialSection = document.getElementById("social-media-list");
   var socialSectionRegionSpecific = document.getElementById(
     "social-media-list-country-specific"
@@ -711,8 +714,7 @@ $(function() {
 
   if (!socialSection || !socialSectionRegionSpecific) return;
 
-  var hardcodedStats = [
-    {
+  var hardcodedStats = [{
       name: "Discord",
       subscribed_count: 4240
     },
@@ -765,6 +767,12 @@ $(function() {
       img: "/static/img/about/russia-telegram.svg",
       countLabel: "members",
       link: "https://t.me/originprotocolrussia",
+      regionSpecific: true
+    },
+    "Telegram (Spanish)": {
+      img: "/static/img/about/spanish-telegram.svg",
+      countLabel: "members",
+      link: "https://t.me/originprotocolspanish",
       regionSpecific: true
     },
     Wechat: {
@@ -847,7 +855,7 @@ $(function() {
 
   $.ajax({
     url: "/social-stats"
-  }).done(function(data) {
+  }).done(function (data) {
     if (!data || !data.stats) return;
 
     data.stats = data.stats.concat(hardcodedStats);
@@ -862,26 +870,26 @@ $(function() {
         appendToElement.appendChild(
           createElementFromHTML(
             '<a class="d-flex flex-column social-box align-items-center" data-toggle="tooltip" target="_blank"' +
-              (statMetadata.link
-                ? 'href="' + statMetadata.link + '"'
-                : 'href="#"') +
-              (statMetadata.qr
-                ? 'data-container="body" data-original-title="<img src=\'' +
-                  statMetadata.qr +
-                  "' />\""
-                : ' title="' + stat.name + '"') +
-              ">" +
-              '<img src="' +
-              statMetadata.img +
-              '"/>' +
-              '<div class="mt-auto">' +
-              (stat.subscribed_count
-                ? formatNumber(stat.subscribed_count) +
-                  " " +
-                  statMetadata.countLabel
-                : "") +
-              "</div>" +
-              "</a>"
+            (statMetadata.link ?
+              'href="' + statMetadata.link + '"' :
+              'href="#"') +
+            (statMetadata.qr ?
+              'data-container="body" data-original-title="<img src=\'' +
+              statMetadata.qr +
+              "' />\"" :
+              ' title="' + stat.name + '"') +
+            ">" +
+            '<img src="' +
+            statMetadata.img +
+            '"/>' +
+            '<div class="mt-auto">' +
+            (stat.subscribed_count ?
+              formatNumber(stat.subscribed_count) +
+              " " +
+              statMetadata.countLabel :
+              "") +
+            "</div>" +
+            "</a>"
           )
         );
       });
@@ -898,7 +906,7 @@ $(function() {
 });
 
 // To set defualt language
-(function() {
+(function () {
   var langRegExp = /^\/[a-z]{2,3}(_[a-z]{4})?(\/|$)/i;
   if (!langRegExp.test(window.location.pathname)) {
     var currentLang = document.body.parentElement.getAttribute("lang");
