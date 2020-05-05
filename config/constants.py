@@ -61,6 +61,7 @@ APK_URL = dotenv.get('APK_URL')
 
 FIREFOX_EXTENSION_URL = dotenv.get('FIREFOX_EXTENSION_URL')
 CHROME_EXTENSION_URL = dotenv.get('CHROME_EXTENSION_URL')
+DSHOP_DEMO_FORM = dotenv.get('DSHOP_DEMO_FORM')
 
 # Language option constants
 

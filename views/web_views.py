@@ -467,6 +467,11 @@ def whitepaperv2():
 def browser_extension():
     return render_template('browser-extension.html', hide_ogn_banner=False)
 
+@app.route('/dshop', strict_slashes=False)
+@app.route('/<lang_code>/dshop', strict_slashes=False)
+def dshop():
+    return render_template('dshop.html', hide_ogn_banner=True, )
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -493,7 +498,8 @@ def assets_all_styles():
         "static/css/pages/developers.css",
         "static/css/pages/presale.css",
         "static/css/pages/whitepaper.css",
-        "static/css/pages/browser-extension.css"
+        "static/css/pages/browser-extension.css",
+        "static/css/pages/dshop.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)

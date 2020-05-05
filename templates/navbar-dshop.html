@@ -1,0 +1,34 @@
+<div class="navbar-holder dshop">
+  <nav class="navbar navbar-expand-lg navbar-origin navbar-dark">
+    <div class="mobile-background d-lg-none"></div>
+    <div class="container">
+      <div class="brand-container">
+        <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
+        <div class="logo-container">
+          <img src="/static/img/dshop/dshop-landing-page.svg"
+            class="origin-logo"
+            alt="Origin Protocol DShop logo">
+          </div>
+        </a>
+      </div>
+      {% if 'mobile' not in request.path %}
+          <ul class="nav navbar-nav ml-auto d-none d-md-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">{{ gettext("Features & Benefits") }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#customers">{{ gettext("Our Customers") }}</a>
+            </li>
+            <li class="nav-item">
+              <a 
+                class="outline-button" 
+                href="{{ universal.DSHOP_DEMO_FORM }}"
+                target="_blank"
+                rel="noreferrer noopener"
+              >{{ gettext("Request a demo") }}</a>
+            </li>
+          </ul>
+      {% endif %}
+    </div>
+  </nav>
+</div>
