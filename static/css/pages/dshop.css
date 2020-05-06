@@ -189,6 +189,10 @@
   margin: 1rem 0 0 0;
 }
 
+.dshop .customers h3 {
+  margin-top: -2.5rem;
+}
+
 .dshop .customer-logos {
   display: flex;
   align-items: center;
@@ -217,7 +221,7 @@
 .dshop .features-list {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -315,6 +319,8 @@
     width: 100%;
     padding: 1.25rem;
     text-align: left;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .dshop .feature-box img {
@@ -331,5 +337,9 @@
 
   .dshop .feature-box .sub-title {
     font-size: 0.875rem;
+  }
+
+  .dshop .customers h3 {
+    margin-top: 0.5rem;
   }
 }
