@@ -23,7 +23,7 @@
     <div id="landing-video-poster" class="video-overlay-poster"></div>
     <div class="video-overlay-gradient"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("The blockchain platform for building decentralized marketplaces")}}</h1>
+      <h1 class="video-title">{{gettext("Blockchain-powered commerce is the future")}}</h1>
       <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
@@ -61,105 +61,67 @@
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->
   <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Buy and sell on Origin")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
+    <h1>{{gettext("Origin Products")}}</h1>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Origin’s suite of products is revolutionizing how people shop and conduct business online. Buy and sell on our marketplace app, create a decentralized e-commerce store, or stake OGN for great deals.")}}</div>
     <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="mw-298 mw-md-568" src="/static/img/landing/origin-marketplace@2x.png">
-      <div class="d-flex flex-column align-items-center align-items-md-start">
-        <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
-        <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
-        {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
-        <div class="d-flex mt-4">
-          <a class="pr-2 py-2" href="{{ universal.IOS_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
-          <a class="pl-2 py-2" href="{{ universal.ANDROID_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
-        </div>
-        {% endif %}
-        {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
-          <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
-        {% endif %}
-        <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
-        <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
-      </div>
+      <img class="prod-image" src="/static/img/product/origin-products.png" srcset="/static/img/product/origin-products@2x.png 2x, /static/img/product/origin-products@3x.png 3x" >
     </div>
-    <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
-    <div class="bottom d-flex justify-content-center align-items-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
-      <img src="/static/img/landing/coinbase-wallet@3x.png"/>
-      <img src="/static/img/landing/imtoken.svg"/>
-      <img class="big" src="/static/img/landing/trustwallet.svg"/>
-      <img class="big" src="/static/img/landing/metamask.svg"/>
-    </div>
+    <a class="mb-5 mt-0 mt-md-3 btn btn-dark btn-inverse" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">Check out our products</a>
   </div>
   <!-- The sharing economy section -->
   <div class="sharing-economy">
     <div class="container d-flex flex-column justify-content-center align-items-center">
-      <h1 class="segment-title ml-4 mr-4">{{gettext("The sharing economy is a massive opportunity waiting to be disrupted")}}</h1>
-      <div class="segment-subtitle title ml-3 mr-3">{{gettext("Gross bookings are expected to reach $335B by 2025")}}</div>
-      <div class="d-flex flex-column-reverse flex-md-row mt-3 mt-md-5 pt-3 align-items-center">
-        <img class="pies mt-5 mt-md-0 pt-3 pt-md-0" src="/static/img/landing/pies.svg"/>
-        <div class="d-flex flex-row flex-md-column align-items-start align-items-md-center">
-          <div class="d-flex flex-row flex-md-column justify-content-center">
-            <div class="circular-stats purple d-flex flex-column justify-content-stat justify-content-md-center align-items-start mr-md-4 mb-0 mb-md-3 px-3 px-md-0">
-              <div class="percentage">20<span class="small">%</span></div>
-              <div class="text mb-3">{{gettext("Percentage of total value of a booking Airbnb charged guests")}}</div>
-              <a class="mt-auto" href="">www.epi.org</a>
+      <h1 class="segment-title ml-4 mr-4">{{gettext("There is a massive opportunity for blockchain-powered commerce")}}</h1>
+      <div class="segment-subtitle title ml-3 mr-3">{{gettext("E-commerce is projected to be one of the fastest growing verticals in the blockchain industry during the next few years")}}</div>
+      <div class="d-flex flex-column mt-1 mt-md-5 pt-md-4 align-items-center">
+        <img class="pies mt-5 mt-md-0 pt-3 pt-md-0" src="/static/img/landing/graph.svg"/>
+        <div class="d-flex align-items-start align-items-md-center">
+          <div class="d-flex flex-column flex-md-row justify-content-center circular-stats-holder">
+            <div class="circular-stats blue d-flex flex-column justify-content-stat justify-content-md-center align-items-start">
+              <div class="percentage d-flex justify-content-center w-100">$4.9T</div>
+              <div class="text mb-3 w-100">{{gettext("Global e-commerce sales by 2021")}}</div>
             </div>
-            <div class="circular-stats blue d-flex flex-column justify-content-stat justify-content-md-center align-items-start mt-0 mt-md-3 px-3 px-md-0">
-              <div class="percentage">33<span class="small">%</span></div>
-              <div class="text mb-3">{{gettext("Uber's average take per ride")}}</div>
-              <a class="mt-auto" href="">www.skift.org</a>
+            <div class="circular-stats purple d-flex flex-column justify-content-stat justify-content-md-center align-items-start">
+              <div class="percentage d-flex justify-content-center w-100">$23.3B</div>
+              <div class="text mb-3 w-100">{{gettext("Global blockchain technology revenues by 2023")}}</div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="percentages d-flex justify-content-start justify-content-md-center flex-wrap">
-        <div class="d-flex flex-column percentages-holder align-items-start align-items-md-center mb-5 mb-md-0 px-2 p-md-0">
-          <div class="percentage mb-0">70<span class="small_percent">%</span></div>
-          <div class="subtitle1 mb-auto">{{gettext("Drivers that rated Uber under 3 stars out of 5 for earnings satisfaction")}}</div>
-        </div>
-        <div class="d-flex flex-column percentages-holder align-items-start align-items-md-center mb-5 mb-md-0 px-2 p-md-0">
-          <div class="percentage mb-0">30<span class="small_percent">%</span></div>
-          <div class="subtitle1 mb-auto">{{gettext("Uber driver churn by quarter")}}</div>
-        </div>
-        <div class="d-flex flex-column percentages-holder align-items-start align-items-md-center mb-5 mb-md-0 px-2 p-md-0">
-          <div class="percentage mb-0">80<span class="small_percent">%</span></div>
-          <div class="subtitle1 mb-auto">{{gettext("Airbnb Japan home-share listings removed in 2018")}}</div>
-          <a target="_blank" href="https://asia.nikkei.com/Spotlight/Most-read-in-2018/Airbnb-removes-80-of-Japan-home-share-listings">asia.nikkei.com</a>
         </div>
       </div>
     </div>
   </div>
   <!-- Decentralised marketplaces inevitable -->
   <div class="decentralised-marketplaces d-flex flex-column justify-content-center align-items-center">
-    <h1 class="segment-title ml-4 mr-4">{{gettext("Decentralized marketplaces are inevitable")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("For the first time in history, the blockchain enables buyers and sellers to securely meet and transact without any middlemen.")}}</div>
+    <h1 class="segment-title ml-4 mr-4">{{gettext("Blockchain-powered commerce is the future")}}</h1>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure")}}</div>
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
           <img class="mw-200" src="/static/img/landing/lower-fees@2x.jpg"/>
         </div>
-        <div class="tile-name">{{gettext("Lower Fees")}}</div>
-        <div class="tile-text">{{gettext("Buyers and sellers share 20-30%% in savings when middlemen are removed.")}}</div>
+        <div class="tile-name">{{gettext("Lower fees")}}</div>
+        <div class="tile-text">{{gettext("Buyers and sellers share 20-30%% in savings when middlemen are removed")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
           <img class="mw-200" src="/static/img/landing/better-incentives@2x.jpg"/>
         </div>
-        <div class="tile-name">{{gettext("Better Incentives")}}</div>
-        <div class="tile-text">{{gettext("Everyone can own a stake in the network by contributing to its growth.")}}</div>
+        <div class="tile-name">{{gettext("Better incentives")}}</div>
+        <div class="tile-text">{{gettext("Everyone can own a stake in the network by contributing to its growth")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
           <img class="mw-200" src="/static/img/landing/increased-access@2x.jpg"/>
         </div>
-        <div class="tile-name">{{gettext("Increased Access")}}</div>
-        <div class="tile-text">{{gettext("2 billion unbanked people can access new markets globally.")}}</div>
+        <div class="tile-name">{{gettext("Increased access")}}</div>
+        <div class="tile-text">{{gettext("2 billion unbanked people can access new markets globally")}}</div>
       </div>
       <div class="d-flex flex-column tile align-items-center mb-5 mb-md-0">
         <div class="image-holder d-flex align-items-center justify-content-center">
           <img class="mw-200" src="/static/img/landing/more-resilience@2x.jpg"/>
         </div>
-        <div class="tile-name">{{gettext("More Resilience")}}</div>
-        <div class="tile-text">{{gettext("Decentralized marketplaces can’t be banned or shut down.")}}</div>
+        <div class="tile-name">{{gettext("More resilience")}}</div>
+        <div class="tile-text">{{gettext("Blockchain-powered commerce can't be banned or shut down")}}</div>
       </div>
     </div>
   </div>

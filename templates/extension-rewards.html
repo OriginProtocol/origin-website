@@ -1,0 +1,216 @@
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - March Rewards")
+}}{% endblock %} {% block meta_description %}{{ gettext("Origin Protocol enables
+true peer-to-peer commerce.") }}{% endblock %} {% block content %} {% with
+theme_dark=True %} {% endwith %}
+
+{% block extra_styles %}
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+<style type="text/css">
+  body {
+    background: #007fff;
+    background-image: url('/static/img/rewards/rays.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 150%;
+    color: white;
+    font-family: "Lato";
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 1.38;
+    text-align: center;
+  }
+
+  .rewards-header {
+    max-width: 150%;
+  }
+
+  .text1 {
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .container {
+    padding: 0px 20px;
+    max-width: 740px
+  }
+
+  .hero-holder {
+    overflow: hidden;
+  }
+  
+  .hero-holder .title {
+    margin-top: 0px;
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .download-link {
+    height: 50px;
+    border-radius: 25px;
+    padding: 10px 40px;
+    background-color: #121d28;
+    margin-top: 45px;
+    color: white;
+  }
+
+  .download-link:hover {
+    color: white;
+    background-color: #323d48;
+  }
+
+  .coins {
+    margin-top: 60px;
+  }
+
+  .ogn-amount {
+    font-family: "Poppins";
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .ogn-amount-sub {
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.04;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .box {
+    max-width: 604px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 5px 0 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px white;
+    background-color: white;
+    padding: 30px;
+    color: black;
+    font-family: "Lato";
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: left;
+  }
+
+  .box hr {
+    width: 100%;
+    margin: 20px 20px;
+    height: 1px;
+    background-color: #e1e1e1;
+    border: 0px;
+  }
+
+  .box li {
+    margin-bottom: 10px;
+  }
+
+  .blue {
+    color: #007fff;
+  }
+
+  .box .item {
+    width: 100%;
+  }
+
+  .box .small {
+    font-size: 21px;
+    font-weight: normal
+  }
+
+  .footer-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .bottom-coins {
+    background-image: url('/static/img/rewards/ogn.svg');
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 150px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .rewards-header {
+      max-width: 100%;
+    }
+
+    body {
+      background-size: 100%;
+    }
+  }
+</style>
+{% endblock %}
+
+<main class="d-flex flex-column align-items-center">
+  <div class="hero-holder d-flex flex-column align-items-center">
+    <img class="rewards-header" src="/static/img/rewards/header-graphic-extension-rewards.svg"/>
+  </div>
+  <div class="container d-flex flex-column align-items-center">
+    <div class="text1">{{gettext("Download and use the Origin Browser Extension to Earn 15 OGN")}}</div>
+    <div class="mt-3">{{gettext("For this month’s Origin Rewards campaign, it’s all about our Origin Browser Extension. To celebrate the launch we have committed a total of 150,000 OGN to give away to our Origin community!")}}</div>
+    <img class="coins" src="/static/img/rewards/ogn-pile.svg"/>
+    <div class="ogn-amount">150,000 OGN</div>
+    <div class="ogn-amount-sub">{{gettext("Total Reward Pool")}}</div>
+    <div class="row my-4">
+      <div class="col my-5">
+	<img src="/static/img/chrome.svg" />
+	<div class="my-4">
+	  <strong>{{gettext("Origin Chrome Extension")}}</strong>
+	</div>
+	<a href="{{ universal.CHROME_EXTENSION_URL }}" class="download-link" target=_"blank">
+	  {{gettext("Download")}}
+	</a>
+      </div>
+      <div class="col my-5">
+	<img src="/static/img/firefox.svg" />
+	<div class="my-4">
+	  <strong>{{gettext("Origin Firefox Extension")}}</strong>
+	</div>
+	<a href="{{ universal.FIREFOX_EXTENSION_URL }}" class="download-link" target="_blank">
+	  {{gettext("Download")}}
+	</a>
+      </div>
+      <div class="col my-5">
+	<img src="/static/img/brave.svg" />
+	<div class="my-4">
+	  <strong>{{gettext("Origin Brave Extension")}}</strong>
+	</div>
+	<a href="{{ universal.CHROME_EXTENSION_URL }}" class="download-link" target="_blank">
+	  {{gettext("Download")}}
+	</a>
+      </div>
+    </div>
+    <div class="box d-flex flex-column align-items-center">
+      <div class="d-flex justify-content-between my-3 item">
+        <strong>{{gettext("Rewards Details")}}</strong>
+      </div>
+      <ul>
+	<li>{{gettext("available on Chrome, Firefox and Brave")}}</li>
+	<li>{{gettext("account must have four profile verifications on shoporigin.com")}}</li>
+	<li>{{gettext("extension must still be installed at the end of the month")}}</li>
+	<li>{{gettext("extension must be installed in a browser that is used throughout the month")}}</li>
+	<li>{{gettext("rewards is contingent on review of fraud and abuse")}}</li>
+	<li>{{gettext("read the")}} <a href="https://www.originprotocol.com/en/privacy/extension" target="_blank">{{gettext("Privacy Policy")}}</a></li>
+      </ul>
+    </div>
+    <div class="footer-title">{{gettext("Terms and Conditions")}}</div>
+    <div class="footer-text">{{gettext("Please note that Origin Rewards is currently available in most countries in the world. One notable exception is countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result.")}}</div>
+    <div class="footer-text">{{gettext("Tokens earned in March will be distributed after the first week of April (subject to terms and conditions).")}}</div>
+  </div>
+  <div class="bottom-coins"></div>
+</main>
+
+{% endblock %}

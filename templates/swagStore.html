@@ -1,0 +1,210 @@
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - February Rewards")
+}}{% endblock %} {% block meta_description %}{{ gettext("Origin Protocol enables
+true peer-to-peer commerce.") }}{% endblock %} {% block content %} {% with
+theme_dark=True %} {% endwith %}
+
+{% block extra_styles %}
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+<style type="text/css">
+  body {
+    background: #007fff;
+    background-image: url('/static/img/rewards/rays.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: white;
+    font-family: "Lato";
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 1.38;
+    text-align: center;
+  }
+  
+  .rewards-header {
+    max-width: 150%;
+  }
+
+  .text1 {
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .container {
+    padding: 0px 20px;
+    max-width: 740px
+  }
+
+  .hero-holder .title {
+    margin-top: 0px;
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .store-link {
+    height: 50px;
+    border-radius: 25px;
+    padding: 10px 40px;
+    background-color: #121d28;
+    margin-top: 45px;
+    color: white;
+  }
+
+  .store-link:hover {
+    color: white;
+    background-color: #323d48;
+  }
+
+  .coins {
+    margin-top: 60px;
+  }
+
+  .ogn-amount {
+    font-family: "Poppins";
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 0.5;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .ogn-amount-sub {
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.04;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .box {
+    max-width: 604px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 5px 0 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px white;
+    background-color: white;
+    padding: 30px;
+    color: black;
+    font-family: "Lato";
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+  .box hr {
+    width: 100%;
+    margin: 20px 20px;
+    height: 1px;
+    background-color: #e1e1e1;
+    border: 0px;
+  }
+
+  .blue {
+    color: #007fff;
+  }
+
+  .box .item {
+    width: 100%;
+  }
+
+  .box .small {
+    font-size: 21px;
+    font-weight: normal
+  }
+
+  .footer-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .bottom-coins {
+    background-image: url('/static/img/rewards/ogn.svg');
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 150px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .rewards-header {
+      max-width: 100%;
+    }
+
+    .hero-holder .title {
+      margin-top: -81px;
+    }
+  }
+</style>
+{% endblock %}
+
+<main class="swag-store d-flex flex-column align-items-center">
+  <div class="hero-holder d-flex flex-column align-items-center">
+    <img class="rewards-header" src="/static/img/rewards/header-graphic_rewards.svg"/>
+    <div class="title">{{gettext("February 2020")}}</div>
+  </div>
+  <div class="container d-flex flex-column align-items-center">
+    <div class="text1">{{gettext("Shop at the Origin Swag Store and Earn OGN")}}</div>
+    <div class="mt-3">{{gettext("For this month’s Origin Rewards campaign, it’s all about our Origin Swag Store. To celebrate the launch and our recent OGN listing on Binance, we have committed a total of 15,000 OGN to give away to our Origin community!")}}</div>
+    <a href="https://www.originswag.com/" class="store-link">
+      {{gettext("Visit Origin Swag Store")}}
+    </a>
+    <img class="coins" src="/static/img/rewards/ogn-pile.svg"/>
+    <div class="ogn-amount">15,000 OGN</div>
+    <div class="ogn-amount-sub">{{gettext("in total prizes")}}</div>
+    <div class="mt-5">{{gettext("Purchase your favorite items at the Origin Swag Store today and be entered for a chance to win up to 3,000 OGN. This campaign will last until Feb 29th 11:59PM PST, and there will be thirty lucky winners.")}}</div>
+    <div class="box d-flex flex-column align-items-center">
+      <div class="d-flex justify-content-between my-1 item">
+        <div class="d-flex">
+          <img class="pr-2" src="/static/img/rewards/trophy_red.svg"/>
+          1st
+        </div>
+        <div class="ogn-value">3,000 <span class="blue">OGN</span></div>
+      </div>
+      <div class="d-flex justify-content-between my-1 item">
+        <div class="d-flex">
+          <img class="pr-2" src="/static/img/rewards/trophy_blue.svg"/>
+          2nd
+        </div>
+        <div class="ogn-value">1,500 <span class="blue">OGN</span></div>
+      </div>
+      <div class="d-flex justify-content-between my-1 item">
+        <div class="d-flex">
+          <img class="pr-2" src="/static/img/rewards/trophy_grey.svg"/>
+          3rd
+        </div>
+        <div class="ogn-value">1,000 <span class="blue">OGN</span></div>
+      </div>
+      <hr/>
+      <div class="d-flex justify-content-between my-1 item small">
+        <div class="d-flex">4-10</div>
+        <div class="ogn-value">Evenly split 4,500 <span class="blue">OGN</span></div>
+      </div>
+      <div class="d-flex justify-content-between my-1 item small">
+        <div class="d-flex">11-20</div>
+        <div class="ogn-value">Evenly split 3,000 <span class="blue">OGN</span></div>
+      </div>
+      <div class="d-flex justify-content-between my-1 item small">
+        <div class="d-flex">21-30</div>
+        <div class="ogn-value">Evenly split 2,000 <span class="blue">OGN</span></div>
+      </div>
+    </div>
+    <a href="https://www.originswag.com/" class="store-link">
+      {{gettext("Visit Origin Swag Store")}}
+    </a>
+    <div class="footer-title">{{gettext("Terms and Conditions")}}</div>
+    <div class="footer-text">{{gettext("Please note that Origin Rewards is currently available in most countries in the world. One notable exception is the United States & countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result.")}}</div>
+    <div class="footer-text">{{gettext("Tokens earned in Feb will be distributed after the first week of March (subject to terms and conditions).")}}</div>
+    <div class="footer-text">{{gettext("Shop at the Origin Swag Store today, and enter for a chance to win up to 3,000 OGN!")}}</div>
+  </div>
+  <div class="bottom-coins"></div>
+</main>
+
+{% endblock %}

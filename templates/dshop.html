@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ gettext("Origin Protocol - DShop") }}{% endblock %}
+
+{% block meta_description %}{{ gettext("Origin Protocol's platform powers true peer-to-peer marketplaces everywhere.") }}{% endblock %}
+
+{% block content %}
+
+{% include 'navbar-dshop.html' %}
+
+<main class="dshop">
+  <section class="title-section screen-size-segment">
+    <div class="container">
+      <div class="content-wrapper">
+        <h1 class="title big text-left">{{gettext("Create your decentralized online store")}}</h1>
+        <div class="sub-title">{{gettext("Run and grow your business with Dshop, a customizable and open-source e-commerce platform. Get started for free and launch your store in a day.")}}</div>
+        <a 
+          class="primary-button" 
+          href="{{ universal.DSHOP_DEMO_FORM }}"
+          target="_blank"
+          rel="noreferrer noopener"
+        >{{ gettext("Request a demo") }}</a>
+      </div>
+      <img src="/static/img/dshop/hero-graphic.svg" class="hero-graphic" />
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <div id="features" class="features">
+        <h3>{{gettext("Features & Benefits")}}</h3>
+
+        <div class="features-list mt-3">
+          <div class="gradient-box feature-box">
+            <img src="/static/img/dshop/fast-icon.svg" />
+            <div>
+              <div class="feature-title">
+                {{gettext("Fast setup, no commitments")}}
+              </div>
+              <div class="sub-title">
+                {{gettext("Launch a decentralised shop in a day - no commitments or long-term contracts.")}}
+              </div>
+            </div>
+          </div>
+          <div class="gradient-box feature-box mb-5">
+            <img src="/static/img/dshop/free-icon.svg" />
+            <div>
+              <div class="feature-title">
+                {{gettext("Free to run")}}
+              </div>
+              <div class="sub-title">
+                {{gettext("Dshop is free to run, and transaction fees are limited to crypto gas costs (typically a few cents per transaction).")}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-list">
+          <div class="gradient-box feature-box">
+            <img src="/static/img/dshop/store-icon.svg" />
+            <div>
+              <div class="feature-title">
+                {{gettext("Sell what you want")}}
+              </div>
+              <div class="sub-title">
+                {{gettext("There are no restrictions on what you can sell, now or ever.")}}
+              </div>
+            </div>
+          </div>
+          <div class="gradient-box feature-box">
+            <img src="/static/img/dshop/pay-icon.svg" />
+            <div>
+              <div class="feature-title">
+                {{gettext("Secure fiat and crypto payments")}}
+              </div>
+              <div class="sub-title">
+                {{gettext("Accept every way your customers want to pay.  Fast, secure payments with no extra fees.")}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="/static/img/dshop/laptop.png"
+            srcset="/static/img/dshop/laptop@2x.png 2x,
+                    /static/img/dshop/laptop@3x.png 3x"
+            class="laptop">
+
+      </div>
+      <div id="customers" class="customers">
+        <h3>{{gettext("Our Customers")}}</h3>
+        <div class="sub-title">
+          {{gettext("Meet the companies who are choosing Dshop to build and grow their decentralized online stores")}}
+        </div>
+        <div class="customer-logos">
+          <a href="https://store.brave.com" target="_blank" rel="noopener noreferrer">
+            <img src="/static/img/dshop/brave-logo.svg" class="brave-logo">
+          </a>
+          <a href="https://store.solana.com" target="_blank" rel="noopener noreferrer">
+            <img src="/static/img/dshop/solana-logo.png"
+              srcset="/static/img/dshop/solana-logo@2x.png 2x,
+                      /static/img/dshop/solana-logo@3x.png 3x"
+              class="solana-logo">
+          </a>
+        </div>
+
+        <div class="gradient-box contact-box">
+          <h3>{{gettext("Here to help you succeed")}}</h3>
+          <div class="sub-title d-none d-md-block">
+            {{gettext("Speak with a real person when something’s not right.")}}
+            <br />
+            {{gettext("You can email our in-house support anytime, 24/7.")}}
+          </div>
+          <div class="sub-title d-md-none">
+            {{gettext("Speak with a real person when something’s not right.")}}
+            &nbsp;{{gettext("You can email our in-house support anytime, 24/7.")}}
+          </div>
+          <div class="sub-title">
+            {{gettext("Still have more questions? Feel free to contact us.")}}
+          </div>
+          <a href="mailto:info@originprotocol.com" class="light-button">{{gettext("Contact Us")}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <div class="subtitle">{{gettext("Ready to start selling for free?")}}</div>
+    <a 
+      class="primary-button" 
+      href="{{ universal.DSHOP_DEMO_FORM }}"
+      target="_blank"
+      rel="noreferrer noopener"
+    >{{ gettext("Request a demo") }}</a>
+  </section>
+
+  {% include 'footer.html' %}
+</main>
+
+{% endblock %}

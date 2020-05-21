@@ -1,0 +1,338 @@
+{% extends 'base.html' %} {% block title %}{{ gettext("Origin Protocol - February Rewards")
+}}{% endblock %} {% block meta_description %}{{ gettext("Origin Protocol enables
+true peer-to-peer commerce.") }}{% endblock %} {% block content %} {% with
+theme_dark=True %} {% endwith %}
+
+{% block extra_styles %}
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+<style type="text/css">
+  body {
+    background: white;
+    background-image: url('/static/img/rewards/grey_rays.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: #333333;
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.44;
+    text-align: center;
+  }
+  
+  .links-container {
+    position: relative;
+    height: 2px;
+  }
+
+  .rewards-header {
+    max-width: 93%;
+    margin-top: 88px;
+  }
+
+  .text1.first  {
+    margin-top: 69px;
+  }
+
+  .text1.black {
+    color: black;
+    font-weight: 900;
+  }
+
+  .text1 {
+    font-family: Lato;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.28;
+    text-align: center;
+    color: #1a82ff;
+  }
+
+  .text1.last {
+    margin-bottom: 30px;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .title {
+    font-weight: bold;
+    color: black;
+  }
+
+  .container {
+    padding: 0px 20px;
+    max-width: 740px
+  }
+
+  .hero-holder .title {
+    margin-top: 0px;
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: bold;
+    color: #dd0a0a;
+    text-transform: uppercase;
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #d0d0d0;
+    margin: 54px 0px 40px 0px;
+  }
+
+  .store-link {
+    height: 50px;
+    border-radius: 25px;
+    padding: 12px 40px 12px 40px;
+    background-color: #1a82ff;
+    margin-top: 45px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .store-link.first {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .small {
+    font-size: 14px;
+  }
+
+  .store-link:hover {
+    color: white;
+    background-color: #0871ee;
+  }
+
+  .store-link-light {
+    border-radius: 25px;
+    border: solid 1px #1a82ff;
+    position: absolute;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 30px;
+    top: 52px;
+    right: -120px;
+  }
+
+  .origin-link {
+    position: absolute;
+    padding: 6px 30px;
+    top: 46px;
+    left: -120px; 
+  }
+
+  .origin-link img {
+    width: 120px;
+  }
+
+  .coins {
+    margin-top: 60px;
+  }
+
+  .ogn-amount {
+    font-family: "Poppins";
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 0.5;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .ogn-amount-sub {
+    font-family: "Poppins";
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.04;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .box {
+    max-width: 604px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 5px 0 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px white;
+    background-color: white;
+    padding: 30px;
+    color: black;
+    font-family: "Lato";
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+  .box hr {
+    width: 100%;
+    margin: 20px 20px;
+    height: 1px;
+    background-color: #e1e1e1;
+    border: 0px;
+  }
+
+  .blue {
+    color: #007fff;
+  }
+
+  .box .item {
+    width: 100%;
+  }
+
+  .box .small {
+    font-size: 21px;
+    font-weight: normal
+  }
+
+  .footer-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+
+  .bottom-coins {
+    background-image: url('/static/img/rewards/ogn.svg');
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 150px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .grey-box {
+    padding: 27px 31px 44px 31px;
+    background-color: #f3f5f7;
+    border-radius: 8px;
+    margin-top: 32px;
+  }
+
+  .normal-link {
+    color: #333333;
+  }
+
+  .normal-link:hover {
+    color: #333333;
+  }
+
+  .terms {
+    color: #999999;
+  }
+
+  .shirts {
+    max-width: 100%;
+  }
+
+  .bordered {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    background-color: white;
+    white-space: nowrap;
+    margin-bottom: 26px;
+    padding: 9px 15px;
+  }
+
+  .title.ogn {
+    font-family: Poppins;
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    color: #333333;
+  }
+
+  .title.small {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  @media (max-width: 730px) {
+    .bordered {
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .store-link-light {
+      top: 52px;
+      right: 30px;
+    }
+
+    .origin-link {
+      top: 46px;
+      left: 0px; 
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .rewards-header {
+      max-width: 100%;
+    }
+
+    .hero-holder .title {
+      margin-top: -35px;
+    }
+  }
+</style>
+{% endblock %}
+
+<main class="swag-store d-flex flex-column align-items-center">
+  <div class="container links-container">
+    <a href="https://www.stayathomeshop.co" target="_blank" rel="noopener noreferrer" class="store-link-light">
+      {{gettext("Visit site")}}
+    </a>
+    <a href="/" class="origin-link">
+      <img src="/static/img/origin-logo-dark@2x.png"/>
+    </a>
+  </div>
+  <div class="hero-holder d-flex flex-column align-items-center">
+    <img class="rewards-header" src="/static/img/rewards/april_header.svg"/>
+    <div class="title">{{gettext("April 2020")}}</div>
+  </div>
+  <div class="container d-flex flex-column align-items-center">
+    <div class="text1 black first">{{gettext("STAY AT HOME WITH ORIGIN")}}</div>
+    <div class="text1 last">{{gettext("Earn OGN for Referring Buyers")}}</div>
+    <div class="mt-3">{{gettext("For April’s Origin Rewards campaign, we will be donating 100%% of all proceeds* from the ‘Stay At Home’ Shop to The Coalition for Epidemic Preparedness Innovations (CEPI), who is developing a vaccine for COVID-19.")}}</div>
+    <div class="mt-3">{{gettext("In addition, to thank you for supporting our fundraising efforts, we have committed <b>50,000 OGN</b> to give away to our Origin community!")}}</div>
+    <a href="https://www.stayathomeshop.co" target="_blank" rel="noopener noreferrer" class="store-link first">
+      {{gettext("Visit the Store")}}
+    </a>
+
+    <img class="shirts mt-4 mb-3" src="/static/img/rewards/teeshirts.svg"/>
+
+    <div class="grey-box">
+      <div class="title left mb-3">{{gettext("Earn OGN with Origin Affiliates")}}</div>
+      <div class="left mb-3">{{gettext("Join the Affiliate program and earn 1 OGN for every $2 spent by friends who make a purchase at the ‘Stay At Home’ Shop using your unique invite link!")}}</div>
+      <div class="left mb-3">{{gettext("You will need an existing Origin Rewards account to participate in this program and receive your free OGN.")}}</div>
+      <div class="left mb-5">{{gettext("Head over to the ‘Stay At Home’ Shop and start earning OGN now.")}}</div>
+      <a href="https://www.stayathomeshop.co" target="_blank" rel="noopener noreferrer" class="store-link">
+        {{gettext("Visit the Store")}}
+      </a>
+    </div>
+
+    <div class="title small left mb-3 mt-5">{{gettext("About CEPI")}}</div>
+    <div class="small mb-3">{{gettext("CEPI is an innovative partnership between public, private, philanthropic, and civil organizations, launched at Davos in 2017, to develop vaccines to stop future epidemics. CEPI has reached over US$750 million of its $1 billion funding target. CEPI’s priority diseases include Ebola virus, Lassa virus, Middle East Respiratory Syndrome coronavirus, Nipah virus, Rift Valley Fever and Chikungunya virus. CEPI also invests in platform technologies that can be used for rapid vaccine and immunoprophylactic development against unknown pathogens (eg 2019-nCoV). To date, CEPI has committed to investing over $456 million in vaccine and platform development.")}}</div>
+    <div class="small mb-3"><a href="http://www.cepi.net" class="normal-link" target="_blank" rel="noopener noreferrer">{{gettext("Learn more at www.cepi.net.")}}</a></div>
+    <div class="footer-title terms">{{gettext("Terms and Conditions")}}</div>
+    <div class="footer-text terms">{{gettext("Please note that Origin Rewards is currently available in most countries in the world, except countries which are currently under U.S. sanctions like North Korea and Cuba. These restrictions go against our ideals and we’re truly sorry for anyone who is unable to participate as a result.")}}</div>
+    <div class="footer-text terms">{{gettext("Tokens earned from both completed purchases and commissions in April will be distributed after the first week of May (subject to terms and conditions).")}}</div>
+    <div class="footer-text terms">{{gettext("*We have committed a total of USD $100,000 for donation to CEPI")}}</div>
+  </div>
+  <div class="bottom-coins"></div>
+</main>
+
+{% endblock %}

@@ -3,7 +3,7 @@ import re
 import json
 import requests
 from datetime import datetime, timedelta
-from flask import render_template
+from flask import (render_template, redirect)
 
 from app import app
 from config import universal
@@ -145,6 +145,8 @@ def ipfs_resolve(url):
 def partner(partner_code):
     """ Display partner onboarding page directing users to mobile download """
 
+    # Temporarily redirect to welcome page because there are no partner campaigns running currently
+    """
     if not partner_code:
         return generic_response(404)
 
@@ -158,8 +160,11 @@ def partner(partner_code):
         referral_code=partner_code,
         app_store_url=universal.IOS_URL,
         play_store_url=universal.ANDROID_URL,
+        hide_ogn_banner=True,
         **conf
     )
+    """
+    return redirect("https://www.originrewards.com", code=302)
 
 
 @app.route('/referral/<referral_code>', strict_slashes=False)
@@ -167,6 +172,8 @@ def partner(partner_code):
 def referral(referral_code):
     """ Display referral page directing users to mobile download """
 
+    # Temporarily redirect to welcome page because
+    """
     if not referral_code:
         return generic_response(404)
 
@@ -198,5 +205,8 @@ def referral(referral_code):
         play_store_url=universal.ANDROID_URL,
         reward_value=1000,  # TODO: Is this legit?
         friend_name=friend_name,
+        hide_ogn_banner=True,
         friend_avatar=friend_avatar or '/static/img/profile-pic-placeholder.svg'
     )
+    """
+    return redirect("https://www.originrewards.com", code=302)

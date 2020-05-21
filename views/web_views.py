@@ -298,93 +298,7 @@ def build_on_origin():
 @app.route('/developers', strict_slashes=False)
 @app.route('/<lang_code>/developers', strict_slashes=False)
 def developers():
-
-    class DatetimeRange:
-        def __init__(self, dt1, dt2):
-            self._dt1 = dt1
-            self._dt2 = dt2
-
-        def __contains__(self, dt):
-            return self._dt1 <= dt < self._dt2
-
-    def validSundaysFilter(sunday):
-        if(sunday != 0):
-            return True
-        else:
-            return False
-
-    def sundayInMonthToDay(year, month, sundayIndex):
-        return filter(validSundaysFilter, (week[-1] for week in calendar.monthcalendar(year, month)))[sundayIndex]
-
-    year = datetime.now().year
-    month = datetime.now().month
-
-    # see date range specs: https://docs.google.com/spreadsheets/d/1ACAH15qdfE8jrfMAHVjWzrGRBKo-gMaVmS-D7GnL6po/edit#gid=0
-    dateRanges = [
-        # first day of a year to second Sunday in March
-        DatetimeRange(
-            datetime(year=year, month=1, day=1),
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
-        ),
-        # second Sunday in March to last Sunday in March
-        DatetimeRange(
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, 1)),
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1))
-        ),
-        # last Sunday in March to first Sunday in April
-        DatetimeRange(
-            datetime(year=year, month=3, day=sundayInMonthToDay(year, 3, -1)),
-            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0))
-        ),
-        # first Sunday in April last Sunday in September
-        DatetimeRange(  
-            datetime(year=year, month=4, day=sundayInMonthToDay(year, 4, 0)),
-            datetime(year=year, month=9, day=sundayInMonthToDay(year, 9, -1))
-        ),
-        # last Sunday in September to last Sunday in October
-        DatetimeRange(
-            datetime(year=year, month=9, day=sundayInMonthToDay(year, 9, -1)),
-            datetime(year=year, month=10, day=sundayInMonthToDay(year, 10, -1))
-        ),
-        # last Sunday in October to first Sunday in November
-        DatetimeRange(
-            datetime(year=year, month=10, day=sundayInMonthToDay(year, 10, -1)),
-            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0))
-        ),
-        # first Sunday in November to the end of the year
-        DatetimeRange(
-            datetime(year=year, month=11, day=sundayInMonthToDay(year, 11, 0)),
-            datetime(year=year, month=12, day=31)
-        )
-    ]
-
-    desktopImages = [
-        '/static/img/developers/1-st-sun-nov.svg',
-        '/static/img/developers/2-nd-sun-mar.svg',
-        '/static/img/developers/last-sun-mar.svg',
-        '/static/img/developers/1-st-sun-apr.svg',
-        '/static/img/developers/last-sun-sep.svg',
-        '/static/img/developers/last-sun-oct.svg',
-        '/static/img/developers/1-st-sun-nov.svg'
-    ]
-
-    mobileTimes = [
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '5:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '11:30 PM', '2:00 AM', '4:30 AM', '4:30 AM', '5:30 AM', '5:30 AM', '9:30 AM'],
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '7:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '8:30 PM', '9:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '8:30 PM', '9:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '7:30 AM'],
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '8:30 PM', '9:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '4:30 PM', '7:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '1:00 AM', '3:30 AM', '3:30 AM', '4:30 AM', '4:30 AM', '8:30 AM'],
-        [ '12:30 PM', '1:30 PM', '3:30 PM', '5:30 PM', '8:30 PM', '9:30 PM', '10:30 PM', '11:30 PM', '2:00 AM', '4:30 AM', '4:30 AM', '5:30 AM', '5:30 AM', '9:30 AM']
-    ]
-
-    imageIndex = 0
-    while imageIndex < len(dateRanges):
-        if (datetime.now() in dateRanges[imageIndex]):
-            break
-        imageIndex += 1
-
-    return render_template('developers.html', desktopBackground=desktopImages[imageIndex], mobileTimes=mobileTimes[imageIndex])
+    return render_template('developers.html')
 
 @app.route('/discord', strict_slashes=False)
 @app.route('/<lang_code>/discord', strict_slashes=False)
@@ -416,6 +330,21 @@ def dapp():
 def rewards():
     return redirect(universal.REWARDS_URL, code=301)
 
+@app.route('/reward/swag/fabruary_2020', strict_slashes=False)
+@app.route('/<lang_code>/reward/swag/fabruary_2020', strict_slashes=False)
+def swagRewards():
+    return render_template('swagStore.html', hide_ogn_banner=True)
+
+@app.route('/reward/stay_home_shop/april_2020', strict_slashes=False)
+@app.route('/<lang_code>/reward/stay_home_shop/april_2020', strict_slashes=False)
+def stayHomeRewards():
+    return render_template('stayHomeStore.html', hide_ogn_banner=True)
+
+@app.route('/reward/extension/march_2020', strict_slashes=False)
+@app.route('/<lang_code>/reward/extension/march_2020', strict_slashes=False)
+def extension_rewardsj():
+    return render_template('extension-rewards.html', hide_ogn_banner=True)
+
 @app.route('/partners', strict_slashes=False)
 @app.route('/<lang_code>/partners', strict_slashes=False)
 def partners():
@@ -439,7 +368,8 @@ def product():
 @app.route('/ogn-token', strict_slashes=False)
 @app.route('/<lang_code>/ogn-token', strict_slashes=False)
 def ogn_token():
-    return render_template('ogn-token.html')
+    binance_lang_code = constants.BINANCE_LOCALE_MAP[g.current_lang] or 'en'
+    return render_template('ogn-token.html', binance_lang_code=binance_lang_code)
 
 @app.route('/video/<video_slug>', strict_slashes=False)
 @app.route('/<lang_code>/video/<video_slug>', strict_slashes=False)
@@ -485,6 +415,11 @@ def videos():
 def privacy():
     return render_template('privacy.html')
 
+@app.route('/privacy/extension', strict_slashes=False)
+@app.route('/<lang_code>/privacy/extension', strict_slashes=False)
+def extension_privacy():
+    return render_template('privacy-extension.html')
+
 @app.route('/tos', strict_slashes=False)
 @app.route('/<lang_code>/tos', strict_slashes=False)
 def tos():
@@ -527,6 +462,16 @@ def creator():
 def whitepaperv2():
     return render_template('whitepaper.html')
 
+@app.route('/browser-extension', strict_slashes=False)
+@app.route('/<lang_code>/browser-extension', strict_slashes=False)
+def browser_extension():
+    return render_template('browser-extension.html', hide_ogn_banner=False)
+
+@app.route('/dshop', strict_slashes=False)
+@app.route('/<lang_code>/dshop', strict_slashes=False)
+def dshop():
+    return render_template('dshop.html', hide_ogn_banner=True, )
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -552,7 +497,9 @@ def assets_all_styles():
         "static/css/pages/investors.css",
         "static/css/pages/developers.css",
         "static/css/pages/presale.css",
-        "static/css/pages/whitepaper.css"
+        "static/css/pages/whitepaper.css",
+        "static/css/pages/browser-extension.css",
+        "static/css/pages/dshop.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)
@@ -600,11 +547,11 @@ def inject_conf_var():
     except:
         available_languages = {'en': "English"}
 
-    # important (!) date needs to be in that exact format (along with minutes/seconds present). 
+    # important (!) date needs to be in that exact format (along with minutes/seconds present).
     # also enter the date in UTC format -> greenwich mean time
     startDate = '2020/1/7 3:30:00 GMT'
     launchDate = '2020/1/9 3:00:00 GMT'
-    
+
     return dict(
         CURRENT_LANGUAGE=current_language,
         CURRENT_LANGUAGE_DIRECTION=current_language_direction,

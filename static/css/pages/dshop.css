@@ -1,0 +1,345 @@
+.dshop section {
+  display: inline-block;
+  width: 100%;
+}
+
+.dshop .outline-button {
+  border-radius: 5px;
+  border: solid 1px var(--white);
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--white);
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dshop .outline-button:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.dshop li .outline-button {
+  display: list-item;
+}
+
+.dshop .primary-button {
+  border-radius: 11px;
+  box-shadow: 5px 5px 8px 0 #0065d2, -3px -3px 6px 0 #2a92ff;
+  background-image: linear-gradient(288deg, #007cff 100%, #0071ea 6%);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--white);
+  text-decoration: none;
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dshop .primary-button:hover {
+  text-decoration: none;
+  background-image: linear-gradient(288deg, #0071ea 100%, #007cff 6%);
+}
+
+.dshop .light-button {
+  border-radius: 11px;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.08), -5px -5px 8px 0 rgba(255, 255, 255, 0.9);
+  background-image: linear-gradient(289deg, #f2f6f9 93%, #f2f6f9 6%);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--primary);
+  text-decoration: none;
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dshop .light-button:hover {
+  text-decoration: none;
+  background-image: linear-gradient(289deg, #f2f6f9 93%, #f2f6f9 6%);
+}
+
+.dshop .title-section {
+  width: 100%;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #007cff, #0072ea 100%);
+  overflow: hidden;
+}
+
+.dshop .content-wrapper {
+  max-width: 250px;
+}
+
+.dshop .title-section h1 {
+  font-family: Lato;
+  font-size: 2.5rem;
+  color: var(--white);
+  text-align: left;
+  margin: 0 0 1rem 0;
+}
+
+.dshop .title-section .sub-title {
+  opacity: 0.8;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.dshop .title-section .primary-button {
+  margin-top: 2.5rem;
+}
+
+.dshop .title-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dshop .title-section .hero-graphic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 30px;
+  z-index: -1;
+}
+
+.dshop .demo-section {
+  background-image: linear-gradient(to right, #007cff, #0072ea 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 320px;
+}
+
+.dshop .demo-section .subtitle {
+  margin-bottom: 1.75rem;
+  font-size: 1.675rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.dshop .gradient-box {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  margin: 1.25rem;
+  background-color: #f6fafd;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.04), -5px -5px 8px 0 rgba(255, 255, 255, 0.9);
+  background-image: linear-gradient(to bottom right, #f2f6f9, var(--white));
+}
+
+
+.dshop .contact-box {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 4rem;
+}
+
+.dshop .contact-box h3 {
+  font-family: Lato;
+  font-size: 1.675rem;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+  margin: 0 0 0.75rem 0;
+}
+
+.dshop .contact-box .sub-title {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #666666;
+}
+
+.dshop .features-section {
+  padding: 2.5rem 0;
+}
+
+.dshop .features-section .light-button {
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+}
+
+.dshop .customers .sub-title {
+  max-width: 460px;
+  margin: 0.5rem auto 2rem auto;
+  font-family: Lato;
+  font-size: 1rem;
+  text-align: center;
+  color: #666666;
+}
+
+.dshop .customers h3, .dshop .features h3 {
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+  margin: 1rem 0 0 0;
+}
+
+.dshop .customers h3 {
+  margin-top: -2.5rem;
+}
+
+.dshop .customer-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.dshop .customer-logos img {
+  height: 61px;
+  object-fit: contain;
+  margin: 0 2rem;
+}
+
+.dshop .customer-logos .solana-logo {
+  height: 38px;
+}
+
+.dshop .features .laptop {
+  max-width: 100%;
+  margin: 50px auto 0 auto;
+  object-fit: contain;
+  display: block;
+}
+
+.dshop .features-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.dshop .features-list .feature-box {
+  height: 328px;
+  width: 328px;
+  text-align: center;
+  display: inline-block;
+  padding: 3.5rem 2.5rem;
+}
+
+.dshop .feature-box .feature-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 0.75rem;
+}
+.dshop .feature-box .sub-title {
+  font-size: 1rem;
+  color: #666;
+}
+
+.dshop .feature-box img {
+  object-fit: contain;
+  width: 74px;
+  height: 74px;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .dshop .title-section {
+    overflow: hidden;
+  }
+
+  .dshop .title-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem
+  }
+
+  .dshop .title-section .hero-graphic {
+    object-fit: contain;
+    position: relative;
+    height: 400px;
+    margin-bottom: -25px;
+    margin-left: -180px;
+    margin-top: -25px;
+  }
+
+  .dshop .title-section h1 {
+    margin-top: 3rem;
+  }
+
+  .dshop .content-wrapper {
+    max-width: 100%;
+  }
+
+  .dshop .features-list {
+    flex-direction: column;
+  }
+
+  .dshop .features-list + .features-list .feature-box:first-child {
+    margin-top: 0px;
+  }
+
+  .dshop .demo-section {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .dshop .contact-box {
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .dshop .contact-box h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .dshop .contact-box .sub-title {
+    margin: 0.25rem 0;
+  }
+
+  .dshop .customer-logos {
+    flex-direction: column;
+  }
+
+  .dshop .customer-logos img {
+    margin: 1.25rem 0;
+  }
+
+  .dshop .features-list .feature-box {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    padding: 1.25rem;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dshop .feature-box img {
+    height: 55px;
+    width: 55px;
+    margin: 1.25rem 1.5rem auto 0;
+  }
+
+  .dshop .feature-box .feature-title {
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .dshop .feature-box .sub-title {
+    font-size: 0.875rem;
+  }
+
+  .dshop .customers h3 {
+    margin-top: 0.5rem;
+  }
+}
