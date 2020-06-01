@@ -21,8 +21,6 @@ from util import time_
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
 
-# master meta-txpurse
-meta_tx_purse = "0x5fabfc823e13de8f1d138953255dd020e2b3ded0"
 
 # start tracking a wallet address
 def add_contact(address, **kwargs):
@@ -324,18 +322,22 @@ def fetch_ogn_transactions():
             db.session.commit()
 
 
-# check if we need to top up the meta tx's purse
-def fetch_meta_tx_balance():
+# alerting system to notify us if a wallet drops below a certain threshold
+def fetch_wallet_balance(wallet, label, eth_threshold):
 
-    print "Fetching meta tx purse balance"
+    print "Checking if the balance of %s (%s) is below %s" % (
+        wallet,
+        label,
+        eth_threshold,
+    )
 
     try:
 
-        url = "http://api.ethplorer.io/getAddressInfo/%s" % (meta_tx_purse)
+        url = "http://api.ethplorer.io/getAddressInfo/%s" % (wallet)
         results = call_ethplorer(url)
 
         contact = db_common.get_or_create(
-            db.session, db_models.EthContact, address=meta_tx_purse
+            db.session, db_models.EthContact, address=wallet
         )
         contact.eth_balance = results["ETH"]["balance"]
         contact.transaction_count = results["countTxs"]
@@ -353,12 +355,13 @@ def fetch_meta_tx_balance():
 
         print (contact.eth_balance)
 
-        if contact.eth_balance < 1:
+        if contact.eth_balance < eth_threshold:
             print "Low balance. Notifying."
-            subject = "Meta-transactions purse is running low. %s ETH remaining" % (
-                contact.eth_balance
+            subject = "%s purse is running low. %s ETH remaining" % (
+                label,
+                contact.eth_balance,
             )
-            body = "Please send more ETH to %s" % (meta_tx_purse)
+            body = "Please send more ETH to %s" % (wallet)
             print (body)
             print (subject)
             sgw.notify_founders(body, subject)
@@ -372,6 +375,7 @@ def fetch_meta_tx_balance():
 if __name__ == "__main__":
     # called via cron on Heroku
     with db_utils.request_context():
-        fetch_ogn_transactions()
-        # fetch_meta_tx_balance()
-        fetch_from_ethplorer()
+        # fetch_ogn_transactions()
+        fetch_wallet_balance("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
+        # fetch_wallet_balance("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
+        # fetch_from_ethplorer()

@@ -728,7 +728,7 @@ $(function () {
     },
     {
       name: "Blockfolio",
-      subscribed_count: 64185
+      subscribed_count: 66294
     }
   ];
 
@@ -820,7 +820,7 @@ $(function () {
     Reddit: {
       img: "/static/img/about/reddit.svg",
       countLabel: "subscribers",
-      link: "https://www.reddit.com/r/",
+      link: "https://www.reddit.com/r/originprotocol",
       regionSpecific: false
     },
     Medium: {
