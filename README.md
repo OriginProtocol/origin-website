@@ -86,12 +86,12 @@ You can run the website in combination with a local PostgreSQL, Redis and Celery
 ## Running cron jobs locally
 Some scripts use Heroku cron jobs. Use the following command to test them locally
 ```bash
-docker exec -it -e PYTHONPATH=/app -e PROJECTPATH=/app origin-website python ./logic/scripts/update_token_insight.py
+PYTHONPATH=$(pwd) PROJECTPATH=$(pwd) python ./logic/scripts/update_token_insight.py
 ```
 
 When running on docker:
 ```bash
-PYTHONPATH=$(pwd) PROJECTPATH=$(pwd) origin-website python ./logic/scripts/update_token_insight.py
+docker exec -it -e PYTHONPATH=/app -e PROJECTPATH=/app origin-website python ./logic/scripts/update_token_insight.py
 ```
 
 ### System Requirements
