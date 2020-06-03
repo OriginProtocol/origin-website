@@ -5,6 +5,7 @@ import math
 import re
 import sys
 import time
+import os
 
 from backoff import on_exception, expo
 from config import constants
@@ -15,12 +16,23 @@ from tools import db_utils
 from util import sendgrid_wrapper as sgw
 from util import time_
 
+from redis import Redis
+
+redis_client = Redis.from_url(os.environ['REDIS_URL'])
+
 # NOTE: remember to use lowercase addresses for everything
 
 # token contract addresses
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
 
+# ogn wallet addresses
+foundation_reserve_address = "0xe011fa2a6df98c69383457d87a056ed0103aa352"
+team_dist_address = "0xcaa5ef7abc36d5e5a3e4d7930dcff3226617a167"
+investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
+dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
+partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
+ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
 
 # start tracking a wallet address
 def add_contact(address, **kwargs):
@@ -321,9 +333,46 @@ def fetch_ogn_transactions():
             db.session.add(tx)
             db.session.commit()
 
+# Fetches wallet balance from API and stores that to DB
+def fetch_wallet_balance(wallet):
+    print "Checking the balance of wallet %s" % (
+        wallet,
+    )
+
+    url = "http://api.ethplorer.io/getAddressInfo/%s" % (wallet)
+    results = call_ethplorer(url)
+
+    contact = db_common.get_or_create(
+        db.session, db_models.EthContact, address=wallet
+    )
+
+    if "error" in results:
+        print("Error while fetching balance")
+        print(results["error"]["message"])
+        raise ValueError(results["error"]["message"])
+
+    contact.eth_balance = results["ETH"]["balance"]
+    contact.transaction_count = results["countTxs"]
+
+    print "ETH balance of %s is %s" % (wallet, results["ETH"]["balance"])
+    if "tokens" in results:
+        contact.tokens = results["tokens"]
+        # update the OGN & DAI balance
+        for token in results["tokens"]:
+            if token["tokenInfo"]["address"] == ogn_contract:
+                contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
+            elif token["tokenInfo"]["address"] == dai_contract:
+                contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
+        contact.token_count = len(results["tokens"])
+    contact.last_updated = datetime.utcnow()
+
+    db.session.add(contact)
+    db.session.commit()
+
+    return contact
 
 # alerting system to notify us if a wallet drops below a certain threshold
-def fetch_wallet_balance(wallet, label, eth_threshold):
+def alert_on_balance_drop(wallet, label, eth_threshold):
 
     print "Checking if the balance of %s (%s) is below %s" % (
         wallet,
@@ -332,26 +381,7 @@ def fetch_wallet_balance(wallet, label, eth_threshold):
     )
 
     try:
-
-        url = "http://api.ethplorer.io/getAddressInfo/%s" % (wallet)
-        results = call_ethplorer(url)
-
-        contact = db_common.get_or_create(
-            db.session, db_models.EthContact, address=wallet
-        )
-        contact.eth_balance = results["ETH"]["balance"]
-        contact.transaction_count = results["countTxs"]
-
-        if "tokens" in results:
-            contact.tokens = results["tokens"]
-            # update the OGN & DAI balance
-            for token in results["tokens"]:
-                if token["tokenInfo"]["address"] == ogn_contract:
-                    contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-                elif token["tokenInfo"]["address"] == dai_contract:
-                    contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
-            contact.token_count = len(results["tokens"])
-        contact.last_updated = datetime.utcnow()
+        contact  = fetch_wallet_balance(wallet)
 
         print (contact.eth_balance)
 
@@ -366,16 +396,142 @@ def fetch_wallet_balance(wallet, label, eth_threshold):
             print (subject)
             sgw.notify_founders(body, subject)
 
-        db.session.add(contact)
-        db.session.commit()
     except Exception as e:
         print e
 
+# Fetches and stores OGN & ETH prices froom CoinGecko
+def fetch_token_prices():
+    print("Fetching token prices...")
+    
+    try:
+        url = "https://api.coingecko.com/api/v3/simple/price?ids=origin-protocol%2Cethereum&vs_currencies=usd"
+        raw_json = requests.get(url)
+        response = raw_json.json()
+
+        if "error" in response:
+            print("Error while fetching balance")
+            print(response["error"]["message"])
+            raise ValueError(response["error"]["message"])
+
+        ogn_price = response["origin-protocol"]["usd"]
+        eth_price = response["ethereum"]["usd"]
+
+        redis_client.set("ogn_price", ogn_price)
+        redis_client.set("eth_price", eth_price)
+
+        print "Set OGN price to %s" % ogn_price
+        print "Set ETH price to %s" % eth_price
+
+    except Exception as e:
+        print("Failed to load token prices")
+        print e
+
+def fetch_staked_user_count():
+    print("Fetching T3 user count...")
+    
+    try:
+        url = "https://remote.team.originprotocol.com/api/user-stats"
+        raw_json = requests.get(url)
+        response = raw_json.json()
+
+        user_count = response["userCount"]
+
+        redis_client.set("locked_user_count", user_count)
+
+        print "There are %s T3 users" % user_count
+
+    except Exception as e:
+        print("Failed to load T3 user count")
+        print e
+
+# Fetches reserved wallet balances and token price 
+# and recalculates things to be shown in
+def compute_ogn_stats():
+    print("Computing OGN stats...")
+    # Fetch OGN and ETH prices
+    fetch_token_prices()
+
+    fetch_staked_user_count()
+
+    # Fetch reserved wallet balances
+    fetch_wallet_balance(foundation_reserve_address)
+    fetch_wallet_balance(team_dist_address)
+    fetch_wallet_balance(investor_dist_address)
+    fetch_wallet_balance(dist_staging_address)
+    fetch_wallet_balance(partnerships_address)
+    fetch_wallet_balance(ecosystem_growth_address)
+
+
+def get_wallet_balance_from_db(wallet):
+    contact = db_models.EthContact.query.filter_by(address=wallet).first()
+
+    if contact is None:
+        return 0
+
+    return contact.ogn_balance
+
+def get_ogn_stats():
+    total_supply = 1000000000
+
+    ogn_price = float(redis_client.get("ogn_price"))
+    locked_user_count = int(redis_client.get("locked_user_count") or 0)
+
+    results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
+        foundation_reserve_address,
+        team_dist_address,
+        investor_dist_address,
+        dist_staging_address,
+        partnerships_address,
+        ecosystem_growth_address,
+    ))).all()
+
+    ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
+
+    foundation_reserve_balance = ogn_balances[foundation_reserve_address]
+    team_dist_balance = ogn_balances[team_dist_address]
+    investor_dist_balance = ogn_balances[investor_dist_address]
+    dist_staging_balance = ogn_balances[dist_staging_address]
+    partnerships_balance = ogn_balances[partnerships_address]
+    ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
+
+    locked_tokens = (
+        foundation_reserve_balance +
+        team_dist_balance +
+        investor_dist_balance +
+        dist_staging_balance +
+        partnerships_balance +
+        ecosystem_growth_balance
+    )
+
+    circulating_supply = total_supply - locked_tokens
+
+    market_cap = circulating_supply * ogn_price
+
+    return dict([
+        ("ogn_price", '${:}'.format(ogn_price)),
+        ("circulating_supply", '{:,}'.format(int(circulating_supply))),
+        ("market_cap", '${:,}'.format(int(market_cap))),
+        ("total_supply", '{:,}'.format(total_supply)),
+
+        ("locked_tokens", '{:,}'.format(int(locked_tokens))),
+        ("locked_user_count", '{:,}'.format(locked_user_count)),
+
+        ("foundation_reserve_address", foundation_reserve_address),
+        ("team_dist_address", team_dist_address),
+        ("investor_dist_address", investor_dist_address),
+        ("dist_staging_address", dist_staging_address),
+        ("partnerships_address", partnerships_address),
+        ("ecosystem_growth_address", ecosystem_growth_address),
+    ])
+    
 
 if __name__ == "__main__":
     # called via cron on Heroku
     with db_utils.request_context():
         # fetch_ogn_transactions()
-        fetch_wallet_balance("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
-        # fetch_wallet_balance("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
+        alert_on_balance_drop("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
+        # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         # fetch_from_ethplorer()
+
+        compute_ogn_stats()
+        

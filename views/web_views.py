@@ -472,6 +472,11 @@ def browser_extension():
 def dshop():
     return render_template('dshop.html', hide_ogn_banner=True, )
 
+@app.route('/dashboard', strict_slashes=False)
+@app.route('/<lang_code>/dashboard', strict_slashes=False)
+def dashboard():
+    return render_template('dashboard.html', ogn_stats=insight.get_ogn_stats(),)
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -499,7 +504,8 @@ def assets_all_styles():
         "static/css/pages/presale.css",
         "static/css/pages/whitepaper.css",
         "static/css/pages/browser-extension.css",
-        "static/css/pages/dshop.css"
+        "static/css/pages/dshop.css",
+        "static/css/pages/dashboard.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)

@@ -83,6 +83,17 @@ We use [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running b
 
 You can run the website in combination with a local PostgreSQL, Redis and Celery using [Docker Compose](https://docs.docker.com/compose/).
 
+## Running cron jobs locally
+Some scripts use Heroku cron jobs. Use the following command to test them locally
+```bash
+docker exec -it -e PYTHONPATH=/app -e PROJECTPATH=/app origin-website python ./logic/scripts/update_token_insight.py
+```
+
+When running on docker:
+```bash
+PYTHONPATH=$(pwd) PROJECTPATH=$(pwd) origin-website python ./logic/scripts/update_token_insight.py
+```
+
 ### System Requirements
 
 - [Docker](https://docs.docker.com/install/overview/) **version 18 or greater**:
