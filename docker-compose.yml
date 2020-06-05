@@ -8,6 +8,8 @@ services:
     image: postgres:10.0
     container_name: postgres-website
     restart: always
+    ports:
+      - "5432:5432"
     # Data persistence, comment out the following two lines to disable
     volumes:
       - pg_data:/var/lib/postgresql/data
@@ -20,6 +22,8 @@ services:
     image: redis
     container_name: redis
     restart: always
+    ports:
+      - "6379:6379"
     sysctls:
       - net.core.somaxconn=4096
 

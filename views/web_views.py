@@ -475,7 +475,7 @@ def dshop():
 @app.route('/dashboard', strict_slashes=False)
 @app.route('/<lang_code>/dashboard', strict_slashes=False)
 def dashboard():
-    return render_template('dashboard.html', ogn_stats=insight.get_ogn_stats(),)
+    return render_template('dashboard.html', ogn_stats=insight.get_ogn_stats(), supply_history=insight.get_supply_history())
 
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
@@ -517,12 +517,14 @@ def assets_all_javascript():
         "static/js/vendor-alertify.js",
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
+        "static/js/vendor-chart.min.js",
         "static/js/script.js",
         "static/js/countdown-timer.js",
         "static/js/yt-player.js",
         "static/js/videos.js",
         "static/js/youkuPlayer.js",
         "static/js/scrollspy.js",
+        "static/js/dashboard.js",
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)

@@ -4,6 +4,12 @@
 
 {% block meta_description %}{{ gettext("Origin Protocol's platform powers true peer-to-peer marketplaces everywhere.") }}{% endblock %}
 
+{% block extra_scripts %}
+<script>
+  var ognSupplyHistory = {{supply_history | safe}};
+</script>
+{% endblock %}
+
 {% block content %}
 
 {% with theme_dark=True %}
@@ -67,11 +73,17 @@
           <div class="desc">
             {{gettext("This was the token release schedule we committed to in January for the next 4 years. In that blurb, we also highlight that we anticipate actual circulating supply to be significantly lower than modeled supply for X, Y, and Z reasons.")}}
           </div>
+          <div class="chart-container">
+            <canvas id="unlock_schedule_chart" height="440"></canvas>
+          </div>
         </div>
         <div class="col-md-6">
           <h3>{{gettext("Modeled vs. actual token release schedule")}}</h3>
           <div class="desc">
             {{gettext("Fusce condimentum ultrices est quis dapibus. Phasellus massa tortor, ultricies a imperdiet in, dapibus ac ligula. Duis suscipit odio sed sagittis finibus. Curabitur justo neque, scelerisque eu velit interdum, finibus varius purus.")}}
+          </div>
+          <div class="chart-container">
+            <canvas id="release_schedule_chart" height="440"></canvas>
           </div>
         </div>
       </div>

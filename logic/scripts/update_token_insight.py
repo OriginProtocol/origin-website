@@ -461,6 +461,8 @@ def compute_ogn_stats():
     fetch_wallet_balance(partnerships_address)
     fetch_wallet_balance(ecosystem_growth_address)
 
+    # Update circulating supply
+    update_circulating_supply()
 
 def get_wallet_balance_from_db(wallet):
     contact = db_models.EthContact.query.filter_by(address=wallet).first()
@@ -470,10 +472,10 @@ def get_wallet_balance_from_db(wallet):
 
     return contact.ogn_balance
 
-def get_ogn_stats():
+def get_ogn_stats(format_data = True):
     total_supply = 1000000000
 
-    ogn_price = float(redis_client.get("ogn_price"))
+    ogn_price = float(redis_client.get("ogn_price") or 0)
     locked_user_count = int(redis_client.get("locked_user_count") or 0)
 
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
@@ -494,7 +496,7 @@ def get_ogn_stats():
     partnerships_balance = ogn_balances[partnerships_address]
     ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
 
-    locked_tokens = (
+    locked_tokens = int(
         foundation_reserve_balance +
         team_dist_balance +
         investor_dist_balance +
@@ -503,18 +505,18 @@ def get_ogn_stats():
         ecosystem_growth_balance
     )
 
-    circulating_supply = total_supply - locked_tokens
+    circulating_supply = int(total_supply - locked_tokens)
 
-    market_cap = circulating_supply * ogn_price
+    market_cap = int(circulating_supply * ogn_price)
 
-    return dict([
-        ("ogn_price", '${:}'.format(ogn_price)),
-        ("circulating_supply", '{:,}'.format(int(circulating_supply))),
-        ("market_cap", '${:,}'.format(int(market_cap))),
-        ("total_supply", '{:,}'.format(total_supply)),
+    out_data = dict([
+        ("ogn_price", ogn_price),
+        ("circulating_supply", circulating_supply),
+        ("market_cap", market_cap),
+        ("total_supply", total_supply),
 
-        ("locked_tokens", '{:,}'.format(int(locked_tokens))),
-        ("locked_user_count", '{:,}'.format(locked_user_count)),
+        ("locked_tokens", locked_tokens),
+        ("locked_user_count", locked_user_count),
 
         ("foundation_reserve_address", foundation_reserve_address),
         ("team_dist_address", team_dist_address),
@@ -523,6 +525,48 @@ def get_ogn_stats():
         ("partnerships_address", partnerships_address),
         ("ecosystem_growth_address", ecosystem_growth_address),
     ])
+
+    if format_data:
+        out_data["ogn_price"] = '${:,}'.format(ogn_price)
+        out_data["circulating_supply"] = '{:,}'.format(circulating_supply)
+        out_data["market_cap"] = '{:,}'.format(market_cap)
+        out_data["total_supply"] = '{:,}'.format(total_supply)
+        out_data["locked_tokens"] = '{:,}'.format(locked_tokens)
+        out_data["locked_user_count"] = '{:,}'.format(locked_user_count)
+
+    return out_data
+    
+def get_supply_history():
+    results = db_models.CirculatingSupply.query.order_by(db_models.CirculatingSupply.snapshot_date.asc()).all()
+
+    out = []
+
+    for result in results:
+        out.append(dict([
+            ("supply_amount", result.supply_amount),
+            ("snapshot_date", result.snapshot_date.isoformat())
+        ]))
+
+    return out
+
+def update_circulating_supply():
+    stats = get_ogn_stats(format_data=False)
+    snapshot_date = datetime.utcnow().replace(
+        day=1,
+        hour=0,
+        minute=0,
+        second=0, 
+        microsecond=0
+    )
+
+    supply_snapshot = db_common.get_or_create(
+        db.session, db_models.CirculatingSupply, snapshot_date=snapshot_date
+    )
+
+    supply_snapshot.supply_amount = stats["circulating_supply"]
+    db.session.commit()
+
+    print "Updated current circulating supply to %s" % stats["circulating_supply"]
     
 
 if __name__ == "__main__":

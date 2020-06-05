@@ -151,6 +151,16 @@ class TokenTransaction(db.Model):
     def __str__(self):
         return '%s' % (self.name)
 
+class CirculatingSupply(db.Model):
+    __tablename__ = 'circulating_supply'
+    id = db.Column(db.Integer, primary_key=True)
+    supply_amount = db.Column(db.Float(), default=0)
+    snapshot_date = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+
+    def __str__(self):
+        return '%s' % (self.name)        
+
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')
 def _subscribe_email_list(mapper, connection, target):
