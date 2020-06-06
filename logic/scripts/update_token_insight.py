@@ -253,9 +253,9 @@ def fetch_from_ethplorer():
                 contact.tokens = results["tokens"]
                 # update the OGN & DAI balance
                 for token in results["tokens"]:
-                    if token["tokenInfo"]["address"] == ogn_contract:
+                    if token["tokenInfo"]["address"].lower() == ogn_contract:
                         contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-                    elif token["tokenInfo"]["address"] == dai_contract:
+                    elif token["tokenInfo"]["address"].lower() == dai_contract:
                         contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
                 contact.token_count = len(results["tokens"])
             contact.last_updated = datetime.utcnow()
