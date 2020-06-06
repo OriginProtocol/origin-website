@@ -413,30 +413,47 @@ def fetch_token_prices():
             print(response["error"]["message"])
             raise ValueError(response["error"]["message"])
 
-        ogn_price = response["origin-protocol"]["usd"]
-        eth_price = response["ethereum"]["usd"]
+        ogn_usd_price = response["origin-protocol"]["usd"]
+        eth_usd_price = response["ethereum"]["usd"]
 
-        redis_client.set("ogn_price", ogn_price)
-        redis_client.set("eth_price", eth_price)
+        redis_client.set("ogn_usd_price", ogn_usd_price)
+        redis_client.set("eth_usd_price", eth_usd_price)
 
-        print "Set OGN price to %s" % ogn_price
-        print "Set ETH price to %s" % eth_price
+        print "Set OGN price to %s" % ogn_usd_price
+        print "Set ETH price to %s" % eth_usd_price
 
     except Exception as e:
         print("Failed to load token prices")
         print e
 
-def fetch_staked_user_count():
+def fetch_stats_from_t3(investor_portal = True):
+    print("Fetching T3 stats...")
+
+    url = "https://remote.team.originprotocol.com/api/user-stats"
+
+    if investor_portal:
+        url = "https://remote.investor.originprotocol.com/api/user-stats"
+
+    raw_json = requests.get(url)
+    response = raw_json.json()
+
+    return response
+
+def fetch_staking_stats(investor_portal = True):
     print("Fetching T3 user count...")
     
     try:
-        url = "https://remote.team.originprotocol.com/api/user-stats"
-        raw_json = requests.get(url)
-        response = raw_json.json()
+        investor_stats = fetch_stats_from_t3(investor_portal=True)
+        team_stats = fetch_stats_from_t3(investor_portal=False)
 
-        user_count = response["userCount"]
+        investor_staked_users = int(investor_stats["userCount"] or 0)
+        investor_locked_sum = int(investor_stats["lockupSum"] or 0)
 
-        redis_client.set("locked_user_count", user_count)
+        team_staked_users = int(team_stats["userCount"] or 0)
+        team_locked_sum = int(team_stats["lockupSum"] or 0)
+
+        redis_client.set("staked_user_count", (investor_staked_users + team_staked_users))
+        redis_client.set("staked_token_count", (investor_locked_sum + team_locked_sum))
 
         print "There are %s T3 users" % user_count
 
@@ -451,7 +468,8 @@ def compute_ogn_stats():
     # Fetch OGN and ETH prices
     fetch_token_prices()
 
-    fetch_staked_user_count()
+    fetch_staking_stats()
+    fetch_staking_stats(investor_portal=False)
 
     # Fetch reserved wallet balances
     fetch_wallet_balance(foundation_reserve_address)
@@ -475,8 +493,9 @@ def get_wallet_balance_from_db(wallet):
 def get_ogn_stats(format_data = True):
     total_supply = 1000000000
 
-    ogn_price = float(redis_client.get("ogn_price") or 0)
-    locked_user_count = int(redis_client.get("locked_user_count") or 0)
+    ogn_usd_price = float(redis_client.get("ogn_usd_price") or 0)
+    staked_user_count = int(redis_client.get("staked_user_count") or 0)
+    staked_token_count = int(redis_client.get("staked_token_count") or 0)
 
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         foundation_reserve_address,
@@ -496,7 +515,7 @@ def get_ogn_stats(format_data = True):
     partnerships_balance = ogn_balances[partnerships_address]
     ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
 
-    locked_tokens = int(
+    reserved_tokens = int(
         foundation_reserve_balance +
         team_dist_balance +
         investor_dist_balance +
@@ -505,18 +524,19 @@ def get_ogn_stats(format_data = True):
         ecosystem_growth_balance
     )
 
-    circulating_supply = int(total_supply - locked_tokens)
+    circulating_supply = int(total_supply - reserved_tokens)
 
-    market_cap = int(circulating_supply * ogn_price)
+    market_cap = int(circulating_supply * ogn_usd_price)
 
     out_data = dict([
-        ("ogn_price", ogn_price),
+        ("ogn_usd_price", ogn_usd_price),
         ("circulating_supply", circulating_supply),
         ("market_cap", market_cap),
         ("total_supply", total_supply),
 
-        ("locked_tokens", locked_tokens),
-        ("locked_user_count", locked_user_count),
+        ("reserved_tokens", reserved_tokens),
+        ("staked_user_count", staked_user_count),
+        ("staked_token_count", staked_token_count),
 
         ("foundation_reserve_address", foundation_reserve_address),
         ("team_dist_address", team_dist_address),
@@ -527,12 +547,13 @@ def get_ogn_stats(format_data = True):
     ])
 
     if format_data:
-        out_data["ogn_price"] = '${:,}'.format(ogn_price)
+        out_data["ogn_usd_price"] = '${:,}'.format(ogn_usd_price)
         out_data["circulating_supply"] = '{:,}'.format(circulating_supply)
         out_data["market_cap"] = '{:,}'.format(market_cap)
         out_data["total_supply"] = '{:,}'.format(total_supply)
-        out_data["locked_tokens"] = '{:,}'.format(locked_tokens)
-        out_data["locked_user_count"] = '{:,}'.format(locked_user_count)
+        out_data["reserved_tokens"] = '{:,}'.format(reserved_tokens)
+        out_data["staked_user_count"] = '{:,}'.format(staked_user_count)
+        out_data["staked_token_count"] = '{:,}'.format(staked_token_count)
 
     return out_data
     
