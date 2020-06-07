@@ -63,6 +63,8 @@ function closeOgnOverlay(event) {
 
 $("#countdown-hero-banner-button").click(closeOgnOverlay);
 $("#mailing-list").submit(addToMailingList);
+$("#huobi-mail-list-1").submit(addToMailingList);
+$("#huobi-mail-list-2").submit(addToMailingList);
 $("#mailing-list-footer").submit(addToMailingList);
 $("#mailing-list-nav-bar").submit(addToMailingList);
 
