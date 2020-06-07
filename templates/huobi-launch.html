@@ -753,16 +753,24 @@
     </div>
   </section>
   <section class="huobi-subscribe d-flex flex-column align-items-center justify-content-center">
-  	<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
-  	<div class="grey">{{gettext("You must sign up for Origin's mailing list to be eligible to participate in the activities")}}</div>
-    <div class="huobi-email-form">
-      <form id="huobi-mail-list-1" class="d-flex flex-column align-items-center" method="post" action="/mailing-list/join">
-        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
-        <input class="submit" type="submit" value="Submit">
-      </form>
-    </div>
-    <img class="huobi-qr-code" src="/static/img/huobi/wechat-qrcode.png" />
-    <div class="grey-text">WeChat</div>
+  	<div class="email-input-form d-flex flex-column align-items-center justify-content-center">
+  		<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
+	  	<div class="grey">{{gettext("You must sign up for Origin's mailing list to be eligible to participate in the activities")}}</div>
+	    <div class="huobi-email-form">
+	      <form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post" action="/mailing-list/join">
+	        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
+	        <input class="submit" type="submit" value="Submit">
+	      </form>
+	    </div>
+	    <!-- IMPORTNAT IF YOU CHANGE QR CODE HERE ALSO CHANGE IT ON SUCCESS STATE BELOW -->
+	    <img class="huobi-qr-code" src="/static/img/huobi/wechat-qrcode.png" />
+	    <div class="grey-text">WeChat</div>
+  	</div>
+  	<div class="email-input-success flex-column align-items-center justify-content-center d-none">
+  		<h2>{{gettext("Congratulations! You are now eligible to participate")}}</h2>
+  		<div class="grey">{{gettext("Make sure you scan this QR code to join our WeChat group")}}</div>
+  		<img class="huobi-qr-code" src="/static/img/huobi/wechat-qrcode.png" />
+  	</div>
   </section>
   <section class="huobi-body d-flex flex-column align-items-center justify-content-center">
   	<img class="img-badge" src="/static/img/huobi/ogn-activity-1.svg"/>
@@ -822,16 +830,24 @@
   	</div>
   </section>
   <section class="huobi-subscribe d-flex flex-column align-items-center justify-content-center">
-  	<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
-  	<div class="grey">{{gettext("You must sign up for Origin's mailing list to be eligible to participate in the activities")}}</div>
-    <div class="huobi-email-form">
-      <form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post" action="/mailing-list/join">
-        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
-        <input class="submit" type="submit" value="Submit">
-      </form>
-    </div>
-    <img class="huobi-qr-code" src="/static/img/huobi/wechat-qrcode.png" />
-    <div class="grey-text">WeChat</div>
+  	<div class="email-input-form d-flex flex-column align-items-center justify-content-center">
+  		<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
+	  	<div class="grey">{{gettext("You must sign up for Origin's mailing list to be eligible to participate in the activities")}}</div>
+	    <div class="huobi-email-form">
+	      <form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post" action="/mailing-list/join">
+	        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
+	        <input class="submit" type="submit" value="Submit">
+	      </form>
+	    </div>
+	    <!-- IMPORTNAT IF YOU CHANGE QR CODE HERE ALSO CHANGE IT ON SUCCESS STATE BELOW -->
+	    <img class="huobi-qr-code" src="/static/img/huobi/wechat-qrcode.png" />
+	    <div class="grey-text">WeChat</div>
+  	</div>
+  	<div class="email-input-success flex-column align-items-center justify-content-center d-none">
+  		<h2>{{gettext("Congratulations! You are now eligible to participate")}}</h2>
+  		<div class="grey">{{gettext("Make sure you scan this QR code to join our WeChat group")}}</div>
+  		<img class="huobi-qr-code" src="/static/img/huobi/wechat-qrcode.png" />
+  	</div>
   </section>
   {% include 'footer.html' %}
 </main>
@@ -840,6 +856,20 @@
 {% block extra_scripts %} 
 <script type='text/javascript'>
   $(function() {
+  	// Change all the email input forms to success screens
+  	window.onAddedToEmailList = function () {
+  		var inputForms = document.getElementsByClassName("email-input-form")
+  		var successScreens = document.getElementsByClassName("email-input-success")
+  		
+  		for (let i = 0; i < inputForms.length; i++) {
+  			inputForms[i].classList.remove("d-flex")
+  			inputForms[i].classList.add("d-none")
+
+  			successScreens[i].classList.add("d-flex")
+  			successScreens[i].classList.remove("d-none")
+  		}
+  	}
+
     document.getElementById("red-rocket").addEventListener("click", function() {
     	var trails = document.getElementById("red-rocket-trails")
     	var trailsYellow = document.getElementById("red-rocket-trails-yellow")

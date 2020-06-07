@@ -42,11 +42,15 @@ function addToMailingList(event) {
         );
         emailInput.value = decodeURIComponent(inputData.split("=").pop());
         emailInput.parentElement.classList.add("d-none");
+
       } else {
         toggleElementsState(formElements, false);
       }
 
       if (data.success) {
+        if (window.onAddedToEmailList) {
+          window.onAddedToEmailList()
+        }
         fbq("track", "Lead");
       }
 
