@@ -175,6 +175,10 @@
 	  margin-bottom: 17px;
   }
 
+  .huobi-body h3.non-first {
+  	margin-top: 30px;
+  }
+
   .huobi-body .subtitle {
   	font-family: "Lato";
 	  font-size: 21px;
@@ -803,10 +807,24 @@
   	<img class="img-badge" src="/static/img/huobi/ogn-activity-1.svg"/>
   	<h2 class="d-none d-md-flex">{{gettext("OGN Net Increase Competition")}}</h2>
   	<h2 class="d-md-none">{{gettext("OGN Trading Competition")}}</h2>
-  	<div class="subtitle">{{gettext("Activity time period: Listing date to June 22, 2PM SGT Rewards to be calculated every 3 days")}}</div>
-  	<h3>{{gettext("Activity rules")}}</h3>
+  	<div class="subtitle">
+  		{{gettext("Activity time period: Listing date to June 22, 2PM SGT")}} <br>
+  		{{gettext("Rewards to be calculated every 3 days")}}
+  	</div>
   	<div class="border-box">
+  		<h3>{{gettext("Competition rounds")}}</h3>
   		<ul>
+  			<li>{{gettext("The competition will begin on June 10 2PM SGT and last until June 22 2PM SGT (12 days).")}}</li>
+  			<li>{{gettext("There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round.")}}</li>
+  			<ul>
+					<li>{{gettext("Round 1 will commence from the start of day 1 to the end of day 3: June 10, 2020 2PM to June 13, 2020 2PM")}}</li>
+					<li>{{gettext("Round 2 will commence from the start of day 4 to end of day 6: June 13, 2020 2:01PM to June 16, 2020 2PM")}}</li>
+					<li>{{gettext("Round 3 will commence from the start of day 7 to end of day 9: June 16, 2020 2:01PM to June 19, 2020 2PM")}}</li>
+					<li>{{gettext("Round 4 will commence from the start of day 10 to end of day 12: June 19, 2020 2:01PM to June 22, 2020 2PM")}}</li>
+				</ul>
+			</ul>
+			<h3 class="non-first">{{gettext("Competition rules")}}</h3>
+			<ul>
   			<li>{{gettext("Traders will be ranked according to their OGN Net Increase Amount during each round.")}}</li>
   			<li>{{gettext("OGN Net Increase Amount = OGN held at the end of the round - OGN held at the beginning of the round")}}</li>
   			<li>{{gettext("Here is an example calculation for OGN Net Increase Amount:")}}</li>
@@ -816,6 +834,9 @@
 					<li>{{gettext("They end the round with 13,000 OGN (2,000 + 15,000 - 3,000 - 1,000 OGN)")}}</li>
 					<li>{{gettext("Their OGN Net Increase is 11,000 OGN.")}}</li>
 				</ul>
+			</ul>
+			<h3 class="non-first">{{gettext("Competition payouts")}}</h3>
+			<ul>
 				<li>{{gettext("$25k USDT will be awarded in each 3-day round, for a total of $100k USDT.")}}</li>
 				<li>{{gettext("For each 3-day reward period, traders will be ranked by their overall OGN Net Increase Amount:")}}</li>
 				<ul>
@@ -836,15 +857,20 @@
   	<img class="img-badge" src="/static/img/huobi/ogn-activity-2.svg"/>
   	<h2>{{gettext("Origin Holder Airdrop")}}</h2>
   	<div class="subtitle">{{gettext("Activity time period: First 60 days of listing")}}</div>
-  	<h3>{{gettext("Activity rules")}}</h3>
   	<div class="border-box last">
   		<ul>
   			<li>{{gettext("The OGN Holder Airdrop will reward Huobi traders that HODL OGN over a two-month period. 500k of OGN will be rewarded to OGN Holder participants.")}}</li>
+  		</ul>
+			<h3 class="non-first">{{gettext("Airdrop rounds")}}</h3>
+			<ul>
   			<li>{{gettext("The OGN Holder Airdrop campaign will begin after the OGN Net Asset Increase competition ends. There will be two month-long rounds.")}}</li>
   			<ul>
 					<li>{{gettext("Round 1 will commence from June 23, 2020 2:01PM to July 23, 2020 2PM")}}</li>
 					<li>{{gettext("Round 2 will commence from July 23, 2020 2:01PM to August 23, 2020 2PM")}}</li>
 				</ul>
+			</ul>
+			<h3 class="non-first">{{gettext("Airdrop rules")}}</h3>
+			<ul>
 				<li>{{gettext("For each round, 250k OGN will be rewarded to OGN holders to OGN holders based on the amount of OGN they are holding relative to all other OGN holders:")}}</li>
   			<ul>
 					<li>{{gettext("OGN rewarded = OGN Holder score x (The average OGN holdings that the user holds during the month / The total amount of OGN all users hold)")}}</li>
