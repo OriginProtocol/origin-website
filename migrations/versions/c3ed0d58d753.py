@@ -18,7 +18,7 @@ depends_on = None
 def upgrade():
     op.create_table('circulating_supply',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('snapshot_date', sa.DateTime(timezone=True), server_default=sa.text(u'now()'), nullable=True),
+    sa.Column('snapshot_date', sa.DateTime(timezone=True), server_default=sa.text(u'now()'), nullable=True, index=True),
     sa.Column('supply_amount', sa.Float(), nullable=True),
     sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text(u'now()'), nullable=True),
     sa.PrimaryKeyConstraint('id')

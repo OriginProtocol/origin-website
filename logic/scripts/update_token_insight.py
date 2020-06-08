@@ -18,6 +18,8 @@ from util import time_
 
 from redis import Redis
 
+import json
+
 redis_client = Redis.from_url(os.environ['REDIS_URL'])
 
 # NOTE: remember to use lowercase addresses for everything
@@ -558,27 +560,13 @@ def get_ogn_stats(format_data = True):
     return out_data
     
 def get_supply_history():
-    results = db_models.CirculatingSupply.query.order_by(db_models.CirculatingSupply.snapshot_date.asc()).all()
+    data =  redis_client.get("ogn_supply_data") or "[]"
 
-    out = []
-
-    for result in results:
-        out.append(dict([
-            ("supply_amount", result.supply_amount),
-            ("snapshot_date", result.snapshot_date.isoformat())
-        ]))
-
-    return out
+    return data
 
 def update_circulating_supply():
     stats = get_ogn_stats(format_data=False)
-    snapshot_date = datetime.utcnow().replace(
-        day=1,
-        hour=0,
-        minute=0,
-        second=0, 
-        microsecond=0
-    )
+    snapshot_date = datetime.utcnow()
 
     supply_snapshot = db_common.get_or_create(
         db.session, db_models.CirculatingSupply, snapshot_date=snapshot_date
@@ -587,8 +575,36 @@ def update_circulating_supply():
     supply_snapshot.supply_amount = stats["circulating_supply"]
     db.session.commit()
 
+    supply_data = db.engine.execute("""
+    select timewin, max(s.supply_amount)
+    from 
+        generate_series(now() - interval '12 month', now(), '1 day') as timewin
+    left outer join 
+        (select * from circulating_supply where snapshot_date > now() - interval '12 month' and snapshot_date > '2020-01-01'::date order by snapshot_date desc) s
+    on s.snapshot_date < timewin 
+        and s.snapshot_date >= timewin - (interval '1 day')
+    where timewin > '2020-01-01'::date
+    group by timewin
+    order by timewin desc
+    """)
+
+    out = []
+
+    supply_data_list = list(supply_data)
+    latest_supply = supply_data_list[0][1]
+
+    for row in supply_data_list:
+        if row[1] is not None:
+            latest_supply = row[1]
+
+        out.append(dict([
+            ("supply_amount", row[1] or latest_supply),
+            ("snapshot_date", row[0].strftime("%Y/%m/%d %H:%M:%S"))
+        ]))
+
+    redis_client.set("ogn_supply_data", json.dumps(list(reversed(out))))
+
     print "Updated current circulating supply to %s" % stats["circulating_supply"]
-    
 
 if __name__ == "__main__":
     # called via cron on Heroku
