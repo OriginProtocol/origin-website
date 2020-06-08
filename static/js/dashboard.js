@@ -19,6 +19,13 @@
     foundation_reserves: [0.31,0.31,0.31,0.78,0.78,0.78,1.41,1.41,1.41,2.04,2.04,2.04,2.67,2.67,2.67,3.29,3.29,3.29,3.92,3.92,3.92,4.55,4.55,4.55,5.18,5.18,5.18,5.8,5.8,5.8,6.43,6.43,6.43,7.06,7.06,7.06,7.69,7.69,7.69,8.31,8.31,8.31,8.94,8.94,8.94,9.57,9.57,9.57,10.2,10.2,10.2,10.82,10.82,10.82,11.45]
   }
 
+  function formattedDate(dateObj) {
+    var currentMonth = dateObj.getMonth()
+
+    var monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][currentMonth]
+    return monthName + ' ' + dateObj.getFullYear()
+  }
+
   function initUnlockChart(canvasEl) {
     var datasets = { 
       partnerships: {
@@ -125,15 +132,25 @@
     var ognSupplyHistory = window.ognSupplyHistory || []
     var dataLen = ognSupplyHistory.length
 
-    var modeledData = new Array(dataLen).fill(0)
-      .map((_, index) => {
+    var xAxesLabels = ognSupplyHistory.map(x => new Date(x.snapshot_date))
+
+    var releasedData = ognSupplyHistory.map(x => parseInt(x.supply_amount / 1000000))
+
+    var monthToModeledValue = {}
+    Object.values(releaseScheduleXAxes)
+      .map((month, index) => {
         var val = Object.keys(releaseScheduleData)
           .map(k => releaseScheduleData[k][index])
           .reduce((sum, v) => sum + v, 0)
-        return parseInt((10000000 * val) / 1000000)
+        
+        monthToModeledValue[month] = parseInt((10000000 * val) / 1000000)
       })
 
-    var releasedData = ognSupplyHistory.map(x => parseInt(x.supply_amount / 1000000))
+    var modeledData = new Array(dataLen).fill(0)
+      .map((_, index) => {
+        var d = formattedDate(new Date(ognSupplyHistory[index].snapshot_date))
+        return monthToModeledValue[d]
+      })
 
     var datasets = {
       modeled: {
@@ -153,7 +170,7 @@
     var cdata = {
       type: 'line', 
       data: { 
-        labels: releaseScheduleXAxes.slice(0, ognSupplyHistory.length), 
+        labels: xAxesLabels.slice(0, ognSupplyHistory.length), 
         datasets: Object.keys(datasets)
           .map(k => ({
             ...datasets[k],
@@ -179,7 +196,10 @@
         scales: { 
           xAxes: [{ 
             ticks: { 
-              display: true
+              display: true,
+              callback: function(value, index, values) {
+                return formattedDate(value)
+              }
             } 
           }],
           yAxes: [{
