@@ -42,11 +42,15 @@ function addToMailingList(event) {
         );
         emailInput.value = decodeURIComponent(inputData.split("=").pop());
         emailInput.parentElement.classList.add("d-none");
+
       } else {
         toggleElementsState(formElements, false);
       }
 
       if (data.success) {
+        if (window.onAddedToEmailList) {
+          window.onAddedToEmailList()
+        }
         fbq("track", "Lead");
       }
 
@@ -63,6 +67,8 @@ function closeOgnOverlay(event) {
 
 $("#countdown-hero-banner-button").click(closeOgnOverlay);
 $("#mailing-list").submit(addToMailingList);
+$("#huobi-mail-list-1").submit(addToMailingList);
+$("#huobi-mail-list-2").submit(addToMailingList);
 $("#mailing-list-footer").submit(addToMailingList);
 $("#mailing-list-nav-bar").submit(addToMailingList);
 
@@ -728,7 +734,7 @@ $(function () {
     },
     {
       name: "Blockfolio",
-      subscribed_count: 64185
+      subscribed_count: 66294
     }
   ];
 
@@ -820,7 +826,7 @@ $(function () {
     Reddit: {
       img: "/static/img/about/reddit.svg",
       countLabel: "subscribers",
-      link: "https://www.reddit.com/r/",
+      link: "https://www.reddit.com/r/originprotocol",
       regionSpecific: false
     },
     Medium: {

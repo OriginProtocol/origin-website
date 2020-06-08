@@ -5,34 +5,25 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
 {% include 'navbar.html' %} {% endwith %}
 
 <main class="team-page">
-  <div
-    class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center"
-  >
+  <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
     <div id="team-video" class="full-screen-video d-none"></div>
     <div id="exit-fullscreen-button" class="d-none">
       {{gettext("Exit full screen")}}
     </div>
     <div class="background-video">
-      <div
-        class="video-holder d-flex flex-column justify-content-end align-items-center"
-      >
+      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
         <div id="team-video-background"></div>
       </div>
     </div>
     <div class="video-overlay"></div>
     <div class="video-overlay-gradient"></div>
     <div id="team-video-poster" class="video-overlay-poster"></div>
-    <div
-      class="contents d-flex flex-column justify-content-center align-items-center"
-    >
+    <div class="contents d-flex flex-column justify-content-center align-items-center">
       <h1 class="video-title">
         {{gettext("Our world-class team is led by entrepreneurs and engineers
         from iconic tech companies")}}
       </h1>
-      <button
-        id="team-video-button"
-        class="play-button d-flex justify-content-center align-items-center m-4"
-      >
+      <button id="team-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg" />
       </button>
       <div class="mt-2">{{gettext("Watch the video")}}</div>
@@ -50,18 +41,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-josh.jpg"
-                    class="headshot"
-                    alt="Josh Fraser headshot"
-                  />
+                  <img src="/static/img/headshot-josh.jpg" class="headshot" alt="Josh Fraser headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="http://www.linkedin.com/in/joshuafraser"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Josh Fraser") }}
+                  <a href="http://www.linkedin.com/in/joshuafraser" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Josh Fraser") }}
                   </a>
                 </div>
                 <div class="title">
@@ -77,18 +61,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-matt.jpg"
-                    class="headshot"
-                    alt="Matthew Liu headshot"
-                  />
+                  <img src="/static/img/headshot-matt.jpg" class="headshot" alt="Matthew Liu headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="http://www.linkedin.com/in/matthewliu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Matthew Liu") }}
+                  <a href="http://www.linkedin.com/in/matthewliu" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Matthew Liu") }}
                   </a>
                 </div>
                 <div class="title">
@@ -104,18 +81,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-coleman.jpg"
-                    class="headshot"
-                    alt="Coleman Maher headshot"
-                  />
+                  <img src="/static/img/headshot-coleman.jpg" class="headshot" alt="Coleman Maher headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/coleman-maher-sf/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Coleman Maher
+                  <a href="https://www.linkedin.com/in/coleman-maher-sf/" target="_blank"
+                    rel="noopener noreferrer">Coleman Maher
                   </a>
                 </div>
                 <div class="title">
@@ -131,18 +101,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-yupan.jpg"
-                    class="headshot"
-                    alt="Yu Pan headshot"
-                  />
+                  <img src="/static/img/headshot-yupan.jpg" class="headshot" alt="Yu Pan headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://en.wikipedia.org/wiki/Yu_Pan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Yu Pan") }}
+                  <a href="https://en.wikipedia.org/wiki/Yu_Pan" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Yu Pan") }}
                   </a>
                 </div>
                 <div class="title">
@@ -158,18 +121,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-micah.jpg"
-                    class="headshot"
-                    alt="Micah Alcorn headshot"
-                  />
+                  <img src="/static/img/headshot-micah.jpg" class="headshot" alt="Micah Alcorn headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://twitter.com/micahalcorn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Micah Alcorn") }}
+                  <a href="https://twitter.com/micahalcorn" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Micah Alcorn") }}
                   </a>
                 </div>
                 <div class="title">
@@ -187,18 +143,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-kay.jpg"
-                    class="headshot"
-                    alt="Kay Yoo headshot"
-                  />
+                  <img src="/static/img/headshot-kay.jpg" class="headshot" alt="Kay Yoo headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/kay-yoo-53006960/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Kay Yoo") }}
+                  <a href="https://www.linkedin.com/in/kay-yoo-53006960/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Kay Yoo") }}
                   </a>
                 </div>
                 <div class="title">
@@ -215,18 +164,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-franck.jpg"
-                    class="headshot"
-                    alt="Franck Chastagnol headshot"
-                  />
+                  <img src="/static/img/headshot-franck.jpg" class="headshot" alt="Franck Chastagnol headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/franckc/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Franck Chastagnol") }}
+                  <a href="https://www.linkedin.com/in/franckc/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Franck Chastagnol") }}
                   </a>
                 </div>
                 <div class="title">
@@ -244,18 +186,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-mila.jpg"
-                    class="headshot"
-                    alt="Mila Choi headshot"
-                  />
+                  <img src="/static/img/headshot-mila.jpg" class="headshot" alt="Mila Choi headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/so-young-mila-choi-30514769/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Mila Choi") }}
+                  <a href="https://www.linkedin.com/in/so-young-mila-choi-30514769/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Mila Choi") }}
                   </a>
                 </div>
                 <div class="title">
@@ -272,18 +207,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-tom.jpg"
-                    class="headshot"
-                    alt="Tom Linton headshot"
-                  />
+                  <img src="/static/img/headshot-tom.jpg" class="headshot" alt="Tom Linton headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/tom-linton-68866b140/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Tom Linton") }}
+                  <a href="https://www.linkedin.com/in/tom-linton-68866b140/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Tom Linton") }}
                   </a>
                 </div>
                 <div class="title">
@@ -301,18 +229,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-anna.jpg"
-                    class="headshot"
-                    alt="Anna Wang headshot"
-                  />
+                  <img src="/static/img/headshot-anna.jpg" class="headshot" alt="Anna Wang headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/anna-wang-sijia/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Anna Wang") }}
+                  <a href="https://www.linkedin.com/in/anna-wang-sijia/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Anna Wang") }}
                   </a>
                 </div>
                 <div class="title">
@@ -330,18 +251,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-nick.jpg"
-                    class="headshot"
-                    alt="Nick Poulden headshot"
-                  />
+                  <img src="/static/img/headshot-nick.jpg" class="headshot" alt="Nick Poulden headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/nickpoulden/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Nick Poulden") }}
+                  <a href="https://www.linkedin.com/in/nickpoulden/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Nick Poulden") }}
                   </a>
                 </div>
                 <div class="title">
@@ -358,18 +272,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-domen.jpg"
-                    class="headshot"
-                    alt="Domen Grabec headshot"
-                  />
+                  <img src="/static/img/headshot-domen.jpg" class="headshot" alt="Domen Grabec headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/domen-grabec-a5821a7/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Domen Grabec") }}
+                  <a href="https://www.linkedin.com/in/domen-grabec-a5821a7/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Domen Grabec") }}
                   </a>
                 </div>
                 <div class="title">
@@ -386,18 +293,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-shahul.jpg"
-                    class="headshot"
-                    alt="Shahul Hameed headshot"
-                  />
+                  <img src="/static/img/headshot-shahul.jpg" class="headshot" alt="Shahul Hameed headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/shahthepro/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Shahul Hameed") }}
+                  <a href="https://www.linkedin.com/in/shahthepro/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Shahul Hameed") }}
                   </a>
                 </div>
                 <div class="title">
@@ -414,47 +314,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-zaurbek.jpg"
-                    class="headshot"
-                    alt="Zaurbek Ivanov headshot"
-                  />
+                  <img src="/static/img/headshot-mike.jpg" class="headshot" alt="Mike Shultz headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://vk.com/zaurbeksf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Zaurbek Ivanov") }}
-                  </a>
-                </div>
-                <div class="title">
-                  {{ gettext("Russia Community") }}
-                </div>
-                <div class="bio">
-                  {{ gettext("Zaurbek Ivanov studied Economics at
-                  Kabardino-Balkaria State Agrarian University in Nalchik,
-                  Russia. He has worked in the hospitality industry in the US
-                  and Russia.") }}
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-xl-4">
-              <div class="team-member">
-                <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-mike.jpg"
-                    class="headshot"
-                    alt="Mike Shultz headshot"
-                  />
-                </div>
-                <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/shultzm/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Mike Shultz") }}
+                  <a href="https://www.linkedin.com/in/shultzm/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Mike Shultz") }}
                   </a>
                 </div>
                 <div class="title">
@@ -472,18 +336,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-aure.jpeg"
-                    class="headshot"
-                    alt="Aure Gimon headshot"
-                  />
+                  <img src="/static/img/headshot-aure.jpeg" class="headshot" alt="Aure Gimon headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/aure-gimon-8501041/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Aure Gimon") }}
+                  <a href="https://www.linkedin.com/in/aure-gimon-8501041/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Aure Gimon") }}
                   </a>
                 </div>
                 <div class="title">
@@ -501,18 +358,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
             <div class="col-12 col-md-6 col-xl-4">
               <div class="team-member">
                 <div class="headshot-wrapper">
-                  <img
-                    src="/static/img/headshot-max.png"
-                    class="headshot"
-                    alt="Max Unger headshot"
-                  />
+                  <img src="/static/img/headshot-max.png" class="headshot" alt="Max Unger headshot" />
                 </div>
                 <div class="name">
-                  <a
-                    href="https://www.linkedin.com/in/max-unger-3ba1621a6/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >{{ gettext("Max Unger") }}
+                  <a href="https://www.linkedin.com/in/max-unger-3ba1621a6/" target="_blank"
+                    rel="noopener noreferrer">{{ gettext("Max Unger") }}
                   </a>
                 </div>
                 <div class="title">
@@ -539,16 +389,10 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
           <h1>{{gettext("Community team")}}</h1>
         </div>
       </div>
-      <div
-        class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around"
-      >
+      <div class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around">
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-holly.jpg"
-              class="headshot"
-              alt="Holly Gu headshot"
-            />
+            <img src="/static/img/headshot-holly.jpg" class="headshot" alt="Holly Gu headshot" />
           </div>
           <div class="name">
             {{ gettext("Holly Gu") }}
@@ -556,11 +400,7 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-june.png"
-              class="headshot"
-              alt="June Kim headshot"
-            />
+            <img src="/static/img/headshot-june.png" class="headshot" alt="June Kim headshot" />
           </div>
           <div class="name">
             {{ gettext("June Kim") }}
@@ -568,11 +408,7 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-yeongin.png"
-              class="headshot"
-              alt="Yeongin Lee headshot"
-            />
+            <img src="/static/img/headshot-yeongin.png" class="headshot" alt="Yeongin Lee headshot" />
           </div>
           <div class="name">
             {{ gettext("Yeongin Lee") }}
@@ -580,11 +416,7 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-leslie.png"
-              class="headshot"
-              alt="Leslie Song headshot"
-            />
+            <img src="/static/img/headshot-leslie.png" class="headshot" alt="Leslie Song headshot" />
           </div>
           <div class="name">
             {{ gettext("Leslie Song") }}
@@ -601,23 +433,14 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
           <h1>{{gettext("Advisors")}}</h1>
         </div>
       </div>
-      <div
-        class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around"
-      >
+      <div class="d-flex flex-sm-row flex-wrap align-items-center justify-content-sm-center justify-content-around">
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-addison.jpg"
-              class="headshot"
-              alt="Addison Huegel headshot"
-            />
+            <img src="/static/img/headshot-addison.jpg" class="headshot" alt="Addison Huegel headshot" />
           </div>
           <div class="name">
-            <a
-              href="https://www.linkedin.com/in/addisonhuegel/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ gettext("Addison Huegel") }}
+            <a href="https://www.linkedin.com/in/addisonhuegel/" target="_blank"
+              rel="noopener noreferrer">{{ gettext("Addison Huegel") }}
             </a>
           </div>
           <div class="title">
@@ -626,18 +449,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-melody.jpg"
-              class="headshot"
-              alt="Melody He headshot"
-            />
+            <img src="/static/img/headshot-melody.jpg" class="headshot" alt="Melody He headshot" />
           </div>
           <div class="name">
-            <a
-              href="https://www.linkedin.com/in/melody-he-497a5b25/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ gettext("Melody He") }}
+            <a href="https://www.linkedin.com/in/melody-he-497a5b25/" target="_blank"
+              rel="noopener noreferrer">{{ gettext("Melody He") }}
             </a>
           </div>
           <div class="title">
@@ -646,18 +462,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-paul.jpg"
-              class="headshot"
-              alt="Paul Veradittakit headshot"
-            />
+            <img src="/static/img/headshot-paul.jpg" class="headshot" alt="Paul Veradittakit headshot" />
           </div>
           <div class="name">
-            <a
-              href="https://www.linkedin.com/in/veradittakit/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ gettext("Paul Veradittakit") }}
+            <a href="https://www.linkedin.com/in/veradittakit/" target="_blank"
+              rel="noopener noreferrer">{{ gettext("Paul Veradittakit") }}
             </a>
           </div>
           <div class="title">
@@ -666,18 +475,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-joey.jpg"
-              class="headshot"
-              alt="Joey Krug headshot"
-            />
+            <img src="/static/img/headshot-joey.jpg" class="headshot" alt="Joey Krug headshot" />
           </div>
           <div class="name">
-            <a
-              href="https://www.linkedin.com/in/joeykrug/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ gettext("Joey Krug") }}
+            <a href="https://www.linkedin.com/in/joeykrug/" target="_blank"
+              rel="noopener noreferrer">{{ gettext("Joey Krug") }}
             </a>
           </div>
           <div class="title">
@@ -686,18 +488,11 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="team-member">
           <div class="headshot-wrapper">
-            <img
-              src="/static/img/headshot-andrew.jpg"
-              class="headshot"
-              alt="Andrew Hyde headshot"
-            />
+            <img src="/static/img/headshot-andrew.jpg" class="headshot" alt="Andrew Hyde headshot" />
           </div>
           <div class="name">
-            <a
-              href="http://www.linkedin.com/in/andrewhyde"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ gettext("Andrew Hyde") }}
+            <a href="http://www.linkedin.com/in/andrewhyde" target="_blank"
+              rel="noopener noreferrer">{{ gettext("Andrew Hyde") }}
             </a>
           </div>
           <div class="title">
@@ -721,17 +516,9 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         <div class="p-0 px-md-3 col-3 col-md-2 col-lg-2 col-xl-2">
           <div class="team-member">
             <div class="headshot-wrapper-small">
-              <a
-                href="https://github.com/{{ person.username }}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="{{ person.avatar }}"
-                  class="headshot"
-                  alt="{{ person.username }}"
-                  title="{{ person.username }}"
-                />
+              <a href="https://github.com/{{ person.username }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ person.avatar }}" class="headshot" alt="{{ person.username }}"
+                  title="{{ person.username }}" />
               </a>
             </div>
           </div>
@@ -744,18 +531,10 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="col-12">
           <div class="action-buttons">
-            <a
-              href="https://github.com/OriginProtocol"
-              class="btn btn-primary btn-inverse"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{gettext("Visit our GitHub Repository")}}</a
-            >
-            <a
-              href="https://discord.gg/rZnxkSq"
-              class="btn btn-primary btn-inverse"
-              >{{gettext("Join our #engineering channel on Discord")}}</a
-            >
+            <a href="https://github.com/OriginProtocol" class="btn btn-primary btn-inverse" target="_blank"
+              rel="noopener noreferrer">{{gettext("Visit our GitHub Repository")}}</a>
+            <a href="https://discord.gg/rZnxkSq"
+              class="btn btn-primary btn-inverse">{{gettext("Join our #engineering channel on Discord")}}</a>
           </div>
         </div>
       </div>
@@ -776,13 +555,8 @@ tech companies") }}{% endblock %} {% block content %} {% with theme_dark=True %}
         </div>
         <div class="col-12">
           <div class="action-buttons">
-            <a
-              href="https://angel.co/jobs?slug=originprotocol"
-              class="btn btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{gettext("View job posts")}}</a
-            >
+            <a href="https://angel.co/jobs?slug=originprotocol" class="btn btn-primary" target="_blank"
+              rel="noopener noreferrer">{{gettext("View job posts")}}</a>
           </div>
         </div>
       </div>
