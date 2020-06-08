@@ -771,7 +771,7 @@
 		  	</div>
 
 		  	<!-- Blue rocket 1 -->
-    		<div class="rocket-holder blue blue1">
+    		<div id="blue-rocket-holder-1" class="rocket-holder blue blue1">
     			<div class="rocket-holder2 two">
 			  		<img class="rocket" src="/static/img/huobi/blue-rocket.svg"/>
 			  		<div class="partiles-holder">
@@ -789,7 +789,7 @@
 		  	</div>
 
 		  	<!-- Blue rocket 2 -->
-    		<div class="rocket-holder blue blue2">
+    		<div id="blue-rocket-holder-2" class="rocket-holder blue blue2">
     			<div class="rocket-holder2 two">
 			  		<img class="rocket" src="/static/img/huobi/blue-rocket.svg"/>
 			  		<div class="partiles-holder">
@@ -883,12 +883,14 @@
 				<li>{{gettext("$25k USDT will be awarded in each 3-day round, for a total of $100k USDT.")}}</li>
 				<li>{{gettext("For each 3-day reward period, traders will be ranked by their overall OGN Net Increase Amount:")}}</li>
 				<ul>
-					<li>{{gettext("1st place: $5k USDT")}}</li>
-					<li>{{gettext("2nd place: $3k USDT")}}</li>
-					<li>{{gettext("3rd place: $1k USDT")}}</li>
-					<li>{{gettext("4th place: $600 USDT")}}</li>
-					<li>{{gettext("5th pace: $400 USDT ")}}</li>
-					<li>{{gettext("6th to 100th places: Split $15k USDT evenly")}}</li>
+					<li>{{gettext("1st place: $3k USDT")}}</li>
+					<li>{{gettext("2nd place: $2.5k USDT")}}</li>
+					<li>{{gettext("3rd place: $2k USDT")}}</li>
+					<li>{{gettext("4th place: $1.5k USDT")}}</li>
+					<li>{{gettext("5th pace: $1k USDT")}}</li>
+					<li>{{gettext("6th to 30th places: Split $7.5k USDT evenly")}}</li>
+					<li>{{gettext("31st to 60th places: Split $5k USDT evenly")}}</li>
+					<li>{{gettext("61st to 100th places: Split $2.5k USDT evenly")}}</li>
 				</ul>
 				<li>{{gettext("Traders can win in multiple rewards periods, but the OGN Net Increase Amount is calculated using the snapshot at the end of the last period:")}}</li>
 				<ul>
@@ -918,6 +920,7 @@
   			<ul>
 					<li>{{gettext("OGN rewarded = OGN Holder score x (The average OGN holdings that the user holds during the month / The total amount of OGN all users hold)")}}</li>
 					<li>{{gettext("Users who hold on average 1000 HT or more in each monthly airdrop period will double the value for their average OGN holdings for the month for the rewards calculation")}}</li>
+					<li>{{gettext("Users who have held on average at least 1000 HT for 90 days prior to each airdrop distribution will triple the value for their average OGN holdings for the month for the rewards calculation")}}</li>
 				</ul>
 				<li>{{gettext("In addition, users must meet the following eligibility requirements:")}}</li>
   			<ul>
@@ -961,6 +964,78 @@
 {% block extra_scripts %} 
 <script type='text/javascript'>
   $(function() {
+
+  const animations = {}
+
+  const animateValue = ({
+	  from, // start value
+	  to, // end value
+	  callbackValue, // callback that is called each animation frame with the animated "value" property
+	  onCompleteCallback, // callback that is called each animation frame with the animated "value" property
+	  duration, // duration in miliseconds
+	  id, // unique animation id. So new animations issued with this is can ovverride old ones
+	  easing = 'linear'
+	}) => {
+		const delay = 0
+	  const getCurrentTime = () => {
+	    return (new Date()).getTime()
+	  }
+
+	  id = id ? id : Math.round(Math.random() * 10000)
+	  const executeRoutine = () => {
+	    const start = getCurrentTime()
+	    callbackValue(from)
+	    if (animations[id]) {
+	      clearInterval(animations[id])
+	    }
+
+	    const interval = setInterval(() => {
+	      const time = getCurrentTime()
+	      // animation stopped
+	      if (time - start > duration) {
+	        callbackValue(to)
+	        clearInterval(interval)
+	        if (onCompleteCallback) {
+	          onCompleteCallback()
+	        }
+	        delete animations[id]
+	        return
+	      }
+
+	      const change = (to - from)
+	      const time_elapsed = (time - start)
+	      let value
+	      if (easing === 'linear') {
+	        const completedPercentage = time_elapsed / duration
+	        value = Math.round((from + change * completedPercentage) * 100) / 100
+	      } else if (easing === 'circin') {
+	        const t = time_elapsed/duration
+	        value = -change * (Math.sqrt(1 - t*t) - 1) + from;
+	      } else if (easing === 'inBack') {
+	        const s = 1.70158
+	        const completedPercentage = time_elapsed / duration
+	        const n = completedPercentage * completedPercentage * (( s + 1 ) * completedPercentage - s)
+	        value = from + change * n
+	      } else if (easing === 'outBack') {
+	        const s = 1.70158
+	        let completedPercentage = time_elapsed / duration
+	        const n = --completedPercentage * completedPercentage * (( s + 1 ) * completedPercentage + s) +1
+	        value = from + change * n
+	      }
+
+	      callbackValue(value)
+	    }, 30)
+
+	    animations[id] = interval
+	  }
+
+	  if (delay === 0) {
+	    executeRoutine()
+	  } else {
+	    setTimeout(() => { executeRoutine()}, delay)
+	  }
+	}
+
   	// Change all the email input forms to success screens
   	window.onAddedToEmailList = function () {
   		var inputForms = document.getElementsByClassName("email-input-form")
@@ -975,10 +1050,41 @@
   		}
   	}
 
+  	var blueRocketHolder1 = document.getElementById("blue-rocket-holder-1")
+  	var blueRocketHolder2 = document.getElementById("blue-rocket-holder-2")
+  	var blueStartRightPos1 = parseInt(window.getComputedStyle(blueRocketHolder1).right)
+  	var blueStartRightPos2 = parseInt(window.getComputedStyle(blueRocketHolder2).right)
+
+  	var locked = false
   	var rockIt = function() {
+  		if (locked) {
+  			return 
+  		}
+
+  		locked = true
     	var trails = document.getElementById("red-rocket-trails")
     	var trailsYellow = document.getElementById("red-rocket-trails-yellow")
     	var redRocketHolder = document.getElementById("red-rocket-holder")
+
+    	animateValue({
+    		from: blueStartRightPos1,
+    		to: blueStartRightPos1 + 100,
+    		callbackValue: (right) => {
+    			blueRocketHolder1.style.right = `${right}px`
+    		},
+    		duration: 500,
+    		easing: 'outBack'
+    	})
+
+    	animateValue({
+    		from: blueStartRightPos2,
+    		to: blueStartRightPos2 + 100,
+    		callbackValue: (right) => {
+    			blueRocketHolder2.style.right = `${right}px`
+    		},
+    		duration: 500,
+    		easing: 'outBack'
+    	})
 
     	trails.classList.add("d-none")
     	trailsYellow.classList.remove("d-none")
@@ -987,6 +1093,27 @@
     		trails.classList.remove("d-none")
     		trailsYellow.classList.add("d-none")
     		redRocketHolder.classList.remove("big-shake")
+
+    		animateValue({
+	    		from: blueStartRightPos1 + 100,
+	    		to: blueStartRightPos1,
+	    		callbackValue: (right) => {
+	    			blueRocketHolder1.style.right = `${right}px`
+	    		},
+	    		duration: 500,
+	    		easing: 'inBack'
+	    	})
+
+	    	animateValue({
+	    		from: blueStartRightPos2 + 100,
+	    		to: blueStartRightPos2,
+	    		callbackValue: (right) => {
+	    			blueRocketHolder2.style.right = `${right}px`
+	    		},
+	    		duration: 500,
+	    		easing: 'inBack'
+	    	})
+	    	locked = false
     	}, 2100)
     }
 
