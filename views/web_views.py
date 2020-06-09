@@ -477,6 +477,11 @@ def huobi_launch():
 def dshop():
     return render_template('dshop.html', hide_ogn_banner=True, )
 
+@app.route('/dashboard', strict_slashes=False)
+@app.route('/<lang_code>/dashboard', strict_slashes=False)
+def dashboard():
+    return render_template('dashboard.html', ogn_stats=insight.get_ogn_stats(), supply_history=insight.get_supply_history())
+
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
     return Response(concat_asset_files([
@@ -504,7 +509,8 @@ def assets_all_styles():
         "static/css/pages/presale.css",
         "static/css/pages/whitepaper.css",
         "static/css/pages/browser-extension.css",
-        "static/css/pages/dshop.css"
+        "static/css/pages/dshop.css",
+        "static/css/pages/dashboard.css"
     ]), mimetype="text/css")
 
 @app.route('/static/js/all_javascript.js', strict_slashes=False)
@@ -516,12 +522,16 @@ def assets_all_javascript():
         "static/js/vendor-alertify.js",
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
+        "static/js/vendor-chart.min.js",
+        "static/js/vendor-moment.min.js",
+        "static/js/vendor-chartjs-adapter-moment.min.js",
         "static/js/script.js",
         "static/js/countdown-timer.js",
         "static/js/yt-player.js",
         "static/js/videos.js",
         "static/js/youkuPlayer.js",
         "static/js/scrollspy.js",
+        "static/js/dashboard.js",
     ], True), mimetype="application/javascript")
 
 @app.errorhandler(404)
