@@ -25,47 +25,38 @@
     var monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][currentMonth]
     return monthName + ' ' + dateObj.getFullYear()
   }
-
-  function initUnlockChart(canvasEl) {
+  function initUnlockChart(canvasEl, legendsEl) {
     var datasets = { 
       partnerships: {
-        backgroundColor: 'rgba(66, 133, 244, 0.25)',
-        borderColor: 'rgba(66, 133, 244)',
+        borderColor: '#1a82ff',
         label: 'Long-term Partnership',
       },
       coinlist_round: {
-        backgroundColor: 'rgba(234, 67, 53, 0.25)',
-        borderColor: 'rgba(234, 67, 53)',
+        borderColor: '#7a54ef',
         label: 'CoinList Round',
       },
       strategic_round: {
-        backgroundColor: 'rgba(249, 188, 6, 0.25)',
-        borderColor: 'rgba(249, 188, 6)',
+        borderColor: '#00d592',
         label: 'Strategic Round',
       },
       advisor_sale: {
-        backgroundColor: 'rgba(52, 168, 83, 0.25)',
-        borderColor: 'rgba(52, 168, 83)',
+        borderColor: '#fec100',
         label: 'Advisor Sale',
       },
       advisor_grants: {
-        backgroundColor: 'rgba(246, 109, 5, 0.25)',
-        borderColor: 'rgba(246, 109, 5)',
+        borderColor: '#2e3f53',
         label: 'Advisor Grants',
       },
       team: {
-        backgroundColor: 'rgba(70, 190, 198, 0.25)',
-        borderColor: 'rgba(70, 190, 198)',
+        borderColor: '#111d28',
         label: 'Team',
       },
       ecosystem_growth: {
-        backgroundColor: 'rgba(123, 170, 247, 0.25)',
-        borderColor: 'rgba(123, 170, 247)',
+        borderColor: '#ed2a28',
         label: 'Ecosystem Growth',
       },
       foundation_reserves: {
-        backgroundColor: 'rgba(240, 123, 114, 0.25)',
-        borderColor: 'rgba(240, 123, 114)',
+        borderColor: '#007246',
         label: 'Foundation Reserves',
       },
     }
@@ -78,7 +69,8 @@
           .map(k => ({
             ...datasets[k],
             data: releaseScheduleData[k],
-            fill: 'origin',
+            // fill: 'origin',
+            fill: false,
             pointHoverRadius: 1,
             pointRadius: 1,
             borderSize: 0.2
@@ -120,15 +112,32 @@
           display: false 
         },
         legend: {
+          display: false,
           position: 'bottom'
-        }
+        },
+        legendCallback: function (chart) {
+          var text = []
+          text.push('<div class="' + chart.id + '-legend chart-legends grid-type">')  
+          for (var i = 0; i < chart.data.datasets.length; i++) {
+            text.push('<div class="legend-item">')
+            text.push('<span class="legend-color" style="background-color:' + chart.data.datasets[i].borderColor + '"></span>')
+            text.push('<span class="legend-name">' + chart.data.datasets[i].label + '</span>')
+            text.push('</div>')
+          }
+          text.push('</div>')
+          return text.join('')
+        },
       } 
     }
 
-    new Chart(canvasEl, cdata)
+    var chartObj = new Chart(canvasEl, cdata)
+    
+    if (legendsEl) {
+      legendsEl.innerHTML = chartObj.generateLegend()
+    }
   }
 
-  function initReleaseChart(canvasEl) {
+  function initReleaseChart(canvasEl, legendsEl) {
     var ognSupplyHistory = window.ognSupplyHistory || []
     var dataLen = ognSupplyHistory.length
 
@@ -152,16 +161,16 @@
         return monthToModeledValue[d]
       })
 
+    var maxVal = parseInt((Math.max(modeledData[dataLen - 1], releasedData[dataLen - 1])) / 100) * 100 * 2
+
     var datasets = {
       modeled: {
-        backgroundColor: 'rgba(66, 133, 244, 0.25)',
-        borderColor: 'rgba(66, 133, 244)',
+        borderColor: '#1a82ff',
         label: 'Modeled',
         data: modeledData
       },
       released: {
-        backgroundColor: 'rgba(70, 190, 198, 0.25)',
-        borderColor: 'rgba(70, 190, 198)',
+        borderColor: '#7a54ef',
         label: 'Released',
         data: releasedData
       },
@@ -174,7 +183,8 @@
         datasets: Object.keys(datasets)
           .map(k => ({
             ...datasets[k],
-            fill: 'origin',
+            // fill: 'origin',
+            fill: false,
             pointHoverRadius: 1,
             pointRadius: 1,
             borderSize: 0.2
@@ -212,8 +222,8 @@
           yAxes: [{
             ticks: {
               min: 0,
-              stepSize: 50,
-              max: 200,
+              stepSize: maxVal / 4,
+              max: maxVal,
               callback: function(value, index, values) {
                 return value + 'M'
               }
@@ -226,22 +236,42 @@
           display: false 
         },
         legend: {
+          display: false,
           position: 'bottom'
-        }
-      } 
+        },
+        legendCallback: function (chart) {
+          var text = []
+          text.push('<div class="' + chart.id + '-legend chart-legends">')  
+          for (var i = 0; i < chart.data.datasets.length; i++) {
+            text.push('<div class="legend-item">')
+            text.push('<span class="legend-color" style="background-color:' + chart.data.datasets[i].borderColor + '"></span>')
+            text.push('<span class="legend-name">' + chart.data.datasets[i].label + '</span>')
+            text.push('</div>')
+          }
+          text.push('</div>')
+          return text.join('')
+        },
+      }
     }
 
-    new Chart(canvasEl, cdata)
+    var chartObj = new Chart(canvasEl, cdata)
+    
+    if (legendsEl) {
+      legendsEl.innerHTML = chartObj.generateLegend()
+    }
   }
 
   function onDOMReady() {
     var unlockChart = document.getElementById('unlock_schedule_chart')
     var releaseChart = document.getElementById('release_schedule_chart')
 
+    var unlockLegends = document.getElementById('unlock_schedule_legends')
+    var releaseLegends = document.getElementById('release_schedule_legends')
+
     if (!unlockChart || !releaseChart) return
 
-    initUnlockChart(unlockChart)
-    initReleaseChart(releaseChart)
+    initUnlockChart(unlockChart, unlockLegends)
+    initReleaseChart(releaseChart, releaseLegends)
   }
 
   document.addEventListener('DOMContentLoaded', onDOMReady)
