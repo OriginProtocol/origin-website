@@ -195,16 +195,25 @@
         }, 
         scales: { 
           xAxes: [{ 
+            type: 'time',
+            time: {
+              displayFormats: {
+                quarter: 'MMM YYYY'
+              },
+              minUnit: 'month'
+            },
             ticks: { 
               display: true,
-              callback: function(value, index, values) {
-                return formattedDate(value)
-              }
+              // callback: function(value, index, values) {
+              //   return value.getDate() + ' ' + formattedDate(value)
+              // }
             } 
           }],
           yAxes: [{
             ticks: {
               min: 0,
+              stepSize: 50,
+              max: 200,
               callback: function(value, index, values) {
                 return value + 'M'
               }

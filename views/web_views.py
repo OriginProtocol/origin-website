@@ -518,6 +518,8 @@ def assets_all_javascript():
         "static/js/vendor-d3.min.js",
         "static/js/vendor-wow.min.js",
         "static/js/vendor-chart.min.js",
+        "static/js/vendor-moment.min.js",
+        "static/js/vendor-chartjs-adapter-moment.min.js",
         "static/js/script.js",
         "static/js/countdown-timer.js",
         "static/js/yt-player.js",
