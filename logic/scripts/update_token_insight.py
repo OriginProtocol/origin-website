@@ -454,10 +454,13 @@ def fetch_staking_stats(investor_portal = True):
         team_staked_users = int(team_stats["userCount"] or 0)
         team_locked_sum = int(team_stats["lockupSum"] or 0)
 
-        redis_client.set("staked_user_count", (investor_staked_users + team_staked_users))
-        redis_client.set("staked_token_count", (investor_locked_sum + team_locked_sum))
+        sum_users = investor_staked_users + team_staked_users
+        sum_tokens = investor_locked_sum + team_locked_sum
 
-        print "There are %s T3 users" % user_count
+        redis_client.set("staked_user_count", sum_users)
+        redis_client.set("staked_token_count", sum_tokens)
+
+        print "There are %s T3 users and %s locked up tokens" % (sum_users, sum_tokens)
 
     except Exception as e:
         print("Failed to load T3 user count")
