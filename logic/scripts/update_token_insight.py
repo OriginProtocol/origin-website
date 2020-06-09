@@ -441,8 +441,8 @@ def fetch_stats_from_t3(investor_portal = True):
 
     return response
 
-def fetch_staking_stats(investor_portal = True):
-    print("Fetching T3 user count...")
+def fetch_staking_stats():
+    print("Fetching T3 user stats...")
     
     try:
         investor_stats = fetch_stats_from_t3(investor_portal=True)
@@ -463,7 +463,7 @@ def fetch_staking_stats(investor_portal = True):
         print "There are %s T3 users and %s locked up tokens" % (sum_users, sum_tokens)
 
     except Exception as e:
-        print("Failed to load T3 user count")
+        print("Failed to load T3 user stats")
         print e
 
 # Fetches reserved wallet balances and token price 
@@ -474,7 +474,6 @@ def compute_ogn_stats():
     fetch_token_prices()
 
     fetch_staking_stats()
-    fetch_staking_stats(investor_portal=False)
 
     # Fetch reserved wallet balances
     fetch_wallet_balance(foundation_reserve_address)
