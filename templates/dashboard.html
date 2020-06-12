@@ -68,7 +68,7 @@
   <section class="schedule-section white-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <h3>{{gettext("Token Unlock Schedule")}}</h3>
           <div class="desc">
             {{gettext("On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible.")}}
@@ -78,7 +78,7 @@
           </div>
           <div id="unlock_schedule_legends" class="chart-legends-container"></div>
         </div>
-        <div class="col-md-6 mt-5 mt-md-0">
+        <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Modeled vs. actual token release schedule")}}</h3>
           <div class="desc" id="supplyDataEl">
             {{gettext("Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%).") % (ogn_stats.circulating_supply, "ogn_modeled_supply", "ogn_supply_diff", "ogn_supply_diff_pct")}}
@@ -95,7 +95,7 @@
   <section class="locked-tokens-section grey-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <h3>{{gettext("Locked Tokens")}}</h3>
           <div class="desc">
             {{gettext("Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals.")}}
@@ -113,7 +113,7 @@
           
           <div class="locked-token-widget">
             <div class="title">
-              {{gettext("Investors & team members with locked tokens")}}
+              {{gettext("Investors, team members & users with locked tokens")}}
             </div>
             <div class="value">
               {{ogn_stats.staked_user_count}}
@@ -121,7 +121,7 @@
           </div>
 
         </div>
-        <div class="col-md-6 mt-5 mt-md-0">
+        <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
 
           <div class="reserved-wallets">
@@ -176,15 +176,6 @@
               <div class="wallet-address d-none d-md-block">{{ogn_stats.ecosystem_growth_address}}</div>
               <div class="wallet-address d-md-none">{{ogn_stats.ecosystem_growth_address[:6]}}...{{ogn_stats.ecosystem_growth_address[-4:]}}</div>
               <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.ecosystem_growth_address}}" target="_blank" rel="noopener noreferrer">
-                <img src="/static/img/dashboard/new-window-icon.svg" />
-              </a>
-            </div>
-
-            <div class="reserved-wallet">
-              <div class="wallet-name">{{gettext("Lukewarm Wallet")}}</div>
-              <div class="wallet-address d-none d-md-block">{{ogn_stats.lukewarm_address}}</div>
-              <div class="wallet-address d-md-none">{{ogn_stats.lukewarm_address[:6]}}...{{ogn_stats.lukewarm_address[-4:]}}</div>
-              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.lukewarm_address}}" target="_blank" rel="noopener noreferrer">
                 <img src="/static/img/dashboard/new-window-icon.svg" />
               </a>
             </div>

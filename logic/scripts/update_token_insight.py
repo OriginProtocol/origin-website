@@ -35,7 +35,6 @@ investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
 dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
 ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
-lukewarm_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 
 # start tracking a wallet address
 def add_contact(address, **kwargs):
@@ -497,7 +496,6 @@ def compute_ogn_stats():
     fetch_wallet_balance(dist_staging_address)
     fetch_wallet_balance(partnerships_address)
     fetch_wallet_balance(ecosystem_growth_address)
-    fetch_wallet_balance(lukewarm_address)
 
     # Update circulating supply
     update_circulating_supply()
@@ -524,7 +522,6 @@ def get_ogn_stats(format_data = True):
         dist_staging_address,
         partnerships_address,
         ecosystem_growth_address,
-        lukewarm_address,
     ))).all()
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
@@ -535,7 +532,6 @@ def get_ogn_stats(format_data = True):
     dist_staging_balance = ogn_balances[dist_staging_address]
     partnerships_balance = ogn_balances[partnerships_address]
     ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
-    lukewarm_balance = ogn_balances[lukewarm_address]
 
     reserved_tokens = int(
         foundation_reserve_balance +
@@ -543,8 +539,7 @@ def get_ogn_stats(format_data = True):
         investor_dist_balance +
         dist_staging_balance +
         partnerships_balance +
-        ecosystem_growth_balance + 
-        lukewarm_balance
+        ecosystem_growth_balance 
     )
 
     circulating_supply = int(total_supply - reserved_tokens)
@@ -567,7 +562,6 @@ def get_ogn_stats(format_data = True):
         ("dist_staging_address", dist_staging_address),
         ("partnerships_address", partnerships_address),
         ("ecosystem_growth_address", ecosystem_growth_address),
-        ("lukewarm_address", lukewarm_address),
     ])
 
     if format_data:

@@ -172,3 +172,14 @@
     grid-template-columns: repeat(1, 0fr);
   }
 } 
+
+@media (max-width: 1200px) {
+  .dashboard-page .stats-widget {
+    margin: 0 0 20px 0;
+  }
+
+  .dashboard-page .chart-legends.grid-type {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+  }
+}
