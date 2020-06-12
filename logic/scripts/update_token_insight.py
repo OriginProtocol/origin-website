@@ -16,11 +16,13 @@ from tools import db_utils
 from util import sendgrid_wrapper as sgw
 from util import time_
 
-from redis import Redis
-
 import json
 
-redis_client = Redis.from_url(os.environ['REDIS_URL'])
+# from redis import Redis
+
+# redis_client = Redis.from_url(os.environ['REDIS_URL'])
+
+from util import redis_helper
 
 # NOTE: remember to use lowercase addresses for everything
 
@@ -404,7 +406,8 @@ def alert_on_balance_drop(wallet, label, eth_threshold):
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
     print("Fetching token prices...")
-    
+    redis_client = redis_helper.redis_client
+
     try:
         url = "https://api.coingecko.com/api/v3/simple/price?ids=origin-protocol%2Cethereum&vs_currencies=usd"
         raw_json = requests.get(url)
@@ -441,12 +444,24 @@ def fetch_stats_from_t3(investor_portal = True):
 
     return response
 
+def fetch_stats_from_od():
+    print("Fetching T3 stats...")
+
+    url = "https://origindeals.com/api/user/stats"
+
+    raw_json = requests.get(url)
+    response = raw_json.json()
+
+    return response
+
 def fetch_staking_stats():
-    print("Fetching T3 user stats...")
-    
+    print("Fetching T3 and Origin Deals user stats...")
+    redis_client = redis_helper.redis_client
+
     try:
         investor_stats = fetch_stats_from_t3(investor_portal=True)
         team_stats = fetch_stats_from_t3(investor_portal=False)
+        od_stats = fetch_stats_from_od()
 
         investor_staked_users = int(investor_stats["userCount"] or 0)
         investor_locked_sum = int(investor_stats["lockupSum"] or 0)
@@ -454,16 +469,19 @@ def fetch_staking_stats():
         team_staked_users = int(team_stats["userCount"] or 0)
         team_locked_sum = int(team_stats["lockupSum"] or 0)
 
-        sum_users = investor_staked_users + team_staked_users
-        sum_tokens = investor_locked_sum + team_locked_sum
+        od_staked_users = int(od_stats["userCount"] or 0)
+        od_locked_sum = int(od_stats["lockupSum"] or 0)
+
+        sum_users = investor_staked_users + team_staked_users + od_staked_users
+        sum_tokens = investor_locked_sum + team_locked_sum + od_locked_sum
 
         redis_client.set("staked_user_count", sum_users)
         redis_client.set("staked_token_count", sum_tokens)
 
-        print "There are %s T3 users and %s locked up tokens" % (sum_users, sum_tokens)
+        print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
 
     except Exception as e:
-        print("Failed to load T3 user stats")
+        print("Failed to load user stats")
         print e
 
 # Fetches reserved wallet balances and token price 
@@ -495,6 +513,8 @@ def get_wallet_balance_from_db(wallet):
     return contact.ogn_balance
 
 def get_ogn_stats(format_data = True):
+    redis_client = redis_helper.redis_client
+
     total_supply = 1000000000
 
     ogn_usd_price = float(redis_client.get("ogn_usd_price") or 0)
@@ -525,7 +545,7 @@ def get_ogn_stats(format_data = True):
         investor_dist_balance +
         dist_staging_balance +
         partnerships_balance +
-        ecosystem_growth_balance
+        ecosystem_growth_balance 
     )
 
     circulating_supply = int(total_supply - reserved_tokens)
@@ -553,7 +573,7 @@ def get_ogn_stats(format_data = True):
     if format_data:
         out_data["ogn_usd_price"] = '${:,}'.format(ogn_usd_price)
         out_data["circulating_supply"] = '{:,}'.format(circulating_supply)
-        out_data["market_cap"] = '{:,}'.format(market_cap)
+        out_data["market_cap"] = '${:,}'.format(market_cap)
         out_data["total_supply"] = '{:,}'.format(total_supply)
         out_data["reserved_tokens"] = '{:,}'.format(reserved_tokens)
         out_data["staked_user_count"] = '{:,}'.format(staked_user_count)
@@ -562,11 +582,15 @@ def get_ogn_stats(format_data = True):
     return out_data
     
 def get_supply_history():
+    redis_client = redis_helper.redis_client
+
     data =  redis_client.get("ogn_supply_data") or "[]"
 
     return data
 
 def update_circulating_supply():
+    redis_client = redis_helper.redis_client
+
     stats = get_ogn_stats(format_data=False)
     snapshot_date = datetime.utcnow()
 
@@ -611,6 +635,8 @@ def update_circulating_supply():
 if __name__ == "__main__":
     # called via cron on Heroku
     with db_utils.request_context():
+        redis_helper.init_redis()
+
         # fetch_ogn_transactions()
         alert_on_balance_drop("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
