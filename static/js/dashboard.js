@@ -19,6 +19,16 @@
     foundation_reserves: [0.31,0.31,0.31,0.78,0.78,0.78,1.41,1.41,1.41,2.04,2.04,2.04,2.67,2.67,2.67,3.29,3.29,3.29,3.92,3.92,3.92,4.55,4.55,4.55,5.18,5.18,5.18,5.8,5.8,5.8,6.43,6.43,6.43,7.06,7.06,7.06,7.69,7.69,7.69,8.31,8.31,8.31,8.94,8.94,8.94,9.57,9.57,9.57,10.2,10.2,10.2,10.82,10.82,10.82,11.45]
   }
 
+  var monthToModeledValue = {}
+  Object.values(releaseScheduleXAxes)
+    .map((month, index) => {
+      var val = Object.keys(releaseScheduleData)
+        .map(k => releaseScheduleData[k][index])
+        .reduce((sum, v) => sum + v, 0)
+      
+      monthToModeledValue[month] = parseInt((10000000 * val) / 1000000)
+    })
+
   function formattedDate(dateObj) {
     var currentMonth = dateObj.getMonth()
 
@@ -145,16 +155,6 @@
 
     var releasedData = ognSupplyHistory.map(x => parseInt(x.supply_amount / 1000000))
 
-    var monthToModeledValue = {}
-    Object.values(releaseScheduleXAxes)
-      .map((month, index) => {
-        var val = Object.keys(releaseScheduleData)
-          .map(k => releaseScheduleData[k][index])
-          .reduce((sum, v) => sum + v, 0)
-        
-        monthToModeledValue[month] = parseInt((10000000 * val) / 1000000)
-      })
-
     var modeledData = new Array(dataLen).fill(0)
       .map((_, index) => {
         var d = formattedDate(new Date(ognSupplyHistory[index].snapshot_date))
@@ -171,7 +171,7 @@
       },
       released: {
         borderColor: '#7a54ef',
-        label: 'Released',
+        label: 'Actual',
         data: releasedData
       },
     }
@@ -261,6 +261,19 @@
     }
   }
 
+  function updateDynamicValues() {
+    var modeledSupply = monthToModeledValue[formattedDate(new Date())] * 1000000
+    var currentSupply = window.ognSupplyHistory[window.ognSupplyHistory.length - 1].supply_amount
+    var supplyDiff = modeledSupply - currentSupply
+    var diffInPct = parseInt(100 * (1 - (currentSupply / modeledSupply)))
+    var el = document.getElementById('supplyDataEl')
+
+    el.innerText = el.innerText
+      .replace('ogn_modeled_supply', modeledSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','))
+      .replace('ogn_supply_diff_pct', diffInPct)
+      .replace('ogn_supply_diff', supplyDiff.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','))
+  }
+
   function onDOMReady() {
     var unlockChart = document.getElementById('unlock_schedule_chart')
     var releaseChart = document.getElementById('release_schedule_chart')
@@ -272,6 +285,7 @@
 
     initUnlockChart(unlockChart, unlockLegends)
     initReleaseChart(releaseChart, releaseLegends)
+    updateDynamicValues()
   }
 
   document.addEventListener('DOMContentLoaded', onDOMReady)

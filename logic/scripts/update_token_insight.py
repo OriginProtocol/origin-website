@@ -35,6 +35,7 @@ investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
 dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
 ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
+lukewarm_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 
 # start tracking a wallet address
 def add_contact(address, **kwargs):
@@ -441,12 +442,23 @@ def fetch_stats_from_t3(investor_portal = True):
 
     return response
 
+def fetch_stats_from_od():
+    print("Fetching T3 stats...")
+
+    url = "https://origindeals.com/api/user/stats"
+
+    raw_json = requests.get(url)
+    response = raw_json.json()
+
+    return response
+
 def fetch_staking_stats():
-    print("Fetching T3 user stats...")
+    print("Fetching T3 and Origin Deals user stats...")
     
     try:
         investor_stats = fetch_stats_from_t3(investor_portal=True)
         team_stats = fetch_stats_from_t3(investor_portal=False)
+        od_stats = fetch_stats_from_od()
 
         investor_staked_users = int(investor_stats["userCount"] or 0)
         investor_locked_sum = int(investor_stats["lockupSum"] or 0)
@@ -454,16 +466,19 @@ def fetch_staking_stats():
         team_staked_users = int(team_stats["userCount"] or 0)
         team_locked_sum = int(team_stats["lockupSum"] or 0)
 
-        sum_users = investor_staked_users + team_staked_users
-        sum_tokens = investor_locked_sum + team_locked_sum
+        od_staked_users = int(od_stats["userCount"] or 0)
+        od_locked_sum = int(od_stats["lockupSum"] or 0)
+
+        sum_users = investor_staked_users + team_staked_users + od_staked_users
+        sum_tokens = investor_locked_sum + team_locked_sum + od_locked_sum
 
         redis_client.set("staked_user_count", sum_users)
         redis_client.set("staked_token_count", sum_tokens)
 
-        print "There are %s T3 users and %s locked up tokens" % (sum_users, sum_tokens)
+        print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
 
     except Exception as e:
-        print("Failed to load T3 user stats")
+        print("Failed to load user stats")
         print e
 
 # Fetches reserved wallet balances and token price 
@@ -482,6 +497,7 @@ def compute_ogn_stats():
     fetch_wallet_balance(dist_staging_address)
     fetch_wallet_balance(partnerships_address)
     fetch_wallet_balance(ecosystem_growth_address)
+    fetch_wallet_balance(lukewarm_address)
 
     # Update circulating supply
     update_circulating_supply()
@@ -508,6 +524,7 @@ def get_ogn_stats(format_data = True):
         dist_staging_address,
         partnerships_address,
         ecosystem_growth_address,
+        lukewarm_address,
     ))).all()
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
@@ -518,6 +535,7 @@ def get_ogn_stats(format_data = True):
     dist_staging_balance = ogn_balances[dist_staging_address]
     partnerships_balance = ogn_balances[partnerships_address]
     ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
+    lukewarm_balance = ogn_balances[lukewarm_address]
 
     reserved_tokens = int(
         foundation_reserve_balance +
@@ -525,7 +543,8 @@ def get_ogn_stats(format_data = True):
         investor_dist_balance +
         dist_staging_balance +
         partnerships_balance +
-        ecosystem_growth_balance
+        ecosystem_growth_balance + 
+        lukewarm_balance
     )
 
     circulating_supply = int(total_supply - reserved_tokens)
@@ -548,12 +567,13 @@ def get_ogn_stats(format_data = True):
         ("dist_staging_address", dist_staging_address),
         ("partnerships_address", partnerships_address),
         ("ecosystem_growth_address", ecosystem_growth_address),
+        ("lukewarm_address", lukewarm_address),
     ])
 
     if format_data:
         out_data["ogn_usd_price"] = '${:,}'.format(ogn_usd_price)
         out_data["circulating_supply"] = '{:,}'.format(circulating_supply)
-        out_data["market_cap"] = '{:,}'.format(market_cap)
+        out_data["market_cap"] = '${:,}'.format(market_cap)
         out_data["total_supply"] = '{:,}'.format(total_supply)
         out_data["reserved_tokens"] = '{:,}'.format(reserved_tokens)
         out_data["staked_user_count"] = '{:,}'.format(staked_user_count)
