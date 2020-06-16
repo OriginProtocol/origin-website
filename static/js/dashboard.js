@@ -161,7 +161,7 @@
         return monthToModeledValue[d]
       })
 
-    var maxVal = parseInt((Math.max(modeledData[dataLen - 1], releasedData[dataLen - 1])) / 100) * 100 * 2
+    var maxVal = Math.ceil(Math.max(modeledData[dataLen - 1], releasedData[dataLen - 1]) / 100) * 100 * 2
 
     var datasets = {
       modeled: {
