@@ -416,7 +416,7 @@ def fetch_reserved_wallet_balances():
 
 def trigger_ogn_stats_computation():
     port = int(os.environ.get("PORT", 5000))
-    url = universal.BASE_URL + ':' + string(port) + '/refetch-token-stats'
+    url = universal.BASE_URL + ':' + str(port) + '/refetch-token-stats'
     raw_json = requests.get(url)
     return raw_json.json()
 
@@ -428,4 +428,6 @@ if __name__ == "__main__":
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         # fetch_from_ethplorer()
         fetch_reserved_wallet_balances()
+
+        trigger_ogn_stats_computation()
         
