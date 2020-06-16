@@ -263,7 +263,7 @@
 
   function updateDynamicValues() {
     var modeledSupply = monthToModeledValue[formattedDate(new Date())] * 1000000
-    var currentSupply = window.ognSupplyHistory[window.ognSupplyHistory.length - 1].supply_amount
+    var currentSupply = window.ognSupplyHistory[0].supply_amount
     var supplyDiff = modeledSupply - currentSupply
     var diffInPct = parseInt(100 * (1 - (currentSupply / modeledSupply)))
     var el = document.getElementById('supplyDataEl')
