@@ -222,8 +222,8 @@
           yAxes: [{
             ticks: {
               min: 0,
-              stepSize: maxVal / 4,
-              max: maxVal,
+              // stepSize: maxVal / 4,
+              // max: maxVal,
               callback: function(value, index, values) {
                 return value + 'M'
               }
