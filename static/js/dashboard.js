@@ -213,10 +213,7 @@
               minUnit: 'month'
             },
             ticks: { 
-              display: true,
-              // callback: function(value, index, values) {
-              //   return value.getDate() + ' ' + formattedDate(value)
-              // }
+              display: true
             } 
           }],
           yAxes: [{
