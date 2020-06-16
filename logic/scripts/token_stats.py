@@ -271,6 +271,10 @@ def update_circulating_supply():
 def get_formatted_ogn_stats():
     out_data = ogn_supply_stats.copy()
 
+    if "ogn_usd_price" not in out_data.keys():
+        compute_ogn_stats()
+        out_data = ogn_supply_stats.copy()
+
     out_data["ogn_usd_price"] = '${:,}'.format(out_data["ogn_usd_price"])
     out_data["circulating_supply"] = '{:,}'.format(out_data["circulating_supply"])
     out_data["market_cap"] = '${:,}'.format(out_data["market_cap"])
@@ -283,6 +287,9 @@ def get_formatted_ogn_stats():
     
 def get_supply_history():
     global ogn_supply_history
+
+    if len(ogn_supply_history) == 0:
+        compute_ogn_stats()
 
     return ogn_supply_history
 
