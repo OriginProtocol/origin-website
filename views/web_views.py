@@ -28,6 +28,8 @@ import googleapiclient.discovery
 
 import json
 
+from logic.scripts import token_stats
+
 # Translation: change path of messages.mo files
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
 babel = Babel(app)
@@ -475,7 +477,7 @@ def dshop():
 @app.route('/dashboard', strict_slashes=False)
 @app.route('/<lang_code>/dashboard', strict_slashes=False)
 def dashboard():
-    return render_template('dashboard.html', ogn_stats=insight.get_ogn_stats(), supply_history=insight.get_supply_history())
+    return render_template('dashboard.html', ogn_stats=token_stats.get_formatted_ogn_stats(), supply_history=token_stats.get_supply_history())
 
 @app.route('/static/css/all_styles.css', strict_slashes=False)
 def assets_all_styles():
@@ -529,6 +531,11 @@ def assets_all_javascript():
         "static/js/dashboard.js",
     ], True), mimetype="application/javascript")
 
+@app.route('/refetch-token-stats', methods=['GET'], strict_slashes=False)
+def refetch_token_stats():
+    token_stats.compute_ogn_stats()
+    return jsonify(success=True, message=gettext("OK"), supply_history=token_stats.get_supply_history(), ogn_stats=token_stats.get_formatted_ogn_stats())
+    
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404

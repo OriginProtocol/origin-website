@@ -8,7 +8,7 @@ import time
 import os
 
 from backoff import on_exception, expo
-from config import constants
+from config import constants, universal
 from database import db, db_models, db_common
 from ratelimit import limits, sleep_and_retry, RateLimitException
 import requests
@@ -403,96 +403,9 @@ def alert_on_balance_drop(wallet, label, eth_threshold):
     except Exception as e:
         print e
 
-# Fetches and stores OGN & ETH prices froom CoinGecko
-def fetch_token_prices():
-    print("Fetching token prices...")
-    redis_client = redis_helper.redis_client
-
-    try:
-        url = "https://api.coingecko.com/api/v3/simple/price?ids=origin-protocol%2Cethereum&vs_currencies=usd"
-        raw_json = requests.get(url)
-        response = raw_json.json()
-
-        if "error" in response:
-            print("Error while fetching balance")
-            print(response["error"]["message"])
-            raise ValueError(response["error"]["message"])
-
-        ogn_usd_price = response["origin-protocol"]["usd"]
-        eth_usd_price = response["ethereum"]["usd"]
-
-        redis_client.set("ogn_usd_price", ogn_usd_price)
-        redis_client.set("eth_usd_price", eth_usd_price)
-
-        print "Set OGN price to %s" % ogn_usd_price
-        print "Set ETH price to %s" % eth_usd_price
-
-    except Exception as e:
-        print("Failed to load token prices")
-        print e
-
-def fetch_stats_from_t3(investor_portal = True):
-    print("Fetching T3 stats...")
-
-    url = "https://remote.team.originprotocol.com/api/user-stats"
-
-    if investor_portal:
-        url = "https://remote.investor.originprotocol.com/api/user-stats"
-
-    raw_json = requests.get(url)
-    response = raw_json.json()
-
-    return response
-
-def fetch_stats_from_od():
-    print("Fetching T3 stats...")
-
-    url = "https://origindeals.com/api/user/stats"
-
-    raw_json = requests.get(url)
-    response = raw_json.json()
-
-    return response
-
-def fetch_staking_stats():
-    print("Fetching T3 and Origin Deals user stats...")
-    redis_client = redis_helper.redis_client
-
-    try:
-        investor_stats = fetch_stats_from_t3(investor_portal=True)
-        team_stats = fetch_stats_from_t3(investor_portal=False)
-        od_stats = fetch_stats_from_od()
-
-        investor_staked_users = int(investor_stats["userCount"] or 0)
-        investor_locked_sum = int(investor_stats["lockupSum"] or 0)
-
-        team_staked_users = int(team_stats["userCount"] or 0)
-        team_locked_sum = int(team_stats["lockupSum"] or 0)
-
-        od_staked_users = int(od_stats["userCount"] or 0)
-        od_locked_sum = int(od_stats["lockupSum"] or 0)
-
-        sum_users = investor_staked_users + team_staked_users + od_staked_users
-        sum_tokens = investor_locked_sum + team_locked_sum + od_locked_sum
-
-        redis_client.set("staked_user_count", sum_users)
-        redis_client.set("staked_token_count", sum_tokens)
-
-        print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
-
-    except Exception as e:
-        print("Failed to load user stats")
-        print e
-
-# Fetches reserved wallet balances and token price 
-# and recalculates things to be shown in
-def compute_ogn_stats():
+# Fetch reserved wallet balance
+def fetch_reserved_wallet_balances():
     print("Computing OGN stats...")
-    # Fetch OGN and ETH prices
-    fetch_token_prices()
-
-    fetch_staking_stats()
-
     # Fetch reserved wallet balances
     fetch_wallet_balance(foundation_reserve_address)
     fetch_wallet_balance(team_dist_address)
@@ -501,146 +414,20 @@ def compute_ogn_stats():
     fetch_wallet_balance(partnerships_address)
     fetch_wallet_balance(ecosystem_growth_address)
 
-    # Update circulating supply
-    update_circulating_supply()
-
-def get_wallet_balance_from_db(wallet):
-    contact = db_models.EthContact.query.filter_by(address=wallet).first()
-
-    if contact is None:
-        return 0
-
-    return contact.ogn_balance
-
-def get_ogn_stats(format_data = True):
-    redis_client = redis_helper.redis_client
-
-    total_supply = 1000000000
-
-    ogn_usd_price = float(redis_client.get("ogn_usd_price") or 0)
-    staked_user_count = int(redis_client.get("staked_user_count") or 0)
-    staked_token_count = int(redis_client.get("staked_token_count") or 0)
-
-    results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
-        foundation_reserve_address,
-        team_dist_address,
-        investor_dist_address,
-        dist_staging_address,
-        partnerships_address,
-        ecosystem_growth_address,
-    ))).all()
-
-    ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
-
-    foundation_reserve_balance = ogn_balances[foundation_reserve_address]
-    team_dist_balance = ogn_balances[team_dist_address]
-    investor_dist_balance = ogn_balances[investor_dist_address]
-    dist_staging_balance = ogn_balances[dist_staging_address]
-    partnerships_balance = ogn_balances[partnerships_address]
-    ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
-
-    reserved_tokens = int(
-        foundation_reserve_balance +
-        team_dist_balance +
-        investor_dist_balance +
-        dist_staging_balance +
-        partnerships_balance +
-        ecosystem_growth_balance 
-    )
-
-    circulating_supply = int(total_supply - reserved_tokens)
-
-    market_cap = int(circulating_supply * ogn_usd_price)
-
-    out_data = dict([
-        ("ogn_usd_price", ogn_usd_price),
-        ("circulating_supply", circulating_supply),
-        ("market_cap", market_cap),
-        ("total_supply", total_supply),
-
-        ("reserved_tokens", reserved_tokens),
-        ("staked_user_count", staked_user_count),
-        ("staked_token_count", staked_token_count),
-
-        ("foundation_reserve_address", foundation_reserve_address),
-        ("team_dist_address", team_dist_address),
-        ("investor_dist_address", investor_dist_address),
-        ("dist_staging_address", dist_staging_address),
-        ("partnerships_address", partnerships_address),
-        ("ecosystem_growth_address", ecosystem_growth_address),
-    ])
-
-    if format_data:
-        out_data["ogn_usd_price"] = '${:,}'.format(ogn_usd_price)
-        out_data["circulating_supply"] = '{:,}'.format(circulating_supply)
-        out_data["market_cap"] = '${:,}'.format(market_cap)
-        out_data["total_supply"] = '{:,}'.format(total_supply)
-        out_data["reserved_tokens"] = '{:,}'.format(reserved_tokens)
-        out_data["staked_user_count"] = '{:,}'.format(staked_user_count)
-        out_data["staked_token_count"] = '{:,}'.format(staked_token_count)
-
-    return out_data
-    
-def get_supply_history():
-    redis_client = redis_helper.redis_client
-
-    data =  redis_client.get("ogn_supply_data") or "[]"
-
-    return data
-
-def update_circulating_supply():
-    redis_client = redis_helper.redis_client
-
-    stats = get_ogn_stats(format_data=False)
-    snapshot_date = datetime.utcnow()
-
-    supply_snapshot = db_common.get_or_create(
-        db.session, db_models.CirculatingSupply, snapshot_date=snapshot_date
-    )
-
-    supply_snapshot.supply_amount = stats["circulating_supply"]
-    db.session.commit()
-
-    supply_data = db.engine.execute("""
-    select timewin, max(s.supply_amount)
-    from 
-        generate_series(now() - interval '12 month', now(), '1 day') as timewin
-    left outer join 
-        (select * from circulating_supply where snapshot_date > now() - interval '12 month' and snapshot_date > '2020-01-01'::date order by snapshot_date desc) s
-    on s.snapshot_date < timewin 
-        and s.snapshot_date >= timewin - (interval '1 day')
-    where timewin > '2020-01-01'::date
-    group by timewin
-    order by timewin desc
-    """)
-
-    out = []
-
-    supply_data_list = list(supply_data)
-    latest_supply = supply_data_list[0][1]
-
-    for row in supply_data_list:
-        if row[1] is not None:
-            latest_supply = row[1]
-
-        out.append(dict([
-            ("supply_amount", row[1] or latest_supply),
-            ("snapshot_date", row[0].strftime("%Y/%m/%d %H:%M:%S"))
-        ]))
-
-    redis_client.set("ogn_supply_data", json.dumps(list(reversed(out))))
-
-    print "Updated current circulating supply to %s" % stats["circulating_supply"]
+def trigger_ogn_stats_computation():
+    port = int(os.environ.get("PORT", 5000))
+    url = universal.BASE_URL + ':' + str(port) + '/refetch-token-stats'
+    raw_json = requests.get(url)
+    return raw_json.json()
 
 if __name__ == "__main__":
     # called via cron on Heroku
     with db_utils.request_context():
-        redis_helper.init_redis()
-
         # fetch_ogn_transactions()
         alert_on_balance_drop("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         # fetch_from_ethplorer()
+        fetch_reserved_wallet_balances()
 
-        compute_ogn_stats()
+        trigger_ogn_stats_computation()
         

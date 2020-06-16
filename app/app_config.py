@@ -5,8 +5,6 @@ from database import db
 
 from raven.contrib.flask import Sentry
 
-from util import redis_helper
-
 sentry = Sentry()
 
 
@@ -32,14 +30,11 @@ def init_sentry(app):
         sentry.init_app(app,
                         dsn=constants.SENTRY_DSN)
 
-def init_redis():
-    redis_helper.init_redis()
 
 def init_prod_app(app):
     app.config.from_object(__name__ + '.AppConfig')
     init_app(app)
     init_sentry(app)
-    init_redis()
 
     log_formatter = logging.Formatter(
         '%(asctime)s %(levelname)s [in %(pathname)s:%(lineno)d]: %(message)s')
