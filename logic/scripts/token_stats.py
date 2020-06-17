@@ -31,7 +31,8 @@ staked_user_count = 0
 staked_token_count = 0
 ogn_supply_stats = dict()
 ogn_supply_history = []
-thread_started = False
+
+stats_last_updated_at = datetime(2020, 1, 1, 0, 0, 0, 0)
 
 # limit calls to 10 requests / second per their limits
 # https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API#api-keys-limits
@@ -268,12 +269,25 @@ def update_circulating_supply():
 
     print "Updated current circulating supply to %s" % stats["circulating_supply"]
 
-def get_formatted_ogn_stats():
-    out_data = ogn_supply_stats.copy()
+def has_stats_expired():
+    global stats_last_updated_at
 
-    if "ogn_usd_price" not in out_data.keys():
+    # on first call
+    if stats_last_updated_at is None:
+        return True
+
+    dnow = datetime.now()
+    diff = dnow - stats_last_updated_at
+    return diff.seconds >= 600
+
+def update_stats_if_expired():
+    if has_stats_expired():
         compute_ogn_stats()
-        out_data = ogn_supply_stats.copy()
+
+def get_formatted_ogn_stats():
+    update_stats_if_expired()
+
+    out_data = ogn_supply_stats.copy()
 
     out_data["ogn_usd_price"] = '${:,}'.format(out_data["ogn_usd_price"])
     out_data["circulating_supply"] = '{:,}'.format(out_data["circulating_supply"])
@@ -286,16 +300,15 @@ def get_formatted_ogn_stats():
     return out_data
     
 def get_supply_history():
-    global ogn_supply_history
-
-    if len(ogn_supply_history) == 0:
-        compute_ogn_stats()
+    update_stats_if_expired()
 
     return ogn_supply_history
 
 # Fetches reserved wallet balances and token price 
 # and recalculates things to be shown in
 def compute_ogn_stats():
+    global stats_last_updated_at
+
     print("Computing OGN stats...")
     # Fetch OGN and ETH prices
     fetch_token_prices()
@@ -306,3 +319,5 @@ def compute_ogn_stats():
 
     # Update circulating supply
     update_circulating_supply()
+
+    stats_last_updated_at = datetime.now()
