@@ -269,6 +269,7 @@
       .replace('ogn_modeled_supply', modeledSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','))
       .replace('ogn_supply_diff_pct', diffInPct)
       .replace('ogn_supply_diff', supplyDiff.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','))
+      .replace('ogn_circulating_supply', currentSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','))
   }
 
   function onDOMReady() {

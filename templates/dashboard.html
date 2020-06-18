@@ -81,7 +81,7 @@
         <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Modeled vs. actual token release schedule")}}</h3>
           <div class="desc" id="supplyDataEl">
-            {{gettext("Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%).") % (ogn_stats.circulating_supply, "ogn_modeled_supply", "ogn_supply_diff", "ogn_supply_diff_pct")}}
+            {{gettext("Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%).")}}
           </div>
           <div class="chart-container">
             <canvas id="release_schedule_chart" height="290"></canvas>
