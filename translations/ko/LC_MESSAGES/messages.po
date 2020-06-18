@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-08 17:31+0000\n"
-"PO-Revision-Date: 2020-06-08 17:34\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-06-17 22:22-0700\n"
+"PO-Revision-Date: 2020-06-18 05:23\n"
+"Last-Translator: \n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12,8 +12,10 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: originprotocolwebsite\n"
+"X-Crowdin-Project-ID: 308054\n"
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: /master/messages.pot\n"
+"X-Crowdin-File-ID: 72\n"
 "Language: ko_KR\n"
 
 #: config/strings_to_translate.py:4
@@ -25,7 +27,7 @@ msgid "Building on Origin"
 msgstr "오리진(Origin)기반 구축"
 
 #: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:186
-#: views/web_views.py:262
+#: views/web_views.py:320
 msgid "Please enter a valid email address"
 msgstr "사용 가능한 이메일 주소를 입력 해주세요."
 
@@ -214,25 +216,29 @@ msgstr ""
 msgid "Download for Brave"
 msgstr ""
 
-#: templates/countdown-bar.html:11 templates/countdown-hero-banner.html:33
-msgid "Origin Tokens (OGN) have launched!"
-msgstr "오리진 토큰 (OGN) 이 출시되었습니다!"
+#: templates/countdown-bar.html:8
+msgid "See the new OGN Token dashboard"
+msgstr ""
 
-#: templates/countdown-bar.html:18 templates/countdown-hero-banner.html:61
-msgid "Learn more"
-msgstr "더 알아보기"
+#: templates/countdown-bar.html:13 templates/warning.html:24
+msgid "Go"
+msgstr "계속"
 
-#: templates/countdown-bar.html:24
+#: templates/countdown-bar.html:18
 msgid "Buy now on"
 msgstr ""
 
-#: templates/countdown-bar.html:30 templates/countdown-hero-banner.html:72
+#: templates/countdown-bar.html:24 templates/countdown-hero-banner.html:72
 msgid "Subscribe to stay in touch."
 msgstr "지속적 업데이트를 받기 위해 구독 버튼을 눌러주세요."
 
-#: templates/countdown-bar.html:38 templates/countdown-hero-banner.html:80
+#: templates/countdown-bar.html:26 templates/countdown-hero-banner.html:80
 msgid "Your email"
 msgstr "귀하의 이메일"
+
+#: templates/countdown-hero-banner.html:33
+msgid "Origin Tokens (OGN) have launched!"
+msgstr "오리진 토큰 (OGN) 이 출시되었습니다!"
 
 #: templates/countdown-hero-banner.html:37 templates/tokens.html:5
 msgid "Origin Tokens (OGN) are launching soon!"
@@ -241,6 +247,10 @@ msgstr "오리진 토큰(OGN) 이 곧 출시됩니다!"
 #: templates/countdown-hero-banner.html:53
 msgid "Buy OGN on Binance"
 msgstr "바이낸스(Binance) 에서 OGN 구매"
+
+#: templates/countdown-hero-banner.html:61
+msgid "Learn more"
+msgstr "더 알아보기"
 
 #: templates/countdown-hero-banner.html:67
 msgid "Exclusively on"
@@ -257,7 +267,7 @@ msgstr "<br>피어 투 피어<br>마켓 플레이스 구축"
 #: templates/creator.html:21
 #, python-format
 msgid "Blockchain enabled.<br>No code required.<br>100%% free to operate."
-msgstr "블록체인 기능 사용.<br>코드가 필요하지 않습니다.<br>100%% 무료로 운영할수 있습니다."
+msgstr "블록체인 기능 사용.<br>코드가 필요하지 않습니다.<br>100% 무료로 운영할수 있습니다."
 
 #: templates/creator.html:24 templates/creator.html:100
 #: templates/creator.html:223
@@ -324,7 +334,7 @@ msgstr "<span class='green'> 국경 및 지불 제약 없는 </span> 성능 활�
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "암호화폐 혁명의 최첨단에서 함께하세요. 당신의 댑(DApp) 은 메타마스크 및 다양하게 사용되는 모바일 지갑들과 호환이 가능합니다."
 
-#: templates/creator.html:135 templates/product.html:158
+#: templates/creator.html:135 templates/product.html:162
 msgid "Features"
 msgstr "기능"
 
@@ -403,6 +413,95 @@ msgstr "질문이 있으세요?"
 #: templates/creator.html:227
 msgid "Get in touch"
 msgstr "연락 하기"
+
+#: templates/dashboard.html:3
+msgid "Origin Protocol - Origin Token Dashboard"
+msgstr ""
+
+#: templates/dashboard.html:5 templates/dshop.html:5 templates/product.html:5
+msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
+msgstr ""
+
+#: templates/dashboard.html:22
+msgid "Origin Token Dashboard"
+msgstr ""
+
+#: templates/dashboard.html:29
+msgid "Price"
+msgstr ""
+
+#: templates/dashboard.html:37
+msgid "Circulating Supply"
+msgstr ""
+
+#: templates/dashboard.html:48
+msgid "Market Cap"
+msgstr ""
+
+#: templates/dashboard.html:56
+msgid "Total Supply"
+msgstr ""
+
+#: templates/dashboard.html:72
+msgid "Token Unlock Schedule"
+msgstr ""
+
+#: templates/dashboard.html:74
+msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
+msgstr ""
+
+#: templates/dashboard.html:82
+msgid "Modeled vs. actual token release schedule"
+msgstr ""
+
+#: templates/dashboard.html:84
+#, python-format
+msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
+msgstr ""
+
+#: templates/dashboard.html:99
+msgid "Locked Tokens"
+msgstr ""
+
+#: templates/dashboard.html:101
+msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals."
+msgstr ""
+
+#: templates/dashboard.html:106
+msgid "Total number of locked tokens"
+msgstr ""
+
+#: templates/dashboard.html:116
+msgid "Investors, team members & users with locked tokens"
+msgstr ""
+
+#: templates/dashboard.html:125
+msgid "Wallets excluded from circulating supply"
+msgstr ""
+
+#: templates/dashboard.html:130
+msgid "Foundation Reserves"
+msgstr ""
+
+#: templates/dashboard.html:139
+msgid "Team Distribution"
+msgstr ""
+
+#: templates/dashboard.html:148
+msgid "Investor Distribution"
+msgstr ""
+
+#: templates/dashboard.html:157
+msgid "Distribution Staging"
+msgstr ""
+
+#: templates/dashboard.html:166
+msgid "Partnerships"
+msgstr ""
+
+#: templates/dashboard.html:175
+msgid "Ecosystem Growth"
+msgstr ""
 
 #: templates/developers.html:2
 msgid "Origin Protocol - Developers"
@@ -498,10 +597,6 @@ msgstr "Discord에서 우리와 함께"
 
 #: templates/dshop.html:3
 msgid "Origin Protocol - DShop"
-msgstr ""
-
-#: templates/dshop.html:5 templates/product.html:5
-msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
 msgstr ""
 
 #: templates/dshop.html:15
@@ -681,7 +776,7 @@ msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr "오리진의 뉴스레터를 구독하세요. 사용자 이메일은 비공개로 유지됩니다."
 
 #: templates/components/email-input.html:8 templates/footer.html:9
-#: templates/huobi-launch.html:856 templates/huobi-launch.html:967
+#: templates/huobi-launch.html:989 templates/huobi-launch.html:1125
 msgid "Enter your email"
 msgstr "이메일 주소를 입력해주세요"
 
@@ -799,232 +894,232 @@ msgstr "VK"
 msgid "Origin Huobi Listing"
 msgstr ""
 
-#: templates/huobi-launch.html:770 templates/huobi-launch.html:845
+#: templates/huobi-launch.html:898 templates/huobi-launch.html:974
 msgid "Register Now"
 msgstr ""
 
-#: templates/huobi-launch.html:839
+#: templates/huobi-launch.html:968
 msgid "Celebrate Origin's Listing on Huobi & Win OGN & USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:842
+#: templates/huobi-launch.html:971
 msgid "500,000 OGN and $100k USDT will be rewarded to OGN holders that trade on Huobi"
 msgstr ""
 
-#: templates/huobi-launch.html:852 templates/huobi-launch.html:963
+#: templates/huobi-launch.html:981 templates/huobi-launch.html:1117
 msgid "Participate by Joining Our Newsletter"
 msgstr ""
 
-#: templates/huobi-launch.html:853 templates/huobi-launch.html:964
+#: templates/huobi-launch.html:983 templates/huobi-launch.html:1119
 msgid "You must join Origin's mailing list and Wechat group to be eligible to participate in the activities"
 msgstr ""
 
-#: templates/components/presale-form.html:292 templates/huobi-launch.html:857
-#: templates/huobi-launch.html:968 templates/tokens.html:329
+#: templates/components/presale-form.html:292 templates/huobi-launch.html:990
+#: templates/huobi-launch.html:1126 templates/tokens.html:329
 msgid "Submit"
 msgstr "제출"
 
-#: templates/huobi-launch.html:864 templates/huobi-launch.html:975
+#: templates/huobi-launch.html:998 templates/huobi-launch.html:1134
 msgid "WeChat"
 msgstr ""
 
-#: templates/huobi-launch.html:868 templates/huobi-launch.html:979
+#: templates/huobi-launch.html:1002 templates/huobi-launch.html:1138
 msgid "Congratulations!"
 msgstr ""
 
-#: templates/huobi-launch.html:869 templates/huobi-launch.html:980
+#: templates/huobi-launch.html:1003 templates/huobi-launch.html:1139
 msgid "You are now eligible to participate"
 msgstr ""
 
-#: templates/huobi-launch.html:871 templates/huobi-launch.html:982
+#: templates/huobi-launch.html:1005 templates/huobi-launch.html:1141
 msgid "Make sure you scan this QR code to join our WeChat group"
 msgstr ""
 
-#: templates/huobi-launch.html:879
+#: templates/huobi-launch.html:1014
 msgid "OGN Net Increase Competition"
 msgstr ""
 
-#: templates/huobi-launch.html:880
+#: templates/huobi-launch.html:1015
 msgid "OGN Trading Competition"
 msgstr ""
 
-#: templates/huobi-launch.html:882
-msgid "Activity time period: Listing date to June 22, 2PM SGT"
+#: templates/huobi-launch.html:1017
+msgid "Activity time period: June 18, 12PM to June 29, 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:883
+#: templates/huobi-launch.html:1018
 msgid "Rewards to be calculated every 3 days"
 msgstr ""
 
-#: templates/huobi-launch.html:886
+#: templates/huobi-launch.html:1021
 msgid "Competition rounds"
 msgstr ""
 
-#: templates/huobi-launch.html:888
-msgid "The competition will begin on June 10 2PM SGT and last until June 22 2PM SGT (12 days)."
+#: templates/huobi-launch.html:1023
+msgid "The competition will begin on June 18, 12PM and will last until June 29, 11:59PM GMT +8 (12 days)"
 msgstr ""
 
-#: templates/huobi-launch.html:889
-msgid "There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round."
+#: templates/huobi-launch.html:1025
+msgid "There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round. All times listed in Bejing time (GMT +8)."
 msgstr ""
 
-#: templates/huobi-launch.html:891
-msgid "Round 1 will commence from the start of day 1 to the end of day 3: June 10, 2020 2PM to June 13, 2020 2PM"
+#: templates/huobi-launch.html:1028
+msgid "Round 1 will commence from June 18 to June 20"
 msgstr ""
 
-#: templates/huobi-launch.html:892
-msgid "Round 2 will commence from the start of day 4 to end of day 6: June 13, 2020 2:01PM to June 16, 2020 2PM"
+#: templates/huobi-launch.html:1030
+msgid "Round 2 will commence from June 21 to June 23"
 msgstr ""
 
-#: templates/huobi-launch.html:893
-msgid "Round 3 will commence from the start of day 7 to end of day 9: June 16, 2020 2:01PM to June 19, 2020 2PM"
+#: templates/huobi-launch.html:1032
+msgid "Round 3 will commence from June 24 to June 26"
 msgstr ""
 
-#: templates/huobi-launch.html:894
-msgid "Round 4 will commence from the start of day 10 to end of day 12: June 19, 2020 2:01PM to June 22, 2020 2PM"
+#: templates/huobi-launch.html:1034
+msgid "Round 4 will commence from June 27 to June 29"
 msgstr ""
 
-#: templates/huobi-launch.html:897
+#: templates/huobi-launch.html:1038
 msgid "Competition rules"
 msgstr ""
 
-#: templates/huobi-launch.html:899
+#: templates/huobi-launch.html:1040
 msgid "Traders will be ranked according to their OGN Net Increase Amount during each round."
 msgstr ""
 
-#: templates/huobi-launch.html:900
+#: templates/huobi-launch.html:1042
 msgid "OGN Net Increase Amount = OGN held at the end of the round - OGN held at the beginning of the round"
 msgstr ""
 
-#: templates/huobi-launch.html:901
+#: templates/huobi-launch.html:1044
 msgid "Here is an example calculation for OGN Net Increase Amount:"
 msgstr ""
 
-#: templates/huobi-launch.html:903
+#: templates/huobi-launch.html:1046
 msgid "A trader starts the round with 2,000 OGN"
 msgstr ""
 
-#: templates/huobi-launch.html:904
+#: templates/huobi-launch.html:1047
 msgid "They then buy 15,000 OGN, sell 3,000 OGN, and withdraw 1,000 OGN"
 msgstr ""
 
-#: templates/huobi-launch.html:905
+#: templates/huobi-launch.html:1048
 msgid "They end the round with 13,000 OGN (2,000 + 15,000 - 3,000 - 1,000 OGN)"
 msgstr ""
 
-#: templates/huobi-launch.html:906
+#: templates/huobi-launch.html:1049
 msgid "Their OGN Net Increase is 11,000 OGN."
 msgstr ""
 
-#: templates/huobi-launch.html:909
+#: templates/huobi-launch.html:1052
 msgid "Competition payouts"
 msgstr ""
 
-#: templates/huobi-launch.html:911
+#: templates/huobi-launch.html:1054
 msgid "$25k USDT will be awarded in each 3-day round, for a total of $100k USDT."
 msgstr ""
 
-#: templates/huobi-launch.html:912
+#: templates/huobi-launch.html:1055
 msgid "For each 3-day reward period, traders will be ranked by their overall OGN Net Increase Amount:"
 msgstr ""
 
-#: templates/huobi-launch.html:914
+#: templates/huobi-launch.html:1058
 msgid "1st place: $3k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:915
+#: templates/huobi-launch.html:1059
 msgid "2nd place: $2.5k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:916
+#: templates/huobi-launch.html:1060
 msgid "3rd place: $2k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:917
+#: templates/huobi-launch.html:1061
 msgid "4th place: $1.5k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:918
+#: templates/huobi-launch.html:1062
 msgid "5th place: $1k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:919
+#: templates/huobi-launch.html:1063
 msgid "6th to 30th places: Split $7.5k USDT evenly"
 msgstr ""
 
-#: templates/huobi-launch.html:920
+#: templates/huobi-launch.html:1064
 msgid "31st to 60th places: Split $5k USDT evenly"
 msgstr ""
 
-#: templates/huobi-launch.html:921
+#: templates/huobi-launch.html:1065
 msgid "61st to 100th places: Split $2.5k USDT evenly"
 msgstr ""
 
-#: templates/huobi-launch.html:923
+#: templates/huobi-launch.html:1067
 msgid "Traders can win in multiple rewards periods, but the OGN Net Increase Amount is calculated using the snapshot at the end of the last period:"
 msgstr ""
 
-#: templates/huobi-launch.html:925
+#: templates/huobi-launch.html:1070
 msgid "For example, if a trader is holding 10,000 OGN at the end of round 1, that is the starting point for the second round. If they increase their OGN holdings to 30,000 OGN by the end of day 6, their OGN Net Increase Amount for the round is 20,000."
 msgstr ""
 
-#: templates/huobi-launch.html:931
+#: templates/huobi-launch.html:1077
 msgid "Origin Holder Airdrop"
 msgstr ""
 
-#: templates/huobi-launch.html:932
-msgid "Activity time period: First 60 days of listing"
+#: templates/huobi-launch.html:1078
+msgid "Activity time period: July 1, 2020 to August 31, 2020 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:935
+#: templates/huobi-launch.html:1081
 msgid "The OGN Holder Airdrop will reward Huobi traders that HODL OGN over a two-month period. 500k of OGN will be rewarded to OGN Holder participants."
 msgstr ""
 
-#: templates/huobi-launch.html:937
+#: templates/huobi-launch.html:1084
 msgid "Airdrop rounds"
 msgstr ""
 
-#: templates/huobi-launch.html:939
+#: templates/huobi-launch.html:1086
 msgid "The OGN Holder Airdrop campaign will begin after the OGN Net Asset Increase competition ends. There will be two month-long rounds."
 msgstr ""
 
-#: templates/huobi-launch.html:941
-msgid "Round 1 will commence from June 23, 2020 2:01PM to July 23, 2020 2PM"
+#: templates/huobi-launch.html:1089
+msgid "Round 1 will commence from July 1, 2020 to July 31, 2020 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:942
-msgid "Round 2 will commence from July 23, 2020 2:01PM to August 23, 2020 2PM"
+#: templates/huobi-launch.html:1090
+msgid "Round 2 will commence from August 1, 2020 to August 31, 2020 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:945
+#: templates/huobi-launch.html:1094
 msgid "Airdrop rules"
 msgstr ""
 
-#: templates/huobi-launch.html:947
+#: templates/huobi-launch.html:1096
 msgid "For each round, 250k OGN will be rewarded to OGN holders to OGN holders based on the amount of OGN they are holding relative to all other OGN holders:"
 msgstr ""
 
-#: templates/huobi-launch.html:949
+#: templates/huobi-launch.html:1099
 msgid "OGN rewarded = OGN Holder score x (The average OGN holdings that the user holds during the month / The total amount of OGN all users hold)"
 msgstr ""
 
-#: templates/huobi-launch.html:950
+#: templates/huobi-launch.html:1101
 msgid "Users who hold on average 1000 HT or more in each monthly airdrop period will double the value for their average OGN holdings for the month for the rewards calculation"
 msgstr ""
 
-#: templates/huobi-launch.html:951
+#: templates/huobi-launch.html:1103
 msgid "Users who have held on average at least 1000 HT for 90 days prior to each airdrop distribution will triple the value for their average OGN holdings for the month for the rewards calculation"
 msgstr ""
 
-#: templates/huobi-launch.html:953
+#: templates/huobi-launch.html:1106
 msgid "In addition, users must meet the following eligibility requirements:"
 msgstr ""
 
-#: templates/huobi-launch.html:955
+#: templates/huobi-launch.html:1108
 msgid "The user must hold at least 1000 OGN daily during the month"
 msgstr ""
 
-#: templates/huobi-launch.html:956
+#: templates/huobi-launch.html:1109
 msgid "The user must register their email address with Origin and join the Origin Wechat group."
 msgstr ""
 
@@ -1200,7 +1295,7 @@ msgstr "랜달 카플란"
 msgid "Founder, Akamai"
 msgstr "창업자, Akamai"
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:64
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:77
 msgid "Origin Protocol"
 msgstr "오리진 프로토콜(Origin Protocol)"
 
@@ -1390,26 +1485,26 @@ msgstr ""
 msgid "OGN is available on these top exchanges"
 msgstr ""
 
-#: templates/ogn-token.html:96 templates/whitepaper/platform.html:197
+#: templates/ogn-token.html:101 templates/whitepaper/platform.html:197
 msgid "Origin Rewards"
 msgstr "오리진 리워드"
 
-#: templates/ogn-token.html:98
+#: templates/ogn-token.html:103
 msgid "Earn your stake in the Origin network today. Users can\n"
 "            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
 "            friends and family to Origin, sharing news about Origin on social\n"
 "            media, and making purchases from our featured sellers."
 msgstr ""
 
-#: templates/ogn-token.html:103
+#: templates/ogn-token.html:108
 msgid "Not available in the United States"
 msgstr "미국에서는 사용할 수 없습니다"
 
-#: templates/ogn-token.html:130
+#: templates/ogn-token.html:135
 msgid "Commissions"
 msgstr "수수료"
 
-#: templates/ogn-token.html:132
+#: templates/ogn-token.html:137
 msgid "Promote your listings across the Origin flagship app and\n"
 "            third-party apps with Origin Commissions. Pay with OGN to get\n"
 "            featured prominently in search results. Application developers and\n"
@@ -1417,45 +1512,45 @@ msgid "Promote your listings across the Origin flagship app and\n"
 "            complete their sales."
 msgstr ""
 
-#: templates/ogn-token.html:146
+#: templates/ogn-token.html:151
 msgid "Payments"
 msgstr "지불"
 
-#: templates/ogn-token.html:148
+#: templates/ogn-token.html:153
 msgid "Use the Origin Tokens (OGN) that you've earned in Origin\n"
 "            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
 "            the network by accepting OGN as a preferred payment method."
 msgstr ""
 
-#: templates/ogn-token.html:166
+#: templates/ogn-token.html:171
 msgid "Research and Development"
 msgstr "연구 개발"
 
-#: templates/ogn-token.html:170
+#: templates/ogn-token.html:175
 msgid "Origin Nodes"
 msgstr "오리진 노드(Origin Nodes)"
 
-#: templates/ogn-token.html:172
+#: templates/ogn-token.html:177
 msgid "Stake your OGN to run an Origin Node and earn more OGN by\n"
 "            helping to replicate and validate profile and listing data on the\n"
 "            network."
 msgstr ""
 
-#: templates/ogn-token.html:179
+#: templates/ogn-token.html:184
 msgid "Origin Relayer"
 msgstr "오리진 릴레이어(Relayer)"
 
-#: templates/ogn-token.html:181
+#: templates/ogn-token.html:186
 msgid "Developers can pay for usage of Origin Meta Transactions\n"
 "            Relayers with OGN. Meta Transactions reduce user friction and\n"
 "            encourage adoption and retention."
 msgstr ""
 
-#: templates/ogn-token.html:188
+#: templates/ogn-token.html:193
 msgid "Governance"
 msgstr "거버넌스(Governance)"
 
-#: templates/ogn-token.html:190
+#: templates/ogn-token.html:195
 msgid "Everyone has a vote on the Origin Platform. Token holders\n"
 "            will participate in important community votes to define future\n"
 "            initiatives."
@@ -1653,258 +1748,262 @@ msgid "shoporigin.com"
 msgstr "shoporigin.com"
 
 #: templates/product.html:124
+msgid "Featured on"
+msgstr ""
+
+#: templates/product.html:128
 msgid "Available on"
 msgstr "사용 가능"
 
-#: templates/product.html:138
+#: templates/product.html:142
 msgid "Decentralized marketplaces powered by Origin"
 msgstr ""
 
-#: templates/product.html:140
+#: templates/product.html:144
 msgid "See the Origin Platform in action at shoporigin.com"
 msgstr "Shoporigin.com에서 오리진(Origin) 플랫폼을 경험해보세요."
 
-#: templates/product.html:142
+#: templates/product.html:146
 msgid "Buy and sell today"
 msgstr "지금 구매 그리고 판매를 시작해보세요"
 
-#: templates/product.html:144
+#: templates/product.html:148
 msgid "Other marketplaces built on the Origin Platform"
 msgstr ""
 
-#: templates/product.html:165
+#: templates/product.html:169
 msgid "Self-sovereign Identity"
 msgstr "자기주권신원(Self-Sovereign Identity)"
 
-#: templates/product.html:167
+#: templates/product.html:171
 msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
 msgstr "자신의 데이터를 소유하고 보호하세요. 프로필은 이동이 가능하며 모든 오리진(Origin) 기반의 앱에서 사용이 가능합니다."
 
-#: templates/product.html:176
+#: templates/product.html:180
 msgid "Encrypted Messaging"
 msgstr "암호화된 메시징(Messaging)"
 
-#: templates/product.html:178
+#: templates/product.html:182
 msgid "Send secure, private messages to other buyers and sellers on the platform."
 msgstr "플랫폼상에서 다른 구매자와 판매자에게 안전한 개인 메시지를 보냅니다."
 
-#: templates/product.html:187
+#: templates/product.html:191
 msgid "Permissionless Payments"
 msgstr "허가 없는 결제(Permissionless Payments)"
 
-#: templates/product.html:189
+#: templates/product.html:193
 msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
 msgstr "오리진 토큰 (OGN), 이더 (ETH) 또는 메이커 다이 (DAI) 중에서 선택하여 구매 및 판매하세요."
 
-#: templates/product.html:198
+#: templates/product.html:202
 msgid "Reputation Systems"
 msgstr "평판(Reputation) 시스템"
 
-#: templates/product.html:200
+#: templates/product.html:204
 msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
 msgstr "중앙집권적인 앱과 동일하게 거래에 대한 등급을 부여하고 리뷰를 남기세요."
 
-#: templates/product.html:209
+#: templates/product.html:213
 msgid "Blockchain-Powered Transactions"
 msgstr "블록체인 거래"
 
-#: templates/product.html:211
+#: templates/product.html:215
 msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
 msgstr "오리진 마켓플레이스의 스마트 컨트렉트(Smart Contract) 에 자금이 에스크로됩니다. 구매자와 판매자는 중개인없이 물건을 사고팔 수 있습니다."
 
-#: templates/product.html:220
+#: templates/product.html:224
 msgid "Arbitration Services"
 msgstr "중재(Arbitration) 서비스"
 
-#: templates/product.html:222
+#: templates/product.html:226
 msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
 msgstr "오리진(Origin) 사용 또는 제 3자 중재(arbitration) 서비스를 선택하여 양측 거래 당사자 모두의 안전을 유지합니다."
 
-#: templates/product.html:233
+#: templates/product.html:237
 msgid "How it works"
 msgstr "작동 방법"
 
-#: templates/product.html:242
+#: templates/product.html:246
 msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
 msgstr "구매자는 디앱(DApp) 을 통해 블록체인 상에 등록된 판매자의 상품 목록을 검색하고 탐색합니다."
 
-#: templates/product.html:248
+#: templates/product.html:252
 msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
 msgstr "구매자는 마켓플레이스 스마트 컨트렉트(smart contract) 에 구매 제안 및 에스크로 결제를 제출합니다."
 
-#: templates/product.html:254
+#: templates/product.html:258
 msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
 msgstr "판매자는 예비 구매자의 구매 제안을 수락 또는 거부 한 후, 해당 거래에 대한 다음 단계를 진행합니다."
 
-#: templates/product.html:260
+#: templates/product.html:264
 msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
 msgstr "구매 제안이 완료된 후, 스마트 컨트렉트는 판매자에게 에스크로 된 예치된 거래 대금을 전달합니다."
 
-#: templates/product.html:270
+#: templates/product.html:274
 msgid "Check out our updated whitepaper"
 msgstr "업데이트된 백서를 읽어보세요"
 
-#: templates/product.html:274
+#: templates/product.html:278
 msgid "Read our whitepaper"
 msgstr "백서 읽기"
 
-#: templates/product.html:284
+#: templates/product.html:288
 msgid "Milestones"
 msgstr "이정표"
 
-#: templates/product.html:290 templates/whitepaper/roadmap.html:7
+#: templates/product.html:294 templates/whitepaper/roadmap.html:7
 msgid "May 2017"
 msgstr "2017년 5월"
 
-#: templates/product.html:291 templates/whitepaper/roadmap.html:8
+#: templates/product.html:295 templates/whitepaper/roadmap.html:8
 msgid "Began initial development"
 msgstr "초기 개발 시작"
 
-#: templates/product.html:295 templates/whitepaper/roadmap.html:12
+#: templates/product.html:299 templates/whitepaper/roadmap.html:12
 msgid "September 2017"
 msgstr "2017년 9월"
 
-#: templates/product.html:296 templates/whitepaper/roadmap.html:13
+#: templates/product.html:300 templates/whitepaper/roadmap.html:13
 msgid "Released initial whitepaper"
 msgstr "초기 백서 출시"
 
-#: templates/product.html:300 templates/whitepaper/roadmap.html:22
+#: templates/product.html:304 templates/whitepaper/roadmap.html:22
 msgid "December 2017"
 msgstr "2017년 12월"
 
-#: templates/product.html:301 templates/whitepaper/roadmap.html:23
+#: templates/product.html:305 templates/whitepaper/roadmap.html:23
 msgid "Launched Alpha on Ethereum testnet"
 msgstr "이더리움(Ethereum) 테스트넷 상 알파 버전 출시"
 
-#: templates/product.html:305 templates/whitepaper/roadmap.html:37
+#: templates/product.html:309 templates/whitepaper/roadmap.html:37
 msgid "October 2018"
 msgstr "2018년 10월 "
 
-#: templates/product.html:306 templates/whitepaper/roadmap.html:38
+#: templates/product.html:310 templates/whitepaper/roadmap.html:38
 msgid "Launched Beta on Ethereum mainnet"
 msgstr "이더리움(Ethereum) 메인넷 상 베타 버전 출시"
 
-#: templates/product.html:310 templates/whitepaper/roadmap.html:42
+#: templates/product.html:314 templates/whitepaper/roadmap.html:42
 msgid "February 2019"
 msgstr "2019년 2월"
 
-#: templates/product.html:312 templates/whitepaper/roadmap.html:44
+#: templates/product.html:316 templates/whitepaper/roadmap.html:44
 msgid "Launched Marketplace Creator 1.0 and our first mobile apps"
 msgstr "마켓플레이스 크리에이터(Marketplace Creator) 1.0 및 첫번째 모바일 앱 출시"
 
-#: templates/product.html:313 templates/whitepaper/roadmap.html:45
+#: templates/product.html:317 templates/whitepaper/roadmap.html:45
 msgid "Supported first partner app launches"
 msgstr "첫번째 파트너 앱 출시 지원"
 
-#: templates/product.html:318 templates/whitepaper/roadmap.html:50
+#: templates/product.html:322 templates/whitepaper/roadmap.html:50
 msgid "April 2019"
 msgstr "2019년 4월"
 
-#: templates/product.html:320 templates/whitepaper/roadmap.html:52
+#: templates/product.html:324 templates/whitepaper/roadmap.html:52
 msgid "Launched Origin Rewards"
 msgstr "오리진 리워드 출시"
 
-#: templates/product.html:321 templates/whitepaper/roadmap.html:53
+#: templates/product.html:325 templates/whitepaper/roadmap.html:53
 msgid "Launched stablecoin payments"
 msgstr "스테이블코인(stablecoin) 결제 출시"
 
-#: templates/product.html:326 templates/whitepaper/roadmap.html:58
+#: templates/product.html:330 templates/whitepaper/roadmap.html:58
 msgid "July 2019"
 msgstr "2019년 7월"
 
-#: templates/product.html:328 templates/whitepaper/roadmap.html:60
+#: templates/product.html:332 templates/whitepaper/roadmap.html:60
 msgid "Launched shoporigin.com and new mobile apps"
 msgstr "Shoporigin.com 및 새로운 모바일 앱 출시"
 
-#: templates/product.html:329 templates/whitepaper/roadmap.html:61
+#: templates/product.html:333 templates/whitepaper/roadmap.html:61
 msgid "Launched Meta Transactions"
 msgstr "메타 트랜잭션(Meta Transaction) 출시"
 
-#: templates/product.html:334 templates/whitepaper/roadmap.html:66
+#: templates/product.html:338 templates/whitepaper/roadmap.html:66
 msgid "September 2019"
 msgstr "2019년 9월"
 
-#: templates/product.html:336
+#: templates/product.html:340
 msgid "Launched OGN Commissions"
 msgstr "OGN 커미션 출시"
 
-#: templates/product.html:341
+#: templates/product.html:345
 msgid "Q4 2019"
 msgstr "Q4 2019"
 
-#: templates/product.html:343
+#: templates/product.html:347
 msgid "Distributed investor OGN tokens"
 msgstr ""
 
-#: templates/product.html:344
+#: templates/product.html:348
 msgid "Launched Dshop"
 msgstr ""
 
-#: templates/product.html:349 templates/whitepaper/roadmap.html:83
+#: templates/product.html:353 templates/whitepaper/roadmap.html:83
 msgid "Q1 2020"
 msgstr "Q1 2020"
 
-#: templates/product.html:351 templates/whitepaper/roadmap.html:85
+#: templates/product.html:355 templates/whitepaper/roadmap.html:85
 msgid "Launched Mainnet 1.0"
 msgstr ""
 
-#: templates/product.html:352
+#: templates/product.html:356
 msgid "Listed on Binance"
 msgstr ""
 
-#: templates/product.html:353 templates/whitepaper/roadmap.html:86
+#: templates/product.html:357 templates/whitepaper/roadmap.html:86
 msgid "Launched OGN as payment token"
 msgstr ""
 
-#: templates/product.html:354
+#: templates/product.html:358
 msgid "Added to Samsung Blockchain Wallet"
 msgstr ""
 
-#: templates/product.html:359 templates/whitepaper/roadmap.html:92
+#: templates/product.html:363 templates/whitepaper/roadmap.html:92
 msgid "Q2 2020"
 msgstr "Q2 2020"
 
-#: templates/product.html:361
+#: templates/product.html:365
 msgid "Launched Origin Deals"
 msgstr ""
 
-#: templates/product.html:362
+#: templates/product.html:366
 msgid "Listed on additional exchanges"
 msgstr ""
 
-#: templates/product.html:363
+#: templates/product.html:367
 msgid "Support Dshop partner launches"
 msgstr ""
 
-#: templates/product.html:364 templates/whitepaper/roadmap.html:96
+#: templates/product.html:368 templates/whitepaper/roadmap.html:96
 msgid "Launch OGN staking model"
 msgstr "OGN 스테이킹(staking) 모델 출시"
 
-#: templates/product.html:369 templates/whitepaper/roadmap.html:101
+#: templates/product.html:373 templates/whitepaper/roadmap.html:101
 msgid "Q3 2020"
 msgstr "Q3 2020"
 
-#: templates/product.html:371 templates/whitepaper/roadmap.html:103
+#: templates/product.html:375 templates/whitepaper/roadmap.html:103
 msgid "Launch new developer tools and expand developer adoption"
 msgstr "새로운 개발자도구(developer tools) 의 출시와 개발자 채용 확대"
 
-#: templates/product.html:376 templates/whitepaper/roadmap.html:108
+#: templates/product.html:380 templates/whitepaper/roadmap.html:108
 msgid "Q4 2020"
 msgstr "Q4 2020"
 
-#: templates/product.html:378 templates/whitepaper/roadmap.html:110
+#: templates/product.html:382 templates/whitepaper/roadmap.html:110
 msgid "Launch OGN as a governance token"
 msgstr "거버넌스 토큰(Governance Token) 으로 OGN 출시"
 
-#: templates/product.html:390
+#: templates/product.html:394
 msgid "Origin Token"
 msgstr "오리진 토큰(Origin Token)"
 
-#: templates/product.html:393
+#: templates/product.html:397
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr "오리진 토큰(OGN) 은 네트워크의 건강과 성장을 보장하는 인센티브 토큰입니다."
 
-#: templates/product.html:397
+#: templates/product.html:401
 msgid "Learn more about Origin Token"
 msgstr "오리진 토큰(Origin Token) 에 대해 더 자세히 알아보기"
 
@@ -2324,7 +2423,7 @@ msgstr "커뮤니티"
 #: templates/team.html:510
 #, python-format
 msgid "100%% open-source."
-msgstr "100%% 오픈소스."
+msgstr "100% 오픈소스."
 
 #: templates/team.html:511
 msgid " contributors."
@@ -2432,10 +2531,6 @@ msgstr "지금 오리진 토큰(Origin Tokens) 을 무료로 얻어보세요."
 #: templates/warning.html:21
 msgid "Participate in our campaigns and complete tasks on our DApp to earn Origin Tokens."
 msgstr "지금 오리진 댑에서 진행 중인 캠페인의 특정 미션을 수행한 후, 오리진 토큰을 얻어보세요."
-
-#: templates/warning.html:24
-msgid "Go"
-msgstr "계속"
 
 #: templates/whitepaper.html:3 templates/whitepaper.html:5
 msgid "Origin Protocol - Whitepaper"
@@ -2696,7 +2791,7 @@ msgstr "...컨벤셔널 위스덤(conventional wisdom)은 크레이그리스트(
 #: templates/whitepaper/footnote.html:27
 #, python-format
 msgid " We...found the median ‘real commission’ over the course of 37 rides in San Francisco was 39.01%%. "
-msgstr " 우리는... 샌프란시스코에서 37번의 공유 차량을 이용하는 동안 탑승에 대한 '실제 수수료' 가 평균 39.01%%에 달한다는 것을 발견하였습니다. - 라이더셰어 가이(The Rideshare Guy) "
+msgstr " 우리는... 샌프란시스코에서 37번의 공유 차량을 이용하는 동안 탑승에 대한 '실제 수수료' 가 평균 39.01%에 달한다는 것을 발견하였습니다. - 라이더셰어 가이(The Rideshare Guy) "
 
 #: templates/whitepaper/footnote.html:31
 msgid " Airbnb has canceled a number of accounts and bookings associated with the Unite the Right Free Speech Rally"
@@ -2705,12 +2800,12 @@ msgstr " 에어비엔비는 Unite the Right Free Speech Rally와 관련된 다�
 #: templates/whitepaper/footnote.html:35
 #, python-format
 msgid "San Francisco estimates that more than 50%% of current Airbnb listings in the city aren't eligible to be registered and thus would need to stop hosting visitors unless they can comply"
-msgstr "샌프란시스코에서는 현재 시내에 있는 에어비엔비(Airbnb) 목록의 50%%이상이 등록 가능한 대상이 아니라고 추정하고 있으며, 이에 따라 이들이 해당 규칙을 준수할 수 없다면 방문자 호스팅을 중단해야 한다고 이야기 합니다. - USA Today"
+msgstr "샌프란시스코에서는 현재 시내에 있는 에어비엔비(Airbnb) 목록의 50%이상이 등록 가능한 대상이 아니라고 추정하고 있으며, 이에 따라 이들이 해당 규칙을 준수할 수 없다면 방문자 호스팅을 중단해야 한다고 이야기 합니다. - USA Today"
 
 #: templates/whitepaper/footnote.html:39
 #, python-format
 msgid "TIME’s poll of 3,000 people, conducted by Penn Schoen Berland in late November, found that 22%% of American adults, or 45 million people, have already offered some kind of good or service in this economy. "
-msgstr "타임지(TIME) 는 11월 말 펜 숄더 버랜드(Penn Schoen Berland) 가 3,000명을 대상으로 실시한 여론 조사에서, 미국 성인의 22%%에 해당하는 4천5백만 명이 이미 해당 경제에서 일종의 거래 또는 서비스를 제공했본 경험이 있다는 결과를 밝혔습니다. - 타임(Time) "
+msgstr "타임지(TIME) 는 11월 말 펜 숄더 버랜드(Penn Schoen Berland) 가 3,000명을 대상으로 실시한 여론 조사에서, 미국 성인의 22%에 해당하는 4천5백만 명이 이미 해당 경제에서 일종의 거래 또는 서비스를 제공했본 경험이 있다는 결과를 밝혔습니다. - 타임(Time) "
 
 #: templates/whitepaper/footnote.html:43
 msgid "The sharing economy is estimated to grow from $14 billion in 2014 to $335 billion by 2025"
@@ -2722,12 +2817,12 @@ msgstr "공유 경제에 대한 새로운 연구 결과는 다음과 같습니�
 
 #: templates/whitepaper/footnote.html:51
 msgid "property managers...will be charged a 14 percent host-only fee by default. Until now, the default was that Airbnb charged hosts a 3 to 5 percent fixed fee"
-msgstr "부동산 관리자들은...기본적으로 14%%에 달하는 호스트 정찰 요금이 부과됩니다. 지금까지는 에어비엔비(Airbnb)가 호스트들에게 3-5%%에 달하는 고정적 수수료를 부과하고 있었던 것입니다.- 스키프트(Skift)"
+msgstr "부동산 관리자들은...기본적으로 14%에 달하는 호스트 정찰 요금이 부과됩니다. 지금까지는 에어비엔비(Airbnb)가 호스트들에게 3-5%에 달하는 고정적 수수료를 부과하고 있었던 것입니다.- 스키프트(Skift)"
 
 #: templates/whitepaper/footnote.html:55
 #, python-format
 msgid "TNCs can take as much as 42.75%% from a minimum fare ride in San Francisco"
-msgstr "TNCs는 샌프란시스코에서 최저 교통 운임 비용으로 42.75%%까지 이용할 수 있습니다."
+msgstr "TNCs는 샌프란시스코에서 최저 교통 운임 비용으로 42.75%까지 이용할 수 있습니다."
 
 #: templates/whitepaper/footnote.html:59
 msgid "Projects built on IPFS"
@@ -2792,7 +2887,7 @@ msgstr "오리진 디앱(DApp) 은 오리진 플랫폼에서 경량 클라이언
 #: templates/whitepaper/platform.html:54
 #, python-format
 msgid "Of particular note is that we don’t intend for the Origin DApp to be the only way to access user and transaction data. Our code, protocols, and specifications are all 100%% open-source, and we expect and hope that others will extend and fork the code to create their own frontend experiences. Already, we have had over 170 open-source contributors participate in improving our core libraries and initial marketplace app. There are already multiple third-party DApps running on the Origin Platform across numerous verticals such as home-sharing, luxury ecommerce, and fine art."
-msgstr "특히 사용자 및 거래 데이터에 액세스할 수 있는 유일한 방법은 오리진 디앱(DApp) 에 있지 않습니다. 자사의 코드, 프로토콜 및 사양은 모두 100%% 오픈 소스이며, 다른 사용자들이 자사의 코드를 확장하고 포크하여 그들 스스로 자체 프론트 엔드 환경을 구축해 나가기를 기대합니다. 이미 170명 이상의 오픈 소스 기여자들이 핵심 라이브러리와 초기 마켓플레이스 어플리케이션의 개발 과정에 참여하고 있습니다. 이미 오리진 플랫폼에서는 숙박 공유, 고급 전자 상거래 및 미술품과 같은 다양한 제품군을 활용하여 사업을 진행하고 있는 여러개의 타사 디앱들이 실행되고 있습니다."
+msgstr "특히 사용자 및 거래 데이터에 액세스할 수 있는 유일한 방법은 오리진 디앱(DApp) 에 있지 않습니다. 자사의 코드, 프로토콜 및 사양은 모두 100% 오픈 소스이며, 다른 사용자들이 자사의 코드를 확장하고 포크하여 그들 스스로 자체 프론트 엔드 환경을 구축해 나가기를 기대합니다. 이미 170명 이상의 오픈 소스 기여자들이 핵심 라이브러리와 초기 마켓플레이스 어플리케이션의 개발 과정에 참여하고 있습니다. 이미 오리진 플랫폼에서는 숙박 공유, 고급 전자 상거래 및 미술품과 같은 다양한 제품군을 활용하여 사업을 진행하고 있는 여러개의 타사 디앱들이 실행되고 있습니다."
 
 #: templates/whitepaper/platform.html:58
 msgid "We see the Origin flagship marketplace app as just the first way to interact with the Origin protocols. In the coming months and years after our 1.0 launch, we expect hundreds of third-party websites, mobile apps, and even new APIs to be built on top of the network."
@@ -3395,12 +3490,12 @@ msgstr "현재 보고된 바로 380 억 달러 규모의 비즈니스를 구축�
 #: templates/whitepaper/why.html:60
 #, python-format
 msgid "Today, the technology platform has been built and the marketplace grows organically with new hosts and users both proactively seeking out Airbnb’s website and mobile app. Airbnb charges guests 5-15%% and hosts 3-5%% of every booking. This means Airbnb will capture as much as 20%% of the value of every transaction regardless of whether additional work is being done by the company. Airbnb also automatically withholds local taxes as well, which can be significant. For example, the hotel taxes in Chicago, Atlanta, and Seattle are 16%%."
-msgstr "오늘날 기술 플랫폼이 구축되었으며 새로운 주인과 사용자가 에어비앤비의 웹사이트와 모바일 앱을 적극적으로 찾음으로써 마켓플레이스가 유기적으로 성장하고 있습니다. 에어비앤비는 손님에게 5-15%%의 요금을 부과하고 모든 예약의 3-5%%를 호스팅합니다. 즉, 회사에서 추가 업무를 수행하는지 여부에 관계없이 에어비앤비는 모든 거래 비용의 20%%를 획득합니다. 에어비앤비는 또한 자동으로 지방세를 공제받으며 이는 상당할 수 있습니다. 예를 들어, 시카고, 애틀랜타 및 시애틀의 호텔 세금은 16%%입니다."
+msgstr "오늘날 기술 플랫폼이 구축되었으며 새로운 주인과 사용자가 에어비앤비의 웹사이트와 모바일 앱을 적극적으로 찾음으로써 마켓플레이스가 유기적으로 성장하고 있습니다. 에어비앤비는 손님에게 5-15%의 요금을 부과하고 모든 예약의 3-5%를 호스팅합니다. 즉, 회사에서 추가 업무를 수행하는지 여부에 관계없이 에어비앤비는 모든 거래 비용의 20%를 획득합니다. 에어비앤비는 또한 자동으로 지방세를 공제받으며 이는 상당할 수 있습니다. 예를 들어, 시카고, 애틀랜타 및 시애틀의 호텔 세금은 16%입니다."
 
 #: templates/whitepaper/why.html:62
 #, python-format
 msgid "It’s worth noting that Airbnb is not alone in charging egregious fees for its matching service. Online travel agencies like Booking.com and Expedia charge affiliate hotels 15-30%% of transaction value<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
-msgstr "매칭 서비스에 대해 엄청난 수수료를 청구하는 회사는 에어비앤비 뿐만이 아니라는 점에 주목할 필요가 있습니다. Booking.com 및 익스피디아와 같은 온라인 여행사는 제휴 호텔에 거래 금액의 15-30%%의 수수료를 청구합니다<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
+msgstr "매칭 서비스에 대해 엄청난 수수료를 청구하는 회사는 에어비앤비 뿐만이 아니라는 점에 주목할 필요가 있습니다. Booking.com 및 익스피디아와 같은 온라인 여행사는 제휴 호텔에 거래 금액의 15-30%의 수수료를 청구합니다<a class='whitepaper-footnote-link' href='#footnote5'>5</a>"
 
 #: templates/whitepaper/why.html:66
 msgid "In this case, while buyer and seller are both better off than they would be without Airbnb, they are leaving money on the table since both sides would be willing to meet at a price somewhere in the middle. A more efficient market would exist if the transaction fees were removed or even decreased. Buyer and seller will both be better off economically as Airbnb is disintermediated."
@@ -3465,7 +3560,7 @@ msgstr "시장들이 개별 기업들에 의해 지배될 때, 이 기업들은 
 #: templates/whitepaper/why.html:106
 #, python-format
 msgid "As sharing economy marketplaces grow, suppliers and buyers increasingly become abstracted away into the numbers, and some are left feeling like they are “cogs in the wheel”. Uber has increased their take from drivers from 15%% all the way to 30%% over the years<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, and drivers have no ability to impact these decisions. Many early Uber drivers now feel that they have been taken advantage of as the ride-sharing giant has scaled its operations."
-msgstr "공유경제 마켓플레이스가 성장함에 따라 공급자와 구매자는 점차 숫자로 추상화되고 일부는 \"바퀴에 달린 톱니바퀴\"와 같다는 느낌을 갖게 됩니다. 우버는 운전자에게서 가져가는 수수료를 15%%에서 30%%로 늘렸지만<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, 운전자는 이러한 결정에 영향을 줄 수 없습니다. 많은 초창기 우버 운전자들은 이제 거대한 차량 공유 기업이 확장함에 따라 자신들이 이용되었다고 생각합니다."
+msgstr "공유경제 마켓플레이스가 성장함에 따라 공급자와 구매자는 점차 숫자로 추상화되고 일부는 \"바퀴에 달린 톱니바퀴\"와 같다는 느낌을 갖게 됩니다. 우버는 운전자에게서 가져가는 수수료를 15%에서 30%로 늘렸지만<a class='whitepaper-footnote-link' href='#footnote7'>7</a>, 운전자는 이러한 결정에 영향을 줄 수 없습니다. 많은 초창기 우버 운전자들은 이제 거대한 차량 공유 기업이 확장함에 따라 자신들이 이용되었다고 생각합니다."
 
 #: templates/whitepaper/why.html:108
 msgid "In 2017, Airbnb made the news for kicking guests out of rented properties and canceled their accounts after discovering those guests were planning to attend a Ku Klux Klan (KKK) rally<a class='whitepaper-footnote-link' href='#footnote8'>8</a>. While few people sympathize with klan members that promote racist and violent ideology, it’s a slippery slope for Airbnb to start taking an opinionated stance on who is allowed to use their service. What about members of controversial political and religious groups? The personal leanings of a marketplace’s founders, no matter how mainstream, should not interfere with the decisions of marketplace buyers and sellers."
@@ -3494,7 +3589,7 @@ msgstr "이제 변화의 <span>시간입니다</span>"
 #: templates/whitepaper/why.html:124
 #, python-format
 msgid "The market is ready for a new peer-to-peer form of commerce. The world is moving to a gig economy where more and more individuals provide goods and services as their primary or supplemental way of earning income. Over 22%% of US adults have become suppliers to the sharing economy as of 2016<a class='whitepaper-footnote-link' href='#footnote10'>10</a> and this number is expected to increase over time. These suppliers will hugely benefit from an open network that does not charge exorbitant transaction and service fees."
-msgstr "시장은 새로운 피어투피어(P2P) 형태의 상거래를 준비하고 있습니다. 세계는 점점 더 많은 사람들이 소득을 얻는 기본적 또는 보충적 방법으로 상품과 서비스를 제공하는 긱 경제(Gig Economy) 로 이동하고 있습니다. 미국 성인의 22%% 명 이상이 2016년 기준으로 <a class='whitepaper-footnote-link' href='#footnote10'>10</a> 공유경제의 제공자가 되었으며 이 숫자는 시간이 지남에 따라 증가 할 것으로 예상됩니다. 이러한 공급 업체는 엄청난 거래 및 서비스 수수료를 청구하지 않는 개방형 네트워크의 이점을 크게 누릴 수 있습니다."
+msgstr "시장은 새로운 피어투피어(P2P) 형태의 상거래를 준비하고 있습니다. 세계는 점점 더 많은 사람들이 소득을 얻는 기본적 또는 보충적 방법으로 상품과 서비스를 제공하는 긱 경제(Gig Economy) 로 이동하고 있습니다. 미국 성인의 22% 명 이상이 2016년 기준으로 <a class='whitepaper-footnote-link' href='#footnote10'>10</a> 공유경제의 제공자가 되었으며 이 숫자는 시간이 지남에 따라 증가 할 것으로 예상됩니다. 이러한 공급 업체는 엄청난 거래 및 서비스 수수료를 청구하지 않는 개방형 네트워크의 이점을 크게 누릴 수 있습니다."
 
 #: templates/whitepaper/why.html:126
 msgid "Gross bookings on the sharing economy are expected to exceed $335B by 2025<a class='whitepaper-footnote-link' href='#footnote11'>11</a>. Platform revenues (mostly fees taken by the companies) for the sharing economy are expected to more than double to $40.2B in the next five years<a class='whitepaper-footnote-link' href='#footnote12'>12</a>."
@@ -3503,7 +3598,7 @@ msgstr "공유 경제 상품 및 서비스 사용을 목적으로 하는 총 예
 #: templates/whitepaper/why.html:130
 #, python-format
 msgid "While the overall market continues to boom, value capture has only shifted in favor to the regional monopolies. Recently, Airbnb dramatically increased fees for hosts in many global regions, from 3 to 5 percent to 14 percent<a class='whitepaper-footnote-link' href='#footnote13'>13</a>. Similarly, Uber’s advertised 25%% commission rate is actually significantly higher when factoring in additional fees that are passed onto their drivers. For example, the median commission that Uber charges in San Francisco was recently estimated at 39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>"
-msgstr "시장 전반은 지속적으로 호황을 누리고 있지만, 가치 포착은 지역 독점에 유리한 방향으로 바뀌고 있습니다. 최근 에어비앤비는 전세계 여러 지역의 호스트에 대한 수수료를 3-5 %%에서 14 %%<a class='whitepaper-footnote-link' href='#footnote13'>13</a>로 대폭 증가시켰습니다. 마찬가지로 우버의 광고 된 25%% 커미션 요금은 운전자에게 전달되는 추가 수수료를 고려할 때 실제로 상당히 높습니다. 예를 들어, 우버가 샌프란시스코에서 청구하는 중앙 수수료는 최근에 39%%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>로 추정되었습니다."
+msgstr "시장 전반은 지속적으로 호황을 누리고 있지만, 가치 포착은 지역 독점에 유리한 방향으로 바뀌고 있습니다. 최근 에어비앤비는 전세계 여러 지역의 호스트에 대한 수수료를 3-5 %에서 14 %<a class='whitepaper-footnote-link' href='#footnote13'>13</a>로 대폭 증가시켰습니다. 마찬가지로 우버의 광고 된 25% 커미션 요금은 운전자에게 전달되는 추가 수수료를 고려할 때 실제로 상당히 높습니다. 예를 들어, 우버가 샌프란시스코에서 청구하는 중앙 수수료는 최근에 39%<a class='whitepaper-footnote-link' href='#footnote14'>14</a>로 추정되었습니다."
 
 #: templates/whitepaper/why.html:132
 msgid "The world is also moving more and more to global versus local commerce. Sellers are able to provide services (and many times products and goods) to customers across the world. Currently, a Lyft passenger would not be able to ride on the Didi ChuXing ride-sharing network (China’s largest ride-sharing company) save for the fact that the two companies signed a deep partnership that was months in the making and involved a mutual investor pouring hundreds of millions of dollars into both companies. In a global, but openly distributed marketplace, a customer would be able to purchase services from suppliers without a need for new accounts, complicated currency exchanges, or prerequisite negotiated deals."
@@ -3529,59 +3624,59 @@ msgstr "이 두 가지 기본 기술 위에 구축 된 오리진 플랫폼은 �
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "오리진은 지금이 바로 피어투피어(P2P) 시장과 전자 상거래 시장을 발전시켜 시장 수요 증가와 유망한 기술 혁신을 활용할 수있는 완벽한 시기라고 생각합니다."
 
-#: views/web_views.py:65
+#: views/web_views.py:78
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "오리진 프로토콜은 블록체인을 기반으로 탈 중앙화된 마켓 플레이스를 구축합니다."
 
-#: views/web_views.py:167
+#: views/web_views.py:202
 msgid "Missing email"
 msgstr "이메일이 없습니다"
 
-#: views/web_views.py:170
+#: views/web_views.py:205
 msgid "Invalid email"
 msgstr "잘못된 이메일"
 
-#: views/web_views.py:226
+#: views/web_views.py:267
 msgid "You're already registered!"
 msgstr "이미 가입하셨습니다."
 
-#: views/web_views.py:228
+#: views/web_views.py:269
 msgid "Thanks for signing up!"
 msgstr "가입해주셔서 감사합니다!"
 
-#: views/web_views.py:241
+#: views/web_views.py:282
 msgid "Please enter your name"
 msgstr "이름을 입력해 주세요"
 
-#: views/web_views.py:243
+#: views/web_views.py:284
 msgid "Please enter your email"
 msgstr "이메일 주소를 입력해 주세요"
 
-#: views/web_views.py:245
+#: views/web_views.py:287
 msgid "Select your country of citizenship"
 msgstr "시민권 국가를 선택하십시오"
 
-#: views/web_views.py:247
+#: views/web_views.py:291
 msgid "Please enter your desired allocation"
 msgstr "원하시는 할당량을 입력 해 주세요"
 
-#: views/web_views.py:249
+#: views/web_views.py:294
 msgid "Select a currency"
 msgstr "통화를 선택하십시오"
 
-#: views/web_views.py:251
+#: views/web_views.py:297
 msgid "Please prove you are not a robot."
 msgstr "당신이 로봇이 아니라는 것을 증명 하세요"
 
-#: views/web_views.py:256
+#: views/web_views.py:311
 msgid "OK"
 msgstr "승인"
 
-#: views/web_views.py:267
+#: views/web_views.py:325
 msgid "You have been unsubscribed"
 msgstr "구독이 취소되었습니다."
 
-#: views/web_views.py:270
+#: views/web_views.py:328
 msgid "Ooops, something went wrong"
 msgstr "이런! 뭔가 잘못되었습니다."
 
