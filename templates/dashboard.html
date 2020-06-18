@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ gettext("Origin Protocol - Origin Token Dashboard") }}{% endblock %}
+
+{% block meta_description %}{{ gettext("Origin Protocol's platform powers true peer-to-peer marketplaces everywhere.") }}{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  var ognSupplyHistory = {{supply_history | safe}};
+</script>
+{% endblock %}
+
+{% block content %}
+
+{% with theme_dark=True %}
+{% include 'navbar.html' %}
+{% endwith %}  
+
+<main class="dashboard-page">
+  <section class="title-section blue-section">
+    <div class="container">
+      <h1>{{gettext("Origin Token Dashboard")}}</h1>
+
+      <div class="row">
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/price-icon.svg" />
+            <div class="stats-label">{{gettext("Price")}}</div>
+            <div class="stats-value">{{ogn_stats.ogn_usd_price}}</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/circulating-supply-icon.svg" />
+            <div class="stats-label">{{gettext("Circulating Supply")}}</div>
+            <div class="stats-value">
+              {{ogn_stats.circulating_supply}}
+              <div class="ogn-label">OGN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/market-cap-icon.svg" />
+            <div class="stats-label">{{gettext("Market Cap")}}</div>
+            <div class="stats-value">{{ogn_stats.market_cap}}</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/total-supply-icon.svg" />
+            <div class="stats-label">{{gettext("Total Supply")}}</div>
+            <div class="stats-value">
+              {{ogn_stats.total_supply}}
+              <div class="ogn-label">OGN</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule-section white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3>{{gettext("Token Unlock Schedule")}}</h3>
+          <div class="desc">
+            {{gettext("On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible.")}}
+          </div>
+          <div class="chart-container">
+            <canvas id="unlock_schedule_chart" height="290"></canvas>
+          </div>
+          <div id="unlock_schedule_legends" class="chart-legends-container"></div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <h3>{{gettext("Modeled vs. actual token release schedule")}}</h3>
+          <div class="desc" id="supplyDataEl">
+            {{gettext("Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%).") % (ogn_stats.circulating_supply, "ogn_modeled_supply", "ogn_supply_diff", "ogn_supply_diff_pct")}}
+          </div>
+          <div class="chart-container">
+            <canvas id="release_schedule_chart" height="290"></canvas>
+          </div>
+          <div id="release_schedule_legends" class="chart-legends-container"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="locked-tokens-section grey-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3>{{gettext("Locked Tokens")}}</h3>
+          <div class="desc">
+            {{gettext("Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals.")}}
+          </div>
+          
+          <div class="locked-token-widget">
+            <div class="title">
+              {{gettext("Total number of locked tokens")}}
+            </div>
+            <div class="value">
+              {{ogn_stats.staked_token_count}}
+              <div class="ogn-label">OGN</div>
+            </div>
+          </div>
+          
+          <div class="locked-token-widget">
+            <div class="title">
+              {{gettext("Investors, team members & users with locked tokens")}}
+            </div>
+            <div class="value">
+              {{ogn_stats.staked_user_count}}
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
+
+          <div class="reserved-wallets">
+
+            <div class="reserved-wallet">
+              <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
+              <div class="wallet-address d-none d-md-block">{{ogn_stats.foundation_reserve_address}}</div>
+              <div class="wallet-address d-md-none">{{ogn_stats.foundation_reserve_address[:6]}}...{{ogn_stats.foundation_reserve_address[-4:]}}</div>
+              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.foundation_reserve_address}}" target="_blank" rel="noopener noreferrer">
+                <img src="/static/img/dashboard/new-window-icon.svg" />
+              </a>
+            </div>
+
+            <div class="reserved-wallet">
+              <div class="wallet-name">{{gettext("Team Distribution")}}</div>
+              <div class="wallet-address d-none d-md-block">{{ogn_stats.team_dist_address}}</div>
+              <div class="wallet-address d-md-none">{{ogn_stats.team_dist_address[:6]}}...{{ogn_stats.team_dist_address[-4:]}}</div>
+              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.team_dist_address}}" target="_blank" rel="noopener noreferrer">
+                <img src="/static/img/dashboard/new-window-icon.svg" />
+              </a>
+            </div>
+
+            <div class="reserved-wallet">
+              <div class="wallet-name">{{gettext("Investor Distribution")}}</div>
+              <div class="wallet-address d-none d-md-block">{{ogn_stats.investor_dist_address}}</div>
+              <div class="wallet-address d-md-none">{{ogn_stats.investor_dist_address[:6]}}...{{ogn_stats.investor_dist_address[-4:]}}</div>
+              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.investor_dist_address}}" target="_blank" rel="noopener noreferrer">
+                <img src="/static/img/dashboard/new-window-icon.svg" />
+              </a>
+            </div>
+
+            <div class="reserved-wallet">
+              <div class="wallet-name">{{gettext("Distribution Staging")}}</div>
+              <div class="wallet-address d-none d-md-block">{{ogn_stats.dist_staging_address}}</div>
+              <div class="wallet-address d-md-none">{{ogn_stats.dist_staging_address[:6]}}...{{ogn_stats.dist_staging_address[-4:]}}</div>
+              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.dist_staging_address}}" target="_blank" rel="noopener noreferrer">
+                <img src="/static/img/dashboard/new-window-icon.svg" />
+              </a>
+            </div>
+
+            <div class="reserved-wallet">
+              <div class="wallet-name">{{gettext("Partnerships")}}</div>
+              <div class="wallet-address d-none d-md-block">{{ogn_stats.partnerships_address}}</div>
+              <div class="wallet-address d-md-none">{{ogn_stats.partnerships_address[:6]}}...{{ogn_stats.partnerships_address[-4:]}}</div>
+              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.partnerships_address}}" target="_blank" rel="noopener noreferrer">
+                <img src="/static/img/dashboard/new-window-icon.svg" />
+              </a>
+            </div>
+
+            <div class="reserved-wallet">
+              <div class="wallet-name">{{gettext("Ecosystem Growth")}}</div>
+              <div class="wallet-address d-none d-md-block">{{ogn_stats.ecosystem_growth_address}}</div>
+              <div class="wallet-address d-md-none">{{ogn_stats.ecosystem_growth_address[:6]}}...{{ogn_stats.ecosystem_growth_address[-4:]}}</div>
+              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.ecosystem_growth_address}}" target="_blank" rel="noopener noreferrer">
+                <img src="/static/img/dashboard/new-window-icon.svg" />
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</main>
+
+{% endblock %}

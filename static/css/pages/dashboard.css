@@ -1,0 +1,185 @@
+.dashboard-page {
+  background-color: #007cff;
+  padding-top: 75px;
+}
+
+.dashboard-page section {
+  padding: 50px 0 30px 0;
+}
+
+.dashboard-page section > .container {
+  padding: 0 30px;
+}
+
+.dashboard-page .title-section {
+  padding-bottom: 30px;
+}
+
+.dashboard-page .title-section h1 {
+  margin-top: 20px;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.dashboard-page .stats-widget {
+  margin: 0 0 0 20px;
+  padding: 20px 20px;
+  border-left: 1px solid #399aff;
+}
+
+.dashboard-page .stats-widget img {
+  object-fit: contain;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 16px;
+}
+
+.dashboard-page .stats-widget .stats-label {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.dashboard-page .stats-widget .stats-value {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.dashboard-page .stats-widget .stats-value .ogn-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.dashboard-page h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: #061d2a;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.dashboard-page .desc {
+  font-family: Lato;
+  font-size: 12px;
+  color: #8fa7b7;
+  margin-bottom: 17px;
+}
+
+.dashboard-page .locked-token-widget {
+  margin-top: 28px;
+}
+
+.dashboard-page .locked-token-widget .title {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: bold;
+  color: #061d2a;
+}
+
+.dashboard-page .locked-token-widget .value {
+  font-family: Lato;
+  font-size: 30px;
+  color: #061d2a;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+}
+
+.dashboard-page .locked-token-widget .ogn-label {
+  font-size: 18px;
+  color: #8fa7b7;
+  margin-bottom: 5px;
+  margin-left: 5px;;
+}
+
+.dashboard-page .reserved-wallets {
+  margin: 20px 0;
+}
+
+.dashboard-page .reserved-wallet {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #98a7b4;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.dashboard-page .reserved-wallet .wallet-name {
+  font-size: 14px;
+  font-weight: bold;
+  flex: 160px 0 0;
+}
+
+.dashboard-page .reserved-wallet .wallet-address {
+  font-size: 11px;
+  flex: 1;
+}
+
+.dashboard-page .reserved-wallet img {
+  flex: auto 0 0;
+}
+
+.dashboard-page .chart-legends {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.dashboard-page .chart-legends.grid-type {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+}
+
+.dashboard-page .chart-legends .legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-page .chart-legends .legend-item {
+  margin-top:  10px;
+}
+
+.dashboard-page .legend-color {
+  width: 32px;
+  height: 18px;
+  display: block;
+  margin-right: 5px;
+}
+
+.dashboard-page .legend-name {
+  font-size: 12px;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .dashboard-page .stats-widget {
+    margin: 0 0 20px 0;
+  }
+
+  .dashboard-page .chart-legends.grid-type {
+    display: grid;
+    grid-template-columns: repeat(1, 0fr);
+  }
+} 
+
+@media (max-width: 1200px) {
+  .dashboard-page .stats-widget {
+    margin: 0 0 20px 0;
+  }
+
+  .dashboard-page .chart-legends.grid-type {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+  }
+}

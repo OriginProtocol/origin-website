@@ -1,87 +1,109 @@
 <!DOCTYPE html>
 <html lang="{{ CURRENT_LANGUAGE }}">
+
 <head>
   {% block head %}
-    <title>{% block title %}{% endblock %}</title>
-    <meta charset="utf-8">
-    <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+  <title>{% block title %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{% block meta_description %}{% endblock %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@originprotocol" />
-    <meta property="og:url" content="{{ g.metadata.url }}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="fb:app_id" content="124441901753956"/>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@originprotocol" />
+  <meta property="og:url" content="{{ g.metadata.url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="fb:app_id" content="124441901753956" />
 
 
-    <meta property="og:image" content="{{ g.metadata.image }}"/>
-    <meta property="og:locale" content="{{ CURRENT_LANGUAGE }}"/>
-    <meta property="og:title" content="{{ g.metadata.title }}"/>
-    <meta property="og:description" content="{{ g.metadata.description }}"/>
+  <meta property="og:image" content="{{ g.metadata.image }}" />
+  <meta property="og:locale" content="{{ CURRENT_LANGUAGE }}" />
+  <meta property="og:title" content="{{ g.metadata.title }}" />
+  <meta property="og:description" content="{{ g.metadata.description }}" />
 
-    {% for language in AVAILABLE_LANGUAGES.items() %}
-      <link rel="alternate" hreflang="{{ language[0] }}" href='{{ universal.BASE_URL }}/{{"%s"% language[0] }}' />
-    {% endfor %}
+  {% for language in AVAILABLE_LANGUAGES.items() %}
+  <link rel="alternate" hreflang="{{ language[0] }}" href='{{ universal.BASE_URL }}/{{"%s"% language[0] }}' />
+  {% endfor %}
 
-    {% block styles %}
-      {# The biggest delay to rendering the site is the google fonts, so we make sure it is the first to start loading #}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700%7CPoppins:200,300,400,500,800%7COpen+Sans:400,600,800"/>
-      <link rel="stylesheet" href="/static/css/all_styles.css"/>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css" media="all"/>
+  {% block styles %}
+  {# The biggest delay to rendering the site is the google fonts, so we make sure it is the first to start loading #}
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700%7CPoppins:200,300,400,500,800%7COpen+Sans:400,600,800" />
+  <link rel="stylesheet" href="/static/css/all_styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css" media="all" />
 
-      <!-- Favicons generated with https://realfavicongenerator.net/ -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
-      <link rel="manifest" href="/static/img/favicon/site.webmanifest">
-      <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#2585FB">
-      <link rel="shortcut icon" href="/static/img/favicon/favicon.ico">
-      <meta name="msapplication-TileColor" content="#2585FB">
-      <meta name="msapplication-config" content="/static/img/favicon/browserconfig.xml">
-      <meta name="theme-color" content="#2585FB">
+  <!-- Favicons generated with https://realfavicongenerator.net/ -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/static/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#2585FB">
+  <link rel="shortcut icon" href="/static/img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2585FB">
+  <meta name="msapplication-config" content="/static/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#2585FB">
 
-      {% block extra_styles %}
-      {% endblock %}
-    {% endblock %}
+  {% block extra_styles %}
+  {% endblock %}
+  {% endblock %}
   {% endblock %}
 </head>
+
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
   {% block body %}
-    {% if hide_ogn_banner is not defined or hide_ogn_banner == False %}
-      {% include 'countdown-bar.html' %}
-    {% endif %}
-    {% block content %}
-    {% endblock %}
+  {% if hide_ogn_banner is not defined or hide_ogn_banner == False %}
+  {% include 'countdown-bar.html' %}
+  {% endif %}
+  {% block content %}
+  {% endblock %}
 
-    {% block scripts %}
-      <script src="/static/js/all_javascript.js"></script>
-      <script>
-      new WOW().init();
-      </script>
+  {% block scripts %}
+  <script src="/static/js/all_javascript.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 
-      {% block extra_scripts %}
-      {% endblock %}
-    {% endblock %}
+  {% block extra_scripts %}
+  {% endblock %}
+  {% endblock %}
   {% endblock %}
   <script>
     /* Google Analytics */
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-106384880-1', {'siteSpeedSampleRate': 100});
+    ga('create', 'UA-106384880-1', {
+      'siteSpeedSampleRate': 100
+    });
     ga('send', 'pageview');
 
     /* FB pixel */
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1637426076553052');
     fbq('track', 'PageView');
 
@@ -91,12 +113,16 @@
     var google_remarketing_only = true;
 
     /* Twitter pixel */
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    ! function (e, t, n, s, u, a) {
+      e.twq || (s = e.twq = function () {
+          s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+        }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src =
+        '//static.ads-twitter.com/uwt.js',
+        a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+    }(window, document, 'script');
     // Insert Twitter Pixel ID and Standard Event data below
-    twq('init','nzvmf');
-    twq('track','PageView');
+    twq('init', 'nzvmf');
+    twq('track', 'PageView');
 
     /* ]]> */
   </script>
@@ -104,14 +130,17 @@
   <script src="//www.googleadservices.com/pagead/conversion.js">
   </script>
   <noscript>
-  <div style="display:inline;">
-  <img height="1" width="1" style="border-style:none;" role="presentation" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/825554032/?guid=ON&amp;script=0"/>
-  </div>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" role="presentation"
+        src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/825554032/?guid=ON&amp;script=0" />
+    </div>
   </noscript>
 
-  <noscript><img height="1" width="1" style="display:none" role="presentation" src="https://www.facebook.com/tr?id=1637426076553052&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" role="presentation"
+      src="https://www.facebook.com/tr?id=1637426076553052&ev=PageView&noscript=1" /></noscript>
   {% if 'mobile' not in request.path and 'creator' not in request.path %}
-    {% include 'flashes.html' %}
+  {% include 'flashes.html' %}
   {% endif %}
 </body>
+
 </html>
