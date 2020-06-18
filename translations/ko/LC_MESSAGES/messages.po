@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-18 12:45+0530\n"
+"POT-Creation-Date: 2020-06-18 20:25+0530\n"
 "PO-Revision-Date: 2020-06-18 14:24+0000\n"
 "Last-Translator: \n"
 "Language: ko_KR\n"
@@ -476,8 +476,8 @@ msgstr "모델링 vs 실제 토큰 출시 일정"
 
 #: templates/dashboard.html:84
 #, python-format
-msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
-msgstr "현재 OGN의 실제 순환 공급량은 %%s 입니다. 앞서 발표한 순환 공급량은 %%s 입니다. 차이는 %%s 토큰 (%%s%%%%) 입니다."
+msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
+msgstr ""
 
 #: templates/dashboard.html:99
 msgid "Locked Tokens"
@@ -3873,4 +3873,7 @@ msgstr "구독이 취소되었습니다."
 #: views/web_views.py:328
 msgid "Ooops, something went wrong"
 msgstr "이런! 뭔가 잘못되었습니다."
+
+#~ msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
+#~ msgstr "현재 OGN의 실제 순환 공급량은 %%s 입니다. 앞서 발표한 순환 공급량은 %%s 입니다. 차이는 %%s 토큰 (%%s%%%%) 입니다."
 
