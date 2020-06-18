@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-08 17:31+0000\n"
-"PO-Revision-Date: 2020-06-08 17:34\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-06-17 22:22-0700\n"
+"PO-Revision-Date: 2020-06-18 05:24\n"
+"Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12,8 +12,10 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: originprotocolwebsite\n"
+"X-Crowdin-Project-ID: 308054\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /master/messages.pot\n"
+"X-Crowdin-File-ID: 72\n"
 "Language: es_ES\n"
 
 #: config/strings_to_translate.py:4
@@ -25,7 +27,7 @@ msgid "Building on Origin"
 msgstr "Construya en Origin"
 
 #: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:186
-#: views/web_views.py:262
+#: views/web_views.py:320
 msgid "Please enter a valid email address"
 msgstr "Por favor ingrese un correo válido"
 
@@ -222,25 +224,29 @@ msgstr ""
 msgid "Download for Brave"
 msgstr ""
 
-#: templates/countdown-bar.html:11 templates/countdown-hero-banner.html:33
-msgid "Origin Tokens (OGN) have launched!"
-msgstr "¡Los Tokens de Origin (OGN) han sido lanzados!"
+#: templates/countdown-bar.html:8
+msgid "See the new OGN Token dashboard"
+msgstr ""
 
-#: templates/countdown-bar.html:18 templates/countdown-hero-banner.html:61
-msgid "Learn more"
-msgstr "Aprende más"
+#: templates/countdown-bar.html:13 templates/warning.html:24
+msgid "Go"
+msgstr "Ir"
 
-#: templates/countdown-bar.html:24
+#: templates/countdown-bar.html:18
 msgid "Buy now on"
 msgstr ""
 
-#: templates/countdown-bar.html:30 templates/countdown-hero-banner.html:72
+#: templates/countdown-bar.html:24 templates/countdown-hero-banner.html:72
 msgid "Subscribe to stay in touch."
 msgstr "Suscríbase para mantenerse en contacto."
 
-#: templates/countdown-bar.html:38 templates/countdown-hero-banner.html:80
+#: templates/countdown-bar.html:26 templates/countdown-hero-banner.html:80
 msgid "Your email"
 msgstr "Su correo electrónico"
+
+#: templates/countdown-hero-banner.html:33
+msgid "Origin Tokens (OGN) have launched!"
+msgstr "¡Los Tokens de Origin (OGN) han sido lanzados!"
 
 #: templates/countdown-hero-banner.html:37 templates/tokens.html:5
 msgid "Origin Tokens (OGN) are launching soon!"
@@ -249,6 +255,10 @@ msgstr "¡Los Tokens de Origin (OGN) serán lanzados pronto!"
 #: templates/countdown-hero-banner.html:53
 msgid "Buy OGN on Binance"
 msgstr "Compra OGN en Binance"
+
+#: templates/countdown-hero-banner.html:61
+msgid "Learn more"
+msgstr "Aprende más"
 
 #: templates/countdown-hero-banner.html:67
 msgid "Exclusively on"
@@ -332,7 +342,7 @@ msgstr "Aproveche el poder de <span class='green'>pagos sin fronteras y sin perm
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "Estar a la vanguardia de la revolución de la criptomoneda. Su DApp es compatible con Metamask y carteras móviles populares listas para usar."
 
-#: templates/creator.html:135 templates/product.html:158
+#: templates/creator.html:135 templates/product.html:162
 msgid "Features"
 msgstr "Características"
 
@@ -411,6 +421,95 @@ msgstr "¿Tener preguntas?"
 #: templates/creator.html:227
 msgid "Get in touch"
 msgstr "Estar en contacto"
+
+#: templates/dashboard.html:3
+msgid "Origin Protocol - Origin Token Dashboard"
+msgstr ""
+
+#: templates/dashboard.html:5 templates/dshop.html:5 templates/product.html:5
+msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
+msgstr "La plataforma de Origin Protocol impulsa verdaderos mercados de persona a persona en todas partes."
+
+#: templates/dashboard.html:22
+msgid "Origin Token Dashboard"
+msgstr ""
+
+#: templates/dashboard.html:29
+msgid "Price"
+msgstr ""
+
+#: templates/dashboard.html:37
+msgid "Circulating Supply"
+msgstr ""
+
+#: templates/dashboard.html:48
+msgid "Market Cap"
+msgstr ""
+
+#: templates/dashboard.html:56
+msgid "Total Supply"
+msgstr ""
+
+#: templates/dashboard.html:72
+msgid "Token Unlock Schedule"
+msgstr ""
+
+#: templates/dashboard.html:74
+msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
+msgstr ""
+
+#: templates/dashboard.html:82
+msgid "Modeled vs. actual token release schedule"
+msgstr ""
+
+#: templates/dashboard.html:84
+#, python-format
+msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
+msgstr ""
+
+#: templates/dashboard.html:99
+msgid "Locked Tokens"
+msgstr ""
+
+#: templates/dashboard.html:101
+msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals."
+msgstr ""
+
+#: templates/dashboard.html:106
+msgid "Total number of locked tokens"
+msgstr ""
+
+#: templates/dashboard.html:116
+msgid "Investors, team members & users with locked tokens"
+msgstr ""
+
+#: templates/dashboard.html:125
+msgid "Wallets excluded from circulating supply"
+msgstr ""
+
+#: templates/dashboard.html:130
+msgid "Foundation Reserves"
+msgstr ""
+
+#: templates/dashboard.html:139
+msgid "Team Distribution"
+msgstr ""
+
+#: templates/dashboard.html:148
+msgid "Investor Distribution"
+msgstr ""
+
+#: templates/dashboard.html:157
+msgid "Distribution Staging"
+msgstr ""
+
+#: templates/dashboard.html:166
+msgid "Partnerships"
+msgstr ""
+
+#: templates/dashboard.html:175
+msgid "Ecosystem Growth"
+msgstr ""
 
 #: templates/developers.html:2
 msgid "Origin Protocol - Developers"
@@ -507,10 +606,6 @@ msgstr "Únete a nosotros en discord"
 #: templates/dshop.html:3
 msgid "Origin Protocol - DShop"
 msgstr ""
-
-#: templates/dshop.html:5 templates/product.html:5
-msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
-msgstr "La plataforma de Origin Protocol impulsa verdaderos mercados de persona a persona en todas partes."
 
 #: templates/dshop.html:15
 msgid "Create your decentralized online store"
@@ -689,7 +784,7 @@ msgid "Subscribe to stay in touch. Your email will be kept private."
 msgstr "Suscríbase para mantenerse en contacto. Su correo electrónico se mantendrá privado."
 
 #: templates/components/email-input.html:8 templates/footer.html:9
-#: templates/huobi-launch.html:856 templates/huobi-launch.html:967
+#: templates/huobi-launch.html:989 templates/huobi-launch.html:1125
 msgid "Enter your email"
 msgstr "Introduce tu correo electrónico"
 
@@ -807,232 +902,232 @@ msgstr "VK"
 msgid "Origin Huobi Listing"
 msgstr ""
 
-#: templates/huobi-launch.html:770 templates/huobi-launch.html:845
+#: templates/huobi-launch.html:898 templates/huobi-launch.html:974
 msgid "Register Now"
 msgstr ""
 
-#: templates/huobi-launch.html:839
+#: templates/huobi-launch.html:968
 msgid "Celebrate Origin's Listing on Huobi & Win OGN & USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:842
+#: templates/huobi-launch.html:971
 msgid "500,000 OGN and $100k USDT will be rewarded to OGN holders that trade on Huobi"
 msgstr ""
 
-#: templates/huobi-launch.html:852 templates/huobi-launch.html:963
+#: templates/huobi-launch.html:981 templates/huobi-launch.html:1117
 msgid "Participate by Joining Our Newsletter"
 msgstr ""
 
-#: templates/huobi-launch.html:853 templates/huobi-launch.html:964
+#: templates/huobi-launch.html:983 templates/huobi-launch.html:1119
 msgid "You must join Origin's mailing list and Wechat group to be eligible to participate in the activities"
 msgstr ""
 
-#: templates/components/presale-form.html:292 templates/huobi-launch.html:857
-#: templates/huobi-launch.html:968 templates/tokens.html:329
+#: templates/components/presale-form.html:292 templates/huobi-launch.html:990
+#: templates/huobi-launch.html:1126 templates/tokens.html:329
 msgid "Submit"
 msgstr "Enviar"
 
-#: templates/huobi-launch.html:864 templates/huobi-launch.html:975
+#: templates/huobi-launch.html:998 templates/huobi-launch.html:1134
 msgid "WeChat"
 msgstr ""
 
-#: templates/huobi-launch.html:868 templates/huobi-launch.html:979
+#: templates/huobi-launch.html:1002 templates/huobi-launch.html:1138
 msgid "Congratulations!"
 msgstr ""
 
-#: templates/huobi-launch.html:869 templates/huobi-launch.html:980
+#: templates/huobi-launch.html:1003 templates/huobi-launch.html:1139
 msgid "You are now eligible to participate"
 msgstr ""
 
-#: templates/huobi-launch.html:871 templates/huobi-launch.html:982
+#: templates/huobi-launch.html:1005 templates/huobi-launch.html:1141
 msgid "Make sure you scan this QR code to join our WeChat group"
 msgstr ""
 
-#: templates/huobi-launch.html:879
+#: templates/huobi-launch.html:1014
 msgid "OGN Net Increase Competition"
 msgstr ""
 
-#: templates/huobi-launch.html:880
+#: templates/huobi-launch.html:1015
 msgid "OGN Trading Competition"
 msgstr ""
 
-#: templates/huobi-launch.html:882
-msgid "Activity time period: Listing date to June 22, 2PM SGT"
+#: templates/huobi-launch.html:1017
+msgid "Activity time period: June 18, 12PM to June 29, 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:883
+#: templates/huobi-launch.html:1018
 msgid "Rewards to be calculated every 3 days"
 msgstr ""
 
-#: templates/huobi-launch.html:886
+#: templates/huobi-launch.html:1021
 msgid "Competition rounds"
 msgstr ""
 
-#: templates/huobi-launch.html:888
-msgid "The competition will begin on June 10 2PM SGT and last until June 22 2PM SGT (12 days)."
+#: templates/huobi-launch.html:1023
+msgid "The competition will begin on June 18, 12PM and will last until June 29, 11:59PM GMT +8 (12 days)"
 msgstr ""
 
-#: templates/huobi-launch.html:889
-msgid "There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round."
+#: templates/huobi-launch.html:1025
+msgid "There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round. All times listed in Bejing time (GMT +8)."
 msgstr ""
 
-#: templates/huobi-launch.html:891
-msgid "Round 1 will commence from the start of day 1 to the end of day 3: June 10, 2020 2PM to June 13, 2020 2PM"
+#: templates/huobi-launch.html:1028
+msgid "Round 1 will commence from June 18 to June 20"
 msgstr ""
 
-#: templates/huobi-launch.html:892
-msgid "Round 2 will commence from the start of day 4 to end of day 6: June 13, 2020 2:01PM to June 16, 2020 2PM"
+#: templates/huobi-launch.html:1030
+msgid "Round 2 will commence from June 21 to June 23"
 msgstr ""
 
-#: templates/huobi-launch.html:893
-msgid "Round 3 will commence from the start of day 7 to end of day 9: June 16, 2020 2:01PM to June 19, 2020 2PM"
+#: templates/huobi-launch.html:1032
+msgid "Round 3 will commence from June 24 to June 26"
 msgstr ""
 
-#: templates/huobi-launch.html:894
-msgid "Round 4 will commence from the start of day 10 to end of day 12: June 19, 2020 2:01PM to June 22, 2020 2PM"
+#: templates/huobi-launch.html:1034
+msgid "Round 4 will commence from June 27 to June 29"
 msgstr ""
 
-#: templates/huobi-launch.html:897
+#: templates/huobi-launch.html:1038
 msgid "Competition rules"
 msgstr ""
 
-#: templates/huobi-launch.html:899
+#: templates/huobi-launch.html:1040
 msgid "Traders will be ranked according to their OGN Net Increase Amount during each round."
 msgstr ""
 
-#: templates/huobi-launch.html:900
+#: templates/huobi-launch.html:1042
 msgid "OGN Net Increase Amount = OGN held at the end of the round - OGN held at the beginning of the round"
 msgstr ""
 
-#: templates/huobi-launch.html:901
+#: templates/huobi-launch.html:1044
 msgid "Here is an example calculation for OGN Net Increase Amount:"
 msgstr ""
 
-#: templates/huobi-launch.html:903
+#: templates/huobi-launch.html:1046
 msgid "A trader starts the round with 2,000 OGN"
 msgstr ""
 
-#: templates/huobi-launch.html:904
+#: templates/huobi-launch.html:1047
 msgid "They then buy 15,000 OGN, sell 3,000 OGN, and withdraw 1,000 OGN"
 msgstr ""
 
-#: templates/huobi-launch.html:905
+#: templates/huobi-launch.html:1048
 msgid "They end the round with 13,000 OGN (2,000 + 15,000 - 3,000 - 1,000 OGN)"
 msgstr ""
 
-#: templates/huobi-launch.html:906
+#: templates/huobi-launch.html:1049
 msgid "Their OGN Net Increase is 11,000 OGN."
 msgstr ""
 
-#: templates/huobi-launch.html:909
+#: templates/huobi-launch.html:1052
 msgid "Competition payouts"
 msgstr ""
 
-#: templates/huobi-launch.html:911
+#: templates/huobi-launch.html:1054
 msgid "$25k USDT will be awarded in each 3-day round, for a total of $100k USDT."
 msgstr ""
 
-#: templates/huobi-launch.html:912
+#: templates/huobi-launch.html:1055
 msgid "For each 3-day reward period, traders will be ranked by their overall OGN Net Increase Amount:"
 msgstr ""
 
-#: templates/huobi-launch.html:914
+#: templates/huobi-launch.html:1058
 msgid "1st place: $3k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:915
+#: templates/huobi-launch.html:1059
 msgid "2nd place: $2.5k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:916
+#: templates/huobi-launch.html:1060
 msgid "3rd place: $2k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:917
+#: templates/huobi-launch.html:1061
 msgid "4th place: $1.5k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:918
+#: templates/huobi-launch.html:1062
 msgid "5th place: $1k USDT"
 msgstr ""
 
-#: templates/huobi-launch.html:919
+#: templates/huobi-launch.html:1063
 msgid "6th to 30th places: Split $7.5k USDT evenly"
 msgstr ""
 
-#: templates/huobi-launch.html:920
+#: templates/huobi-launch.html:1064
 msgid "31st to 60th places: Split $5k USDT evenly"
 msgstr ""
 
-#: templates/huobi-launch.html:921
+#: templates/huobi-launch.html:1065
 msgid "61st to 100th places: Split $2.5k USDT evenly"
 msgstr ""
 
-#: templates/huobi-launch.html:923
+#: templates/huobi-launch.html:1067
 msgid "Traders can win in multiple rewards periods, but the OGN Net Increase Amount is calculated using the snapshot at the end of the last period:"
 msgstr ""
 
-#: templates/huobi-launch.html:925
+#: templates/huobi-launch.html:1070
 msgid "For example, if a trader is holding 10,000 OGN at the end of round 1, that is the starting point for the second round. If they increase their OGN holdings to 30,000 OGN by the end of day 6, their OGN Net Increase Amount for the round is 20,000."
 msgstr ""
 
-#: templates/huobi-launch.html:931
+#: templates/huobi-launch.html:1077
 msgid "Origin Holder Airdrop"
 msgstr ""
 
-#: templates/huobi-launch.html:932
-msgid "Activity time period: First 60 days of listing"
+#: templates/huobi-launch.html:1078
+msgid "Activity time period: July 1, 2020 to August 31, 2020 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:935
+#: templates/huobi-launch.html:1081
 msgid "The OGN Holder Airdrop will reward Huobi traders that HODL OGN over a two-month period. 500k of OGN will be rewarded to OGN Holder participants."
 msgstr ""
 
-#: templates/huobi-launch.html:937
+#: templates/huobi-launch.html:1084
 msgid "Airdrop rounds"
 msgstr ""
 
-#: templates/huobi-launch.html:939
+#: templates/huobi-launch.html:1086
 msgid "The OGN Holder Airdrop campaign will begin after the OGN Net Asset Increase competition ends. There will be two month-long rounds."
 msgstr ""
 
-#: templates/huobi-launch.html:941
-msgid "Round 1 will commence from June 23, 2020 2:01PM to July 23, 2020 2PM"
+#: templates/huobi-launch.html:1089
+msgid "Round 1 will commence from July 1, 2020 to July 31, 2020 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:942
-msgid "Round 2 will commence from July 23, 2020 2:01PM to August 23, 2020 2PM"
+#: templates/huobi-launch.html:1090
+msgid "Round 2 will commence from August 1, 2020 to August 31, 2020 11:59PM GMT +8"
 msgstr ""
 
-#: templates/huobi-launch.html:945
+#: templates/huobi-launch.html:1094
 msgid "Airdrop rules"
 msgstr ""
 
-#: templates/huobi-launch.html:947
+#: templates/huobi-launch.html:1096
 msgid "For each round, 250k OGN will be rewarded to OGN holders to OGN holders based on the amount of OGN they are holding relative to all other OGN holders:"
 msgstr ""
 
-#: templates/huobi-launch.html:949
+#: templates/huobi-launch.html:1099
 msgid "OGN rewarded = OGN Holder score x (The average OGN holdings that the user holds during the month / The total amount of OGN all users hold)"
 msgstr ""
 
-#: templates/huobi-launch.html:950
+#: templates/huobi-launch.html:1101
 msgid "Users who hold on average 1000 HT or more in each monthly airdrop period will double the value for their average OGN holdings for the month for the rewards calculation"
 msgstr ""
 
-#: templates/huobi-launch.html:951
+#: templates/huobi-launch.html:1103
 msgid "Users who have held on average at least 1000 HT for 90 days prior to each airdrop distribution will triple the value for their average OGN holdings for the month for the rewards calculation"
 msgstr ""
 
-#: templates/huobi-launch.html:953
+#: templates/huobi-launch.html:1106
 msgid "In addition, users must meet the following eligibility requirements:"
 msgstr ""
 
-#: templates/huobi-launch.html:955
+#: templates/huobi-launch.html:1108
 msgid "The user must hold at least 1000 OGN daily during the month"
 msgstr ""
 
-#: templates/huobi-launch.html:956
+#: templates/huobi-launch.html:1109
 msgid "The user must register their email address with Origin and join the Origin Wechat group."
 msgstr ""
 
@@ -1210,7 +1305,7 @@ msgstr "Randall Kaplan"
 msgid "Founder, Akamai"
 msgstr "Fundador, Akamai"
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:64
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:77
 msgid "Origin Protocol"
 msgstr "Origin Protocol"
 
@@ -1402,26 +1497,26 @@ msgstr "LosTokens de Origin\n"
 msgid "OGN is available on these top exchanges"
 msgstr ""
 
-#: templates/ogn-token.html:96 templates/whitepaper/platform.html:197
+#: templates/ogn-token.html:101 templates/whitepaper/platform.html:197
 msgid "Origin Rewards"
 msgstr "Origin Rewards"
 
-#: templates/ogn-token.html:98
+#: templates/ogn-token.html:103
 msgid "Earn your stake in the Origin network today. Users can\n"
 "            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
 "            friends and family to Origin, sharing news about Origin on social\n"
 "            media, and making purchases from our featured sellers."
 msgstr "Gane su participación en la red Origin hoy. Los usuarios pueden ganar Tokens de Origin (OGN) al verificar sus perfiles, recomendar amigos y familiares a Origin, compartir noticias sobre Origin en las redes sociales y realizar compras a nuestros vendedores destacados."
 
-#: templates/ogn-token.html:103
+#: templates/ogn-token.html:108
 msgid "Not available in the United States"
 msgstr "No disponible en los Estados Unidos"
 
-#: templates/ogn-token.html:130
+#: templates/ogn-token.html:135
 msgid "Commissions"
 msgstr "Comisiones"
 
-#: templates/ogn-token.html:132
+#: templates/ogn-token.html:137
 msgid "Promote your listings across the Origin flagship app and\n"
 "            third-party apps with Origin Commissions. Pay with OGN to get\n"
 "            featured prominently in search results. Application developers and\n"
@@ -1429,45 +1524,45 @@ msgid "Promote your listings across the Origin flagship app and\n"
 "            complete their sales."
 msgstr "Promocione sus listados en la aplicación de Origin y aplicaciones de terceros con las Comisiones de Origin. Pague con OGN para aparecer destacado en los resultados de búsqueda. Los desarrolladores de aplicaciones y los operadores del mercado ganan Tokens de Origin (OGN) al ayudar a los vendedores a completar sus ventas."
 
-#: templates/ogn-token.html:146
+#: templates/ogn-token.html:151
 msgid "Payments"
 msgstr "Pagos"
 
-#: templates/ogn-token.html:148
+#: templates/ogn-token.html:153
 msgid "Use the Origin Tokens (OGN) that you've earned in Origin\n"
 "            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
 "            the network by accepting OGN as a preferred payment method."
 msgstr "Use los Tokens de Origin (OGN) que ganó en Origin Rewards para pagar bienes y servicios. Los vendedores obtienen mayores participaciones en la red al aceptar OGN como método de pago preferido."
 
-#: templates/ogn-token.html:166
+#: templates/ogn-token.html:171
 msgid "Research and Development"
 msgstr "Investigación y desarrollo"
 
-#: templates/ogn-token.html:170
+#: templates/ogn-token.html:175
 msgid "Origin Nodes"
 msgstr "Nodos Origin"
 
-#: templates/ogn-token.html:172
+#: templates/ogn-token.html:177
 msgid "Stake your OGN to run an Origin Node and earn more OGN by\n"
 "            helping to replicate and validate profile and listing data on the\n"
 "            network."
 msgstr "Apuesta tu OGN para ejecutar un nodo Origin y gana más OGN ayudando a replicar y validar los datos de perfil y listado en la red."
 
-#: templates/ogn-token.html:179
+#: templates/ogn-token.html:184
 msgid "Origin Relayer"
 msgstr "Relator Origin"
 
-#: templates/ogn-token.html:181
+#: templates/ogn-token.html:186
 msgid "Developers can pay for usage of Origin Meta Transactions\n"
 "            Relayers with OGN. Meta Transactions reduce user friction and\n"
 "            encourage adoption and retention."
 msgstr "Los desarrolladores pueden pagar por el uso de Origin de Meta Transacciones Relevadas con OGN. Las Meta Transacciones reducen la fricción del usuario y fomentan la adopción y la retención."
 
-#: templates/ogn-token.html:188
+#: templates/ogn-token.html:193
 msgid "Governance"
 msgstr "Gobernancia"
 
-#: templates/ogn-token.html:190
+#: templates/ogn-token.html:195
 msgid "Everyone has a vote on the Origin Platform. Token holders\n"
 "            will participate in important community votes to define future\n"
 "            initiatives."
@@ -1665,258 +1760,262 @@ msgid "shoporigin.com"
 msgstr "shoporigin.com"
 
 #: templates/product.html:124
+msgid "Featured on"
+msgstr ""
+
+#: templates/product.html:128
 msgid "Available on"
 msgstr "Disponible en"
 
-#: templates/product.html:138
+#: templates/product.html:142
 msgid "Decentralized marketplaces powered by Origin"
 msgstr ""
 
-#: templates/product.html:140
+#: templates/product.html:144
 msgid "See the Origin Platform in action at shoporigin.com"
 msgstr "Vea la plataforma Origin en acción en shoporigin.com"
 
-#: templates/product.html:142
+#: templates/product.html:146
 msgid "Buy and sell today"
 msgstr "Compra y vende hoy"
 
-#: templates/product.html:144
+#: templates/product.html:148
 msgid "Other marketplaces built on the Origin Platform"
 msgstr ""
 
-#: templates/product.html:165
+#: templates/product.html:169
 msgid "Self-sovereign Identity"
 msgstr "Identidad auto soberana"
 
-#: templates/product.html:167
+#: templates/product.html:171
 msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
 msgstr "Posea y proteja sus propios datos. Su perfil es portátil y puede usarse en cualquier aplicación compatible con Origin."
 
-#: templates/product.html:176
+#: templates/product.html:180
 msgid "Encrypted Messaging"
 msgstr "Mensajería cifrada"
 
-#: templates/product.html:178
+#: templates/product.html:182
 msgid "Send secure, private messages to other buyers and sellers on the platform."
 msgstr "Envíe mensajes seguros y privados a otros compradores y vendedores en la plataforma."
 
-#: templates/product.html:187
+#: templates/product.html:191
 msgid "Permissionless Payments"
 msgstr "Pagos Permissionless"
 
-#: templates/product.html:189
+#: templates/product.html:193
 msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
 msgstr "Use su opción de Origen Token (OGN), Ether (ETH) o MakerDai (DAI) para comprar y vender."
 
-#: templates/product.html:198
+#: templates/product.html:202
 msgid "Reputation Systems"
 msgstr "Sistemas de reputación"
 
-#: templates/product.html:200
+#: templates/product.html:204
 msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
 msgstr "Califique y deje comentarios acerca de sus transacciones como lo haría en una aplicación centralizada."
 
-#: templates/product.html:209
+#: templates/product.html:213
 msgid "Blockchain-Powered Transactions"
 msgstr "Transacciones impulsadas por blockchain"
 
-#: templates/product.html:211
+#: templates/product.html:215
 msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
 msgstr "Los fondos están depositados en nuestro contrato inteligente de mercado. Compra y vende sin intermediarios."
 
-#: templates/product.html:220
+#: templates/product.html:224
 msgid "Arbitration Services"
 msgstr "Servicios de arbitraje"
 
-#: templates/product.html:222
+#: templates/product.html:226
 msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
 msgstr "Use Origin o seleccione un servicio de arbitraje de terceros para mantener seguras a ambas contrapartes."
 
-#: templates/product.html:233
+#: templates/product.html:237
 msgid "How it works"
 msgstr "Cómo funciona"
 
-#: templates/product.html:242
+#: templates/product.html:246
 msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
 msgstr "Los compradores buscan y encuentran listados de vendedores en la blockchain a través de DApps"
 
-#: templates/product.html:248
+#: templates/product.html:252
 msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
 msgstr "Los compradores envían ofertas y pagos en custodia a nuestro contrato inteligente de mercado"
 
-#: templates/product.html:254
+#: templates/product.html:258
 msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
 msgstr "Los vendedores aceptan o rechazan ofertas de posibles compradores, luego cumplen con las ofertas activas"
 
-#: templates/product.html:260
+#: templates/product.html:264
 msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
 msgstr "Una vez finalizadas las ofertas, el contrato inteligente libera los pagos en custodia a los vendedores"
 
-#: templates/product.html:270
+#: templates/product.html:274
 msgid "Check out our updated whitepaper"
 msgstr "Echa un vistazo a nuestro documento técnico actualizado"
 
-#: templates/product.html:274
+#: templates/product.html:278
 msgid "Read our whitepaper"
 msgstr "Lee nuestra guía"
 
-#: templates/product.html:284
+#: templates/product.html:288
 msgid "Milestones"
 msgstr "Hitos"
 
-#: templates/product.html:290 templates/whitepaper/roadmap.html:7
+#: templates/product.html:294 templates/whitepaper/roadmap.html:7
 msgid "May 2017"
 msgstr "Mayo 2017"
 
-#: templates/product.html:291 templates/whitepaper/roadmap.html:8
+#: templates/product.html:295 templates/whitepaper/roadmap.html:8
 msgid "Began initial development"
 msgstr "Comenzó el desarrollo inicial"
 
-#: templates/product.html:295 templates/whitepaper/roadmap.html:12
+#: templates/product.html:299 templates/whitepaper/roadmap.html:12
 msgid "September 2017"
 msgstr "Setiembre 2017"
 
-#: templates/product.html:296 templates/whitepaper/roadmap.html:13
+#: templates/product.html:300 templates/whitepaper/roadmap.html:13
 msgid "Released initial whitepaper"
 msgstr "Guía inicial publicada"
 
-#: templates/product.html:300 templates/whitepaper/roadmap.html:22
+#: templates/product.html:304 templates/whitepaper/roadmap.html:22
 msgid "December 2017"
 msgstr "Diciembre 2017"
 
-#: templates/product.html:301 templates/whitepaper/roadmap.html:23
+#: templates/product.html:305 templates/whitepaper/roadmap.html:23
 msgid "Launched Alpha on Ethereum testnet"
 msgstr "Lanzamiento alpha en Ethereum testnet"
 
-#: templates/product.html:305 templates/whitepaper/roadmap.html:37
+#: templates/product.html:309 templates/whitepaper/roadmap.html:37
 msgid "October 2018"
 msgstr "Octubre 2018"
 
-#: templates/product.html:306 templates/whitepaper/roadmap.html:38
+#: templates/product.html:310 templates/whitepaper/roadmap.html:38
 msgid "Launched Beta on Ethereum mainnet"
 msgstr "Lanzamiento beta en la red principal de Ethereum"
 
-#: templates/product.html:310 templates/whitepaper/roadmap.html:42
+#: templates/product.html:314 templates/whitepaper/roadmap.html:42
 msgid "February 2019"
 msgstr "Febrero 2019"
 
-#: templates/product.html:312 templates/whitepaper/roadmap.html:44
+#: templates/product.html:316 templates/whitepaper/roadmap.html:44
 msgid "Launched Marketplace Creator 1.0 and our first mobile apps"
 msgstr "Lanzamos Marketplace Creator 1.0 y nuestras primeras aplicaciones móviles"
 
-#: templates/product.html:313 templates/whitepaper/roadmap.html:45
+#: templates/product.html:317 templates/whitepaper/roadmap.html:45
 msgid "Supported first partner app launches"
 msgstr "Lanzamientos de aplicaciones de primeros socios compatibles"
 
-#: templates/product.html:318 templates/whitepaper/roadmap.html:50
+#: templates/product.html:322 templates/whitepaper/roadmap.html:50
 msgid "April 2019"
 msgstr "Abril 2019"
 
-#: templates/product.html:320 templates/whitepaper/roadmap.html:52
+#: templates/product.html:324 templates/whitepaper/roadmap.html:52
 msgid "Launched Origin Rewards"
 msgstr "Lanzamiento de Origin Rewards"
 
-#: templates/product.html:321 templates/whitepaper/roadmap.html:53
+#: templates/product.html:325 templates/whitepaper/roadmap.html:53
 msgid "Launched stablecoin payments"
 msgstr "Lanzamiento de pagos en stablecoin"
 
-#: templates/product.html:326 templates/whitepaper/roadmap.html:58
+#: templates/product.html:330 templates/whitepaper/roadmap.html:58
 msgid "July 2019"
 msgstr "Julio 2019"
 
-#: templates/product.html:328 templates/whitepaper/roadmap.html:60
+#: templates/product.html:332 templates/whitepaper/roadmap.html:60
 msgid "Launched shoporigin.com and new mobile apps"
 msgstr "Lanzamiento de shoporigin.com and nuevas aplicaciones móviles"
 
-#: templates/product.html:329 templates/whitepaper/roadmap.html:61
+#: templates/product.html:333 templates/whitepaper/roadmap.html:61
 msgid "Launched Meta Transactions"
 msgstr "Lanzamiento de Meta Transacciones"
 
-#: templates/product.html:334 templates/whitepaper/roadmap.html:66
+#: templates/product.html:338 templates/whitepaper/roadmap.html:66
 msgid "September 2019"
 msgstr "Septiembre 2019"
 
-#: templates/product.html:336
+#: templates/product.html:340
 msgid "Launched OGN Commissions"
 msgstr "Lanzamiento de Comisiones OGN"
 
-#: templates/product.html:341
+#: templates/product.html:345
 msgid "Q4 2019"
 msgstr "Cuarto trimestre 2019"
 
-#: templates/product.html:343
+#: templates/product.html:347
 msgid "Distributed investor OGN tokens"
 msgstr ""
 
-#: templates/product.html:344
+#: templates/product.html:348
 msgid "Launched Dshop"
 msgstr ""
 
-#: templates/product.html:349 templates/whitepaper/roadmap.html:83
+#: templates/product.html:353 templates/whitepaper/roadmap.html:83
 msgid "Q1 2020"
 msgstr "Primer trimestre 2020"
 
-#: templates/product.html:351 templates/whitepaper/roadmap.html:85
+#: templates/product.html:355 templates/whitepaper/roadmap.html:85
 msgid "Launched Mainnet 1.0"
 msgstr ""
 
-#: templates/product.html:352
+#: templates/product.html:356
 msgid "Listed on Binance"
 msgstr ""
 
-#: templates/product.html:353 templates/whitepaper/roadmap.html:86
+#: templates/product.html:357 templates/whitepaper/roadmap.html:86
 msgid "Launched OGN as payment token"
 msgstr ""
 
-#: templates/product.html:354
+#: templates/product.html:358
 msgid "Added to Samsung Blockchain Wallet"
 msgstr ""
 
-#: templates/product.html:359 templates/whitepaper/roadmap.html:92
+#: templates/product.html:363 templates/whitepaper/roadmap.html:92
 msgid "Q2 2020"
 msgstr "Segundo trimestre 2020"
 
-#: templates/product.html:361
+#: templates/product.html:365
 msgid "Launched Origin Deals"
 msgstr ""
 
-#: templates/product.html:362
+#: templates/product.html:366
 msgid "Listed on additional exchanges"
 msgstr ""
 
-#: templates/product.html:363
+#: templates/product.html:367
 msgid "Support Dshop partner launches"
 msgstr ""
 
-#: templates/product.html:364 templates/whitepaper/roadmap.html:96
+#: templates/product.html:368 templates/whitepaper/roadmap.html:96
 msgid "Launch OGN staking model"
 msgstr "Lanzar modelo de replanteo OGN"
 
-#: templates/product.html:369 templates/whitepaper/roadmap.html:101
+#: templates/product.html:373 templates/whitepaper/roadmap.html:101
 msgid "Q3 2020"
 msgstr "Tercer trimestre 2020"
 
-#: templates/product.html:371 templates/whitepaper/roadmap.html:103
+#: templates/product.html:375 templates/whitepaper/roadmap.html:103
 msgid "Launch new developer tools and expand developer adoption"
 msgstr "Lanzar nuevas herramientas para desarrolladores y ampliar la adopción de desarrolladores"
 
-#: templates/product.html:376 templates/whitepaper/roadmap.html:108
+#: templates/product.html:380 templates/whitepaper/roadmap.html:108
 msgid "Q4 2020"
 msgstr "Cuarto trimestre 2020"
 
-#: templates/product.html:378 templates/whitepaper/roadmap.html:110
+#: templates/product.html:382 templates/whitepaper/roadmap.html:110
 msgid "Launch OGN as a governance token"
 msgstr "Lanzar OGN como ficha de gobernancia"
 
-#: templates/product.html:390
+#: templates/product.html:394
 msgid "Origin Token"
 msgstr "Ficha Origin"
 
-#: templates/product.html:393
+#: templates/product.html:397
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr "La ficha Origin (OGN) es una ficha de incentivo que garantiza la salud y el crecimiento de la red."
 
-#: templates/product.html:397
+#: templates/product.html:401
 msgid "Learn more about Origin Token"
 msgstr "Obtenga más información sobre la ficha Origin"
 
@@ -2361,7 +2460,7 @@ msgstr "Comunidad"
 #: templates/team.html:510
 #, python-format
 msgid "100%% open-source."
-msgstr "100%% código abierto."
+msgstr "100% código abierto."
 
 #: templates/team.html:511
 msgid " contributors."
@@ -2469,10 +2568,6 @@ msgstr "Gana Fichas Origin Gratis Ahora Mismo"
 #: templates/warning.html:21
 msgid "Participate in our campaigns and complete tasks on our DApp to earn Origin Tokens."
 msgstr "Participa en nuestras campañas y completa trabajos en nuestro DApp para ganar fichas Origin."
-
-#: templates/warning.html:24
-msgid "Go"
-msgstr "Ir"
 
 #: templates/whitepaper.html:3 templates/whitepaper.html:5
 msgid "Origin Protocol - Whitepaper"
@@ -3573,59 +3668,59 @@ msgstr "Construida sobre estas dos tecnologías subyacentes, la Plataforma Origi
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "Creemos que ahora es el momento perfecto para impulsar el mercado entre pares y los mercados de comercio electrónico para aprovechar las crecientes demandas del mercado y las innovaciones tecnológicas prometedoras."
 
-#: views/web_views.py:65
+#: views/web_views.py:78
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "Origin Protocol es la plataforma de blockchain para la construcción de mercados descentralizados."
 
-#: views/web_views.py:167
+#: views/web_views.py:202
 msgid "Missing email"
 msgstr "Correo electrónico perdido"
 
-#: views/web_views.py:170
+#: views/web_views.py:205
 msgid "Invalid email"
 msgstr "Email inválido"
 
-#: views/web_views.py:226
+#: views/web_views.py:267
 msgid "You're already registered!"
 msgstr "¡Ya estás registrado!"
 
-#: views/web_views.py:228
+#: views/web_views.py:269
 msgid "Thanks for signing up!"
 msgstr "¡Gracias por registrarse!"
 
-#: views/web_views.py:241
+#: views/web_views.py:282
 msgid "Please enter your name"
 msgstr "por favor, escriba su nombre"
 
-#: views/web_views.py:243
+#: views/web_views.py:284
 msgid "Please enter your email"
 msgstr "Por favor introduzca su correo electrónico"
 
-#: views/web_views.py:245
+#: views/web_views.py:287
 msgid "Select your country of citizenship"
 msgstr "Selecciona tu país de ciudadanía"
 
-#: views/web_views.py:247
+#: views/web_views.py:291
 msgid "Please enter your desired allocation"
 msgstr "Por favor ingrese su asignación deseada"
 
-#: views/web_views.py:249
+#: views/web_views.py:294
 msgid "Select a currency"
 msgstr "Selecciona una moneda"
 
-#: views/web_views.py:251
+#: views/web_views.py:297
 msgid "Please prove you are not a robot."
 msgstr "Por favor, demuéstrame que no eres un robot."
 
-#: views/web_views.py:256
+#: views/web_views.py:311
 msgid "OK"
 msgstr "Okay"
 
-#: views/web_views.py:267
+#: views/web_views.py:325
 msgid "You have been unsubscribed"
 msgstr "Se ha dado de baja"
 
-#: views/web_views.py:270
+#: views/web_views.py:328
 msgid "Ooops, something went wrong"
 msgstr "Ups, algo salió mal"
 
