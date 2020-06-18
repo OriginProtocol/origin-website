@@ -4,3 +4,6 @@ from redis import Redis
 def init_redis():
   global redis_client
   redis_client = Redis.from_url(os.environ['REDIS_URL'])
+
+def get_redis_client():
+  return redis_client

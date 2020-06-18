@@ -18,11 +18,7 @@ from util import time_
 
 import json
 
-# from redis import Redis
-
-# redis_client = Redis.from_url(os.environ['REDIS_URL'])
-
-from util import redis_helper
+from logic.scripts import token_stats
 
 # NOTE: remember to use lowercase addresses for everything
 
@@ -422,3 +418,5 @@ if __name__ == "__main__":
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         # fetch_from_ethplorer()
         fetch_reserved_wallet_balances()
+
+        token_stats.compute_ogn_stats()
