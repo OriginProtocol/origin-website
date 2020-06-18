@@ -414,12 +414,6 @@ def fetch_reserved_wallet_balances():
     fetch_wallet_balance(partnerships_address)
     fetch_wallet_balance(ecosystem_growth_address)
 
-def trigger_ogn_stats_computation():
-    port = int(os.environ.get("PORT", 5000))
-    url = universal.BASE_URL + ':' + str(port) + '/refetch-token-stats'
-    raw_json = requests.get(url)
-    return raw_json.json()
-
 if __name__ == "__main__":
     # called via cron on Heroku
     with db_utils.request_context():
@@ -428,6 +422,3 @@ if __name__ == "__main__":
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         # fetch_from_ethplorer()
         fetch_reserved_wallet_balances()
-
-        trigger_ogn_stats_computation()
-        

@@ -642,17 +642,6 @@ def assets_all_javascript():
     )
 
 
-@app.route("/refetch-token-stats", methods=["GET"], strict_slashes=False)
-def refetch_token_stats():
-    token_stats.compute_ogn_stats()
-    return jsonify(
-        success=True,
-        message=gettext("OK"),
-        supply_history=token_stats.get_supply_history(),
-        ogn_stats=token_stats.get_formatted_ogn_stats(),
-    )
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
