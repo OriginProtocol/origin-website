@@ -1,22 +1,16 @@
 <div class="countdown-bar d-flex justify-content-center align-items-center">
-  <div
-    class="container d-flex flex-column flex-md-row align-items-center"
-  >
+  <div class="container d-flex flex-column flex-md-row align-items-center">
     <div class="title d-flex">
       <img class="video-tokens d-none d-md-flex" src="/static/img/ogn.png" />
       <div
-        class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start justify-content-center"
-      >
+        class="d-flex flex-column pt-4 pb-2 pt-md-0 pb-md-0 align-items-center align-items-md-start justify-content-center">
         <div class="title">
-          {{gettext("Origin Tokens (OGN) have launched!")}}
+          {{gettext("See the new OGN Token dashboard")}}
         </div>
       </div>
     </div>
-    <a
-      href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}"
-      class="learn-more my-3 my-md-0 px-4"
-      >{{gettext("Learn more")}}</a
-    >
+    <a href="{{ url_for('dashboard', lang_code=CURRENT_LANGUAGE) }}"
+      class="learn-more my-3 my-md-0 px-4">{{gettext("Go")}}</a>
     <div class="vertical-separator d-none d-md-flex mx-2"></div>
     <!-- <div
       class="d-flex flex-row flex-md-column pt-3 pb-1 pt-md-0 pb-md-0 align-items-center align-items-md-start exclusively-on"
@@ -28,15 +22,9 @@
     <!-- <div class="horizontal-separator d-flex d-md-none"></div> -->
     <div class="d-flex flex-column justify-content-center subscribe-section">
       <p>{{gettext("Subscribe to stay in touch.")}}</p>
-      <form
-        id="mailing-list-nav-bar"
-        class="email-input input-group"
-        method="post"
-        action="/mailing-list/join"
-      >
-        <input id="email" name="email" type="email" class="form-control"
-        placeholder="{{gettext("Your email")}}" aria-label="Your email"
-        aria-describedby="basic-addon2">
+      <form id="mailing-list-nav-bar" class="email-input input-group" method="post" action="/mailing-list/join">
+        <input id="email" name="email" type="email" class="form-control" placeholder="{{gettext("Your email")}}"
+          aria-label="Your email" aria-describedby="basic-addon2">
         <div class="input-group-append d-flex align-items-end">
           <button class="btn btn-outline-primary" type="submit">
             <i class="fas fa-arrow-right"></i>

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ gettext("Origin Protocol - OGN Dashboard") }}{% endblock %}
+{% block title %}{{ gettext("Origin Protocol - Origin Token Dashboard") }}{% endblock %}
 
 {% block meta_description %}{{ gettext("Origin Protocol's platform powers true peer-to-peer marketplaces everywhere.") }}{% endblock %}
 
@@ -19,7 +19,7 @@
 <main class="dashboard-page">
   <section class="title-section blue-section">
     <div class="container">
-      <h1>{{gettext("OGN Dashboard")}}</h1>
+      <h1>{{gettext("Origin Token Dashboard")}}</h1>
 
       <div class="row">
 
@@ -68,20 +68,20 @@
   <section class="schedule-section white-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <h3>{{gettext("Token Unlock Schedule")}}</h3>
           <div class="desc">
-            {{gettext("This was the token release schedule we committed to in January for the next 4 years. In that blurb, we also highlight that we anticipate actual circulating supply to be significantly lower than modeled supply for X, Y, and Z reasons.")}}
+            {{gettext("On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible.")}}
           </div>
           <div class="chart-container">
             <canvas id="unlock_schedule_chart" height="290"></canvas>
           </div>
           <div id="unlock_schedule_legends" class="chart-legends-container"></div>
         </div>
-        <div class="col-md-6 mt-5 mt-md-0">
+        <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Modeled vs. actual token release schedule")}}</h3>
-          <div class="desc">
-            {{gettext("Fusce condimentum ultrices est quis dapibus. Phasellus massa tortor, ultricies a imperdiet in, dapibus ac ligula. Duis suscipit odio sed sagittis finibus. Curabitur justo neque, scelerisque eu velit interdum, finibus varius purus.")}}
+          <div class="desc" id="supplyDataEl">
+            {{gettext("Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%).") % (ogn_stats.circulating_supply, "ogn_modeled_supply", "ogn_supply_diff", "ogn_supply_diff_pct")}}
           </div>
           <div class="chart-container">
             <canvas id="release_schedule_chart" height="290"></canvas>
@@ -95,10 +95,10 @@
   <section class="locked-tokens-section grey-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <h3>{{gettext("Locked Tokens")}}</h3>
           <div class="desc">
-            {{gettext("Fusce condimentum ultrices est quis dapibus. Phasellus massa tortor, ultricies a imperdiet in, dapibus ac ligula. Duis suscipit odio sed sagittis finibus. Curabitur justo neque, scelerisque eu velit interdum, finibus varius purus.")}}
+            {{gettext("Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals.")}}
           </div>
           
           <div class="locked-token-widget">
@@ -113,7 +113,7 @@
           
           <div class="locked-token-widget">
             <div class="title">
-              {{gettext("Investors & team members with locked tokens")}}
+              {{gettext("Investors, team members & users with locked tokens")}}
             </div>
             <div class="value">
               {{ogn_stats.staked_user_count}}
@@ -121,7 +121,7 @@
           </div>
 
         </div>
-        <div class="col-md-6 mt-5 mt-md-0">
+        <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
 
           <div class="reserved-wallets">

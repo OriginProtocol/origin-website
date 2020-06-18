@@ -1,420 +1,530 @@
 {% extends 'base.html' %}
-{% block title %}{{ gettext("Origin Huobi Listing")}}{% endblock %} 
-{% block meta_description %}{{ gettext("Origin Huobi Listing") }}{% endblock %} 
-{% block content %} 
+{% block title %}{{ gettext("Origin Huobi Listing")}}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Huobi Listing") }}{% endblock %}
+{% block content %}
 
 {% block extra_styles %}
 <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
 <style type="text/css">
-  body {
-    background: #111d28;
-    font-family: "Lato";
-    font-size: 18px;
-    font-weight: normal;
-    color: white;
-  }
+	body {
+		background: #111d28;
+		font-family: "Lato";
+		font-size: 18px;
+		font-weight: normal;
+		color: white;
+	}
 
-  .huobi-launch {
-  	width: 100%;
-  }
+	.huobi-launch {
+		width: 100%;
+	}
 
-  .light {
-  	font-size: 14px;
-  }
+	.light {
+		font-size: 14px;
+	}
 
-  .top-pos {
-  	z-index: 10;
-  }
+	.top-pos {
+		z-index: 10;
+	}
 
-  .h-nav {
-  	padding-top: 48px;
-  }
+	.h-nav {
+		padding-top: 48px;
+	}
 
-  .h-nav a,
-  .h-nav a:hover {
-  	color: white;
-  	text-decoration: none;
-  }
+	.h-nav a,
+	.h-nav a:hover {
+		color: white;
+		text-decoration: none;
+	}
 
-  .huobi-hero-section h1 {
-  	max-width: 450px;
-  	font-size: 48px;
-	  font-weight: bold;
-	  line-height: 1.21;
-	  color: white;
-	  margin-bottom: 27px;
-  }
+	.huobi-hero-section h1 {
+		max-width: 450px;
+		font-size: 48px;
+		font-weight: bold;
+		line-height: 1.21;
+		color: white;
+		margin-bottom: 27px;
+	}
 
-  .huobi-hero-section h2 {
-  	font-family: "Lato";
-	  font-size: 21px;
-	  line-height: 1.52;
-	  font-weight: normal;
-	  color: #cccccc;
-	  margin-bottom: 40px;
-	  max-width: 490px;
-	  text-align: center;
-  }
+	.huobi-hero-section h2 {
+		font-family: "Lato";
+		font-size: 21px;
+		line-height: 1.52;
+		font-weight: normal;
+		color: #cccccc;
+		margin-bottom: 40px;
+		max-width: 490px;
+		text-align: center;
+	}
 
-  .huobi-hero-section a {
-  	max-width: 309px;
-  }
+	.huobi-hero-section a {
+		max-width: 309px;
+	}
 
-  .hero-holder {
-  	flex-grow: 1;
-  }
+	.hero-holder {
+		flex-grow: 1;
+	}
 
-  .huobi-hero-section {
-  	height: 660px;
-  	background-image: url('/static/img/huobi/stars-and-nebulas.svg');
-  	background-repeat: no-repeat;
-  	background-position: center;
-	  background-size: 128% 128%;
-	  position: relative;
-	  overflow: hidden;
-  }
+	.huobi-hero-section {
+		height: 660px;
+		background-image: url('/static/img/huobi/stars-and-nebulas.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 128% 128%;
+		position: relative;
+		overflow: hidden;
+	}
 
-  .huobi-subscribe {
-  	background-color: #0070e0;
-  	height: 495px;
-  }
+	.huobi-subscribe {
+		background-color: #0070e0;
+		height: 495px;
+	}
 
-  .huobi-subscribe h2 {
-  	margin-bottom: 10px;
-    font-family: "Poppins";
-    font-size: 34px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.15;
-  }
+	.huobi-subscribe h2 {
+		margin-bottom: 10px;
+		font-family: "Poppins";
+		font-size: 34px;
+		font-weight: 500;
+		text-align: center;
+		line-height: 1.15;
+	}
 
-  .huobi-subscribe .email-input {
-  	font-size: 18px;
-  	border-radius: 4px;
-	  border: solid 1px white;
-	  background-color: #0167cc;
-	  text-align: center;
-	  margin-bottom: 33px;
-	  width: 369px;
-  	height: 50px;
-  	color: white;
-  }
+	.huobi-subscribe .email-input {
+		font-size: 18px;
+		border-radius: 4px;
+		border: solid 1px white;
+		background-color: #0167cc;
+		text-align: center;
+		margin-bottom: 33px;
+		width: 369px;
+		height: 50px;
+		color: white;
+	}
 
-  .huobi-subscribe .email-input::placeholder {
-  	opacity: 0.5;
-  	color: white;
-  }
+	.huobi-subscribe .email-input::placeholder {
+		opacity: 0.5;
+		color: white;
+	}
 
-  .huobi-subscribe .huobi-email-form .submit {
-  	width: 309px;
-	  height: 50px;
-	  border-radius: 25px;
-	  border-color: black;
-	  background-color: black;
-	  font-family: Lato;
-	  font-size: 18px;
-	  font-weight: bold;
-	  color: white;
-	  margin-bottom: 26px;
-  }
+	.huobi-subscribe .huobi-email-form .submit {
+		width: 309px;
+		height: 50px;
+		border-radius: 25px;
+		border-color: black;
+		background-color: black;
+		font-family: Lato;
+		font-size: 18px;
+		font-weight: bold;
+		color: white;
+		margin-bottom: 26px;
+	}
 
-  .grey {
-  	color: #cccccc;
-  	margin-bottom: 39px;
-  }
+	.grey {
+		color: #cccccc;
+		margin-bottom: 39px;
+	}
 
-  .huobi-qr-code-holder {
-  	padding: 2px;
-  	border-radius: 5px;
-  	background-color: white;
-  }
+	.huobi-qr-code-holder {
+		padding: 2px;
+		border-radius: 5px;
+		background-color: white;
+	}
 
-  .huobi-qr-code {
-  	width: 100px;
-  	height: 100px;
-  }
+	.huobi-qr-code {
+		width: 100px;
+		height: 100px;
+	}
 
-  .huobi-qr-code.big {
-  	width: 130px;
-  	height: 130px;
-  }
+	.huobi-qr-code.big {
+		width: 130px;
+		height: 130px;
+	}
 
-  .grey-text {
-  	font-size: 14px;
-	  line-height: 2.29;
-	  text-align: center;
-	  color: #cccccc;
-  }
+	.grey-text {
+		font-size: 14px;
+		line-height: 2.29;
+		text-align: center;
+		color: #cccccc;
+	}
 
-  .huobi-body .img-badge {
-  	margin-top: 95px;
-  	margin-bottom: 25px;
-  }
+	.huobi-body .img-badge {
+		margin-top: 95px;
+		margin-bottom: 25px;
+	}
 
-  .huobi-body {
-  	background-color: #111d28;
-  }
+	.huobi-body {
+		background-color: #111d28;
+	}
 
-  .huobi-body h2 {
-  	font-family: "Poppins";
-	  font-size: 34px;
-	  font-weight: 500;
-	  line-height: 1.85;
-	  text-align: center;
-	  color: white;
-	  margin-bottom: 5px;
-  }
+	.huobi-body h2 {
+		font-family: "Poppins";
+		font-size: 34px;
+		font-weight: 500;
+		line-height: 1.85;
+		text-align: center;
+		color: white;
+		margin-bottom: 5px;
+	}
 
-  .huobi-body h3 {
-  	font-family: "Lato";
-	  font-size: 18px;
-	  font-weight: bold;
-	  line-height: 1.78;
-	  text-align: center;
-	  color: white;
-	  margin-bottom: 17px;
-  }
+	.huobi-body h3 {
+		font-family: "Lato";
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 1.78;
+		text-align: center;
+		color: white;
+		margin-bottom: 17px;
+	}
 
-  .huobi-body h3.non-first {
-  	margin-top: 30px;
-  }
+	.huobi-body h3.non-first {
+		margin-top: 30px;
+	}
 
-  .huobi-body .subtitle {
-  	font-family: "Lato";
-	  font-size: 21px;
-	  font-weight: normal;
-	  line-height: 1.52;
-	  text-align: center;
-	  color: #cccccc;
-	  max-width: 600px;
-	  margin-bottom: 27px;
-  }
+	.huobi-body .subtitle {
+		font-family: "Lato";
+		font-size: 21px;
+		font-weight: normal;
+		line-height: 1.52;
+		text-align: center;
+		color: #cccccc;
+		max-width: 600px;
+		margin-bottom: 27px;
+	}
 
-  .border-box {
-  	width: 841px;
-	  border-radius: 4px;
-	  border: solid 1px #6c7982;
-	  padding: 35px 30px 30px 20px;
-	  font-family: "Lato";
-	  line-height: 1.43;
+	.border-box {
+		width: 841px;
+		border-radius: 4px;
+		border: solid 1px #6c7982;
+		padding: 35px 30px 30px 20px;
+		font-family: "Lato";
+		line-height: 1.43;
 		color: white;
 		font-size: 18px;
-  }
+	}
 
-  .border-box > ul > li {
-  	margin-bottom: 14px;
-  }
+	.border-box>ul>li {
+		margin-bottom: 14px;
+	}
 
-  .border-box > ul > ul > li {
-  	font-size: 14px;
-	  color: #cccccc;
-	  margin-bottom: 14px;
-  }
+	.border-box>ul>ul>li {
+		font-size: 14px;
+		color: #cccccc;
+		margin-bottom: 14px;
+	}
 
-  .border-box > ul > ul > li:before {
-  	content: "-";
-  	text-indent: -25px;
-  	margin-left: -25px;
-    margin-right: 20px;
-  }
+	.border-box>ul>ul>li:before {
+		content: "-";
+		text-indent: -25px;
+		margin-left: -25px;
+		margin-right: 20px;
+	}
 
-  .border-box > ul > ul {
-  	list-style-type: none;
-  }
+	.border-box>ul>ul {
+		list-style-type: none;
+	}
 
-  .border-box.last {
-  	margin-bottom: 105px;
-  }
+	.border-box.last {
+		margin-bottom: 105px;
+	}
 
-  .rocket-anchor {
-  	position: relative;
-  	flex-grow: 1;
-  }
+	.rocket-anchor {
+		position: relative;
+		flex-grow: 1;
+	}
 
-  .rocket-holder {
-  	position: absolute;
-  	width: 400px;
-  	height: 300px;
-  	animation: sway 20s ease-in-out infinite;
-  }
+	.rocket-holder {
+		position: absolute;
+		width: 400px;
+		height: 300px;
+		animation: sway 20s ease-in-out infinite;
+	}
 
-  .rocket-holder2 {
-  	width: 100%;
-  	height: 100%;
-  	/*animation: shake 1.2s infinite;*/
-  	animation: sway1 20s ease-in-out infinite;
-  	animation-delay: 1s;
-  }
+	.rocket-holder2 {
+		width: 100%;
+		height: 100%;
+		/*animation: shake 1.2s infinite;*/
+		animation: sway1 20s ease-in-out infinite;
+		animation-delay: 1s;
+	}
 
-  .rocket-holder2.big-shake {
-  	animation: shakeAlot 0.7s infinite;
-  }
+	.rocket-holder2.big-shake {
+		animation: shakeAlot 0.7s infinite;
+	}
 
-  .rocket-holder2.two {
-  	animation-delay: 0.4s;
-  }
+	.rocket-holder2.two {
+		animation-delay: 0.4s;
+	}
 
-  .rocket-holder2.three {
-  	animation-delay: 0.8s;
-  }
+	.rocket-holder2.three {
+		animation-delay: 0.8s;
+	}
 
-  .rocket-holder.red {
-  	top: 85px;
-  	right: 30px;
-  }
+	.rocket-holder.red {
+		top: 85px;
+		right: 30px;
+	}
 
-  .rocket-holder.blue1 {
-  	top: -20px;
-    right: 340px;
-  	animation-delay: 8s;
-  }
+	.rocket-holder.blue1 {
+		top: -20px;
+		right: 340px;
+		animation-delay: 8s;
+	}
 
-  .rocket-holder.blue2 {
-  	top: 335px;
-    right: 0px;
-  	animation-delay: 14s;
-  }
+	.rocket-holder.blue2 {
+		top: 335px;
+		right: 0px;
+		animation-delay: 14s;
+	}
 
-  .rocket-holder2.blue1 {
-  	animation-delay: 9s;
-  }
+	.rocket-holder2.blue1 {
+		animation-delay: 9s;
+	}
 
-  .rocket-holder2.blue2 {
-  	animation-delay: 15s;
-  }
+	.rocket-holder2.blue2 {
+		animation-delay: 15s;
+	}
 
-  .rocket-holder.blue .rocket {
-  	top: 130px;
-  }
+	.rocket-holder.blue .rocket {
+		top: 130px;
+	}
 
-  .rocket-holder.blue2 .rocket {
-  	top: 130px;
-  	width: 180px;
-  }
+	.rocket-holder.blue2 .rocket {
+		top: 130px;
+		width: 180px;
+	}
 
-  .rocket-holder .rocket {
-  	position: absolute;
-  	z-index: 3;
-  }
+	.rocket-holder .rocket {
+		position: absolute;
+		z-index: 3;
+	}
 
-  .rocket-holder .trail {
-  	position: absolute;
-  	z-index: 1;
-  }
+	.rocket-holder .trail {
+		position: absolute;
+		z-index: 1;
+	}
 
-  .rocket-holder.blue1 .trail {
-  	width: 500px;
-  }
+	.rocket-holder.blue1 .trail {
+		width: 500px;
+	}
 
-  .rocket-holder.blue2 .trail {
-  	width: 300px;
-  }
+	.rocket-holder.blue2 .trail {
+		width: 300px;
+	}
 
-  .trail-holder {
-  	transform: rotate(-21deg);
-  }
+	.trail-holder {
+		transform: rotate(-21deg);
+	}
 
-  .trail-holder .trail.one {
-    top: 84px;
-    right: 363px;
-    animation: pulse 0.5s ease-in-out infinite;
-  }
+	.trail-holder .trail.one {
+		top: 84px;
+		right: 363px;
+		animation: pulse 0.5s ease-in-out infinite;
+	}
 
-  .trail-holder .trail.two {
-    top: 120px;
-    right: 442px;
-    z-index: 2;
-    animation: pulse 0.5s ease-in-out infinite;
-    animation-delay: 0.2s;
-  }
+	.trail-holder .trail.two {
+		top: 120px;
+		right: 442px;
+		z-index: 2;
+		animation: pulse 0.5s ease-in-out infinite;
+		animation-delay: 0.2s;
+	}
 
-  .trail-holder .trail.three {
-    top: 195px;
-    right: 380px;
-    animation: pulse 0.5s ease-in-out infinite;
-    animation-delay: 0.3s;
-  }
+	.trail-holder .trail.three {
+		top: 195px;
+		right: 380px;
+		animation: pulse 0.5s ease-in-out infinite;
+		animation-delay: 0.3s;
+	}
 
-  .trail-holder .trail.one.small {
-    top: 105px;
-    right: 398px;
-  }
+	.trail-holder .trail.one.small {
+		top: 105px;
+		right: 398px;
+	}
 
-  .trail-holder .trail.two.small {
-    top: 128px;
-    right: 458px;
-    z-index: 2;
-  }
+	.trail-holder .trail.two.small {
+		top: 128px;
+		right: 458px;
+		z-index: 2;
+	}
 
-  .trail-holder .trail.three.small {
-    top: 181px;
-    right: 411px;
-  }
+	.trail-holder .trail.three.small {
+		top: 181px;
+		right: 411px;
+	}
 
-  .trail-holder .trail.one.smaller {
-    top: 88px;
-    right: 414px;
-  }
+	.trail-holder .trail.one.smaller {
+		top: 88px;
+		right: 414px;
+	}
 
-  .trail-holder .trail.two.smaller {
-    top: 103px;
-    right: 448px;
-    z-index: 2;
-  }
+	.trail-holder .trail.two.smaller {
+		top: 103px;
+		right: 448px;
+		z-index: 2;
+	}
 
-  .trail-holder .trail.three.smaller {
-    top: 139px;
-    right: 416px;
-  }
+	.trail-holder .trail.three.smaller {
+		top: 139px;
+		right: 416px;
+	}
 
-  @keyframes shake {
-	  0% { transform: translate(0.3px, 0.3px) }
-	  10% { transform: translate(-0.3px, -0.6px) }
-	  20% { transform: translate(-1px, 0px) }
-	  30% { transform: translate(1px, 0.6px) }
-	  40% { transform: translate(0.3px, -0.3px) }
-	  50% { transform: translate(-0.3px, 0.6px) }
-	  60% { transform: translate(-1px, 0.3px) }
-	  70% { transform: translate(1px, 0.3px) }
-	  80% { transform: translate(-0.3px, -0.3px) }
-	  90% { transform: translate(0.3px, 0.6px) }
-	  100% { transform: translate(0.3px, -0.6px) }
+	@keyframes shake {
+		0% {
+			transform: translate(0.3px, 0.3px)
+		}
+
+		10% {
+			transform: translate(-0.3px, -0.6px)
+		}
+
+		20% {
+			transform: translate(-1px, 0px)
+		}
+
+		30% {
+			transform: translate(1px, 0.6px)
+		}
+
+		40% {
+			transform: translate(0.3px, -0.3px)
+		}
+
+		50% {
+			transform: translate(-0.3px, 0.6px)
+		}
+
+		60% {
+			transform: translate(-1px, 0.3px)
+		}
+
+		70% {
+			transform: translate(1px, 0.3px)
+		}
+
+		80% {
+			transform: translate(-0.3px, -0.3px)
+		}
+
+		90% {
+			transform: translate(0.3px, 0.6px)
+		}
+
+		100% {
+			transform: translate(0.3px, -0.6px)
+		}
 	}
 
 	@keyframes shakeAlot {
-	  0% { transform: translate(1px, 1px) }
-	  10% { transform: translate(-1px, -2px) }
-	  20% { transform: translate(-3px, 0px) }
-	  30% { transform: translate(3px, 2px) }
-	  40% { transform: translate(1px, -1px) }
-	  50% { transform: translate(-1px, 2px) }
-	  60% { transform: translate(-3px, 1px) }
-	  70% { transform: translate(3px, 1px) }
-	  80% { transform: translate(-1px, -1px) }
-	  90% { transform: translate(1px, 2px) }
-	  100% { transform: translate(1px, -2px) }
+		0% {
+			transform: translate(1px, 1px)
+		}
+
+		10% {
+			transform: translate(-1px, -2px)
+		}
+
+		20% {
+			transform: translate(-3px, 0px)
+		}
+
+		30% {
+			transform: translate(3px, 2px)
+		}
+
+		40% {
+			transform: translate(1px, -1px)
+		}
+
+		50% {
+			transform: translate(-1px, 2px)
+		}
+
+		60% {
+			transform: translate(-3px, 1px)
+		}
+
+		70% {
+			transform: translate(3px, 1px)
+		}
+
+		80% {
+			transform: translate(-1px, -1px)
+		}
+
+		90% {
+			transform: translate(1px, 2px)
+		}
+
+		100% {
+			transform: translate(1px, -2px)
+		}
 	}
 
 	@keyframes sway {
-	  0% { transform: translate(0px, 0px) }
-	  15% { transform: translate(15px, 0px) }
-	  30% { transform: translate(30px, 0px) }
-	  45% { transform: translate(15px, 0px) }
-	  60% { transform: translate(-9px, 0px) }
-	  75% { transform: translate(-24px, 0px) }
-	  90% { transform: translate(-9px, 0px) }
-	  100% { transform: translate(0px, 0px) }
+		0% {
+			transform: translate(0px, 0px)
+		}
+
+		15% {
+			transform: translate(15px, 0px)
+		}
+
+		30% {
+			transform: translate(30px, 0px)
+		}
+
+		45% {
+			transform: translate(15px, 0px)
+		}
+
+		60% {
+			transform: translate(-9px, 0px)
+		}
+
+		75% {
+			transform: translate(-24px, 0px)
+		}
+
+		90% {
+			transform: translate(-9px, 0px)
+		}
+
+		100% {
+			transform: translate(0px, 0px)
+		}
 	}
 
 	@keyframes sway1 {
-	  0% { transform: translate(0px, 0px) }
-	  15% { transform: translate(0px, 15px) }
-	  30% { transform: translate(0px, 0px) }
-	  45% { transform: translate(0px, -15px) }
-	  60% { transform: translate(0px, 9px) }
-	  75% { transform: translate(0px, 0px) }
-	  90% { transform: translate(0px, -9px) }
-	  100% { transform: translate(0px, 0px) }
+		0% {
+			transform: translate(0px, 0px)
+		}
+
+		15% {
+			transform: translate(0px, 15px)
+		}
+
+		30% {
+			transform: translate(0px, 0px)
+		}
+
+		45% {
+			transform: translate(0px, -15px)
+		}
+
+		60% {
+			transform: translate(0px, 9px)
+		}
+
+		75% {
+			transform: translate(0px, 0px)
+		}
+
+		90% {
+			transform: translate(0px, -9px)
+		}
+
+		100% {
+			transform: translate(0px, 0px)
+		}
 	}
 
 	.planet1 {
@@ -439,16 +549,28 @@
 	}
 
 	@keyframes planet-one {
-	  0% { transform: translate(0px, 0px) }
-	  99.7% { transform: translate(-180px, 50px) scale(1) }
-	  99.8% { transform: translate(-181px, 51px) scale(0) }
-	  99.9% { transform: translate(0px, 0px) scale(0) }
-	  100% { transform: translate(0px, 0px) scale(1)}
+		0% {
+			transform: translate(0px, 0px)
+		}
+
+		99.7% {
+			transform: translate(-180px, 50px) scale(1)
+		}
+
+		99.8% {
+			transform: translate(-181px, 51px) scale(0)
+		}
+
+		99.9% {
+			transform: translate(0px, 0px) scale(0)
+		}
+
+		100% {
+			transform: translate(0px, 0px) scale(1)
+		}
 	}
 
-	.partiles-holder {
-
-	}
+	.partiles-holder {}
 
 	.particle {
 		opacity: 0;
@@ -481,7 +603,7 @@
 
 	.particle.four {
 		top: 240px;
-    right: 300px;
+		right: 300px;
 		max-width: 95px;
 		animation-delay: 0.14s;
 		animation-duration: 0.7s;
@@ -489,7 +611,7 @@
 
 	.particle.five {
 		top: 200px;
-    right: 113px;
+		right: 113px;
 		max-width: 100px;
 		animation-delay: 0.64s;
 		animation-duration: 0.9s;
@@ -497,7 +619,7 @@
 
 	.particle.six {
 		top: 315px;
-    right: 263px;
+		right: 263px;
 		max-width: 70px;
 		animation-delay: 0.5s;
 		animation-duration: 1.5s;
@@ -505,7 +627,7 @@
 
 	.particle.seven {
 		top: 255px;
-    right: 333px;
+		right: 333px;
 		max-width: 90px;
 		animation-delay: 0.56s;
 		animation-duration: 1.05s;
@@ -541,55 +663,59 @@
 	}
 
 	.particle.blue.one {
-    top: 128px;
-    right: 280px;
-    max-width: 40px;
+		top: 128px;
+		right: 280px;
+		max-width: 40px;
 	}
 
 	.particle.blue.two {
 		top: 185px;
-    right: 280px;
-    max-width: 40px;
+		right: 280px;
+		max-width: 40px;
 		animation-delay: 0.8s;
 		animation-duration: 0.8s;
 	}
 
 	.particle.blue.three {
 		top: 214px;
-    right: 280px;
-    max-width: 40px;
+		right: 280px;
+		max-width: 40px;
 		animation-delay: 0.24s;
 		animation-duration: 1.2s;
 	}
 
 	.particle.blue.four {
 		top: 180px;
-    right: 280px;
-    max-width: 40px;
+		right: 280px;
+		max-width: 40px;
 		animation-delay: 0.14s;
 		animation-duration: 0.7s;
 	}
 
 	@keyframes speed-particle {
-	  0% {
-	  	transform: translate(0px, 0px) rotate(-21deg);
-	  	width: 0px;
-	  	opacity: 0;
-	  }
-	  10% {
-	  	opacity: 1;
-	  	width: 30px;
-	  }
-	  20% {
-	  	width: 100px;
-	  }
-	  90% {
-	  	opacity: 1;
-	  }
-	  100% { 
-	  	transform: translate(-600px, 225px) rotate(-21deg);
-	  	opacity: 0;
-	  }
+		0% {
+			transform: translate(0px, 0px) rotate(-21deg);
+			width: 0px;
+			opacity: 0;
+		}
+
+		10% {
+			opacity: 1;
+			width: 30px;
+		}
+
+		20% {
+			width: 100px;
+		}
+
+		90% {
+			opacity: 1;
+		}
+
+		100% {
+			transform: translate(-600px, 225px) rotate(-21deg);
+			opacity: 0;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -599,307 +725,324 @@
 		}
 
 		.huobi-hero-section {
-	  	height: 687px;
-	  	background-position: 40% top;
-    	background-size: 250%;
-    	padding: 0px 25px;
-	  }
-
-	  .huobi-hero-section .h-nav {
-	  	padding-top: 40px;
-	  }
-
-	  .huobi-hero-section .container {
-	  	padding-left: 0px;
-	  	padding-right: 0px;
-	  }
-
-	  .huobi-hero-section .container > div {
-	  	padding-left: 0px;
-	  	padding-right: 0px;
-	  }
-
-	  .huobi-hero-section h1 {
-	  	max-width: 100%;
-	  	font-size: 30px;
-		  font-weight: bold;
-		  margin-bottom: 10px;
-		  margin-top: 40px;
-		  line-height: 1.23;
-	  }
-
-	  .huobi-hero-section h2 {
-		  font-size: 16px;
-		  margin-bottom: 45px;
-		  max-width: 100%;
-	  }
-
-	  .huobi-hero-section a {
-	  	max-width: 100%;
-	  }
-
-	  .rocket-holder.blue1 {
-	  	top: -100px;
-    	right: 190px;
-	  }
-
-	  .rocket-holder.blue2 {
-	  	top: 255px;
-    	right: -40px;
-	  }
-
-	  .planet1 {
-	  	width: 55px;
-	  	height: 55px;
-	  }
-
-	  .planet2 {
-	  	width: 95px;
-	  	height: 95px;
-	  	top: 100px;
-			right: -60px;
-	  }
-
-	  .planet3 {
-	  	width: 133px;
-	  	height: 133px;
-	  	bottom: 150px;
-			right: 120px;
-	  }
-
-	  .huobi-subscribe {
-	  	padding: 45px 30px 22px 30px;
-	  	height: auto;
-	  }
-
-	  .huobi-subscribe h2 {
-	  	font-size: 24px;
-		  font-weight: 500;
-		  line-height: 1.29;
-		  text-align: center;
-	  }
-
-	  .huobi-subscribe .grey {
-	  	font-size: 14px;
-		  line-height: 1.57;
-		  text-align: center;
-	  }
-
-	  .huobi-subscribe .email-input {
-	  	width: 100%;
-	  }
-
-	  .huobi-body {
-	  	padding-left: 23px;
-	  	padding-right: 23px;
-	  }
-
-	  .huobi-body .img-badge {
-	  	margin-top: 45px;
-	  	margin-bottom: 27px;
-	  }
-
-	  .huobi-body h2 {
-	  	font-size: 24px;
-		  font-weight: 500;
-		  line-height: 1.33;
-		  margin-bottom: 14px;
-	  }
-
-	  .huobi-body .subtitle {
-	  	margin-bottom: 29px;
-	  	font-size: 16px;
-		  line-height: 1.38;
-		  padding: 0px 15px;
-	  }
-
-	  .border-box {
-	    width: 100%;
-	    border: 0px;
-	    padding: 0px;
-	    line-height: 1.43;
-	    font-size: 14px;
+			height: 687px;
+			background-position: 40% top;
+			background-size: 250%;
+			padding: 0px 25px;
 		}
 
-		.border-box > ul {
+		.huobi-hero-section .h-nav {
+			padding-top: 40px;
+		}
+
+		.huobi-hero-section .container {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		.huobi-hero-section .container>div {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		.huobi-hero-section h1 {
+			max-width: 100%;
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			margin-top: 40px;
+			line-height: 1.23;
+		}
+
+		.huobi-hero-section h2 {
+			font-size: 16px;
+			margin-bottom: 45px;
+			max-width: 100%;
+		}
+
+		.huobi-hero-section a {
+			max-width: 100%;
+		}
+
+		.rocket-holder.blue1 {
+			top: -100px;
+			right: 190px;
+		}
+
+		.rocket-holder.blue2 {
+			top: 255px;
+			right: -40px;
+		}
+
+		.planet1 {
+			width: 55px;
+			height: 55px;
+		}
+
+		.planet2 {
+			width: 95px;
+			height: 95px;
+			top: 100px;
+			right: -60px;
+		}
+
+		.planet3 {
+			width: 133px;
+			height: 133px;
+			bottom: 150px;
+			right: 120px;
+		}
+
+		.huobi-subscribe {
+			padding: 45px 30px 22px 30px;
+			height: auto;
+		}
+
+		.huobi-subscribe h2 {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.29;
+			text-align: center;
+		}
+
+		.huobi-subscribe .grey {
+			font-size: 14px;
+			line-height: 1.57;
+			text-align: center;
+		}
+
+		.huobi-subscribe .email-input {
+			width: 100%;
+		}
+
+		.huobi-body {
+			padding-left: 23px;
+			padding-right: 23px;
+		}
+
+		.huobi-body .img-badge {
+			margin-top: 45px;
+			margin-bottom: 27px;
+		}
+
+		.huobi-body h2 {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.33;
+			margin-bottom: 14px;
+		}
+
+		.huobi-body .subtitle {
+			margin-bottom: 29px;
+			font-size: 16px;
+			line-height: 1.38;
+			padding: 0px 15px;
+		}
+
+		.border-box {
+			width: 100%;
+			border: 0px;
+			padding: 0px;
+			line-height: 1.43;
+			font-size: 14px;
+		}
+
+		.border-box>ul {
 			padding-inline-start: 20px;
 		}
 
-		.border-box > ul > ul {
-	  	padding-inline-start: 40px;
-	  }
+		.border-box>ul>ul {
+			padding-inline-start: 40px;
+		}
 
-	  .border-box > ul > ul > li {
-	    font-size: 12px;
+		.border-box>ul>ul>li {
+			font-size: 12px;
 		}
 
 		.border-box.last {
-	    margin-bottom: 42px;
+			margin-bottom: 42px;
 		}
 
 		hr {
 			height: 1px;
-		  width: 90%;
-		  background-color: #6c7982;
-		  margin-top: 25px;
-		  margin-left: 15px;
-		  margin-right: 15px;
+			width: 90%;
+			background-color: #6c7982;
+			margin-top: 25px;
+			margin-left: 15px;
+			margin-right: 15px;
 		}
-  }
+	}
 
-  @media (max-width: 530px) {
+	@media (max-width: 530px) {
 		.rocket-anchor {
-	  	margin-top: -45px;
-	  	margin-left: 30px;
-	  }
+			margin-top: -45px;
+			margin-left: 30px;
+		}
 	}
 </style>
 {% endblock %}
 
 <main class="huobi-launch">
-  <section class="huobi-hero-section d-flex flex-column">
-  	<img class="planet1" src="/static/img/huobi/planet-red.svg"/>
-  	<img class="planet2" src="/static/img/huobi/planet-gray.svg"/>
-  	<img class="planet3" src="/static/img/huobi/planet-blue.svg"/>
+	<section class="huobi-hero-section d-flex flex-column">
+		<img class="planet1" src="/static/img/huobi/planet-red.svg" />
+		<img class="planet2" src="/static/img/huobi/planet-gray.svg" />
+		<img class="planet3" src="/static/img/huobi/planet-blue.svg" />
 
-    <div class="container d-flex justify-content-between h-nav">
-    	<a class="top-pos" href="/">
-    		<img src="/static/img/origin-logo.png" srcset="/static/img/origin-logo@2x.png 2x, /static/img/origin-logo@3x.png 3x" class="origin-logo" alt="Origin Protocol logo">
-    	</a>
-    	<a class="light top-pos subscribe-jump-link">
-    		{{gettext("Register Now")}}
-    	</a>
-    </div>
-    <div class="container d-flex flex-column-reverse flex-md-row justify-content-end justify-content-md-center hero-holder">
-    	<div class="col-md-5 rocket-anchor">
-    		<!-- Red rocket -->
-    		<div class="rocket-holder red">
-    			<div id="red-rocket-holder" class="rocket-holder2 one">
-			  		<img id="red-rocket" class="rocket" src="/static/img/huobi/red-rocket.svg"/>
-			  		<div class="partiles-holder">
-			  			<img class="particle one" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle two" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle three" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle four" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle five" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle six" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle seven" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  		</div>
-			  		<div id="red-rocket-trails" class="trail-holder">
-			  			<img class="trail one" src="/static/img/huobi/rocket-trail-hor.svg"/>
-				  		<img class="trail two" src="/static/img/huobi/rocket-trail-hor.svg"/>
-				  		<img class="trail three" src="/static/img/huobi/rocket-trail-hor.svg"/>
-			  		</div>
-			  		<div id="red-rocket-trails-yellow" class="trail-holder d-none">
-			  			<img class="trail one" src="/static/img/huobi/rocket-trail-hor-yellow1.svg"/>
-				  		<img class="trail two" src="/static/img/huobi/rocket-trail-hor-yellow1.svg"/>
-				  		<img class="trail three" src="/static/img/huobi/rocket-trail-hor-yellow1.svg"/>
-			  		</div>
-			  	</div>
-		  	</div>
+		<div class="container d-flex justify-content-between h-nav">
+			<a class="top-pos" href="/">
+				<img src="/static/img/origin-logo.png"
+					srcset="/static/img/origin-logo@2x.png 2x, /static/img/origin-logo@3x.png 3x" class="origin-logo"
+					alt="Origin Protocol logo">
+			</a>
+			<a class="light top-pos subscribe-jump-link">
+				{{gettext("Register Now")}}
+			</a>
+		</div>
+		<div
+			class="container d-flex flex-column-reverse flex-md-row justify-content-end justify-content-md-center hero-holder">
+			<div class="col-md-5 rocket-anchor">
+				<!-- Red rocket -->
+				<div class="rocket-holder red">
+					<div id="red-rocket-holder" class="rocket-holder2 one">
+						<img id="red-rocket" class="rocket" src="/static/img/huobi/red-rocket.svg" />
+						<div class="partiles-holder">
+							<img class="particle one" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle two" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle three" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle four" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle five" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle six" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle seven" src="/static/img/huobi/trail-particle-2-hor.svg" />
+						</div>
+						<div id="red-rocket-trails" class="trail-holder">
+							<img class="trail one" src="/static/img/huobi/rocket-trail-hor.svg" />
+							<img class="trail two" src="/static/img/huobi/rocket-trail-hor.svg" />
+							<img class="trail three" src="/static/img/huobi/rocket-trail-hor.svg" />
+						</div>
+						<div id="red-rocket-trails-yellow" class="trail-holder d-none">
+							<img class="trail one" src="/static/img/huobi/rocket-trail-hor-yellow1.svg" />
+							<img class="trail two" src="/static/img/huobi/rocket-trail-hor-yellow1.svg" />
+							<img class="trail three" src="/static/img/huobi/rocket-trail-hor-yellow1.svg" />
+						</div>
+					</div>
+				</div>
 
-		  	<!-- Blue rocket 1 -->
-    		<div id="blue-rocket-holder-1" class="rocket-holder blue blue1">
-    			<div class="rocket-holder2 two">
-			  		<img class="rocket" src="/static/img/huobi/blue-rocket.svg"/>
-			  		<div class="partiles-holder">
-			  			<img class="particle blue one" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle blue two" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle blue three" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle blue four" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  		</div>
-			  		<div class="trail-holder">
-			  			<img class="trail one small" src="/static/img/huobi/rocket-trail-hor.svg"/>
-				  		<img class="trail two small" src="/static/img/huobi/rocket-trail-hor.svg"/>
-				  		<img class="trail three small" src="/static/img/huobi/rocket-trail-hor.svg"/>
-			  		</div>
-			  	</div>
-		  	</div>
+				<!-- Blue rocket 1 -->
+				<div id="blue-rocket-holder-1" class="rocket-holder blue blue1">
+					<div class="rocket-holder2 two">
+						<img class="rocket" src="/static/img/huobi/blue-rocket.svg" />
+						<div class="partiles-holder">
+							<img class="particle blue one" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle blue two" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle blue three" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle blue four" src="/static/img/huobi/trail-particle-2-hor.svg" />
+						</div>
+						<div class="trail-holder">
+							<img class="trail one small" src="/static/img/huobi/rocket-trail-hor.svg" />
+							<img class="trail two small" src="/static/img/huobi/rocket-trail-hor.svg" />
+							<img class="trail three small" src="/static/img/huobi/rocket-trail-hor.svg" />
+						</div>
+					</div>
+				</div>
 
-		  	<!-- Blue rocket 2 -->
-    		<div id="blue-rocket-holder-2" class="rocket-holder blue blue2">
-    			<div class="rocket-holder2 two">
-			  		<img class="rocket" src="/static/img/huobi/blue-rocket.svg"/>
-			  		<div class="partiles-holder">
-			  			<img class="particle blue one" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle blue two" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle blue three" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  			<img class="particle blue four" src="/static/img/huobi/trail-particle-2-hor.svg"/>
-			  		</div>
-			  		<div class="trail-holder">
-			  			<img class="trail one smaller" src="/static/img/huobi/rocket-trail-hor.svg"/>
-				  		<img class="trail two smaller" src="/static/img/huobi/rocket-trail-hor.svg"/>
-				  		<img class="trail three smaller" src="/static/img/huobi/rocket-trail-hor.svg"/>
-			  		</div>
-			  	</div>
-		  	</div>
-    	</div>
-    	<div class="col-md-7 d-flex flex-column align-items-center">
-    		<h1>
-    			{{gettext("Celebrate Origin's Listing on Huobi & Win OGN & USDT")}}
-    		</h1>
-    		<h2>
-    			{{gettext("500,000 OGN and $100k USDT will be rewarded to OGN holders that trade on Huobi")}}
-    		</h2>
-    		<a class="btn btn-primary subscribe-jump-link">
-    			{{gettext("Register Now")}}
-    		</a>
-    	</div>
-    </div>
-  </section>
-  <section class="huobi-subscribe d-flex flex-column align-items-center justify-content-center first-subscribe">
-  	<div class="email-input-form d-flex flex-column align-items-center justify-content-center">
-  		<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
-	  	<div class="grey">{{gettext("You must join Origin's mailing list and Wechat group to be eligible to participate in the activities")}}</div>
-	    <div class="huobi-email-form">
-	      <form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post" action="/mailing-list/join">
-	        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
-	        <input class="submit" type="submit" value={{gettext("Submit")}}>
-	      </form>
-	    </div>
-	    <!-- IMPORTNAT IF YOU CHANGE QR CODE HERE ALSO CHANGE IT ON SUCCESS STATE BELOW -->
-	    <div class="huobi-qr-code-holder">
-	    	<img class="huobi-qr-code" src="/static/img/huobi/qr-code.png" srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x"/>
-	    </div>
-	    <div class="grey-text">{{gettext("WeChat")}}</div>
-  	</div>
-  	<div class="email-input-success flex-column align-items-center justify-content-center d-none">
-  		<h2>
-  			{{gettext("Congratulations!")}} <br>
-  			{{gettext("You are now eligible to participate")}}
-  		</h2>
-  		<div class="grey">{{gettext("Make sure you scan this QR code to join our WeChat group")}}</div>
-  		<div class="huobi-qr-code-holder">
-  			<img class="huobi-qr-code big" src="/static/img/huobi/qr-code.png" srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x"/>
-  		</div>
-  	</div>
-  </section>
-  <section class="huobi-body d-flex flex-column align-items-center justify-content-center">
-  	<img class="img-badge" src="/static/img/huobi/ogn-activity-1.svg"/>
-  	<h2 class="d-none d-md-flex">{{gettext("OGN Net Increase Competition")}}</h2>
-  	<h2 class="d-md-none">{{gettext("OGN Trading Competition")}}</h2>
-  	<div class="subtitle">
-  		{{gettext("Activity time period: Listing date to June 22, 2PM SGT")}} <br>
-  		{{gettext("Rewards to be calculated every 3 days")}}
-  	</div>
-  	<div class="border-box">
-  		<h3>{{gettext("Competition rounds")}}</h3>
-  		<ul>
-  			<li>{{gettext("The competition will begin on June 10 2PM SGT and last until June 22 2PM SGT (12 days).")}}</li>
-  			<li>{{gettext("There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round.")}}</li>
-  			<ul>
-					<li>{{gettext("Round 1 will commence from the start of day 1 to the end of day 3: June 10, 2020 2PM to June 13, 2020 2PM")}}</li>
-					<li>{{gettext("Round 2 will commence from the start of day 4 to end of day 6: June 13, 2020 2:01PM to June 16, 2020 2PM")}}</li>
-					<li>{{gettext("Round 3 will commence from the start of day 7 to end of day 9: June 16, 2020 2:01PM to June 19, 2020 2PM")}}</li>
-					<li>{{gettext("Round 4 will commence from the start of day 10 to end of day 12: June 19, 2020 2:01PM to June 22, 2020 2PM")}}</li>
+				<!-- Blue rocket 2 -->
+				<div id="blue-rocket-holder-2" class="rocket-holder blue blue2">
+					<div class="rocket-holder2 two">
+						<img class="rocket" src="/static/img/huobi/blue-rocket.svg" />
+						<div class="partiles-holder">
+							<img class="particle blue one" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle blue two" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle blue three" src="/static/img/huobi/trail-particle-2-hor.svg" />
+							<img class="particle blue four" src="/static/img/huobi/trail-particle-2-hor.svg" />
+						</div>
+						<div class="trail-holder">
+							<img class="trail one smaller" src="/static/img/huobi/rocket-trail-hor.svg" />
+							<img class="trail two smaller" src="/static/img/huobi/rocket-trail-hor.svg" />
+							<img class="trail three smaller" src="/static/img/huobi/rocket-trail-hor.svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7 d-flex flex-column align-items-center">
+				<h1>
+					{{gettext("Celebrate Origin's Listing on Huobi & Win OGN & USDT")}}
+				</h1>
+				<h2>
+					{{gettext("500,000 OGN and $100k USDT will be rewarded to OGN holders that trade on Huobi")}}
+				</h2>
+				<a class="btn btn-primary subscribe-jump-link">
+					{{gettext("Register Now")}}
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="huobi-subscribe d-flex flex-column align-items-center justify-content-center first-subscribe">
+		<div class="email-input-form d-flex flex-column align-items-center justify-content-center">
+			<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
+			<div class="grey">
+				{{gettext("You must join Origin's mailing list and Wechat group to be eligible to participate in the activities")}}
+			</div>
+			<div class="huobi-email-form">
+				<form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post"
+					action="/mailing-list/join">
+					<input id="email" class="email-input" type="email" name="email"
+						placeholder="{{gettext("Enter your email")}}">
+					<input class="submit" type="submit" value={{gettext("Submit")}}>
+				</form>
+			</div>
+			<!-- IMPORTNAT IF YOU CHANGE QR CODE HERE ALSO CHANGE IT ON SUCCESS STATE BELOW -->
+			<div class="huobi-qr-code-holder">
+				<img class="huobi-qr-code" src="/static/img/huobi/qr-code.png"
+					srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x" />
+			</div>
+			<div class="grey-text">{{gettext("WeChat")}}</div>
+		</div>
+		<div class="email-input-success flex-column align-items-center justify-content-center d-none">
+			<h2>
+				{{gettext("Congratulations!")}} <br>
+				{{gettext("You are now eligible to participate")}}
+			</h2>
+			<div class="grey">{{gettext("Make sure you scan this QR code to join our WeChat group")}}</div>
+			<div class="huobi-qr-code-holder">
+				<img class="huobi-qr-code big" src="/static/img/huobi/qr-code.png"
+					srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x" />
+			</div>
+		</div>
+	</section>
+	<section class="huobi-body d-flex flex-column align-items-center justify-content-center">
+		<img class="img-badge" src="/static/img/huobi/ogn-activity-1.svg" />
+		<h2 class="d-none d-md-flex">{{gettext("OGN Net Increase Competition")}}</h2>
+		<h2 class="d-md-none">{{gettext("OGN Trading Competition")}}</h2>
+		<div class="subtitle">
+			{{gettext("Activity time period: Listing date to June 22, 2PM GMT +8")}} <br>
+			{{gettext("Rewards to be calculated every 3 days")}}
+		</div>
+		<div class="border-box">
+			<h3>{{gettext("Competition rounds")}}</h3>
+			<ul>
+				<li>{{gettext("The competition will begin on June 18, 6PM, GMT +8 and last until June 30, 6PM GMT +8 (12 days).")}}
+				</li>
+				<li>{{gettext("There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round. All times listed in Bejing time (GMT +8).")}}
+				</li>
+				<ul>
+					<li>{{gettext("Round 1 will commence from the start of day 1 to the end of day 3: June 18, 2020 6PM to June 21, 2020 6PM")}}
+					</li>
+					<li>{{gettext("Round 2 will commence from the start of day 4 to end of day 6: June 21, 2020 6:01PM to June 24, 2020 6PM")}}
+					</li>
+					<li>{{gettext("Round 3 will commence from the start of day 7 to end of day 9: June 24, 2020 6:01PM to June 27, 2020 6PM")}}
+					</li>
+					<li>{{gettext("Round 4 will commence from the start of day 10 to end of day 12: June 27, 2020 6:01PM to June 30, 2020 6PM")}}
+					</li>
 				</ul>
 			</ul>
 			<h3 class="non-first">{{gettext("Competition rules")}}</h3>
 			<ul>
-  			<li>{{gettext("Traders will be ranked according to their OGN Net Increase Amount during each round.")}}</li>
-  			<li>{{gettext("OGN Net Increase Amount = OGN held at the end of the round - OGN held at the beginning of the round")}}</li>
-  			<li>{{gettext("Here is an example calculation for OGN Net Increase Amount:")}}</li>
-  			<ul>
+				<li>{{gettext("Traders will be ranked according to their OGN Net Increase Amount during each round.")}}
+				</li>
+				<li>{{gettext("OGN Net Increase Amount = OGN held at the end of the round - OGN held at the beginning of the round")}}
+				</li>
+				<li>{{gettext("Here is an example calculation for OGN Net Increase Amount:")}}</li>
+				<ul>
 					<li>{{gettext("A trader starts the round with 2,000 OGN")}}</li>
 					<li>{{gettext("They then buy 15,000 OGN, sell 3,000 OGN, and withdraw 1,000 OGN")}}</li>
 					<li>{{gettext("They end the round with 13,000 OGN (2,000 + 15,000 - 3,000 - 1,000 OGN)")}}</li>
@@ -909,7 +1052,8 @@
 			<h3 class="non-first">{{gettext("Competition payouts")}}</h3>
 			<ul>
 				<li>{{gettext("$25k USDT will be awarded in each 3-day round, for a total of $100k USDT.")}}</li>
-				<li>{{gettext("For each 3-day reward period, traders will be ranked by their overall OGN Net Increase Amount:")}}</li>
+				<li>{{gettext("For each 3-day reward period, traders will be ranked by their overall OGN Net Increase Amount:")}}
+				</li>
 				<ul>
 					<li>{{gettext("1st place: $3k USDT")}}</li>
 					<li>{{gettext("2nd place: $2.5k USDT")}}</li>
@@ -920,245 +1064,264 @@
 					<li>{{gettext("31st to 60th places: Split $5k USDT evenly")}}</li>
 					<li>{{gettext("61st to 100th places: Split $2.5k USDT evenly")}}</li>
 				</ul>
-				<li>{{gettext("Traders can win in multiple rewards periods, but the OGN Net Increase Amount is calculated using the snapshot at the end of the last period:")}}</li>
+				<li>{{gettext("Traders can win in multiple rewards periods, but the OGN Net Increase Amount is calculated using the snapshot at the end of the last period:")}}
+				</li>
 				<ul>
-					<li>{{gettext("For example, if a trader is holding 10,000 OGN at the end of round 1, that is the starting point for the second round. If they increase their OGN holdings to 30,000 OGN by the end of day 6, their OGN Net Increase Amount for the round is 20,000.")}}</li>
+					<li>{{gettext("For example, if a trader is holding 10,000 OGN at the end of round 1, that is the starting point for the second round. If they increase their OGN holdings to 30,000 OGN by the end of day 6, their OGN Net Increase Amount for the round is 20,000.")}}
+					</li>
 				</ul>
 			</ul>
-  	</div>
-  	<hr class="d-md-none"/> 
-  	<img class="img-badge" src="/static/img/huobi/ogn-activity-2.svg"/>
-  	<h2>{{gettext("Origin Holder Airdrop")}}</h2>
-  	<div class="subtitle">{{gettext("Activity time period: First 60 days of listing")}}</div>
-  	<div class="border-box last">
-  		<ul>
-  			<li>{{gettext("The OGN Holder Airdrop will reward Huobi traders that HODL OGN over a two-month period. 500k of OGN will be rewarded to OGN Holder participants.")}}</li>
-  		</ul>
+		</div>
+		<hr class="d-md-none" />
+		<img class="img-badge" src="/static/img/huobi/ogn-activity-2.svg" />
+		<h2>{{gettext("Origin Holder Airdrop")}}</h2>
+		<div class="subtitle">{{gettext("Activity time period: First 60 days of listing")}}</div>
+		<div class="border-box last">
+			<ul>
+				<li>{{gettext("The OGN Holder Airdrop will reward Huobi traders that HODL OGN over a two-month period. 500k of OGN will be rewarded to OGN Holder participants.")}}
+				</li>
+			</ul>
 			<h3 class="non-first">{{gettext("Airdrop rounds")}}</h3>
 			<ul>
-  			<li>{{gettext("The OGN Holder Airdrop campaign will begin after the OGN Net Asset Increase competition ends. There will be two month-long rounds.")}}</li>
-  			<ul>
-					<li>{{gettext("Round 1 will commence from June 23, 2020 2:01PM to July 23, 2020 2PM")}}</li>
-					<li>{{gettext("Round 2 will commence from July 23, 2020 2:01PM to August 23, 2020 2PM")}}</li>
+				<li>{{gettext("The OGN Holder Airdrop campaign will begin after the OGN Net Asset Increase competition ends. There will be two month-long rounds.")}}
+				</li>
+				<ul>
+					<li>{{gettext("Round 1 will commence from June 30, 2020 6:01PM to July 31, 2020 6PM")}}</li>
+					<li>{{gettext("Round 2 will commence from August 3, 2020 2:01PM to September 3, 2020 2PM")}}</li>
 				</ul>
 			</ul>
 			<h3 class="non-first">{{gettext("Airdrop rules")}}</h3>
 			<ul>
-				<li>{{gettext("For each round, 250k OGN will be rewarded to OGN holders to OGN holders based on the amount of OGN they are holding relative to all other OGN holders:")}}</li>
-  			<ul>
-					<li>{{gettext("OGN rewarded = OGN Holder score x (The average OGN holdings that the user holds during the month / The total amount of OGN all users hold)")}}</li>
-					<li>{{gettext("Users who hold on average 1000 HT or more in each monthly airdrop period will double the value for their average OGN holdings for the month for the rewards calculation")}}</li>
-					<li>{{gettext("Users who have held on average at least 1000 HT for 90 days prior to each airdrop distribution will triple the value for their average OGN holdings for the month for the rewards calculation")}}</li>
+				<li>{{gettext("For each round, 250k OGN will be rewarded to OGN holders to OGN holders based on the amount of OGN they are holding relative to all other OGN holders:")}}
+				</li>
+				<ul>
+					<li>{{gettext("OGN rewarded = OGN Holder score x (The average OGN holdings that the user holds during the month / The total amount of OGN all users hold)")}}
+					</li>
+					<li>{{gettext("Users who hold on average 1000 HT or more in each monthly airdrop period will double the value for their average OGN holdings for the month for the rewards calculation")}}
+					</li>
+					<li>{{gettext("Users who have held on average at least 1000 HT for 90 days prior to each airdrop distribution will triple the value for their average OGN holdings for the month for the rewards calculation")}}
+					</li>
 				</ul>
 				<li>{{gettext("In addition, users must meet the following eligibility requirements:")}}</li>
-  			<ul>
+				<ul>
 					<li>{{gettext("The user must hold at least 1000 OGN daily during the month")}}</li>
-					<li>{{gettext("The user must register their email address with Origin and join the Origin Wechat group.")}}</li>
+					<li>{{gettext("The user must register their email address with Origin and join the Origin Wechat group.")}}
+					</li>
 				</ul>
 			</ul>
-  	</div>
-  </section>
-  <section class="huobi-subscribe d-flex flex-column align-items-center justify-content-center">
-  	<div class="email-input-form d-flex flex-column align-items-center justify-content-center">
-  		<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
-	  	<div class="grey">{{gettext("You must join Origin's mailing list and Wechat group to be eligible to participate in the activities")}}</div>
-	    <div class="huobi-email-form">
-	      <form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post" action="/mailing-list/join">
-	        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Enter your email")}}">
-	        <input class="submit" type="submit" value={{gettext("Submit")}}>
-	      </form>
-	    </div>
-	    <!-- IMPORTNAT IF YOU CHANGE QR CODE HERE ALSO CHANGE IT ON SUCCESS STATE BELOW -->
-	    <div class="huobi-qr-code-holder">
-	    	<img class="huobi-qr-code" src="/static/img/huobi/qr-code.png" srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x"/>
-	    </div>
-	    <div class="grey-text">{{gettext("WeChat")}}</div>
-  	</div>
-  	<div class="email-input-success flex-column align-items-center justify-content-center d-none">
-  		<h2>
-  			{{gettext("Congratulations!")}} <br>
-  			{{gettext("You are now eligible to participate")}}
-  		</h2>
-  		<div class="grey">{{gettext("Make sure you scan this QR code to join our WeChat group")}}</div>
-  		<div class="huobi-qr-code-holder">
-  			<img class="huobi-qr-code big" src="/static/img/huobi/qr-code.png" srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x"/>
-  		</div>
-  	</div>
-  </section>
-  {% include 'footer.html' %}
+		</div>
+	</section>
+	<section class="huobi-subscribe d-flex flex-column align-items-center justify-content-center">
+		<div class="email-input-form d-flex flex-column align-items-center justify-content-center">
+			<h2>{{gettext("Participate by Joining Our Newsletter")}}</h2>
+			<div class="grey">
+				{{gettext("You must join Origin's mailing list and Wechat group to be eligible to participate in the activities")}}
+			</div>
+			<div class="huobi-email-form">
+				<form id="huobi-mail-list-2" class="d-flex flex-column align-items-center" method="post"
+					action="/mailing-list/join">
+					<input id="email" class="email-input" type="email" name="email"
+						placeholder="{{gettext("Enter your email")}}">
+					<input class="submit" type="submit" value={{gettext("Submit")}}>
+				</form>
+			</div>
+			<!-- IMPORTNAT IF YOU CHANGE QR CODE HERE ALSO CHANGE IT ON SUCCESS STATE BELOW -->
+			<div class="huobi-qr-code-holder">
+				<img class="huobi-qr-code" src="/static/img/huobi/qr-code.png"
+					srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x" />
+			</div>
+			<div class="grey-text">{{gettext("WeChat")}}</div>
+		</div>
+		<div class="email-input-success flex-column align-items-center justify-content-center d-none">
+			<h2>
+				{{gettext("Congratulations!")}} <br>
+				{{gettext("You are now eligible to participate")}}
+			</h2>
+			<div class="grey">{{gettext("Make sure you scan this QR code to join our WeChat group")}}</div>
+			<div class="huobi-qr-code-holder">
+				<img class="huobi-qr-code big" src="/static/img/huobi/qr-code.png"
+					srcset="/static/img/huobi/qr-code@2x.png 2x, /static/img/huobi/qr-code@3x.png 3x" />
+			</div>
+		</div>
+	</section>
+	{% include 'footer.html' %}
 </main>
 
-{% endblock %} 
-{% block extra_scripts %} 
+{% endblock %}
+{% block extra_scripts %}
 <script type='text/javascript'>
-  $(function() {
+	$(function () {
 
-  const animations = {}
+		const animations = {}
 
-  const animateValue = ({
-	  from, // start value
-	  to, // end value
-	  callbackValue, // callback that is called each animation frame with the animated "value" property
-	  onCompleteCallback, // callback that is called each animation frame with the animated "value" property
-	  duration, // duration in miliseconds
-	  id, // unique animation id. So new animations issued with this is can ovverride old ones
-	  easing = 'linear'
-	}) => {
-		const delay = 0
-	  const getCurrentTime = () => {
-	    return (new Date()).getTime()
-	  }
+		const animateValue = ({
+			from, // start value
+			to, // end value
+			callbackValue, // callback that is called each animation frame with the animated "value" property
+			onCompleteCallback, // callback that is called each animation frame with the animated "value" property
+			duration, // duration in miliseconds
+			id, // unique animation id. So new animations issued with this is can ovverride old ones
+			easing = 'linear'
+		}) => {
+			const delay = 0
+			const getCurrentTime = () => {
+				return (new Date()).getTime()
+			}
 
-	  id = id ? id : Math.round(Math.random() * 10000)
-	  const executeRoutine = () => {
-	    const start = getCurrentTime()
-	    callbackValue(from)
-	    if (animations[id]) {
-	      clearInterval(animations[id])
-	    }
+			id = id ? id : Math.round(Math.random() * 10000)
+			const executeRoutine = () => {
+				const start = getCurrentTime()
+				callbackValue(from)
+				if (animations[id]) {
+					clearInterval(animations[id])
+				}
 
-	    const interval = setInterval(() => {
-	      const time = getCurrentTime()
-	      // animation stopped
-	      if (time - start > duration) {
-	        callbackValue(to)
-	        clearInterval(interval)
-	        if (onCompleteCallback) {
-	          onCompleteCallback()
-	        }
-	        delete animations[id]
-	        return
-	      }
+				const interval = setInterval(() => {
+					const time = getCurrentTime()
+					// animation stopped
+					if (time - start > duration) {
+						callbackValue(to)
+						clearInterval(interval)
+						if (onCompleteCallback) {
+							onCompleteCallback()
+						}
+						delete animations[id]
+						return
+					}
 
-	      const change = (to - from)
-	      const time_elapsed = (time - start)
-	      let value
-	      if (easing === 'linear') {
-	        const completedPercentage = time_elapsed / duration
-	        value = Math.round((from + change * completedPercentage) * 100) / 100
-	      } else if (easing === 'circin') {
-	        const t = time_elapsed/duration
-	        value = -change * (Math.sqrt(1 - t*t) - 1) + from;
-	      } else if (easing === 'inBack') {
-	        const s = 1.70158
-	        const completedPercentage = time_elapsed / duration
-	        const n = completedPercentage * completedPercentage * (( s + 1 ) * completedPercentage - s)
-	        value = from + change * n
-	      } else if (easing === 'outBack') {
-	        const s = 1.70158
-	        let completedPercentage = time_elapsed / duration
-	        const n = --completedPercentage * completedPercentage * (( s + 1 ) * completedPercentage + s) +1
-	        value = from + change * n
-	      }
+					const change = (to - from)
+					const time_elapsed = (time - start)
+					let value
+					if (easing === 'linear') {
+						const completedPercentage = time_elapsed / duration
+						value = Math.round((from + change * completedPercentage) * 100) / 100
+					} else if (easing === 'circin') {
+						const t = time_elapsed / duration
+						value = -change * (Math.sqrt(1 - t * t) - 1) + from;
+					} else if (easing === 'inBack') {
+						const s = 1.70158
+						const completedPercentage = time_elapsed / duration
+						const n = completedPercentage * completedPercentage * ((s + 1) *
+							completedPercentage - s)
+						value = from + change * n
+					} else if (easing === 'outBack') {
+						const s = 1.70158
+						let completedPercentage = time_elapsed / duration
+						const n = --completedPercentage * completedPercentage * ((s + 1) *
+							completedPercentage + s) + 1
+						value = from + change * n
+					}
 
-	      callbackValue(value)
-	    }, 30)
+					callbackValue(value)
+				}, 30)
 
-	    animations[id] = interval
-	  }
+				animations[id] = interval
+			}
 
-	  if (delay === 0) {
-	    executeRoutine()
-	  } else {
-	    setTimeout(() => { executeRoutine()}, delay)
-	  }
-	}
+			if (delay === 0) {
+				executeRoutine()
+			} else {
+				setTimeout(() => {
+					executeRoutine()
+				}, delay)
+			}
+		}
 
-  	// Change all the email input forms to success screens
-  	window.onAddedToEmailList = function () {
-  		var inputForms = document.getElementsByClassName("email-input-form")
-  		var successScreens = document.getElementsByClassName("email-input-success")
-  		
-  		for (var i = 0; i < inputForms.length; i++) {
-  			inputForms[i].classList.remove("d-flex")
-  			inputForms[i].classList.add("d-none")
+		// Change all the email input forms to success screens
+		window.onAddedToEmailList = function () {
+			var inputForms = document.getElementsByClassName("email-input-form")
+			var successScreens = document.getElementsByClassName("email-input-success")
 
-  			successScreens[i].classList.add("d-flex")
-  			successScreens[i].classList.remove("d-none")
-  		}
-  	}
+			for (var i = 0; i < inputForms.length; i++) {
+				inputForms[i].classList.remove("d-flex")
+				inputForms[i].classList.add("d-none")
 
-  	var blueRocketHolder1 = document.getElementById("blue-rocket-holder-1")
-  	var blueRocketHolder2 = document.getElementById("blue-rocket-holder-2")
-  	var blueStartRightPos1 = parseInt(window.getComputedStyle(blueRocketHolder1).right)
-  	var blueStartRightPos2 = parseInt(window.getComputedStyle(blueRocketHolder2).right)
+				successScreens[i].classList.add("d-flex")
+				successScreens[i].classList.remove("d-none")
+			}
+		}
 
-  	var locked = false
-  	var rockIt = function() {
-  		if (locked) {
-  			return 
-  		}
+		var blueRocketHolder1 = document.getElementById("blue-rocket-holder-1")
+		var blueRocketHolder2 = document.getElementById("blue-rocket-holder-2")
+		var blueStartRightPos1 = parseInt(window.getComputedStyle(blueRocketHolder1).right)
+		var blueStartRightPos2 = parseInt(window.getComputedStyle(blueRocketHolder2).right)
 
-  		locked = true
-    	var trails = document.getElementById("red-rocket-trails")
-    	var trailsYellow = document.getElementById("red-rocket-trails-yellow")
-    	var redRocketHolder = document.getElementById("red-rocket-holder")
+		var locked = false
+		var rockIt = function () {
+			if (locked) {
+				return
+			}
 
-    	animateValue({
-    		from: blueStartRightPos1,
-    		to: blueStartRightPos1 + 100,
-    		callbackValue: (right) => {
-    			blueRocketHolder1.style.right = `${right}px`
-    		},
-    		duration: 500,
-    		easing: 'outBack'
-    	})
+			locked = true
+			var trails = document.getElementById("red-rocket-trails")
+			var trailsYellow = document.getElementById("red-rocket-trails-yellow")
+			var redRocketHolder = document.getElementById("red-rocket-holder")
 
-    	animateValue({
-    		from: blueStartRightPos2,
-    		to: blueStartRightPos2 + 100,
-    		callbackValue: (right) => {
-    			blueRocketHolder2.style.right = `${right}px`
-    		},
-    		duration: 500,
-    		easing: 'outBack'
-    	})
+			animateValue({
+				from: blueStartRightPos1,
+				to: blueStartRightPos1 + 100,
+				callbackValue: (right) => {
+					blueRocketHolder1.style.right = `${right}px`
+				},
+				duration: 500,
+				easing: 'outBack'
+			})
 
-    	trails.classList.add("d-none")
-    	trailsYellow.classList.remove("d-none")
-    	redRocketHolder.classList.add("big-shake")
-    	setTimeout(function(){
-    		trails.classList.remove("d-none")
-    		trailsYellow.classList.add("d-none")
-    		redRocketHolder.classList.remove("big-shake")
+			animateValue({
+				from: blueStartRightPos2,
+				to: blueStartRightPos2 + 100,
+				callbackValue: (right) => {
+					blueRocketHolder2.style.right = `${right}px`
+				},
+				duration: 500,
+				easing: 'outBack'
+			})
 
-    		animateValue({
-	    		from: blueStartRightPos1 + 100,
-	    		to: blueStartRightPos1,
-	    		callbackValue: (right) => {
-	    			blueRocketHolder1.style.right = `${right}px`
-	    		},
-	    		duration: 500,
-	    		easing: 'inBack'
-	    	})
+			trails.classList.add("d-none")
+			trailsYellow.classList.remove("d-none")
+			redRocketHolder.classList.add("big-shake")
+			setTimeout(function () {
+				trails.classList.remove("d-none")
+				trailsYellow.classList.add("d-none")
+				redRocketHolder.classList.remove("big-shake")
 
-	    	animateValue({
-	    		from: blueStartRightPos2 + 100,
-	    		to: blueStartRightPos2,
-	    		callbackValue: (right) => {
-	    			blueRocketHolder2.style.right = `${right}px`
-	    		},
-	    		duration: 500,
-	    		easing: 'inBack'
-	    	})
-	    	locked = false
-    	}, 2100)
-    }
+				animateValue({
+					from: blueStartRightPos1 + 100,
+					to: blueStartRightPos1,
+					callbackValue: (right) => {
+						blueRocketHolder1.style.right = `${right}px`
+					},
+					duration: 500,
+					easing: 'inBack'
+				})
 
-  	document.getElementById("red-rocket").addEventListener("touchstart", rockIt);
-    document.getElementById("red-rocket").addEventListener("click", rockIt);
+				animateValue({
+					from: blueStartRightPos2 + 100,
+					to: blueStartRightPos2,
+					callbackValue: (right) => {
+						blueRocketHolder2.style.right = `${right}px`
+					},
+					duration: 500,
+					easing: 'inBack'
+				})
+				locked = false
+			}, 2100)
+		}
 
-    var jumpToSubscribe = function () {
-    	document.querySelector('.first-subscribe').scrollIntoView({ 
-			  behavior: 'smooth' 
+		document.getElementById("red-rocket").addEventListener("touchstart", rockIt);
+		document.getElementById("red-rocket").addEventListener("click", rockIt);
+
+		var jumpToSubscribe = function () {
+			document.querySelector('.first-subscribe').scrollIntoView({
+				behavior: 'smooth'
 			});
-    }
+		}
 
-    var jumpLinks = document.getElementsByClassName("subscribe-jump-link")
-    for (var i = 0; i < jumpLinks.length; i++) {
-    	jumpLinks[i].addEventListener("touchstart", jumpToSubscribe);
-    	jumpLinks[i].addEventListener("click", jumpToSubscribe);
-    }
-  });
+		var jumpLinks = document.getElementsByClassName("subscribe-jump-link")
+		for (var i = 0; i < jumpLinks.length; i++) {
+			jumpLinks[i].addEventListener("touchstart", jumpToSubscribe);
+			jumpLinks[i].addEventListener("click", jumpToSubscribe);
+		}
+	});
 </script>
 {% endblock %}
