@@ -137,6 +137,13 @@
           text.push('</div>')
           return text.join('')
         },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: function (d) { return d.value + '%' }
+          }
+        }
       } 
     }
 
@@ -248,6 +255,13 @@
           text.push('</div>')
           return text.join('')
         },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: function (d) { return d.value + 'M' }
+          }
+        }
       }
     }
 

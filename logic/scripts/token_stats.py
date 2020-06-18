@@ -12,6 +12,10 @@ import requests
 from threading import Thread
 from time import sleep
 
+from tools import db_utils
+from util import redis_helper
+import json
+
 # NOTE: remember to use lowercase addresses for everything
 
 # token contract addresses
@@ -25,14 +29,6 @@ investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
 dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
 ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
-
-ogn_usd_price = 0
-staked_user_count = 0
-staked_token_count = 0
-ogn_supply_stats = dict()
-ogn_supply_history = []
-
-stats_last_updated_at = datetime(2020, 1, 1, 0, 0, 0, 0)
 
 # limit calls to 10 requests / second per their limits
 # https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API#api-keys-limits
@@ -86,9 +82,6 @@ def fetch_wallet_balance(wallet):
 def fetch_token_prices():
     print("Fetching token prices...")
 
-    global ogn_usd_price
-    global eth_usd_price
-
     try:
         url = "https://api.coingecko.com/api/v3/simple/price?ids=origin-protocol%2Cethereum&vs_currencies=usd"
         raw_json = requests.get(url)
@@ -104,6 +97,11 @@ def fetch_token_prices():
 
         print "Set OGN price to %s" % ogn_usd_price
         print "Set ETH price to %s" % eth_usd_price
+
+        return dict([
+            ("ogn_usd_price", ogn_usd_price),
+            ("eth_usd_price", eth_usd_price)
+        ])
 
     except Exception as e:
         print("Failed to load token prices")
@@ -135,8 +133,8 @@ def fetch_stats_from_od():
 def fetch_staking_stats():
     print("Fetching T3 and Origin Deals user stats...")
 
-    global staked_user_count
-    global staked_token_count
+    sum_users = 0
+    sum_tokens = 0
 
     try:
         investor_stats = fetch_stats_from_t3(investor_portal=True)
@@ -155,22 +153,23 @@ def fetch_staking_stats():
         sum_users = investor_staked_users + team_staked_users + od_staked_users
         sum_tokens = investor_locked_sum + team_locked_sum + od_locked_sum
 
-        staked_user_count = sum_users
-        staked_token_count = sum_tokens
-
         print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
 
     except Exception as e:
         print("Failed to load user stats")
         print e
 
-def fetch_ogn_stats():
+    return dict([
+        ("staked_user_count", sum_users),
+        ("staked_token_count", sum_tokens)
+    ])
+
+def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
     total_supply = 1000000000
 
-    global ogn_usd_price
-    global staked_user_count
-    global staked_token_count
-    global ogn_supply_stats
+    ogn_usd_price
+    staked_user_count
+    staked_token_count
 
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         foundation_reserve_address,
@@ -219,23 +218,28 @@ def fetch_ogn_stats():
         ("dist_staging_address", dist_staging_address),
         ("partnerships_address", partnerships_address),
         ("ecosystem_growth_address", ecosystem_growth_address),
-    ])
 
-    ogn_supply_stats = out_data
+        # Formatted values to display
+        ("formatted_ogn_usd_price", '${:,}'.format(ogn_usd_price)),
+        ("formatted_circulating_supply", '{:,}'.format(circulating_supply)),
+        ("formatted_market_cap", '${:,}'.format(market_cap)),
+        ("formatted_total_supply", '{:,}'.format(total_supply)),
+        ("formatted_reserved_tokens", '{:,}'.format(reserved_tokens)),
+        ("formatted_staked_user_count", '{:,}'.format(staked_user_count)),
+        ("formatted_staked_token_count", '{:,}'.format(staked_token_count)),
+
+    ])
 
     return out_data
 
-def update_circulating_supply():
-    global ogn_supply_history
-
-    stats = ogn_supply_stats
+def update_circulating_supply(circulating_supply):
     snapshot_date = datetime.utcnow()
 
     supply_snapshot = db_common.get_or_create(
         db.session, db_models.CirculatingSupply, snapshot_date=snapshot_date
     )
 
-    supply_snapshot.supply_amount = stats["circulating_supply"]
+    supply_snapshot.supply_amount = circulating_supply
     db.session.commit()
 
     supply_data = db.engine.execute("""
@@ -265,59 +269,41 @@ def update_circulating_supply():
             ("snapshot_date", row[0].strftime("%Y/%m/%d %H:%M:%S"))
         ]))
 
-    ogn_supply_history = out
+    print "Updated current circulating supply to %s" % circulating_supply
 
-    print "Updated current circulating supply to %s" % stats["circulating_supply"]
+    return out
 
-def has_stats_expired():
-    global stats_last_updated_at
+def get_ogn_stats():
+    redis_client = redis_helper.get_redis_client()
 
-    # on first call
-    if stats_last_updated_at is None:
-        return True
-
-    dnow = datetime.now()
-    diff = dnow - stats_last_updated_at
-    return diff.seconds >= 600
-
-def update_stats_if_expired():
-    if has_stats_expired():
-        compute_ogn_stats()
-
-def get_formatted_ogn_stats():
-    update_stats_if_expired()
-
-    out_data = ogn_supply_stats.copy()
-
-    out_data["ogn_usd_price"] = '${:,}'.format(out_data["ogn_usd_price"])
-    out_data["circulating_supply"] = '{:,}'.format(out_data["circulating_supply"])
-    out_data["market_cap"] = '${:,}'.format(out_data["market_cap"])
-    out_data["total_supply"] = '{:,}'.format(out_data["total_supply"])
-    out_data["reserved_tokens"] = '{:,}'.format(out_data["reserved_tokens"])
-    out_data["staked_user_count"] = '{:,}'.format(out_data["staked_user_count"])
-    out_data["staked_token_count"] = '{:,}'.format(out_data["staked_token_count"])
-
-    return out_data
-    
-def get_supply_history():
-    update_stats_if_expired()
-
-    return ogn_supply_history
+    return json.loads(redis_client.get("ogn_stats") or "{}")
 
 # Fetches reserved wallet balances and token price 
 # and recalculates things to be shown in
 def compute_ogn_stats():
-    global stats_last_updated_at
-
     print("Computing OGN stats...")
+
     # Fetch OGN and ETH prices
-    fetch_token_prices()
+    token_prices = fetch_token_prices()
 
-    fetch_staking_stats()
+    staking_stats = fetch_staking_stats()
 
-    fetch_ogn_stats()
+    ogn_supply_stats = fetch_ogn_stats(
+        token_prices["ogn_usd_price"], 
+        staking_stats["staked_user_count"], 
+        staking_stats["staked_token_count"]
+    )
 
-    # Update circulating supply
-    update_circulating_supply()
+    ogn_supply_history = update_circulating_supply(ogn_supply_stats["circulating_supply"])
 
-    stats_last_updated_at = datetime.now()
+    redis_client = redis_helper.get_redis_client()
+    redis_client.set("ogn_stats", json.dumps(
+        dict([
+            ("ogn_supply_stats", ogn_supply_stats),
+            ("ogn_supply_history", json.dumps(ogn_supply_history))
+        ])
+    ))
+
+if __name__ == "__main__":
+    with db_utils.request_context():
+        compute_ogn_stats()

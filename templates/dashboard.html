@@ -27,7 +27,15 @@
           <div class="stats-widget">
             <img src="/static/img/dashboard/price-icon.svg" />
             <div class="stats-label">{{gettext("Price")}}</div>
-            <div class="stats-value">{{ogn_stats.ogn_usd_price}}</div>
+            <div class="stats-value">{{ogn_stats.formatted_ogn_usd_price}}</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/market-cap-icon.svg" />
+            <div class="stats-label">{{gettext("Market Cap")}}</div>
+            <div class="stats-value">{{ogn_stats.formatted_market_cap}}</div>
           </div>
         </div>
 
@@ -36,17 +44,9 @@
             <img src="/static/img/dashboard/circulating-supply-icon.svg" />
             <div class="stats-label">{{gettext("Circulating Supply")}}</div>
             <div class="stats-value">
-              {{ogn_stats.circulating_supply}}
+              {{ogn_stats.formatted_circulating_supply}}
               <div class="ogn-label">OGN</div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mx-md-0 px-md-0">
-          <div class="stats-widget">
-            <img src="/static/img/dashboard/market-cap-icon.svg" />
-            <div class="stats-label">{{gettext("Market Cap")}}</div>
-            <div class="stats-value">{{ogn_stats.market_cap}}</div>
           </div>
         </div>
 
@@ -55,7 +55,7 @@
             <img src="/static/img/dashboard/total-supply-icon.svg" />
             <div class="stats-label">{{gettext("Total Supply")}}</div>
             <div class="stats-value">
-              {{ogn_stats.total_supply}}
+              {{ogn_stats.formatted_total_supply}}
               <div class="ogn-label">OGN</div>
             </div>
           </div>
@@ -73,16 +73,22 @@
           <div class="desc">
             {{gettext("On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible.")}}
           </div>
-          <div class="chart-container">
-            <canvas id="unlock_schedule_chart" height="290"></canvas>
-          </div>
-          <div id="unlock_schedule_legends" class="chart-legends-container"></div>
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Modeled vs. actual token release schedule")}}</h3>
           <div class="desc" id="supplyDataEl">
             {{gettext("Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%).")}}
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="chart-container">
+            <canvas id="unlock_schedule_chart" height="290"></canvas>
+          </div>
+          <div id="unlock_schedule_legends" class="chart-legends-container"></div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
           <div class="chart-container">
             <canvas id="release_schedule_chart" height="290"></canvas>
           </div>
@@ -106,7 +112,7 @@
               {{gettext("Total number of locked tokens")}}
             </div>
             <div class="value">
-              {{ogn_stats.staked_token_count}}
+              {{ogn_stats.formatted_staked_token_count}}
               <div class="ogn-label">OGN</div>
             </div>
           </div>
@@ -116,7 +122,7 @@
               {{gettext("Investors, team members & users with locked tokens")}}
             </div>
             <div class="value">
-              {{ogn_stats.staked_user_count}}
+              {{ogn_stats.formatted_staked_user_count}}
             </div>
           </div>
 
