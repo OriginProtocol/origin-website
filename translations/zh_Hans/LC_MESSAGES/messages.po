@@ -3,9 +3,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 22:22-0700\n"
-"PO-Revision-Date: 2020-06-08 17:56+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-06-18 20:25+0530\n"
+"PO-Revision-Date: 2020-06-18 05:32+0000\n"
+"Last-Translator: \n"
 "Language: zh_Hans_CN\n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0\n"
@@ -435,7 +435,7 @@ msgstr ""
 
 #: templates/dashboard.html:29
 msgid "Price"
-msgstr ""
+msgstr "价格"
 
 #: templates/dashboard.html:37
 msgid "Circulating Supply"
@@ -451,7 +451,7 @@ msgstr ""
 
 #: templates/dashboard.html:72
 msgid "Token Unlock Schedule"
-msgstr ""
+msgstr "通证解锁计划"
 
 #: templates/dashboard.html:74
 msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
@@ -463,7 +463,7 @@ msgstr ""
 
 #: templates/dashboard.html:84
 #, python-format
-msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
+msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 msgstr ""
 
 #: templates/dashboard.html:99
@@ -952,7 +952,7 @@ msgstr "OGN交易大赛"
 
 #: templates/huobi-launch.html:1017
 msgid "Activity time period: June 18, 12PM to June 29, 11:59PM GMT +8"
-msgstr ""
+msgstr "活动时间：2020年6月18日12:00-2020年6月29日23:59 (GMT+8)"
 
 #: templates/huobi-launch.html:1018
 msgid "Rewards to be calculated every 3 days"
@@ -964,27 +964,27 @@ msgstr "比赛回合"
 
 #: templates/huobi-launch.html:1023
 msgid "The competition will begin on June 18, 12PM and will last until June 29, 11:59PM GMT +8 (12 days)"
-msgstr ""
+msgstr "比赛将于2020年6月18日12:00开始，直到2020年6月29日23:59 (GMT+8)结束。"
 
 #: templates/huobi-launch.html:1025
 msgid "There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round. All times listed in Bejing time (GMT +8)."
-msgstr ""
+msgstr "比赛共分为四个阶段，每个阶段单独计算排名并瓜分2.5万USDT奖励。以下所有时间为北京时间 (GMT +8)。"
 
 #: templates/huobi-launch.html:1028
 msgid "Round 1 will commence from June 18 to June 20"
-msgstr ""
+msgstr "第一阶段为6月18日-6月20日"
 
 #: templates/huobi-launch.html:1030
 msgid "Round 2 will commence from June 21 to June 23"
-msgstr ""
+msgstr "第二阶段为6月21日-6月23日"
 
 #: templates/huobi-launch.html:1032
 msgid "Round 3 will commence from June 24 to June 26"
-msgstr ""
+msgstr "第三阶段为6月24日-6月26日"
 
 #: templates/huobi-launch.html:1034
 msgid "Round 4 will commence from June 27 to June 29"
-msgstr ""
+msgstr "第四阶段为6月27日-6月29日"
 
 #: templates/huobi-launch.html:1038
 msgid "Competition rules"
@@ -1076,7 +1076,7 @@ msgstr "OGN持有者空投"
 
 #: templates/huobi-launch.html:1078
 msgid "Activity time period: July 1, 2020 to August 31, 2020 11:59PM GMT +8"
-msgstr ""
+msgstr "活动时间：2020年7月1日00:00-2020年8月31日23:59 (GMT+8)"
 
 #: templates/huobi-launch.html:1081
 msgid "The OGN Holder Airdrop will reward Huobi traders that HODL OGN over a two-month period. 500k of OGN will be rewarded to OGN Holder participants."
@@ -1092,11 +1092,11 @@ msgstr "OGN持有者空投活动将在OGN资产净增比赛结束后开始。一
 
 #: templates/huobi-launch.html:1089
 msgid "Round 1 will commence from July 1, 2020 to July 31, 2020 11:59PM GMT +8"
-msgstr ""
+msgstr "第一阶段为7月1日-7月31日"
 
 #: templates/huobi-launch.html:1090
 msgid "Round 2 will commence from August 1, 2020 to August 31, 2020 11:59PM GMT +8"
-msgstr ""
+msgstr "第二阶段为8月1日-8月31日"
 
 #: templates/huobi-launch.html:1094
 msgid "Airdrop rules"
@@ -3766,33 +3766,6 @@ msgstr "您已经取消订阅"
 msgid "Ooops, something went wrong"
 msgstr "哎呀！出了些问题。"
 
-#~ msgid "Activity time period: Listing date to June 22, 2PM SGT"
-#~ msgstr "活动时间：上线当天至6月22日，14: 00点（GMT+8)"
-
-#~ msgid "The competition will begin on June 10 2PM SGT and last until June 22 2PM SGT (12 days)."
-#~ msgstr "比赛将于北京时间6月10日下午2点开始，直到北京时间6月22日下午2点（12天）。"
-
-#~ msgid "There will be 4 rounds, with each round lasting 3 days. Rewards will be paid out to the winners of each round."
-#~ msgstr "一共4轮，每轮持续3天。奖励将分给每一轮的赢家。"
-
-#~ msgid "Round 1 will commence from the start of day 1 to the end of day 3: June 10, 2020 2PM to June 13, 2020 2PM"
-#~ msgstr "第1轮将从第1天到第3天：2020年6月10日14: 00点（北京时间）到2020年6月13日14: 00点（北京时间）"
-
-#~ msgid "Round 2 will commence from the start of day 4 to end of day 6: June 13, 2020 2:01PM to June 16, 2020 2PM"
-#~ msgstr "第2轮将从第4天开始到第6天结束：2020年6月13日14: 01点（北京时间）到2020年6月16日14: 00点（北京时间）"
-
-#~ msgid "Round 3 will commence from the start of day 7 to end of day 9: June 16, 2020 2:01PM to June 19, 2020 2PM"
-#~ msgstr "第3轮将从第7天开始到第9天结束：2020年6月16日14: 01点（北京时间）到2020年6月19日14: 00点（北京时间）"
-
-#~ msgid "Round 4 will commence from the start of day 10 to end of day 12: June 19, 2020 2:01PM to June 22, 2020 2PM"
-#~ msgstr "第4轮将从第10天开始到第12天结束：2020年6月19日14: 01点（北京时间）到2020年6月22日14: 00点（北京时间）"
-
-#~ msgid "Activity time period: First 60 days of listing"
-#~ msgstr "活动时间：上线后的前60天"
-
-#~ msgid "Round 1 will commence from June 23, 2020 2:01PM to July 23, 2020 2PM"
-#~ msgstr "第一轮将从2020年6月23日下午14:01点（北京时间）开始至2020年7月23日下午14:00点（北京时间）"
-
-#~ msgid "Round 2 will commence from July 23, 2020 2:01PM to August 23, 2020 2PM"
-#~ msgstr "第2轮将从2020年7月23日下午14:01点（北京时间）开始至2020年8月23日下午14:00点（北京时间）结束"
+#~ msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
+#~ msgstr ""
 

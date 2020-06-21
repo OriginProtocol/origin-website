@@ -575,11 +575,13 @@ def dshop():
 @app.route("/dashboard", strict_slashes=False)
 @app.route("/<lang_code>/dashboard", strict_slashes=False)
 def dashboard():
+    data = token_stats.get_ogn_stats()
+
     return render_template(
         "dashboard.html",
         hide_ogn_banner=True,
-        ogn_stats=token_stats.get_formatted_ogn_stats(),
-        supply_history=token_stats.get_supply_history(),
+        ogn_stats=data["ogn_supply_stats"],
+        supply_history=data["ogn_supply_history"],
     )
 
 
