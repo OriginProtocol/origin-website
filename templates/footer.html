@@ -34,10 +34,10 @@
           <div class="col-4 d-flex flex-column">
             <strong>Products</strong>
             <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Overview") }}</a>
-            <a href="{{ universal.IOS_URL }}">{{ gettext("iOS") }}</a>
-            <a href="{{ universal.ANDROID_URL }}">{{ gettext("Android") }}</a>
-            <a href="{{ universal.DAPP_URL }}">{{ gettext("DApp") }}</a>
-            <a href="{{ url_for('creator', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Creator") }}</a>
+            <a href="https://www.origindeals.com">{{ gettext("Origin Deals") }}</a>
+            <a href="{{ url_for('dshop', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Dshop") }}</a>
+            <a href="{{ universal.DAPP_URL }}">{{ gettext("Marketplace DApp") }}</a>
+            <a href="{{ url_for('mobile', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Mobile Apps") }}</a>
           </div>
           <div class="col-4 d-flex flex-column">
             <strong>Resources</strong>
