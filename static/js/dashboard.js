@@ -32,7 +32,7 @@
   function formattedDate(dateObj) {
     var currentMonth = dateObj.getMonth()
 
-    var monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][currentMonth]
+    var monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][currentMonth]
     return monthName + ' ' + dateObj.getFullYear()
   }
   function initUnlockChart(canvasEl, legendsEl) {
