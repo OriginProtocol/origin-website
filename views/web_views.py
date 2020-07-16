@@ -447,8 +447,14 @@ def product():
 @app.route("/ogn-token", strict_slashes=False)
 @app.route("/<lang_code>/ogn-token", strict_slashes=False)
 def ogn_token():
+    data = token_stats.get_ogn_stats()
     binance_lang_code = constants.BINANCE_LOCALE_MAP[g.current_lang] or "en"
-    return render_template("ogn-token.html", binance_lang_code=binance_lang_code)
+
+    return render_template(
+        "ogn-token.html",
+        binance_lang_code=binance_lang_code,
+        ogn_stats=data["ogn_supply_stats"]
+    )
 
 
 @app.route("/video/<video_slug>", strict_slashes=False)

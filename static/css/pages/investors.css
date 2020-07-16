@@ -123,6 +123,11 @@
   margin-bottom: 4rem;
 }
 
+.landing-page .featured-investor .investor-info {
+  margin-top: auto;
+}
+
+.landing-page .featured-investor,
 .investors-page .featured-investor-section .featured-investor {
   display: flex;
   justify-content: stretch;
@@ -130,6 +135,7 @@
   height: 490px;
 }
 
+.landing-page .featured-investor .investor-data,
 .investors-page .featured-investor-section .featured-investor .investor-data {
   background-color: #061d2a;
   color: #fff;
@@ -151,28 +157,34 @@
   margin-top: 20px;
 }
 
+.landing-page .featured-investor .investor-image,
 .investors-page .featured-investor .investor-image {
   flex: 50% 0 0;
 }
 
+.landing-page .featured-investor .investor-image img,
 .investors-page .featured-investor .investor-image img {
   max-width: 100%;
   width: 100%;
   object-fit: cover;
 }
 
+.landing-page .featured-investor .investor-quote,
 .investors-page .featured-investor .investor-quote {
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 33px;
   margin-bottom: 1.5rem;
 }
+
+.landing-page .featured-investor .investor-info,
 .investors-page .featured-investor .investor-info {
   font-size: 1.125rem;
   margin-left: auto;
   text-align: right;
 }
 
+.landing-page .featured-investor .investor-info .investor-name,
 .investors-page .featured-investor .investor-info .investor-name {
   font-weight: bold;
 }
@@ -227,10 +239,12 @@
     margin-bottom: 20px;
   }
 
+  .landing-page .featured-investor,
   .investors-page .featured-investor-section .featured-investor {
     flex-direction: column-reverse;
   }
 
+  .landing-page .featured-investor .investor-data,
   .investors-page .featured-investor-section .featured-investor .investor-data {
     padding: 1rem;
     flex: 1 0 0;
@@ -258,6 +272,7 @@
     margin-top: 3.5rem;
   }
 
+  .landing-page .featured-investor .investor-image img,
   .investors-page .featured-investor .investor-image img {
     height: 360px;
   }
@@ -286,6 +301,7 @@
     font-size: 0.75rem;
   }
 
+  .landing-page .featured-investor,
   .investors-page .featured-investor-section .featured-investor {
     min-height: 770px;
     height: auto;

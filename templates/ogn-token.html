@@ -5,11 +5,35 @@ block content %} {% with theme_dark=False %} {% include 'navbar.html' %} {%
 endwith %}
 
 <main class="tokens-page">
-  <section class="exchanges-section my-5 py-3">
+  <section class="exchanges-section my-0 my-md-5 py-3">
     <div class="container">
-      <h2>{{gettext("OGN is available on these top exchanges")}}</h2>
-
-      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-5">
+      <h2>{{gettext("OGN is Now Trading")}}</h2>
+      <div class="d-flex flex-column flex-md-row justify-content-center mb-3">
+        <div class="statistic d-flex flex-column purple">
+          <div class="d-flex flex-row">
+            <img src="/static/img/ognToken/price-icon.svg"/>
+            <div>{{gettext("Last Price")}}</div>
+          </div>
+          <div class="text">{{ogn_stats["formatted_ogn_usd_price"]}}</div>
+        </div>
+        <div class="statistic d-flex flex-column green">
+          <div class="d-flex flex-row">
+            <img src="/static/img/ognToken/circulating-supply-icon.svg"/>
+            <div>{{gettext("Circulating Supply")}}</div>
+          </div>
+          <div class="text">{{ogn_stats["formatted_circulating_supply"]}}</div>
+        </div>
+        <div class="statistic d-flex flex-column blue">
+          <div class="d-flex flex-row">
+            <img src="/static/img/ognToken/market-cap-icon.svg"/>
+            <div>{{gettext("Market Cap")}}</div>
+          </div>
+          <div class="text">{{ogn_stats["formatted_market_cap"]}}</div>
+        </div>
+      </div>
+      <div class="subtitle2">{{gettext("Last updated on ")}}{{ogn_stats["created_at"]}}</div>
+      <div class="subtitle">{{gettext("Available on")}}</div>
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center exchange-holder">
         <div class="token-exchange feat">
           <a target="_blank" rel="noopener noreferrer"
             href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658">
@@ -27,8 +51,8 @@ endwith %}
           </a>
         </div>
       </div>
-
-      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <div class="subtitle2">{{gettext("…and many others")}}</div>
+      <!--<div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
         <div class="token-exchange feat">
           <a target="_blank" rel="noopener noreferrer" href="https://crypto.com/">
             <img src="/static/img/ognToken/cryptocom-logo.svg" />
@@ -83,25 +107,109 @@ endwith %}
             <img src="/static/img/ognToken/tokocrypto.svg" />
           </a>
         </div>
-      </div>
-
-      <div class='text-center'>
-        <a target="_blank" rel="noopener noreferrer" class='white-button-blue-border'
-          href="https://coinmarketcap.com/currencies/origin-protocol/markets/">{{gettext("See more on CoinMarketCap")}}</a>
-        
-        <div class="mt-4 cmc-text">
-          {{gettext("See CoinMarketCap for detailed information about trading volume, liquidity, and most active markets.")}}
+      </div>-->
+      <div class="d-flex flex-md-row flex-column justify-content-center button-holder">
+        <div class='text-center'>
+          <a class='dark-button'
+            href="/dashboard">{{gettext("View the OGN Dashboard")}}</a>
+        </div>
+        <div class='text-center'>
+          <a target="_blank" rel="noopener noreferrer" class='dark-button'
+            href="https://coinmarketcap.com/currencies/origin-protocol/markets/">{{gettext("Visit CoinMarketCap")}}</a>
         </div>
       </div>
 
 
     </div>
   </section>
-  <section class="rewards-section blue-section">
+
+  <section class="discounts-section my-0 mt-md-5 pt-3">
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+      <h2 class="mb-3">{{gettext("Unlock Discounts")}}</h2>
+      <div class="text text-center">{{gettext("Lock Origin Tokens (OGN) on Origin Deals to unlock discounts on Amazon. Save up to 20%% on your purchases. Your OGN is returned to you after a short lock-up period.")}}</div>
+      <a
+        href="https://origindeals.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+      >
+        {{gettext("Try Origin Deals")}}
+      </a>
+      <img src="/static/img/ognToken/unlock-discounts.png" srcset="
+        /static/img/ognToken/unlock-discounts@2x.png 2x,
+        /static/img/ognToken/unlock-discounts@3x.png 3x
+      " />
+    </div>
+  </section>
+
+  <section class="payments-section grey-section pt-0 pt-md-5">
+    <div class="container">
+      <div class="app-showcase image-first d-flex justify-content-center">
+        <div class="showcase-image">
+          <img src="/static/img/ognToken/staking.png" srcset="
+              /static/img/ognToken/staking@2x.png 2x,
+              /static/img/ognToken/staking@3x.png 3x
+            " />
+        </div>
+        <div class="showcase-content">
+          <h1 class="mb-3">{{gettext("Staking")}}</h1>
+          <p>
+            {{gettext("Stake Origin Tokens (OGN) to activate unbelievable discounts on Origin Deals. Your tokens get locked up so that you are eligible for discounts, and after some time passes, you get all your OGN back to use however you want.")}}
+            <span class="unavailable-text">
+              {{gettext("Only available in the United States")}}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="payments-section">
+    <div class="container">
+      <div class="app-showcase d-flex justify-content-center">
+        <div class="showcase-content">
+          <h1 class="mb-3">{{gettext("Commissions")}}</h1>
+          <p>
+            {{gettext("Promote your listings across the Origin flagship app and
+            third-party apps with Origin Commissions. Pay with OGN to get
+            featured prominently in search results. Application developers and
+            marketplace operators earn Origin Tokens (OGN) by helping sellers
+            complete their sales.")}}
+          </p>
+        </div>
+        <div class="showcase-image">
+          <img src="/static/img/ognToken/commissions.png" srcset="
+              /static/img/ognToken/commissions@2x.png 2x,
+              /static/img/ognToken/commissions@3x.png 3x
+            " />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="commissions-section grey-section">
+    <div class="container">
+      <div class="app-showcase image-first d-flex justify-content-center">
+        <div class="showcase-image">
+          <img src="/static/img/ognToken/payments.png" srcset="
+              /static/img/ognToken/payments@2x.png 2x,
+              /static/img/ognToken/payments@3x.png 3x
+            " />
+        </div>
+        <div class="showcase-content">
+          <h1 class="mb-3">{{gettext("Payments")}}</h1>
+          <p>
+            {{gettext("Use the Origin Tokens (OGN) that you've earned in Origin
+            Rewards to pay for goods and services. Sellers earn larger stakes in
+            the network by accepting OGN as a preferred payment method.")}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="rewards-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">
         <div class="showcase-content higher">
-          <h1 class="mb-1">{{gettext("Origin Rewards")}}</h1>
+          <h1 class="mb-3">{{gettext("Origin Rewards")}}</h1>
           <p>
             {{gettext("Earn your stake in the Origin network today. Users can
             earn Origin Tokens (OGN) by verifying their profiles, referring
@@ -111,10 +219,6 @@ endwith %}
               {{gettext("Not available in the United States")}}
             </span>
           </p>
-          <div class="actions d-flex justify-content-center justify-content-md-start">
-            <a class="btn btn-primary btn-inverse" href="https://originrewards.com" target="_blank">Visit Origin
-              Rewards</a>
-          </div>
         </div>
         <div class="showcase-image">
           <img src="/static/img/ognToken/origin-rewards.png" srcset="
@@ -125,85 +229,6 @@ endwith %}
       </div>
     </div>
   </section>
-  <section class="payments-section grey-section">
-    <div class="container">
-      <div class="app-showcase image-first d-flex justify-content-center">
-        <div class="showcase-image">
-          <img src="/static/img/ognToken/commissions.png" srcset="
-              /static/img/ognToken/commissions@2x.png 2x,
-              /static/img/ognToken/commissions@3x.png 3x
-            " />
-        </div>
-        <div class="showcase-content">
-          <h1 class="mb-1">{{gettext("Commissions")}}</h1>
-          <p>
-            {{gettext("Promote your listings across the Origin flagship app and
-            third-party apps with Origin Commissions. Pay with OGN to get
-            featured prominently in search results. Application developers and
-            marketplace operators earn Origin Tokens (OGN) by helping sellers
-            complete their sales.")}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="commissions-section">
-    <div class="container">
-      <div class="app-showcase d-flex justify-content-center">
-        <div class="showcase-content">
-          <h1 class="mb-1">{{gettext("Payments")}}</h1>
-          <p>
-            {{gettext("Use the Origin Tokens (OGN) that you've earned in Origin
-            Rewards to pay for goods and services. Sellers earn larger stakes in
-            the network by accepting OGN as a preferred payment method.")}}
-          </p>
-        </div>
-        <div class="showcase-image">
-          <img src="/static/img/ognToken/payments.png" srcset="
-              /static/img/ognToken/payments@2x.png 2x,
-              /static/img/ognToken/payments@3x.png 3x
-            " />
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="rnd-section blue-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>{{gettext("Research and Development")}}</h1>
-        </div>
-        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center">
-          <img src="/static/img/ognToken/rd-1@2x.png" />
-          <h3>{{gettext("Origin Nodes")}}</h3>
-          <p>
-            {{gettext("Stake your OGN to run an Origin Node and earn more OGN by
-            helping to replicate and validate profile and listing data on the
-            network.")}}
-          </p>
-        </div>
-        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center">
-          <img src="/static/img/ognToken/rd-2@2x.png" />
-          <h3>{{gettext("Origin Relayer")}}</h3>
-          <p>
-            {{gettext("Developers can pay for usage of Origin Meta Transactions
-            Relayers with OGN. Meta Transactions reduce user friction and
-            encourage adoption and retention.")}}
-          </p>
-        </div>
-        <div class="col-12 col-md-4 feature-box d-flex flex-column justify-content-start align-items-center">
-          <img src="/static/img/ognToken/rd-3@2x.png" />
-          <h3>{{gettext("Governance")}}</h3>
-          <p>
-            {{gettext("Everyone has a vote on the Origin Platform. Token holders
-            will participate in important community votes to define future
-            initiatives.")}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   {% include 'footer.html' %}
 </main>
 

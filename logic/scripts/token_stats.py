@@ -188,7 +188,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
     dist_staging_balance = ogn_balances[dist_staging_address]
     partnerships_balance = ogn_balances[partnerships_address]
     ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
-
+    
     reserved_tokens = int(
         foundation_reserve_balance +
         team_dist_balance +
@@ -197,7 +197,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         partnerships_balance +
         ecosystem_growth_balance 
     )
-
+    
     circulating_supply = int(total_supply - reserved_tokens)
 
     market_cap = int(circulating_supply * ogn_usd_price)
@@ -227,7 +227,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("formatted_reserved_tokens", '{:,}'.format(reserved_tokens)),
         ("formatted_staked_user_count", '{:,}'.format(staked_user_count)),
         ("formatted_staked_token_count", '{:,}'.format(staked_token_count)),
-
+        ("created_at", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p"))
     ])
 
     return out_data

@@ -167,10 +167,16 @@
   text-align: center;
   max-width: 320px;
   margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+.buy-sell-block .btn-dark {
+  min-height: 51px;
+  min-width: 300px;
+  font-weight: normal;
 }
 
 .buy-sell-block .marketplace {
-  margin-top: 50px;
   text-align: center;
 }
 
@@ -188,6 +194,8 @@
 
 .vc-backed .button,
 .buy-sell-block .marketplace .button {
+  margin-top: 50px;
+  margin-bottom: 76px;
   font-size: 1.125rem;
   max-width: 350px;
   width: 100%;
@@ -420,6 +428,21 @@
   white-space: nowrap;
 }
 
+.landing-page .carousel-item {
+  height: auto;
+  margin-bottom: 4rem;
+}
+
+.landing-page .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px 0 5px;
+}
+
+.landing-page .carousel-indicators li.active {
+  color: #061d2a;
+}
+
 .featured-partner {
   background-color: #fafbfc;
 }
@@ -558,6 +581,10 @@
   margin-bottom: 45px;
 }
 
+.landing-page .prod-image {
+  max-width: 900px;
+}
+
 /* sm + */
 @media (min-width: 576px) {
   .vc-backed .bottom img {
@@ -578,7 +605,6 @@
   }
 
   .buy-sell-block .marketplace {
-    margin-top: 76px;
     text-align: left;
   }
 
@@ -600,6 +626,8 @@
 
   .buy-sell-block .marketplace .button {
     max-width: 600px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .sharing-economy .percentages {

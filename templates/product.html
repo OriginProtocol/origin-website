@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-12 col-md-6 d-flex align-items-start align-items-lg-center">
           <!-- the &#8209; below is a non breakable hyphen -->
-          <h1 class="title big">{{gettext("Our platform will power peer&#8209;to&#8209;peer commerce everywhere")}}</h1>
+          <h1 class="title big">{{gettext("The Origin Platform powers commerce on the blockchain")}}</h1>
         </div>
         <div class="col-12 col-md-6 d-flex align-items-center hero-image-holder justify-content-center mb-4 mb-md-0">
           <img src="/static/img/product/origin-stack.png" srcset="/static/img/product/origin-stack@2x.png 2x, /static/img/product/origin-stack@3x.png 3x" />
@@ -25,50 +25,10 @@
     </div>
   </section>
 
-  <section class="od-section white-section px-3 px-md-0 d-flex">
-    <div class="container d-flex flex-column align-items-center justify-content-center mb-5 mt-5">
-      <h1 class="mt-3 mb-5">{{gettext("Origin Deals")}}</h1>
-      <img class="od-image mb-3" src="/static/img/product/origin-deals.png" srcset="/static/img/product/origin-deals@2x.png 2x, /static/img/product/origin-deals@3x.png 3x" />
-      <h3 class="sub-title mt-3">
-        {{gettext("Stake Origin Tokens (OGN) and get up to 20%% off products from Amazon")}}
-      </h3>
-      <a rel="noopener noreferrer" target="_blank" href="https://origindeals.com" class="btn btn-primary">
-        {{gettext("Try Origin Deals now")}}
-      </a>
-    </div>
-  </section>
-
-  <section class="od-ext-section blue-section px-3 px-md-0">
-    <div class="container d-flex flex-column align-items-center justify-content-center mb-5 mt-5">
-      <h1 class="mt-3 mb-5">{{gettext("Origin Deals Browser Extension")}}</h1>
-      <img class="od-ext-image mb-3" src="/static/img/product/origindeals-extension.png" srcset="/static/img/product/origindeals-extension@2x.png 2x, /static/img/product/origindeals-extension@3x.png 3x" />
-      <h3 class="sub-title mt-3">
-        {{gettext("A free extension that unlocks great deals for you as you shop on Amazon")}}
-      </h3>
-      <div class="ext-availability d-flex">
-        <span>Available on </span>
-        <a rel="noopener noreferrer" target="_blank" href="{{ universal.CHROME_EXTENSION_URL }}">
-          <img src="/static/img/chrome.svg" />
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="{{ universal.FIREFOX_EXTENSION_URL }}">
-          <img src="/static/img/firefox.svg" />
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="{{ universal.CHROME_EXTENSION_URL }}">
-          <img src="/static/img/brave.svg" />
-        </a>
-      </div>
-      <a href="{{ url_for('browser_extension', lang_code=CURRENT_LANGUAGE) }}" id="installExtensionLink" class="btn btn-dark btn-inverse">
-        {{gettext("Install the Extension")}}
-      </a>
-    </div>
-  </section>
-
-
   <div class="dshop-section d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
     <h1>{{gettext("Dshop")}}</h1>
-    <img class="dshop-image" src="/static/img/product/dshop.png" srcset="/static/img/product/dshop@2x.png 2x, /static/img/product/dshop@3x.png 3x" />
-    <div class="sub-title mt-5 mt-md-3">{{gettext("A decentralized and open source e-commerce platform that allows anyone to create an online store easily")}}</div>
-    <div class="checked-items d-flex justify-content-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0">
+    <div class="sub-title">{{gettext("A decentralized and open source e-commerce platform that allows anyone to create an online store easily")}}</div>
+    <div class="checked-items d-flex justify-content-center flex-wrap">
       <div class="d-flex checked-item">
         <img class="mr-2" src="/static/img/product/checkmark.svg">
         {{gettext("No transaction fees")}}
@@ -89,18 +49,36 @@
 
     <a
       href="{{ url_for('dshop', lang_code=CURRENT_LANGUAGE) }}"
-      class="btn btn-primary">
+      class="btn btn-primary d-flex align-items-center justify-content-center">
       {{gettext("Learn More")}}
     </a>
-    <div class="sub-title mt-5 mt-md-3">{{gettext("Online stores created with Dshop")}}</div>
+    <img class="dshop-image" src="/static/img/product/dshop-screenshots.png" srcset="/static/img/product/dshop-screenshots@2x.png 2x, /static/img/product/dshop-screenshots@3x.png 3x" />
+    <div class="sub-title mt-5">{{gettext("Online stores created with Dshop")}}</div>
     <div class="bottom d-flex justify-content-center align-items-center flex-wrap mt-3 mt-md-0">
-      <a href="https://store.brave.com/" target="_blank" rel="noopener noreferrer"><img src="/static/img/product/brave-logo.svg"/></a>
-      <a href="https://originswag.eth.link/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/origin-swag-logo.svg"/></a>
+      <a href="https://store.brave.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/brave-logo-color-rgb.svg"/></a>
+      <a href="https://kyber.ogn.app/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/kyber-network.svg"/></a>
+      <a href="https://store.solana.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/solana.png" srcset="/static/img/product/solana@2x.png 2x, /static/img/product/solana@3x.png 3x"/></a>
+      <a href="https://store.contentos.io/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/contentos.png" srcset="/static/img/product/contentos@2x.png 2x, /static/img/product/contentos@3x.png 3x"/></a>
+      <a href="https://ternio.ogn.app/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/ternio.png" srcset="/static/img/product/ternio@2x.png 2x, /static/img/product/ternio@3x.png 3x"/></a>
     </div>
+    <div class="sub-title-footer">{{gettext("...and others")}}</div>
   </div>
+
+  <section class="od-section blue-section px-3 px-md-0 d-flex">
+    <div class="container d-flex flex-column align-items-center justify-content-center mb-5 mt-5">
+      <h1 class="mt-3">{{gettext("Origin Deals")}}</h1>
+      <h3 class="sub-title">
+        {{gettext("Lock Origin Tokens (OGN) to unlock great discounts on Amazon")}}
+      </h3>
+      <a rel="noopener noreferrer" target="_blank" href="https://origindeals.com" class="btn btn-dark btn-inverse">
+        {{gettext("Try Origin Deals now")}}
+      </a>
+      <img class="od-image mb-3" src="/static/img/product/origin-deals.png" srcset="/static/img/product/origin-deals@2x.png 2x, /static/img/product/origin-deals@3x.png 3x" />
+    </div>
+  </section>
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->
-  <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+  <div class="buy-sell-block-1 d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
     <h1>{{gettext("Buy and sell on Origin")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
     <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
@@ -118,24 +96,24 @@
           <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
         {% endif %}
         <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
-        <a class="button mt-4" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
+        <a class="btn btn-primary mt-4 d-flex justify-content-center align-items-center" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
       </div>
     </div>
     <div class="opaque mt-5 mt-md-3 mb-3 mb-md-0">{{gettext("Featured on")}}</div>
     <a href="https://medium.com/originprotocol/samsung-keystore-sdk-react-native-wrapper-65b73294cf33" target="_blank">
-      <img class="mb-0 mb-md-4 samsung-blockchain" src="/static/img/product/samsung-blockchain.svg"/>
+      <img class="mb-0 mb-md-4 samsung-blockchain" src="/static/img/product/samsung-blockchain-logo.svg"/>
     </a>
-    <div class="opaque mt-4 mt-md-3">{{gettext("Available on")}}</div>
-    <div class="bottom d-flex justify-content-center align-items-center mb-5 mb-md-4 flex-wrap mt-3 mt-md-0 w-100">
-      <img src="/static/img/landing/coinbase-wallet@3x.png"/>
-      <img src="/static/img/landing/imtoken.svg"/>
-      <img src="/static/img/landing/trustwallet.svg"/>
-      <img src="/static/img/landing/metamask.svg"/>
-      <img src="/static/img/landing/atomic.svg"/>
+    <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
+    <div class="bottom d-flex flex-column flex-md-row justify-content-center align-items-center flex-wrap mt-2 mt-md-0 w-100">
+      <img src="/static/img/product/coinbasewallet.png" srcset="/static/img/product/coinbasewallet@2x.png 2x, /static/img/product/coinbasewallet@3x.png 3x"/>
+      <img src="/static/img/product/imtoken.svg"/>
+      <img src="/static/img/product/trustwallet.svg"/>
+      <img src="/static/img/product/metamask.svg"/>
+      <img src="/static/img/product/atomic-website-logo.svg"/>
     </div>
   </div>
 
-  <section class="marketplaces-section white-section">
+  <section class="marketplaces-section blue-section">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -355,7 +333,7 @@
                   <span>{{gettext("Launched Mainnet 1.0")}}</span>
                   <span>{{gettext("Listed on Binance")}}</span>
                   <span>{{gettext("Launched OGN as payment token")}}</span>
-                  <span class="nowrap">{{gettext("Added to Samsung Blockchain Wallet")}}</span>
+                  <span>{{gettext("Added to Samsung Blockchain Wallet")}}</span>
               </div>
             </div>
             <div class="milestone future">
@@ -373,15 +351,16 @@
               <div class="timestamp">{{gettext("Q3 2020")}}</div>
               <div class="title">
                   <span>{{gettext("Launch new developer tools and expand developer adoption")}}</span>
+                  <span>{{gettext("Expand Dshop partnerships and store types")}}</span>
               </div>
             </div>
-            <div class="milestone future">
+            <!--<div class="milestone future">
               <div class="step">13</div>
               <div class="timestamp">{{gettext("Q4 2020")}}</div>
               <div class="title">
                 {{gettext("Launch OGN as a governance token")}}
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
