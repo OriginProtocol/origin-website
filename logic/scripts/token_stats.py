@@ -199,6 +199,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ecosystem_growth_balance 
     )
     
+    print "Balances %s %s %s" % (foundation_reserve_balance, team_dist_balance, investor_dist_balance)
     circulating_supply = int(total_supply - reserved_tokens)
 
     market_cap = int(circulating_supply * ogn_usd_price)
