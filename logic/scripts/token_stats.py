@@ -183,12 +183,12 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
 
-    foundation_reserve_balance = ogn_balances[foundation_reserve_address]
-    team_dist_balance = ogn_balances[team_dist_address]
-    investor_dist_balance = ogn_balances[investor_dist_address]
-    dist_staging_balance = ogn_balances[dist_staging_address]
-    partnerships_balance = ogn_balances[partnerships_address]
-    ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
+    foundation_reserve_balance = int(ogn_balances[foundation_reserve_address])
+    team_dist_balance = int(ogn_balances[team_dist_address])
+    investor_dist_balance = int(ogn_balances[investor_dist_address])
+    dist_staging_balance = int(ogn_balances[dist_staging_address])
+    partnerships_balance = int(ogn_balances[partnerships_address])
+    ecosystem_growth_balance = int(ogn_balances[ecosystem_growth_address])
     
     reserved_tokens = int(
         foundation_reserve_balance +
