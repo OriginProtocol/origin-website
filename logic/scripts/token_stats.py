@@ -172,6 +172,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
     staked_token_count
 
     number_of_addresses = db.session.query(db_models.EthContact.address).count()
+    print "NUMBER OF ADDDRESSES %s" % (number_of_addresses)
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         foundation_reserve_address,
         team_dist_address,
