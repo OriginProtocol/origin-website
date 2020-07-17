@@ -94,6 +94,18 @@ When running on docker:
 docker exec -it -e PYTHONPATH=/app -e PROJECTPATH=/app origin-website python ./logic/scripts/update_token_insight.py
 ```
 
+## Running cron jobs on Production/Staging
+Running token_stats on Staging:
+```bash
+heroku run -a staging-originprotocol-com PROJECTPATH=/app python ./logic/scripts/token_stats.py
+```
+
+Running token_stats on Production:
+```bash
+heroku run -a originprotocol-com PROJECTPATH=/app python ./logic/scripts/token_stats.py
+```
+
+
 ### System Requirements
 
 - [Docker](https://docs.docker.com/install/overview/) **version 18 or greater**:
