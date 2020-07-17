@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-18 20:25+0530\n"
+"POT-Creation-Date: 2020-07-17 13:01+0000\n"
 "PO-Revision-Date: 2020-06-18 05:24+0000\n"
 "Last-Translator: \n"
 "Language: uk_UA\n"
@@ -68,22 +68,20 @@ msgid "Exit full screen"
 msgstr "Вихід із повного екрану"
 
 #: templates/about.html:28
-msgid ""
-"It’s time to build the sharing economy without\n"
-"        intermediaries"
+msgid "It’s time to cut out traditional intermediaries"
 msgstr ""
 
-#: templates/about.html:37 templates/investors.html:37
-#: templates/landing.html:30 templates/landing.html:159 templates/team.html:29
+#: templates/about.html:36 templates/investors.html:37
+#: templates/landing.html:30 templates/landing.html:160 templates/team.html:29
 #: templates/video.html:30
 msgid "Watch the video"
 msgstr ""
 
-#: templates/about.html:45
+#: templates/about.html:44
 msgid "Origin enables true peer-to-peer commerce"
 msgstr ""
 
-#: templates/about.html:48
+#: templates/about.html:47
 msgid ""
 "Origin is a startup headquartered in San Francisco, but we also\n"
 "      have team members in China, Korea, Russia, India, New Zealand, and even\n"
@@ -91,11 +89,19 @@ msgid ""
 "      cryptocurrency funds all over the world."
 msgstr ""
 
-#: templates/about.html:57 templates/landing.html:138
+#: templates/about.html:51
+msgid "Origin Tokens (OGN) are held by over 25,000"
+msgstr ""
+
+#: templates/about.html:51
+msgid "token holders."
+msgstr ""
+
+#: templates/about.html:57 templates/landing.html:139
 msgid "Learn more about our team"
 msgstr ""
 
-#: templates/about.html:60 templates/landing.html:166
+#: templates/about.html:60 templates/landing.html:167
 msgid "Learn more about our investors"
 msgstr ""
 
@@ -235,9 +241,9 @@ msgstr "Іди"
 msgid "Buy now on"
 msgstr ""
 
-#: templates/countdown-bar.html:24 templates/countdown-hero-banner.html:72
-msgid "Subscribe to stay in touch."
-msgstr "Підпишіться, щоб залишатися на зв’язку."
+#: templates/countdown-bar.html:24
+msgid "Subscribe to be the first to hear about important partnerships, exchange listings, and product launches."
+msgstr ""
 
 #: templates/countdown-bar.html:26 templates/countdown-hero-banner.html:80
 msgid "Your email"
@@ -262,6 +268,10 @@ msgstr ""
 #: templates/countdown-hero-banner.html:67
 msgid "Exclusively on"
 msgstr ""
+
+#: templates/countdown-hero-banner.html:72
+msgid "Subscribe to stay in touch."
+msgstr "Підпишіться, щоб залишатися на зв’язку."
 
 #: templates/creator.html:3 templates/creator.html:5
 msgid "Origin Protocol - Creator"
@@ -341,7 +351,7 @@ msgstr "Використовуйте потужність <span class='green'>б
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "Будьте на передовій революції криптовалюти. Ваш DApp сумісний з Metamask та популярними мобільними гаманцями поза коробкою."
 
-#: templates/creator.html:135 templates/product.html:162
+#: templates/creator.html:135 templates/product.html:140
 msgid "Features"
 msgstr "Особливості"
 
@@ -437,12 +447,12 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: templates/dashboard.html:37
-msgid "Circulating Supply"
+#: templates/dashboard.html:37 templates/ogn-token.html:29
+msgid "Market Cap"
 msgstr ""
 
-#: templates/dashboard.html:48
-msgid "Market Cap"
+#: templates/dashboard.html:45 templates/ogn-token.html:22
+msgid "Circulating Supply"
 msgstr ""
 
 #: templates/dashboard.html:56
@@ -457,57 +467,101 @@ msgstr ""
 msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
 msgstr ""
 
-#: templates/dashboard.html:82
+#: templates/dashboard.html:78
 msgid "Modeled vs. actual token release schedule"
 msgstr ""
 
-#: templates/dashboard.html:84
+#: templates/dashboard.html:80
 #, python-format
 msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 msgstr ""
 
-#: templates/dashboard.html:99
+#: templates/dashboard.html:104
+msgid "Additional Token Metrics"
+msgstr ""
+
+#: templates/dashboard.html:107
+msgid "Total number of unique wallets"
+msgstr ""
+
+#: templates/dashboard.html:111
+msgid "Total number of presale investors"
+msgstr ""
+
+#: templates/dashboard.html:115
+msgid "Presale investor vesting schedule length"
+msgstr ""
+
+#: templates/dashboard.html:119
+msgid "Team vesting schedule length*"
+msgstr ""
+
+#: templates/dashboard.html:123
+msgid "Average presale purchase size in USD"
+msgstr ""
+
+#: templates/dashboard.html:127
+msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
+msgstr ""
+
+#: templates/dashboard.html:132
 msgid "Locked Tokens"
 msgstr ""
 
-#: templates/dashboard.html:101
+#: templates/dashboard.html:134
 msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals."
 msgstr ""
 
-#: templates/dashboard.html:106
+#: templates/dashboard.html:139
 msgid "Total number of locked tokens"
 msgstr ""
 
-#: templates/dashboard.html:116
-msgid "Investors, team members & users with locked tokens"
+#: templates/dashboard.html:149
+msgid "‘Investors, team members & others with locked tokens"
 msgstr ""
 
-#: templates/dashboard.html:125
+#: templates/dashboard.html:158
+msgid "Total number of tokens founders have sold"
+msgstr ""
+
+#: templates/dashboard.html:166 templates/ogn-token.html:34
+msgid "Last updated on "
+msgstr ""
+
+#: templates/dashboard.html:170
 msgid "Wallets excluded from circulating supply"
 msgstr ""
 
-#: templates/dashboard.html:130
+#: templates/dashboard.html:174
 msgid "Foundation Reserves"
 msgstr ""
 
-#: templates/dashboard.html:139
+#: templates/dashboard.html:184
 msgid "Team Distribution"
 msgstr ""
 
-#: templates/dashboard.html:148
+#: templates/dashboard.html:194
 msgid "Investor Distribution"
 msgstr ""
 
-#: templates/dashboard.html:157
+#: templates/dashboard.html:204
 msgid "Distribution Staging"
 msgstr ""
 
-#: templates/dashboard.html:166
+#: templates/dashboard.html:214
 msgid "Partnerships"
 msgstr ""
 
-#: templates/dashboard.html:175
+#: templates/dashboard.html:224
 msgid "Ecosystem Growth"
+msgstr ""
+
+#: templates/dashboard.html:242
+msgid "OGN is listed on"
+msgstr ""
+
+#: templates/dashboard.html:309
+msgid "See more on Coinmarketcap >"
 msgstr ""
 
 #: templates/developers.html:2
@@ -523,6 +577,7 @@ msgid "Our open-source codebase is being developed by a global network of contri
 msgstr "Наша база коду з відкритим кодом розробляється глобальною мережею учасників"
 
 #: templates/developers.html:21 templates/developers.html:58
+#: templates/footer.html:40
 msgid "Mobile Apps"
 msgstr "Мобільні програми"
 
@@ -611,10 +666,10 @@ msgid "Create your decentralized online store"
 msgstr ""
 
 #: templates/dshop.html:16
-msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform. Get started for free and launch your store in a day."
+msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform. Get started for free."
 msgstr ""
 
-#: templates/dshop.html:22 templates/dshop.html:133
+#: templates/dshop.html:22 templates/dshop.html:157
 #: templates/navbar-dshop.html:28
 msgid "Request a demo"
 msgstr ""
@@ -628,10 +683,10 @@ msgid "Fast setup, no commitments"
 msgstr ""
 
 #: templates/dshop.html:41
-msgid "Launch a decentralised shop in a day - no commitments or long-term contracts."
+msgid "No commitments or long-term contracts."
 msgstr ""
 
-#: templates/dshop.html:49 templates/product.html:86
+#: templates/dshop.html:49 templates/product.html:46
 msgid "Free to run"
 msgstr ""
 
@@ -663,27 +718,27 @@ msgstr ""
 msgid "Meet the companies who are choosing Dshop to build and grow their decentralized online stores"
 msgstr ""
 
-#: templates/dshop.html:107
+#: templates/dshop.html:124
 msgid "Here to help you succeed"
 msgstr ""
 
-#: templates/dshop.html:109 templates/dshop.html:114
+#: templates/dshop.html:126 templates/dshop.html:131
 msgid "Speak with a real person when something’s not right."
 msgstr ""
 
-#: templates/dshop.html:111 templates/dshop.html:115
+#: templates/dshop.html:128 templates/dshop.html:132
 msgid "You can email our in-house support anytime, 24/7."
 msgstr ""
 
-#: templates/dshop.html:118
+#: templates/dshop.html:135
 msgid "Still have more questions? Feel free to contact us."
 msgstr ""
 
-#: templates/dshop.html:120
+#: templates/dshop.html:137
 msgid "Contact Us"
 msgstr ""
 
-#: templates/dshop.html:127
+#: templates/dshop.html:151
 msgid "Ready to start selling for free?"
 msgstr ""
 
@@ -803,21 +858,17 @@ msgstr "Умови надання послуг"
 msgid "Overview"
 msgstr ""
 
-#: templates/footer.html:37
-msgid "iOS"
-msgstr "iOS"
+#: templates/footer.html:37 templates/product.html:69
+msgid "Origin Deals"
+msgstr ""
 
-#: templates/footer.html:38
-msgid "Android"
-msgstr "Android"
+#: templates/footer.html:38 templates/product.html:29
+msgid "Dshop"
+msgstr ""
 
 #: templates/footer.html:39
-msgid "DApp"
-msgstr "DApp"
-
-#: templates/footer.html:40
-msgid "Creator"
-msgstr "Творець"
+msgid "Marketplace DApp"
+msgstr ""
 
 #: templates/footer.html:44
 msgid "Videos"
@@ -951,7 +1002,7 @@ msgid "OGN Trading Competition"
 msgstr ""
 
 #: templates/huobi-launch.html:1017
-msgid "Activity time period: June 18, 12PM to June 29, 11:59PM GMT +8"
+msgid "Activity time period: June 18, 12:00:00 to June 29, 23:59:59 GMT +8"
 msgstr ""
 
 #: templates/huobi-launch.html:1018
@@ -963,7 +1014,7 @@ msgid "Competition rounds"
 msgstr ""
 
 #: templates/huobi-launch.html:1023
-msgid "The competition will begin on June 18, 12PM and will last until June 29, 11:59PM GMT +8 (12 days)"
+msgid "The competition will begin on June 18, 00:00:00 and will last until June 29, 23:59:59 GMT +8 (12 days)"
 msgstr ""
 
 #: templates/huobi-launch.html:1025
@@ -975,15 +1026,15 @@ msgid "Round 1 will commence from June 18 to June 20"
 msgstr ""
 
 #: templates/huobi-launch.html:1030
-msgid "Round 2 will commence from June 21 to June 23"
+msgid "Round 2 will commence from June 20 to June 23"
 msgstr ""
 
 #: templates/huobi-launch.html:1032
-msgid "Round 3 will commence from June 24 to June 26"
+msgid "Round 3 will commence from June 23 to June 26"
 msgstr ""
 
 #: templates/huobi-launch.html:1034
-msgid "Round 4 will commence from June 27 to June 29"
+msgid "Round 4 will commence from June 26 to June 29"
 msgstr ""
 
 #: templates/huobi-launch.html:1038
@@ -1075,7 +1126,7 @@ msgid "Origin Holder Airdrop"
 msgstr ""
 
 #: templates/huobi-launch.html:1078
-msgid "Activity time period: July 1, 2020 to August 31, 2020 11:59PM GMT +8"
+msgid "Activity time period: July 1, 00:00:00 to August 31, 23:59:59 GMT +8"
 msgstr ""
 
 #: templates/huobi-launch.html:1081
@@ -1091,11 +1142,11 @@ msgid "The OGN Holder Airdrop campaign will begin after the OGN Net Asset Increa
 msgstr ""
 
 #: templates/huobi-launch.html:1089
-msgid "Round 1 will commence from July 1, 2020 to July 31, 2020 11:59PM GMT +8"
+msgid "Round 1 will commence from July 1, 00:00:00 to July 31, 23:59:59 GMT +8"
 msgstr ""
 
 #: templates/huobi-launch.html:1090
-msgid "Round 2 will commence from August 1, 2020 to August 31, 2020 11:59PM GMT +8"
+msgid "Round 2 will commence from August 1, 00:00:00 to August 31, 23:59:59 GMT +8"
 msgstr ""
 
 #: templates/huobi-launch.html:1094
@@ -1223,7 +1274,7 @@ msgid ""
 "                      changer.\""
 msgstr ""
 
-#: templates/investors.html:178 templates/team.html:469
+#: templates/investors.html:178 templates/team.html:494
 msgid "Paul Veradittakit"
 msgstr "Пол Верадіттакіт"
 
@@ -1319,7 +1370,7 @@ msgstr "Origin Protocol"
 msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
 msgstr "Економіка сумісного використання без посередників. Origin - це протокол для створення торгівельних майданчиків економіки сумісного використання з використанням блокчейну Ethereum та IPFS."
 
-#: templates/landing.html:26 templates/landing.html:95
+#: templates/landing.html:26 templates/landing.html:96
 msgid "Blockchain-powered commerce is the future"
 msgstr ""
 
@@ -1339,123 +1390,126 @@ msgid "Email"
 msgstr "Адреса електронної пошти"
 
 #: templates/landing.html:64
-msgid "Origin Products"
+msgid "Origin Platform"
 msgstr ""
 
 #: templates/landing.html:65
-msgid "Origin’s suite of products is revolutionizing how people shop and conduct business online. Buy and sell on our marketplace app, create a decentralized e-commerce store, or stake OGN for great deals."
+msgid "The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store, lock up OGN for great deals, and buy and sell on our marketplace app. "
 msgstr ""
 
-#: templates/landing.html:74
-msgid "There is a massive opportunity for blockchain-powered commerce"
+#: templates/landing.html:67
+msgid "Check out our products"
 msgstr ""
 
 #: templates/landing.html:75
+msgid "There is a massive opportunity for blockchain-powered commerce"
+msgstr ""
+
+#: templates/landing.html:76
 msgid "E-commerce is projected to be one of the fastest growing verticals in the blockchain industry during the next few years"
 msgstr ""
 
-#: templates/landing.html:82
+#: templates/landing.html:83
 msgid "Global e-commerce sales by 2021"
 msgstr ""
 
-#: templates/landing.html:86
+#: templates/landing.html:87
 msgid "Global blockchain technology revenues by 2023"
 msgstr ""
 
-#: templates/landing.html:96
+#: templates/landing.html:97
 msgid "Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure"
 msgstr ""
 
-#: templates/landing.html:102
+#: templates/landing.html:103
 msgid "Lower fees"
 msgstr ""
 
-#: templates/landing.html:103
+#: templates/landing.html:104
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed"
 msgstr ""
 
-#: templates/landing.html:109
+#: templates/landing.html:110
 msgid "Better incentives"
 msgstr ""
 
-#: templates/landing.html:110
+#: templates/landing.html:111
 msgid "Everyone can own a stake in the network by contributing to its growth"
 msgstr ""
 
-#: templates/landing.html:116
+#: templates/landing.html:117
 msgid "Increased access"
 msgstr ""
 
-#: templates/landing.html:117
+#: templates/landing.html:118
 msgid "2 billion unbanked people can access new markets globally"
 msgstr ""
 
-#: templates/landing.html:123
+#: templates/landing.html:124
 msgid "More resilience"
 msgstr ""
 
-#: templates/landing.html:124
+#: templates/landing.html:125
 msgid "Blockchain-powered commerce can't be banned or shut down"
 msgstr ""
 
-#: templates/landing.html:130
+#: templates/landing.html:131
 msgid "Origin has a world-class team"
 msgstr ""
 
-#: templates/landing.html:131
+#: templates/landing.html:132
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr ""
 
-#: templates/landing.html:155
+#: templates/landing.html:156
 msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
 msgstr ""
 
-#: templates/landing.html:171
-msgid "Featured Partner"
-msgstr ""
-
 #: templates/landing.html:172
-msgid "Trips Community is building a homesharing DApp in Italy with 3,000 hosts."
+msgid "Featured Partners"
 msgstr ""
 
-#: templates/landing.html:175
+#: templates/landing.html:197 templates/landing.html:219
+#: templates/landing.html:241
 msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
 msgstr ""
 
-#: templates/landing.html:176
+#: templates/landing.html:201 templates/landing.html:223
+#: templates/landing.html:245
 msgid "Luca De Giglio"
 msgstr ""
 
-#: templates/landing.html:177
+#: templates/landing.html:204 templates/landing.html:226
+#: templates/landing.html:248
 msgid "Founder, Trips Community"
 msgstr ""
 
-#: templates/landing.html:184
+#: templates/landing.html:263
 msgid "Featured Videos"
 msgstr ""
 
-#: templates/landing.html:203
+#: templates/landing.html:282
 msgid "Watch more videos"
 msgstr ""
 
-#: templates/landing.html:207
+#: templates/landing.html:286
 msgid "Recent News"
 msgstr ""
 
-#: templates/landing.html:213
+#: templates/landing.html:292
 msgid "Rodolfo Gonzalez Shares Why Foundation Capital Invested in Origin"
 msgstr "Родольфо Гонсалес ділиться, чому капітал фонду інвестується в походження"
 
-#: templates/landing.html:219
+#: templates/landing.html:298
 msgid "Live on TV with HKB News in Korea"
 msgstr "Прямий ефір на телебаченні з новинами HKB в Кореї"
 
-#: templates/landing.html:225
+#: templates/landing.html:304
 msgid "Doo Wan Nam Discusses Origin’s Partnership with MakerDAO"
 msgstr "Doo Wan Nam обговорює партнерство Origin з MakerDAO"
 
-#: templates/landing.html:230
+#: templates/landing.html:309
 msgid "Read more on Medium"
 msgstr ""
 
@@ -1467,11 +1521,11 @@ msgstr "Origin Protocol - Мобільна версія"
 msgid "Buy and Sell on the Origin Marketplace"
 msgstr "Купуйте та продайте на ринку походження"
 
-#: templates/mobile.html:18 templates/product.html:110
+#: templates/mobile.html:18 templates/product.html:88
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr ""
 
-#: templates/mobile.html:27 templates/product.html:118
+#: templates/mobile.html:27 templates/product.html:96
 msgid "Download Android App"
 msgstr ""
 
@@ -1500,30 +1554,59 @@ msgid ""
 msgstr ""
 
 #: templates/ogn-token.html:10
-msgid "OGN is available on these top exchanges"
+msgid "OGN is Now Trading"
 msgstr ""
 
-#: templates/ogn-token.html:101 templates/whitepaper/platform.html:197
-msgid "Origin Rewards"
+#: templates/ogn-token.html:15
+msgid "Last Price"
 msgstr ""
 
-#: templates/ogn-token.html:103
-msgid ""
-"Earn your stake in the Origin network today. Users can\n"
-"            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
-"            friends and family to Origin, sharing news about Origin on social\n"
-"            media, and making purchases from our featured sellers."
+#: templates/ogn-token.html:35 templates/product.html:106
+msgid "Available on"
 msgstr ""
 
-#: templates/ogn-token.html:108
-msgid "Not available in the United States"
+#: templates/ogn-token.html:54
+msgid "…and many others"
 msgstr ""
 
-#: templates/ogn-token.html:135
+#: templates/ogn-token.html:114
+msgid "View the OGN Dashboard"
+msgstr ""
+
+#: templates/ogn-token.html:118
+msgid "Visit CoinMarketCap"
+msgstr ""
+
+#: templates/ogn-token.html:128
+msgid "Unlock Discounts"
+msgstr ""
+
+#: templates/ogn-token.html:129
+#, python-format
+msgid "Lock Origin Tokens (OGN) on Origin Deals to unlock discounts on Amazon. Save up to 20%% on your purchases. Your OGN is returned to you after a short lock-up period."
+msgstr ""
+
+#: templates/ogn-token.html:136
+msgid "Try Origin Deals"
+msgstr ""
+
+#: templates/ogn-token.html:155
+msgid "Staking"
+msgstr ""
+
+#: templates/ogn-token.html:157
+msgid "Stake Origin Tokens (OGN) to activate unbelievable discounts on Origin Deals. Your tokens get locked up so that you are eligible for discounts, and after some time passes, you get all your OGN back to use however you want."
+msgstr ""
+
+#: templates/ogn-token.html:159
+msgid "Only available in the United States"
+msgstr ""
+
+#: templates/ogn-token.html:170
 msgid "Commissions"
 msgstr ""
 
-#: templates/ogn-token.html:137
+#: templates/ogn-token.html:172
 msgid ""
 "Promote your listings across the Origin flagship app and\n"
 "            third-party apps with Origin Commissions. Pay with OGN to get\n"
@@ -1532,52 +1615,31 @@ msgid ""
 "            complete their sales."
 msgstr ""
 
-#: templates/ogn-token.html:151
+#: templates/ogn-token.html:198
 msgid "Payments"
 msgstr ""
 
-#: templates/ogn-token.html:153
+#: templates/ogn-token.html:200
 msgid ""
 "Use the Origin Tokens (OGN) that you've earned in Origin\n"
 "            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
 "            the network by accepting OGN as a preferred payment method."
 msgstr ""
 
-#: templates/ogn-token.html:171
-msgid "Research and Development"
+#: templates/ogn-token.html:212 templates/whitepaper/platform.html:197
+msgid "Origin Rewards"
 msgstr ""
 
-#: templates/ogn-token.html:175
-msgid "Origin Nodes"
-msgstr ""
-
-#: templates/ogn-token.html:177
+#: templates/ogn-token.html:214
 msgid ""
-"Stake your OGN to run an Origin Node and earn more OGN by\n"
-"            helping to replicate and validate profile and listing data on the\n"
-"            network."
+"Earn your stake in the Origin network today. Users can\n"
+"            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
+"            friends and family to Origin, sharing news about Origin on social\n"
+"            media, and making purchases from our featured sellers."
 msgstr ""
 
-#: templates/ogn-token.html:184
-msgid "Origin Relayer"
-msgstr ""
-
-#: templates/ogn-token.html:186
-msgid ""
-"Developers can pay for usage of Origin Meta Transactions\n"
-"            Relayers with OGN. Meta Transactions reduce user friction and\n"
-"            encourage adoption and retention."
-msgstr ""
-
-#: templates/ogn-token.html:193
-msgid "Governance"
-msgstr ""
-
-#: templates/ogn-token.html:195
-msgid ""
-"Everyone has a vote on the Origin Platform. Token holders\n"
-"            will participate in important community votes to define future\n"
-"            initiatives."
+#: templates/ogn-token.html:219
+msgid "Not available in the United States"
 msgstr ""
 
 #: templates/partner_campaign.html:3 templates/partner_campaign.html:5
@@ -1695,339 +1757,322 @@ msgid "Origin Protocol - Product"
 msgstr ""
 
 #: templates/product.html:19
-msgid "Our platform will power peer&#8209;to&#8209;peer commerce everywhere"
+msgid "The Origin Platform powers commerce on the blockchain"
 msgstr ""
 
 #: templates/product.html:30
-msgid "Origin Deals"
-msgstr ""
-
-#: templates/product.html:33
-#, python-format
-msgid "Stake Origin Tokens (OGN) and get up to 20%% off products from Amazon"
-msgstr ""
-
-#: templates/product.html:36
-msgid "Try Origin Deals now"
-msgstr ""
-
-#: templates/product.html:43
-msgid "Origin Deals Browser Extension"
-msgstr ""
-
-#: templates/product.html:46
-msgid "A free extension that unlocks great deals for you as you shop on Amazon"
-msgstr ""
-
-#: templates/product.html:61
-msgid "Install the Extension"
-msgstr ""
-
-#: templates/product.html:68
-msgid "Dshop"
-msgstr ""
-
-#: templates/product.html:70
 msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
 msgstr ""
 
-#: templates/product.html:74
+#: templates/product.html:34
 msgid "No transaction fees"
 msgstr ""
 
-#: templates/product.html:78
+#: templates/product.html:38
 msgid "Fully customizeable"
 msgstr ""
 
-#: templates/product.html:82
+#: templates/product.html:42
 msgid "Supports credit card payments"
 msgstr ""
 
-#: templates/product.html:93
+#: templates/product.html:53
 msgid "Learn More"
 msgstr ""
 
-#: templates/product.html:95
+#: templates/product.html:56
 msgid "Online stores created with Dshop"
 msgstr ""
 
-#: templates/product.html:104
+#: templates/product.html:64
+msgid "...and others"
+msgstr ""
+
+#: templates/product.html:71
+msgid "Lock Origin Tokens (OGN) to unlock great discounts on Amazon"
+msgstr ""
+
+#: templates/product.html:74
+msgid "Try Origin Deals now"
+msgstr ""
+
+#: templates/product.html:82
 msgid "Buy and sell on Origin"
 msgstr ""
 
-#: templates/product.html:105
+#: templates/product.html:83
 msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr ""
 
-#: templates/product.html:109
+#: templates/product.html:87
 msgid "Origin Marketplace"
 msgstr ""
 
-#: templates/product.html:120
+#: templates/product.html:98
 msgid "Visit us on the web"
 msgstr ""
 
-#: templates/product.html:121
+#: templates/product.html:99
 msgid "shoporigin.com"
 msgstr ""
 
-#: templates/product.html:124
+#: templates/product.html:102
 msgid "Featured on"
 msgstr ""
 
-#: templates/product.html:128
-msgid "Available on"
-msgstr ""
-
-#: templates/product.html:142
+#: templates/product.html:120
 msgid "Decentralized marketplaces powered by Origin"
 msgstr ""
 
-#: templates/product.html:144
+#: templates/product.html:122
 msgid "See the Origin Platform in action at shoporigin.com"
 msgstr ""
 
-#: templates/product.html:146
+#: templates/product.html:124
 msgid "Buy and sell today"
 msgstr ""
 
-#: templates/product.html:148
+#: templates/product.html:126
 msgid "Other marketplaces built on the Origin Platform"
 msgstr ""
 
-#: templates/product.html:169
+#: templates/product.html:147
 msgid "Self-sovereign Identity"
 msgstr ""
 
-#: templates/product.html:171
+#: templates/product.html:149
 msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
 msgstr ""
 
-#: templates/product.html:180
+#: templates/product.html:158
 msgid "Encrypted Messaging"
 msgstr ""
 
-#: templates/product.html:182
+#: templates/product.html:160
 msgid "Send secure, private messages to other buyers and sellers on the platform."
 msgstr ""
 
-#: templates/product.html:191
+#: templates/product.html:169
 msgid "Permissionless Payments"
 msgstr ""
 
-#: templates/product.html:193
+#: templates/product.html:171
 msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
 msgstr ""
 
-#: templates/product.html:202
+#: templates/product.html:180
 msgid "Reputation Systems"
 msgstr ""
 
-#: templates/product.html:204
+#: templates/product.html:182
 msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
 msgstr ""
 
-#: templates/product.html:213
+#: templates/product.html:191
 msgid "Blockchain-Powered Transactions"
 msgstr ""
 
-#: templates/product.html:215
+#: templates/product.html:193
 msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
 msgstr ""
 
-#: templates/product.html:224
+#: templates/product.html:202
 msgid "Arbitration Services"
 msgstr ""
 
-#: templates/product.html:226
+#: templates/product.html:204
 msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
 msgstr ""
 
-#: templates/product.html:237
+#: templates/product.html:215
 msgid "How it works"
 msgstr ""
 
-#: templates/product.html:246
+#: templates/product.html:224
 msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
 msgstr ""
 
-#: templates/product.html:252
+#: templates/product.html:230
 msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
 msgstr ""
 
-#: templates/product.html:258
+#: templates/product.html:236
 msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
 msgstr ""
 
-#: templates/product.html:264
+#: templates/product.html:242
 msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
 msgstr ""
 
-#: templates/product.html:274
+#: templates/product.html:252
 msgid "Check out our updated whitepaper"
 msgstr ""
 
-#: templates/product.html:278
+#: templates/product.html:256
 msgid "Read our whitepaper"
 msgstr ""
 
-#: templates/product.html:288
+#: templates/product.html:266
 msgid "Milestones"
 msgstr ""
 
-#: templates/product.html:294 templates/whitepaper/roadmap.html:7
+#: templates/product.html:272 templates/whitepaper/roadmap.html:7
 msgid "May 2017"
 msgstr "Травень 2017"
 
-#: templates/product.html:295 templates/whitepaper/roadmap.html:8
+#: templates/product.html:273 templates/whitepaper/roadmap.html:8
 msgid "Began initial development"
 msgstr ""
 
-#: templates/product.html:299 templates/whitepaper/roadmap.html:12
+#: templates/product.html:277 templates/whitepaper/roadmap.html:12
 msgid "September 2017"
 msgstr "Вересень 2017"
 
-#: templates/product.html:300 templates/whitepaper/roadmap.html:13
+#: templates/product.html:278 templates/whitepaper/roadmap.html:13
 msgid "Released initial whitepaper"
 msgstr ""
 
-#: templates/product.html:304 templates/whitepaper/roadmap.html:22
+#: templates/product.html:282 templates/whitepaper/roadmap.html:22
 msgid "December 2017"
 msgstr "Грудень 2017"
 
-#: templates/product.html:305 templates/whitepaper/roadmap.html:23
+#: templates/product.html:283 templates/whitepaper/roadmap.html:23
 msgid "Launched Alpha on Ethereum testnet"
 msgstr ""
 
-#: templates/product.html:309 templates/whitepaper/roadmap.html:37
+#: templates/product.html:287 templates/whitepaper/roadmap.html:37
 msgid "October 2018"
 msgstr ""
 
-#: templates/product.html:310 templates/whitepaper/roadmap.html:38
+#: templates/product.html:288 templates/whitepaper/roadmap.html:38
 msgid "Launched Beta on Ethereum mainnet"
 msgstr ""
 
-#: templates/product.html:314 templates/whitepaper/roadmap.html:42
+#: templates/product.html:292 templates/whitepaper/roadmap.html:42
 msgid "February 2019"
 msgstr ""
 
-#: templates/product.html:316 templates/whitepaper/roadmap.html:44
+#: templates/product.html:294 templates/whitepaper/roadmap.html:44
 msgid "Launched Marketplace Creator 1.0 and our first mobile apps"
 msgstr ""
 
-#: templates/product.html:317 templates/whitepaper/roadmap.html:45
+#: templates/product.html:295 templates/whitepaper/roadmap.html:45
 msgid "Supported first partner app launches"
 msgstr ""
 
-#: templates/product.html:322 templates/whitepaper/roadmap.html:50
+#: templates/product.html:300 templates/whitepaper/roadmap.html:50
 msgid "April 2019"
 msgstr ""
 
-#: templates/product.html:324 templates/whitepaper/roadmap.html:52
+#: templates/product.html:302 templates/whitepaper/roadmap.html:52
 msgid "Launched Origin Rewards"
 msgstr ""
 
-#: templates/product.html:325 templates/whitepaper/roadmap.html:53
+#: templates/product.html:303 templates/whitepaper/roadmap.html:53
 msgid "Launched stablecoin payments"
 msgstr "Запущено стабільні платежі за біткойн"
 
-#: templates/product.html:330 templates/whitepaper/roadmap.html:58
+#: templates/product.html:308 templates/whitepaper/roadmap.html:58
 msgid "July 2019"
 msgstr ""
 
-#: templates/product.html:332 templates/whitepaper/roadmap.html:60
+#: templates/product.html:310 templates/whitepaper/roadmap.html:60
 msgid "Launched shoporigin.com and new mobile apps"
 msgstr ""
 
-#: templates/product.html:333 templates/whitepaper/roadmap.html:61
+#: templates/product.html:311 templates/whitepaper/roadmap.html:61
 msgid "Launched Meta Transactions"
 msgstr ""
 
-#: templates/product.html:338 templates/whitepaper/roadmap.html:66
+#: templates/product.html:316 templates/whitepaper/roadmap.html:66
 msgid "September 2019"
 msgstr ""
 
-#: templates/product.html:340
+#: templates/product.html:318
 msgid "Launched OGN Commissions"
 msgstr ""
 
-#: templates/product.html:345
+#: templates/product.html:323
 msgid "Q4 2019"
 msgstr ""
 
-#: templates/product.html:347
+#: templates/product.html:325
 msgid "Distributed investor OGN tokens"
 msgstr ""
 
-#: templates/product.html:348
+#: templates/product.html:326
 msgid "Launched Dshop"
 msgstr ""
 
-#: templates/product.html:353 templates/whitepaper/roadmap.html:83
+#: templates/product.html:331 templates/whitepaper/roadmap.html:83
 msgid "Q1 2020"
 msgstr ""
 
-#: templates/product.html:355 templates/whitepaper/roadmap.html:85
+#: templates/product.html:333 templates/whitepaper/roadmap.html:85
 msgid "Launched Mainnet 1.0"
 msgstr ""
 
-#: templates/product.html:356
+#: templates/product.html:334
 msgid "Listed on Binance"
 msgstr ""
 
-#: templates/product.html:357 templates/whitepaper/roadmap.html:86
+#: templates/product.html:335 templates/whitepaper/roadmap.html:86
 msgid "Launched OGN as payment token"
 msgstr ""
 
-#: templates/product.html:358
+#: templates/product.html:336
 msgid "Added to Samsung Blockchain Wallet"
 msgstr ""
 
-#: templates/product.html:363 templates/whitepaper/roadmap.html:92
+#: templates/product.html:341 templates/whitepaper/roadmap.html:92
 msgid "Q2 2020"
 msgstr ""
 
-#: templates/product.html:365
+#: templates/product.html:343
 msgid "Launched Origin Deals"
 msgstr ""
 
-#: templates/product.html:366
+#: templates/product.html:344
 msgid "Listed on additional exchanges"
 msgstr ""
 
-#: templates/product.html:367
+#: templates/product.html:345
 msgid "Support Dshop partner launches"
 msgstr ""
 
-#: templates/product.html:368 templates/whitepaper/roadmap.html:96
+#: templates/product.html:346 templates/whitepaper/roadmap.html:96
 msgid "Launch OGN staking model"
 msgstr "Запустіть модель ставки OGN"
 
-#: templates/product.html:373 templates/whitepaper/roadmap.html:101
+#: templates/product.html:351 templates/whitepaper/roadmap.html:101
 msgid "Q3 2020"
 msgstr "Q3 2020"
 
-#: templates/product.html:375 templates/whitepaper/roadmap.html:103
+#: templates/product.html:353 templates/whitepaper/roadmap.html:103
 msgid "Launch new developer tools and expand developer adoption"
 msgstr "Запускайте нові інструменти для розробників та розширюйте прийняття розробника"
 
-#: templates/product.html:380 templates/whitepaper/roadmap.html:108
+#: templates/product.html:354
+msgid "Expand Dshop partnerships and store types"
+msgstr ""
+
+#: templates/product.html:359 templates/whitepaper/roadmap.html:108
 msgid "Q4 2020"
 msgstr "Q4 2020"
 
-#: templates/product.html:382 templates/whitepaper/roadmap.html:110
+#: templates/product.html:361 templates/whitepaper/roadmap.html:110
 msgid "Launch OGN as a governance token"
 msgstr "Запустіть OGN як маркер управління"
 
-#: templates/product.html:394
+#: templates/product.html:373
 msgid "Origin Token"
 msgstr ""
 
-#: templates/product.html:397
+#: templates/product.html:376
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr ""
 
-#: templates/product.html:401
+#: templates/product.html:380
 msgid "Learn more about Origin Token"
 msgstr ""
 
@@ -2459,89 +2504,105 @@ msgid ""
 "                  for Du Capital."
 msgstr ""
 
-#: templates/team.html:389
+#: templates/team.html:385 templates/whitepaper/team.html:400
+msgid "Amy Hockings"
+msgstr ""
+
+#: templates/team.html:387 templates/whitepaper/team.html:402
+msgid "Customer Support"
+msgstr ""
+
+#: templates/team.html:390 templates/whitepaper/team.html:405
+msgid "Amy has a decade of experience in customer service, sales and administration, and led recruitment for one of Australia’s largest charities. She studied International Business and Linguistics at Griffith University."
+msgstr ""
+
+#: templates/team.html:406
 msgid "Community team"
 msgstr "Команда громади"
 
-#: templates/team.html:398 templates/whitepaper/team.html:417
-msgid "Holly Gu"
-msgstr "Холлі Гу"
+#: templates/team.html:415 templates/whitepaper/team.html:433
+msgid "Zoe Hoang"
+msgstr ""
 
-#: templates/team.html:406 templates/whitepaper/team.html:425
-msgid "June Kim"
-msgstr "Червень Кім"
+#: templates/team.html:423 templates/whitepaper/team.html:441
+msgid "Spyros Kekos"
+msgstr ""
 
-#: templates/team.html:414 templates/whitepaper/team.html:433
-msgid "Yeongin Lee"
-msgstr "Йонгін Лі"
+#: templates/team.html:431 templates/whitepaper/team.html:449
+msgid "Aaron Faulkner"
+msgstr ""
 
-#: templates/team.html:422 templates/whitepaper/team.html:441
+#: templates/team.html:439 templates/whitepaper/team.html:457
+msgid "Moisés Sosa"
+msgstr ""
+
+#: templates/team.html:447 templates/whitepaper/team.html:465
 msgid "Leslie Song"
 msgstr "Леслі Пісня"
 
-#: templates/team.html:433
+#: templates/team.html:458
 msgid "Advisors"
 msgstr "Радники"
 
-#: templates/team.html:443
+#: templates/team.html:468
 msgid "Addison Huegel"
 msgstr "Едісон Х'югель"
 
-#: templates/team.html:447
+#: templates/team.html:472
 msgid "PR"
 msgstr ""
 
-#: templates/team.html:456
+#: templates/team.html:481
 msgid "Melody He"
 msgstr "Мелоді Хі"
 
-#: templates/team.html:460
+#: templates/team.html:485
 msgid "International BD"
 msgstr ""
 
-#: templates/team.html:473 templates/team.html:486
+#: templates/team.html:498 templates/team.html:511
 msgid "Advisor"
 msgstr "Радник"
 
-#: templates/team.html:482
+#: templates/team.html:507
 msgid "Joey Krug"
 msgstr "Джоі Крюг"
 
-#: templates/team.html:495
+#: templates/team.html:520
 msgid "Andrew Hyde"
 msgstr "Ендрю Хайд"
 
-#: templates/team.html:499 templates/whitepaper/sidebar.html:53
-#: templates/whitepaper/team.html:410
+#: templates/team.html:524 templates/whitepaper/sidebar.html:53
+#: templates/whitepaper/team.html:426
 msgid "Community"
 msgstr "Спільнота"
 
-#: templates/team.html:510
+#: templates/team.html:535
 #, python-format
 msgid "100%% open-source."
 msgstr ""
 
-#: templates/team.html:511
+#: templates/team.html:536
 msgid " contributors."
 msgstr ""
 
-#: templates/team.html:530
+#: templates/team.html:555
 msgid "Want to contribute?"
 msgstr ""
 
-#: templates/team.html:535
+#: templates/team.html:560
 msgid "Visit our GitHub Repository"
 msgstr "Відвідайте наш сховище GitHub"
 
-#: templates/team.html:537
+#: templates/team.html:562
 msgid "Join our #engineering channel on Discord"
 msgstr ""
 
-#: templates/team.html:548
+#: templates/team.html:573
 msgid "Interested in working at Origin?"
 msgstr ""
 
-#: templates/team.html:552
+#: templates/team.html:577
 msgid ""
 "We are a distributed team and are hiring all around the\n"
 "            world."
@@ -2549,7 +2610,7 @@ msgstr ""
 "Ми є розповсюдженою командою і наймаємо в усьому світі\n"
 "."
 
-#: templates/team.html:559
+#: templates/team.html:584
 msgid "View job posts"
 msgstr ""
 
@@ -3536,11 +3597,11 @@ msgid ""
 "            the marketing and incubation entity for Du Capital."
 msgstr ""
 
-#: templates/whitepaper/team.html:448
+#: templates/whitepaper/team.html:472
 msgid "Developer <span>community</span>"
 msgstr "Розробник <span>спільнота</span>"
 
-#: templates/whitepaper/team.html:451
+#: templates/whitepaper/team.html:475
 msgid ""
 "In addition to our full-time staff, Origin has a very active\n"
 "      open-source developer community. Since the project’s inception, we’ve had\n"
@@ -3816,4 +3877,123 @@ msgstr "Ой, щось пішло не так"
 
 #~ msgid "Currently, OGN's actual circulating supply is %%s. Modeled circulating supply was projected at %%s. The difference is %%s tokens (%%s%%%%)."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "It’s time to build the sharing economy without\n"
+#~ "        intermediaries"
+#~ msgstr ""
+
+#~ msgid "Investors, team members & users with locked tokens"
+#~ msgstr ""
+
+#~ msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform. Get started for free and launch your store in a day."
+#~ msgstr ""
+
+#~ msgid "Launch a decentralised shop in a day - no commitments or long-term contracts."
+#~ msgstr ""
+
+#~ msgid "iOS"
+#~ msgstr "iOS"
+
+#~ msgid "Android"
+#~ msgstr "Android"
+
+#~ msgid "DApp"
+#~ msgstr "DApp"
+
+#~ msgid "Creator"
+#~ msgstr "Творець"
+
+#~ msgid "Activity time period: June 18, 12PM to June 29, 11:59PM GMT +8"
+#~ msgstr ""
+
+#~ msgid "The competition will begin on June 18, 12PM and will last until June 29, 11:59PM GMT +8 (12 days)"
+#~ msgstr ""
+
+#~ msgid "Round 2 will commence from June 21 to June 23"
+#~ msgstr ""
+
+#~ msgid "Round 3 will commence from June 24 to June 26"
+#~ msgstr ""
+
+#~ msgid "Round 4 will commence from June 27 to June 29"
+#~ msgstr ""
+
+#~ msgid "Activity time period: July 1, 2020 to August 31, 2020 11:59PM GMT +8"
+#~ msgstr ""
+
+#~ msgid "Round 1 will commence from July 1, 2020 to July 31, 2020 11:59PM GMT +8"
+#~ msgstr ""
+
+#~ msgid "Round 2 will commence from August 1, 2020 to August 31, 2020 11:59PM GMT +8"
+#~ msgstr ""
+
+#~ msgid "Origin Products"
+#~ msgstr ""
+
+#~ msgid "Origin’s suite of products is revolutionizing how people shop and conduct business online. Buy and sell on our marketplace app, create a decentralized e-commerce store, or stake OGN for great deals."
+#~ msgstr ""
+
+#~ msgid "Featured Partner"
+#~ msgstr ""
+
+#~ msgid "Trips Community is building a homesharing DApp in Italy with 3,000 hosts."
+#~ msgstr ""
+
+#~ msgid "OGN is available on these top exchanges"
+#~ msgstr ""
+
+#~ msgid "Research and Development"
+#~ msgstr ""
+
+#~ msgid "Origin Nodes"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Stake your OGN to run an Origin Node and earn more OGN by\n"
+#~ "            helping to replicate and validate profile and listing data on the\n"
+#~ "            network."
+#~ msgstr ""
+
+#~ msgid "Origin Relayer"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Developers can pay for usage of Origin Meta Transactions\n"
+#~ "            Relayers with OGN. Meta Transactions reduce user friction and\n"
+#~ "            encourage adoption and retention."
+#~ msgstr ""
+
+#~ msgid "Governance"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Everyone has a vote on the Origin Platform. Token holders\n"
+#~ "            will participate in important community votes to define future\n"
+#~ "            initiatives."
+#~ msgstr ""
+
+#~ msgid "Our platform will power peer&#8209;to&#8209;peer commerce everywhere"
+#~ msgstr ""
+
+#~ msgid "Stake Origin Tokens (OGN) and get up to 20%% off products from Amazon"
+#~ msgstr ""
+
+#~ msgid "Origin Deals Browser Extension"
+#~ msgstr ""
+
+#~ msgid "A free extension that unlocks great deals for you as you shop on Amazon"
+#~ msgstr ""
+
+#~ msgid "Install the Extension"
+#~ msgstr ""
+
+#~ msgid "Holly Gu"
+#~ msgstr "Холлі Гу"
+
+#~ msgid "June Kim"
+#~ msgstr "Червень Кім"
+
+#~ msgid "Yeongin Lee"
+#~ msgstr "Йонгін Лі"
 
