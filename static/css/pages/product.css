@@ -13,21 +13,22 @@
   max-width: 90%;
 }
 
-.buy-sell-block .bottom img {
+.buy-sell-block-1 .bottom img {
   margin: 10px;
-  max-height: 16px;
+  max-height: 30px;
+  margin-top: 24px;
 }
 
-.buy-sell-block .bottom img.big {
-  max-height: 22px;
+.buy-sell-block-1 .bottom {
+  margin-bottom: 80px;
 }
 
-.buy-sell-block .btn-dark {
-  width: 330px;
-  font-size: 1rem;
-  background-color: #061d2a;
-  padding: 1rem;
-  margin: 3rem 0 5rem 0;
+.buy-sell-block-1 .bottom img.big {
+  max-height: 38px;
+}
+
+.buy-sell-block-1 .btn-primary {
+  min-height: 52px;
 }
 
 .dshop-section {
@@ -35,16 +36,16 @@
 }
 
 .dshop-section .bottom {
-  margin-bottom: 80px;
+  margin-bottom: 53px;
 }
 
-.buy-sell-block {
-  background-color: #007cff;
-  color: white;
+.buy-sell-block-1 {
+  background-color: white;
+  color: #061d2a;
   font-weight: normal;
 }
 
-.buy-sell-block .segment-subtitle {
+.buy-sell-block-1 .segment-subtitle {
   font-family: Lato;
   font-size: 0.875rem;
   text-align: center;
@@ -52,17 +53,17 @@
   margin-top: -10px;
 }
 
-.buy-sell-block .marketplace {
+.buy-sell-block-1 .marketplace {
   margin-top: 50px;
   text-align: center;
 }
 
-.buy-sell-block .marketplace .title {
+.buy-sell-block-1 .marketplace .title {
   font-size: 1.5rem;
   text-align: center;
 }
 
-.buy-sell-block .marketplace .text {
+.buy-sell-block-1 .marketplace .text {
   font-family: Lato;
   line-height: 1.39;
   max-width: 340px;
@@ -70,7 +71,7 @@
 }
 
 .vc-backed .button,
-.buy-sell-block .marketplace .button {
+.buy-sell-block-1 .marketplace .button {
   font-size: 1.125rem;
   max-width: 350px;
   width: 100%;
@@ -82,12 +83,12 @@
   text-align: center;
 }
 
-.buy-sell-block .marketplace .button:hover {
+.buy-sell-block-1 .marketplace .button:hover {
   background-color: #036ddd;
   cursor: pointer;
 }
 
-.buy-sell-block .opaque {
+.buy-sell-block-1 .opaque {
   opacity: 0.7;
 }
 
@@ -174,6 +175,20 @@
   text-align: left;
 }
 
+.product-page .marketplaces-section {
+  color: white;
+}
+
+.product-page .marketplaces-section .btn {
+  background-color: #061d2a;
+  color: white;
+}
+
+.product-page .marketplaces-section .btn:hover {
+  background-color: #162d3a;
+}
+
+
 .product-page .marketplaces-section img {
   display: block;
   margin: 0 auto;
@@ -186,9 +201,9 @@
   text-align: center;
   margin-bottom: 2.5rem;
   font-family: Lato;
-  font-size: 1.5rem;
+  font-size: 18px;
   font-weight: normal;
-  color: #061d2a;
+  color: white;
 }
 
 .product-page .features-section h3 {
@@ -213,28 +228,72 @@
   margin-right: 30px;
 }
 
+.product-page .dshop-section h1 {
+  margin-bottom: 20px;
+}
+
+.product-page .od-section .btn,
 .product-page .dshop-section .btn {
-  padding: 0.8rem;
-  margin-bottom: 50px;
+  border-radius: 26px;
+  background-color: #061d2a;
+  margin-bottom: 80px;
+  height: 52px;
+  min-width: 250px;
+  width: auto;
+}
+
+.product-page .od-section .btn:hover,
+.product-page .dshop-section .btn:hover {
+  background-color: #162d3a;
 }
 
 .product-page .dshop-section .sub-title {
+  max-width: 850px;
+  opacity: 0.8;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
   text-align: center;
   color: #061d2a;
-  margin-bottom: 40px;
-  max-width: 750px;
+  margin-bottom: 30px;
 }
 
-.product-page .checked-items .checked-item{
+.product-page .dshop-section .sub-title-footer {
+  margin-bottom: 80px;
+  font-family: Lato;
+  font-size: 14px;
+  color: #061d2a;
+  font-weight: normal;
+}
+
+.product-page .od-section h1 {
+  margin-bottom: 20px;
+}
+
+.product-page .od-section .sub-title {
+  max-width: 850px;
+  opacity: 0.8;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  color: white;
+  margin-bottom: 47px;
+}
+
+.product-page .checked-items .checked-item {
   margin-left: 14px;
   margin-right: 14px;
   margin-bottom: 8px;
   font-family: Lato;
   font-size: 18px;
-  color: #333333;
+  color: #061d2a;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.product-page .checked-items {
+  margin-bottom: 60px;
 }
 
 .product-page .marketplaces-section .btn {
@@ -429,27 +488,27 @@
 /* sm + */
 @media (min-width: 576px) {
 
-  .buy-sell-block .marketplace {
+  .buy-sell-block-1 .marketplace {
     margin-top: 76px;
     text-align: left;
   }
 
-  .buy-sell-block .marketplace .title {
+  .buy-sell-block-1 .marketplace .title {
     text-align: left;
     font-family: 'Poppins';
     font-weight: 500;
   }
 
-  .buy-sell-block .marketplace .text {
+  .buy-sell-block-1 .marketplace .text {
     max-width: auto;
     font-size: 1.125rem;
   }
 
-  .buy-sell-block .marketplace .button {
+  .buy-sell-block-1 .marketplace .button {
     max-width: 600px;
   }
 
-  .buy-sell-block .segment-subtitle {
+  .buy-sell-block-1 .segment-subtitle {
     font-size: 1.125rem;
     max-width: 680px;
     margin-top: -15px;
@@ -459,17 +518,17 @@
 /* md + */
 @media (min-width: 768px) {
   .video-block .bottom img,
-  .buy-sell-block .bottom img,
+  .buy-sell-block-1 .bottom img,
   .vc-backed .bottom img {
     margin: 21px;
-    max-height: 26px;
+    max-height: 33px;
   }
 
-  .buy-sell-block .bottom img.big {
-    max-height: 36px;
+  .buy-sell-block-1 .bottom img.big {
+    max-height: 43px;
   }
 
-  .buy-sell-block .segment-subtitle {
+  .buy-sell-block-1 .segment-subtitle {
     font-size: 1.125rem;
     max-width: 680px;
     margin-top: -15px;
@@ -479,13 +538,13 @@
 /* lg + */
 @media (min-width: 992px) {
   .video-block .bottom img,
-  .buy-sell-block .bottom img,
+  .buy-sell-block-1 .bottom img,
   .vc-backed .bottom img {
     margin: 30px;
     max-height: 30px;
   }
 
-  .buy-sell-block .bottom img.big {
+  .buy-sell-block-1 .bottom img.big {
     max-height: 41px;
   }
 }
@@ -512,7 +571,7 @@
     padding-left: 50px;
   }
   
-  .buy-sell-block .prod-image,
+  .buy-sell-block-1 .prod-image,
   .od-section .od-image,
   .od-ext-section .od-ext-image {
     max-width: 100%;
@@ -574,11 +633,11 @@
   }
 
   .product-page .dshop-section .btn {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
   }
 
   .product-page .dshop-section .bottom img.swag {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
   .btn.btn-dark.btn-inverse {

@@ -171,6 +171,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
     staked_user_count
     staked_token_count
 
+    number_of_addresses = db.session.query(db_models.EthContact.address).count()
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         foundation_reserve_address,
         team_dist_address,
@@ -182,13 +183,13 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
 
-    foundation_reserve_balance = ogn_balances[foundation_reserve_address]
-    team_dist_balance = ogn_balances[team_dist_address]
-    investor_dist_balance = ogn_balances[investor_dist_address]
-    dist_staging_balance = ogn_balances[dist_staging_address]
-    partnerships_balance = ogn_balances[partnerships_address]
-    ecosystem_growth_balance = ogn_balances[ecosystem_growth_address]
-
+    foundation_reserve_balance = int(ogn_balances[foundation_reserve_address])
+    team_dist_balance = int(ogn_balances[team_dist_address])
+    investor_dist_balance = int(ogn_balances[investor_dist_address])
+    dist_staging_balance = int(ogn_balances[dist_staging_address])
+    partnerships_balance = int(ogn_balances[partnerships_address])
+    ecosystem_growth_balance = int(ogn_balances[ecosystem_growth_address])
+    
     reserved_tokens = int(
         foundation_reserve_balance +
         team_dist_balance +
@@ -197,7 +198,8 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         partnerships_balance +
         ecosystem_growth_balance 
     )
-
+    
+    print "Full reserved token balance: %s" % (reserved_tokens)
     circulating_supply = int(total_supply - reserved_tokens)
 
     market_cap = int(circulating_supply * ogn_usd_price)
@@ -207,6 +209,8 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("circulating_supply", circulating_supply),
         ("market_cap", market_cap),
         ("total_supply", total_supply),
+        ("number_of_addresses", number_of_addresses),
+        ("number_of_addresses_formatted", '{:,}'.format(number_of_addresses)),
 
         ("reserved_tokens", reserved_tokens),
         ("staked_user_count", staked_user_count),
@@ -219,6 +223,14 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("partnerships_address", partnerships_address),
         ("ecosystem_growth_address", ecosystem_growth_address),
 
+        # formatted wallet balances
+        ("foundation_reserve_balance_formatted", '{:,}'.format(foundation_reserve_balance)),
+        ("team_dist_balance_formatted", '{:,}'.format(team_dist_balance)),
+        ("investor_dist_balance_formatted", '{:,}'.format(investor_dist_balance)),
+        ("dist_staging_balance_formatted", '{:,}'.format(dist_staging_balance)),
+        ("partnerships_balance_formatted", '{:,}'.format(partnerships_balance)),
+        ("ecosystem_growth_balance_formatted", '{:,}'.format(ecosystem_growth_balance)),
+
         # Formatted values to display
         ("formatted_ogn_usd_price", '${:,}'.format(ogn_usd_price)),
         ("formatted_circulating_supply", '{:,}'.format(circulating_supply)),
@@ -227,7 +239,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("formatted_reserved_tokens", '{:,}'.format(reserved_tokens)),
         ("formatted_staked_user_count", '{:,}'.format(staked_user_count)),
         ("formatted_staked_token_count", '{:,}'.format(staked_token_count)),
-
+        ("created_at_formatted", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p"))
     ])
 
     return out_data

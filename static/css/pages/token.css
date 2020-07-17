@@ -1,5 +1,6 @@
 .tokens-page {
   padding-top: 6.875rem;
+  font-weight: normal;
 }
 
 .tokens-page .countdown-section .mailing-list {
@@ -57,6 +58,10 @@
   align-items: center;
 }
 
+.tokens-page .app-showcase.grey {
+  background-color: #fafbfc;
+}
+
 .tokens-page .app-showcase .showcase-content {
   flex: 1;
   text-align: left;
@@ -82,8 +87,8 @@
   display: block;
   font-size: 0.875rem;
   font-style: italic;
-  color: #dbe6eb;
-  margin-top: 1.25rem
+  color: #212529;
+  margin-top: 1.25rem;
 }
 
 .tokens-page .app-showcase .showcase-image {
@@ -155,7 +160,79 @@
 .tokens-page .exchanges-section h2 {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 2.25rem;
+  font-family: Poppins;
+  font-size: 38px;
+  color: #061d2a;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.tokens-page .exchanges-section .dark-button {
+  min-width: 309px;
+  height: 52px;
+  border-radius: 26px;
+  background-color: #061d2a;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.tokens-page .exchanges-section .button-holder {
+  margin-bottom: 22px;
+}
+
+.tokens-page .exchanges-section .dark-button:hover {
+  background-color: #162d3a;
+}
+
+.tokens-page .exchanges-section .subtitle {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #061d2a;
+}
+
+.tokens-page .exchanges-section .subtitle2 {
+  margin-bottom: 57px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  color: #638298;
+}
+
+.tokens-page .exchanges-section .statistic {
+  min-width: 298px;
+  min-height: 128px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white);
+  padding: 25px 20px;
+  margin: 11px;
+}
+
+.tokens-page .exchanges-section .exchange-holder {
+  margin-left: -71px;
+}
+
+.tokens-page .exchanges-section .statistic.purple {
+  background-color: #6e3bea;
+}
+
+.tokens-page .exchanges-section .statistic.green {
+  background-color: #26d198;
+}
+
+.tokens-page .exchanges-section .statistic.blue {
+  background-color: #26d198;
+}
+
+.tokens-page .exchanges-section .statistic .text {
+  font-size: 38px;
 }
 
 .tokens-page .token-exchange img {
@@ -177,7 +254,41 @@
   width: 100%;
 }
 
-.tokens-page .cmc-text {
+.tokens-page .discounts-section {
+  color: white;
+  background-color: #007cff;
+}
+
+.tokens-page .discounts-section .text {
+  margin-bottom: 56px;
+  max-width: 715px;
+}
+
+.tokens-page .discounts-section .btn {
+  margin-bottom: 66px;
+  min-width: 309px;
+  min-height: 52px;
+  border-radius: 26px;
+  border: solid 1px var(--white);
+  font-weight: normal;
+}
+
+.tokens-page .discounts-section h2 {
+  font-family: Poppins;
+  font-size: 32px;
+  margin-top: 74px;
+}
+
+.tokens-page .discounts-section .text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.tokens-page .discounts-section img {
+  max-width: 100%;
+}
+
+.tokens-page .dark-btn {
   font-size: 0.75rem;
   color: #333;
 }
@@ -232,6 +343,10 @@
 
   .tokens-page .showcase-content.higher {
     margin-top: 0px;
+  }
+
+  .tokens-page .exchanges-section .exchange-holder {
+    margin-left: 0px;
   }
 }
 

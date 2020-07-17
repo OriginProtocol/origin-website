@@ -144,6 +144,7 @@
   max-width: 700px;
   margin: 3rem auto;
   padding: 4rem;
+  margin-bottom: 90px;
 }
 
 .dshop .contact-box h3 {
@@ -199,6 +200,10 @@
   justify-content: center;
   margin-bottom: 3rem;
   text-align: center;
+  max-width: 80%;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dshop .customer-logos img {
@@ -209,6 +214,18 @@
 
 .dshop .customer-logos .solana-logo {
   height: 38px;
+}
+
+.dshop .customer-logos .kyber {
+  height: 65px;
+}
+
+.dshop .customer-logos .contentos {
+  height: 48px;
+}
+
+.dshop .customer-logos .ternio {
+  height: 44px;
 }
 
 .dshop .features .laptop {
@@ -249,6 +266,39 @@
   width: 74px;
   height: 74px;
   margin-bottom: 1.25rem;
+}
+
+.dshop .testimonial {
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 80px;
+}
+
+.dshop .testimonial .title {
+  font-family: Helvetica;
+  margin-bottom: -65px;
+  font-size: 150px;
+  color: #007cff;
+  font-weight: 900;
+}
+
+.dshop .testimonial .footer-text {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.dshop .testimonial .text {
+  max-width: 730px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.45;
+  text-align: center;
+  color: black;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
@@ -294,6 +344,11 @@
   .dshop .contact-box {
     width: 100%;
     padding: 2.5rem 1.5rem;
+    margin-bottom: 0px;
+  }
+
+  .dshop .testimonial .text {
+    font-size: 18px;
   }
 
   .dshop .contact-box h3 {

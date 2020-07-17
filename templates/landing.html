@@ -40,7 +40,7 @@
   <!-- Countdown section -->
   <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
     {% if OGN_ALREADY_LAUNCHED %}
-      <h1 class="clock-title">{{gettext("Origin Tokens have launched!")}}</h1>
+      <h1 class="clock-title">{{gettext("Be the first to hear when we launch new products, and announce important partnerships!")}}</h1>
     {% else %}
       <h1 class="clock-title mb-0">{{gettext("Participate in the Origin Token (OGN) distribution")}}</h1>
       <div class="clock d-flex align-items-center justify-content-center mt-0">
@@ -61,12 +61,13 @@
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->
   <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Origin Products")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("Origin’s suite of products is revolutionizing how people shop and conduct business online. Buy and sell on our marketplace app, create a decentralized e-commerce store, or stake OGN for great deals.")}}</div>
+    <h1>{{gettext("Origin Platform")}}</h1>
+    <div class="segment-subtitle mx-3">{{gettext("The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store, lock up OGN for great deals, and buy and sell on our marketplace app. ")}}</div>
+    <a class="mb-5 mt-0 btn btn-dark d-flex justify-content-center align-items-center" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">
+      {{gettext("Check out our products")}}</a>
     <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="prod-image" src="/static/img/product/origin-products.png" srcset="/static/img/product/origin-products@2x.png 2x, /static/img/product/origin-products@3x.png 3x" >
+      <img class="prod-image" src="/static/img/landing/origin-products.png" srcset="/static/img/landing/origin-products@2x.png 2x, /static/img/landing/origin-products@3x.png 3x" >
     </div>
-    <a class="mb-5 mt-0 mt-md-3 btn btn-dark btn-inverse" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">Check out our products</a>
   </div>
   <!-- The sharing economy section -->
   <div class="sharing-economy">
@@ -168,15 +169,86 @@
   </div>
   <!-- Featured partner -->
   <div class="featured-partner d-flex flex-column justify-content-center align-items-center">
-    <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Partner")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("Trips Community is building a homesharing DApp in Italy with 3,000 hosts.")}}</div>
-    <div class="box d-flex flex-column-reverse flex-md-row">
-      <div class="col-12 col-md-6 text d-flex flex-column">
-        <div>{{gettext("“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”")}}</div>
-        <div class="fname mt-auto">{{gettext("Luca De Giglio")}}</div>
-        <div class="position">{{gettext("Founder, Trips Community")}}</div>
+    <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Partners")}}</h1>
+    <div class="container">
+      <div class="col-12">
+        <div
+          id="featuredPartners"
+          class="carousel slide"
+          data-touch="true"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#featuredPartners"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#featuredPartners" data-slide-to="1"></li>
+            <!--<li data-target="#featuredPartners" data-slide-to="2"></li>-->
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="featured-investor d-flex flex-column-reverse flex-md-row"
+              >
+                <div class="investor-data col-md-6">
+                  <div class="investor-quote">
+                    {{gettext("Origin Marketplace featured in Samsung Blockchain Store")}}
+                  </div>
+                </div>
+                <div class="investor-image col-md-6 p-0 d-flex">
+                  <img src="/static/img/landing/samsungStoreSmall.png" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="featured-investor d-flex flex-column-reverse flex-md-row"
+              >
+                <div class="investor-data col-md-6">
+                  <div class="investor-quote">
+                    {{gettext("“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”")}}
+                  </div>
+                  <div class="investor-info">
+                    <div class="investor-name">
+                      {{gettext("Luca De Giglio")}}
+                    </div>
+                    <div class="investor-title">
+                      {{gettext("Founder, Trips Community")}}
+                    </div>
+                  </div>
+                </div>
+                <div class="investor-image col-md-6 p-0 d-flex">
+                  <img src="/static/img/landing/luca-photo2@3x.jpg" />
+                </div>
+              </div>
+            </div>
+            <!--<div class="carousel-item">
+              <div
+                class="featured-investor d-flex flex-column-reverse flex-md-row"
+              >
+                <div class="investor-data col-md-6">
+                  <div class="investor-quote">
+                    {{gettext("“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”")}}
+                  </div>
+                  <div class="investor-info">
+                    <div class="investor-name">
+                      {{gettext("Luca De Giglio")}}
+                    </div>
+                    <div class="investor-title">
+                      {{gettext("Founder, Trips Community")}}
+                    </div>
+                  </div>
+                </div>
+                <div class="investor-image col-md-6 p-0 d-flex">
+                  <img src="/static/img/landing/luca-photo2@3x.jpg" />
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
       </div>
-      <img class="col-12 col-md-6 p-0 align-self-center" src="/static/img/landing/luca-photo2@3x.jpg"/>
     </div>
   </div>
   <!-- Featured video -->
@@ -229,7 +301,6 @@
     </div>
     <a class="white-button-blue-border" target="_blank" rel="noopener noreferrer" href="https://medium.com/originprotocol">{{gettext("Read more on Medium")}}</a>
   </div>
-
   {% include 'footer.html' %}
 </main>
 

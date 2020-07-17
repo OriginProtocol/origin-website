@@ -75,6 +75,50 @@
   margin-bottom: 17px;
 }
 
+.dashboard-page .locked-tokens-section .additional-token-metrics .subtitle {
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.dashboard-page .locked-tokens-section hr {
+  width: 100%;
+  height: 1px;
+  background-color: #fafbfc;
+  margin-bottom: 60px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric-holder .metric:not(:last-child) {
+  margin-right: 45px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics h3 {
+  margin-bottom: 29px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric {
+  max-width: 142px;
+  font-family: Lato;
+  font-size: 14px;
+  color: black;
+  font-weight: normal;
+  margin-bottom: 28px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric.bigger {
+  max-width: 146px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric .name {
+  margin-bottom: 5px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric .value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: auto;
+}
+
 .dashboard-page .locked-token-widget {
   margin-top: 28px;
 }
@@ -102,6 +146,14 @@
   margin-left: 5px;;
 }
 
+.dashboard-page .subtitle2 {
+  margin-bottom: 57px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #638298;
+  margin-top: 30px;
+}
+
 .dashboard-page .reserved-wallets {
   margin: 20px 0;
 }
@@ -118,6 +170,18 @@
   font-size: 14px;
   font-weight: bold;
   flex: 160px 0 0;
+}
+
+.dashboard-page .reserved-wallet .wallet-balance {
+  font-size: 11px;
+  font-weight: normal;
+  color: black;
+  flex: 1;
+  text-align: right;
+}
+
+.dashboard-page .reserved-wallet .placeholder {
+  min-width: 50px;
 }
 
 .dashboard-page .reserved-wallet .wallet-address {
@@ -162,6 +226,49 @@
   margin-right: 20px;
 }
 
+.dashboard-page .exchanges-section {
+  padding: 60px 20px 70px 20px;
+}
+
+.dashboard-page .exchanges-section h3 {
+  margin-bottom: 30px;
+  margin-top: 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: #061d2a;
+}
+
+.dashboard-page .exchanges-section .exchanges {
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange img {
+  max-height: 18px;
+  margin: 22px 0px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.medium img {
+  max-height: 20px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.large img {
+  max-height: 22px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.larger img {
+  max-height: 30px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.xxl img {
+  max-height: 32px;
+}
+
+.dashboard-page .exchanges-section a {
+  font-size: 14px;
+  font-weight: normal;
+  color: #007cff;
+}
+
 @media (max-width: 767px) {
   .dashboard-page .stats-widget {
     margin: 0 0 20px 0;
@@ -170,6 +277,14 @@
   .dashboard-page .chart-legends.grid-type {
     display: grid;
     grid-template-columns: repeat(1, 0fr);
+  }
+
+  .dashboard-page .reserved-wallet .placeholder {
+    display: none;
+  }
+
+  .dashboard-page h3 {
+    text-align: center;
   }
 } 
 
