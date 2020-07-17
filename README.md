@@ -143,6 +143,14 @@ We use both the python and the nginx buildpacks:
 	heroku buildpacks:set heroku/python
 	heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nginx
 
+## Connect to Heroku instance
+
+In order to run Celery jobs manually you can ssh into Heroku staging with: 
+`heroku ps:exec --app staging-originprotocol-com` 
+
+or into Heroku production
+`heroku ps:exec --app originprotocol-com` 
+
 ## Contributing
 
 We'd love to have you join us and contribute to this project. Please join our [#engineering channel on Discord](http://www.originprotocol.com/discord) and read our [guidelines on contributing](http://docs.originprotocol.com/#contributing) to get started.

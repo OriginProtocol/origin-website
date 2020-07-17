@@ -1,0 +1,14 @@
+TODO: 
+
+Create a service account and have the credentials for it.
+Service account stuff in the app engine configuration.
+
+Define a table schema. (can use the API, franck uses the console)
+cli testing tool use `bg`
+
+// dash means replace
+bq load -replace --source_format=NEWLINE_DELIMITED_JSON dshop.products ./products.json ./product_schema.json
+
+// upload script needs to be resilient to any failure states
+
+// separate some of the data into separate column
