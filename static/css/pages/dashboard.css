@@ -226,6 +226,49 @@
   margin-right: 20px;
 }
 
+.dashboard-page .exchanges-section {
+  padding: 60px 20px 70px 20px;
+}
+
+.dashboard-page .exchanges-section h3 {
+  margin-bottom: 30px;
+  margin-top: 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: #061d2a;
+}
+
+.dashboard-page .exchanges-section .exchanges {
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange img {
+  max-height: 18px;
+  margin: 22px 0px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.medium img {
+  max-height: 20px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.large img {
+  max-height: 22px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.larger img {
+  max-height: 30px;
+}
+
+.dashboard-page .exchanges-section .exchanges .token-exchange.xxl img {
+  max-height: 32px;
+}
+
+.dashboard-page .exchanges-section a {
+  font-size: 14px;
+  font-weight: normal;
+  color: #007cff;
+}
+
 @media (max-width: 767px) {
   .dashboard-page .stats-widget {
     margin: 0 0 20px 0;
@@ -238,6 +281,10 @@
 
   .dashboard-page .reserved-wallet .placeholder {
     display: none;
+  }
+
+  .dashboard-page h3 {
+    text-align: center;
   }
 } 
 
