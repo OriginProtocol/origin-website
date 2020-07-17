@@ -222,6 +222,14 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("partnerships_address", partnerships_address),
         ("ecosystem_growth_address", ecosystem_growth_address),
 
+        # formatted wallet balances
+        ("foundation_reserve_balance_formatted", '{:,}'.format(foundation_reserve_balance)),
+        ("team_dist_balance_formatted", '{:,}'.format(team_dist_balance)),
+        ("investor_dist_balance_formatted", '{:,}'.format(investor_dist_balance)),
+        ("dist_staging_balance_formatted", '{:,}'.format(dist_staging_balance)),
+        ("partnerships_balance_formatted", '{:,}'.format(partnerships_balance)),
+        ("ecosystem_growth_balance_formatted", '{:,}'.format(ecosystem_growth_balance)),
+
         # Formatted values to display
         ("formatted_ogn_usd_price", '${:,}'.format(ogn_usd_price)),
         ("formatted_circulating_supply", '{:,}'.format(circulating_supply)),
@@ -230,7 +238,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("formatted_reserved_tokens", '{:,}'.format(reserved_tokens)),
         ("formatted_staked_user_count", '{:,}'.format(staked_user_count)),
         ("formatted_staked_token_count", '{:,}'.format(staked_token_count)),
-        ("created_at", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p"))
+        ("created_at_formatted", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p"))
     ])
 
     return out_data

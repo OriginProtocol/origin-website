@@ -105,9 +105,18 @@
   margin-bottom: 28px;
 }
 
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric.bigger {
+  max-width: 146px;
+}
+
+.dashboard-page .locked-tokens-section .additional-token-metrics .metric .name {
+  margin-bottom: 5px;
+}
+
 .dashboard-page .locked-tokens-section .additional-token-metrics .metric .value {
   font-size: 24px;
   font-weight: bold;
+  margin-top: auto;
 }
 
 .dashboard-page .locked-token-widget {
@@ -137,6 +146,14 @@
   margin-left: 5px;;
 }
 
+.dashboard-page .subtitle2 {
+  margin-bottom: 57px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #638298;
+  margin-top: 30px;
+}
+
 .dashboard-page .reserved-wallets {
   margin: 20px 0;
 }
@@ -153,6 +170,18 @@
   font-size: 14px;
   font-weight: bold;
   flex: 160px 0 0;
+}
+
+.dashboard-page .reserved-wallet .wallet-balance {
+  font-size: 11px;
+  font-weight: normal;
+  color: black;
+  flex: 1;
+  text-align: right;
+}
+
+.dashboard-page .reserved-wallet .placeholder {
+  min-width: 50px;
 }
 
 .dashboard-page .reserved-wallet .wallet-address {
@@ -205,6 +234,10 @@
   .dashboard-page .chart-legends.grid-type {
     display: grid;
     grid-template-columns: repeat(1, 0fr);
+  }
+
+  .dashboard-page .reserved-wallet .placeholder {
+    display: none;
   }
 } 
 
