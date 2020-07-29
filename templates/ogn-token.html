@@ -11,21 +11,21 @@ endwith %}
       <div class="d-flex flex-column flex-md-row justify-content-center mb-3">
         <div class="statistic d-flex flex-column purple">
           <div class="d-flex flex-row">
-            <img src="/static/img/ognToken/price-icon.svg"/>
+            <img src="/static/img/ognToken/price-icon.svg" className="mr-2" />
             <div>{{gettext("Last Price")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_ogn_usd_price"]}}</div>
         </div>
         <div class="statistic d-flex flex-column green">
           <div class="d-flex flex-row">
-            <img src="/static/img/ognToken/circulating-supply-icon.svg"/>
+            <img src="/static/img/ognToken/circulating-supply-icon.svg" className="mr-2" />
             <div>{{gettext("Circulating Supply")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_circulating_supply"]}}</div>
         </div>
         <div class="statistic d-flex flex-column blue">
           <div class="d-flex flex-row">
-            <img src="/static/img/ognToken/market-cap-icon.svg"/>
+            <img src="/static/img/ognToken/market-cap-icon.svg" className="mr-2" />
             <div>{{gettext("Market Cap")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_market_cap"]}}</div>
