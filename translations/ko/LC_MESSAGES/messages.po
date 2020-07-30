@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-17 17:15+0000\n"
+"POT-Creation-Date: 2020-07-30 18:28+0000\n"
 "PO-Revision-Date: 2020-06-18 14:24+0000\n"
 "Last-Translator: \n"
 "Language: ko_KR\n"
@@ -364,7 +364,7 @@ msgstr "<span class='green'> 국경 및 지불 제약 없는 </span> 성능 활�
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "암호화폐 혁명의 최첨단에서 함께하세요. 당신의 댑(DApp) 은 메타마스크 및 다양하게 사용되는 모바일 지갑들과 호환이 가능합니다."
 
-#: templates/creator.html:135 templates/product.html:140
+#: templates/creator.html:135 templates/product.html:128
 msgid "Features"
 msgstr "기능"
 
@@ -522,8 +522,8 @@ msgid "Locked Tokens"
 msgstr "잠긴 토큰"
 
 #: templates/dashboard.html:134
-msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals."
-msgstr "많은 투자자와 팀원이 자발적으로 잠금을 강화했습니다. 잠긴 토큰에는 만약 잠금을 강화하지 않았더라면 언락되어 순환 공급에 포함될 수도 있을 토큰이 포함됩니다. 이 숫자는 이 번호에는 오리진 딜의 사용자가 잠근 OGN도 포함됩니다."
+msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply."
+msgstr ""
 
 #: templates/dashboard.html:139
 msgid "Total number of locked tokens"
@@ -570,10 +570,14 @@ msgid "Ecosystem Growth"
 msgstr "생태계 성장"
 
 #: templates/dashboard.html:248
-msgid "OGN is listed on"
+msgid "Centralized Exchanges"
 msgstr ""
 
-#: templates/dashboard.html:315
+#: templates/dashboard.html:311
+msgid "Decentralized Exchanges"
+msgstr ""
+
+#: templates/dashboard.html:333
 msgid "See more on Coinmarketcap >"
 msgstr ""
 
@@ -590,7 +594,7 @@ msgid "Our open-source codebase is being developed by a global network of contri
 msgstr "우리의 오픈 소스 코드베이스는 전 세계 기고자 네트워크에 의해 개발되고 있습니다."
 
 #: templates/developers.html:21 templates/developers.html:58
-#: templates/footer.html:40
+#: templates/footer.html:39
 msgid "Mobile Apps"
 msgstr "모바일 앱"
 
@@ -684,8 +688,8 @@ msgstr ""
 
 #: templates/dshop.html:22 templates/dshop.html:157
 #: templates/navbar-dshop.html:28
-msgid "Request a demo"
-msgstr "데모 요청"
+msgid "Try Dshop"
+msgstr ""
 
 #: templates/dshop.html:31 templates/navbar-dshop.html:17
 msgid "Features & Benefits"
@@ -817,7 +821,7 @@ msgid "read the"
 msgstr "읽기"
 
 #: templates/extension-rewards.html:206 templates/footer.html:27
-#: templates/footer.html:108 templates/privacy.html:16
+#: templates/footer.html:107 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr "개인정보처리방침"
 
@@ -855,15 +859,15 @@ msgstr "오리진의 뉴스레터를 구독하세요. 사용자 이메일은 비
 msgid "Enter your email"
 msgstr "이메일 주소를 입력해주세요"
 
-#: templates/footer.html:18 templates/footer.html:99 templates/mobile.html:31
+#: templates/footer.html:18 templates/footer.html:98 templates/mobile.html:31
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr "저작권 © 2019 Origin Protocol Inc. 모든 권리 보유."
 
-#: templates/footer.html:21 templates/footer.html:102
+#: templates/footer.html:21 templates/footer.html:101
 msgid "Help"
 msgstr "도움"
 
-#: templates/footer.html:24 templates/footer.html:105 templates/tos.html:16
+#: templates/footer.html:24 templates/footer.html:104 templates/tos.html:16
 msgid "Terms of Service"
 msgstr "서비스 약관"
 
@@ -871,93 +875,89 @@ msgstr "서비스 약관"
 msgid "Overview"
 msgstr "개요"
 
-#: templates/footer.html:37 templates/product.html:69
-msgid "Origin Deals"
-msgstr "오리진 딜"
-
-#: templates/footer.html:38 templates/product.html:29
+#: templates/footer.html:37 templates/product.html:29
 msgid "Dshop"
 msgstr "Dshop"
 
-#: templates/footer.html:39
+#: templates/footer.html:38
 msgid "Marketplace DApp"
 msgstr ""
 
-#: templates/footer.html:44
+#: templates/footer.html:43
 msgid "Videos"
 msgstr "비디오"
 
-#: templates/footer.html:45 templates/navbar.html:84
+#: templates/footer.html:44 templates/navbar.html:84
 #: templates/whitepaper.html:19
 msgid "Whitepaper"
 msgstr "백서"
 
-#: templates/footer.html:46
+#: templates/footer.html:45
 msgid "Developers"
 msgstr "개발자"
 
-#: templates/footer.html:47
+#: templates/footer.html:46
 msgid "GitHub"
 msgstr "깃 허브"
 
-#: templates/footer.html:48
+#: templates/footer.html:47
 msgid "Docs"
 msgstr "문서"
 
-#: templates/footer.html:52 templates/navbar.html:69
+#: templates/footer.html:51 templates/navbar.html:69
 msgid "About"
 msgstr "소개"
 
-#: templates/footer.html:53 templates/navbar.html:72
+#: templates/footer.html:52 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:44 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr "팀"
 
-#: templates/footer.html:54 templates/navbar.html:75
+#: templates/footer.html:53 templates/navbar.html:75
 msgid "Investors"
 msgstr "투자자"
 
-#: templates/footer.html:55
+#: templates/footer.html:54
 msgid "OGN"
 msgstr "OGN"
 
-#: templates/footer.html:56
+#: templates/footer.html:55
 msgid "Jobs"
 msgstr "채용"
 
-#: templates/footer.html:60
+#: templates/footer.html:59
 msgid "Facebook"
 msgstr "페이스북(Facebook)"
 
-#: templates/footer.html:63
+#: templates/footer.html:62
 msgid "Twitter"
 msgstr "트위터(Twitter)"
 
-#: templates/footer.html:66
+#: templates/footer.html:65
 msgid "Medium"
 msgstr "미디엄(Medium)"
 
-#: templates/footer.html:69
+#: templates/footer.html:68
 msgid "Youtube"
 msgstr "유튜브(Youtube)"
 
-#: templates/footer.html:72
+#: templates/footer.html:71
 msgid "Instagram"
 msgstr "인스타그램(Instagram)"
 
-#: templates/footer.html:75
+#: templates/footer.html:74
 msgid "Telegram"
 msgstr "텔레그램(Telegram)"
 
-#: templates/footer.html:78
+#: templates/footer.html:77
 msgid "Reddit"
 msgstr "레딧(Reddit)"
 
-#: templates/footer.html:81
+#: templates/footer.html:80
 msgid "Discord"
 msgstr "디스코드(Discord)"
 
-#: templates/footer.html:91
+#: templates/footer.html:90
 msgid "VK"
 msgstr "VK"
 
@@ -1416,7 +1416,7 @@ msgid "Origin Platform"
 msgstr ""
 
 #: templates/landing.html:65
-msgid "The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store, lock up OGN for great deals, and buy and sell on our marketplace app. "
+msgid "The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store and buy and sell on our marketplace app. "
 msgstr ""
 
 #: templates/landing.html:67
@@ -1544,11 +1544,11 @@ msgstr "Origin 프로토콜 - 모바일"
 msgid "Buy and Sell on the Origin Marketplace"
 msgstr "Origin 마켓 플레이스에서 구매 및 판매"
 
-#: templates/mobile.html:18 templates/product.html:88
+#: templates/mobile.html:18 templates/product.html:76
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr "오리진(Origin) 플랫폼을 기반으로하는 오리진 본사 앱에서 숙박 공유를 경험하거나, 콘서트 티켓을 구입하거나, 프리랜서를 고용해보세요."
 
-#: templates/mobile.html:27 templates/product.html:96
+#: templates/mobile.html:27 templates/product.html:84
 msgid "Download Android App"
 msgstr "안드로이드 앱 다운받기"
 
@@ -1586,7 +1586,7 @@ msgstr ""
 msgid "Last Price"
 msgstr ""
 
-#: templates/ogn-token.html:35 templates/product.html:106
+#: templates/ogn-token.html:35 templates/product.html:94
 msgid "Available on"
 msgstr "사용 가능"
 
@@ -1602,36 +1602,11 @@ msgstr ""
 msgid "Visit CoinMarketCap"
 msgstr ""
 
-#: templates/ogn-token.html:128
-msgid "Unlock Discounts"
-msgstr ""
-
-#: templates/ogn-token.html:129
-#, python-format
-msgid "Lock Origin Tokens (OGN) on Origin Deals to unlock discounts on Amazon. Save up to 20%% on your purchases. Your OGN is returned to you after a short lock-up period."
-msgstr ""
-
-#: templates/ogn-token.html:136
-msgid "Try Origin Deals"
-msgstr ""
-
-#: templates/ogn-token.html:155
-msgid "Staking"
-msgstr ""
-
-#: templates/ogn-token.html:157
-msgid "Stake Origin Tokens (OGN) to activate unbelievable discounts on Origin Deals. Your tokens get locked up so that you are eligible for discounts, and after some time passes, you get all your OGN back to use however you want."
-msgstr ""
-
-#: templates/ogn-token.html:159
-msgid "Only available in the United States"
-msgstr ""
-
-#: templates/ogn-token.html:170
+#: templates/ogn-token.html:130
 msgid "Commissions"
 msgstr "수수료"
 
-#: templates/ogn-token.html:172
+#: templates/ogn-token.html:132
 msgid ""
 "Promote your listings across the Origin flagship app and\n"
 "            third-party apps with Origin Commissions. Pay with OGN to get\n"
@@ -1645,11 +1620,11 @@ msgstr ""
 "            판매자가 상품 판매를 완료할 수 있도록 도와줌으로써, \n"
 "            오리진 토큰(OGN) 을 얻을 수 있습니다."
 
-#: templates/ogn-token.html:198
+#: templates/ogn-token.html:158
 msgid "Payments"
 msgstr "지불"
 
-#: templates/ogn-token.html:200
+#: templates/ogn-token.html:160
 msgid ""
 "Use the Origin Tokens (OGN) that you've earned in Origin\n"
 "            Rewards to pay for goods and services. Sellers earn larger stakes in\n"
@@ -1659,11 +1634,11 @@ msgstr ""
 "            상품 및 서비스에 대한 비용을 지불하세요. 판매자는 선호 지불 방법으로 \n"
 "            OGN을 수락하여 네트워크에서 더 큰 지분을 얻습니다."
 
-#: templates/ogn-token.html:212 templates/whitepaper/platform.html:197
+#: templates/ogn-token.html:172 templates/whitepaper/platform.html:197
 msgid "Origin Rewards"
 msgstr "오리진 리워드"
 
-#: templates/ogn-token.html:214
+#: templates/ogn-token.html:174
 msgid ""
 "Earn your stake in the Origin network today. Users can\n"
 "            earn Origin Tokens (OGN) by verifying their profiles, referring\n"
@@ -1675,7 +1650,7 @@ msgstr ""
 "            미디어에서 오리진에 대한 뉴스를 공유, 주요 판매자들의 상품을 구매와 같은 방법을 통해 \n"
 "            오리진 토큰(OGN) 을 모아보세요."
 
-#: templates/ogn-token.html:219
+#: templates/ogn-token.html:179
 msgid "Not available in the United States"
 msgstr "미국에서는 사용할 수 없습니다"
 
@@ -1825,291 +1800,279 @@ msgstr "Dshop을 기반으로 구축한 온라인 상점"
 msgid "...and others"
 msgstr ""
 
-#: templates/product.html:71
-msgid "Lock Origin Tokens (OGN) to unlock great discounts on Amazon"
-msgstr ""
-
-#: templates/product.html:74
-msgid "Try Origin Deals now"
-msgstr "지금 오리진 딜을 사용해보세요"
-
-#: templates/product.html:82
+#: templates/product.html:70
 msgid "Buy and sell on Origin"
 msgstr "오리진(Origin) 에서 사고 팔기"
 
-#: templates/product.html:83
+#: templates/product.html:71
 msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr "오리진(Origin) 플랫폼은 수백 개의 탈중앙화된 P2P 마켓 플레이스를 지원할 것입니다. 지금 오리진 본사 앱을 다운로드 해보세요."
 
-#: templates/product.html:87
+#: templates/product.html:75
 msgid "Origin Marketplace"
 msgstr "오리진 마켓플레이스"
 
-#: templates/product.html:98
+#: templates/product.html:86
 msgid "Visit us on the web"
 msgstr "웹 상에서 오리진(Origin) 을 만나보세요"
 
-#: templates/product.html:99
+#: templates/product.html:87
 msgid "shoporigin.com"
 msgstr "shoporigin.com"
 
-#: templates/product.html:102
+#: templates/product.html:90
 msgid "Featured on"
 msgstr "기능/특징"
 
-#: templates/product.html:120
+#: templates/product.html:108
 msgid "Decentralized marketplaces powered by Origin"
 msgstr "오리진이 선보이는 블록체인 기반의 탈중앙화 마켓플레이스"
 
-#: templates/product.html:122
+#: templates/product.html:110
 msgid "See the Origin Platform in action at shoporigin.com"
 msgstr "Shoporigin.com에서 오리진(Origin) 플랫폼을 경험해보세요."
 
-#: templates/product.html:124
+#: templates/product.html:112
 msgid "Buy and sell today"
 msgstr "지금 구매 그리고 판매를 시작해보세요"
 
-#: templates/product.html:126
+#: templates/product.html:114
 msgid "Other marketplaces built on the Origin Platform"
 msgstr "오리진(Origin) 플랫폼 기반으로 구축된 다른 앱"
 
-#: templates/product.html:147
+#: templates/product.html:135
 msgid "Self-sovereign Identity"
 msgstr "자기주권신원(Self-Sovereign Identity)"
 
-#: templates/product.html:149
+#: templates/product.html:137
 msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
 msgstr "자신의 데이터를 소유하고 보호하세요. 프로필은 이동이 가능하며 모든 오리진(Origin) 기반의 앱에서 사용이 가능합니다."
 
-#: templates/product.html:158
+#: templates/product.html:146
 msgid "Encrypted Messaging"
 msgstr "암호화된 메시징(Messaging)"
 
-#: templates/product.html:160
+#: templates/product.html:148
 msgid "Send secure, private messages to other buyers and sellers on the platform."
 msgstr "플랫폼상에서 다른 구매자와 판매자에게 안전한 개인 메시지를 보냅니다."
 
-#: templates/product.html:169
+#: templates/product.html:157
 msgid "Permissionless Payments"
 msgstr "허가 없는 결제(Permissionless Payments)"
 
-#: templates/product.html:171
+#: templates/product.html:159
 msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
 msgstr "오리진 토큰 (OGN), 이더 (ETH) 또는 메이커 다이 (DAI) 중에서 선택하여 구매 및 판매하세요."
 
-#: templates/product.html:180
+#: templates/product.html:168
 msgid "Reputation Systems"
 msgstr "평판(Reputation) 시스템"
 
-#: templates/product.html:182
+#: templates/product.html:170
 msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
 msgstr "중앙집권적인 앱과 동일하게 거래에 대한 등급을 부여하고 리뷰를 남기세요."
 
-#: templates/product.html:191
+#: templates/product.html:179
 msgid "Blockchain-Powered Transactions"
 msgstr "블록체인 거래"
 
-#: templates/product.html:193
+#: templates/product.html:181
 msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
 msgstr "오리진 마켓플레이스의 스마트 컨트렉트(Smart Contract) 에 자금이 에스크로됩니다. 구매자와 판매자는 중개인없이 물건을 사고팔 수 있습니다."
 
-#: templates/product.html:202
+#: templates/product.html:190
 msgid "Arbitration Services"
 msgstr "중재(Arbitration) 서비스"
 
-#: templates/product.html:204
+#: templates/product.html:192
 msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
 msgstr "오리진(Origin) 사용 또는 제 3자 중재(arbitration) 서비스를 선택하여 양측 거래 당사자 모두의 안전을 유지합니다."
 
-#: templates/product.html:215
+#: templates/product.html:203
 msgid "How it works"
 msgstr "작동 방법"
 
-#: templates/product.html:224
+#: templates/product.html:212
 msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
 msgstr "구매자는 디앱(DApp) 을 통해 블록체인 상에 등록된 판매자의 상품 목록을 검색하고 탐색합니다."
 
-#: templates/product.html:230
+#: templates/product.html:218
 msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
 msgstr "구매자는 마켓플레이스 스마트 컨트렉트(smart contract) 에 구매 제안 및 에스크로 결제를 제출합니다."
 
-#: templates/product.html:236
+#: templates/product.html:224
 msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
 msgstr "판매자는 예비 구매자의 구매 제안을 수락 또는 거부 한 후, 해당 거래에 대한 다음 단계를 진행합니다."
 
-#: templates/product.html:242
+#: templates/product.html:230
 msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
 msgstr "구매 제안이 완료된 후, 스마트 컨트렉트는 판매자에게 에스크로 된 예치된 거래 대금을 전달합니다."
 
-#: templates/product.html:252
+#: templates/product.html:240
 msgid "Check out our updated whitepaper"
 msgstr "업데이트된 백서를 읽어보세요"
 
-#: templates/product.html:256
+#: templates/product.html:244
 msgid "Read our whitepaper"
 msgstr "백서 읽기"
 
-#: templates/product.html:266
+#: templates/product.html:254
 msgid "Milestones"
 msgstr "이정표"
 
-#: templates/product.html:272 templates/whitepaper/roadmap.html:7
+#: templates/product.html:260 templates/whitepaper/roadmap.html:7
 msgid "May 2017"
 msgstr "2017년 5월"
 
-#: templates/product.html:273 templates/whitepaper/roadmap.html:8
+#: templates/product.html:261 templates/whitepaper/roadmap.html:8
 msgid "Began initial development"
 msgstr "초기 개발 시작"
 
-#: templates/product.html:277 templates/whitepaper/roadmap.html:12
+#: templates/product.html:265 templates/whitepaper/roadmap.html:12
 msgid "September 2017"
 msgstr "2017년 9월"
 
-#: templates/product.html:278 templates/whitepaper/roadmap.html:13
+#: templates/product.html:266 templates/whitepaper/roadmap.html:13
 msgid "Released initial whitepaper"
 msgstr "초기 백서 출시"
 
-#: templates/product.html:282 templates/whitepaper/roadmap.html:22
+#: templates/product.html:270 templates/whitepaper/roadmap.html:22
 msgid "December 2017"
 msgstr "2017년 12월"
 
-#: templates/product.html:283 templates/whitepaper/roadmap.html:23
+#: templates/product.html:271 templates/whitepaper/roadmap.html:23
 msgid "Launched Alpha on Ethereum testnet"
 msgstr "이더리움(Ethereum) 테스트넷 상 알파 버전 출시"
 
-#: templates/product.html:287 templates/whitepaper/roadmap.html:37
+#: templates/product.html:275 templates/whitepaper/roadmap.html:37
 msgid "October 2018"
 msgstr "2018년 10월 "
 
-#: templates/product.html:288 templates/whitepaper/roadmap.html:38
+#: templates/product.html:276 templates/whitepaper/roadmap.html:38
 msgid "Launched Beta on Ethereum mainnet"
 msgstr "이더리움(Ethereum) 메인넷 상 베타 버전 출시"
 
-#: templates/product.html:292 templates/whitepaper/roadmap.html:42
+#: templates/product.html:280 templates/whitepaper/roadmap.html:42
 msgid "February 2019"
 msgstr "2019년 2월"
 
-#: templates/product.html:294 templates/whitepaper/roadmap.html:44
+#: templates/product.html:282 templates/whitepaper/roadmap.html:44
 msgid "Launched Marketplace Creator 1.0 and our first mobile apps"
 msgstr "마켓플레이스 크리에이터(Marketplace Creator) 1.0 및 첫번째 모바일 앱 출시"
 
-#: templates/product.html:295 templates/whitepaper/roadmap.html:45
+#: templates/product.html:283 templates/whitepaper/roadmap.html:45
 msgid "Supported first partner app launches"
 msgstr "첫번째 파트너 앱 출시 지원"
 
-#: templates/product.html:300 templates/whitepaper/roadmap.html:50
+#: templates/product.html:288 templates/whitepaper/roadmap.html:50
 msgid "April 2019"
 msgstr "2019년 4월"
 
-#: templates/product.html:302 templates/whitepaper/roadmap.html:52
+#: templates/product.html:290 templates/whitepaper/roadmap.html:52
 msgid "Launched Origin Rewards"
 msgstr "오리진 리워드 출시"
 
-#: templates/product.html:303 templates/whitepaper/roadmap.html:53
+#: templates/product.html:291 templates/whitepaper/roadmap.html:53
 msgid "Launched stablecoin payments"
 msgstr "스테이블코인(stablecoin) 결제 출시"
 
-#: templates/product.html:308 templates/whitepaper/roadmap.html:58
+#: templates/product.html:296 templates/whitepaper/roadmap.html:58
 msgid "July 2019"
 msgstr "2019년 7월"
 
-#: templates/product.html:310 templates/whitepaper/roadmap.html:60
+#: templates/product.html:298 templates/whitepaper/roadmap.html:60
 msgid "Launched shoporigin.com and new mobile apps"
 msgstr "Shoporigin.com 및 새로운 모바일 앱 출시"
 
-#: templates/product.html:311 templates/whitepaper/roadmap.html:61
+#: templates/product.html:299 templates/whitepaper/roadmap.html:61
 msgid "Launched Meta Transactions"
 msgstr "메타 트랜잭션(Meta Transaction) 출시"
 
-#: templates/product.html:316 templates/whitepaper/roadmap.html:66
+#: templates/product.html:304 templates/whitepaper/roadmap.html:66
 msgid "September 2019"
 msgstr "2019년 9월"
 
-#: templates/product.html:318
+#: templates/product.html:306
 msgid "Launched OGN Commissions"
 msgstr "OGN 커미션 출시"
 
-#: templates/product.html:323
+#: templates/product.html:311
 msgid "Q4 2019"
 msgstr "Q4 2019"
 
-#: templates/product.html:325
+#: templates/product.html:313
 msgid "Distributed investor OGN tokens"
 msgstr "OGN 토큰 투자자 배포"
 
-#: templates/product.html:326
+#: templates/product.html:314
 msgid "Launched Dshop"
 msgstr "Dshop 출시"
 
-#: templates/product.html:331 templates/whitepaper/roadmap.html:83
+#: templates/product.html:319 templates/whitepaper/roadmap.html:83
 msgid "Q1 2020"
 msgstr "Q1 2020"
 
-#: templates/product.html:333 templates/whitepaper/roadmap.html:85
+#: templates/product.html:321 templates/whitepaper/roadmap.html:85
 msgid "Launched Mainnet 1.0"
 msgstr "메인넷 1.0 출시"
 
-#: templates/product.html:334
+#: templates/product.html:322
 msgid "Listed on Binance"
 msgstr "바이낸스 상장"
 
-#: templates/product.html:335 templates/whitepaper/roadmap.html:86
+#: templates/product.html:323 templates/whitepaper/roadmap.html:86
 msgid "Launched OGN as payment token"
 msgstr "결제 토큰으로 OGN 출시"
 
-#: templates/product.html:336
+#: templates/product.html:324
 msgid "Added to Samsung Blockchain Wallet"
 msgstr "삼성 블록 체인 월렛에 추가"
 
-#: templates/product.html:341 templates/whitepaper/roadmap.html:92
+#: templates/product.html:329 templates/whitepaper/roadmap.html:92
 msgid "Q2 2020"
 msgstr "Q2 2020"
 
-#: templates/product.html:343
-msgid "Launched Origin Deals"
-msgstr "오리진 딜 출시"
-
-#: templates/product.html:344
+#: templates/product.html:331
 msgid "Listed on additional exchanges"
 msgstr "거래소 추가 상장"
 
-#: templates/product.html:345
+#: templates/product.html:332
 msgid "Support Dshop partner launches"
 msgstr "Dshop 파트너 출시 지원"
 
-#: templates/product.html:346 templates/whitepaper/roadmap.html:96
+#: templates/product.html:333 templates/whitepaper/roadmap.html:96
 msgid "Launch OGN staking model"
 msgstr "OGN 스테이킹(staking) 모델 출시"
 
-#: templates/product.html:351 templates/whitepaper/roadmap.html:101
+#: templates/product.html:338 templates/whitepaper/roadmap.html:101
 msgid "Q3 2020"
 msgstr "Q3 2020"
 
-#: templates/product.html:353 templates/whitepaper/roadmap.html:103
+#: templates/product.html:340 templates/whitepaper/roadmap.html:103
 msgid "Launch new developer tools and expand developer adoption"
 msgstr "새로운 개발자도구(developer tools) 의 출시와 개발자 채용 확대"
 
-#: templates/product.html:354
+#: templates/product.html:341
 msgid "Expand Dshop partnerships and store types"
 msgstr ""
 
-#: templates/product.html:359 templates/whitepaper/roadmap.html:108
+#: templates/product.html:346 templates/whitepaper/roadmap.html:108
 msgid "Q4 2020"
 msgstr "Q4 2020"
 
-#: templates/product.html:361 templates/whitepaper/roadmap.html:110
+#: templates/product.html:348 templates/whitepaper/roadmap.html:110
 msgid "Launch OGN as a governance token"
 msgstr "거버넌스 토큰(Governance Token) 으로 OGN 출시"
 
-#: templates/product.html:373
+#: templates/product.html:360
 msgid "Origin Token"
 msgstr "오리진 토큰(Origin Token)"
 
-#: templates/product.html:376
+#: templates/product.html:363
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr "오리진 토큰(OGN) 은 네트워크의 건강과 성장을 보장하는 인센티브 토큰입니다."
 
-#: templates/product.html:380
+#: templates/product.html:367
 msgid "Learn more about Origin Token"
 msgstr "오리진 토큰(Origin Token) 에 대해 더 자세히 알아보기"
 
@@ -4066,4 +4029,46 @@ msgstr "이런! 뭔가 잘못되었습니다."
 
 #~ msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
 #~ msgstr "2020 년 1 월 4 일에 예정된 토큰 출시 일정을 발표했습니다. 이것은 출처에 대한 <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance 's Research Report</a> 에서도 찾을 수 있습니다. 실제 실제 순환 공급은 시간이 지남에 따라 모델링 된 순환 공급과 다를 수 있습니다. 가능하면 모델링 된 순환 공급과 비교할 때 실제 순환 공급을 줄이는 것이 우리의 의도입니다."
+
+#~ msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply. This number also includes OGN that is locked up by users in Origin Deals."
+#~ msgstr "많은 투자자와 팀원이 자발적으로 잠금을 강화했습니다. 잠긴 토큰에는 만약 잠금을 강화하지 않았더라면 언락되어 순환 공급에 포함될 수도 있을 토큰이 포함됩니다. 이 숫자는 이 번호에는 오리진 딜의 사용자가 잠근 OGN도 포함됩니다."
+
+#~ msgid "OGN is listed on"
+#~ msgstr ""
+
+#~ msgid "Request a demo"
+#~ msgstr "데모 요청"
+
+#~ msgid "Origin Deals"
+#~ msgstr "오리진 딜"
+
+#~ msgid "The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store, lock up OGN for great deals, and buy and sell on our marketplace app. "
+#~ msgstr ""
+
+#~ msgid "Unlock Discounts"
+#~ msgstr ""
+
+#~ msgid "Lock Origin Tokens (OGN) on Origin Deals to unlock discounts on Amazon. Save up to 20%% on your purchases. Your OGN is returned to you after a short lock-up period."
+#~ msgstr ""
+
+#~ msgid "Try Origin Deals"
+#~ msgstr ""
+
+#~ msgid "Staking"
+#~ msgstr ""
+
+#~ msgid "Stake Origin Tokens (OGN) to activate unbelievable discounts on Origin Deals. Your tokens get locked up so that you are eligible for discounts, and after some time passes, you get all your OGN back to use however you want."
+#~ msgstr ""
+
+#~ msgid "Only available in the United States"
+#~ msgstr ""
+
+#~ msgid "Lock Origin Tokens (OGN) to unlock great discounts on Amazon"
+#~ msgstr ""
+
+#~ msgid "Try Origin Deals now"
+#~ msgstr "지금 오리진 딜을 사용해보세요"
+
+#~ msgid "Launched Origin Deals"
+#~ msgstr "오리진 딜 출시"
 

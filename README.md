@@ -82,6 +82,15 @@ We use [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running b
 ## Running locally with Docker Compose
 
 You can run the website in combination with a local PostgreSQL, Redis and Celery using [Docker Compose](https://docs.docker.com/compose/).
+```bash
+cd origin-website
+docker-compose up
+```
+
+Note: you can login to the container running the app with the following command:
+```bash
+docker exec -ti origin-website /bin/bash
+```
 
 ## Running cron jobs locally
 Some scripts use Heroku cron jobs. Use the following command to test them locally
