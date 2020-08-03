@@ -11,21 +11,21 @@ endwith %}
       <div class="d-flex flex-column flex-md-row justify-content-center mb-3">
         <div class="statistic d-flex flex-column purple">
           <div class="d-flex flex-row">
-            <img src="/static/img/ognToken/price-icon.svg"/>
+            <img src="/static/img/ognToken/price-icon.svg" class="mr-2" />
             <div>{{gettext("Last Price")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_ogn_usd_price"]}}</div>
         </div>
         <div class="statistic d-flex flex-column green">
           <div class="d-flex flex-row">
-            <img src="/static/img/ognToken/circulating-supply-icon.svg"/>
+            <img src="/static/img/ognToken/circulating-supply-icon.svg" class="mr-2" />
             <div>{{gettext("Circulating Supply")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_circulating_supply"]}}</div>
         </div>
         <div class="statistic d-flex flex-column blue">
           <div class="d-flex flex-row">
-            <img src="/static/img/ognToken/market-cap-icon.svg"/>
+            <img src="/static/img/ognToken/market-cap-icon.svg" class="mr-2" />
             <div>{{gettext("Market Cap")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_market_cap"]}}</div>
@@ -123,47 +123,7 @@ endwith %}
     </div>
   </section>
 
-  <section class="discounts-section my-0 mt-md-5 pt-3">
-    <div class="container d-flex justify-content-center align-items-center flex-column">
-      <h2 class="mb-3">{{gettext("Unlock Discounts")}}</h2>
-      <div class="text text-center">{{gettext("Lock Origin Tokens (OGN) on Origin Deals to unlock discounts on Amazon. Save up to 20%% on your purchases. Your OGN is returned to you after a short lock-up period.")}}</div>
-      <a
-        href="https://origindeals.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-primary"
-      >
-        {{gettext("Try Origin Deals")}}
-      </a>
-      <img src="/static/img/ognToken/unlock-discounts.png" srcset="
-        /static/img/ognToken/unlock-discounts@2x.png 2x,
-        /static/img/ognToken/unlock-discounts@3x.png 3x
-      " />
-    </div>
-  </section>
-
-  <section class="payments-section grey-section pt-0 pt-md-5">
-    <div class="container">
-      <div class="app-showcase image-first d-flex justify-content-center">
-        <div class="showcase-image">
-          <img src="/static/img/ognToken/staking.png" srcset="
-              /static/img/ognToken/staking@2x.png 2x,
-              /static/img/ognToken/staking@3x.png 3x
-            " />
-        </div>
-        <div class="showcase-content">
-          <h1 class="mb-3">{{gettext("Staking")}}</h1>
-          <p>
-            {{gettext("Stake Origin Tokens (OGN) to activate unbelievable discounts on Origin Deals. Your tokens get locked up so that you are eligible for discounts, and after some time passes, you get all your OGN back to use however you want.")}}
-            <span class="unavailable-text">
-              {{gettext("Only available in the United States")}}
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="payments-section">
+  <section class="payments-section grey-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">
         <div class="showcase-content">
@@ -185,7 +145,7 @@ endwith %}
       </div>
     </div>
   </section>
-  <section class="commissions-section grey-section">
+  <section class="commissions-section">
     <div class="container">
       <div class="app-showcase image-first d-flex justify-content-center">
         <div class="showcase-image">
@@ -205,7 +165,7 @@ endwith %}
       </div>
     </div>
   </section>
-  <section class="rewards-section">
+  <section class="rewards-section grey-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">
         <div class="showcase-content higher">
