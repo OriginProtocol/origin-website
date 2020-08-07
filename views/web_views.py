@@ -649,6 +649,7 @@ def assets_all_javascript():
                 "static/js/youkuPlayer.js",
                 "static/js/scrollspy.js",
                 "static/js/dashboard.js",
+                "static/js/dshop.js",
             ],
             True,
         ),
