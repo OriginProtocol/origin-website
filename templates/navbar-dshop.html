@@ -1,37 +1,56 @@
 <div class="navbar-holder dshop">
   <nav class="navbar navbar-expand-lg navbar-origin navbar-dark">
     <div class="mobile-background d-lg-none"></div>
+    <div id="dshop-sidenav" class="d-flex d-md-none dshop-sidenav">
+      <div class="menu-container d-flex flex-column">
+        <div id="dshop-close-button" class="closebtn">&times;</div>
+        <a class="nav-item" href="#features">{{ gettext("Features & Benefits") }}</a>
+        <a class="nav-item" href="#integrations">{{ gettext("Integrations") }}</a>
+        <a class="nav-item" href="#customers">{{ gettext("Our Customers") }}</a>
+        <a 
+          class="outline-button d-flex align-items-center justify-content-center" 
+          href="https://dshop.originprotocol.com"
+          target="_blank"
+          rel="noreferrer noopener"
+        >{{ gettext("Try it - it's free") }}</a>
+      </div>
+    </div>
+    <div id="dshop-background"></div>
     <div class="container">
-      <div class="brand-container">
+      <div class="brand-container d-flex justify-content-between">
         <a class="navbar-brand" href="{{ url_for('index', lang_code=CURRENT_LANGUAGE) }}">
-        <div class="logo-container">
-          <img src="/static/img/dshop/dshop-landing-page.svg"
-            class="origin-logo"
-            alt="Origin Protocol DShop logo">
+          <div class="logo-container">
+            <img src="/static/img/dshop/dshop-landing-page.svg"
+              class="origin-logo"
+              alt="Origin Protocol DShop logo">
           </div>
         </a>
+        <div
+          id="dshop-menu-button"
+          class="d-flex d-md-none mr-2"
+        >
+          <img src="/static/img/menu-icon-light.svg" />
+        </div>
       </div>
-      {% if 'mobile' not in request.path %}
-          <ul class="nav navbar-nav ml-auto d-none d-md-flex">
-            <li class="nav-item">
-              <a class="nav-link" href="#features">{{ gettext("Features & Benefits") }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#integrations">{{ gettext("Integrations") }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#customers">{{ gettext("Our Customers") }}</a>
-            </li>
-            <li class="nav-item">
-              <a 
-                class="outline-button" 
-                href="https://dshop.originprotocol.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >{{ gettext("Try it - it's free") }}</a>
-            </li>
-          </ul>
-      {% endif %}
+      <ul class="nav navbar-nav ml-auto d-none d-md-flex d-none d-md-block">
+        <li class="nav-item">
+          <a class="nav-link" href="#features">{{ gettext("Features & Benefits") }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#integrations">{{ gettext("Integrations") }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#customers">{{ gettext("Our Customers") }}</a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="outline-button" 
+            href="https://dshop.originprotocol.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >{{ gettext("Try it - it's free") }}</a>
+        </li>
+      </ul>
     </div>
   </nav>
 </div>

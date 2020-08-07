@@ -532,11 +532,62 @@
   padding-right: 1.3rem;
 }
 
+.navbar .dshop-sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.navbar #dshop-background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.5s;
+}
+
+.navbar .dshop-sidenav .menu-container {
+  padding: 77px 30px 30px 30px;
+}
+
+.navbar .dshop-sidenav a {
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 35px;
+}
+
+.navbar .dshop-sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 @media (max-width: 768px) {
   .dshop .title-section h1 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 19px;
+    margin-top: 39px;
   }
 
   .dshop .title-section .sub-title {
@@ -564,8 +615,10 @@
 
   .dshop .support-section-2 .title {
     margin-top: 115px;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 45px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .dshop .support-section-2 .info-box {
@@ -658,24 +711,24 @@
 
   .dshop .build-section {
     overflow: hidden;
-  }
-
-  .dshop .build-section {
     padding-left: 0.5rem;
-    padding-right: 0.5rem
+    padding-right: 0.5rem;
+    padding-top: 47px;
+    min-height: 500px;
   }
 
   .dshop .build-section .hero-graphic {
     object-fit: contain;
     position: relative;
-    height: 400px;
+    height: 300px;
     margin-bottom: -25px;
-    margin-left: -180px;
+    margin-left: -140px;
     margin-top: -25px;
   }
 
   .dshop .build-section h1 {
-    margin-top: 3rem;
+    font-size: 18px;
+    line-height: 1.39;
   }
 
   .dshop .content-wrapper {
@@ -832,5 +885,25 @@
 
   .dshop .demo-section {
     height: 230px;
+  }
+
+  .navbar .dshop-sidenav a {
+    font-family: Lato;
+    font-size: 18px;
+    padding: 0px;
+    white-space: nowrap;
+  }
+
+  .navbar .dshop-sidenav .menu-container a.outline-button {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    color: #007cff;
+    width: 196px;
+    height: 43px;
+    border-radius: 5px;
+    border: solid 1px #007cff;
+    margin: auto 0px 0px 0px;
   }
 }
