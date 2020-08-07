@@ -94,17 +94,18 @@
     <div class="brands container d-flex flex-wrap justify-content-center">
       <div class="brand-box d-flex align-items-center justify-content-center">
         <a href="https://stripe.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/static/img/dshop/stripe-icon.svg"/>
+          <img class="stripe" src="/static/img/dshop/stripe-icon.svg"/>
         </a>
       </div>
       <div class="brand-box d-flex align-items-center justify-content-center">
         <a href="https://uphold.com//" target="_blank" rel="noopener noreferrer">
-          <img src="/static/img/dshop/uphold-icon.svg"/>
+          <img class="uphold" src="/static/img/dshop/uphold-icon.svg"/>
         </a>
       </div>
       <div class="brand-box d-flex align-items-center justify-content-center">
         <a href="https://www.printful.com/" target="_blank" rel="noopener noreferrer">
           <img
+            class="printful"
             src="/static/img/dshop/printful.png"
             srcset="/static/img/dshop/printful@2x.png 2x, /static/img/dshop/printful@3x.png 3x"
           />
@@ -112,17 +113,17 @@
       </div>
       <div class="brand-box d-flex align-items-center justify-content-center">
         <a href="https://sendgrid.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/static/img/dshop/sendgrid.svg"/>
+          <img class="sendgrid" src="/static/img/dshop/sendgrid.svg"/>
         </a>
       </div>
       <div class="brand-box d-flex align-items-center justify-content-center">
         <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/static/img/dshop/aws.svg"/>
+          <img class="aws" src="/static/img/dshop/aws.svg"/>
         </a>
       </div>
       <div class="brand-box d-flex align-items-center justify-content-center">
         <a href="https://www.mailgun.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/static/img/dshop/mailgun.svg"/>
+          <img class="mailgun" src="/static/img/dshop/mailgun.svg"/>
         </a>
       </div>
     </div>
@@ -158,12 +159,12 @@
           <img src="/static/img/dshop/brave-logo.svg" class="brave-logo">
         </a>
         <a href="https://kyber.ogn.app/" target="_blank" rel="noopener noreferrer">
-          <img class="swag" src="/static/img/product/kyber-network.svg" class="kyber"/>
+          <img class="swag kyber" src="/static/img/product/kyber-network.svg"/>
         </a>
         <a href="https://store.solana.com" target="_blank" rel="noopener noreferrer">
-          <img src="/static/img/dshop/solana-logo.png"
-            srcset="/static/img/dshop/solana-logo@2x.png 2x,
-                    /static/img/dshop/solana-logo@3x.png 3x"
+          <img src="/static/img/dshop/solana-logo.jpg"
+            srcset="/static/img/dshop/solana-logo@2x.jpg 2x,
+                    /static/img/dshop/solana-logo@3x.jpg 3x"
             class="solana-logo">
         </a>
         <a href="https://store.contentos.io/" target="_blank" rel="noopener noreferrer">
@@ -198,7 +199,7 @@
     </div>
   </section>
 
-  <section class="success-stories">
+  <section class="success-stories" id="customers">
     <div class="container d-flex flex-column">
       <h3>{{gettext("Dshop success stories")}}</h3>
       <div class="success-list d-flex flex-wrap justify-content-center">
