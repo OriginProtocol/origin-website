@@ -296,7 +296,7 @@ def get_ogn_stats():
     stats = json.loads(redis_client.get("ogn_stats") or "{}")
     stats["ogn_supply_stats"]["created_at_formatted_timeago"] = stats["ogn_supply_stats"]["created_at_formatted"]
 
-    if stats["ogn_supply_stats"]["created_at_iso"] != None:
+    if "created_at_iso" in stats["ogn_supply_stats"]:
         stats["ogn_supply_stats"]["created_at_formatted_timeago"] = timeago.format(dateutil.parser.parse(stats["ogn_supply_stats"]["created_at_iso"]), datetime.utcnow())
 
     return stats
