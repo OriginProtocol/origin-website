@@ -159,7 +159,18 @@ class CirculatingSupply(db.Model):
     created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
 
     def __str__(self):
-        return '%s' % (self.name)        
+        return '%s' % (self.name)
+
+class TokenInfo(db.Model):
+    __tablename__ = 'token_info'
+    id = db.Column(db.Integer, primary_key=True)
+    total_supply = db.Column(db.String(255))
+    holders = db.Column(db.Integer())
+    transfers_count = db.Column(db.Integer())
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+
+    def __str__(self):
+        return '%s' % (self.name)
 
 @event.listens_for(Presale, 'after_insert')
 @event.listens_for(Interest, 'after_insert')

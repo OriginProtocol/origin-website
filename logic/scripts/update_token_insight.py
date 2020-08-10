@@ -333,6 +333,32 @@ def fetch_ogn_transactions():
             db.session.add(tx)
             db.session.commit()
 
+# Fetches OGN contract token info
+def fetch_ogn_token_info():
+    print "Checking OGN token info"
+
+    url = "http://api.ethplorer.io/getTokenInfo/%s" % (ogn_contract)
+    results = call_ethplorer(url)
+
+    if "error" in results:
+        print("Error while fetching token info")
+        print(results["error"]["message"])
+        raise ValueError(results["error"]["message"])
+
+    token_info = db_common.get_or_create(
+        db.session, db_models.TokenInfo
+    )
+
+    token_info.total_supply = results["totalSupply"]
+    token_info.holders = results["holdersCount"]
+    token_info.transfers_count = results["transfersCount"]
+
+    db.session.add(token_info)
+    db.session.commit()
+
+    return token_info
+
+
 # Fetches wallet balance from API and stores that to DB
 def fetch_wallet_balance(wallet):
     print "Checking the balance of wallet %s" % (
@@ -417,6 +443,8 @@ if __name__ == "__main__":
         alert_on_balance_drop("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         alert_on_balance_drop("0xDF73aF150b8E446a6D39FDdc2CFA7Bf067B88936", "Dshop", 1)
+        # fetch token info
+        fetch_ogn_token_info()
         # fetch_from_ethplorer()
         fetch_reserved_wallet_balances()
 

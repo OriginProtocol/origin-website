@@ -1,8 +1,10 @@
 import collections
 from datetime import datetime, timedelta
+import dateutil.parser
 import json
 import math
 import os
+import timeago
 
 from config import constants
 from database import db, db_models, db_common
@@ -81,7 +83,6 @@ def fetch_wallet_balance(wallet):
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
     print("Fetching token prices...")
-
     try:
         url = "https://api.coingecko.com/api/v3/simple/price?ids=origin-protocol%2Cethereum&vs_currencies=usd"
         raw_json = requests.get(url)
@@ -171,7 +172,10 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
     staked_user_count
     staked_token_count
 
-    number_of_addresses = db.session.query(db_models.EthContact.address).count()
+    number_of_addresses = db_models.TokenInfo.query.order_by(
+        db_models.TokenInfo.created_at.desc()
+    ).first().holders
+
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         foundation_reserve_address,
         team_dist_address,
@@ -239,7 +243,8 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("formatted_reserved_tokens", '{:,}'.format(reserved_tokens)),
         ("formatted_staked_user_count", '{:,}'.format(staked_user_count)),
         ("formatted_staked_token_count", '{:,}'.format(staked_token_count)),
-        ("created_at_formatted", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p"))
+        ("created_at_formatted", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p")),
+        ("created_at_iso", datetime.utcnow().isoformat()),
     ])
 
     return out_data
@@ -288,7 +293,13 @@ def update_circulating_supply(circulating_supply):
 def get_ogn_stats():
     redis_client = redis_helper.get_redis_client()
 
-    return json.loads(redis_client.get("ogn_stats") or "{}")
+    stats = json.loads(redis_client.get("ogn_stats") or "{}")
+    stats["ogn_supply_stats"]["created_at_formatted_timeago"] = stats["ogn_supply_stats"]["created_at_formatted"]
+
+    if stats["ogn_supply_stats"]["created_at_iso"] != None:
+        stats["ogn_supply_stats"]["created_at_formatted_timeago"] = timeago.format(dateutil.parser.parse(stats["ogn_supply_stats"]["created_at_iso"]), datetime.utcnow())
+
+    return stats
 
 # Fetches reserved wallet balances and token price 
 # and recalculates things to be shown in
