@@ -3,26 +3,34 @@
 
     var setupScrollListener = function () {
       var scrollImages = $('.parallax-scroll')
+      var scrollImagesFaster = $('.parallax-scroll-faster')
       if (scrollImages.length === 0)
         return;
 
       var isMobileDevice = window.innerWidth <= 768
       
       var scrollFunction = function(e) {
-        for (var i = 0; i < scrollImages.length; i++) {
-          var image = scrollImages.get(i)
-          var rect = image.getBoundingClientRect();
-          var startOffset = isMobileDevice ? 40 : 20;
-          var yOffset = 40;
-          var scrollDelta = isMobileDevice ? 30 : 80;
+        var setImageOffsets = function(images, isFast) {
+          for (var i = 0; i < images.length; i++) {
+            var image = images.get(i)
+            var rect = image.getBoundingClientRect();
+            var startOffset = isFast ? 0 : (isMobileDevice ? 40 : 20);
+            var yOffset = isFast ? 0 : 40;
+            var yScrollOffset = isFast ? 0 : 30;
+            var scrollDelta = isMobileDevice ?
+              (isFast ? 45 : 30) :
+              (isFast ? 120 : 60);
 
-          var inViewHeight = window.innerHeight + rect.height + scrollDelta;
+            var inViewHeight = window.innerHeight + rect.height + scrollDelta;
 
-          if (rect.y > -rect.height && rect.y < window.innerHeight + scrollDelta) {
-            yOffset = (rect.y + rect.height) / inViewHeight * scrollDelta;
-            image.style.top = `${yOffset + startOffset}px`;
+            if (rect.y > -rect.height && rect.y < window.innerHeight + scrollDelta) {
+              yOffset = yScrollOffset + (rect.y + rect.height) / inViewHeight * scrollDelta;
+              image.style.top = `${yOffset + startOffset}px`;
+            }
           }
         }
+        setImageOffsets(scrollImages, false);
+        setImageOffsets(scrollImagesFaster, true);
       }
       
       scrollFunction();
