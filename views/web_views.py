@@ -5,7 +5,7 @@ import re
 import sys
 import calendar
 
-#from flask_cors import CORS, cross_origin
+from flask_cors import CORS, cross_origin
 from app import app
 from database import db, db_models
 
@@ -44,8 +44,8 @@ from logic.scripts import token_stats
 # Translation: change path of messages.mo files
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "../translations"
 babel = Babel(app)
-#cors = CORS(app)
-#app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 recaptcha = ReCaptcha(app=app)
 if not recaptcha.is_enabled:
@@ -198,7 +198,7 @@ def whitepaper():
 def product_brief():
     return redirect("/whitepaper", code=302)
 
-#@cross_origin()
+@cross_origin()
 @app.route("/mailing-list/join", methods=["POST"], strict_slashes=False)
 def join_mailing_list():
     if not "email" in request.form:
