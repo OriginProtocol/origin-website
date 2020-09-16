@@ -29,8 +29,10 @@
 }
 
 .ousd-banner h1 {
+  font-size: 2.75rem;
   text-align: left;
   margin: 0;
+  white-space: nowrap;
 }
 
 .ousd-banner h1 span {
@@ -38,13 +40,22 @@
 }
 
 .ousd-banner .banner-content .desc {
+  font-size: 1.125rem;
+  font-weight: normal;
   margin-bottom: 1.25rem;
 }
+
+.ousd-banner .banner-content a {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: normal;
+ }
 
 .ousd-banner .banner-content a:after {
   content: '›';
   display: inline-block;
   font-size: 1.25rem;
+  font-weight: bold;
   margin-left: 3px;
 }
 
@@ -61,5 +72,20 @@
 
   .ousd-banner h1 span {
     display: block;
+    margin-bottom: 10px;
   }
+
+  .ousd-banner h1 {
+    font-size: 1.9rem;
+    line-height: 1.23;
+  }
+
+  .ousd-banner .banner-content .desc {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ousd-banner .banner-content a {
+      font-size: 0.875rem;
+   }
 } 
