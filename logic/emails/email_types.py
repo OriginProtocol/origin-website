@@ -14,6 +14,9 @@ EMAILS = {
     'welcome1': {
         'subject': 'Thanks for joining Origin Protocol'
     },
+    'welcome_ousd': {
+        'subject': 'Thanks for joining Origin Protocol'
+    },
     # 'welcome2': {
     #     'subject': 'Getting started with decentralized applications'
     # },

@@ -107,10 +107,14 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
 
     return new_contact
 
-def send_welcome(email):
+def send_welcome(email, source):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         return
-    email_types.send_email_type('welcome1', DEFAULT_SENDER, email)
+
+    if source is not None and source.lower() == 'ousd':
+        email_types.send_email_type('welcome_ousd', DEFAULT_SENDER, email)
+    else:
+        email_types.send_email_type('welcome1', DEFAULT_SENDER, email)
 
 def presale(full_name, email, desired_allocation, desired_allocation_currency, citizenship, sending_addr, ip_addr):
 

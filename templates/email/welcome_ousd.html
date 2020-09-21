@@ -1,0 +1,23 @@
+{% extends 'email/email_base.html' %}
+
+{% block content %}
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr>
+		<td style="padding: 40px; font-family: 'Lato', sans-serif; font-size: 15px; line-height: 20px; color: #444444;">
+
+			Thanks for checking out <a href="https://www.ousd.com">OUSD</a> and subscribing to our email list. 
+			<br><br>
+			At Origin, our mission is to enable true peer-to-peer commerce. We believe in lowering transaction fees, promoting free and transparent commerce, serving the unbanked, and giving early participants in the community a stake in the network. Here’s a video from Fortune, featuring the founders of Origin sharing their mission to enable true peer-to-peer commerce.
+			<br><br>
+			<a href="https://www.youtube.com/watch?v=e70bvBw1oOo">
+				<img src="{{universal.BASE_URL }}/static/img/emails/fortune-youtube-screenshot.png" width="100%" />
+			</a>
+			<br><br>
+			If you have any questions as you’re getting started with <a href="https://www.shoporigin.com">Origin’s decentralized marketplace</a>, please feel free to respond to this email or you can find our entire team on <a href="https://www.originprotocol.com/discord">Discord</a>.
+		</td>
+	</tr>
+</table>
+
+{% endblock %}
+

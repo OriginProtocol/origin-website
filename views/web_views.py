@@ -208,6 +208,7 @@ def join_mailing_list():
         return jsonify(success=False, message=gettext("Invalid email"))
 
     # optional fields
+    source = request.form.get("source") or None
     eth_address = request.form.get("eth_address") or None
     first_name = request.form.get("first_name") or None
     last_name = request.form.get("last_name") or None
@@ -249,7 +250,7 @@ def join_mailing_list():
         # If it is a new contact and not a backfill, send a welcome email.
         if new_contact and not backfill:
             log("Sending welcome email")
-            mailing_list.send_welcome(email)
+            mailing_list.send_welcome(email, source)
 
         # Add the entry to the Sendgrid contact list.
         if new_contact:
