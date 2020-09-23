@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-30 18:28+0000\n"
+"POT-Creation-Date: 2020-09-23 01:09+0000\n"
 "PO-Revision-Date: 2020-06-18 14:24+0000\n"
 "Last-Translator: \n"
 "Language: ru_RU\n"
@@ -22,20 +22,20 @@ msgstr "Технологические партнеры"
 msgid "Building on Origin"
 msgstr "Строим на Origin"
 
-#: logic/emails/mailing_list.py:118 logic/emails/mailing_list.py:186
-#: views/web_views.py:320
+#: logic/emails/mailing_list.py:122 logic/emails/mailing_list.py:190
+#: views/web_views.py:324
 msgid "Please enter a valid email address"
 msgstr "Пожалуйста введите адрес действующей электронной почты"
 
-#: logic/emails/mailing_list.py:136 logic/emails/mailing_list.py:203
+#: logic/emails/mailing_list.py:140 logic/emails/mailing_list.py:207
 msgid "Ooops! Something went wrong."
 msgstr "Упс! Что-то пошло не так."
 
-#: logic/emails/mailing_list.py:157 logic/emails/mailing_list.py:214
+#: logic/emails/mailing_list.py:161 logic/emails/mailing_list.py:218
 msgid "Thanks! We'll be in touch soon."
 msgstr "Спасибо! Мы скоро свяжемся с Вами."
 
-#: logic/emails/mailing_list.py:189
+#: logic/emails/mailing_list.py:193
 msgid "Please enter a valid website address"
 msgstr "Пожалуйста, введите действующий адрес веб-сайта"
 
@@ -351,7 +351,7 @@ msgstr "Используйте силу, <span class='green'>платежей б
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "Будьте на передовой криптовалютной революции. Ваш DApp совместим с Metamask и новыми популярными мобильными кошельками."
 
-#: templates/creator.html:135 templates/product.html:128
+#: templates/creator.html:135 templates/product.html:138
 msgid "Features"
 msgstr "Особенности"
 
@@ -524,8 +524,8 @@ msgstr ""
 msgid "Total number of tokens founders have sold"
 msgstr ""
 
-#: templates/dashboard.html:166 templates/ogn-token.html:34
-msgid "Last updated on "
+#: templates/dashboard.html:166
+msgid "Last updated "
 msgstr ""
 
 #: templates/dashboard.html:170
@@ -657,7 +657,7 @@ msgstr "graphql"
 msgid "html/css"
 msgstr "html/css"
 
-#: templates/developers.html:131
+#: templates/developers.html:131 templates/dshop.html:149
 msgid "Join us on Discord"
 msgstr "Присоединяйтесь к нам на Discord"
 
@@ -665,86 +665,163 @@ msgstr "Присоединяйтесь к нам на Discord"
 msgid "Origin Protocol - DShop"
 msgstr "Протокол Origin - DShop"
 
+#: templates/dshop.html:14
+msgid "Create your free online store in minutes & harness the power of a decentralized platform"
+msgstr ""
+
 #: templates/dshop.html:15
-msgid "Create your decentralized online store"
-msgstr "Создайте Ваш децентрализованный интернет-магазин"
-
-#: templates/dshop.html:16
-msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform. Get started for free."
+msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform built on the decentralized web.  Get started for free and launch your store in a day."
 msgstr ""
 
-#: templates/dshop.html:22 templates/dshop.html:157
-#: templates/navbar-dshop.html:28
-msgid "Try Dshop"
+#: templates/dshop.html:21 templates/dshop.html:327
+msgid "Try it – it’s free"
 msgstr ""
 
-#: templates/dshop.html:31 templates/navbar-dshop.html:17
-msgid "Features & Benefits"
-msgstr "Особенности и преимущества"
-
-#: templates/dshop.html:38
-msgid "Fast setup, no commitments"
-msgstr "Быстрая настройка, никаких обязательств"
-
-#: templates/dshop.html:41
-msgid "No commitments or long-term contracts."
+#: templates/dshop.html:35
+msgid "We’re here to support you–no matter what business you’re in"
 msgstr ""
 
-#: templates/dshop.html:49 templates/product.html:46
-msgid "Free to run"
-msgstr "Бесплатное использование"
+#: templates/dshop.html:36
+msgid "Create an ecommerce website backed by powerful tools that help you find customers and drive sales."
+msgstr ""
 
-#: templates/dshop.html:52
-msgid "Dshop is free to run, and transaction fees are limited to crypto gas costs (typically a few cents per transaction)."
-msgstr "Dshop полностью бесплатен, а комиссионные за транзакции ограничены лишь стоимостью газа (обычно несколько центов за транзакцию)."
+#: templates/dshop.html:58
+msgid "A better way to do online commerce. Run your business on the new web."
+msgstr ""
 
-#: templates/dshop.html:63
-msgid "Sell what you want"
-msgstr "Продавайте всё, что угодно"
+#: templates/dshop.html:64
+msgid "Multiple shops, 1 account"
+msgstr ""
 
-#: templates/dshop.html:66
-msgid "There are no restrictions on what you can sell, now or ever."
-msgstr "Нет никаких ограничений на то, что вы когда-либо захотите продать."
+#: templates/dshop.html:65
+msgid "Launch a decentralised shop in a day - no commitments or long-term contracts."
+msgstr ""
 
-#: templates/dshop.html:74
-msgid "Secure fiat and crypto payments"
-msgstr "Безопасные фиатные и криптовалютные платежи"
+#: templates/dshop.html:71
+msgid "Easy crypto payments"
+msgstr ""
 
-#: templates/dshop.html:77
+#: templates/dshop.html:72 templates/dshop.html:281
 msgid "Accept every way your customers want to pay.  Fast, secure payments with no extra fees."
 msgstr "Принимаем любые формы оплаты. Быстрые, безопасные платежи без дополнительных комиссий."
 
-#: templates/dshop.html:90 templates/navbar-dshop.html:20
+#: templates/dshop.html:78
+msgid "Secure, distributed data"
+msgstr ""
+
+#: templates/dshop.html:79
+msgid "Keep your data safe with IPFS, a resilient, censorship resistant system of file storage."
+msgstr ""
+
+#: templates/dshop.html:85
+msgid "Infinitely extensible"
+msgstr ""
+
+#: templates/dshop.html:86
+msgid "Integrate with your favorite third party services or build your very own."
+msgstr ""
+
+#: templates/dshop.html:92
+msgid "Work with all your existing tools"
+msgstr ""
+
+#: templates/dshop.html:93
+msgid "Explore integrations to speed up your workflow, or build your own custom integrations on our open source platform."
+msgstr ""
+
+#: templates/dshop.html:135
+msgid "…and many more on the way!"
+msgstr ""
+
+#: templates/dshop.html:141
+msgid "Build on top of the world’s first decentralized e-commerce platform"
+msgstr ""
+
+#: templates/dshop.html:142
+msgid "Join our rapidly growing global community of developers and add your own features to our ever-expanding platform."
+msgstr ""
+
+#: templates/dshop.html:158 templates/navbar-dshop.html:9
+#: templates/navbar-dshop.html:43
 msgid "Our Customers"
 msgstr "Наши клиенты"
 
-#: templates/dshop.html:92
+#: templates/dshop.html:160
 msgid "Meet the companies who are choosing Dshop to build and grow their decentralized online stores"
 msgstr "Представляем Вам компании, которые выбирают Dshop для создания и развития своих децентрализованных интернет-магазинов"
 
-#: templates/dshop.html:124
+#: templates/dshop.html:195 templates/dshop.html:294
 msgid "Here to help you succeed"
 msgstr "Здесь, чтобы помочь вам добиться успеха"
 
-#: templates/dshop.html:126 templates/dshop.html:131
-msgid "Speak with a real person when something’s not right."
-msgstr "Живая служба поддержки. Только живые люди."
+#: templates/dshop.html:197
+msgid "Speak with a real person when something’s not right. You can email our in-house support anytime, 24/7."
+msgstr ""
 
-#: templates/dshop.html:128 templates/dshop.html:132
-msgid "You can email our in-house support anytime, 24/7."
-msgstr "Вы можете обратиться в нашу собственную службу поддержки в любое время, 24/7."
-
-#: templates/dshop.html:135
+#: templates/dshop.html:199 templates/dshop.html:305
 msgid "Still have more questions? Feel free to contact us."
 msgstr "Остались вопросы? Напишите нам."
 
-#: templates/dshop.html:137
+#: templates/dshop.html:202 templates/dshop.html:307
 msgid "Contact Us"
 msgstr "Написать нам"
 
-#: templates/dshop.html:151
-msgid "Ready to start selling for free?"
-msgstr "Готовы начать продавать бесплатно?"
+#: templates/dshop.html:209
+msgid "Dshop success stories"
+msgstr ""
+
+#: templates/dshop.html:218
+msgid "“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”"
+msgstr ""
+
+#: templates/dshop.html:221
+msgid "- Jackie Lim , Senior B.D. Director, Contentos"
+msgstr ""
+
+#: templates/dshop.html:235 templates/navbar-dshop.html:7
+#: templates/navbar-dshop.html:37
+msgid "Features & Benefits"
+msgstr "Особенности и преимущества"
+
+#: templates/dshop.html:242
+msgid "Fast setup, no commitments"
+msgstr "Быстрая настройка, никаких обязательств"
+
+#: templates/dshop.html:245
+msgid "No commitments or long-term contracts."
+msgstr ""
+
+#: templates/dshop.html:253 templates/product.html:46
+msgid "Free to run"
+msgstr "Бесплатное использование"
+
+#: templates/dshop.html:256
+msgid "Dshop is free to run, and transaction fees are limited to crypto gas costs (typically a few cents per transaction)."
+msgstr "Dshop полностью бесплатен, а комиссионные за транзакции ограничены лишь стоимостью газа (обычно несколько центов за транзакцию)."
+
+#: templates/dshop.html:267
+msgid "Sell what you want"
+msgstr "Продавайте всё, что угодно"
+
+#: templates/dshop.html:270
+msgid "There are no restrictions on what you can sell, now or ever."
+msgstr "Нет никаких ограничений на то, что вы когда-либо захотите продать."
+
+#: templates/dshop.html:278
+msgid "Secure fiat and crypto payments"
+msgstr "Безопасные фиатные и криптовалютные платежи"
+
+#: templates/dshop.html:296 templates/dshop.html:301
+msgid "Speak with a real person when something’s not right."
+msgstr "Живая служба поддержки. Только живые люди."
+
+#: templates/dshop.html:298 templates/dshop.html:302
+msgid "You can email our in-house support anytime, 24/7."
+msgstr "Вы можете обратиться в нашу собственную службу поддержки в любое время, 24/7."
+
+#: templates/dshop.html:321
+msgid "Ready to start selling today?"
+msgstr ""
 
 #: templates/extension-rewards.html:1
 msgid "Origin Protocol - March Rewards"
@@ -846,9 +923,13 @@ msgstr "Подпишитесь, чтобы оставаться на связи.
 msgid "Enter your email"
 msgstr "Введите вашу электронную почту"
 
-#: templates/footer.html:18 templates/footer.html:98 templates/mobile.html:31
-msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
-msgstr "© 2019 Origin Protocol Inc. Все права защищены."
+#: templates/footer.html:18
+msgid "Copyright © "
+msgstr ""
+
+#: templates/footer.html:18
+msgid "Origin Protocol Inc. All rights reserved."
+msgstr ""
 
 #: templates/footer.html:21 templates/footer.html:101
 msgid "Help"
@@ -947,6 +1028,10 @@ msgstr "Discord"
 #: templates/footer.html:90
 msgid "VK"
 msgstr "VK"
+
+#: templates/footer.html:98 templates/mobile.html:31
+msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
+msgstr "© 2019 Origin Protocol Inc. Все права защищены."
 
 #: templates/huobi-launch.html:2 templates/huobi-launch.html:3
 msgid "Origin Huobi Listing"
@@ -1278,7 +1363,7 @@ msgid ""
 "                      changer.\""
 msgstr "\"Origin выделяется из всех других децентрализованных приложений, в которые мы инвестировали, потому что они построили, вероятно, лучшее сообщество, которое мы видели. Для нас это изменило правила игры.\""
 
-#: templates/investors.html:178 templates/team.html:494
+#: templates/investors.html:178 templates/team.html:512
 msgid "Paul Veradittakit"
 msgstr "Пол Верадиттакит"
 
@@ -1366,7 +1451,7 @@ msgstr "Рэндалл Каплан"
 msgid "Founder, Akamai"
 msgstr "Основатель, Akamai"
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:77
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:80
 msgid "Origin Protocol"
 msgstr "Origin Protocol"
 
@@ -1394,11 +1479,11 @@ msgid "Email"
 msgstr "Адрес электронной почты"
 
 #: templates/landing.html:64
-msgid "Origin Platform"
+msgid "Origin Products"
 msgstr ""
 
 #: templates/landing.html:65
-msgid "The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store and buy and sell on our marketplace app. "
+msgid "Origin’s suite of products is revolutionizing how people shop and conduct business online. Effortlessly grow your savings, create a decentralized e-commerce store or buy and sell on our marketplace app."
 msgstr ""
 
 #: templates/landing.html:67
@@ -1526,13 +1611,21 @@ msgstr "Origin Protocol - для смартфонов"
 msgid "Buy and Sell on the Origin Marketplace"
 msgstr "Покупайте и Продавайте на Маркетплейсе Origin"
 
-#: templates/mobile.html:18 templates/product.html:76
+#: templates/mobile.html:18 templates/product.html:86
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr "Арендуйте дом, купите билеты на концерт или наймите работника на нашем флагманском приложении, созданном на платформе Origin."
 
-#: templates/mobile.html:27 templates/product.html:84
+#: templates/mobile.html:27 templates/product.html:94
 msgid "Download Android App"
 msgstr "Загрузите приложение для Android"
+
+#: templates/navbar-dshop.html:8 templates/navbar-dshop.html:40
+msgid "Integrations"
+msgstr ""
+
+#: templates/navbar-dshop.html:15 templates/navbar-dshop.html:51
+msgid "Try it - it's free"
+msgstr ""
 
 #: templates/navbar.html:78
 msgid "Product"
@@ -1570,7 +1663,11 @@ msgstr ""
 msgid "Last Price"
 msgstr ""
 
-#: templates/ogn-token.html:35 templates/product.html:94
+#: templates/ogn-token.html:34
+msgid "Last updated on "
+msgstr ""
+
+#: templates/ogn-token.html:35 templates/product.html:104
 msgid "Available on"
 msgstr "Доступно на"
 
@@ -1625,6 +1722,19 @@ msgstr "Заработайте свою долю в сети Origin уже се�
 #: templates/ogn-token.html:179
 msgid "Not available in the United States"
 msgstr "Недоступно в Соединенных Штатах"
+
+#: templates/ousd-banner.html:8
+msgid "Introducing"
+msgstr ""
+
+#: templates/ousd-banner.html:9
+msgid "The first stablecoin that earns a yield while it's still in your wallet"
+msgstr ""
+
+#: templates/ousd-banner.html:11
+#, python-format
+msgid "Earn 2.91%% APY"
+msgstr ""
 
 #: templates/partner_campaign.html:3 templates/partner_campaign.html:5
 #: templates/referral_campaign.html:3 templates/referral_campaign.html:5
@@ -1772,279 +1882,291 @@ msgstr ""
 msgid "...and others"
 msgstr ""
 
-#: templates/product.html:70
+#: templates/product.html:68
+msgid "Origin Dollar"
+msgstr ""
+
+#: templates/product.html:69
+msgid "The first stablecoin that earns a yield while it's still in your wallet."
+msgstr ""
+
+#: templates/product.html:71
+msgid "Get OUSD"
+msgstr ""
+
+#: templates/product.html:80
 msgid "Buy and sell on Origin"
 msgstr "Покупайте или продавайте на Origin"
 
-#: templates/product.html:71
+#: templates/product.html:81
 msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
 msgstr "Платформа Origin приведет в действие сотни децентрализованных, одноранговых рынков. Загрузите наше флагманское приложение сегодня."
 
-#: templates/product.html:75
+#: templates/product.html:85
 msgid "Origin Marketplace"
 msgstr "Origin Маркетплейс"
 
-#: templates/product.html:86
+#: templates/product.html:96
 msgid "Visit us on the web"
 msgstr "Посетите нас в сети"
 
-#: templates/product.html:87
+#: templates/product.html:97
 msgid "shoporigin.com"
 msgstr "shoporigin.com"
 
-#: templates/product.html:90
+#: templates/product.html:100
 msgid "Featured on"
 msgstr ""
 
-#: templates/product.html:108
+#: templates/product.html:118
 msgid "Decentralized marketplaces powered by Origin"
 msgstr ""
 
-#: templates/product.html:110
+#: templates/product.html:120
 msgid "See the Origin Platform in action at shoporigin.com"
 msgstr "Смотрите платформу Origin в действии на shoporigin.com"
 
-#: templates/product.html:112
+#: templates/product.html:122
 msgid "Buy and sell today"
 msgstr "Покупайте и продавайте сегодня"
 
-#: templates/product.html:114
+#: templates/product.html:124
 msgid "Other marketplaces built on the Origin Platform"
 msgstr ""
 
-#: templates/product.html:135
+#: templates/product.html:145
 msgid "Self-sovereign Identity"
 msgstr "Self-sovereign Identity"
 
-#: templates/product.html:137
+#: templates/product.html:147
 msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
 msgstr "Владейте и защитите свои собственные данные. Ваш профиль является портативным и может использоваться через любое поддерживающее Origin приложение."
 
-#: templates/product.html:146
+#: templates/product.html:156
 msgid "Encrypted Messaging"
 msgstr "Зашифрованный обмен сообщениями"
 
-#: templates/product.html:148
+#: templates/product.html:158
 msgid "Send secure, private messages to other buyers and sellers on the platform."
 msgstr "Отправляйте безопасные личные сообщения другим покупателям и продавцам на платформе."
 
-#: templates/product.html:157
+#: templates/product.html:167
 msgid "Permissionless Payments"
 msgstr "Безлимитные Платежи"
 
-#: templates/product.html:159
+#: templates/product.html:169
 msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
 msgstr "Используйте на свой выбор - токены Origin (OGN), Ether (ETH) или MakerDai (DAI) для покупки и продажи."
 
-#: templates/product.html:168
+#: templates/product.html:178
 msgid "Reputation Systems"
 msgstr "Система Репутации"
 
-#: templates/product.html:170
+#: templates/product.html:180
 msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
 msgstr "Ставьте рейтинги и оставляйте отзывы для ваших транзакций так же, как и на централизованном приложении."
 
-#: templates/product.html:179
+#: templates/product.html:189
 msgid "Blockchain-Powered Transactions"
 msgstr "Блокчейн-Транзакции"
 
-#: templates/product.html:181
+#: templates/product.html:191
 msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
 msgstr "Средства депонируются на нашем смарт-контракте marketplace. Покупайте и продавайте без посредников."
 
-#: templates/product.html:190
+#: templates/product.html:200
 msgid "Arbitration Services"
 msgstr "Арбитражные Услуги"
 
-#: templates/product.html:192
+#: templates/product.html:202
 msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
 msgstr "Используйте Origin или выберите стороннюю арбитражную службу, чтобы обеспечить безопасность противных сторон."
 
-#: templates/product.html:203
+#: templates/product.html:213
 msgid "How it works"
 msgstr "Как это работает"
 
-#: templates/product.html:212
+#: templates/product.html:222
 msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
 msgstr "Покупатели ищут и просматривают листинги продавцов на блокчейне через DApps"
 
-#: templates/product.html:218
+#: templates/product.html:228
 msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
 msgstr "Покупателей подают предложения и депонируют платежи на нашем смарт-контракте маркетплейса"
 
-#: templates/product.html:224
+#: templates/product.html:234
 msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
 msgstr "Продавцы принимают или отклоняют предложения от потенциальных покупателей, а затем выполняют активные предложения"
 
-#: templates/product.html:230
+#: templates/product.html:240
 msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
 msgstr "После того, как предложения будут завершены, смарт-контракт передает депонированные платежи продавцам"
 
-#: templates/product.html:240
+#: templates/product.html:250
 msgid "Check out our updated whitepaper"
 msgstr "Ознакомьтесь с нашим обновленным whitepaper"
 
-#: templates/product.html:244
+#: templates/product.html:254
 msgid "Read our whitepaper"
 msgstr "Прочитайте наш whitepaper"
 
-#: templates/product.html:254
+#: templates/product.html:264
 msgid "Milestones"
 msgstr "Основные этапы"
 
-#: templates/product.html:260 templates/whitepaper/roadmap.html:7
+#: templates/product.html:270 templates/whitepaper/roadmap.html:7
 msgid "May 2017"
 msgstr "Май 2017"
 
-#: templates/product.html:261 templates/whitepaper/roadmap.html:8
+#: templates/product.html:271 templates/whitepaper/roadmap.html:8
 msgid "Began initial development"
 msgstr "Начало первоначальной разработки"
 
-#: templates/product.html:265 templates/whitepaper/roadmap.html:12
+#: templates/product.html:275 templates/whitepaper/roadmap.html:12
 msgid "September 2017"
 msgstr "Сентябрь 2017"
 
-#: templates/product.html:266 templates/whitepaper/roadmap.html:13
+#: templates/product.html:276 templates/whitepaper/roadmap.html:13
 msgid "Released initial whitepaper"
 msgstr "Выпуск технической документации (whitepaper)"
 
-#: templates/product.html:270 templates/whitepaper/roadmap.html:22
+#: templates/product.html:280 templates/whitepaper/roadmap.html:22
 msgid "December 2017"
 msgstr "Декабрь 2017"
 
-#: templates/product.html:271 templates/whitepaper/roadmap.html:23
+#: templates/product.html:281 templates/whitepaper/roadmap.html:23
 msgid "Launched Alpha on Ethereum testnet"
 msgstr "Запуск Альфа-версии на Ethereum testnet"
 
-#: templates/product.html:275 templates/whitepaper/roadmap.html:37
+#: templates/product.html:285 templates/whitepaper/roadmap.html:37
 msgid "October 2018"
 msgstr "Октябрь 2018"
 
-#: templates/product.html:276 templates/whitepaper/roadmap.html:38
+#: templates/product.html:286 templates/whitepaper/roadmap.html:38
 msgid "Launched Beta on Ethereum mainnet"
 msgstr "Запуск Бета-версии на Ethereum mainnet"
 
-#: templates/product.html:280 templates/whitepaper/roadmap.html:42
+#: templates/product.html:290 templates/whitepaper/roadmap.html:42
 msgid "February 2019"
 msgstr "Февраль 2019"
 
-#: templates/product.html:282 templates/whitepaper/roadmap.html:44
+#: templates/product.html:292 templates/whitepaper/roadmap.html:44
 msgid "Launched Marketplace Creator 1.0 and our first mobile apps"
 msgstr "Запуск Marketplace Creator 1.0 и наших первых мобильных приложений"
 
-#: templates/product.html:283 templates/whitepaper/roadmap.html:45
+#: templates/product.html:293 templates/whitepaper/roadmap.html:45
 msgid "Supported first partner app launches"
 msgstr "Поддерживаемые первые запуски партнерского приложения"
 
-#: templates/product.html:288 templates/whitepaper/roadmap.html:50
+#: templates/product.html:298 templates/whitepaper/roadmap.html:50
 msgid "April 2019"
 msgstr "Апрель 2019"
 
-#: templates/product.html:290 templates/whitepaper/roadmap.html:52
+#: templates/product.html:300 templates/whitepaper/roadmap.html:52
 msgid "Launched Origin Rewards"
 msgstr "Запуск Origin Rewards"
 
-#: templates/product.html:291 templates/whitepaper/roadmap.html:53
+#: templates/product.html:301 templates/whitepaper/roadmap.html:53
 msgid "Launched stablecoin payments"
 msgstr "Запущены платежи stablecoin"
 
-#: templates/product.html:296 templates/whitepaper/roadmap.html:58
+#: templates/product.html:306 templates/whitepaper/roadmap.html:58
 msgid "July 2019"
 msgstr "Июль 2019"
 
-#: templates/product.html:298 templates/whitepaper/roadmap.html:60
+#: templates/product.html:308 templates/whitepaper/roadmap.html:60
 msgid "Launched shoporigin.com and new mobile apps"
 msgstr "Запуск shoporigin.com и новых мобильных приложений"
 
-#: templates/product.html:299 templates/whitepaper/roadmap.html:61
+#: templates/product.html:309 templates/whitepaper/roadmap.html:61
 msgid "Launched Meta Transactions"
 msgstr "Запуск Мета-Транзакций"
 
-#: templates/product.html:304 templates/whitepaper/roadmap.html:66
+#: templates/product.html:314 templates/whitepaper/roadmap.html:66
 msgid "September 2019"
 msgstr "Сентябрь 2019"
 
-#: templates/product.html:306
+#: templates/product.html:316
 msgid "Launched OGN Commissions"
 msgstr "Запуск OGN комиссий"
 
-#: templates/product.html:311
+#: templates/product.html:321
 msgid "Q4 2019"
 msgstr "4 квартал 2019"
 
-#: templates/product.html:313
+#: templates/product.html:323
 msgid "Distributed investor OGN tokens"
 msgstr ""
 
-#: templates/product.html:314
+#: templates/product.html:324
 msgid "Launched Dshop"
 msgstr ""
 
-#: templates/product.html:319 templates/whitepaper/roadmap.html:83
+#: templates/product.html:329 templates/whitepaper/roadmap.html:83
 msgid "Q1 2020"
 msgstr "1 квартал 2020"
 
-#: templates/product.html:321 templates/whitepaper/roadmap.html:85
+#: templates/product.html:331 templates/whitepaper/roadmap.html:85
 msgid "Launched Mainnet 1.0"
 msgstr ""
 
-#: templates/product.html:322
+#: templates/product.html:332
 msgid "Listed on Binance"
 msgstr ""
 
-#: templates/product.html:323 templates/whitepaper/roadmap.html:86
+#: templates/product.html:333 templates/whitepaper/roadmap.html:86
 msgid "Launched OGN as payment token"
 msgstr ""
 
-#: templates/product.html:324
+#: templates/product.html:334
 msgid "Added to Samsung Blockchain Wallet"
 msgstr ""
 
-#: templates/product.html:329 templates/whitepaper/roadmap.html:92
+#: templates/product.html:339 templates/whitepaper/roadmap.html:92
 msgid "Q2 2020"
 msgstr "2 квартал 2020"
 
-#: templates/product.html:331
+#: templates/product.html:341
 msgid "Listed on additional exchanges"
 msgstr ""
 
-#: templates/product.html:332
+#: templates/product.html:342
 msgid "Support Dshop partner launches"
 msgstr ""
 
-#: templates/product.html:333 templates/whitepaper/roadmap.html:96
+#: templates/product.html:343 templates/whitepaper/roadmap.html:96
 msgid "Launch OGN staking model"
 msgstr "Запуск ставочной модели OGN"
 
-#: templates/product.html:338 templates/whitepaper/roadmap.html:101
+#: templates/product.html:348 templates/whitepaper/roadmap.html:101
 msgid "Q3 2020"
 msgstr "3 квартал 2020"
 
-#: templates/product.html:340 templates/whitepaper/roadmap.html:103
+#: templates/product.html:350 templates/whitepaper/roadmap.html:103
 msgid "Launch new developer tools and expand developer adoption"
 msgstr "Запуск новых инструментов для разработчиков и расширение внедрения разработчиков"
 
-#: templates/product.html:341
+#: templates/product.html:351
 msgid "Expand Dshop partnerships and store types"
 msgstr ""
 
-#: templates/product.html:346 templates/whitepaper/roadmap.html:108
+#: templates/product.html:356 templates/whitepaper/roadmap.html:108
 msgid "Q4 2020"
 msgstr "4 квартал 2020"
 
-#: templates/product.html:348 templates/whitepaper/roadmap.html:110
+#: templates/product.html:358 templates/whitepaper/roadmap.html:110
 msgid "Launch OGN as a governance token"
 msgstr "Запуск OGN как токена управления"
 
-#: templates/product.html:360
+#: templates/product.html:370
 msgid "Origin Token"
 msgstr "Токен Origin"
 
-#: templates/product.html:363
+#: templates/product.html:373
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr "Origin Token (OGN) - это поощрительный токен, который обеспечивает работоспособность и рост сети."
 
-#: templates/product.html:367
+#: templates/product.html:377
 msgid "Learn more about Origin Token"
 msgstr "Узнайте больше о токене Origin"
 
@@ -2284,8 +2406,9 @@ msgid "Franck Chastagnol"
 msgstr "Франк Частаньоль"
 
 #: templates/team.html:175 templates/team.html:218 templates/team.html:262
-#: templates/whitepaper/team.html:131 templates/whitepaper/team.html:258
-#: templates/whitepaper/team.html:279
+#: templates/team.html:403 templates/whitepaper/team.html:131
+#: templates/whitepaper/team.html:258 templates/whitepaper/team.html:279
+#: templates/whitepaper/team.html:418
 msgid "Senior Engineer"
 msgstr "Старший инженер"
 
@@ -2435,99 +2558,107 @@ msgstr ""
 msgid "Amy has a decade of experience in customer service, sales and administration, and led recruitment for one of Australia’s largest charities. She studied International Business and Linguistics at Griffith University."
 msgstr ""
 
-#: templates/team.html:406
+#: templates/team.html:401 templates/whitepaper/team.html:416
+msgid "Daniel Von Fange"
+msgstr ""
+
+#: templates/team.html:406 templates/whitepaper/team.html:421
+msgid "Daniel brings a strong emphasis on security and data analysis to our team. Daniel has earned a reputation for being able to gather massive amounts of data and create dynamic visualizations at lightning speed."
+msgstr ""
+
+#: templates/team.html:424
 msgid "Community team"
 msgstr "Общественная команда"
 
-#: templates/team.html:415 templates/whitepaper/team.html:433
+#: templates/team.html:433 templates/whitepaper/team.html:449
 msgid "Zoe Hoang"
 msgstr ""
 
-#: templates/team.html:423 templates/whitepaper/team.html:441
+#: templates/team.html:441 templates/whitepaper/team.html:457
 msgid "Spyros Kekos"
 msgstr ""
 
-#: templates/team.html:431 templates/whitepaper/team.html:449
+#: templates/team.html:449 templates/whitepaper/team.html:465
 msgid "Aaron Faulkner"
 msgstr ""
 
-#: templates/team.html:439 templates/whitepaper/team.html:457
+#: templates/team.html:457 templates/whitepaper/team.html:473
 msgid "Moisés Sosa"
 msgstr ""
 
-#: templates/team.html:447 templates/whitepaper/team.html:465
+#: templates/team.html:465 templates/whitepaper/team.html:481
 msgid "Leslie Song"
 msgstr "Лесли Сонг"
 
-#: templates/team.html:458
+#: templates/team.html:476
 msgid "Advisors"
 msgstr "Советники"
 
-#: templates/team.html:468
+#: templates/team.html:486
 msgid "Addison Huegel"
 msgstr "Эддисон Хюгель"
 
-#: templates/team.html:472
+#: templates/team.html:490
 msgid "PR"
 msgstr "Связи с общественностью"
 
-#: templates/team.html:481
+#: templates/team.html:499
 msgid "Melody He"
 msgstr "Мэлоди Хи"
 
-#: templates/team.html:485
+#: templates/team.html:503
 msgid "International BD"
 msgstr "Развитие бизнеса"
 
-#: templates/team.html:498 templates/team.html:511
+#: templates/team.html:516 templates/team.html:529
 msgid "Advisor"
 msgstr "Советник"
 
-#: templates/team.html:507
+#: templates/team.html:525
 msgid "Joey Krug"
 msgstr "Джоуи Круг"
 
-#: templates/team.html:520
+#: templates/team.html:538
 msgid "Andrew Hyde"
 msgstr "Эндрю Хайд"
 
-#: templates/team.html:524 templates/whitepaper/sidebar.html:53
-#: templates/whitepaper/team.html:426
+#: templates/team.html:542 templates/whitepaper/sidebar.html:53
+#: templates/whitepaper/team.html:442
 msgid "Community"
 msgstr "Сообщество"
 
-#: templates/team.html:535
+#: templates/team.html:553
 #, python-format
 msgid "100%% open-source."
 msgstr "100%% открытый исходный код."
 
-#: templates/team.html:536
+#: templates/team.html:554
 msgid " contributors."
 msgstr " вкладчики."
 
-#: templates/team.html:555
+#: templates/team.html:573
 msgid "Want to contribute?"
 msgstr "Хотите внести свой вклад?"
 
-#: templates/team.html:560
+#: templates/team.html:578
 msgid "Visit our GitHub Repository"
 msgstr "Посетите наш Репозиторий GitHub"
 
-#: templates/team.html:562
+#: templates/team.html:580
 msgid "Join our #engineering channel on Discord"
 msgstr "Присоединяйтесь к нашему каналу # engineering на Discord"
 
-#: templates/team.html:573
+#: templates/team.html:591
 msgid "Interested in working at Origin?"
 msgstr "Заинтересованы в работе в Origin?"
 
-#: templates/team.html:577
+#: templates/team.html:595
 msgid ""
 "We are a distributed team and are hiring all around the\n"
 "            world."
 msgstr "Мы - распределенная команда и нанимаем по всему миру."
 
-#: templates/team.html:584
+#: templates/team.html:602
 msgid "View job posts"
 msgstr "Просмотреть работу"
 
@@ -3512,11 +3643,11 @@ msgid ""
 "            the marketing and incubation entity for Du Capital."
 msgstr ""
 
-#: templates/whitepaper/team.html:472
+#: templates/whitepaper/team.html:488
 msgid "Developer <span>community</span>"
 msgstr "Сообщество разработчиков"
 
-#: templates/whitepaper/team.html:475
+#: templates/whitepaper/team.html:491
 msgid ""
 "In addition to our full-time staff, Origin has a very active\n"
 "      open-source developer community. Since the project’s inception, we’ve had\n"
@@ -3734,59 +3865,59 @@ msgstr "Платформа Origin, созданная на основе этих
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "Мы считаем, что сейчас самое подходящее время для продвижения децентрализованных рыночных площадок экономики совместного потребления, которые дадут возможность воспользоваться растущим рынком и перспективными технологическими инновациями."
 
-#: views/web_views.py:78
+#: views/web_views.py:81
 msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
 msgstr "Origin Protocol - это блокчейн-платформа для создания децентрализованных рынков"
 
-#: views/web_views.py:202
+#: views/web_views.py:205
 msgid "Missing email"
 msgstr "Пожалуйста, укажите адрес электронной почты"
 
-#: views/web_views.py:205
+#: views/web_views.py:208
 msgid "Invalid email"
 msgstr "Неверный адрес электронной почты"
 
-#: views/web_views.py:267
+#: views/web_views.py:271
 msgid "You're already registered!"
 msgstr "Вы уже зарегистрированы!"
 
-#: views/web_views.py:269
+#: views/web_views.py:273
 msgid "Thanks for signing up!"
 msgstr "Спасибо за регистрацию!"
 
-#: views/web_views.py:282
+#: views/web_views.py:286
 msgid "Please enter your name"
 msgstr "Пожалуйста, введите свое имя"
 
-#: views/web_views.py:284
+#: views/web_views.py:288
 msgid "Please enter your email"
 msgstr "Пожалуйста, введите ваш email"
 
-#: views/web_views.py:287
+#: views/web_views.py:291
 msgid "Select your country of citizenship"
 msgstr "Выберите страну своего гражданства"
 
-#: views/web_views.py:291
+#: views/web_views.py:295
 msgid "Please enter your desired allocation"
 msgstr "Пожалуйста, укажите желаемую сумму инвестиции"
 
-#: views/web_views.py:294
+#: views/web_views.py:298
 msgid "Select a currency"
 msgstr "Выберите валюту"
 
-#: views/web_views.py:297
+#: views/web_views.py:301
 msgid "Please prove you are not a robot."
 msgstr "Пожалуйста, докажите что Вы не робот."
 
-#: views/web_views.py:311
+#: views/web_views.py:315
 msgid "OK"
 msgstr "OK"
 
-#: views/web_views.py:325
+#: views/web_views.py:329
 msgid "You have been unsubscribed"
 msgstr "Ваша подписка была отменена"
 
-#: views/web_views.py:328
+#: views/web_views.py:332
 msgid "Ooops, something went wrong"
 msgstr "Упс, что-то пошло не так"
 
@@ -3961,5 +4092,23 @@ msgstr "Упс, что-то пошло не так"
 #~ msgstr ""
 
 #~ msgid "Launched Origin Deals"
+#~ msgstr ""
+
+#~ msgid "Create your decentralized online store"
+#~ msgstr "Создайте Ваш децентрализованный интернет-магазин"
+
+#~ msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform. Get started for free."
+#~ msgstr ""
+
+#~ msgid "Try Dshop"
+#~ msgstr ""
+
+#~ msgid "Ready to start selling for free?"
+#~ msgstr "Готовы начать продавать бесплатно?"
+
+#~ msgid "Origin Platform"
+#~ msgstr ""
+
+#~ msgid "The Origin Platform is revolutionizing how people shop and conduct business online. Create a decentralized e-commerce store and buy and sell on our marketplace app. "
 #~ msgstr ""
 
