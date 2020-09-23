@@ -183,5 +183,3 @@ Special thanks to the following companies for their support:
 <a href="https://infura.io"><img src="https://www.originprotocol.com/static/img/infura.png" height="40"></a> 
 <a href="https://protocol.ai/"><img src="https://www.originprotocol.com/static/img/protocol-labs.png" height="40"></a>
 <a href="https://www.browserstack.com"><img src="https://www.originprotocol.com/static/img/browserstack.svg" height="40"></a>
-
-
