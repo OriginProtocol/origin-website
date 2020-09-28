@@ -350,6 +350,19 @@ def total_ogn():
     except:
         return make_response("1000000000", 200)
 
+# do not remove
+# used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
+@app.route("/total-ousd", methods=["GET"], strict_slashes=False)
+@app.route("/<lang_code>/total-ousd", methods=["GET"], strict_slashes=False)
+def total_ousd():
+    response = requests.get(
+        "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86&apikey=%s",
+        constants.ETHERSCAN_KEY,
+    )
+    wei = response.json()["result"]
+    ether = int(wei[:-18])
+    return make_response(ether, 200)
+
 
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/social-stats", methods=["GET"], strict_slashes=False)
