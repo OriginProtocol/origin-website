@@ -339,29 +339,20 @@ def unsubscribe():
 @app.route("/total-ogn", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogn", methods=["GET"], strict_slashes=False)
 def total_ogn():
-    try:
-        response = requests.get(
-            "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x8207c1ffc5b6804f6024322ccf34f29c3541ae26&apikey=%s",
-            constants.ETHERSCAN_KEY,
-        )
-        wei = response.json()["result"]
-        ether = int(wei[:-18])
-        return make_response(ether, 200)
-    except:
-        return make_response("1000000000", 200)
+    return total_supply("0x8207c1ffc5b6804f6024322ccf34f29c3541ae26")
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
 @app.route("/total-ousd", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ousd", methods=["GET"], strict_slashes=False)
 def total_ousd():
-    response = requests.get(
-        "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86&apikey=%s",
-        constants.ETHERSCAN_KEY,
-    )
+    return total_supply("0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86")
+
+def total_supply(address):
+    url = "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=%s&apikey=%s" % (address, constants.ETHERSCAN_KEY)
+    response = requests.get(url)
     wei = response.json()["result"]
-    ether = int(wei[:-18])
-    return make_response(ether, 200)
+    return make_response(wei[:-18], 200)
 
 
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
