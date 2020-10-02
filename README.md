@@ -10,7 +10,7 @@ Official website for Origin Protocol
 
 This is a Flask app with the source code for [www.originprotocol.com](https://www.originprotocol.com). The code is all `Python 2.7` with `Postgres` for the database (basically just for the mailing list). The database is not required to be configured if you're just working on the website.
 
-## Installing
+## Installation
 
 Setup a virtualenv
 ```
@@ -172,7 +172,7 @@ In order to run Celery jobs manually you can ssh into Heroku staging with:
 or into Heroku production
 `heroku ps:exec --app originprotocol-com` 
 
-## Contributing
+## Want to Contribute
 
 We'd love to have you join us and contribute to this project. Please join our [#engineering channel on Discord](http://www.originprotocol.com/discord) and read our [guidelines on contributing](http://docs.originprotocol.com/#contributing) to get started.
 
