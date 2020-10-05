@@ -29,12 +29,16 @@ def fetch():
 			print repo['name']
 			stats_url = 'https://api.github.com/repos/%s/%s/stats/contributors' % (organization, repo['name'])
 			results = requests.get(stats_url, auth=credentials)
-			data = results.json()
+			try:
+				data = results.json()
 
-			for author in data:
-				# print '\t%s\t%s\t%s' % (author['author']['login'],author['total'], author['author']['avatar_url'])
-				counts[author['author']['login']] = counts[author['author']['login']] + author['total']
-				pics[author['author']['login']] = author['author']['avatar_url']
+				for author in data:
+					# print '\t%s\t%s\t%s' % (author['author']['login'],author['total'], author['author']['avatar_url'])
+					counts[author['author']['login']] = counts[author['author']['login']] + author['total']
+					pics[author['author']['login']] = author['author']['avatar_url']
+			except Exception as e:
+				print(e)
+				print("Skipping...")
 
 	# only include contributions from contributors who have also contributed to non-forked repos
 	print 'checking forked & special-case repos:'
