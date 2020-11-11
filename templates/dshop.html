@@ -6,6 +6,15 @@
 
 {% block content %}
 
+{% if redirected %}
+<div class='redirected-banner'>
+  <div class="container">
+    <strong>ShopOrigin.com is now DShop</strong><br>
+    We recommend that sellers migrate their listings. Find us in <a href="https://www.originprotocol.com/discord">Discord</a> if you need help.
+  </div>
+</div> 
+{% endif %}
+
 {% include 'navbar-dshop.html' %}
 
 <main class="dshop">

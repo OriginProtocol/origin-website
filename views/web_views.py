@@ -580,10 +580,11 @@ def huobi_launch():
     return render_template("huobi-launch.html", hide_ogn_banner=True)
 
 
-@app.route("/dshop", strict_slashes=False)
+@app.route("/dshop", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/dshop", strict_slashes=False)
 def dshop():
-    return render_template("dshop.html", hide_ogn_banner=True,)
+    redirected = request.args.get("redirected")
+    return render_template("dshop.html", hide_ogn_banner=True,redirected=redirected)
 
 
 @app.route("/dashboard", strict_slashes=False)
