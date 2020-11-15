@@ -781,6 +781,12 @@ $(function () {
       link: "https://t.me/originprotocolspanish",
       regionSpecific: true
     },
+    "Telegram (Turkish)": {
+      img: "/static/img/about/turkish-telegram.svg",
+      countLabel: "members",
+      link: "https://t.me/OriginTurkish",
+      regionSpecific: true
+    },
     Wechat: {
       img: "/static/img/about/china-wechat.svg",
       countLabel: "followers",
