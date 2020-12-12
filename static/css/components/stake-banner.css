@@ -1,0 +1,104 @@
+.stake-banner {
+  background-color: #061d2a;
+}
+
+.stake-banner .container {
+  position: relative;
+}
+
+.stake-banner .container .banner-content-row {
+  min-height: 200px;
+}
+
+.stake-banner .container .banner-logo {
+  background-image: url("/static/img/coins/coins-icon-bg.svg");
+  background-repeat: no-repeat;
+  width: 546px;
+  height: 200px;
+  position: absolute;
+  left: -182px;
+  z-index: 0;
+}
+
+.stake-banner .container .banner-logo.banner-logo-ar {
+  right: -182px;
+  left: unset;
+}
+
+.stake-banner .container .banner-content-row .banner-content {
+  z-index: 1;
+}
+
+.stake-banner .container .banner-content-row .banner-content h1 {
+  margin: 0px;
+  color: #fff;
+  line-height: 1.04;
+  text-align: start;
+}
+
+.stake-banner .container .banner-content-row .banner-content p {
+  color: #dbe6eb;
+  font-family: Lato;
+  text-align: start;
+}
+
+.stake-banner .container .banner-content-row .banner-button {
+  text-align: end;
+  min-width: 210px;
+}
+
+.stake-banner .container .banner-content-row .banner-button .btn {
+  background-color: #007cff;
+  border-color: #007cff;
+  font-size: 1.1rem;
+  min-width: 210px;
+}
+
+@media (max-width: 1199px) {
+  .stake-banner .container .banner-content-row .banner-content {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .stake-banner .container .banner-logo.banner-logo-ar {
+    right: unset;
+  }
+
+  .stake-banner .container .banner-logo {
+    background-image: url("/static/img/coins/coins-icon-bg-mobile.svg");
+    width: 100%;
+    height: 100%;
+    background-position-y: top;
+    background-position-x: center;
+    left: 0px;
+  }
+
+  .stake-banner .container .banner-content-row {
+    padding: 25px;
+    padding-top: 70px;
+  }
+
+  .stake-banner .container .banner-content-row .banner-content {
+    padding: 0px;
+  }
+
+  .stake-banner .container .banner-content-row .banner-content h1 {
+    font-size: 18px;
+    text-align: center;
+    padding: 17px 0px;
+  }
+
+  .stake-banner .container .banner-content-row .banner-content p {
+    display: none;
+  }
+
+  .stake-banner .container .banner-content-row .banner-button {
+    text-align: center;
+    width: 100%;
+  }
+
+  .stake-banner .container .banner-content-row .banner-button .btn {
+    width: 100%;
+  }
+}
