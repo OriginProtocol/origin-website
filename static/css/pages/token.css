@@ -319,7 +319,7 @@
 
   .tokens-page .app-showcase .showcase-content {
     max-width: 430px;
-    margin-left: 40px;
+    margin-left: 40px !important;
     margin-right: 40px;
   }
 
@@ -381,4 +381,10 @@
     margin-right: auto;
   }
 
+}
+
+@media (max-width: 960px) {
+  .tokens-page .exchanges-section .statistic {
+    min-width: unset;
+  }
 }
