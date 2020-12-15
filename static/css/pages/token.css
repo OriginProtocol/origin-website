@@ -293,60 +293,9 @@
   color: #333;
 }
 
-@media (max-width: 575px) {
-  .tokens-page .app-showcase {
-    flex-direction: column;
-  }
-  .tokens-page .app-showcase.image-first {
-    flex-direction: column-reverse;
-  }
-
-  .tokens-page .app-showcase.image-first img {
-    max-width: 190px;
-  }
-
-  .tokens-page .app-showcase img {
-    max-width: 200px;
-  }
-
-  .tokens-page .app-showcase .showcase-content h1 {
-    text-align: center;
-  }
-
-  .tokens-page .app-showcase {
-    padding: 70px 0 24px 0;
-  }
-
-  .tokens-page .app-showcase .showcase-content {
-    max-width: 430px;
-    margin-left: 40px !important;
-    margin-right: 40px;
-  }
-
-  .tokens-page .app-showcase .showcase-image + .showcase-content {
-    margin-right: 40px;
-    margin-left: 40px;
-  }
-
-  .tokens-page .rewards-section .btn {
-    margin-bottom: 35px;
-  }
-
-  .tokens-page .feature-box h3 {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-
-  .tokens-page .feature-box p {
-    margin: 20px 40px;
-  }
-
-  .tokens-page .showcase-content.higher {
-    margin-top: 0px;
-  }
-
-  .tokens-page .exchanges-section .exchange-holder {
-    margin-left: 0px;
+@media (max-width: 960px) {
+  .tokens-page .exchanges-section .statistic {
+    min-width: unset;
   }
 }
 
@@ -383,8 +332,59 @@
 
 }
 
-@media (max-width: 960px) {
-  .tokens-page .exchanges-section .statistic {
-    min-width: unset;
+@media (max-width: 575px) {
+  .tokens-page .app-showcase {
+    flex-direction: column;
+  }
+  .tokens-page .app-showcase.image-first {
+    flex-direction: column-reverse;
+  }
+
+  .tokens-page .app-showcase.image-first img {
+    max-width: 190px;
+  }
+
+  .tokens-page .app-showcase img {
+    max-width: 200px;
+  }
+
+  .tokens-page .app-showcase .showcase-content h1 {
+    text-align: center;
+  }
+
+  .tokens-page .app-showcase {
+    padding: 70px 0 24px 0;
+  }
+
+  .tokens-page .app-showcase .showcase-content {
+    max-width: 430px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .tokens-page .app-showcase .showcase-image + .showcase-content {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .tokens-page .rewards-section .btn {
+    margin-bottom: 35px;
+  }
+
+  .tokens-page .feature-box h3 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .tokens-page .feature-box p {
+    margin: 20px 40px;
+  }
+
+  .tokens-page .showcase-content.higher {
+    margin-top: 0px;
+  }
+
+  .tokens-page .exchanges-section .exchange-holder {
+    margin-left: 0px;
   }
 }
