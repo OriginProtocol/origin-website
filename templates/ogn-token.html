@@ -9,14 +9,14 @@ endwith %}
     <div class="container">
       <h2>{{gettext("OGN is Now Trading")}}</h2>
       <div class="d-flex flex-column flex-md-row justify-content-center mb-3">
-        <div class="statistic d-flex flex-column purple">
+        <div class="statistic d-flex flex-column blue">
           <div class="d-flex flex-row">
             <img src="/static/img/ognToken/price-icon.svg" class="mr-2" />
             <div>{{gettext("Last Price")}}</div>
           </div>
           <div class="text">{{ogn_stats["formatted_ogn_usd_price"]}}</div>
         </div>
-        <div class="statistic d-flex flex-column green">
+        <div class="statistic d-flex flex-column blue">
           <div class="d-flex flex-row">
             <img src="/static/img/ognToken/circulating-supply-icon.svg" class="mr-2" />
             <div>{{gettext("Circulating Supply")}}</div>
@@ -122,69 +122,57 @@ endwith %}
 
     </div>
   </section>
-
-  <section class="payments-section grey-section">
+  
+  <section class="stake-section blue-section">
+    <div class="container">
+      <div class="app-showcase image-first d-flex justify-content-center">
+        <div class="showcase-image">
+          <img src="/static/img/ognToken/ognstake.png" srcset="
+              /static/img/ognToken/ognstake@2x.png 2x,
+              /static/img/ognToken/ognstake@3x.png 3x
+            " />
+        </div>
+        <div class="showcase-content">
+          <h1 class="mb-3">{{gettext("Staking")}}</h1>
+          <p class="mb-3">
+            {{gettext("Earn interest on your OGN while you hold it. Deposit OGN into our high-yield smart contract to grow your stake in the Origin network.")}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="governance-section blue-section">
     <div class="container">
       <div class="app-showcase d-flex justify-content-center">
         <div class="showcase-content">
-          <h1 class="mb-3">{{gettext("Commissions")}}</h1>
+          <h1 class="mb-3">{{gettext("Governance")}}</h1>
           <p>
-            {{gettext("Promote your listings across the Origin flagship app and
-            third-party apps with Origin Commissions. Pay with OGN to get
-            featured prominently in search results. Application developers and
-            marketplace operators earn Origin Tokens (OGN) by helping sellers
-            complete their sales.")}}
+            {{gettext("Create and vote on proposals determining the future direction of Origin Dollar (OUSD), Dshop and the rest of the Origin platform. Accrue value generated from platform revenues.")}}
           </p>
         </div>
+        <div class="showcase-image">
+          <img src="/static/img/ognToken/governance.png" srcset="
+              /static/img/ognToken/governance@2x.png 2x,
+              /static/img/ognToken/governance@3x.png 3x
+            " />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="commissions-section blue-section">
+    <div class="container">
+      <div class="app-showcase image-first d-flex justify-content-center">
         <div class="showcase-image">
           <img src="/static/img/ognToken/commissions.png" srcset="
               /static/img/ognToken/commissions@2x.png 2x,
               /static/img/ognToken/commissions@3x.png 3x
             " />
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="commissions-section">
-    <div class="container">
-      <div class="app-showcase image-first d-flex justify-content-center">
-        <div class="showcase-image">
-          <img src="/static/img/ognToken/payments.png" srcset="
-              /static/img/ognToken/payments@2x.png 2x,
-              /static/img/ognToken/payments@3x.png 3x
-            " />
-        </div>
         <div class="showcase-content">
-          <h1 class="mb-3">{{gettext("Payments")}}</h1>
+          <h1 class="mb-3">{{gettext("Commissions")}}</h1>
           <p>
-            {{gettext("Use the Origin Tokens (OGN) that you've earned in Origin
-            Rewards to pay for goods and services. Sellers earn larger stakes in
-            the network by accepting OGN as a preferred payment method.")}}
+            {{gettext("Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn OGN by helping sellers complete their sales.")}}
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="rewards-section grey-section">
-    <div class="container">
-      <div class="app-showcase d-flex justify-content-center">
-        <div class="showcase-content higher">
-          <h1 class="mb-3">{{gettext("Origin Rewards")}}</h1>
-          <p>
-            {{gettext("Earn your stake in the Origin network today. Users can
-            earn Origin Tokens (OGN) by verifying their profiles, referring
-            friends and family to Origin, sharing news about Origin on social
-            media, and making purchases from our featured sellers.")}}
-            <span class="unavailable-text">
-              {{gettext("Not available in the United States")}}
-            </span>
-          </p>
-        </div>
-        <div class="showcase-image">
-          <img src="/static/img/ognToken/origin-rewards.png" srcset="
-              /static/img/ognToken/origin-rewards@2x.png 2x,
-              /static/img/ognToken/origin-rewards@3x.png 3x
-            " />
         </div>
       </div>
     </div>

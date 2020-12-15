@@ -293,6 +293,45 @@
   color: #333;
 }
 
+@media (max-width: 960px) {
+  .tokens-page .exchanges-section .statistic {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  .tokens-page .app-showcase img {
+    max-width: 200px;
+  }
+
+  .tokens-page .app-showcase .showcase-content {
+    margin-right: 40px;
+  }
+
+  .tokens-page .app-showcase.image-first img {
+    max-width: 190px;
+  }
+
+  .tokens-page .app-showcase .showcase-image + .showcase-content {
+    margin-left: 10px;
+  }
+
+  .tokens-page .token-exchange {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .tokens-page .token-exchange img,
+  .tokens-page .token-exchange.feat img {
+    width: 175px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
 @media (max-width: 575px) {
   .tokens-page .app-showcase {
     flex-direction: column;
@@ -348,37 +387,4 @@
   .tokens-page .exchanges-section .exchange-holder {
     margin-left: 0px;
   }
-}
-
-@media (max-width: 767px) {
-  .tokens-page .app-showcase img {
-    max-width: 200px;
-  }
-
-  .tokens-page .app-showcase .showcase-content {
-    margin-right: 40px;
-  }
-
-  .tokens-page .app-showcase.image-first img {
-    max-width: 190px;
-  }
-
-  .tokens-page .app-showcase .showcase-image + .showcase-content {
-    margin-left: 10px;
-  }
-
-  .tokens-page .token-exchange {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .tokens-page .token-exchange img,
-  .tokens-page .token-exchange.feat img {
-    width: 175px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
 }
