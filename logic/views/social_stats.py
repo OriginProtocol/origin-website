@@ -24,6 +24,7 @@ def get_social_stats(language):
                 "Telegram (Indonesia)",
                 "Telegram (Russia)",
                 "Telegram (Spanish)",
+                "Telegram (Turkish)",
                 "Medium",
             ]
             if stat["name"] in general_stats:
