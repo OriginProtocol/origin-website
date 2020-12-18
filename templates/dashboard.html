@@ -100,33 +100,6 @@
 
   <section class="locked-tokens-section grey-section">
     <div class="container">
-      <div class="row additional-token-metrics px-3">
-        <h3>{{gettext("Additional Token Metrics")}}</h3>
-        <div class="d-flex flex-column flex-md-row flex-md-wrap metric-holder">
-          <div class="metric d-flex flex-column">
-            <div class="name">{{gettext("Total number of unique wallets")}}</div>
-            <div class="value">{{ogn_stats.number_of_addresses_formatted}}</div>
-          </div>
-          <div class="metric d-flex flex-column">
-            <div class="name">{{gettext("Total number of presale investors")}}</div>
-            <div class="value">700</div>
-          </div>
-          <div class="metric d-flex flex-column bigger">
-            <div class="name">{{gettext("Presale investor vesting schedule length")}}</div>
-            <div class="value">2+ years</div>
-          </div>
-          <div class="metric d-flex flex-column">
-            <div class="name">{{gettext("Team vesting schedule length*")}}</div>
-            <div class="value">4-6 years</div>
-          </div>
-          <div class="metric d-flex flex-column">
-            <div class="name">{{gettext("Average presale purchase size in USD")}}</div>
-            <div class="value">$54,346</div>
-          </div>
-        </div>
-        <div class="subtitle">{{gettext("* Founders signed new 4 year vesting schedule on Jan 8 2020")}}</div>
-        <hr/>
-      </div>
       <div class="row">
         <div class="col-lg-6">
           <h3>{{gettext("Locked Tokens")}}</h3>
@@ -163,13 +136,13 @@
             </div>
           </div>
 
-          <div class="subtitle2">{{gettext("Last updated ")}}{{ogn_stats["created_at_formatted_timeago"]}}</div>
+          <div class="subtitle2 mb-0">{{gettext("Last updated ")}}{{ogn_stats["created_at_formatted_timeago"]}}</div>
 
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0">
           <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
 
-          <div class="reserved-wallets">
+          <div class="reserved-wallets mb-0">
             <div class="reserved-wallet">
               <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
               <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.foundation_reserve_address}}" target="_blank" rel="noopener noreferrer">
@@ -239,6 +212,45 @@
           </div>
 
         </div>
+      </div>
+      <div class="stake-banner-blue d-flex flex-column flex-lg-row justify-content-center align-items-center">
+        <div class="coins-icon">
+          <img class="ousd-coin" src="/static/img/coins/ousd-coin.svg"/>
+          <img class="ogn-coin" src="/static/img/coins/ogn-coin.svg"/>
+        </div>
+        <div class="stake-content d-flex flex-column">
+          <h1>{{gettext("Stake OGN on OUSD.com")}}</h1>
+          <p>{{gettext("Stake your OGN to earn up to 25%%")}}</p>
+        </div>
+        <a class='btn btn-dark ml-lg-auto' href="{{universal.STAKE_URL}}" target="_blank">
+          {{gettext("Stake OGN now")}}
+        </a>
+      </div>
+      <div class="additional-token-metrics px-3">
+        <h3>{{gettext("Additional Token Metrics")}}</h3>
+        <div class="d-flex flex-column flex-sm-row flex-sm-wrap metric-holder">
+          <div class="metric d-flex flex-column">
+            <div class="name">{{gettext("Total number of unique wallets")}}</div>
+            <div class="value">{{ogn_stats.number_of_addresses_formatted}}</div>
+          </div>
+          <div class="metric d-flex flex-column">
+            <div class="name">{{gettext("Total number of presale investors")}}</div>
+            <div class="value">700</div>
+          </div>
+          <div class="metric d-flex flex-column bigger">
+            <div class="name">{{gettext("Presale investor vesting schedule length")}}</div>
+            <div class="value">2+ years</div>
+          </div>
+          <div class="metric d-flex flex-column">
+            <div class="name">{{gettext("Team vesting schedule length*")}}</div>
+            <div class="value">4-6 years</div>
+          </div>
+          <div class="metric d-flex flex-column">
+            <div class="name">{{gettext("Average presale purchase size in USD")}}</div>
+            <div class="value">$54,346</div>
+          </div>
+        </div>
+        <div class="subtitle">{{gettext("* Founders signed new 4 year vesting schedule on Jan 8 2020")}}</div>
       </div>
     </div>
   </section>
