@@ -54,10 +54,89 @@
   min-width: 210px;
 }
 
+.stake-banner-blue {
+  background-image: url('/static/img/coins/coin-waves-rectangle.svg');
+  background-position-y: top;
+  background-position-x: inherit;
+  background-repeat: repeat-y;
+  margin: 60px 0px;
+  background-color: #007cff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+}
+
+.stake-banner-blue .coins-icon {
+  margin-right: 20px;
+}
+
+.stake-banner-blue .coins-icon .ogn-coin {
+  margin-left: -12px;
+}
+
+.stake-banner-blue .stake-content h1 {
+  margin: 0px;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  line-height: 1.04;
+  color: #ffffff;
+}
+
+.stake-banner-blue .stake-content p {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+  color: #dbe6eb;
+}
+
+.stake-banner-blue .btn {
+  width: 210px;
+  margin: 0px;
+  padding: 7px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #061d2a;
+}
+
+.stake-banner-blue .btn:hover {
+  background-color: #343a40;
+}
+
 @media (max-width: 1199px) {
   .stake-banner .container .banner-content-row .banner-content {
     padding-left: 25px;
   }
+}
+
+@media (max-width: 992px) {
+  .stake-banner-blue .coins-icon {
+    margin-right: unset;
+  }
+
+  .stake-banner-blue {
+    background-image: url('/static/img/coins/coin-waves-circle.svg');
+    background-position-x: center;
+    background-position-y: top;
+    padding: 25px 15px;
+  }
+
+  .stake-banner-blue .stake-content {
+    text-align: center;
+    margin: 15px 0px;
+  }
+
+  .stake-banner-blue .stake-content h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .stake-banner-blue .stake-content p {
+    display: none;
+  }
+
 }
 
 @media (max-width: 767px) {
