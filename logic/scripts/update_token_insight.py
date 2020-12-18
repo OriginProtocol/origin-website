@@ -22,18 +22,6 @@ from logic.scripts import token_stats
 
 # NOTE: remember to use lowercase addresses for everything
 
-# token contract addresses
-ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
-dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
-
-# ogn wallet addresses
-foundation_reserve_address = "0xe011fa2a6df98c69383457d87a056ed0103aa352"
-team_dist_address = "0xcaa5ef7abc36d5e5a3e4d7930dcff3226617a167"
-investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
-dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
-partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
-ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
-
 # start tracking a wallet address
 def add_contact(address, **kwargs):
 
@@ -209,9 +197,9 @@ def fetch_tokens_from_amberdata():
                 print "%s tokens found. fetching page %s" % (contact.token_count, page)
 
                 for token in results["payload"]["records"]:
-                    if token["address"] == ogn_contract:
+                    if token["address"] == token_stats.ogn_contract:
                         contact.ogn_balance = float(token["amount"]) / math.pow(10, 18)
-                    elif token["address"] == dai_contract:
+                    elif token["address"] == token_stats.dai_contract:
                         contact.dai_balance = float(token["amount"]) / math.pow(10, 18)
 
                 if (
@@ -253,9 +241,9 @@ def fetch_from_ethplorer():
                 contact.tokens = results["tokens"]
                 # update the OGN & DAI balance
                 for token in results["tokens"]:
-                    if token["tokenInfo"]["address"].lower() == ogn_contract:
+                    if token["tokenInfo"]["address"].lower() == token_stats.ogn_contract:
                         contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-                    elif token["tokenInfo"]["address"].lower() == dai_contract:
+                    elif token["tokenInfo"]["address"].lower() == token_stats.dai_contract:
                         contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
                 contact.token_count = len(results["tokens"])
             contact.last_updated = datetime.utcnow()
@@ -274,7 +262,7 @@ def fetch_ogn_transactions():
 
     etherscan_url = (
         "http://api.etherscan.io/api?module=account&action=tokentx&contractaddress=%s&startblock=0&endblock=999999999&sort=desc&apikey=%s"
-        % (ogn_contract, constants.ETHERSCAN_KEY)
+        % (token_stats.ogn_contract, constants.ETHERSCAN_KEY)
     )
     # print etherscan_url
     results = call_etherscan(etherscan_url)
@@ -337,7 +325,7 @@ def fetch_ogn_transactions():
 def fetch_ogn_token_info():
     print "Checking OGN token info"
 
-    url = "http://api.ethplorer.io/getTokenInfo/%s" % (ogn_contract)
+    url = "http://api.ethplorer.io/getTokenInfo/%s" % (token_stats.ogn_contract)
     results = call_ethplorer(url)
 
     if "error" in results:
@@ -385,10 +373,12 @@ def fetch_wallet_balance(wallet):
         contact.tokens = results["tokens"]
         # update the OGN & DAI balance
         for token in results["tokens"]:
-            if token["tokenInfo"]["address"] == ogn_contract:
+            if token["tokenInfo"]["address"] == token_stats.ogn_contract:
                 contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-            elif token["tokenInfo"]["address"] == dai_contract:
+                print "OGN balance of %s is %s" % (wallet, contact.ogn_balance)
+            elif token["tokenInfo"]["address"] == token_stats.dai_contract:
                 contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
+                print "DAI balance of %s is %s" % (wallet, contact.dai_balance)
         contact.token_count = len(results["tokens"])
     contact.last_updated = datetime.utcnow()
 
@@ -429,12 +419,13 @@ def alert_on_balance_drop(wallet, label, eth_threshold):
 def fetch_reserved_wallet_balances():
     print("Computing OGN stats...")
     # Fetch reserved wallet balances
-    fetch_wallet_balance(foundation_reserve_address)
-    fetch_wallet_balance(team_dist_address)
-    fetch_wallet_balance(investor_dist_address)
-    fetch_wallet_balance(dist_staging_address)
-    fetch_wallet_balance(partnerships_address)
-    fetch_wallet_balance(ecosystem_growth_address)
+    fetch_wallet_balance(token_stats.foundation_reserve_address)
+    fetch_wallet_balance(token_stats.team_dist_address)
+    fetch_wallet_balance(token_stats.investor_dist_address)
+    fetch_wallet_balance(token_stats.dist_staging_address)
+    fetch_wallet_balance(token_stats.partnerships_address)
+    fetch_wallet_balance(token_stats.ecosystem_growth_address)
+    fetch_wallet_balance(token_stats.ogn_staking_contract)
 
 if __name__ == "__main__":
     # called via cron on Heroku

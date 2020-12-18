@@ -23,6 +23,7 @@ import json
 # token contract addresses
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
+ogn_staking_contract = "0x501804b374ef06fa9c427476147ac09f1551b9a0"
 
 # ogn wallet addresses
 foundation_reserve_address = "0xe011fa2a6df98c69383457d87a056ed0103aa352"
@@ -31,54 +32,6 @@ investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
 dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
 ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
-
-# limit calls to 10 requests / second per their limits
-# https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API#api-keys-limits
-@sleep_and_retry
-@limits(calls=10, period=1)
-def call_ethplorer(url):
-    url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY)
-    raw_json = requests.get(url)
-    return raw_json.json()
-
-
-# Fetches wallet balance from API and stores that to DB
-def fetch_wallet_balance(wallet):
-    print "Checking the balance of wallet %s" % (
-        wallet,
-    )
-
-    url = "http://api.ethplorer.io/getAddressInfo/%s" % (wallet)
-    results = call_ethplorer(url)
-
-    contact = db_common.get_or_create(
-        db.session, db_models.EthContact, address=wallet
-    )
-
-    if "error" in results:
-        print("Error while fetching balance")
-        print(results["error"]["message"])
-        raise ValueError(results["error"]["message"])
-
-    contact.eth_balance = results["ETH"]["balance"]
-    contact.transaction_count = results["countTxs"]
-
-    print "ETH balance of %s is %s" % (wallet, results["ETH"]["balance"])
-    if "tokens" in results:
-        contact.tokens = results["tokens"]
-        # update the OGN & DAI balance
-        for token in results["tokens"]:
-            if token["tokenInfo"]["address"] == ogn_contract:
-                contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-            elif token["tokenInfo"]["address"] == dai_contract:
-                contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
-        contact.token_count = len(results["tokens"])
-    contact.last_updated = datetime.utcnow()
-
-    db.session.add(contact)
-    db.session.commit()
-
-    return contact
 
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
@@ -121,10 +74,10 @@ def fetch_stats_from_t3(investor_portal = True):
 
     return response
 
-def fetch_stats_from_od():
-    print("Fetching Origin Deals stats...")
+def fetch_onchain_staking_stats():
+    print("Fetching on-chain OGN staking stats...")
 
-    url = "https://origindeals.com/api/user/stats"
+    url = constants.STAKING_STATS_URL or "https://ousd.com/api/stats"
 
     raw_json = requests.get(url)
     response = raw_json.json()
@@ -132,7 +85,7 @@ def fetch_stats_from_od():
     return response
 
 def fetch_staking_stats():
-    print("Fetching T3 and Origin Deals user stats...")
+    print("Fetching T3 and on-chain OGN staking stats...")
 
     sum_users = 0
     sum_tokens = 0
@@ -140,7 +93,7 @@ def fetch_staking_stats():
     try:
         investor_stats = fetch_stats_from_t3(investor_portal=True)
         team_stats = fetch_stats_from_t3(investor_portal=False)
-        od_stats = fetch_stats_from_od()
+        staking_stats = fetch_onchain_staking_stats()
 
         investor_staked_users = int(investor_stats["userCount"] or 0)
         investor_locked_sum = int(investor_stats["lockupSum"] or 0)
@@ -148,11 +101,11 @@ def fetch_staking_stats():
         team_staked_users = int(team_stats["userCount"] or 0)
         team_locked_sum = int(team_stats["lockupSum"] or 0)
 
-        od_staked_users = int(od_stats["userCount"] or 0)
-        od_locked_sum = int(od_stats["lockupSum"] or 0)
+        ogn_stakers_count = int(staking_stats["totalStakers"] or 0)
+        ogn_staked_amount = int(staking_stats["totalStaked"] or 0)
 
-        sum_users = investor_staked_users + team_staked_users + od_staked_users
-        sum_tokens = investor_locked_sum + team_locked_sum + od_locked_sum
+        sum_users = investor_staked_users + team_staked_users + ogn_stakers_count
+        sum_tokens = investor_locked_sum + team_locked_sum + ogn_staked_amount
 
         print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
 
