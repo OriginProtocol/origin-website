@@ -109,7 +109,7 @@
           
           <div class="locked-token-widget">
             <div class="title">
-              {{gettext("Total number of locked tokens")}}
+              {{gettext("Total number of tokens in investor and team lockups")}}
             </div>
             <div class="value">
               {{ogn_stats.formatted_staked_token_count}}
@@ -119,7 +119,17 @@
           
           <div class="locked-token-widget">
             <div class="title">
-              {{gettext("Investors, team members & others with locked tokens")}}
+              {{gettext("Total number of staked tokens")}}
+            </div>
+            <div class="value">
+              {{ogn_stats.formatted_ogn_staked_amount}}
+              <div class="ogn-label">OGN</div>
+            </div>
+          </div>
+          
+          <div class="locked-token-widget">
+            <div class="title">
+              {{gettext("Investors & team members with locked tokens")}}
             </div>
             <div class="value">
               {{ogn_stats.formatted_staked_user_count}}

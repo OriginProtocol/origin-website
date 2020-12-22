@@ -90,6 +90,9 @@ def fetch_staking_stats():
     sum_users = 0
     sum_tokens = 0
 
+    ogn_stakers_count = 0
+    ogn_staked_amount = 0
+
     try:
         investor_stats = fetch_stats_from_t3(investor_portal=True)
         team_stats = fetch_stats_from_t3(investor_portal=False)
@@ -104,8 +107,8 @@ def fetch_staking_stats():
         ogn_stakers_count = int(staking_stats["userCount"] or 0)
         ogn_staked_amount = int(staking_stats["lockupSum"] or 0)
 
-        sum_users = investor_staked_users + team_staked_users + ogn_stakers_count
-        sum_tokens = investor_locked_sum + team_locked_sum + ogn_staked_amount
+        sum_users = investor_staked_users + team_staked_users
+        sum_tokens = investor_locked_sum + team_locked_sum
 
         print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
 
@@ -115,15 +118,13 @@ def fetch_staking_stats():
 
     return dict([
         ("staked_user_count", sum_users),
-        ("staked_token_count", sum_tokens)
+        ("staked_token_count", sum_tokens),
+        ("ogn_stakers_count", ogn_stakers_count),
+        ("ogn_staked_amount", ogn_staked_amount)
     ])
 
-def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
+def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stakers_count,ogn_staked_amount):
     total_supply = 1000000000
-
-    ogn_usd_price
-    staked_user_count
-    staked_token_count
 
     number_of_addresses = db_models.TokenInfo.query.order_by(
         db_models.TokenInfo.created_at.desc()
@@ -135,7 +136,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         investor_dist_address,
         dist_staging_address,
         partnerships_address,
-        ecosystem_growth_address,
+        ecosystem_growth_address
     ))).all()
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
@@ -153,7 +154,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         investor_dist_balance +
         dist_staging_balance +
         partnerships_balance +
-        ecosystem_growth_balance 
+        ecosystem_growth_balance
     )
     
     print "Full reserved token balance: %s" % (reserved_tokens)
@@ -172,6 +173,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("reserved_tokens", reserved_tokens),
         ("staked_user_count", staked_user_count),
         ("staked_token_count", staked_token_count),
+
+        ("ogn_stakers_count", ogn_stakers_count),
+        ("ogn_staked_amount", ogn_staked_amount),
 
         ("foundation_reserve_address", foundation_reserve_address),
         ("team_dist_address", team_dist_address),
@@ -196,6 +200,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count):
         ("formatted_reserved_tokens", '{:,}'.format(reserved_tokens)),
         ("formatted_staked_user_count", '{:,}'.format(staked_user_count)),
         ("formatted_staked_token_count", '{:,}'.format(staked_token_count)),
+        ("formatted_ogn_staked_amount", '{:,}'.format(ogn_staked_amount)),
         ("created_at_formatted", datetime.utcnow().strftime("%m/%d/%Y %-I:%M:%S %p")),
         ("created_at_iso", datetime.utcnow().isoformat()),
     ])
@@ -267,7 +272,9 @@ def compute_ogn_stats():
     ogn_supply_stats = fetch_ogn_stats(
         token_prices["ogn_usd_price"], 
         staking_stats["staked_user_count"], 
-        staking_stats["staked_token_count"]
+        staking_stats["staked_token_count"],
+        staking_stats["ogn_stakers_count"],
+        staking_stats["ogn_staked_amount"]
     )
 
     ogn_supply_history = update_circulating_supply(ogn_supply_stats["circulating_supply"])

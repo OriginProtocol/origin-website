@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-12-15 22:52+0530\n"
+"POT-Creation-Date: 2020-12-22 09:01+0530\n"
 "PO-Revision-Date: 2020-02-01 01:43+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: sr_Cyrl_RS\n"
@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: config/strings_to_translate.py:4
 msgid "Technology Partners"
@@ -476,95 +476,112 @@ msgstr ""
 msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 msgstr ""
 
-#: templates/dashboard.html:104
-msgid "Additional Token Metrics"
-msgstr ""
-
-#: templates/dashboard.html:107
-msgid "Total number of unique wallets"
-msgstr ""
-
-#: templates/dashboard.html:111
-msgid "Total number of presale investors"
-msgstr ""
-
-#: templates/dashboard.html:115
-msgid "Presale investor vesting schedule length"
-msgstr ""
-
-#: templates/dashboard.html:119
-msgid "Team vesting schedule length*"
-msgstr ""
-
-#: templates/dashboard.html:123
-msgid "Average presale purchase size in USD"
-msgstr ""
-
-#: templates/dashboard.html:127
-msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
-msgstr ""
-
-#: templates/dashboard.html:132
+#: templates/dashboard.html:105
 msgid "Locked Tokens"
 msgstr ""
 
-#: templates/dashboard.html:134
+#: templates/dashboard.html:107
 msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply."
 msgstr ""
 
-#: templates/dashboard.html:139
-msgid "Total number of locked tokens"
+#: templates/dashboard.html:112
+msgid "Total number of tokens in investor and team lockups"
 msgstr ""
 
-#: templates/dashboard.html:149
-msgid "Investors, team members & others with locked tokens"
+#: templates/dashboard.html:122
+msgid "Total number of staked tokens"
 msgstr ""
 
-#: templates/dashboard.html:158
+#: templates/dashboard.html:132
+msgid "Investors & team members with locked tokens"
+msgstr ""
+
+#: templates/dashboard.html:141
 msgid "Total number of tokens founders have sold"
 msgstr ""
 
-#: templates/dashboard.html:166
+#: templates/dashboard.html:149
 msgid "Last updated "
 msgstr ""
 
-#: templates/dashboard.html:170
+#: templates/dashboard.html:153
 msgid "Wallets excluded from circulating supply"
 msgstr ""
 
-#: templates/dashboard.html:174
+#: templates/dashboard.html:157
 msgid "Foundation Reserves"
 msgstr ""
 
-#: templates/dashboard.html:185
+#: templates/dashboard.html:168
 msgid "Team Distribution"
 msgstr ""
 
-#: templates/dashboard.html:196
+#: templates/dashboard.html:179
 msgid "Investor Distribution"
 msgstr ""
 
-#: templates/dashboard.html:207
+#: templates/dashboard.html:190
 msgid "Distribution Staging"
 msgstr ""
 
-#: templates/dashboard.html:218
+#: templates/dashboard.html:201
 msgid "Partnerships"
 msgstr ""
 
-#: templates/dashboard.html:229
+#: templates/dashboard.html:212
 msgid "Ecosystem Growth"
 msgstr ""
 
-#: templates/dashboard.html:248
+#: templates/dashboard.html:232
+msgid "Stake OGN on OUSD.com"
+msgstr ""
+
+#: templates/dashboard.html:233 templates/stake-banner.html:7
+#, python-format
+msgid "Stake your OGN to earn up to 25%%"
+msgstr ""
+
+#: templates/dashboard.html:236 templates/stake-banner.html:10
+msgid "Stake OGN now"
+msgstr ""
+
+#: templates/dashboard.html:240
+msgid "Additional Token Metrics"
+msgstr ""
+
+#: templates/dashboard.html:243
+msgid "Total number of unique wallets"
+msgstr ""
+
+#: templates/dashboard.html:247
+msgid "Total number of presale investors"
+msgstr ""
+
+#: templates/dashboard.html:251
+msgid "Presale investor vesting schedule length"
+msgstr ""
+
+#: templates/dashboard.html:255
+msgid "Team vesting schedule length*"
+msgstr ""
+
+#: templates/dashboard.html:259
+msgid "Average presale purchase size in USD"
+msgstr ""
+
+#: templates/dashboard.html:263
+msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
+msgstr ""
+
+#: templates/dashboard.html:270
 msgid "Centralized Exchanges"
 msgstr ""
 
-#: templates/dashboard.html:311
+#: templates/dashboard.html:333
 msgid "Decentralized Exchanges"
 msgstr ""
 
-#: templates/dashboard.html:333
+#: templates/dashboard.html:355
 msgid "See more on Coinmarketcap >"
 msgstr ""
 
@@ -1651,35 +1668,35 @@ msgstr ""
 msgid "…and many others"
 msgstr ""
 
-#: templates/ogn-token.html:114
+#: templates/ogn-token.html:113
 msgid "View the OGN Dashboard"
 msgstr ""
 
-#: templates/ogn-token.html:118
+#: templates/ogn-token.html:117
 msgid "Visit CoinMarketCap"
 msgstr ""
 
-#: templates/ogn-token.html:136
+#: templates/ogn-token.html:135
 msgid "Staking"
 msgstr ""
 
-#: templates/ogn-token.html:138
+#: templates/ogn-token.html:137
 msgid "Earn interest on your OGN while you hold it. Deposit OGN into our high-yield smart contract to grow your stake in the Origin network."
 msgstr ""
 
-#: templates/ogn-token.html:148
+#: templates/ogn-token.html:147
 msgid "Governance"
 msgstr ""
 
-#: templates/ogn-token.html:150
+#: templates/ogn-token.html:149
 msgid "Create and vote on proposals determining the future direction of Origin Dollar (OUSD), Dshop and the rest of the Origin platform. Accrue value generated from platform revenues."
 msgstr ""
 
-#: templates/ogn-token.html:172
+#: templates/ogn-token.html:171
 msgid "Commissions"
 msgstr ""
 
-#: templates/ogn-token.html:174
+#: templates/ogn-token.html:173
 msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn OGN by helping sellers complete their sales."
 msgstr ""
 
@@ -2135,15 +2152,6 @@ msgstr ""
 
 #: templates/stake-banner.html:6
 msgid "OGN Staking is live on OUSD.com"
-msgstr ""
-
-#: templates/stake-banner.html:7
-#, python-format
-msgid "Stake your OGN to earn up to 25%%"
-msgstr ""
-
-#: templates/stake-banner.html:10
-msgid "Stake OGN now"
 msgstr ""
 
 #: templates/stayHomeStore.html:1 templates/swagStore.html:1
@@ -4457,5 +4465,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Not available in the United States"
+#~ msgstr ""
+
+#~ msgid "Total number of locked tokens"
+#~ msgstr ""
+
+#~ msgid "Investors, team members & others with locked tokens"
 #~ msgstr ""
 
