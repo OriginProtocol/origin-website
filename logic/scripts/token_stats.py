@@ -77,7 +77,7 @@ def fetch_stats_from_t3(investor_portal = True):
 def fetch_onchain_staking_stats():
     print("Fetching on-chain OGN staking stats...")
 
-    url = constants.STAKING_STATS_URL or "https://ousd.com/api/stats"
+    url = constants.STAKING_STATS_URL or "https://analytics.ousd.com/api/v1/staking_stats"
 
     raw_json = requests.get(url)
     response = raw_json.json()
@@ -101,8 +101,8 @@ def fetch_staking_stats():
         team_staked_users = int(team_stats["userCount"] or 0)
         team_locked_sum = int(team_stats["lockupSum"] or 0)
 
-        ogn_stakers_count = int(staking_stats["totalStakers"] or 0)
-        ogn_staked_amount = int(staking_stats["totalStaked"] or 0)
+        ogn_stakers_count = int(staking_stats["userCount"] or 0)
+        ogn_staked_amount = int(staking_stats["lockupSum"] or 0)
 
         sum_users = investor_staked_users + team_staked_users + ogn_stakers_count
         sum_tokens = investor_locked_sum + team_locked_sum + ogn_staked_amount
