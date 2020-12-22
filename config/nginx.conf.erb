@@ -87,7 +87,7 @@ http {
 			proxy_redirect off;
 			proxy_pass http://app_server;
 
-			if($request_uri ~ ^.*/dashboard$) { set $nocache 1; }
+			if ($request_uri ~ ^.*/dashboard$) { set $nocache 1; }
 
 			# Cache proxied pages that have a language code
 			location ~ ^/([a-z][a-z]|zh_Hans|zh_Hant)(/.*)?$ {
