@@ -87,10 +87,8 @@ http {
 			proxy_redirect off;
 			proxy_pass http://app_server;
 
-			if ($request_uri ~ ^.*/dashboard$) { set $nocache 1; }
-
 			# Cache proxied pages that have a language code
-			location ~ ^/([a-z][a-z]|zh_Hans|zh_Hant)(/.*)?$ {
+			location ~ ^/([a-z][a-z]|zh_Hans|zh_Hant)/?(?!(dashboard))$ {
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 				proxy_set_header Host $http_host;
 				proxy_redirect off;
@@ -99,7 +97,7 @@ http {
 				proxy_cache my_cache;
 				proxy_cache_valid 200 120m;
 				# No caching if the user has session data (for example  an upcoming flash message)
-				proxy_cache_bypass $cookie_SESSION $nocache;
+				proxy_cache_bypass $cookie_SESSION;
 				add_header X-Proxy-Cache $upstream_cache_status;
 			}
 		}
