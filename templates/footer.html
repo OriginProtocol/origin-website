@@ -34,10 +34,9 @@
           <div class="col-4 d-flex flex-column">
             <strong>Products</strong>
             <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Overview") }}</a>
+            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN") }}</a>
             <a href="https://www.ousd.com">{{ gettext("OUSD") }}</a>
             <a href="{{ url_for('dshop', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Dshop") }}</a>
-            <a href="{{ universal.DAPP_URL }}">{{ gettext("Marketplace DApp") }}</a>
-            <a href="{{ url_for('mobile', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Mobile Apps") }}</a>
           </div>
           <div class="col-4 d-flex flex-column">
             <strong>Resources</strong>
@@ -52,7 +51,7 @@
             <a href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a>
             <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
             <a href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a>
-            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN") }}</a>
+            <a href="https://store.originprotocol.com">{{ gettext("Store") }}</a>
             <a href="{{ universal.JOBS_URL }}">{{ gettext("Jobs") }}</a>
           </div>
         </div>
