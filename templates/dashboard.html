@@ -33,20 +33,20 @@
 
         <div class="col-md-3 mx-md-0 px-md-0">
           <div class="stats-widget">
-            <img src="/static/img/dashboard/market-cap-icon.svg" />
-            <div class="stats-label">{{gettext("Market Cap")}}</div>
-            <div class="stats-value">{{ogn_stats.formatted_market_cap}}</div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mx-md-0 px-md-0">
-          <div class="stats-widget">
             <img src="/static/img/dashboard/circulating-supply-icon.svg" />
             <div class="stats-label">{{gettext("Circulating Supply")}}</div>
             <div class="stats-value">
               {{ogn_stats.formatted_circulating_supply}}
               <div class="ogn-label">OGN</div>
             </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/market-cap-icon.svg" />
+            <div class="stats-label">{{gettext("Market Cap")}}</div>
+            <div class="stats-value">{{ogn_stats.formatted_market_cap}}</div>
           </div>
         </div>
 
@@ -150,9 +150,21 @@
 
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0">
-          <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
+          <h3>{{gettext("Staked amount by duration")}}</h3>
 
           <div class="reserved-wallets mb-0">
+            <div class="row staked-chart">
+              <div class="col-md-3">
+                <div class="chart-container">
+                  <canvas id="staked_amount_chart" height="110px"></canvas>
+                </div>
+              </div>
+              <div class="col">
+                <div id="staked_amount_legends" class="chart-legends-container"></div>
+              </div>
+            </div>
+
+            <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
             <div class="reserved-wallet">
               <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
               <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.foundation_reserve_address}}" target="_blank" rel="noopener noreferrer">
