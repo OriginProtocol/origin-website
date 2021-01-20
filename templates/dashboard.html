@@ -6,6 +6,7 @@
 
 {% block extra_scripts %}
 <script>
+  var ognStakedStats = {{staked_data | safe }};
   var ognSupplyHistory = {{supply_history | safe}};
 </script>
 {% endblock %}
@@ -33,20 +34,20 @@
 
         <div class="col-md-3 mx-md-0 px-md-0">
           <div class="stats-widget">
+            <img src="/static/img/dashboard/market-cap-icon.svg" />
+            <div class="stats-label">{{gettext("Market Cap")}}</div>
+            <div class="stats-value">{{ogn_stats.formatted_market_cap}}</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
             <img src="/static/img/dashboard/circulating-supply-icon.svg" />
             <div class="stats-label">{{gettext("Circulating Supply")}}</div>
             <div class="stats-value">
               {{ogn_stats.formatted_circulating_supply}}
               <div class="ogn-label">OGN</div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 mx-md-0 px-md-0">
-          <div class="stats-widget">
-            <img src="/static/img/dashboard/market-cap-icon.svg" />
-            <div class="stats-label">{{gettext("Market Cap")}}</div>
-            <div class="stats-value">{{ogn_stats.formatted_market_cap}}</div>
           </div>
         </div>
 
