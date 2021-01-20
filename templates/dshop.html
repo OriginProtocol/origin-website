@@ -221,41 +221,66 @@
     <div class="container d-flex flex-column">
       <h3>{{gettext("Dshop success stories")}}</h3>
       <div class="success-list d-flex flex-wrap justify-content-center">
-        <div class="gradient-box">
-          <div class="success-text">
-            {{gettext("“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”")}}
+        <div
+          id="featuredInvestors"
+          class="carousel slide"
+          data-touch="true"
+          data-ride="carousel"
+          style="width: 100%;"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#featuredInvestors"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#featuredInvestors" data-slide-to="1"></li>
+            <li data-target="#featuredInvestors" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="gradient-box">
+                <div class="success-text">
+                  {{gettext("“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”")}}
+                </div>
+                <div class="success-signature">
+                  {{gettext("- Jackie Lim , Senior B.D. Director, Contentos")}}
+                </div>
+                <img
+                  class="contentos"
+                  src="/static/img/dshop/contentos.jpg"
+                  srcset="/static/img/dshop/contentos@2x.jpg 2x, /static/img/dshop/contentos@3x.jpg 3x"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="gradient-box">
+                <div class="success-text">
+                  {{gettext("“We are thrilled to partner with Origin Protocol to launch the Ternio Dshop. They made the entire setup process easy and hands-off, and it has been exciting to see how they have applied the principles of blockchain and decentralization into the e-commerce space. Dshop provides the perfect platform for BlockCard users and our own team to purchase branded merchandise to promote our brand.”")}}
+                </div>
+                <img
+                  class="contentos"
+                  src="/static/img/dshop/ternio.jpg"
+                  srcset="/static/img/dshop/ternio@2x.jpg 2x, /static/img/dshop/ternio@3x.jpg 3x"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="gradient-box">
+                <div class="success-text">
+                  {{gettext("“Origin dshops are making blockchain-powered commerce accessible to thousands of people around the world. Kyber is glad to help facilitate liquidity for the Origin Token (OGN).”")}}
+                </div>
+                <div class="success-signature">
+                  {{gettext("- Shane Hong, Kyber Marketing")}}
+                </div>
+                <img
+                  class="contentos"
+                  src="/static/img/ognToken/kyber.png"
+                  srcset="/static/img/ognToken/kyber.png 2x, /static/img/ognToken/kyber.png 3x"
+                />
+              </div>
+            </div>
           </div>
-          <div class="success-signature">
-            {{gettext("- Jackie Lim , Senior B.D. Director, Contentos")}}
-          </div>
-          <img
-            class="contentos"
-            src="/static/img/dshop/contentos.jpg"
-            srcset="/static/img/dshop/contentos@2x.jpg 2x, /static/img/dshop/contentos@3x.jpg 3x"
-          />
-        </div>
-        <div class="gradient-box">
-          <div class="success-text">
-            {{gettext("“We are thrilled to partner with Origin Protocol to launch the Ternio Dshop. They made the entire setup process easy and hands-off, and it has been exciting to see how they have applied the principles of blockchain and decentralization into the e-commerce space. Dshop provides the perfect platform for BlockCard users and our own team to purchase branded merchandise to promote our brand.”")}}
-          </div>
-          <img
-            class="contentos"
-            src="/static/img/dshop/ternio.jpg"
-            srcset="/static/img/dshop/ternio@2x.jpg 2x, /static/img/dshop/ternio@3x.jpg 3x"
-          />
-        </div>
-        <div class="gradient-box">
-          <div class="success-text">
-            {{gettext("“Origin dshops are making blockchain-powered commerce accessible to thousands of people around the world. Kyber is glad to help facilitate liquidity for the Origin Token (OGN).”")}}
-          </div>
-          <div class="success-signature">
-            {{gettext("- Shane Hong, Kyber Marketing")}}
-          </div>
-          <img
-            class="contentos"
-            src="/static/img/ognToken/kyber.png"
-            srcset="/static/img/ognToken/kyber.png 2x, /static/img/ognToken/kyber.png 3x"
-          />
         </div>
       </div>
     </div>
