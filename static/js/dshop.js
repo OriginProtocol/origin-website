@@ -64,8 +64,24 @@
       background.onclick = closeNav;
     }
 
+    var initTestimonialSlider = function(){
+      $('#testimonial-slider').owlCarousel({
+        loop:true,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            1000:{
+                items:2
+            }
+        }
+    })
+    }
+
     setupMobileMenu();
     setupScrollListener();
+    initTestimonialSlider()
   }
 
   document.addEventListener('DOMContentLoaded', onDOMReady)

@@ -322,6 +322,21 @@ html {
   background-image: linear-gradient(to bottom right, #f2f6f9, var(--white));
 }
 
+.dshop .success-stories .owl-dots .owl-dot span {
+  background-color: #dfe6ea;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  margin: 0px 10px 0px 10px;
+}
+
+.dshop .success-stories .owl-dots .owl-dot.active span {
+  background-color: #2e3f53;
+}
+
+.dshop .success-stories .owl-dots button.owl-dot:focus {
+  outline: none;
+}
 
 .dshop .contact-box {
   max-width: 700px;
@@ -459,9 +474,7 @@ html {
 }
 
 .dshop .success-stories .gradient-box {
-  max-width: 450px;
   min-height: 312px;
-  margin: 20px;
   padding: 30px;
 }
 
@@ -488,6 +501,7 @@ html {
 
 .dshop .success-stories .contentos {
   height: 28px;
+  width: auto;
 }
 
 .dshop .features .laptop {
