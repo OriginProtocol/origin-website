@@ -166,6 +166,15 @@
   padding-bottom: 10px;
 }
 
+.dashboard-page .reserved-wallets .staked-chart {
+  margin: 25px 0 35px 0;
+}
+
+.dashboard-page .reserved-wallets .staked-chart .chart-container{
+  height: 110px; 
+  width: 110px;
+}
+
 .dashboard-page .reserved-wallet .wallet-name {
   font-size: 14px;
   font-weight: bold;
@@ -218,6 +227,12 @@
   height: 18px;
   display: block;
   margin-right: 5px;
+}
+
+.dashboard-page .legend-color.legend-small {
+  width: 25px;
+  height: 14px;
+  margin-right: 8px;
 }
 
 .dashboard-page .legend-name {
@@ -289,6 +304,10 @@
 
   .additional-token-metrics h3 {
     text-align: left;
+  }
+
+  .dashboard-page .reserved-wallets .staked-chart .chart-container{
+    width: unset;
   }
 } 
 

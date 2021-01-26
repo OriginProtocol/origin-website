@@ -6,6 +6,7 @@
 
 {% block extra_scripts %}
 <script>
+  var ognStakedStats = {{staked_data | safe }};
   var ognSupplyHistory = {{supply_history | safe}};
 </script>
 {% endblock %}
@@ -150,9 +151,21 @@
 
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0">
-          <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
+          <h3>{{gettext("Staked amount by duration")}}</h3>
 
           <div class="reserved-wallets mb-0">
+            <div class="row staked-chart">
+              <div class="col-md-3">
+                <div class="chart-container">
+                  <canvas id="staked_amount_chart" height="110px"></canvas>
+                </div>
+              </div>
+              <div class="col">
+                <div id="staked_amount_legends" class="chart-legends-container"></div>
+              </div>
+            </div>
+
+            <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
             <div class="reserved-wallet">
               <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
               <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.foundation_reserve_address}}" target="_blank" rel="noopener noreferrer">

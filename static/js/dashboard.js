@@ -272,6 +272,68 @@
     }
   }
 
+  function transformStakedStats(data) {
+    const total = data.reduce((stored, current, index) => index == 1 ? Number(stored[1]) : Number(stored) + Number(current[1]));
+    const getPercentage = (value) => parseInt(Number(value)/total * 100)
+    return data.map(each => ({
+      title: `${each[0]} days - ${getPercentage(each[1])}%`,
+      value: parseInt(each[1]),
+      value_human: `${parseInt(each[1]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} OGN`,
+    }))
+  }
+
+  function initStakedAmountChart(canvasEl, legendsEl) {
+    var data = transformStakedStats(window.ognStakedStats || [])
+    var cdata = {
+      type: 'doughnut', 
+      data: {
+        labels: data.map(each => `${each.title} (${each.value_human})`),
+        datasets: [{
+          label: 'Staked amount by duration',
+          data: data.map(each => each.value),
+          backgroundColor: ['#007cff', '#00d592', '#7b52ef'],
+          borderWidth: 1
+        }]
+      },
+      options: { 
+        maintainAspectRatio: false, 
+        spanGaps: false, 
+        cutoutPercentage: 80,
+        rotation: 70,
+        title: { 
+          text: 'Staked amount', 
+          display: false 
+        },
+        legend: {
+          display: false
+        },
+        legendCallback: function (chart) {
+          var text = []
+          text.push('<div class="' + chart.id + '-legend chart-legends grid-type d-flex flex-column mt-md-0">')  
+          for (var i = 0; i < chart.data.labels.length; i++) {
+            text.push('<div class="legend-item mt-2 mb-2">')
+            text.push('<span class="legend-color legend-small" style="background-color:' + chart.data.datasets[0].backgroundColor[i] + '"></span>')
+            text.push('<span class="legend-name font-weight-normal">' + chart.data.labels[i] + '</span>')
+            text.push('</div>')
+          }
+          text.push('</div>')
+          return text.join('')
+        },
+        tooltips: {
+          callbacks: {
+            label: function (d) { return data[d.index].value_human }
+          }
+        }
+      } 
+    }
+
+    var chartObj = new Chart(canvasEl, cdata)
+    
+    if (legendsEl) {
+      legendsEl.innerHTML = chartObj.generateLegend()
+    }
+  }
+
   function updateDynamicValues() {
     var modeledSupply = monthToModeledValue[formattedDate(new Date())] * 1000000
     var currentSupply = window.ognSupplyHistory[0].supply_amount
@@ -289,14 +351,17 @@
   function onDOMReady() {
     var unlockChart = document.getElementById('unlock_schedule_chart')
     var releaseChart = document.getElementById('release_schedule_chart')
+    var stakedAmountChart = document.getElementById('staked_amount_chart')
 
     var unlockLegends = document.getElementById('unlock_schedule_legends')
     var releaseLegends = document.getElementById('release_schedule_legends')
+    var stakedAmountLegends = document.getElementById('staked_amount_legends')
 
-    if (!unlockChart || !releaseChart) return
+    if (!unlockChart || !releaseChart || !stakedAmountChart) return
 
     initUnlockChart(unlockChart, unlockLegends)
     initReleaseChart(releaseChart, releaseLegends)
+    initStakedAmountChart(stakedAmountChart, stakedAmountLegends)
     updateDynamicValues()
   }
 

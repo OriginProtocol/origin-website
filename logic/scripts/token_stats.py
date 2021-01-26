@@ -77,11 +77,19 @@ def fetch_stats_from_t3(investor_portal = True):
 def fetch_onchain_staking_stats():
     print("Fetching on-chain OGN staking stats...")
 
-    url = constants.STAKING_STATS_URL or "https://analytics.ousd.com/api/v1/staking_stats"
+    url =  "https://analytics.ousd.com/api/v1/staking_stats"
 
     raw_json = requests.get(url)
     response = raw_json.json()
 
+    return response
+
+def fetch_onchain_staking_stats_by_duration():
+    print("Fetching on-chain OGN staking stats...")
+
+    url = "https://analytics.ousd.com/api/v1/staking_stats_by_duration"
+    raw_json = requests.get(url)
+    response = raw_json.json()
     return response
 
 def fetch_staking_stats():
@@ -269,6 +277,8 @@ def compute_ogn_stats():
 
     staking_stats = fetch_staking_stats()
 
+    ogn_staked_data = fetch_onchain_staking_stats_by_duration()
+
     ogn_supply_stats = fetch_ogn_stats(
         token_prices["ogn_usd_price"], 
         staking_stats["staked_user_count"], 
@@ -283,6 +293,7 @@ def compute_ogn_stats():
     redis_client.set("ogn_stats", json.dumps(
         dict([
             ("ogn_supply_stats", ogn_supply_stats),
+            ("ogn_staked_data", json.dumps(ogn_staked_data["data"])),
             ("ogn_supply_history", json.dumps(ogn_supply_history))
         ])
     ))
