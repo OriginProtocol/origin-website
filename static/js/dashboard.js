@@ -273,8 +273,8 @@
   }
 
   function transformStakedStats(data) {
-    const total = data.reduce((stored, current, index) => index == 1 ? Number(stored[1]) : Number(stored) + Number(current[1]));
-    const getPercentage = (value) => parseInt(Number(value)/total * 100)
+    const total = data.reduce((stored, current) => Number(stored) + Number(current[1]), 0);
+    const getPercentage = (value) => parseFloat((Number(value)/total * 100).toFixed(2))
     return data.map(each => ({
       title: `${each[0]} days - ${getPercentage(each[1])}%`,
       value: parseInt(each[1]),
