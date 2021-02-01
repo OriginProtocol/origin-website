@@ -607,6 +607,8 @@ def assets_all_styles():
         concat_asset_files(
             [
                 "static/css/vendor-bootstrap-4.0.0-beta2.css",
+                "static/css/vendor-owl.theme.default.min.css",
+                "static/css/vendor-owl.carousel.min.css",
                 "static/css/alertify.css",
                 "static/css/animate.css",
                 "static/css/style.css",
@@ -653,6 +655,7 @@ def assets_all_javascript():
                 "static/js/vendor-chart.min.js",
                 "static/js/vendor-moment.min.js",
                 "static/js/vendor-chartjs-adapter-moment.min.js",
+                "static/js/vendor-owl.carousel.min.js",
                 "static/js/script.js",
                 "static/js/countdown-timer.js",
                 "static/js/yt-player.js",
