@@ -83,6 +83,10 @@ def beforeRequest():
     )
     g.metadata["url"] = "https://www.originprotocol.com"
 
+@app.after_request
+def after_request(response):
+    response.headers["X-Frame-Options"] = "SAMEORIGIN"
+    return response
 
 @app.route("/", strict_slashes=False)
 def root():
