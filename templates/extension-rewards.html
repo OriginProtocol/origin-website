@@ -179,7 +179,7 @@ theme_dark=True %} {% endwith %}
 	<div class="my-4">
 	  <strong>{{gettext("Origin Firefox Extension")}}</strong>
 	</div>
-	<a href="{{ universal.FIREFOX_EXTENSION_URL }}" class="download-link" target="_blank">
+	<a href="{{ universal.FIREFOX_EXTENSION_URL }}" class="download-link" target="_blank" rel="noopener noreferrer">
 	  {{gettext("Download")}}
 	</a>
       </div>
@@ -188,7 +188,7 @@ theme_dark=True %} {% endwith %}
 	<div class="my-4">
 	  <strong>{{gettext("Origin Brave Extension")}}</strong>
 	</div>
-	<a href="{{ universal.CHROME_EXTENSION_URL }}" class="download-link" target="_blank">
+	<a href="{{ universal.CHROME_EXTENSION_URL }}" class="download-link" target="_blank" rel="noopener noreferrer">
 	  {{gettext("Download")}}
 	</a>
       </div>
@@ -203,7 +203,7 @@ theme_dark=True %} {% endwith %}
 	<li>{{gettext("extension must still be installed at the end of the month")}}</li>
 	<li>{{gettext("extension must be installed in a browser that is used throughout the month")}}</li>
 	<li>{{gettext("rewards is contingent on review of fraud and abuse")}}</li>
-	<li>{{gettext("read the")}} <a href="https://www.originprotocol.com/en/privacy/extension" target="_blank">{{gettext("Privacy Policy")}}</a></li>
+	<li>{{gettext("read the")}} <a href="https://www.originprotocol.com/en/privacy/extension" target="_blank" rel="noopener noreferrer">{{gettext("Privacy Policy")}}</a></li>
       </ul>
     </div>
     <div class="footer-title">{{gettext("Terms and Conditions")}}</div>
