@@ -10,7 +10,7 @@
 # but you can still run scripts interactively from the commandline.
 # Also activates the virtualenv for this project.
 
-ENV_DIR=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
+ENV_DIR=$(cd $(dirname ${BASH_SOURCE[0]:-$0}) && pwd)
 export PROJECTPATH=$ENV_DIR
 if [[ -n "$VIRTUAL_ENV" ]]; then
     deactivate
