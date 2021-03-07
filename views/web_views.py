@@ -621,7 +621,7 @@ def assets_all_styles():
                 "static/css/components/countdown-timer.css",
                 "static/css/components/countdown-bar.css",
                 "static/css/components/countdown-hero-banner.css",
-                "static/css/components/stake-banner.css",
+                "static/css/components/nft-banner.css",
                 "static/css/pages/common.css",
                 "static/css/pages/team.css",
                 "static/css/pages/token.css",
