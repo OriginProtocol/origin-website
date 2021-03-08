@@ -13,18 +13,22 @@
 .nft-banner .container .banner-logo {
   background-image: url("/static/img/nft-icon.png");
   background-repeat: no-repeat;
-  width: 546px;
-  height: 200px;
-  position: absolute;
-  left: 60px;
-  top:40px;
+  background-position-x: center;
+  background-position-y: center;
+  width: 120px;
+  height: 120px;
   z-index: 0;
 }
 
-.nft-banner .container .banner-logo.banner-logo-ar {
-  right: -182px;
-  left: unset;
+.nft-banner {
+  background-image: url('/static/img/nft-background.png');
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #007cff;
 }
+
 
 .nft-banner .container .banner-content-row .banner-content {
   z-index: 1;
@@ -32,21 +36,17 @@
 
 .nft-banner .container .banner-content-row .banner-content h1 {
   color: #fff;
-  line-height: 1;
-  text-align: start;
+  line-height: 1.04;
   font-weight: 500;
-  top:-10px;
-  position:relative;
+  margin: 0;
 }
 
 .nft-banner .container .banner-content-row .banner-content p {
   color: #dbe6eb;
   font-family: Lato;
-  text-align: start;
 }
 
 .nft-banner .container .banner-content-row .banner-button {
-  text-align: end;
   min-width: 210px;
 }
 
@@ -62,38 +62,8 @@
     border-color: #000000;
 }
 
-.nft-banner {
-  background-image: url('/static/img/nft-background.png');
-  background-position-y: top;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #007cff;
-}
-
 .nft-banner .coins-icon {
   margin-right: 20px;
-}
-
-.nft-banner .coins-icon .ogn-coin {
-  margin-left: -12px;
-}
-
-.nft-banner .nft-content h1 {
-  margin: 0px;
-  font-family: Poppins;
-  font-size: 32px;
-  font-weight: 500;
-  font-stretch: normal;
-  color: #ffffff;
-}
-
-.nft-banner .nft-content p {
-  font-family: Lato;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: normal;
-  color: #dbe6eb;
 }
 
 .nft-banner .btn {
@@ -110,70 +80,8 @@
 }
 
 @media (max-width: 992px) {
-  .nft-banner .coins-icon {
-    margin-right: unset;
-  }
-
   .nft-banner {
-    background-image: url('/static/img/nft-background.png');
-    background-position-x: center;
-    background-position-y: top;
-    background-size: cover;
     padding: 25px 15px;
-  }
-
-  .nft-banner .nft-content {
-    text-align: center;
-    margin: 15px 0px;
-  }
-
-  .nft-banner .nft-content h1 {
-    margin-bottom: 5px;
-  }
-
-  .nft-banner .nft-content p {
-    display: none;
-  }
-
-}
-
-@media (max-width: 767px) {
-  .nft-banner .container .banner-logo.banner-logo-ar {
-    right: unset;
-  }
-
-  .nft-banner .container .banner-logo {
-    background-image: url("/static/img/nft-icon.png");
-    width: 100%;
-    height: 100%;
     background-position-y: top;
-    background-position-x: center;
-    left: 0px;
-  }
-
-  .nft-banner .container .banner-content-row {
-    padding: 25px;
-  }
-
-  .nft-banner .container .banner-content-row .banner-content {
-    padding: 0px;
-  }
-
-  .nft-banner .container .banner-content-row .banner-content h1 {
-    text-align: center;
-    padding: 17px 0px;
-  }
-
-  .nft-banner .container .banner-content-row .banner-content p {
-    display: none;
-  }
-
-  .nft-banner .container .banner-content-row .banner-button {
-    text-align: center;
-    width: 100%;
-  }
-
-  .nft-banner .container .banner-content-row .banner-button .btn {
-    width: 100%;
   }
 }
