@@ -1,5 +1,14 @@
 <div id="execsummary">
-  <h1>{{gettext("Executive Summary")}}</h1>
+
+  <div class="litepaper-alert">
+    <div class="font-weight-bold">This original whitepaper has been deprecated.</div>
+    <div>Check out our new litepaper to learn about Origin's updated mission.</div>
+    <a class="mt-3" href="{{ url_for('litepaper', lang_code=CURRENT_LANGUAGE) }}">
+      <div class="text-decoration-underline">{{gettext("View litepaper")}}</div>
+    </a>
+  </div>
+
+  <h1 class="mt-3">{{gettext("Executive Summary")}}</h1>
   <p>
     {{gettext("Origin is an open-source platform that enables the creation of peer-to-peer marketplaces and e-commerce applications. The Origin Platform initially targets the global sharing economy, allowing buyers and sellers of
     fractional use goods and services (car-sharing, service-based tasks, home-sharing, etc.) to transact on

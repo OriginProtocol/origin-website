@@ -567,6 +567,11 @@ def creator():
 def whitepaperv2():
     return render_template("whitepaper.html")
 
+@app.route("/litepaper", strict_slashes=False)
+@app.route("/<lang_code>/litepaper", strict_slashes=False)
+def litepaper():
+    return render_template("litepaper.html")
+
 
 @app.route("/browser-extension", strict_slashes=False)
 @app.route("/<lang_code>/browser-extension", strict_slashes=False)
