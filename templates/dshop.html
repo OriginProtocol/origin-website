@@ -24,7 +24,7 @@
       <div class="sub-title">{{gettext("Run and grow your business with Dshop, a customizable and open-source e-commerce platform built on the decentralized web.  Get started for free and launch your store in a day.")}}</div>
       <a 
         class="primary-button" 
-        href="https://dshop.originprotocol.com"
+        href="https://dshop.originprotocol.com/#/admin/signup"
         target="_blank"
         rel="noreferrer noopener"
       >{{ gettext("Try it – it’s free") }}</a>
@@ -221,23 +221,49 @@
     <div class="container d-flex flex-column">
       <h3>{{gettext("Dshop success stories")}}</h3>
       <div class="success-list d-flex flex-wrap justify-content-center">
-        <div class="gradient-box">
-          <img src="/static/img/dshop/jackielim.png"
-            srcset="/static/img/dshop/jackielim@2x.png 2x,
-                    /static/img/dshop/jackielim@3x.png 3x"
-            class="headshot"
-          >
-          <div class="success-text">
-            {{gettext("“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”")}}
+        <div class="owl-carousel owl-theme" id="testimonial-slider">
+          <div class="item">
+            <div class="gradient-box">
+              <div class="success-text">
+                {{gettext("“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”")}}
+              </div>
+              <div class="success-signature">
+                {{gettext("- Jackie Lim , Senior B.D. Director, Contentos")}}
+              </div>
+              <img
+                class="contentos"
+                src="/static/img/dshop/contentos.jpg"
+                srcset="/static/img/dshop/contentos@2x.jpg 2x, /static/img/dshop/contentos@3x.jpg 3x"
+              />
+            </div>
           </div>
-          <div class="success-signature">
-            {{gettext("- Jackie Lim , Senior B.D. Director, Contentos")}}
+          <div class="item">
+            <div class="gradient-box">
+              <div class="success-text">
+                {{gettext("“We are thrilled to partner with Origin Protocol to launch the Ternio Dshop. They made the entire setup process easy and hands-off, and it has been exciting to see how they have applied the principles of blockchain and decentralization into the e-commerce space. Dshop provides the perfect platform for BlockCard users and our own team to purchase branded merchandise to promote our brand.”")}}
+              </div>
+              <img
+                class="contentos"
+                src="/static/img/dshop/ternio.jpg"
+                srcset="/static/img/dshop/ternio@2x.jpg 2x, /static/img/dshop/ternio@3x.jpg 3x"
+              />
+            </div>
           </div>
-          <img
-            class="contentos"
-            src="/static/img/dshop/contentos.jpg"
-            srcset="/static/img/dshop/contentos@2x.jpg 2x, /static/img/dshop/contentos@3x.jpg 3x"
-          />
+          <div class="item">
+            <div class="gradient-box">
+              <div class="success-text">
+                {{gettext("“Origin dshops are making blockchain-powered commerce accessible to thousands of people around the world. Kyber is glad to help facilitate liquidity for the Origin Token (OGN).”")}}
+              </div>
+              <div class="success-signature">
+                {{gettext("- Shane Hong, Kyber Marketing")}}
+              </div>
+              <img
+                class="contentos"
+                src="/static/img/ognToken/kyber.png"
+                srcset="/static/img/ognToken/kyber.png 2x, /static/img/ognToken/kyber.png 3x"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -334,7 +360,7 @@
     <div class="subtitle">{{gettext("Ready to start selling today?")}}</div>
     <a 
       class="primary-button" 
-      href="https://dshop.originprotocol.com"
+      href="https://dshop.originprotocol.com/#/admin/signup"
       target="_blank"
       rel="noreferrer noopener"
     >{{ gettext("Try it – it’s free") }}</a>

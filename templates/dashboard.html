@@ -127,15 +127,6 @@
               <div class="ogn-label">OGN</div>
             </div>
           </div>
-          
-          <div class="locked-token-widget">
-            <div class="title">
-              {{gettext("Investors & team members with locked tokens")}}
-            </div>
-            <div class="value">
-              {{ogn_stats.formatted_staked_user_count}}
-            </div>
-          </div>
 
           <div class="locked-token-widget">
             <div class="title">
@@ -245,7 +236,7 @@
           <h1>{{gettext("Stake OGN on OUSD.com")}}</h1>
           <p>{{gettext("Stake your OGN to earn up to 25%%")}}</p>
         </div>
-        <a class='btn btn-dark ml-lg-auto' href="{{universal.STAKE_URL}}" target="_blank">
+        <a class='btn btn-dark ml-lg-auto' href="{{universal.STAKE_URL}}" target="_blank" rel="noopener noreferrer">
           {{gettext("Stake OGN now")}}
         </a>
       </div>
@@ -321,6 +312,11 @@
           </a>
         </div>
         <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://hitbtc.com/ogn-to-btc">
+            <img src="/static/img/ognToken/hitbtc-logo.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
           <a target="_blank" rel="noopener noreferrer" href="https://www.mxc.com/trade/pro#OGN_USDT">
             <img src="/static/img/ognToken/mxc.svg" />
           </a>
@@ -346,11 +342,12 @@
       <h3>{{gettext("Decentralized Exchanges")}}</h3>
       <div class="exchanges row mb-5">
         <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
-          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/swap/eth-ogn">
-            <img src="/static/img/ognToken/kyber.svg" />
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://exchange.sushiswapclassic.org/#/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
+            <img src="/static/img/ognToken/sushiswap.png" />
           </a>
         </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
           <a target="_blank" rel="noopener noreferrer"
             href="https://uniswap.exchange/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
             <img src="/static/img/ognToken/uniswap.png" />
@@ -361,6 +358,13 @@
             href="https://balancer.exchange/#/swap/ether/0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
             <img src="/static/img/ognToken/balancer.svg" />
           </a>
+        </div>
+        <div class="exchanges row mb-5">
+          <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
+            <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/swap/eth-ogn">
+              <img src="/static/img/ognToken/kyber.svg" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

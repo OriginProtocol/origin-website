@@ -23,7 +23,7 @@ def test_root_with_lang(client):
     """ Make sure the correct language is returned with lang_code query param """
     res = client.get(url_for('root', lang_code='es'))
     assert res.status_code == 200
-    assert '<html lang="es">' in res.get_data()
+    assert '<html lang="es"' in res.get_data()
 
 
 def test_old_urls(client):

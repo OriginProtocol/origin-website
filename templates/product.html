@@ -106,7 +106,7 @@
       </div>
     </div>
     <div class="opaque mt-5 mt-md-3 mb-3 mb-md-0">{{gettext("Featured on")}}</div>
-    <a href="https://medium.com/originprotocol/samsung-keystore-sdk-react-native-wrapper-65b73294cf33" target="_blank">
+    <a href="https://medium.com/originprotocol/samsung-keystore-sdk-react-native-wrapper-65b73294cf33" target="_blank" rel="noopener noreferrer">
       <img class="mb-0 mb-md-4 samsung-blockchain" src="/static/img/product/samsung-blockchain-logo.svg"/>
     </a>
     <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <section class="marketplaces-section blue-section">
+  <!-- <section class="marketplaces-section blue-section">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -138,7 +138,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
  <!-- <section class="features-section grey-section">
     <div class="container pb-4 pb-md-5">
       <div class="row">
@@ -252,131 +252,7 @@
       </div>
     </div>
   </section>-->
-  <section class="whitepaper-section grey-section">
-    <div class="d-flex flex-column">
-        <div class="col-12 p-0">
-          <h1>{{gettext("Check out our updated whitepaper")}}</h1>
-        </div>
-        <div class="col-12 p-0">
-          <div class="action-buttons">
-            <a href="{{ url_for('whitepaperv2', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-outline-primary">{{gettext("Read our whitepaper")}}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="milestones-section white-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>{{gettext("Milestones")}}</h1>
-        </div>
-        <div class="col-12">
-          <div class="milestones-timeline">
-            <div class="milestone completed">
-              <div class="step">1</div>
-              <div class="timestamp">{{gettext("May 2017")}}</div>
-              <div class="title">{{gettext("Began initial development")}}</div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">2</div>
-              <div class="timestamp">{{gettext("September 2017")}}</div>
-              <div class="title">{{gettext("Released initial whitepaper")}}</div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">3</div>
-              <div class="timestamp">{{gettext("December 2017")}}</div>
-              <div class="title">{{gettext("Launched Alpha on Ethereum testnet")}}</div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">4</div>
-              <div class="timestamp">{{gettext("October 2018")}}</div>
-              <div class="title">{{gettext("Launched Beta on Ethereum mainnet")}}</div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">5</div>
-              <div class="timestamp">{{gettext("February 2019")}}</div>
-              <div class="title">
-                <span>{{gettext("Launched Marketplace Creator 1.0 and our first mobile apps")}}</span>
-                <span>{{gettext("Supported first partner app launches")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">6</div>
-              <div class="timestamp">{{gettext("April 2019")}}</div>
-              <div class="title">
-                <span>{{gettext("Launched Origin Rewards")}}</span>
-                <span>{{gettext("Launched stablecoin payments")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">7</div>
-              <div class="timestamp">{{gettext("July 2019")}}</div>
-              <div class="title">
-                <span>{{gettext("Launched shoporigin.com and new mobile apps")}}</span>
-                <span>{{gettext("Launched Meta Transactions")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">8</div>
-              <div class="timestamp">{{gettext("September 2019")}}</div>
-              <div class="title">
-                <span>{{gettext("Launched OGN Commissions")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">9</div>
-              <div class="timestamp">{{gettext("Q4 2019")}}</div>
-              <div class="title">
-                <span>{{gettext("Distributed investor OGN tokens")}}</span>
-                <span>{{gettext("Launched Dshop")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">10</div>
-              <div class="timestamp">{{gettext("Q1 2020")}}</div>
-              <div class="title">
-                  <span>{{gettext("Launched Mainnet 1.0")}}</span>
-                  <span>{{gettext("Listed on Binance")}}</span>
-                  <span>{{gettext("Launched OGN as payment token")}}</span>
-                  <span>{{gettext("Added to Samsung Blockchain Wallet")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">11</div>
-              <div class="timestamp">{{gettext("Q2 2020")}}</div>
-              <div class="title">
-                <span>{{gettext("Listed on additional exchanges")}}</span>
-                <span>{{gettext("Supported Dshop partner launches")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">12</div>
-              <div class="timestamp">{{gettext("Q3 2020")}}</div>
-              <div class="title">
-                  <span>{{gettext("Partnered with Brave, Google Cloud, and others")}}</span>
-              </div>
-            </div>
-            <div class="milestone completed">
-              <div class="step">13</div>
-              <div class="timestamp">{{gettext("Q4 2020")}}</div>
-              <div class="title">
-                <span>{{gettext("Launched OUSD")}}</span>
-                <span>{{gettext("Launched OGN staking model")}}</span>
-              </div>
-            </div>
-            <div class="milestone future">
-              <div class="step">14</div>
-              <div class="timestamp">{{gettext("2021 and beyond")}}</div>
-              <div class="title">
-                <span>{{gettext("Continued development of the Origin platform & community")}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <section class="tokens-section blue-section">
     <div class="container">
       <div class="row">

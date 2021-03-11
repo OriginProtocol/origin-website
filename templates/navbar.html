@@ -75,16 +75,14 @@
             <a class="nav-link{% if 'investors' in request.path %} selected{% endif %}" href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link{% if 'product' in request.path %} selected{% endif %}" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Product") }}</a>
+            <a class="nav-link{% if 'product' in request.path %} selected{% endif %}" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Products") }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link{% if 'ogn_token' in request.path %} selected{% endif %}" href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN Token") }}</a>
+            <a class="nav-link{% if 'dashboard' in request.path %} selected{% endif %}" href="{{ url_for('dashboard', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN Token") }}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link{% if 'whitepaper' in request.path %} selected{% endif %}" href="{{ url_for('whitepaperv2', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Whitepaper") }}</a>
-          </li>
+         
           <!--<li class="nav-item">
-            <a class="nav-link" href="https://www.shoporigin.com" target="_blank">{{ gettext("Shop") }}</a>
+            <a class="nav-link" href="https://www.shoporigin.com" target="_blank" rel="noopener noreferrer">{{ gettext("Shop") }}</a>
           </li>-->
           <li class="d-none d-lg-block nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ AVAILABLE_LANGUAGES[CURRENT_LANGUAGE] }}</a>
