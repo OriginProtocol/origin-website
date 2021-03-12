@@ -1,12 +1,6 @@
 .whitepaper-hero {
-  height: 500px;
   padding-top: 105px;
-
-  background-image: url('/static/img/whitepaper/sharing-economy-graphic.png');
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: 632px 368px;
-  background-position: 100% 100%;
+  padding-bottom: 45px;
 }
 
 .whitepaper-hero .container, 
@@ -17,7 +11,9 @@
 
 .whitepaper-hero h1.title {
   text-align: left;
-  max-width: 475px;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .whitepaper-hero h1.title > span {
@@ -154,6 +150,36 @@ main section.whitepaper-container h1, main section.whitepaper-container h2 {
 
 .whitepaper-disclaimer p {
   color: #638298;
+}
+
+.litepaper-alert {
+  margin-top: 86px;
+  margin-bottom: 50px;
+  color: #000;
+  border-radius: 8px;
+  border: solid 1px #ffc000;
+  background-color: rgba(255, 192, 0, 0.1);
+  padding: 20px 30px;
+  font-size: 18px;
+}
+
+.litepaper-alert a {
+  color: #000;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.litepaper-alert a::after {
+  content: '>';
+  margin-left: 5px;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
 }
 
 @media (max-width: 768px) { 
