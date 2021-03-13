@@ -23,7 +23,7 @@
     <div id="landing-video-poster" class="video-overlay-poster"></div>
     <div class="video-overlay-gradient"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("Blockchain-powered commerce is the future")}}</h1>
+      <h1 class="video-title">{{gettext("Connecting artists<br>directly with their fans")}}</h1>
       <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
@@ -39,18 +39,10 @@
   </div>
   <!-- Countdown section -->
   <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
-    {% if OGN_ALREADY_LAUNCHED %}
-      <h1 class="clock-title">{{gettext("Be the first to hear when we launch new products, and announce important partnerships!")}}</h1>
-    {% else %}
-      <h1 class="clock-title mb-0">{{gettext("Participate in the Origin Token (OGN) distribution")}}</h1>
-      <div class="clock d-flex align-items-center justify-content-center mt-0">
-        {% with timer_large=False %}
-        {% include 'components/countdown-timer.html' %}
-        {% endwith %}
-      </div>
-    {% endif %}
+  <h1 class="clock-title">{{gettext("Subscribe to stay in touch")}}</h1>
 
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("Subscribe to stay in touch. Your email will be kept private.")}}</div>
+
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Be the first to hear when we launch important partnerships, celebrity NFT drops, exchange listings, and new products. Your email will be kept private.")}}</div>
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
         <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Email")}}">
@@ -70,7 +62,7 @@
     </div>
   </div>
   <!-- The sharing economy section -->
-  <div class="sharing-economy">
+  <!-- <div class="sharing-economy">
     <div class="container d-flex flex-column justify-content-center align-items-center">
       <h1 class="segment-title ml-4 mr-4">{{gettext("There is a massive opportunity for blockchain-powered commerce")}}</h1>
       <div class="segment-subtitle title ml-3 mr-3">{{gettext("E-commerce is projected to be one of the fastest growing verticals in the blockchain industry during the next few years")}}</div>
@@ -90,9 +82,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Decentralised marketplaces inevitable -->
-  <div class="decentralised-marketplaces d-flex flex-column justify-content-center align-items-center">
+  <!-- <div class="decentralised-marketplaces d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Blockchain-powered commerce is the future")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure")}}</div>
     <div class="tiles-holder d-flex justify-content-center flex-wrap">
@@ -125,7 +117,7 @@
         <div class="tile-text">{{gettext("Blockchain-powered commerce can't be banned or shut down")}}</div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- World class team -->
   <div class="world-class d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Origin has a world-class team")}}</h1>
