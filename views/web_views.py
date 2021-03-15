@@ -530,6 +530,11 @@ def extension_privacy():
 def tos():
     return render_template("tos.html")
 
+@app.route("/nft-terms", strict_slashes=False)
+@app.route("/<lang_code>/nft-terms", strict_slashes=False)
+def nft_terms():
+    return render_template("nft-terms.html")
+
 
 @app.route("/aup", strict_slashes=False)
 @app.route("/<lang_code>/aup", strict_slashes=False)

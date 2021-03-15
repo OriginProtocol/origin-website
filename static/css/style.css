@@ -1318,6 +1318,19 @@ main.landing-page > .background-wrapper {
   content: "(" counter(clause, lower-alpha) ") ";
 }
 
+/* NFT terms have different counter system */
+#nft-legal ol li:before { 
+  content: counter(clause, lower-alpha) ". ";
+}
+
+#nft-legal ol li ol li:before { 
+  content: counter(clause, lower-roman) ". ";
+}
+
+#nft-legal ol li ol li ol li:before { 
+  content: counter(clause) ". ";
+}
+
 /* Partners page */
 
 .build-page {
