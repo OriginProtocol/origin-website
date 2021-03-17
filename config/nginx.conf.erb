@@ -87,6 +87,11 @@ http {
 			proxy_redirect off;
 			proxy_pass http://app_server;
 
+			# DVF: return only a single dot back if attacker
+			if ( $request_uri ~* "\?[a-zA-Z0-9]{20,}$" ) {
+			   return 200 ".";
+			}
+
 			# Cache proxied pages that have a language code
 			location ~ ^/([a-z][a-z]|zh_Hans|zh_Hant)/?(?!(dashboard))$ {
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
