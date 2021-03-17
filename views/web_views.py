@@ -547,6 +547,10 @@ def aup():
 def creator():
     return render_template("creator.html")
 
+@app.route("/brave-customer-story", strict_slashes=False)
+@app.route("/<lang_code>/brave-customer-story", strict_slashes=False)
+def brave_dshop_pr():
+    return render_template("brave-dshop-pr.html")
 
 # @app.route('/partners/interest', methods=['POST'], strict_slashes=False)
 # def partners_interest():
