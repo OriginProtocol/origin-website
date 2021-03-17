@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ gettext("Origin Protocol - Brave Customer Story") }}{% endblock %}
+
+{% block meta_description %}{{ gettext("Origin Protocol - Brave Customer Story") }}{% endblock %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+<main class="tos-page">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1><br>
+          {{ gettext("Brave Customer Story") }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="container legal">
+      <div class="row">
+        <div class="col-12">
+          <img src="/static/img/origin_brave_nft_medium.jpg" class="img-fluid" />
+          <p>{{gettext("SAN FRANCISCO/TAIPEI, March 11, 2021")}}</p>
+          <p>{{gettext("Origin Protocol (Origin), a blockchain technology company developing decentralized commerce and finance (DeFi) applications, is pleased to be engaged by Brave Browser (Brave) in its switch from a centralized e-commerce platform to Origin’s decentralized Dshop platform. Working jointly with Brave, Origin enabled Brave to accept payments in its native token, BAT, for merchandise for the very first time. As part of the engagement, Origin also helped Brave sell its first ever non-fungible token (NFT) collection, which sold out in minutes.")}}</p>
+          <p>{{gettext("Adoption of decentralized technologies and cryptocurrency tokens are key to Brave’s mission and product offerings. Origin’s Dshop platform will enable Brave to better serve its BAT token holder community through increased cryptocurrency integration. Previously Brave’s merchandise store only accepted credit cards and was on a completely centralized platform.")}}</p>
+          <p>{{gettext("Origin helped Brave switch from Shopify to the Dshop platform. The NFT integration to Dshop in collaboration with Brave led to a highly successful outcome for both parties. Brave sold all 30 NFTs, a result of a BAT token holder community campaign to create tokenized images of BAT memes, in just under two minutes. In addition, Brave continues to do brisk business through Dshop split between credit card payments and cryptocurrency payments.")}}</p>
+          <p>{{gettext("“We are delighted to be a strategic partner of Brave in support of their efforts to push forward decentralized technologies,” says Nick Poulden, technical lead for Dshop - Origin. “Working closely with Brave, we were able to provide a solution that served both their crypto native customers and BAT token holder community while also making it easy for non-crypto users to make purchases on their store. Brave wanted to signal to their token holders that they were committed to decentralized tech while still being able to serve their tens of millions of users who may be unfamiliar with it. Their previous platform could only serve the latter group. Brave’s first NFT collection sale was a smash success and we look forward to continuing a long-term, mutually rewarding relationship with them.”")}}</p>
+          <p><b>{{gettext("About Origin Protocol")}}</b></p>
+          <p>{{gettext("Origin Protocol is a leading blockchain technology company founded in 2017 in San Francisco, CA. Origin’s focus is on building platforms that enable peer-to-peer commerce applications with a focus on NFTs and DeFi protocols and applications. We launched the Origin Dollar (OUSD) protocol in 2020 and conducted a record-breaking NFT auction in 2021. Origin Tokens (OGN) are listed on some of the largest exchanges in the world, including Binance Global and Huobi Global. <a href='/'>www.originprotocol.com</a>")}}</p>
+          <p>{{gettext("Media Contact:")}} <br/> pr@originprotocol.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</main>
+{% endblock %}
+{% block extra_scripts %}
+{% endblock %}
