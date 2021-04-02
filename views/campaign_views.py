@@ -57,7 +57,7 @@ def load_campaign(code):
     ):
         conf_file = os.path.join(ROOT, 'static', 'partnerconf', 'campaigns.json')
 
-        print 'conf_file', conf_file
+        print('conf_file', conf_file)
 
         if not os.path.isfile(conf_file):
             return None
@@ -86,13 +86,13 @@ def growth_query(query, vars={}, opName='GenericQuery'):
         "variables": vars,
         "query": query
     }
-    print 'payload: ', payload
+    print('payload: ', payload)
     resp = requests.post(GROWTH_URL, json=payload, headers={
         'Content-Type': 'application/json'
     })
-    print 'resp', resp
+    print('resp', resp)
     if resp.status_code != 200:
-        print 'Error querying growth graphql service', resp.text
+        print('Error querying growth graphql service', resp.text)
         return None
     return resp.json()
 
@@ -118,14 +118,14 @@ def ipfs_resolve(url):
 
     # check for http
     if url.startswith('http://') or url.startswith('https://'):
-        print 'http url'
+        print('http url')
         return url
 
     # check for ifps
     elif url.startswith('ipfs://'):
         match = re.search(r'(Qm[A-Za-z0-9]+)$', url)
         if not match:
-            print 'invalid url'
+            print('invalid url')
             return ''
         try:
             return '%s/%s' % (
@@ -136,7 +136,7 @@ def ipfs_resolve(url):
             pass
 
     # default
-    print 'default url'
+    print('default url')
     return ''
 
 

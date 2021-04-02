@@ -33,7 +33,7 @@ ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 
 def insert_data(snapshot_date, supply, do_it):
   if not do_it:
-    print "Will set supply of month %s to %s" % (snapshot_date, supply)
+    print("Will set supply of month {} to {}".format(snapshot_date, supply))
     return
 
   instance = db_models.CirculatingSupply(
@@ -48,7 +48,7 @@ def delete_bad_data(do_it):
     bad_data_result = db.engine.execute("""
     select count(*) from circulating_supply where snapshot_date >= '2020-06-01'::date and snapshot_date <= '2020-06-15'::date
     """)
-    print "Skipping delete statement that'd delete %s records" % list(bad_data_result)[0][0]
+    print("Skipping delete statement that'd delete {} records".format(list(bad_data_result)[0][0]))
     return
   db.engine.execute("""
   delete from circulating_supply where snapshot_date >= '2020-06-01'::date and snapshot_date <= '2020-06-15'::date
@@ -85,13 +85,13 @@ def fill_missing_txs(do_it):
     instance.supply_amount = new_supply
     db.session.add(instance)
 
-    print("%s %s") % (time_.fromtimestamp(result["timeStamp"]), new_supply)
+    print("{} {}".format(time_.fromtimestamp(result["timeStamp"]), new_supply))
   
   if do_it:
     db.session.commit()
 
-  print "Have parsed %s/%s transactions" % (update, len(results["result"]))
-  print "Circulating supply at the end of all txs: %s" % new_supply
+  print("Have parsed {}/{} transactions".format(update, len(results["result"])))
+  print("Circulating supply at the end of all txs: {}".format(new_supply))
 
 def main(do_it):
   delete_bad_data(do_it)

@@ -18,7 +18,7 @@ def fetch():
 	# we don't count contributors from detached forked projects (ie. origin-docs)
 	special_forked = ["origin-docs"]
 
-	print 'checking non-forked repos first:'
+	print('checking non-forked repos first:')
 	for repo in repos.json():
 		if not repo['fork'] and repo['name'] not in special_forked:
 
@@ -26,7 +26,7 @@ def fetch():
 			pulls_url = 'https://api.github.com/repos/%s/%s/pulls' % (organization, repo['name'])
 			results = requests.get(pulls_url, auth=credentials)
 
-			print repo['name']
+			print(repo['name'])
 			stats_url = 'https://api.github.com/repos/%s/%s/stats/contributors' % (organization, repo['name'])
 			results = requests.get(stats_url, auth=credentials)
 			try:
@@ -41,10 +41,10 @@ def fetch():
 				print("Skipping...")
 
 	# only include contributions from contributors who have also contributed to non-forked repos
-	print 'checking forked & special-case repos:'
+	print('checking forked & special-case repos:')
 	for repo in repos.json():
 		if repo['fork'] or repo['name'] in special_forked:
-			print repo['name']
+			print(repo['name'])
 			stats_url = 'https://api.github.com/repos/%s/%s/stats/contributors' % (organization, repo['name'])
 			results = requests.get(stats_url, auth=credentials)
 			data = results.json()
@@ -63,11 +63,11 @@ def fetch():
 		user.commits = value
 		user.avatar = pics[row]
 
-		print row + '\t' + str(value) + '\t' + pics[row]
+		print(row + '\t' + str(value) + '\t' + pics[row])
 		total_commits += value
 
-	print '%s commits' % total_commits 
-	print '%s contributors' % len(counts)
+	print('{} commits'.format(total_commits))
+	print('{} contributors'.format(len(counts)))
 
 with db_utils.request_context():
 	fetch()

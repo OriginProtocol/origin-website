@@ -2,16 +2,16 @@
 # -*- coding: utf-8 -*-
 
 import os
-import dotenv
+from dotenv import load_dotenv
 
-dotenv.load() or dotenv.load('.env')
+load_dotenv() or load_dotenv('.env')
 
-DEV_EMAIL = dotenv.get('DEV_EMAIL', default=None)
+DEV_EMAIL = os.environ.get('DEV_EMAIL', default=None)
 
-DEBUG = dotenv.get('DEBUG', default=False)
+DEBUG = os.environ.get('DEBUG', default=False)
 
-HOST = dotenv.get('HOST')
-HTTPS = dotenv.get('HTTPS', default=True)
+HOST = os.environ.get('HOST')
+HTTPS = os.environ.get('HTTPS') in ('True', 'true')
 
 # set the root directory
 if (os.path.exists('/etc/heroku')):
@@ -19,51 +19,51 @@ if (os.path.exists('/etc/heroku')):
 else:
     PROJECTPATH = os.environ.get('PROJECTPATH') or os.getcwd()
 
-DEFAULT_PARTICLE_ICON = dotenv.get('DEFAULT_PARTICLE_ICON')
-FLASK_SECRET_KEY = dotenv.get('FLASK_SECRET_KEY')
+DEFAULT_PARTICLE_ICON = os.environ.get('DEFAULT_PARTICLE_ICON')
+FLASK_SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
 
 APP_LOG_FILENAME = os.path.join(PROJECTPATH, 'app.log')
 
-SQLALCHEMY_DATABASE_URI = dotenv.get('DATABASE_URL')
+SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
-SENDGRID_API_KEY = dotenv.get('SENDGRID_API_KEY')
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 
-FULLCONTACT_KEY = dotenv.get('FULLCONTACT_KEY')
+FULLCONTACT_KEY = os.environ.get('FULLCONTACT_KEY')
 
 TEMPLATE_ROOT = os.path.join(PROJECTPATH, 'templates')
 STATIC_ROOT = os.path.join(PROJECTPATH, 'static')
 
-RECAPTCHA_SITE_KEY = dotenv.get('RECAPTCHA_SITE_KEY')
-RECAPTCHA_SECRET_KEY = dotenv.get('RECAPTCHA_SECRET_KEY')
-RECAPTCHA_SIZE = dotenv.get('RECAPTCHA_SIZE', default="invisible")
+RECAPTCHA_SITE_KEY = os.environ.get('RECAPTCHA_SITE_KEY')
+RECAPTCHA_SECRET_KEY = os.environ.get('RECAPTCHA_SECRET_KEY')
+RECAPTCHA_SIZE = os.environ.get('RECAPTCHA_SIZE', default="invisible")
 
-SENTRY_DSN = dotenv.get('SENTRY_DSN')
+SENTRY_DSN = os.environ.get('SENTRY_DSN')
 
-GITHUB_KEY = dotenv.get('GITHUB_KEY')
+GITHUB_KEY = os.environ.get('GITHUB_KEY')
 
-YOUTUBE_CHANNEL_ID = dotenv.get('YOUTUBE_CHANNEL_ID')
-YOUTUBE_URL = dotenv.get('YOUTUBE_URL')
-YOUTUBE_CLIENT_ID = dotenv.get('YOUTUBE_CLIENT_ID')
-YOUTUBE_CLIENT_SECRET = dotenv.get('YOUTUBE_CLIENT_SECRET')
-YOUTUBE_PROJECT_ID = dotenv.get('YOUTUBE_PROJECT_ID')
-YOUTUBE_REDIRECT_URL = dotenv.get('YOUTUBE_REDIRECT_URL')
-YOUTUBE_TOKEN = dotenv.get('YOUTUBE_TOKEN')
-YOUTUBE_REFRESH_TOKEN = dotenv.get('YOUTUBE_REFRESH_TOKEN')
+YOUTUBE_CHANNEL_ID = os.environ.get('YOUTUBE_CHANNEL_ID')
+YOUTUBE_URL = os.environ.get('YOUTUBE_URL')
+YOUTUBE_CLIENT_ID = os.environ.get('YOUTUBE_CLIENT_ID')
+YOUTUBE_CLIENT_SECRET = os.environ.get('YOUTUBE_CLIENT_SECRET')
+YOUTUBE_PROJECT_ID = os.environ.get('YOUTUBE_PROJECT_ID')
+YOUTUBE_REDIRECT_URL = os.environ.get('YOUTUBE_REDIRECT_URL')
+YOUTUBE_TOKEN = os.environ.get('YOUTUBE_TOKEN')
+YOUTUBE_REFRESH_TOKEN = os.environ.get('YOUTUBE_REFRESH_TOKEN')
 
-DISCORD_BOT_TOKEN = dotenv.get('DISCORD_BOT_TOKEN')
-DISCORD_GUILD_ID = dotenv.get('DISCORD_GUILD_ID')
+DISCORD_BOT_TOKEN = os.environ.get('DISCORD_BOT_TOKEN')
+DISCORD_GUILD_ID = os.environ.get('DISCORD_GUILD_ID')
 
-ETHERSCAN_KEY = dotenv.get('ETHERSCAN_KEY')
-AMBERDATA_KEY = dotenv.get('AMBERDATA_KEY')
-ETHPLORER_KEY = dotenv.get('ETHPLORER_KEY')
+ETHERSCAN_KEY = os.environ.get('ETHERSCAN_KEY')
+AMBERDATA_KEY = os.environ.get('AMBERDATA_KEY')
+ETHPLORER_KEY = os.environ.get('ETHPLORER_KEY')
 
-STAKE_URL = dotenv.get('STAKE_URL')
+STAKE_URL = os.environ.get('STAKE_URL')
 
-APK_URL = dotenv.get('APK_URL')
+APK_URL = os.environ.get('APK_URL')
 
-FIREFOX_EXTENSION_URL = dotenv.get('FIREFOX_EXTENSION_URL')
-CHROME_EXTENSION_URL = dotenv.get('CHROME_EXTENSION_URL')
-DSHOP_DEMO_FORM = dotenv.get('DSHOP_DEMO_FORM')
+FIREFOX_EXTENSION_URL = os.environ.get('FIREFOX_EXTENSION_URL')
+CHROME_EXTENSION_URL = os.environ.get('CHROME_EXTENSION_URL')
+DSHOP_DEMO_FORM = os.environ.get('DSHOP_DEMO_FORM')
 
 # Language option constants
 
