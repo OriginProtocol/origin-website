@@ -8,7 +8,7 @@ class OriginWeb(Flask):
     def get_send_file_max_age(self, name):
         if name.startswith('js/') or name.startswith('css/'):
             return 0
-        return super(MyFlask, self).get_send_file_max_age(name)
+        return super(OriginWeb, self).get_send_file_max_age(name)
 
 app = OriginWeb(__name__,
     template_folder=constants.TEMPLATE_ROOT,
