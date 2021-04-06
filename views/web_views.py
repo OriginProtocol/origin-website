@@ -607,7 +607,7 @@ def huobi_launch():
 @app.route("/<lang_code>/dshop", strict_slashes=False)
 def dshop():
     redirected = request.args.get("redirected")
-    return render_template("dshop.html", hide_ogn_banner=True,redirected=redirected)
+    return render_template("dshop.html", hide_ogn_banner=True, redirected=redirected)
 
 
 @app.route("/dashboard", strict_slashes=False)

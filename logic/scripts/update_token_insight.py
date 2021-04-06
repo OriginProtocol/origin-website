@@ -101,7 +101,7 @@ def call_amberdata(url):
 @sleep_and_retry
 @limits(calls=10, period=1)
 def call_ethplorer(url):
-    url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY)
+    url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY or 'freekey')
     raw_json = requests.get(url)
     return raw_json.json()
 
