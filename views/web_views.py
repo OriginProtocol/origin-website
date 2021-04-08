@@ -401,6 +401,10 @@ def android():
 def telegram():
     return redirect(universal.TELEGRAM_URL, code=301)
 
+@app.route("/lupefiasco", strict_slashes=False)
+@app.route("/<lang_code>/lupefiasco", strict_slashes=False)
+def lupefiasco():
+    return redirect(universal.LUPE_URL, code=301)
 
 @app.route("/dapp", strict_slashes=False)
 @app.route("/<lang_code>/dapp", strict_slashes=False)

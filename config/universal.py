@@ -31,6 +31,7 @@ IOS_URL = 'https://itunes.apple.com/app/origin-wallet/id1446091928'
 ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.origincatcher'
 APK_URL = '/static/files/origin-marketplace-0.23.16.apk'
 DAPP_URL = 'https://www.shoporigin.com'
+LUPE_URL = 'https://nft.lupefiasco.com'
 REWARDS_URL = 'https://www.shoporigin.com/#/welcome'
 FAUCET_URL = 'https://faucet.originprotocol.com'
 
