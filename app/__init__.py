@@ -14,5 +14,4 @@ app = OriginWeb(__name__,
     template_folder=constants.TEMPLATE_ROOT,
     static_folder=constants.STATIC_ROOT)
 
-# `.encode('utf8')` will not be needed for python 3
-app.jinja_env.filters['quote_plus'] = lambda u: urllib.parse.quote(u.encode('utf8'))
+app.jinja_env.filters['quote_plus'] = lambda u: urllib.parse.quote(u)

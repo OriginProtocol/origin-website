@@ -1,9 +1,4 @@
-try:
-    import urllib.parse
-    quote = urllib.parse.quote
-except:
-    import urllib
-    quote = urllib.quote_plus
+import urllib.parse
 
 
 from . import constants
@@ -35,7 +30,7 @@ LUPE_URL = 'https://nft.lupefiasco.com'
 REWARDS_URL = 'https://www.shoporigin.com/#/welcome'
 FAUCET_URL = 'https://faucet.originprotocol.com'
 
-DEFAULT_SHARE_MSG = quote('Check out ' + BUSINESS_NAME + ', an exciting blockchain project that will decentralize the sharing economy.')
+DEFAULT_SHARE_MSG = urllib.parse.quote('Check out ' + BUSINESS_NAME + ', an exciting blockchain project that will decentralize the sharing economy.')
 DEFAULT_PARTICLE_ICON = constants.DEFAULT_PARTICLE_ICON
 
 CHROME_EXTENSION_URL = constants.CHROME_EXTENSION_URL
