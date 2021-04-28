@@ -19,8 +19,8 @@ setup(
         'flask_cors~=3.0.10',
         'FullContact.py>=0.0.6',
         'geoip2~=4.1.0',
-        'google-api-python-client<2',
-        'google-auth-oauthlib~=0.4.4',
+        'google-api-python-client>=1.12',
+        'google-auth-oauthlib>=0.4.4',
         'Jinja2~=2.11.3',
         'nameparser~=1.0.6',
         'psycopg2~=2.8.6',
@@ -36,6 +36,10 @@ setup(
         'sendgrid~=6.6.0',
         'SQLAlchemy~=1.4.3',
         'timeago~=1.0.15',
+        # The following are pinned to clear up some issues but they're only
+        # grandchildren dependencies
+        'click<8',
+        'google-auth<2'
     ],
     extras_require={
         'dev': [
@@ -46,7 +50,7 @@ setup(
             'testing.postgresql>=1.3.0',
             'testing.common.database>=2.0.3',
         ],
-        'deploy': ['gunicorn>=20.1.0']
+        'deploy': ['gunicorn>=20.1.0', 'newrelic>=6.2.0.156']
     },
     packages=find_packages(),
     package_data={
