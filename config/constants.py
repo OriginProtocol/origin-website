@@ -25,6 +25,8 @@ FLASK_SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
 APP_LOG_FILENAME = os.path.join(PROJECTPATH, 'app.log')
 
 SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+# SQLAlchemy does not like postgres://
+SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres://', 'postgresql://')
 
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 
