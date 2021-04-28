@@ -155,6 +155,14 @@ We use both the python and the nginx buildpacks:
 	heroku buildpacks:set heroku/python
 	heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nginx
 
+## Deployment Dependencies
+
+To update the deployment dependencies, update `reuirements.txt`.  To use the deps from your local env, you can run the freeze script in the root directory:
+
+    ./freeze.sh
+
+This will include any installed deps, and the deps defined in `deploy` in `extras_require`.
+
 ## Connect to Heroku instance
 
 In order to run Celery jobs manually you can ssh into Heroku staging with: 
