@@ -49,8 +49,8 @@ def fetch_token_prices():
         ogn_usd_price = float(response["origin-protocol"]["usd"] or 0)
         eth_usd_price = float(response["ethereum"]["usd"] or 0)
 
-        print "Set OGN price to %s" % ogn_usd_price
-        print "Set ETH price to %s" % eth_usd_price
+        print("Set OGN price to {}".format(ogn_usd_price))
+        print("Set ETH price to {}".format(eth_usd_price))
 
         return dict([
             ("ogn_usd_price", ogn_usd_price),
@@ -59,7 +59,7 @@ def fetch_token_prices():
 
     except Exception as e:
         print("Failed to load token prices")
-        print e
+        print(e)
 
 def fetch_stats_from_t3(investor_portal = True):
     print("Fetching T3 stats...")
@@ -118,11 +118,11 @@ def fetch_staking_stats():
         sum_users = investor_staked_users + team_staked_users
         sum_tokens = investor_locked_sum + team_locked_sum
 
-        print "There are %s users and %s locked up tokens" % (sum_users, sum_tokens)
+        print("There are {} users and {} locked up tokens".format(sum_users, sum_tokens))
 
     except Exception as e:
         print("Failed to load user stats")
-        print e
+        print(e)
 
     return dict([
         ("staked_user_count", sum_users),
@@ -165,7 +165,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         ecosystem_growth_balance
     )
     
-    print "Full reserved token balance: %s" % (reserved_tokens)
+    print("Full reserved token balance: {}".format(reserved_tokens))
     circulating_supply = int(total_supply - reserved_tokens)
 
     market_cap = int(circulating_supply * ogn_usd_price)
@@ -252,7 +252,7 @@ def update_circulating_supply(circulating_supply):
             ("snapshot_date", row[0].strftime("%Y/%m/%d %H:%M:%S"))
         ]))
 
-    print "Updated current circulating supply to %s" % circulating_supply
+    print("Updated current circulating supply to {}".format(circulating_supply))
 
     return out
 

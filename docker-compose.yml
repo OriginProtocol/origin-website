@@ -61,3 +61,21 @@ services:
       >
       /bin/bash -c "/usr/local/bin/watchmedo auto-restart -d . -p '*.py' -i '*.pyc' --recursive --
       celery -A util.tasks worker --loglevel=INFO"
+
+  crontainer:
+    container_name: crontainer
+    build:
+      context: .
+      dockerfile: ./dev/Dockerfile.cron
+    volumes:
+      - ./:/app
+      - ./docker.env:/app/.env
+    depends_on:
+      - postgres-website
+      - redis
+    environment:
+      - FLASK_APP=/app/main.py
+    # https://manpages.debian.org/buster/cron/cron.8.en.html
+    command:
+      >
+      /bin/bash -c "/app/dev/run_jobs.sh && echo 'Crontainer started. Starting cron...' && cron && tail -F /var/log/cron.log"

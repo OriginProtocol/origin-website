@@ -10,5 +10,5 @@ if __name__ == '__main__':
 		try:
 			email_types.send_welcome_drips()
 		except Exception as e:
-			print e
+			print(e)
 			sgw.notify_admins("Error sending welcome drips %s" % (e), "Error sending welcome drips")

@@ -21,7 +21,7 @@ DEFAULT_SENDER = sgw.Email(universal.CONTACT_EMAIL, universal.BUSINESS_NAME)
 def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=None):
     try:
         # pytest.skip("avoid making remote calls")
-        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        sg_api = sendgrid.SendGridAPIClient(api_key=constants.SENDGRID_API_KEY)
         first_name = last_name = None
         if full_name:
             name = HumanName(full_name)
@@ -43,7 +43,7 @@ def add_sendgrid_contact(email, full_name=None, country_code=None, dapp_user=Non
 
 def unsubscribe_sendgrid_contact(email):
     try:
-        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        sg_api = sendgrid.SendGridAPIClient(api_key=constants.SENDGRID_API_KEY)
         unsubscribe_group = 51716 # Universal unsubscribe group
 
         data = {
@@ -58,7 +58,7 @@ def unsubscribe_sendgrid_contact(email):
 # Unsubscribe a list of emails.
 def mass_unsubscribe_sendgrid_contact(emails):
     try:
-        sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+        sg_api = sendgrid.SendGridAPIClient(api_key=constants.SENDGRID_API_KEY)
         unsubscribe_group = 51716 # Universal unsubscribe group
 
         data = {
@@ -218,7 +218,7 @@ def partners_interest(name, company_name, email, website, note, ip_addr):
     return gettext('Thanks! We\'ll be in touch soon.')
 
 def list_cleanup():
-    sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+    sg_api = sendgrid.SendGridAPIClient(api_key=constants.SENDGRID_API_KEY)
     response = sg_api.client.suppression.spam_reports.get()
     people = json.loads(response.body)
     print("Unsubscribing the following spam reporting email addresses:")

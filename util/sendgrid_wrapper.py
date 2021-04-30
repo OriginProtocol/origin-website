@@ -84,5 +84,5 @@ def send_message(sender, recipients, subject, body_text, body_html,
             send_email.delay(body=mail.get())
         else:
             import sendgrid
-            sg_api = sendgrid.SendGridAPIClient(apikey=constants.SENDGRID_API_KEY)
+            sg_api = sendgrid.SendGridAPIClient(api_key=constants.SENDGRID_API_KEY)
             return sg_api.client.mail.send.post(request_body=mail.get()) 

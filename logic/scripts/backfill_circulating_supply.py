@@ -33,7 +33,7 @@ ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 
 def insert_data(snapshot_date, supply, do_it):
   if not do_it:
-    print "Will set supply of month %s to %s" % (snapshot_date, supply)
+    print("Will set supply of month {} to {}".format(snapshot_date, supply))
     return
 
   instance = db_models.CirculatingSupply(
@@ -53,7 +53,7 @@ def fill_missing_txs(do_it):
   ).first()
 
   if not last_entry:
-    print "Couldn't find any entry on DB"
+    print("Couldn't find any entry on DB")
     return
 
   start_block = 10178155 # the last one in DB, same as last_tx_db.block_number
@@ -89,11 +89,11 @@ def fill_missing_txs(do_it):
   if do_it:
     db.session.commit()
 
-  print "Have parsed %s transactions" % update
-  print "Circulating supply at the end of all txs: %s" % new_supply
+  print("Have parsed {} transactions".format(update))
+  print("Circulating supply at the end of all txs: {}".format(new_supply))
 
 def fill_from_token_tx(start_block, current_supply, do_it):
-  print "Fetching TokenTransaction data from DB..."
+  print("Fetching TokenTransaction data from DB...")
 
   txs = db_models.TokenTransaction.query.order_by(
     db_models.TokenTransaction.block_number.asc(),
@@ -123,8 +123,8 @@ def fill_from_token_tx(start_block, current_supply, do_it):
   if do_it:
     db.session.commit()
 
-  print "Have updated %s records" % update
-  print "Circulating supply at the end of the DB data: %s" % new_supply
+  print("Have updated {} records".format(update))
+  print("Circulating supply at the end of the DB data: {}".format(new_supply))
 
 def main(do_it):
   start_block = 9193265

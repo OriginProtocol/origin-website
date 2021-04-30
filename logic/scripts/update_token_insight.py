@@ -101,7 +101,7 @@ def call_amberdata(url):
 @sleep_and_retry
 @limits(calls=10, period=1)
 def call_ethplorer(url):
-    url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY)
+    url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY or 'freekey')
     raw_json = requests.get(url)
     return raw_json.json()
 
@@ -112,7 +112,7 @@ def get_some_contacts():
     per_run = 24 * 6  # every ten minutes
     total = db.session.query(db_models.EthContact.address).count()
     limit = int(total / per_run) + 1
-    print "checking %d wallets" % (limit)
+    print("checking {} wallets".format(limit))
     EC = db_models.EthContact
     return (
         EC.query.filter(EC.last_updated < time_.days_before_now(1))
@@ -146,7 +146,7 @@ def fetch_eth_balances_from_etherscan():
         try:
             # loop through every wallet we're tracking and update the ETH balance
             for result in results["result"]:
-                print "Fetching ETH balance for %s" % (result["account"])
+                print("Fetching ETH balance for {}".format(result["account"]))
                 wallet = db_models.EthContact.query.filter_by(
                     address=result["account"].lower()
                 ).first()
@@ -154,13 +154,13 @@ def fetch_eth_balances_from_etherscan():
                 if result["balance"]:
                     wallet.eth_balance = float(result["balance"]) / math.pow(10, 18)
                 else:
-                    print "invalid address: %s" % (result["account"])
+                    print("invalid address: {}".format(result["account"]))
                 wallet.last_updated = datetime.utcnow()
                 db.session.add(wallet)
                 db.session.commit()
         except Exception as e:
-            print e
-            print results
+            print(e)
+            print(results)
 
 
 # amberdata seems to have the fastest API
@@ -169,7 +169,7 @@ def fetch_tokens_from_amberdata():
     contacts = get_some_contacts()
 
     for contact in contacts:
-        print "Fetching token balances for %s" % (contact.address)
+        print("Fetching token balances for {}".format(contact.address))
 
         contact.tokens = []
 
@@ -186,15 +186,15 @@ def fetch_tokens_from_amberdata():
                     "https://web3api.io/api/v1/addresses/%s/tokens?page=%d&size=%d"
                     % (contact.address, page, per_page)
                 )
-                print url
+                print(url)
                 results = call_amberdata(url)
 
-                # print results
+                # print(results)
 
                 contact.tokens = contact.tokens + results["payload"]["records"]
                 contact.token_count = results["payload"]["totalRecords"]
 
-                print "%s tokens found. fetching page %s" % (contact.token_count, page)
+                print("%s tokens found. fetching page {}".format(contact.token_count, page))
 
                 for token in results["payload"]["records"]:
                     if token["address"] == token_stats.ogn_contract:
@@ -211,9 +211,9 @@ def fetch_tokens_from_amberdata():
                 else:
                     page = page + 1
             except Exception as e:
-                print e
+                print(e)
                 time.sleep(1)
-                print "retrying"
+                print("retrying")
 
         contact.last_updated = datetime.utcnow()
         db.session.add(contact)
@@ -227,7 +227,7 @@ def fetch_from_ethplorer():
 
     for contact in contacts:
 
-        print "Fetching tokens & ETH balance for %s" % (contact.address)
+        print("Fetching tokens & ETH balance for {}".format(contact.address))
 
         try:
 
@@ -252,9 +252,9 @@ def fetch_from_ethplorer():
             db.session.commit()
 
         except Exception as e:
-            print e
+            print(e)
             time.sleep(1)
-            print "retrying"
+            print("retrying")
 
 
 # monitor & alert on all movement of OGN
@@ -264,7 +264,7 @@ def fetch_ogn_transactions():
         "http://api.etherscan.io/api?module=account&action=tokentx&contractaddress=%s&startblock=0&endblock=999999999&sort=desc&apikey=%s"
         % (token_stats.ogn_contract, constants.ETHERSCAN_KEY)
     )
-    # print etherscan_url
+    # print(etherscan_url)
     results = call_etherscan(etherscan_url)
 
     # loop through every transaction where Origin tokens were moved
@@ -280,7 +280,7 @@ def fetch_ogn_transactions():
         tx.timestamp = time_.fromtimestamp(result["timeStamp"])
 
         if tx.amount > 0:
-            print "%g OGN moved in transaction %s" % (tx.amount, result["hash"])
+            print("%g OGN moved in transaction {}".format(tx.amount, result["hash"]))
 
         # send an email alert every time OGN tokens are moved
         # only alert once & ignore marketplace transactions which show up as 0 OGN
@@ -314,7 +314,7 @@ def fetch_ogn_transactions():
                 to_address=tx.to_address,
             )
 
-            print subject
+            print(subject)
 
             sgw.notify_founders(body, subject)
             tx.notification_sent = True
@@ -323,7 +323,7 @@ def fetch_ogn_transactions():
 
 # Fetches OGN contract token info
 def fetch_ogn_token_info():
-    print "Checking OGN token info"
+    print("Checking OGN token info")
 
     url = "http://api.ethplorer.io/getTokenInfo/%s" % (token_stats.ogn_contract)
     results = call_ethplorer(url)
@@ -349,9 +349,9 @@ def fetch_ogn_token_info():
 
 # Fetches wallet balance from API and stores that to DB
 def fetch_wallet_balance(wallet):
-    print "Checking the balance of wallet %s" % (
+    print("Checking the balance of wallet {}".format(
         wallet,
-    )
+    ))
 
     url = "http://api.ethplorer.io/getAddressInfo/%s" % (wallet)
     results = call_ethplorer(url)
@@ -368,17 +368,17 @@ def fetch_wallet_balance(wallet):
     contact.eth_balance = results["ETH"]["balance"]
     contact.transaction_count = results["countTxs"]
 
-    print "ETH balance of %s is %s" % (wallet, results["ETH"]["balance"])
+    print("ETH balance of {} is {}".format(wallet, results["ETH"]["balance"]))
     if "tokens" in results:
         contact.tokens = results["tokens"]
         # update the OGN & DAI balance
         for token in results["tokens"]:
             if token["tokenInfo"]["address"] == token_stats.ogn_contract:
                 contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-                print "OGN balance of %s is %s" % (wallet, contact.ogn_balance)
+                print("OGN balance of {} is {}".format(wallet, contact.ogn_balance))
             elif token["tokenInfo"]["address"] == token_stats.dai_contract:
                 contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
-                print "DAI balance of %s is %s" % (wallet, contact.dai_balance)
+                print("DAI balance of %s is %s".format(wallet, contact.dai_balance))
         contact.token_count = len(results["tokens"])
     contact.last_updated = datetime.utcnow()
 
@@ -390,30 +390,30 @@ def fetch_wallet_balance(wallet):
 # alerting system to notify us if a wallet drops below a certain threshold
 def alert_on_balance_drop(wallet, label, eth_threshold):
 
-    print "Checking if the balance of %s (%s) is below %s" % (
+    print("Checking if the balance of {} ({}) is below {}".format(
         wallet,
         label,
         eth_threshold,
-    )
+    ))
 
     try:
         contact  = fetch_wallet_balance(wallet)
 
-        print (contact.eth_balance)
+        print(contact.eth_balance)
 
         if contact.eth_balance < eth_threshold:
-            print "Low balance. Notifying."
+            print("Low balance. Notifying.")
             subject = "%s purse is running low. %s ETH remaining" % (
                 label,
                 contact.eth_balance,
             )
             body = "Please send more ETH to %s" % (wallet)
-            print (body)
-            print (subject)
+            print(body)
+            print(subject)
             sgw.notify_founders(body, subject)
 
     except Exception as e:
-        print e
+        print(e)
 
 # Fetch reserved wallet balance
 def fetch_reserved_wallet_balances():
