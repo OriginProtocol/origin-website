@@ -498,7 +498,7 @@ def video(video_slug):
         remove_current_video, filter(filter_featured_videos, all_videos)
     )
 
-    videoList = filter(find_current_video, all_videos)
+    videoList = list(filter(find_current_video, all_videos))
     if len(videoList) == 0:
         return render_template("404.html"), 404
 
