@@ -88,14 +88,14 @@ def after_request(response):
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     return response
 
-@app.route("/", strict_slashes=False)
-def root():
-    def filter_featured_videos(video):
-        return video["landing_page_featured"]
+# @app.route("/", strict_slashes=False)
+# def root():
+#     def filter_featured_videos(video):
+#         return video["landing_page_featured"]
 
-    all_videos = json.load(open("static/files/videos.json"))
-    featured_videos = filter(filter_featured_videos, all_videos)
-    return render_template("landing.html", featured_videos=featured_videos)
+#     all_videos = json.load(open("static/files/videos.json"))
+#     featured_videos = filter(filter_featured_videos, all_videos)
+#     return render_template("landing.html", featured_videos=featured_videos)
 
 
 @app.route("/robots.txt", strict_slashes=False)
@@ -133,7 +133,8 @@ def mobile_apk():
     )
 
 
-@app.route("/<lang_code>", strict_slashes=False)
+@app.route("/<lang_code>/", strict_slashes=False)
+@app.route("/", strict_slashes=False)
 def index():
     def filter_featured_videos(video):
         return video["landing_page_featured"]
@@ -149,7 +150,7 @@ def index():
         return redirect("https://originprotocol.github.io/test-builds", code=302)
     elif "ogn.dev" in request.url_root:
         return redirect(
-            "https://faucet.originprotocol.com/eth?code=%s" % (g.lang_code), code=302
+            "https://faucet.originprotocol.com/eth?code={}".format(g.lang_code), code=302
         )
     # nope, it's a 404
     else:
@@ -497,7 +498,7 @@ def video(video_slug):
         remove_current_video, filter(filter_featured_videos, all_videos)
     )
 
-    videoList = filter(find_current_video, all_videos)
+    videoList = list(filter(find_current_video, all_videos))
     if len(videoList) == 0:
         return render_template("404.html"), 404
 
@@ -606,7 +607,7 @@ def huobi_launch():
 @app.route("/<lang_code>/dshop", strict_slashes=False)
 def dshop():
     redirected = request.args.get("redirected")
-    return render_template("dshop.html", hide_ogn_banner=True,redirected=redirected)
+    return render_template("dshop.html", hide_ogn_banner=True, redirected=redirected)
 
 
 @app.route("/dashboard", strict_slashes=False)

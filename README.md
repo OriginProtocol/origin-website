@@ -12,42 +12,33 @@ This is a Flask app with the source code for [www.originprotocol.com](https://ww
 
 ## Installing
 
-Setup a virtualenv
-```
-virtualenv --python=/usr/local/bin/python2 origin-website && cd origin-website
-```
-
 Clone
-```
-git clone https://github.com/OriginProtocol/origin-website.git && cd origin-website
-```
 
-Enter virtual environment
-```
-source env.sh
-```
+    git clone https://github.com/OriginProtocol/origin-website.git
 
-Install requirements
-```
-pip install -r requirements.txt
-```
+Setup and activate a Python virtualenv
+
+    python3 -m venv origin-website/venv
+    source origin-website/venv/bin/activate
+
+Install
+
+    pip install -e .[dev]
+
 
 Rename the file `sample.env` to `.env`, and update env variables as desired.
-```
-mv sample.env .env
-```
+
+    mv sample.env .env
 
 Run it!
-```
-python main.py
-```
+
+    python main.py
 
 Open browser to view
-```
-open http://127.0.0.1:5000/
-```
 
-**Problems?** Hit us up in the `engineering` channel on [Discord](https://www.originprotocol.com/discord) if you need help.
+    open http://127.0.0.1:5000/
+
+**Problems?** Hit us up in the `#engineering` channel on [Discord](https://www.originprotocol.com/discord) if you need help.
 
 ## Run the Tests
 
@@ -75,7 +66,7 @@ We use [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running b
 
  - Your .env has `CELERY_DEBUG: False`
  - Redis is installed and running: `redis-server`
- - An active Celery worker is running: `celery --loglevel=INFO -A util.tasks worker`
+ - An active Celery worker is running: `celery -A util.tasks worker --loglevel=INFO`
 
  [Celery Flower](http://flower.readthedocs.io/en/latest/install.html#usage) is useful for monitoring tasks: `flower -A util.tasks --port=5555`
 
@@ -98,7 +89,7 @@ Some scripts use Heroku cron jobs. Use the following command to test them locall
 PYTHONPATH=$(pwd) PROJECTPATH=$(pwd) python ./logic/scripts/update_token_insight.py
 ```
 
-When running on docker:
+When running on docker, a container named `crontainer` will run these scripts every 5 minutes.  If you want to run them manually:
 ```bash
 docker exec -it -e PYTHONPATH=/app -e PROJECTPATH=/app origin-website python ./logic/scripts/update_token_insight.py
 ```
@@ -163,6 +154,14 @@ We use both the python and the nginx buildpacks:
 
 	heroku buildpacks:set heroku/python
 	heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nginx
+
+## Deployment Dependencies
+
+To update the deployment dependencies, update `reuirements.txt`.  To use the deps from your local env, you can run the freeze script in the root directory:
+
+    ./freeze.sh
+
+This will include any installed deps, and the deps defined in `deploy` in `extras_require`.
 
 ## Connect to Heroku instance
 

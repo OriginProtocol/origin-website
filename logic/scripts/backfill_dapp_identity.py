@@ -20,7 +20,7 @@ LOCAL_URL = 'http://localhost:5000/mailing-list/join'
 SLEEP_SEC = 1.0 # 1 sec
 
 def process(url, eth_address, email, first_name, last_name, phone, country_code, ip):
-    print('Adding entry %s %s' % (email, eth_address))
+    print('Adding entry {} {}'.format(email, eth_address))
     data = {
         'eth_address': eth_address,
         'email': email,
@@ -34,11 +34,11 @@ def process(url, eth_address, email, first_name, last_name, phone, country_code,
     }
     response = requests.post(url=url, data=data)
     data = response.json()
-    print('Response=%s' % data)
+    print('Response={}'.format(data))
     return data.get('success', False)
 
 def main(filename, url, do_it):
-    print('Starting backfill. Loading data from %s' % filename)
+    print('Starting backfill. Loading data from {}'.format(filename))
 
     # Init stats.
     num = 0
@@ -83,7 +83,7 @@ def main(filename, url, do_it):
             # Sleep before processing the next entry for rate limiting purposes.
             sleep(SLEEP_SEC)
 
-    print('Processed %d entries. %s skipped %d successes %d failures' % (num, num_skip, num_success, num_failure))
+    print('Processed {} entries. {} skipped {} successes {} failures'.format(num, num_skip, num_success, num_failure))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

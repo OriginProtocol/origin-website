@@ -258,15 +258,26 @@ def get_content(url):
 
 
 def count_without_text(string):
-    # need to handle if there are no numbers
-    return int(filter(str.isdigit, string))
+    """ Remove all non-digit characters and return an integer
+
+    TODO: need to handle if there are no numbers
+    """
+    return int(''.join(list(filter(str.isdigit, string))))
 
 
 def get_count_from_html(site, html):
     try:
-        selector = site["selector"].encode("ascii")
-        select = html.select(selector)[0]
-        count_with_text = select.text.encode("ascii")
+        selector = site["selector"]
+        selected = html.select(selector)
+
+        if not selected:
+            # TODO: Added this, either it's a new case or something is wrong
+            # with the parser.  Need to revisit.
+            print('Warning: Selector {} found nothing'.format(selector))
+            return 0
+
+        select = selected[0]
+        count_with_text = select.text
         if "pattern" in site:
             match = re.findall(site["pattern"], count_with_text)
             if len(match) == 1:
@@ -281,7 +292,7 @@ def get_count_from_html(site, html):
         return count_without_text(count_with_text)
 
     except Exception as e:
-        message = "Error fetching follower count for", site["name"].encode("ascii")
+        message = "Error fetching follower count for", site["name"]
         print("Root Error: ", e)
         print(message)
 
@@ -289,13 +300,13 @@ def get_count_from_html(site, html):
 
 
 def get_count_from_json(site, content):
-    site_name = site["name"].encode("ascii")
+    site_name = site["name"]
     if site_name == "Twitter":
         content_json = json.loads(content)
         return content_json[0]["followers_count"]
     if site_name == "Medium":
-        prefix = "])}while(1);</x>"
-        content_json = json.loads(content.replace(prefix, ""))
+        prefix = b"])}while(1);</x>"
+        content_json = json.loads(content.replace(prefix, b""))
         return content_json["payload"]["collection"]["metadata"]["followerCount"]
     if site_name == "Steemit":
         content_json = json.loads(content)
@@ -307,8 +318,8 @@ def get_count_from_json(site, content):
 
 
 def update_subscribed(site):
-    url = site["url"].encode("ascii")
-    site_name = site["name"].encode("ascii")
+    url = site["url"]
+    site_name = site["name"]
 
     if site_name == "Steemit":
         content = get_steemit_content(url)
@@ -324,7 +335,7 @@ def update_subscribed(site):
             html = BeautifulSoup(content, "html.parser")
             return get_count_from_html(site, html)
     except Exception as e:
-        print(str(e))
+        print('Error occurred in update_subscribed:', str(e))
 
 
 def update_subscribed_count():
@@ -371,7 +382,7 @@ def get_channel_info(client, **kwargs):
     response = client.channels().list(**kwargs).execute()
 
     statistics = response["items"][0]["statistics"]
-    updated_count = statistics["subscriberCount"].encode("ascii")
+    updated_count = statistics["subscriberCount"]
     print("Updating stats for Youtube: " + str(updated_count))
 
     stat = db_models.SocialStat()

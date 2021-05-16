@@ -33,6 +33,6 @@ def get_social_stats(language):
                 return False
 
         dict_result = [dict(row) for row in result]
-        return filter(filter_social_stats, dict_result)
+        return list(filter(filter_social_stats, dict_result))
     except:
         return None

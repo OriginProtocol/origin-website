@@ -23,7 +23,12 @@ SLEEP_SEC = 1.0
 def process_batch(emails, update_sg, update_db, do_it):
     if not len(emails):
         return True
-    print('%s mode. Unsubscribing %s Update SG=%s Update DB=%s' % ('Prod' if do_it else 'Dry-run', emails, update_sg, update_db))
+    print('{} mode. Unsubscribing {} Update SG={} Update DB={}'.format(
+        'Prod' if do_it else 'Dry-run',
+        emails, 
+        update_sg,
+        update_db
+    ))
     if not do_it:
         return True
     try:
@@ -41,7 +46,7 @@ def process_batch(emails, update_sg, update_db, do_it):
     return True
 
 def process_filename(filename, do_it):
-    print('Starting mass unsubscribe. Loading data from %s' % filename)
+    print('Starting mass unsubscribe. Loading data from {}'.format(filename))
 
     # Init stats.
     num = 0
@@ -88,7 +93,12 @@ def process_filename(filename, do_it):
         else:
             num_failure += len(emails)
 
-    print('Processed %d entries. %s skipped %d successes %d failures' % (num, num_skip, num_success, num_failure))
+    print('Processed {} entries. {} skipped {} successes {} failures'.format(
+        num,
+        num_skip,
+        num_success,
+        num_failure
+    ))
 
 
 def process_from_db(do_it):
@@ -121,7 +131,7 @@ def process_from_db(do_it):
             num_success += len(emails)
         else:
             num_failure += len(emails)
-        print('%d entries processed' % num)
+        print('{} entries processed'.format(num))
         emails = []
 
         # Sleep before processing the next entry for rate limiting purposes.
@@ -134,7 +144,12 @@ def process_from_db(do_it):
     else:
         num_failure += len(emails)
 
-    print('Processed %d entries. %s skipped %d successes %d failures' % (num, num_skip, num_success, num_failure))
+    print('Processed {} entries. {} skipped {} successes {} failures'.format(
+        num,
+        num_skip,
+        num_success,
+        num_failure
+    ))
 
 def main(filename, from_db, do_it):
     if filename:
