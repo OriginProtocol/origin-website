@@ -168,7 +168,7 @@
   text-align: center;
   max-width: 320px;
   margin-top: -10px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .buy-sell-block .btn-dark {
@@ -215,6 +215,68 @@
 
 .buy-sell-block .opaque {
   opacity: 0.7;
+}
+
+/* NFT pitch section */
+.nft-pitch {
+  max-width: 940px;
+}
+.nft-pitch .img-wrapper {
+  height:200px;
+  min-height:200px;
+}
+.nft-pitch .custom-domain .img-wrapper {
+  padding-top:30px;
+}
+.nft-pitch .join-ogn .img-wrapper {
+  padding-top:35px;
+}
+.nft-pitch p {
+  margin-top:20px;
+}
+
+/* Origin Dollar pitch */
+.ousd-pitch {
+  color:white;
+  /* background-color: #183140; */
+  background-color: transparent;
+}
+.ousd-pitch .container {
+  max-width: 940px;
+}
+.ousd-pitch {
+  color:white;
+  background-color: #183140;
+  background-image: url('/static/img/landing/coin-waves.png');
+  background-position: center;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  font-size:32px;
+  min-height: 834px;
+  padding-top:0px;
+}
+.ousd-pitch .btn {
+  background-color: #007cff;
+  border-color: #007cff;
+  color: #ffffff;
+  padding:15px 30px 15px 30px;
+  font-weight: normal;
+}
+.ousd-pitch .btn:hover {
+  background-color: #458efe;
+  color: white;
+}
+.ousd-pitch h2 {
+  font-size: 62px;
+  font-weight: 500;
+}
+
+.partners img {
+  max-height: 70px;
+  max-width:180px;
+  margin: 22px 22px;
 }
 
 .sharing-economy {
@@ -628,7 +690,6 @@
   .buy-sell-block .marketplace .button {
     max-width: 600px;
     margin-top: 30px;
-    margin-bottom: 50px;
   }
 
   .sharing-economy .percentages {

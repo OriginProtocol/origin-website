@@ -722,7 +722,7 @@ $(function () {
 
   var hardcodedStats = [{
       name: "Discord",
-      subscribed_count: 6301
+      subscribed_count: 9177
     },
     {
       name: "Wechat",
@@ -730,11 +730,11 @@ $(function () {
     },
     {
       name: "Vk",
-      subscribed_count: 1364
+      subscribed_count: 1358
     },
     {
       name: "Blockfolio",
-      subscribed_count: 469186
+      subscribed_count: 2247101
     }
   ];
 

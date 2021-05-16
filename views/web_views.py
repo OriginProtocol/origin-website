@@ -142,9 +142,16 @@ def index():
     all_videos = json.load(open("static/files/videos.json"))
     featured_videos = filter(filter_featured_videos, all_videos)
 
+    # fetch the current yield for OUSD
+    try:
+        r = requests.get('https://analytics.ousd.com/api/v1/apr/trailing', timeout=1)
+        apy = r.json()['apy']
+    except:
+        apy = "~20.0"
+   
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
-        return render_template("landing.html", featured_videos=featured_videos)
+        return render_template("landing.html", featured_videos=featured_videos, ousd_apy=apy)
     # shortcut for nick
     elif "ogn.dev" in request.url_root and g.lang_code == "tb":
         return redirect("https://originprotocol.github.io/test-builds", code=302)
@@ -614,7 +621,7 @@ def dshop():
 @app.route("/<lang_code>/dashboard", strict_slashes=False)
 def dashboard():
     data = token_stats.get_ogn_stats()
-    
+
     # return render_template("dashboard.html")
     return render_template(
         "dashboard.html",
