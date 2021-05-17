@@ -590,26 +590,42 @@ $(function () {
     backgroundElementId: "landing-video-background",
     videoSources: {
       default: {
-        videoSource: "aanKtnkWP8U",
-        videoSourceYouku: "XNDM5NzQ0NTEwMA",
-        posterImageOverride: "aanKtnkWP8U_poster_image",
-        alternateBackgroundSource: "GM8q0Cjzed4",
-        aspectRatio: 0.42,
-        loopTime: 69 // loop time in seconds
+        videoSource: "_OBlgSz8sSM",
+        posterImageOverride: "_OBlgSz8sSM",
+        aspectRatio: 0.75,
+        loopTime: 55 // loop time in seconds
       }
-      // Input other localisation videos this way
-      // 'zh_Hans' : {
-      //   videoSource: 'aanKtnkWP8U',
-      //   videoSourceYouku: '',
-      //   aspectRatio: 0.42,
-      //   loopTime: 70
-      // }
     },
     videoButtonId: "index-video-button",
     fullScreenVideoElementId: "landing-video",
     bgElementIsVideo: true,
     videoPosterId: "landing-video-poster"
   });
+
+  // setupYoutubeVideoElement({
+  //   backgroundElementId: "landing-video-background",
+  //   videoSources: {
+  //     default: {
+  //       videoSource: "aanKtnkWP8U",
+  //       videoSourceYouku: "XNDM5NzQ0NTEwMA",
+  //       posterImageOverride: "aanKtnkWP8U_poster_image",
+  //       alternateBackgroundSource: "GM8q0Cjzed4",
+  //       aspectRatio: 0.42,
+  //       loopTime: 69 // loop time in seconds
+  //     }
+  //     // Input other localisation videos this way
+  //     // 'zh_Hans' : {
+  //     //   videoSource: 'aanKtnkWP8U',
+  //     //   videoSourceYouku: '',
+  //     //   aspectRatio: 0.42,
+  //     //   loopTime: 70
+  //     // }
+  //   },
+  //   videoButtonId: "index-video-button",
+  //   fullScreenVideoElementId: "landing-video",
+  //   bgElementIsVideo: true,
+  //   videoPosterId: "landing-video-poster"
+  // });
 
   setupYoutubeVideoElement({
     backgroundElementId: "landing-video-background2",
