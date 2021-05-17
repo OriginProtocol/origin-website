@@ -36,7 +36,7 @@
     <h1>{{gettext("NFT Launchpad")}}</h1>
     <div class="checked-items d-flex justify-content-center flex-wrap">
       <div class="row nft-benefits">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 pt-1 pb-2">
           <h4 class='ml-3 mb-0'>Direct-to-fan experience</h4><br>
           <div class="d-flex checked-item">
             <img class="mr-2" src="/static/img/product/checkmark.svg">
@@ -47,7 +47,7 @@
             {{gettext("Maintain control of your brand")}}
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 pt-1 pb-2">
           <h4 class='ml-3 mb-0'>Product features</h4><br>
           <div class="d-flex checked-item">
             <img class="mr-2" src="/static/img/product/checkmark.svg">
@@ -58,7 +58,7 @@
             {{gettext("Secondary marketplace launching soon")}}
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 pt-1 pb-2">
           <h4 class='ml-3 mb-0'>Technology</h4><br>
           <div class="d-flex checked-item">
             <img class="mr-2" src="/static/img/product/checkmark.svg">
@@ -123,16 +123,22 @@
     </div>
 
     <div class="d-flex">
+      <div class="row">
+      <div class="col-12 col-sm-6">
       <a
         href="{{ url_for('dshop', lang_code=CURRENT_LANGUAGE) }}"
         class="btn btn-primary d-flex align-items-center justify-content-center mr-2">
         {{gettext("Try Dshop")}}
       </a>
+      </div>
+      <div class="col-12 col-sm-6">
       <a
         href="https://store.originprotocol.com"
         class="btn btn-primary d-flex align-items-center justify-content-center ml-2">
         {{gettext("Visit Origin Store")}}
       </a>
+      </div>
+      </div>
     </div>
     <img class="dshop-image" src="/static/img/product/dshop-screenshots.png" srcset="/static/img/product/dshop-screenshots@2x.png 2x, /static/img/product/dshop-screenshots@3x.png 3x" />
     <div class="sub-title mt-5">{{gettext("Online stores created with Dshop")}}</div>
