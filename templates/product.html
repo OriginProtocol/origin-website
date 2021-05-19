@@ -16,7 +16,14 @@
       <div class="row">
         <div class="col-12 col-md-6 d-flex align-items-start align-items-lg-center">
           <!-- the &#8209; below is a non breakable hyphen -->
-          <h1 class="title big">{{gettext("The Origin Platform powers commerce on the blockchain")}}</h1>
+          <div>
+          <h1 class="title big">{{gettext("Origin Protocol is bringing NFTs and DeFi to the masses")}}</h1>
+          <a
+        href="{{ url_for('litepaper', lang_code=CURRENT_LANGUAGE) }}"
+        class="btn btn-dark d-flex align-items-center justify-content-center mr-2">
+        {{gettext("Read our new Litepaper")}}
+      </a>
+          </div>
         </div>
         <div class="col-12 col-md-6 d-flex align-items-center hero-image-holder justify-content-center mb-4 mb-md-0">
           <img src="/static/img/product/origin-stack.png" srcset="/static/img/product/origin-stack@2x.png 2x, /static/img/product/origin-stack@3x.png 3x" />
@@ -24,6 +31,74 @@
       </div>
     </div>
   </section>
+
+  <div class="nft-launchpad d-flex flex-column justify-content-between align-items-center px-3 px-md-0 pb-5">
+    <h1>{{gettext("NFT Launchpad")}}</h1>
+    <div class="checked-items d-flex justify-content-center flex-wrap">
+      <div class="row nft-benefits">
+        <div class="col-12 col-md-4 pt-1 pb-2">
+          <h4 class='ml-3 mb-0'>Direct-to-fan experience</h4><br>
+          <div class="d-flex checked-item">
+            <img class="mr-2" src="/static/img/product/checkmark.svg">
+            {{gettext("Customizable and hosted on your own domain")}}
+          </div>
+          <div class="d-flex checked-item">
+            <img class="mr-2" src="/static/img/product/checkmark.svg">
+            {{gettext("Maintain control of your brand")}}
+          </div>
+        </div>
+        <div class="col-12 col-md-4 pt-1 pb-2">
+          <h4 class='ml-3 mb-0'>Product features</h4><br>
+          <div class="d-flex checked-item">
+            <img class="mr-2" src="/static/img/product/checkmark.svg">
+            {{gettext("Unique auction mechanics to maximize revenue")}}
+          </div>
+          <div class="d-flex checked-item">
+            <img class="mr-2" src="/static/img/product/checkmark.svg">
+            {{gettext("Secondary marketplace launching soon")}}
+          </div>
+        </div>
+        <div class="col-12 col-md-4 pt-1 pb-2">
+          <h4 class='ml-3 mb-0'>Technology</h4><br>
+          <div class="d-flex checked-item">
+            <img class="mr-2" src="/static/img/product/checkmark.svg">
+            {{gettext("Best-in-class uptime and scaling")}}
+          </div>
+          <div class="d-flex checked-item">
+            <img class="mr-2" src="/static/img/product/checkmark.svg">
+            {{gettext("Supports both credit cards and cryptocurrency")}}
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="nft-benefits">
+      <img class="p-4 img-fluid" src='/static/img/product/leaderboard.png' />
+    </div>
+    
+
+    <div class="d-flex">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSf1ArOFye1PWZshoQI5a3TJWIYShC89G6-R8mPgAt92dSiJ9w/viewform"
+        class="btn btn-primary d-flex align-items-center justify-content-center mr-2 p-3 mt-5 mb-5">
+        {{gettext("Interested in running an NFT sale?")}}
+      </a>
+      </div>
+
+</div>
+
+
+<div class="origin-dollar d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+  <h1>{{gettext("Origin Dollar")}}</h1>
+  <div class="segment-subtitle mx-3">{{gettext("The first stablecoin that earns a yield while it's still in your wallet.")}}</div>
+  <a class="mb-5 mt-0 btn btn-dark d-flex justify-content-center align-items-center" href="https://ousd.com" target="_blank" rel="noreferrer noopener">
+    {{gettext("Get OUSD")}}</a>
+  <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
+    <img class="prod-image" src="/static/img/ousd/origindollar-screenshots.png" srcset="/static/img/ousd/origindollar-screenshots@2x.png 2x, /static/img/ousd/origindollar-screenshots@3x.png 3x" >
+  </div>
+</div>
+
 
   <div class="dshop-section d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
     <h1>{{gettext("Dshop")}}</h1>
@@ -48,16 +123,22 @@
     </div>
 
     <div class="d-flex">
+      <div class="row">
+      <div class="col-12 col-sm-6">
       <a
         href="{{ url_for('dshop', lang_code=CURRENT_LANGUAGE) }}"
         class="btn btn-primary d-flex align-items-center justify-content-center mr-2">
         {{gettext("Try Dshop")}}
       </a>
+      </div>
+      <div class="col-12 col-sm-6">
       <a
         href="https://store.originprotocol.com"
         class="btn btn-primary d-flex align-items-center justify-content-center ml-2">
         {{gettext("Visit Origin Store")}}
       </a>
+      </div>
+      </div>
     </div>
     <img class="dshop-image" src="/static/img/product/dshop-screenshots.png" srcset="/static/img/product/dshop-screenshots@2x.png 2x, /static/img/product/dshop-screenshots@3x.png 3x" />
     <div class="sub-title mt-5">{{gettext("Online stores created with Dshop")}}</div>
@@ -65,193 +146,12 @@
       <a href="https://store.originprotocol.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/origin-logo-dark.png"/></a>
       <a href="https://store.brave.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/brave-logo-color-rgb.svg"/></a>
       <a href="https://kyber.ogn.app/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/kyber-network.svg"/></a>
-      <a href="https://store.solana.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/solana.png" srcset="/static/img/product/solana@2x.png 2x, /static/img/product/solana@3x.png 3x"/></a>
       <a href="https://store.contentos.io/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/contentos.png" srcset="/static/img/product/contentos@2x.png 2x, /static/img/product/contentos@3x.png 3x"/></a>
       <a href="https://ternio.ogn.app/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/ternio.png" srcset="/static/img/product/ternio@2x.png 2x, /static/img/product/ternio@3x.png 3x"/></a>
     </div>
-    <div class="sub-title-footer">{{gettext("...and others")}}</div>
+    <div class="sub-title-footer">{{gettext("...and hundreds more")}}</div>
   </div>
 
-  <div class="origin-dollar d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Origin Dollar")}}</h1>
-    <div class="segment-subtitle mx-3">{{gettext("The first stablecoin that earns a yield while it's still in your wallet.")}}</div>
-    <a class="mb-5 mt-0 btn btn-dark d-flex justify-content-center align-items-center" href="https://ousd.com" target="_blank" rel="noreferrer noopener">
-      {{gettext("Get OUSD")}}</a>
-    <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="prod-image" src="/static/img/ousd/origindollar-screenshots.png" srcset="/static/img/ousd/origindollar-screenshots@2x.png 2x, /static/img/ousd/origindollar-screenshots@3x.png 3x" >
-    </div>
-  </div>
-
-  <!-- Buy and Sell on Origin section -->
-  <!-- origin-marketplace-0.23.16.apk -->
-  <div class="buy-sell-block-1 d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Buy and sell on Origin")}}</h1>
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today.")}}</div>
-    <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="mw-298 mw-md-568" src="/static/img/landing/origin-marketplace@2x.png">
-      <div class="d-flex flex-column align-items-center align-items-md-start">
-        <div class="title m-0 mb-3">{{gettext("Origin Marketplace")}}</div>
-        <div class="text">{{gettext("Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform.")}}</div>
-        {% if CURRENT_LANGUAGE != 'zh_Hans' and CURRENT_LANGUAGE != 'zh_Hant' %}
-        <div class="d-flex mt-4">
-          <a class="pr-2 py-2" href="{{ universal.IOS_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/app-store-button.svg"></a>
-          <a class="pl-2 py-2" href="{{ universal.ANDROID_URL }}" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/google-play-button.svg"></a>
-        </div>
-        {% endif %}
-        {% if CURRENT_LANGUAGE == 'zh_Hans' or CURRENT_LANGUAGE == 'zh_Hant' %}
-          <a class="button mt-4" href="{{ universal.APK_URL }}" target="_blank" rel="noopener noreferrer">{{gettext("Download Android App")}}</a>
-        {% endif %}
-        <div class="mt-4 text align-self-center">{{gettext("Visit us on the web")}}</div>
-        <a class="btn btn-primary mt-4 d-flex justify-content-center align-items-center" href="https://shoporigin.com" target="_blank" rel="noopener noreferrer">{{gettext("shoporigin.com")}}</a>
-      </div>
-    </div>
-    <div class="opaque mt-5 mt-md-3 mb-3 mb-md-0">{{gettext("Featured on")}}</div>
-    <a href="https://medium.com/originprotocol/samsung-keystore-sdk-react-native-wrapper-65b73294cf33" target="_blank" rel="noopener noreferrer">
-      <img class="mb-0 mb-md-4 samsung-blockchain" src="/static/img/product/samsung-blockchain-logo.svg"/>
-    </a>
-    <div class="opaque mt-5 mt-md-3">{{gettext("Available on")}}</div>
-    <div class="bottom d-flex flex-column flex-md-row justify-content-center align-items-center flex-wrap mt-2 mt-md-0 w-100">
-      <img src="/static/img/product/coinbasewallet.png" srcset="/static/img/product/coinbasewallet@2x.png 2x, /static/img/product/coinbasewallet@3x.png 3x"/>
-      <img src="/static/img/product/imtoken.svg"/>
-      <img src="/static/img/product/trustwallet.svg"/>
-      <img src="/static/img/product/metamask.svg"/>
-      <img src="/static/img/product/atomic-website-logo.svg"/>
-    </div>
-  </div>
-
-  <!-- <section class="marketplaces-section blue-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>{{gettext("Decentralized marketplaces powered by Origin")}}</h1>
-          <img src="/static/img/product/shoporigin-laptop@2x.png" />
-          <h3>{{gettext("See the Origin Platform in action at shoporigin.com")}}</h3>
-          <a href="https://shoporigin.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            {{gettext("Buy and sell today")}}
-          </a>
-          <h3>{{gettext("Other marketplaces built on the Origin Platform")}}</h3>
-          <div class="marketplace-images">
-            <img src="/static/img/product/peerart.svg" />
-            <img src="/static/img/product/trips.svg" />
-            <img src="/static/img/product/cryptomerch.svg" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
- <!-- <section class="features-section grey-section">
-    <div class="container pb-4 pb-md-5">
-      <div class="row">
-        <div class="col-12">
-          <h1>{{gettext("Features")}}</h1>
-        </div>
-        <div class="col-12 col-md-6 product-feature">
-          <div class="feature-image">
-            <img src="/static/img/product/identity.png">
-          </div>
-          <div class="feature-content">
-            <h3>{{gettext("Self-sovereign Identity")}}</h3>
-            <div class="feature-desc">
-              {{gettext("Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application.")}}
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 product-feature">
-          <div class="feature-image">
-            <img src="/static/img/product/messaging.png">
-          </div>
-          <div class="feature-content">
-            <h3>{{gettext("Encrypted Messaging")}}</h3>
-            <div class="feature-desc">
-              {{gettext("Send secure, private messages to other buyers and sellers on the platform.")}}
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 product-feature">
-          <div class="feature-image">
-            <img src="/static/img/product/payments.png">
-          </div>
-          <div class="feature-content">
-            <h3>{{gettext("Permissionless Payments")}}</h3>
-            <div class="feature-desc">
-              {{gettext("Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell.")}}
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 product-feature">
-          <div class="feature-image">
-            <img src="/static/img/product/reputation.png">
-          </div>
-          <div class="feature-content">
-            <h3>{{gettext("Reputation Systems")}}</h3>
-            <div class="feature-desc">
-              {{gettext("Give ratings and leave reviews for your transactions just like you would on a centralized app.")}}
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 product-feature">
-          <div class="feature-image">
-            <img src="/static/img/product/transactions.png">
-          </div>
-          <div class="feature-content">
-            <h3>{{gettext("Blockchain-Powered Transactions")}}</h3>
-            <div class="feature-desc">
-              {{gettext("Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries.")}}
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 product-feature">
-          <div class="feature-image">
-            <img src="/static/img/product/arbitration.png">
-          </div>
-          <div class="feature-content">
-            <h3>{{gettext("Arbitration Services")}}</h3>
-            <div class="feature-desc">
-              {{gettext("Use Origin or select a third-party arbitration service to keep both counterparties safe.")}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="userflow-section blue-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-            <h1>{{gettext("How it works")}}</h1>
-        </div>
-        <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center">
-          <img src="/static/img/product/smartcontract.png">
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="userflow-step">
-            <h1 class="flow-step">1</h1>
-            <div class="flow-desc">
-              {{gettext("Buyers search and browse for sellers' listings on the blockchain through DApps")}}
-            </div>
-          </div>
-          <div class="userflow-step">
-            <h1 class="flow-step">2</h1>
-            <div class="flow-desc">
-              {{gettext("Buyers submit offers and escrowed payments to our marketplace smart contract")}}
-            </div>
-          </div>
-          <div class="userflow-step">
-            <h1 class="flow-step">3</h1>
-            <div class="flow-desc">
-              {{gettext("Sellers accept or reject offers from prospective buyers, then fulfill active offers")}}
-            </div>
-          </div>
-          <div class="userflow-step">
-            <h1 class="flow-step">4</h1>
-            <div class="flow-desc">
-              {{gettext("After offers are finalized, the smart contract releases escrowed payments to sellers")}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
 
   <section class="tokens-section blue-section">
     <div class="container">
@@ -264,7 +164,7 @@
         </div>
         <div class="col-12">
           <div class="action-buttons">
-            <a href="{{ url_for('ogn_token', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-primary btn-inverse">{{gettext("Learn more about Origin Token")}}</a>
+            <a href="{{ url_for('dashboard', lang_code=CURRENT_LANGUAGE) }}" class="btn btn-primary btn-inverse">{{gettext("View the OGN Dashboard")}}</a>
           </div>
         </div>
       </div>

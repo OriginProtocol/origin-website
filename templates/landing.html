@@ -2,7 +2,7 @@
 
 {% block title %}{{ gettext("Origin Protocol") }}{% endblock %}
 
-{% block meta_description %}{{ gettext("The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS.") }}{% endblock %}
+{% block meta_description %}{{ gettext("Origin Protocol is bringing NFTs and DeFi to the masses.") }}{% endblock %}
 
 {% block content %}
 
@@ -23,7 +23,8 @@
     <div id="landing-video-poster" class="video-overlay-poster"></div>
     <div class="video-overlay-gradient"></div>
     <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("Connecting artists<br>directly with their fans")}}</h1>
+      <h1 class="video-title">{{gettext("Watch this video<br>before it's deleted from YouTube forever")}}</h1>
+      <p>Visit <a href="https://www.charliebitme.com" style='color:#fff; font-weight:bold'>charliebitme.com</a> to learn why</p>
       <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
         <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
       </button>
@@ -39,10 +40,10 @@
   </div>
   <!-- Countdown section -->
   <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
-  <h1 class="clock-title">{{gettext("Subscribe to stay in touch")}}</h1>
+  <h1 class="clock-title">{{gettext("Never miss a drop. Sign up now!")}}</h1>
 
 
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("Be the first to hear when we launch important partnerships, celebrity NFT drops, exchange listings, and new products. Your email will be kept private.")}}</div>
+    <div class="segment-subtitle ml-3 mr-3">{{gettext("Be the first to hear when we announce big NFT drops, important partnerships, and new products. Your email will be kept private.")}}</div>
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
         <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Email")}}">
@@ -53,36 +54,48 @@
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->
   <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Origin Products")}}</h1>
-    <div class="segment-subtitle mx-3">{{gettext("Origin’s suite of products is revolutionizing how people shop and conduct business online. Effortlessly create a decentralized e-commerce store with Dshop and earn competitive yields with the Origin Dollar.")}}</div>
-    <a class="mb-5 mt-0 btn btn-dark d-flex justify-content-center align-items-center" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">
-      {{gettext("Check out our products")}}</a>
-    <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-      <img class="prod-image" src="/static/img/origin-products.png" srcset="/static/img/origin-products@2x.png 2x, /static/img/origin-products@3x.png 3x" >
-    </div>
-  </div>
-  <!-- The sharing economy section -->
-  <!-- <div class="sharing-economy">
-    <div class="container d-flex flex-column justify-content-center align-items-center">
-      <h1 class="segment-title ml-4 mr-4">{{gettext("There is a massive opportunity for blockchain-powered commerce")}}</h1>
-      <div class="segment-subtitle title ml-3 mr-3">{{gettext("E-commerce is projected to be one of the fastest growing verticals in the blockchain industry during the next few years")}}</div>
-      <div class="d-flex flex-column mt-1 mt-md-5 pt-md-4 align-items-center">
-        <img class="pies mt-5 mt-md-0 pt-3 pt-md-0" src="/static/img/landing/graph.svg"/>
-        <div class="d-flex align-items-start align-items-md-center">
-          <div class="d-flex flex-column flex-md-row justify-content-center circular-stats-holder">
-            <div class="circular-stats blue d-flex flex-column justify-content-stat justify-content-md-center align-items-start">
-              <div class="percentage d-flex justify-content-center w-100">$4.9T</div>
-              <div class="text mb-3 w-100">{{gettext("Global e-commerce sales by 2021")}}</div>
+    <h1>{{gettext("Where top creators launch their NFTs")}}</h1>
+    <div class="segment-subtitle mx-3">{{gettext("Origin has hosted record-breaking NFT sales for top musicans, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace.")}}</div>
+    <a class="mb-5 mt-5 btn btn-dark d-flex justify-content-center align-items-center" href="https://docs.google.com/forms/d/e/1FAIpQLSf1ArOFye1PWZshoQI5a3TJWIYShC89G6-R8mPgAt92dSiJ9w/viewform">
+      {{gettext("Interested in running an NFT sale?")}}</a>
+
+      <div class="container mb-6 nft-pitch">
+        <div class="row">
+          <div class="col-sm text-center p-4 custom-domain">
+            <div class="img-wrapper">
+              <img src="/static/img/landing/nft-1.png" srcset="/static/img/landing/nft-1@2x.png 2x, /static/img/landing/nft-1@3x.png 3x">
             </div>
-            <div class="circular-stats purple d-flex flex-column justify-content-stat justify-content-md-center align-items-start">
-              <div class="percentage d-flex justify-content-center w-100">$23.3B</div>
-              <div class="text mb-3 w-100">{{gettext("Global blockchain technology revenues by 2023")}}</div>
+            <p>You control the experience. Host your NFT sale on your own domain and start growing your community.</p>
+          </div>
+          <div class="col-sm text-center p-4 more-sales inline-table">
+            <div class="img-wrapper">
+              <img src="/static/img/landing/nft-2.png" srcset="/static/img/landing/nft-2@2x.png 2x, /static/img/landing/nft-2@3x.png 3x">
             </div>
+            <p>Run a more profitable sale with time-limited open-editions or a unique leaderboard auction.</p>
+          </div>
+          <div class="col-sm text-center p-4 join-ogn">
+            <div class="img-wrapper">
+              <img src="/static/img/landing/nft-3.png" srcset="/static/img/landing/nft-3@2x.png 2x, /static/img/landing/nft-3@3x.png 3x">
+            </div>
+            <p>Participate in the network with OGN. Available on top exchanges like Coinbase and Binance.</p>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
+
+  <div class="buy-sell-block ousd-pitch d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+    <div class="container text-center">
+      <h1 class="pt-3">Origin Dollar is the first stablecoin that earns yield while sitting in your wallet</h1>
+      <p class="d-none d-sm-block">Get access to exciting DeFi returns, with none of the hassles.</p>
+      <a class="mb-5 mt-5 btn justify-content-center align-items-center" href="https://docs.google.com/forms/d/e/1FAIpQLSf1ArOFye1PWZshoQI5a3TJWIYShC89G6-R8mPgAt92dSiJ9w/viewform">
+        {{gettext("Learn more about OUSD")}}</a>
+      <p class="d-none d-sm-block">Currently earning</p>
+      <h2>{{ousd_apy}}% APY</h2>
+
+
+    </div>
+  </div>
   <!-- Decentralised marketplaces inevitable -->
   <!-- <div class="decentralised-marketplaces d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Blockchain-powered commerce is the future")}}</h1>
@@ -162,84 +175,40 @@
   <!-- Featured partner -->
   <div class="featured-partner d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Partners")}}</h1>
-    <div class="container">
-      <div class="col-12">
-        <div
-          id="featuredPartners"
-          class="carousel slide"
-          data-touch="true"
-          data-ride="carousel"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#featuredPartners"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#featuredPartners" data-slide-to="1"></li>
-            <!--<li data-target="#featuredPartners" data-slide-to="2"></li>-->
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div
-                class="featured-investor d-flex flex-column-reverse flex-md-row"
-              >
-                <div class="investor-data col-md-6">
-                  <div class="investor-quote">
-                    {{gettext("Origin Marketplace featured in Samsung Blockchain Store")}}
-                  </div>
-                </div>
-                <div class="investor-image col-md-6 p-0 d-flex">
-                  <img src="/static/img/landing/samsungStoreSmall.png" />
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="featured-investor d-flex flex-column-reverse flex-md-row"
-              >
-                <div class="investor-data col-md-6">
-                  <div class="investor-quote">
-                    {{gettext("“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”")}}
-                  </div>
-                  <div class="investor-info">
-                    <div class="investor-name">
-                      {{gettext("Luca De Giglio")}}
-                    </div>
-                    <div class="investor-title">
-                      {{gettext("Founder, Trips Community")}}
-                    </div>
-                  </div>
-                </div>
-                <div class="investor-image col-md-6 p-0 d-flex">
-                  <img src="/static/img/landing/luca-photo2@3x.jpg" />
-                </div>
-              </div>
-            </div>
-            <!--<div class="carousel-item">
-              <div
-                class="featured-investor d-flex flex-column-reverse flex-md-row"
-              >
-                <div class="investor-data col-md-6">
-                  <div class="investor-quote">
-                    {{gettext("“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”")}}
-                  </div>
-                  <div class="investor-info">
-                    <div class="investor-name">
-                      {{gettext("Luca De Giglio")}}
-                    </div>
-                    <div class="investor-title">
-                      {{gettext("Founder, Trips Community")}}
-                    </div>
-                  </div>
-                </div>
-                <div class="investor-image col-md-6 p-0 d-flex">
-                  <img src="/static/img/landing/luca-photo2@3x.jpg" />
-                </div>
-              </div>
-            </div>-->
-          </div>
+    <div class="container mb-5">
+      <div class="partners row">
+
+        <div class="col-12 col-md-4 col-sm-6 text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/">
+            <img src="/static/img/landing/partner-amazon.png" />
+          </a>
         </div>
+        <div class="col-12 col-md-4 col-sm-6 text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://btcmanager.com/samsung-blockchain-wallet-origin-marketplace-app/">
+            <img src="/static/img/landing/partner-samsung.png" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 col-sm-6 text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://coinmarketcap.com/headlines/news/origin-protocol-and-google-cloud/">
+            <img src="/static/img/landing/partner-google.png" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 col-sm-6 text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://brave.com/brave-launches-new-swag-store-powered-by-origin/">
+            <img src="/static/img/landing/partner-brave.png" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 col-sm-6 text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.binance.com/en/support/articles/360038151092">
+            <img src="/static/img/landing/partner-binance.png" />
+          </a>
+        </div>
+        <div class="col-12 col-md-4 col-sm-6 text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://medium.com/originprotocol/how-origin-uses-chainlink-oracles-to-secure-ousd-bff5601e840e">
+            <img src="/static/img/landing/partner-chainlink.png" />
+          </a>
+        </div>
+
       </div>
     </div>
   </div>

@@ -50,9 +50,6 @@
 
 <body dir="{{ CURRENT_LANGUAGE_DIRECTION }}" id="{{ CURRENT_LANGUAGE_DIRECTION }}">
   {% block body %}
-  {% if hide_ogn_banner is not defined or hide_ogn_banner == False %}
-  {% include 'nft-banner.html' %}
-  {% endif %}
   {% block content %}
   {% endblock %}
 
