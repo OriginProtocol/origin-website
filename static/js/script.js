@@ -591,9 +591,8 @@ $(function () {
     videoSources: {
       default: {
         videoSource: "_OBlgSz8sSM",
-        posterImageOverride: "_OBlgSz8sSM",
         aspectRatio: 0.75,
-        loopTime: 55 // loop time in seconds
+        loopTime: 55, // loop time in seconds
       }
     },
     videoButtonId: "index-video-button",
