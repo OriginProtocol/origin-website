@@ -79,7 +79,7 @@ def beforeRequest():
     g.metadata["image"] = "https://www.originprotocol.com/static/img/fb-og-img.png"
     g.metadata["title"] = gettext("Origin Protocol")
     g.metadata["description"] = gettext(
-        "Origin Protocol is the blockchain platform for building decentralized marketplaces"
+        "Origin Protocol is bringing NFTs and DeFi to the masses"
     )
     g.metadata["url"] = "https://www.originprotocol.com"
 
