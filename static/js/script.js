@@ -586,13 +586,32 @@ $(function () {
     });
   }
 
-  setupYoutubeVideoElement({
+  // Charlie Bit Me
+  // setupYoutubeVideoElement({
+  //   backgroundElementId: "landing-video-background",
+  //   videoSources: {
+  //     default: {
+  //       videoSource: "_OBlgSz8sSM",
+  //       aspectRatio: 0.75,
+  //       loopTime: 55, // loop time in seconds
+  //     }
+  //   },
+  //   videoButtonId: "index-video-button",
+  //   fullScreenVideoElementId: "landing-video",
+  //   bgElementIsVideo: true,
+  //   videoPosterId: "landing-video-poster"
+  // });
+
+// Steve Chen
+setupYoutubeVideoElement({
     backgroundElementId: "landing-video-background",
     videoSources: {
       default: {
-        videoSource: "_OBlgSz8sSM",
-        aspectRatio: 0.75,
-        loopTime: 55, // loop time in seconds
+        videoSource: "qNj1qRZeeaM",
+        videoSourceYouku: "XNDM5MDM3MzQxNg",
+        posterImageOverride: "qNj1qRZeeaM_poster_image",
+        aspectRatio: 0.42,
+        loopTime: 167 // loop time in seconds
       }
     },
     videoButtonId: "index-video-button",
@@ -601,6 +620,7 @@ $(function () {
     videoPosterId: "landing-video-poster"
   });
 
+  // Vision video
   // setupYoutubeVideoElement({
   //   backgroundElementId: "landing-video-background",
   //   videoSources: {

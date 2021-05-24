@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import calendar
+import random
 
 from flask_cors import CORS, cross_origin
 from app import app
@@ -140,7 +141,8 @@ def index():
         return video["landing_page_featured"]
 
     all_videos = json.load(open("static/files/videos.json"))
-    featured_videos = filter(filter_featured_videos, all_videos)
+    featured_videos = random.sample(json.load(open("static/files/videos.json")), k=3)
+    # filter(filter_featured_videos, all_videos)
 
     # fetch the current yield for OUSD
     try:
