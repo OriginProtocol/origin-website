@@ -873,7 +873,7 @@ $(function () {
     Medium: {
       img: "/static/img/about/medium.svg",
       countLabel: "followers",
-      link: "https://medium.com/originprotocol",
+      link: "https://blog.originprotocol.com",
       regionSpecific: false
     },
     Blockfolio: {
