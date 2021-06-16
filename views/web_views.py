@@ -626,7 +626,10 @@ def dashboard():
         staked_data=data["ogn_staked_data"]
     )
     
-
+@app.route("/nft", strict_slashes=False)
+@app.route("/<lang_code>/nft", strict_slashes=False)
+def nft():
+    return render_template("nft.html")
 
 @app.route("/static/css/all_styles.css", strict_slashes=False)
 def assets_all_styles():
@@ -662,6 +665,8 @@ def assets_all_styles():
                 "static/css/pages/browser-extension.css",
                 "static/css/pages/dshop.css",
                 "static/css/pages/dashboard.css",
+                "static/css/pages/nft.css",
+                "static/css/components/nft-card.css",
             ]
         ),
         mimetype="text/css",
