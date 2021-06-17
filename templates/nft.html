@@ -17,10 +17,10 @@
       <div class="col-6 d-flex flex-column">
         {% with 
           upcoming=true, 
-          title="Brave", 
-          subtitle="Tabong Collection", 
-          time="yesterday",
-          image="https://partner-assets-prod.ogn.app/brave/lg/vintage-art-in-a-hurry-3-x.a208a39e.png"
+          title=drops[0][0].title, 
+          subtitle=drops[0][0].subtitle, 
+          time=drops[0][0].countdown,
+          image=drops[0][0].image
         %} 
         {% include 'components/nft-card.html' %} 
         {% endwith %}      

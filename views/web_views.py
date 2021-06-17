@@ -40,7 +40,7 @@ import googleapiclient.discovery
 
 import json
 
-from logic.scripts import token_stats
+from logic.scripts import token_stats, drops
 
 # Translation: change path of messages.mo files
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "../translations"
@@ -629,7 +629,8 @@ def dashboard():
 @app.route("/nft", strict_slashes=False)
 @app.route("/<lang_code>/nft", strict_slashes=False)
 def nft():
-    return render_template("nft.html")
+    data = drops.get_drops()
+    return render_template("nft.html", drops=data)
 
 @app.route("/static/css/all_styles.css", strict_slashes=False)
 def assets_all_styles():
