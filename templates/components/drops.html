@@ -6,13 +6,13 @@
       {% for upcomingDrop in drops[0] %}
         <div class="col-6 d-flex flex-column">
           {% with 
-            upcoming=true, 
+            drop_url=upcomingDrop.url,
             title=upcomingDrop.title, 
             subtitle=upcomingDrop.subtitle, 
             time=upcomingDrop.countdown,
             image=upcomingDrop.image
           %} 
-          {% include 'components/nft-card.html' %} 
+          {% include 'components/drop-card.html' %} 
           {% endwith %}      
         </div>
       {% endfor %}
@@ -29,13 +29,13 @@
         {% for pastDrop in drops[1] %}
           <div class="col-4 d-flex flex-column">
             {% with 
-              upcoming=false, 
+              drop_url=pastDrop.url,
               title=pastDrop.title, 
               subtitle=pastDrop.subtitle, 
               time=pastDrop.countdown,
               image=pastDrop.image
             %} 
-            {% include 'components/nft-card.html' %} 
+            {% include 'components/past-drop-card.html' %} 
             {% endwith %}      
           </div>
         {% endfor %}
