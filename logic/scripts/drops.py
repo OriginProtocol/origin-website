@@ -95,6 +95,6 @@ def get_drops(allPast):
         return None
 
     upcomingDrops = filter_upcoming_drops(drops)
-    pastDrops = filter_past_drops(drops, allPast)
+    pastDrops = filter_past_drops(drops, allPast)  
 
     return [upcomingDrops, pastDrops]

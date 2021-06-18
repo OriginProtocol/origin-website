@@ -1,15 +1,3 @@
-{% extends 'base.html' %}
-
-{% block title %}{{ gettext("Origin Protocol - Product") }}{% endblock %}
-
-{% block meta_description %}{{ gettext("Origin Protocol's platform powers true peer-to-peer marketplaces everywhere.") }}{% endblock %}
-
-{% block content %}
-
-{% with theme_dark=True %}
-{% include 'navbar.html' %}
-{% endwith %}  
-
 <main class="nft-page">
   <section class="upcoming-drops-section">
     <h1>{{gettext("Upcoming Drops")}}</h1>
@@ -57,11 +45,8 @@
         {% endif %}
       </div>
     <div class="d-flex justify-content-center align-items-center">
-    <a class="mt-6 btn btn-primary d-flex justify-content-center align-items-center" href="/nft?allPast=true">
+    <a class="mt-6 mb-4 btn btn-primary d-flex justify-content-center align-items-center" href="/?allPast=true">
       {{gettext("View More")}}</a>
     </div>div>  
   </section>
-  {% include 'footer.html' %}
 </main>
-
-{% endblock %}
