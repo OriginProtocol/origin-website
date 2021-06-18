@@ -629,7 +629,8 @@ def dashboard():
 @app.route("/nft", strict_slashes=False)
 @app.route("/<lang_code>/nft", strict_slashes=False)
 def nft():
-    data = drops.get_drops()
+    allPast  = request.args.get('allPast', None)
+    data = drops.get_drops(allPast)
     return render_template("nft.html", drops=data)
 
 @app.route("/static/css/all_styles.css", strict_slashes=False)
