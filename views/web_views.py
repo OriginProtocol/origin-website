@@ -464,9 +464,7 @@ def investors():
 @app.route("/product", strict_slashes=False)
 @app.route("/<lang_code>/product", strict_slashes=False)
 def product():
-    allPast  = request.args.get('allPast', None)
-    data = drops.get_drops(allPast)
-    return render_template("product.html", allDrops=data)
+    return render_template("product.html")
 
 
 @app.route("/ogn-token", strict_slashes=False)
