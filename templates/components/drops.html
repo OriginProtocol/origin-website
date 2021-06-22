@@ -45,8 +45,15 @@
         {% endif %}
       </div>
     <div class="d-flex justify-content-center align-items-center">
-    <a class="mt-6 mb-4 btn btn-primary d-flex justify-content-center align-items-center" href="/?allPast=true">
-      {{gettext("View More")}}</a>
+      {% if drops[2] == 'true' %}  
+      <a class="mt-6 mb-4 btn btn-primary d-flex justify-content-center align-items-center" href="/en/?allPast=false">
+        {{gettext("View Less")}}
+      </a>
+      {% else %} 
+      <a class="mt-6 mb-4 btn btn-primary d-flex justify-content-center align-items-center" href="/en/?allPast=true">
+        {{gettext("View More")}}
+      </a>
+      {% endif %} 
     </div>div>  
   </section>
 </main>

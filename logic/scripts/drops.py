@@ -29,36 +29,17 @@ def sort_drops(drops):
 def parse_date(date):
     return parser.parse(date)
 
-def get_countdown(drop):
-    current = datetime.now(timezone.utc)
-    upcoming = parser.parse(drop.startDate)
-    difference = (upcoming - current).total_seconds()
-    remaining = difference
-    
-    day = remaining // (24 * 3600)
-    remaining = remaining - (day * (24 * 3600))
-
-    time = remaining % (24 * 3600)
-    hour = remaining // 3600
-    remaining = remaining - (hour * 3600)
-
-    time %= 3600
-    minutes = remaining // 60
-    countdown = "%dd %dh %dm" % (day, hour, minutes)
-    return countdown
-
 def filter_upcoming_drops(drops):
     upcomingDrops = []
     for drop in drops:
         if not drop.startDate or not drop.endDate:
             continue
         if (parse_date(drop.startDate) > datetime.now(timezone.utc) or parse_date(drop.endDate) > datetime.now(timezone.utc)):
-            drop.countdown = get_countdown(drop)
+            drop.countdown = parse_date(drop.startDate).strftime('%A %B %m')
             upcomingDrops.append(drop)
     upcomingDrops = sort_drops(upcomingDrops) 
     
-    page = 1 
-    return upcomingDrops[slice(0, 2*page)]       
+    return upcomingDrops      
 
 def filter_past_drops(drops, allPast):
     pastDrops = []
@@ -68,6 +49,9 @@ def filter_past_drops(drops, allPast):
         if parse_date(drop.endDate) < datetime.now(timezone.utc):
             pastDrops.append(drop) 
     pastDrops = sort_drops(pastDrops)
+
+    print(allPast)
+    print(len(pastDrops))
 
     if allPast == 'true':
         return pastDrops
@@ -92,9 +76,9 @@ def get_drops(allPast):
 
     except RequestException as e:
         print("Error during requests to {0} : {1}".format(url, str(e)))
-        return None
+        return None 
 
     upcomingDrops = filter_upcoming_drops(drops)
     pastDrops = filter_past_drops(drops, allPast)  
 
-    return [upcomingDrops, pastDrops]
+    return [upcomingDrops, pastDrops, allPast]
