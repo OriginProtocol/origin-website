@@ -20,8 +20,6 @@ headers = {
     "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
 }
 
-API_ENDPOINT = "http://localhost:3000/api"
-
 def sort_drops(drops):
     sorted_drops = sorted(drops, key=lambda x: x.startDate, reverse=True)
     return sorted_drops
@@ -64,7 +62,7 @@ def get_drops(allPast):
     headers = {
     "Content-Type": "application/json",
     }
-    url = "{0}/site-marketing".format(API_ENDPOINT)
+    url = "{0}/site-marketing".format(constants.LAUNCHPAD_API)
 
     drops = []
     try:
