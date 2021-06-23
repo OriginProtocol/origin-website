@@ -11,14 +11,12 @@ from tools import db_utils
 from util import tasks
 from config import constants
 from types import SimpleNamespace
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timezone, timedelta
 from dateutil import parser
 
-
-
-headers = {
-    "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
-}
+fetch_interval_in_minutes = 30
+last_fetch = datetime(1900, 1, 1) # A long time ago - to ensure first fetch
+cached_drops = []
 
 def sort_drops(drops):
     sorted_drops = sorted(drops, key=lambda x: x.startDate, reverse=True)
@@ -48,35 +46,36 @@ def filter_past_drops(drops, allPast):
             pastDrops.append(drop) 
     pastDrops = sort_drops(pastDrops)
 
-    print(allPast)
-    print(len(pastDrops))
-
-    if allPast == 'true':
+    if allPast:
         return pastDrops
     else:    
         return pastDrops[slice(0, 3)]  
                
 
 def get_drops(allPast):
-
-    headers = {
-    "Content-Type": "application/json",
-    }
-    url = "{0}/site-marketing".format(constants.LAUNCHPAD_API)
-
+    global cached_drops
+    global last_fetch
     drops = []
-    try:
-        with closing(requests.get(url, headers=headers)) as resp:
-            if resp.status_code == 200:
-                drops =json.loads(resp.content, object_hook=lambda d: SimpleNamespace(**d))
-            else:
-                return None
+    next_fetch = last_fetch + timedelta(minutes=fetch_interval_in_minutes)
 
-    except RequestException as e:
-        print("Error during requests to {0} : {1}".format(url, str(e)))
-        return None 
+    if datetime.utcnow() < next_fetch:
+        drops = cached_drops
+    else:
+        url = "{0}/site-marketing".format(constants.LAUNCHPAD_API)
+        drops = []
+        try:
+            with closing(requests.get(url)) as resp:
+                if resp.status_code == 200:
+                    drops = json.loads(resp.content, object_hook=lambda d: SimpleNamespace(**d))
+                    last_fetch = datetime.utcnow()
+                    cached_drops = drops
+                else:
+                    return None
 
+        except RequestException as e:
+            print("Error during requests to {0} : {1}".format(url, str(e)))
+            return None 
+  
     upcomingDrops = filter_upcoming_drops(drops)
-    pastDrops = filter_past_drops(drops, allPast)  
-
+    pastDrops = filter_past_drops(drops, allPast)    
     return [upcomingDrops, pastDrops, allPast]
