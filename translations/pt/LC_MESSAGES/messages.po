@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-17 11:39+0530\n"
-"PO-Revision-Date: 2021-06-23 19:57\n"
+"POT-Creation-Date: 2021-06-22 13:11-0400\n"
+"PO-Revision-Date: 2021-06-25 13:30\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: originprotocolwebsite\n"
 "X-Crowdin-Project-ID: 308054\n"
@@ -27,7 +27,7 @@ msgid "Building on Origin"
 msgstr "Com base na origem"
 
 #: logic/emails/mailing_list.py:122 logic/emails/mailing_list.py:190
-#: views/web_views.py:328
+#: views/web_views.py:335
 msgid "Please enter a valid email address"
 msgstr "Por favor insira um endereço de e-mail válido"
 
@@ -42,6 +42,54 @@ msgstr "Obrigado! Nós entraremos em contato em breve."
 #: logic/emails/mailing_list.py:193
 msgid "Please enter a valid website address"
 msgstr "Por favor insira um endereço de site válido"
+
+#: origin-website/venv/lib/python3.9/site-packages/flask_script/__init__.py:43
+msgid "show this help message and exit"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:368
+#, python-format
+msgid "Content purported to be compressed with %s but failed to decompress."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:532
+#, python-format
+msgid "Unsupported value for qop: %s."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:536
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:614
+#, python-format
+msgid "Unsupported value for algorithm: %s.algorithm"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:609
+msgid "The challenge doesn't contain a server nonce, or this one is empty."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:619
+#, python-format
+msgid "Unsupported value for pw-algorithm: %s.pw-algorithm"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:1448
+msgid "Redirected but the response is missing a Location: header."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1312
+#, python-format
+msgid "Attempting to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1317
+#, python-format
+msgid "Connected to qpid with SASL mechanism %s"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1335
+#, python-format
+msgid "Unable to connect to qpid with SASL mechanism %s"
+msgstr ""
 
 #: templates/404.html:16
 msgid "How did I get here?"
@@ -75,14 +123,14 @@ msgid "It’s time to bring crypto mainstream"
 msgstr "É hora de trazer cripto para o mainstream"
 
 #: templates/about.html:36 templates/investors.html:37
-#: templates/landing.html:30 templates/landing.html:152 templates/team.html:29
+#: templates/landing.html:30 templates/landing.html:172 templates/team.html:29
 #: templates/video.html:30
 msgid "Watch the video"
 msgstr ""
 
-#: templates/about.html:44
-msgid "Origin enables decentralized commerce and finance"
-msgstr "Origin permite comércio e finanças descentralizados"
+#: templates/about.html:44 templates/product.html:20 views/web_views.py:82
+msgid "Origin Protocol is bringing NFTs and DeFi to the masses"
+msgstr ""
 
 #: templates/about.html:47
 msgid "Origin is a fully distributed team. Our 800+ investors include top venture capitalists and\n"
@@ -91,18 +139,18 @@ msgstr "Origin é uma equipe totalmente distribuída. Entre nossos mais de 800 i
 "fundos de criptomoeda em todo o mundo."
 
 #: templates/about.html:49
-msgid "Origin Tokens (OGN) are held by over 30,000"
-msgstr "Origin Tokens (OGN) são detidos por mais de 30,000"
+msgid "Origin Tokens (OGN) are held by over 37,000"
+msgstr ""
 
 #: templates/about.html:49
 msgid "token holders."
 msgstr "detentores de tokens."
 
-#: templates/about.html:55 templates/landing.html:131
+#: templates/about.html:55 templates/landing.html:151
 msgid "Learn more about our team"
 msgstr ""
 
-#: templates/about.html:58 templates/landing.html:159
+#: templates/about.html:58 templates/landing.html:179
 msgid "Learn more about our investors"
 msgstr ""
 
@@ -362,7 +410,7 @@ msgstr "Aproveite o poder de <span class='green'>pagamentos sem fronteiras e sem
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "Esteja na vanguarda da revolução das criptomoedas. Seu DApp é compatível com o Metamask e com as populares carteiras móveis prontas para uso."
 
-#: templates/creator.html:135 templates/product.html:146
+#: templates/creator.html:135
 msgid "Features"
 msgstr "Características"
 
@@ -450,149 +498,149 @@ msgstr "Origin Protocol - Painel do Origin Token"
 msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
 msgstr "A plataforma do Origin Protocol mune mercados verdadeiramente peer-to-peer em todos os lugares."
 
-#: templates/dashboard.html:23
+#: templates/dashboard.html:26
 msgid "Origin Token Dashboard"
 msgstr "Painel Origin Token"
 
-#: templates/dashboard.html:30
+#: templates/dashboard.html:33
 msgid "Price"
 msgstr "Preço"
 
-#: templates/dashboard.html:38 templates/ogn-token.html:29
+#: templates/dashboard.html:41 templates/ogn-token.html:29
 msgid "Market Cap"
 msgstr "Capitalização de Mercado"
 
-#: templates/dashboard.html:46 templates/ogn-token.html:22
+#: templates/dashboard.html:49 templates/ogn-token.html:22
 msgid "Circulating Supply"
 msgstr "Suprimento em Circulação"
 
-#: templates/dashboard.html:57
+#: templates/dashboard.html:60
 msgid "Total Supply"
 msgstr "Suprimento Máximo"
 
-#: templates/dashboard.html:73
+#: templates/dashboard.html:76
 msgid "Token Unlock Schedule"
 msgstr "Cronograma do Desbloqueio do Token"
 
-#: templates/dashboard.html:75
+#: templates/dashboard.html:78
 msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
 msgstr "Em 4 de janeiro de 2020, lançamos nossa programação de liberação projetada de tokens. Isso também pode ser encontrado no <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Relatório de Pesquisa da Binance</a> sobre o Origin. Observe que o suprimento em circulação real pode diferir do suprimento em circulação modelado com o passar do tempo. É nossa intenção diminuir o suprimento real quanto ao suprimento em circulação modelado, sempre que possível."
 
-#: templates/dashboard.html:79
+#: templates/dashboard.html:82
 msgid "Modeled vs. actual token release schedule"
 msgstr "Modelado vs. real cronograma de liberação de tokens"
 
-#: templates/dashboard.html:81
+#: templates/dashboard.html:84
 #, python-format
 msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 msgstr "Atualmente, o suprimento em circulação real da OGN é ogn_circulating_supply. O suprimento em circulação modelado foi projetado em ogn_modeled_supply. A diferença é de ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 
-#: templates/dashboard.html:106
+#: templates/dashboard.html:109
 msgid "Locked Tokens"
 msgstr "Tokens bloqueados"
 
-#: templates/dashboard.html:108
+#: templates/dashboard.html:111
 msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply."
 msgstr "Muitos de nossos investidores e membros da equipe aumentaram voluntariamente suas apostas. Os tokens bloqueados incluem os tokens que de outra forma teriam sido liberados e entrarariam no suprimento em circulação."
 
-#: templates/dashboard.html:113
+#: templates/dashboard.html:116
 msgid "Total number of tokens in investor and team lockups"
 msgstr "Número total de tokens bloqueados de investidores e equipe"
 
-#: templates/dashboard.html:123
+#: templates/dashboard.html:126
 msgid "Total number of staked tokens"
 msgstr "Número total de tokens em stake"
 
-#: templates/dashboard.html:133
+#: templates/dashboard.html:136
 msgid "Total number of tokens founders have sold"
 msgstr "Número total de tokens que os fundadores venderam"
 
-#: templates/dashboard.html:141
+#: templates/dashboard.html:144
 msgid "Last updated "
 msgstr "Última atualização: "
 
-#: templates/dashboard.html:145
+#: templates/dashboard.html:148
 msgid "Staked amount by duration"
 msgstr "Quantidade em stake por duração"
 
-#: templates/dashboard.html:159
+#: templates/dashboard.html:162
 msgid "Wallets excluded from circulating supply"
 msgstr "Carteiras excluídas do suprimento em circulação"
 
-#: templates/dashboard.html:161
+#: templates/dashboard.html:164
 msgid "Foundation Reserves"
 msgstr "Reservas da Fundação"
 
-#: templates/dashboard.html:172
+#: templates/dashboard.html:175
 msgid "Team Distribution"
 msgstr "Distribuição da Equipe"
 
-#: templates/dashboard.html:183
+#: templates/dashboard.html:186
 msgid "Investor Distribution"
 msgstr "Distribuição de Investidores"
 
-#: templates/dashboard.html:194
+#: templates/dashboard.html:197
 msgid "Distribution Staging"
 msgstr "Estágio de Distribuição"
 
-#: templates/dashboard.html:205
+#: templates/dashboard.html:208
 msgid "Partnerships"
 msgstr "Parcerias"
 
-#: templates/dashboard.html:216
+#: templates/dashboard.html:219
 msgid "Ecosystem Growth"
 msgstr "Crescimento do Ecossistema"
 
-#: templates/dashboard.html:236
+#: templates/dashboard.html:239
 msgid "Stake OGN on OUSD.com"
 msgstr "Faça Staking de OGN em OUSD.com"
 
-#: templates/dashboard.html:237 templates/stake-banner.html:7
+#: templates/dashboard.html:240 templates/stake-banner.html:7
 #, python-format
 msgid "Stake your OGN to earn up to 25%%"
 msgstr "Faça staking de seu OGN para ganhar até 25%%"
 
-#: templates/dashboard.html:240 templates/stake-banner.html:10
+#: templates/dashboard.html:243 templates/stake-banner.html:10
 msgid "Stake OGN now"
 msgstr "Faça Staking de OGN agora"
 
-#: templates/dashboard.html:244
+#: templates/dashboard.html:247
 msgid "Additional Token Metrics"
 msgstr "Métricas de Token Adicionais"
 
-#: templates/dashboard.html:247
+#: templates/dashboard.html:250
 msgid "Total number of unique wallets"
 msgstr "Número total de carteiras únicas"
 
-#: templates/dashboard.html:251
+#: templates/dashboard.html:254
 msgid "Total number of presale investors"
 msgstr "Número total de investidores pré-venda"
 
-#: templates/dashboard.html:255
+#: templates/dashboard.html:258
 msgid "Presale investor vesting schedule length"
 msgstr "Duração de programa de aquisição para investidores de pré-venda"
 
-#: templates/dashboard.html:259
+#: templates/dashboard.html:262
 msgid "Team vesting schedule length*"
 msgstr "Duração do programa de aquisição da equipe"
 
-#: templates/dashboard.html:263
+#: templates/dashboard.html:266
 msgid "Average presale purchase size in USD"
 msgstr "Volume médio de compra na pré-venda em USD"
 
-#: templates/dashboard.html:267
+#: templates/dashboard.html:270
 msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
 msgstr "* Fundadores assinaram um novo programa de aquisição de 4 anos em 8 de janeiro de 2020"
 
-#: templates/dashboard.html:274
+#: templates/dashboard.html:279
 msgid "Centralized Exchanges"
 msgstr "Exchanges Centralizadas"
 
-#: templates/dashboard.html:342
+#: templates/dashboard.html:406
 msgid "Decentralized Exchanges"
 msgstr "Exchanges Descentralizadas"
 
-#: templates/dashboard.html:372
+#: templates/dashboard.html:440
 msgid "See more on Coinmarketcap >"
 msgstr "Ver mais no Coinmarketcap >"
 
@@ -830,7 +878,7 @@ msgstr "Configuração rápida sem compromissos"
 msgid "No commitments or long-term contracts."
 msgstr "Sem compromissos ou contratos de longo prazo."
 
-#: templates/dshop.html:292 templates/product.html:46
+#: templates/dshop.html:292 templates/product.html:121
 msgid "Free to run"
 msgstr "Grátis para operar"
 
@@ -924,7 +972,7 @@ msgid "read the"
 msgstr "leia"
 
 #: templates/extension-rewards.html:206 templates/footer.html:27
-#: templates/footer.html:106 templates/privacy.html:16
+#: templates/footer.html:105 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr "Política de Privacidade"
 
@@ -962,108 +1010,100 @@ msgstr ""
 msgid "Enter your email"
 msgstr ""
 
-#: templates/footer.html:18 templates/footer.html:97
+#: templates/footer.html:18 templates/footer.html:96
 msgid "Copyright © "
 msgstr "Copyright © "
 
-#: templates/footer.html:18 templates/footer.html:97
+#: templates/footer.html:18 templates/footer.html:96
 msgid "Origin Protocol Inc. All rights reserved."
 msgstr "Origin Protocol Inc. Todos os direitos reservados."
 
-#: templates/footer.html:21 templates/footer.html:100
+#: templates/footer.html:21 templates/footer.html:99
 msgid "Help"
 msgstr "Ajuda"
 
-#: templates/footer.html:24 templates/footer.html:103 templates/tos.html:16
+#: templates/footer.html:24 templates/footer.html:102 templates/tos.html:16
 msgid "Terms of Service"
 msgstr "Termos de serviço"
 
-#: templates/footer.html:36
-msgid "Overview"
-msgstr ""
-
-#: templates/footer.html:37
-msgid "OGN"
-msgstr ""
-
-#: templates/footer.html:38 templates/litepaper/platform.html:143
-msgid "OUSD"
-msgstr "OUSD"
-
-#: templates/footer.html:39 templates/product.html:29
-msgid "Dshop"
-msgstr "Dshop"
-
-#: templates/footer.html:43
-msgid "Videos"
-msgstr ""
-
-#: templates/footer.html:44
-msgid "Developers"
-msgstr "Desenvolvedores"
-
-#: templates/footer.html:45
-msgid "GitHub"
-msgstr "GitHub"
-
-#: templates/footer.html:46 templates/litepaper.html:19
-msgid "Litepaper"
-msgstr "Litepaper"
-
-#: templates/footer.html:50 templates/navbar.html:69
+#: templates/footer.html:36 templates/navbar.html:69
 msgid "About"
 msgstr ""
 
-#: templates/footer.html:51 templates/navbar.html:72
+#: templates/footer.html:37 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:39 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr "Equipe"
 
-#: templates/footer.html:52 templates/navbar.html:75
+#: templates/footer.html:38 templates/navbar.html:75
 msgid "Investors"
 msgstr ""
 
-#: templates/footer.html:53
+#: templates/footer.html:39
 msgid "Store"
 msgstr "Loja"
 
-#: templates/footer.html:54
+#: templates/footer.html:40
 msgid "Jobs"
 msgstr "Empregos"
 
-#: templates/footer.html:58
+#: templates/footer.html:44
+msgid "NFTs & more"
+msgstr ""
+
+#: templates/footer.html:45 templates/litepaper/platform.html:137
+msgid "OUSD"
+msgstr "OUSD"
+
+#: templates/footer.html:46
+msgid "OGN"
+msgstr ""
+
+#: templates/footer.html:50 templates/litepaper.html:19
+msgid "Litepaper"
+msgstr "Litepaper"
+
+#: templates/footer.html:51
+msgid "Videos"
+msgstr ""
+
+#: templates/footer.html:52
+msgid "GitHub"
+msgstr "GitHub"
+
+#: templates/footer.html:57
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:61
+#: templates/footer.html:60
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:64
-msgid "Medium"
-msgstr "Médio"
+#: templates/footer.html:63
+msgid "Blog"
+msgstr ""
 
-#: templates/footer.html:67
+#: templates/footer.html:66
 msgid "Youtube"
 msgstr "Youtube"
 
-#: templates/footer.html:70
+#: templates/footer.html:69
 msgid "Instagram"
 msgstr "Instagram"
 
-#: templates/footer.html:73
+#: templates/footer.html:72
 msgid "Telegram"
 msgstr "Telegrama"
 
-#: templates/footer.html:76
+#: templates/footer.html:75
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:79
+#: templates/footer.html:78
 msgid "Discord"
 msgstr "Discórdia"
 
-#: templates/footer.html:89
+#: templates/footer.html:88
 msgid "VK"
 msgstr ""
 
@@ -1315,36 +1355,36 @@ msgid "We're backed by top investors from all over the world"
 msgstr ""
 
 #: templates/investors.html:45
-msgid "Fundraising"
+msgid "Funding"
 msgstr ""
 
 #: templates/investors.html:47
-msgid "We are a well-capitalized startup that has sold tokens in\n"
-"            three previous rounds to build our platform."
-msgstr "Somos uma startup bem capitalizada que já vendeu tokens em\n"
-"            três rodadas anteriores para construir nossa plataforma."
+msgid "Origin's native token is called OGN. Today, OGN is publicly traded on top exchanges like Coinbase, Binance and Huobi."
+msgstr ""
 
-#: templates/investors.html:54
+#: templates/investors.html:49
+msgid "We previously raised funding from presale investors across three previous rounds to build our platform."
+msgstr ""
+
+#: templates/investors.html:55
 msgid "$38.1M"
 msgstr ""
 
-#: templates/investors.html:57
+#: templates/investors.html:58
 msgid "total raised to date"
 msgstr ""
 
-#: templates/investors.html:61
+#: templates/investors.html:62
 msgid "800+"
 msgstr ""
 
-#: templates/investors.html:62
-msgid "investors"
+#: templates/investors.html:63
+msgid "presale investors"
 msgstr ""
 
-#: templates/investors.html:66
-msgid "Interested in getting a stake in Origin? Sign up to\n"
-"            receive the latest updates."
-msgstr "Interessado em pariticipar no Origin? Inscreva-se para\n"
-"            receber as últimas atualizações."
+#: templates/investors.html:67
+msgid "Sign up to get regular token holder updates:"
+msgstr ""
 
 #: templates/investors.html:78
 msgid "Featured Investor"
@@ -1395,7 +1435,7 @@ msgstr "\"Origin se destaca de qualquer outro\n"
 "                      porque eles foram lá e provavelmente construíram a melhor\n"
 "                      comunidade que já vimos. Para nós, isso foi um divisor de águas.\""
 
-#: templates/investors.html:178 templates/team.html:557
+#: templates/investors.html:178 templates/team.html:591
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
@@ -1451,7 +1491,7 @@ msgstr "Gil Penchina"
 msgid "Angel Investor"
 msgstr ""
 
-#: templates/investors.html:324
+#: templates/investors.html:324 templates/team.html:630
 msgid "Justin Blau"
 msgstr "Justin Blau"
 
@@ -1483,25 +1523,25 @@ msgstr "Randall Kaplan"
 msgid "Founder, Akamai"
 msgstr ""
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:80
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:81
 msgid "Origin Protocol"
 msgstr "Protocolo de Origem"
 
 #: templates/landing.html:5
-msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
-msgstr "A economia compartilhada sem intermediários. Origin é um protocolo para criar mercados de economia de compartilhamento usando o blockchain Ethereum e o IPFS."
+msgid "Origin Protocol is bringing NFTs and DeFi to the masses."
+msgstr ""
 
 #: templates/landing.html:26
-msgid "Connecting artists<br>directly with their fans"
-msgstr "Contenctando artistas<br>diretamente com seus fãs"
+msgid "Bringing NFTs and DeFi<br>to the masses"
+msgstr ""
 
 #: templates/landing.html:42
-msgid "Subscribe to stay in touch"
-msgstr "Inscreva-se para ficar em contato"
+msgid "Never miss a drop. Sign up now!"
+msgstr ""
 
 #: templates/landing.html:45
-msgid "Be the first to hear when we launch important partnerships, celebrity NFT drops, exchange listings, and new products. Your email will be kept private."
-msgstr "Seja o primeiro a saber quando lançarmos parcerias importantes, lançamentos de NFTs de celebridades, listagens em exchanges e novos produtos. Seu e-mail será mantido em sigilo."
+msgid "Be the first to hear when we announce big NFT drops, important partnerships, and new products. Your email will be kept private."
+msgstr ""
 
 #: templates/components/presale-form.html:9
 #: templates/components/presale-form.html:10 templates/landing.html:48
@@ -1510,112 +1550,85 @@ msgstr "Seja o primeiro a saber quando lançarmos parcerias importantes, lançam
 msgid "Email"
 msgstr "O email"
 
-#: templates/landing.html:56
-msgid "Origin Products"
-msgstr "Produtos Origin"
+#: templates/landing.html:64
+msgid "Where top creators launch their NFTs"
+msgstr ""
 
-#: templates/landing.html:57
-msgid "Origin’s suite of products is revolutionizing how people shop and conduct business online. Effortlessly create a decentralized e-commerce store with Dshop and earn competitive yields with the Origin Dollar."
-msgstr "O conjunto de produtos Origin está revolucionando a forma como as pessoas compram e levam seus negócios online. Crie sem dificuldade uma loja de e-commerce descentralizada com a Dshop e ganhe rendimentos competitivos com o Dólar Origin (OUSD)."
+#: templates/landing.html:65
+msgid "Origin has hosted record-breaking NFT sales for top musicans, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace."
+msgstr ""
 
-#: templates/landing.html:59
-msgid "Check out our products"
-msgstr "Conheça nossos produtos"
+#: templates/landing.html:67 templates/nft-banner.html:6
+#: templates/product.html:85
+msgid "Interested in running an NFT sale?"
+msgstr "Interessado em realizar uma venda NFT?"
 
-#: templates/landing.html:67
-msgid "There is a massive opportunity for blockchain-powered commerce"
-msgstr "Há uma grande oportunidade para o comércio movido a blockchains"
+#: templates/landing.html:99
+msgid "Learn more about OUSD"
+msgstr ""
 
-#: templates/landing.html:68
-msgid "E-commerce is projected to be one of the fastest growing verticals in the blockchain industry during the next few years"
-msgstr "É projetado que o e-commerce seja um dos setores verticais de crescimento mais rápido na indústria de blockchain durante os próximos anos"
-
-#: templates/landing.html:75
-msgid "Global e-commerce sales by 2021"
-msgstr "Vendas globais de e-commerce em 2021"
-
-#: templates/landing.html:79
-msgid "Global blockchain technology revenues by 2023"
-msgstr "Receitas globais de tecnologia de blockchain até 2023"
-
-#: templates/landing.html:88
+#: templates/landing.html:108
 msgid "Blockchain-powered commerce is the future"
 msgstr "O comércio movido a blockchain é o futuro"
 
-#: templates/landing.html:89
+#: templates/landing.html:109
 msgid "Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure"
 msgstr "O Blockchain redefinirá o comércio online e permitirá que compradores e vendedores se beneficiem de custos mais baixos e melhor infraestrutura"
 
-#: templates/landing.html:95
+#: templates/landing.html:115
 msgid "Lower fees"
 msgstr "Taxas mais baixas"
 
-#: templates/landing.html:96
+#: templates/landing.html:116
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed"
 msgstr "Compradores e vendedores compartilham uma economia de 20-30%% quando os intermediários são removidos"
 
-#: templates/landing.html:102
+#: templates/landing.html:122
 msgid "Better incentives"
 msgstr "Melhores incentivos"
 
-#: templates/landing.html:103
+#: templates/landing.html:123
 msgid "Everyone can own a stake in the network by contributing to its growth"
 msgstr "Todos podem ter uma parte da rede, contribuindo para seu crescimento"
 
-#: templates/landing.html:109
+#: templates/landing.html:129
 msgid "Increased access"
 msgstr "Maior acesso"
 
-#: templates/landing.html:110
+#: templates/landing.html:130
 msgid "2 billion unbanked people can access new markets globally"
 msgstr "2 bilhões de pessoas sem banco podem acessar novos mercados globalmente"
 
-#: templates/landing.html:116
+#: templates/landing.html:136
 msgid "More resilience"
 msgstr "Mais resiliente"
 
-#: templates/landing.html:117
+#: templates/landing.html:137
 msgid "Blockchain-powered commerce can't be banned or shut down"
 msgstr "O comércio movido a blockchain não pode ser banido ou terminado"
 
-#: templates/landing.html:123
+#: templates/landing.html:143
 msgid "Origin has a world-class team"
 msgstr ""
 
-#: templates/landing.html:124
+#: templates/landing.html:144
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr ""
 
-#: templates/landing.html:148
+#: templates/landing.html:168
 msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
 msgstr ""
 
-#: templates/landing.html:164
+#: templates/landing.html:184
 msgid "Featured Partners"
 msgstr "Parceiros em Destaque"
 
-#: templates/landing.html:189
-msgid "Origin Marketplace featured in Samsung Blockchain Store"
-msgstr "Origin Marketplace em destaque na Samsung Blockchain Store"
-
-#: templates/landing.html:203 templates/landing.html:225
-msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
-msgstr ""
-
-#: templates/landing.html:207 templates/landing.html:229
-msgid "Luca De Giglio"
-msgstr ""
-
-#: templates/landing.html:210 templates/landing.html:232
-msgid "Founder, Trips Community"
-msgstr ""
-
-#: templates/landing.html:248
+#: templates/landing.html:224
 msgid "Featured Videos"
 msgstr ""
 
-#: templates/landing.html:267
+#: templates/landing.html:243
 msgid "Watch more videos"
 msgstr ""
 
@@ -1624,8 +1637,8 @@ msgid "Origin Protocol - Litepaper"
 msgstr "Origin Protocol - Litepaper"
 
 #: templates/litepaper.html:20
-msgid "Bringing peer-to-peer commerce and decentralized finance to the masses"
-msgstr "Trazendo comércio peer-to-peer e finanças descentralizadas para as massas"
+msgid "Bringing non-fungible tokens and decentralized finance to the masses"
+msgstr ""
 
 #: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
@@ -1635,11 +1648,11 @@ msgstr "Protocolo de Origem - Mobile"
 msgid "Buy and Sell on the Origin Marketplace"
 msgstr "Compre e venda no mercado Origin"
 
-#: templates/mobile.html:18 templates/product.html:94
+#: templates/mobile.html:18
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr ""
 
-#: templates/mobile.html:27 templates/product.html:102
+#: templates/mobile.html:27
 msgid "Download Android App"
 msgstr ""
 
@@ -1666,10 +1679,6 @@ msgstr ""
 #: templates/navbar.html:85
 msgid "Shop"
 msgstr "fazer compras"
-
-#: templates/nft-banner.html:6
-msgid "Interested in running an NFT sale?"
-msgstr "Interessado em realizar uma venda NFT?"
 
 #: templates/nft-banner.html:9
 msgid "Yes, please!"
@@ -1709,7 +1718,7 @@ msgstr "Último preço"
 msgid "Last updated on "
 msgstr "Última atualização: "
 
-#: templates/ogn-token.html:35 templates/product.html:112
+#: templates/ogn-token.html:35
 msgid "Available on"
 msgstr ""
 
@@ -1717,7 +1726,7 @@ msgstr ""
 msgid "…and many others"
 msgstr "…e muitos outros"
 
-#: templates/ogn-token.html:113
+#: templates/ogn-token.html:113 templates/product.html:167
 msgid "View the OGN Dashboard"
 msgstr "Veja o Painel OGN"
 
@@ -1733,7 +1742,7 @@ msgstr "Staking"
 msgid "Earn interest on your OGN while you hold it. Deposit OGN into our high-yield smart contract to grow your stake in the Origin network."
 msgstr "Ganhe juros sobre seu enquanto enquanto os detêm. Deposite OGN em nosso contrato inteligente de altos ganhos e cresça seu stake na rede Origin."
 
-#: templates/litepaper/platform.html:125 templates/ogn-token.html:147
+#: templates/litepaper/platform.html:120 templates/ogn-token.html:147
 msgid "Governance"
 msgstr ""
 
@@ -1791,11 +1800,11 @@ msgstr "Construa na origem"
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong>equipes em todo o mundo estão construindo seus projetos usando os protocolos da Origin. Estamos à procura de pessoas mais incríveis para <a href='#join_our_mission'>se juntar à nossa missão</a>.</strong>"
 
-#: templates/partners.html:87
+#: templates/components/drops.html:54 templates/partners.html:87
 msgid "View More"
 msgstr "Veja mais"
 
-#: templates/partners.html:88
+#: templates/components/drops.html:50 templates/partners.html:88
 msgid "View Less"
 msgstr "Visualizar menos"
 
@@ -1863,172 +1872,93 @@ msgstr "Protocolo de Origem - Política de Privacidade"
 msgid "Origin Protocol - Product"
 msgstr "Origin Protocol - Produto"
 
-#: templates/product.html:19
-msgid "The Origin Platform powers commerce on the blockchain"
-msgstr "A plataforma Origin impulsiona o comércio na blockchain"
-
-#: templates/product.html:30
-msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
-msgstr "Uma plataforma de e-comércio descentralizada e de código aberto que permite a qualquer pessoa criar uma loja online com facilidade"
-
-#: templates/product.html:34
-msgid "No transaction fees"
-msgstr "Sem taxas de transação"
-
-#: templates/product.html:38
-msgid "Fully customizeable"
-msgstr "Totalmente customizável"
-
-#: templates/product.html:42
-msgid "Supports credit card payments"
-msgstr "Aceita pagamentos com cartão de crédito"
-
-#: templates/product.html:54
-msgid "Try Dshop"
-msgstr "Experimente a Dshop"
-
-#: templates/product.html:59
-msgid "Visit Origin Store"
-msgstr "Visite a loja Origin"
-
-#: templates/product.html:63
-msgid "Online stores created with Dshop"
-msgstr "Lojas online criadas com Dshop"
-
-#: templates/product.html:72
-msgid "...and others"
-msgstr "...e outros"
-
-#: templates/product.html:76
-msgid "Origin Dollar"
-msgstr "Dólar Origin"
-
-#: templates/product.html:77
-msgid "The first stablecoin that earns a yield while it's still in your wallet."
-msgstr "O primeiro stablecoin que ganha rende enquanto ainda está na sua carteira."
-
-#: templates/product.html:79
-msgid "Get OUSD"
-msgstr "Obtenha OUSD"
-
-#: templates/product.html:88
-msgid "Buy and sell on Origin"
+#: templates/product.html:24
+msgid "Read our new Litepaper"
 msgstr ""
 
-#: templates/product.html:89
-msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
+#: templates/litepaper/platform.html:31 templates/litepaper/sidebar.html:19
+#: templates/product.html:36
+msgid "NFT Launchpad"
+msgstr ""
+
+#: templates/product.html:43
+msgid "Customizable and hosted on your own domain"
+msgstr ""
+
+#: templates/product.html:47
+msgid "Maintain control of your brand"
+msgstr ""
+
+#: templates/product.html:54
+msgid "Unique auction mechanics to maximize revenue"
+msgstr ""
+
+#: templates/product.html:58
+msgid "Secondary marketplace launching soon"
+msgstr ""
+
+#: templates/product.html:65
+msgid "Best-in-class uptime and scaling"
+msgstr ""
+
+#: templates/product.html:69
+msgid "Supports both credit cards and cryptocurrency"
 msgstr ""
 
 #: templates/product.html:93
-msgid "Origin Marketplace"
-msgstr ""
+msgid "Origin Dollar"
+msgstr "Dólar Origin"
+
+#: templates/product.html:94
+msgid "The first stablecoin that earns a yield while it's still in your wallet."
+msgstr "O primeiro stablecoin que ganha rende enquanto ainda está na sua carteira."
+
+#: templates/product.html:96
+msgid "Get OUSD"
+msgstr "Obtenha OUSD"
 
 #: templates/product.html:104
-msgid "Visit us on the web"
-msgstr ""
+msgid "Dshop"
+msgstr "Dshop"
 
 #: templates/product.html:105
-msgid "shoporigin.com"
+msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
+msgstr "Uma plataforma de e-comércio descentralizada e de código aberto que permite a qualquer pessoa criar uma loja online com facilidade"
+
+#: templates/product.html:109
+msgid "No transaction fees"
+msgstr "Sem taxas de transação"
+
+#: templates/product.html:113
+msgid "Fully customizeable"
+msgstr "Totalmente customizável"
+
+#: templates/product.html:117
+msgid "Supports credit card payments"
+msgstr "Aceita pagamentos com cartão de crédito"
+
+#: templates/product.html:131
+msgid "Try Dshop"
+msgstr "Experimente a Dshop"
+
+#: templates/product.html:138
+msgid "Visit Origin Store"
+msgstr "Visite a loja Origin"
+
+#: templates/product.html:144
+msgid "Online stores created with Dshop"
+msgstr "Lojas online criadas com Dshop"
+
+#: templates/product.html:152
+msgid "...and hundreds more"
 msgstr ""
 
-#: templates/product.html:108
-msgid "Featured on"
-msgstr "Destaque em"
-
-#: templates/product.html:126
-msgid "Decentralized marketplaces powered by Origin"
-msgstr "Mercados descentralizados com tecnologia Origin"
-
-#: templates/product.html:128
-msgid "See the Origin Platform in action at shoporigin.com"
-msgstr ""
-
-#: templates/product.html:130
-msgid "Buy and sell today"
-msgstr ""
-
-#: templates/product.html:132
-msgid "Other marketplaces built on the Origin Platform"
-msgstr "Outros mercados construídos na Plataforma Origin"
-
-#: templates/product.html:153
-msgid "Self-sovereign Identity"
-msgstr ""
-
-#: templates/product.html:155
-msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
-msgstr ""
-
-#: templates/product.html:164
-msgid "Encrypted Messaging"
-msgstr ""
-
-#: templates/product.html:166
-msgid "Send secure, private messages to other buyers and sellers on the platform."
-msgstr ""
-
-#: templates/product.html:175
-msgid "Permissionless Payments"
-msgstr ""
-
-#: templates/product.html:177
-msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
-msgstr ""
-
-#: templates/product.html:186
-msgid "Reputation Systems"
-msgstr ""
-
-#: templates/product.html:188
-msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
-msgstr ""
-
-#: templates/product.html:197
-msgid "Blockchain-Powered Transactions"
-msgstr ""
-
-#: templates/product.html:199
-msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
-msgstr ""
-
-#: templates/product.html:208
-msgid "Arbitration Services"
-msgstr ""
-
-#: templates/product.html:210
-msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
-msgstr ""
-
-#: templates/product.html:221
-msgid "How it works"
-msgstr ""
-
-#: templates/product.html:230
-msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
-msgstr ""
-
-#: templates/product.html:236
-msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
-msgstr ""
-
-#: templates/product.html:242
-msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
-msgstr ""
-
-#: templates/product.html:248
-msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
-msgstr ""
-
-#: templates/product.html:260
+#: templates/product.html:160
 msgid "Origin Token"
 msgstr ""
 
-#: templates/product.html:263
+#: templates/product.html:163
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
-msgstr ""
-
-#: templates/product.html:267
-msgid "Learn more about Origin Token"
 msgstr ""
 
 #: templates/referral_campaign.html:335
@@ -2277,7 +2207,8 @@ msgstr "Kay é um revisor oficial de contas (CPA).\n"
 "                  Ela já trabalhou como contador sênior e depois como\n"
 "                  consultor sênior da KPMG Canada."
 
-#: templates/team.html:179 templates/whitepaper/team.html:194
+#: templates/team.html:179 templates/team.html:422
+#: templates/whitepaper/team.html:194
 msgid "Business Development"
 msgstr "Desenvolvimento de negócios"
 
@@ -2309,7 +2240,7 @@ msgstr "Mila está liderando nossos esforços comunitários na Coréia do Sul\n"
 msgid "Tom Linton"
 msgstr "Tom Linton"
 
-#: templates/team.html:221 templates/team.html:265 templates/team.html:391
+#: templates/team.html:221 templates/team.html:264 templates/team.html:390
 #: templates/whitepaper/team.html:258 templates/whitepaper/team.html:279
 #: templates/whitepaper/team.html:403
 msgid "Senior Engineer"
@@ -2325,29 +2256,25 @@ msgstr "Antes de Origem, Tom teve uma carreira de sucesso como\n"
 "                  sistemas distribuídos da Universidade Técnica de Berlim\n"
 "                  e KTH em Estocolmo."
 
-#: templates/team.html:239 templates/whitepaper/team.html:296
-msgid "Anna Wang"
-msgstr "Anna Wang"
+#: templates/team.html:239
+msgid "Anna Crouy"
+msgstr ""
 
-#: templates/team.html:243 templates/whitepaper/team.html:300
-msgid "Regional Manager China"
-msgstr "Gerente Regional da China"
+#: templates/team.html:243
+msgid "Collector Relations"
+msgstr ""
 
 #: templates/team.html:246
-msgid "Anna is leading our community efforts for Chinese\n"
-"                  speakers. Before Origin, Anna managed global social media at\n"
+msgid "Anna helps ensure that top collectors have a direct relationship to the company. Before Origin, Anna managed global social media at\n"
 "                  Exness, a leading forex broker. She also co-founded a\n"
 "                  non-profit in Australia."
-msgstr "Anna está liderando nossos esforços da comunidade para falantes de chinês\n"
-"                  . Antes da Origin, Anna gerenciava as mídias sociais globais na\n"
-"                  Exness, uma corretora líder em forex. Ela também foi co-fundadora de\n"
-"                  organizações sem fins lucrativos na Austrália."
+msgstr ""
 
-#: templates/team.html:261 templates/whitepaper/team.html:275
+#: templates/team.html:260 templates/whitepaper/team.html:275
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:268
+#: templates/team.html:267
 msgid "Nick studied Computer Science at the University of\n"
 "                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "                  Sencha, C3 Energy Network and Palo Alto Networks."
@@ -2355,17 +2282,17 @@ msgstr "Nick estudou Ciência da Computação na Universidade de\n"
 "                  Warwick. Antes de ingressar na Origin, ele trabalhou como engenheiro na\n"
 "                  Sencha, C3 Energy Network e Palo Alto Networks."
 
-#: templates/team.html:282 templates/whitepaper/team.html:318
+#: templates/team.html:281 templates/whitepaper/team.html:318
 msgid "Domen Grabec"
 msgstr "Domen Grabec"
 
-#: templates/team.html:286 templates/team.html:307 templates/team.html:328
-#: templates/team.html:407 templates/whitepaper/team.html:322
+#: templates/team.html:285 templates/team.html:306 templates/team.html:327
+#: templates/team.html:406 templates/whitepaper/team.html:322
 #: templates/whitepaper/team.html:343 templates/whitepaper/team.html:364
 msgid "Engineer"
 msgstr "Engenheiro"
 
-#: templates/team.html:289
+#: templates/team.html:288
 msgid "Domen co-founded and led a team developing a\n"
 "                  mobile application with 2 chess Grandmasters. He previously\n"
 "                  had a successful career at Cetra, Zemanta and Peerindex."
@@ -2373,11 +2300,11 @@ msgstr "Domen co-fundou e liderou uma equipe desenvolvendo um aplicativo móvel\
 "                  com 2 Grandmasters de xadrez. Anteriormente\n"
 "                  teve uma carreira de sucesso na Cetra, Zemanta e PeerIndex."
 
-#: templates/team.html:303 templates/whitepaper/team.html:339
+#: templates/team.html:302 templates/whitepaper/team.html:339
 msgid "Shahul Hameed"
 msgstr "Shahul Hameed"
 
-#: templates/team.html:310
+#: templates/team.html:309
 msgid "Shahul is a fullstack engineer who started\n"
 "                  programming at age of 10. He previously worked as a freelancer\n"
 "                  and then joined Zoho as a front-end developer."
@@ -2385,11 +2312,11 @@ msgstr "Shahul é um engenheiro fullstack que começou a programar\n"
 "                  aos 10 anos. Anteriormente, trabalhou como freelancer\n"
 "                  e depois ingressou no Zoho como desenvolvedor front-end."
 
-#: templates/team.html:324 templates/whitepaper/team.html:360
+#: templates/team.html:323 templates/whitepaper/team.html:360
 msgid "Mike Shultz"
 msgstr "Mike Shultz"
 
-#: templates/team.html:331
+#: templates/team.html:330
 msgid "Mike is a long-time contributor to open-source. He\n"
 "                  created a dev toolkit for creating Ethereum smart contracts\n"
 "                  with Python and previously worked with Ethereum and IPFS at\n"
@@ -2399,15 +2326,15 @@ msgstr "Mike é colaborador de longa data do código aberto. Ele\n"
 "                  com Python e já trabalhou com Ethereum e IPFS em\n"
 "                  Lunyr."
 
-#: templates/team.html:346 templates/whitepaper/team.html:211
+#: templates/team.html:345 templates/whitepaper/team.html:211
 msgid "Aure Gimon"
 msgstr ""
 
-#: templates/team.html:350 templates/whitepaper/team.html:215
+#: templates/team.html:349 templates/whitepaper/team.html:215
 msgid "Product Designer"
 msgstr ""
 
-#: templates/team.html:353
+#: templates/team.html:352
 msgid "Aure is a product designer with 10+ years of\n"
 "                  experience. Prior to joining Origin, Aure worked at multiple\n"
 "                  startups and Fortune 500 companies. In a past life, he was\n"
@@ -2417,151 +2344,183 @@ msgstr "Aure é um designer de produto com 10 anos de\n"
 "                  startups e empresas da Fortune 500. Em uma vida passada, ele tinha\n"
 "                  também como engenheiro de software."
 
-#: templates/team.html:368 templates/whitepaper/team.html:381
+#: templates/team.html:367 templates/whitepaper/team.html:381
 msgid "Max Unger"
 msgstr "Max Unger"
 
-#: templates/team.html:372 templates/whitepaper/team.html:385
+#: templates/team.html:371 templates/whitepaper/team.html:385
 msgid "Head of Community"
 msgstr "Chefe da Comunidade"
 
-#: templates/team.html:375
+#: templates/team.html:374
 msgid "Before joining Origin, Max helped build\n"
 "                  communities for notable blockchain companies like OKEx. He\n"
 "                  also worked with RedNova, the marketing and incubation entity\n"
 "                  for Du Capital."
 msgstr "Antes de se juntar à Origin, Max ajudou a construir comunidades de empresas de blockchain notáveis como a OKEx. Ele também trabalhou com RedNova, a entidade de marketing e incubação da Du Capital."
 
-#: templates/team.html:389 templates/whitepaper/team.html:401
+#: templates/team.html:388 templates/whitepaper/team.html:401
 msgid "Daniel Von Fange"
 msgstr "Daniel Von Fange"
 
-#: templates/team.html:394 templates/whitepaper/team.html:406
+#: templates/team.html:393 templates/whitepaper/team.html:406
 msgid "Daniel brings a strong emphasis on security and data analysis to our team. Daniel has earned a reputation for being able to gather massive amounts of data and create dynamic visualizations at lightning speed."
 msgstr "Daniel traz uma forte ênfase em segurança e análise de dados à nossa equipe. Daniel tem a reputação de ser capaz de juntar grandes quantidades de dados e criar rapidamente visualizações dinâmicas."
 
-#: templates/team.html:405
+#: templates/team.html:404
 msgid "Mark Mathis"
 msgstr "Mark Mathis"
 
-#: templates/team.html:410
+#: templates/team.html:409
 msgid "Mark Mathis has a broad background in fintech and defi. As a former touring musician, Mark has a particular interest in seeing artists compensated fairly for their work through decentralized channels."
 msgstr "Mark Mathis tem uma vasta experiência em fintech e defi. Como ex-músico em turnê, Mark tem um interesse particular em ver artistas serem recompensados de forma justa por seu trabalho por meio de canais descentralizados."
 
-#: templates/team.html:427
+#: templates/team.html:420
+msgid "William Tong"
+msgstr ""
+
+#: templates/team.html:425
+msgid "William Tong was a real estate broker before stumbling into the world of NFTs. He quickly built a reputation as a connector and community builder on the Clubhouse app and within the broader NFT collector community.  "
+msgstr ""
+
+#: templates/team.html:435
+msgid "Chase Colman"
+msgstr ""
+
+#: templates/team.html:437
+msgid "Project Manager"
+msgstr ""
+
+#: templates/team.html:440
+msgid "Chase comes from creative and marketing agency life in Los Angeles. She’s managed projects and accounts for clients like YouTube, W Hotels, and Stitch Fix. She's now in charge of creator relationship management at Origin."
+msgstr ""
+
+#: templates/team.html:451
+msgid "You?"
+msgstr ""
+
+#: templates/team.html:453
+msgid "We're hiring!"
+msgstr ""
+
+#: templates/team.html:456
+msgid "We are a distributed team with employees all over the world. We have a fast-paced bias-to-action culture and a really big vision for bringing crypto mainstream. Check out our <a href='https://angel.co/originprotocol/jobs'>open-positions on AngelList</a>."
+msgstr ""
+
+#: templates/team.html:473
 msgid "Community team"
 msgstr "Equipe da comunidade"
 
-#: templates/team.html:437 templates/whitepaper/team.html:435
+#: templates/team.html:483 templates/whitepaper/team.html:435
 msgid "Zoe Hoang"
 msgstr "Zoe Hoang"
 
-#: templates/team.html:445 templates/whitepaper/team.html:443
+#: templates/team.html:491 templates/whitepaper/team.html:443
 msgid "Aaron Faulkner"
 msgstr "Aaron Faulkner"
 
-#: templates/team.html:453 templates/whitepaper/team.html:451
+#: templates/team.html:499 templates/whitepaper/team.html:451
 msgid "Moisés Sosa"
 msgstr "Moisés Sosa"
 
-#: templates/team.html:461 templates/whitepaper/team.html:459
+#: templates/team.html:507 templates/whitepaper/team.html:459
 msgid "Kevin Lee"
 msgstr "Kevin Lee"
 
-#: templates/team.html:469 templates/whitepaper/team.html:467
+#: templates/team.html:515 templates/whitepaper/team.html:467
 msgid "Danil Myakin"
 msgstr "Danil Myakin"
 
-#: templates/team.html:477 templates/whitepaper/team.html:475
+#: templates/team.html:523 templates/whitepaper/team.html:475
 msgid "Joseph Stewart"
 msgstr "Joseph Stewart"
 
-#: templates/team.html:485 templates/whitepaper/team.html:483
+#: templates/team.html:531 templates/whitepaper/team.html:483
 msgid "Erkan Ciftci"
 msgstr "Erkan Ciftci"
 
-#: templates/team.html:493 templates/whitepaper/team.html:491
+#: templates/team.html:539 templates/whitepaper/team.html:491
 msgid "Stefano Terenzi"
 msgstr "Stefano Terenzi"
 
-#: templates/team.html:501 templates/whitepaper/team.html:499
+#: templates/team.html:547 templates/whitepaper/team.html:499
 msgid "Zizen Chang"
 msgstr "Zizen Chang"
 
-#: templates/team.html:509 templates/whitepaper/team.html:507
+#: templates/team.html:555 templates/whitepaper/team.html:507
 msgid "Lee Gwangmyeong"
 msgstr "Lee Gwangmyeong"
 
-#: templates/team.html:521
+#: templates/team.html:567
 msgid "Advisors"
 msgstr "Assessores"
 
-#: templates/team.html:531
-msgid "Addison Huegel"
-msgstr "Addison Huegel"
-
-#: templates/team.html:535
-msgid "PR"
-msgstr ""
-
-#: templates/team.html:544
+#: templates/team.html:578
 msgid "Melody He"
 msgstr "Melodia ele"
 
-#: templates/team.html:548
-msgid "International BD"
+#: templates/team.html:582
+msgid "Spartan Group"
 msgstr ""
 
-#: templates/team.html:561 templates/team.html:574
-msgid "Advisor"
-msgstr "Orientador"
+#: templates/team.html:595 templates/team.html:608
+#: templates/vc-firms/usa.html:5
+msgid "Pantera Capital"
+msgstr ""
 
-#: templates/team.html:570
+#: templates/team.html:604
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:583
-msgid "Andrew Hyde"
-msgstr "Andrew Hyde"
+#: templates/team.html:617
+msgid "Andrew Kang"
+msgstr ""
 
-#: templates/team.html:587 templates/whitepaper/sidebar.html:48
-#: templates/whitepaper/team.html:427
-msgid "Community"
-msgstr "Comunidade"
+#: templates/team.html:621
+msgid "Mechanism Capital"
+msgstr ""
 
-#: templates/team.html:598
+#: templates/team.html:634
+msgid "3LAU"
+msgstr ""
+
+#: templates/team.html:643 templates/team.html:647
+msgid "Paris Hilton"
+msgstr ""
+
+#: templates/team.html:658
 #, python-format
 msgid "100%% open-source."
 msgstr ""
 
-#: templates/team.html:599
+#: templates/team.html:659
 msgid " contributors."
 msgstr ""
 
-#: templates/team.html:618
+#: templates/team.html:678
 msgid "Want to contribute?"
 msgstr ""
 
-#: templates/team.html:623
+#: templates/team.html:683
 msgid "Visit our GitHub Repository"
 msgstr "Visite nosso repositório GitHub"
 
-#: templates/team.html:625
+#: templates/team.html:685
 msgid "Join our #engineering channel on Discord"
 msgstr ""
 
-#: templates/team.html:636
+#: templates/team.html:696
 msgid "Interested in working at Origin?"
 msgstr ""
 
-#: templates/team.html:640
+#: templates/team.html:700
 msgid "We are a distributed team and are hiring all around the\n"
 "            world."
 msgstr "Somos uma equipe distribuída e está contratando em todo o\n"
 "            mundo."
 
-#: templates/team.html:647
-msgid "View job posts"
+#: templates/team.html:707
+msgid "View open positions"
 msgstr ""
 
 #: templates/tokens.html:3
@@ -2656,6 +2615,22 @@ msgstr "Possibilitando o comércio peer-to-peer de verdade"
 msgid "To be Announced"
 msgstr ""
 
+#: templates/components/drops.html:3
+msgid "Upcoming Drops"
+msgstr ""
+
+#: templates/components/drops.html:21
+msgid "No Drops Scheduled"
+msgstr ""
+
+#: templates/components/drops.html:26
+msgid "Past Drops"
+msgstr ""
+
+#: templates/components/drops.html:44
+msgid "No Past Drops"
+msgstr ""
+
 #: templates/litepaper/conclusion.html:2 templates/litepaper/sidebar.html:38
 msgid "Conclusion"
 msgstr "Conclusão"
@@ -2671,8 +2646,8 @@ msgid "Executive Summary"
 msgstr "Sumário executivo"
 
 #: templates/litepaper/exec-summary.html:4
-msgid "Origin’s mission is to bring peer-to-peer commerce (NFTs) and decentralized finance (DeFi) to the masses."
-msgstr "A missão da Origin é levar o comércio peer-to-peer (NFTs) e finanças descentralizadas (DeFi) para as massas."
+msgid "Origin’s mission is to bring non-fungible tokens (NFTs) and decentralized finance (DeFi) to the masses."
+msgstr ""
 
 #: templates/litepaper/exec-summary.html:7
 msgid "After three years of building consumer-friendly products in the blockchain space, we’ve learned many valuable lessons."
@@ -2683,8 +2658,8 @@ msgid "The first significant wave of users of decentralized commerce application
 msgstr "A primeira onda significativa de usuários de aplicativos de comércio descentralizados será aqueles que procuram experiências ou produtos que não podem obter das alternativas centralizadas. Muitos desses primeiros usuários serão cripto nativos. A categoria de produto mais proeminente a surgir é o setor vertical de Tokens Não Fungíveis (NFTs). Os NFTs não representam meramente colecionáveis digitais, mas podem criar experiências totalmente novas para criadores e comunidades."
 
 #: templates/litepaper/exec-summary.html:13
-msgid "NFTs can function as digital collectible. Further, they can be  tokenized representations of physical goods and collectibles, unlock other digital content, and act as access tokens to digital or in-person experiences. NFTs can be used for a wide array of financial applications and use cases. The design space for NFTs is nearly unlimited and represents an exciting paradigm shift for blockchain technology."
-msgstr "Os NFTs podem funcionar como colecionáveis digitais. Além disso, eles podem ser representações tokenizadas de bens físicos e colecionáveis, liberar outros conteúdos digitais e agir como tokens de acesso a experiências digitais ou pessoais. Os NFTs podem ser usados para uma ampla variedade de casos e aplicativos financeiros. O espaço de design para NFTs é quase ilimitado e representa uma empolgante mudança de paradigma para a tecnologia blockchain."
+msgid "NFTs can function as digital collectibles. Further, they can be  tokenized representations of physical goods and collectibles, unlock other digital content, and act as access tokens to digital or in-person experiences. NFTs can be used for a wide array of financial applications and use cases. The design space for NFTs is nearly unlimited and represents an exciting paradigm shift for blockchain technology."
+msgstr ""
 
 #: templates/litepaper/exec-summary.html:16
 msgid "Decentralized Finance (DeFi) is the gateway to unlocking massive new financial opportunities for lenders, creditors, and liquidity providers. Over <a href='https://defipulse.com/' target='_blank' rel='noopener noreferrer'>$40B of value</a> is locked in DeFi protocols, and this number is expected to grow by multiple orders of magnitude in the next few years. However, we are still in the very early innings of the DeFi movement."
@@ -2739,452 +2714,404 @@ msgstr "Da mesma forma, acreditamos que deve haver motivos mais convincentes par
 msgid "To realize our ambitious vision, we will continue to develop and grow the <a href='https://ousd.com/' target='_blank' rel='noopener noreferrer'>Origin Dollar (OUSD)</a> as a critical DeFi building block and money lego that is highly composable. It will power multiple mainstream consumer and merchant applications in the near future. We anticipate millions of users to be using applications powered by OUSD in the next few years without necessarily even realizing they are using an underlying DeFi product."
 msgstr "Para concretizar nossa visão ambiciosa, continuaremos a desenvolver e fazer crescer o <a href='https://ousd.com/' target='_blank' rel='noopener noreferrer'>Origin Dollar (OUSD)</a> como um bloco de construção fundamental da DeFi, um lego monetário altamente combinável. Ele irá alimentar vários aplicativos comerciais e de consumo convencionais em um futuro próximo. Prevemos que milhões de usuários usarão aplicativos com tecnologia OUSD nos próximos anos, sem necessariamente perceber que estão usando um produto DeFi por trás."
 
-#: templates/litepaper/platform.html:2 templates/litepaper/platform.html:154
-#: templates/litepaper/sidebar.html:16
+#: templates/litepaper/platform.html:2 templates/litepaper/sidebar.html:16
 msgid "Origin Commerce Platform"
 msgstr "Plataforma de Comércio Origin"
 
 #: templates/litepaper/platform.html:4
-msgid "Throughout 2020, we built and iterated upon Origin’s flagship commerce platform, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>. Dshop is a completely open-source alternative to Shopify, and all its core features are free to use. Today, we’ve had hundreds of merchants sign up to use Dshop, including dozens of name brand cryptocurrency companies such as Brave, Solana, and Kyber Network."
-msgstr "Ao longo de 2020, construímos e iteramos na plataforma de comércio carro-chefe da Origin, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>. O Dshop é uma alternativa totalmente de código aberto ao Shopify e todos os seus recursos principais são de uso gratuito. Hoje, centenas de comerciantes se inscreveram para usar o Dshop, incluindo dezenas de empresas reconhecidas de criptomoeda, como Brave, Solana e a Kyber Network."
+msgid "Throughout 2020, we built and iterated upon Origin’s flagship commerce platform, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>, which is used by hundreds of merchants including Brave and Kyber Network and supported by marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a>."
+msgstr ""
 
 #: templates/litepaper/platform.html:6
-msgid "Further, we announced marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a> to enable our merchant partners to launch completely decentralized storefronts on these iconic cloud computing platforms. We are working with both companies to promote Dshop to additional merchants with co-marketing initiatives. We are also working with the Google team to make Dshop’s blockchain commerce data more readily accessible in Google Data Studio."
-msgstr "Além disso, anunciamos parcerias marcantes com <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> e <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a> para permitir que nossos parceiros comerciais lancem lojas totalmente descentralizadas nessas plataformas icônicas de computação na nuvem. Estamos trabalhando com ambas as empresas para promover o Dshop para outros comerciantes com iniciativas conjuntas de marketing. Também estamos trabalhando com a equipe do Google para tornar os dados de comércio de blockchain da Dshop mais fáceis de acessar no Google Data Studio."
+msgid "While we continue to see increased usage of Dshop, we are hyper focused on crypto-specific commerce verticals--most prominently non-fungible tokens (NFTs)--and are hard at work developing a fully-featured NFT platform."
+msgstr ""
 
 #: templates/litepaper/platform.html:7
-msgid "We’ve also made OUSD a supported payment option on all our Dshops to begin turning the flywheel for OUSD adoption by merchants."
-msgstr "Também tornamos o OUSD uma opção de pagamento compatível em todos os nossos Dshops para dar um gás na adoção do OUSD pelos comerciantes."
+msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set an all-time record for gross sales in a single NFT drop at nearly $11.7M."
+msgstr ""
 
 #: templates/litepaper/platform.html:8
-msgid "While we continue to see increased usage of Dshop, we believe that introducing new killer use cases that are crypto-centric will rocket Dshop adoption to new heights."
-msgstr "Enquanto continuamos a ver o uso crescente do Dshop, acreditamos que a introdução de novos casos de uso que sejam cripto-centrados irá impulsionar a adoção do Dshop a novos patamares."
-
-#: templates/litepaper/platform.html:9
-msgid "Our initial focus on creating features and tackling verticals that incumbents like Shopify and Woo Commerce cannot compete in will center on non-fungible tokens (NFTs). We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set an all-time record for gross sales in a single NFT drop at nearly $11.7M."
-msgstr "Nosso foco inicial na criação de recursos e no enfrentamento a setores em que empresas estabelecidas como Shopify e Woo Commerce não podem competir, se concentrará em tokens não fungíveis (NFTs). Acreditamos que os NFTs sejam uma tecnologia emergente, mas altamente disruptiva, que levará nossos produtos comerciais cripto-centrados a milhões, senão centenas de milhões de usuários nos próximos anos. No momento em que este artigo foi escrito, o NFT Launchpad da Origin estabeleceu um recorde histórico de vendas brutas em uma único lançamento de NFT de quase US $ 11,7 milhões."
-
-#: templates/litepaper/platform.html:10
 msgid "In January of 2021, NFTs accounted for a record <a href='https://decrypt.co/56998/crypto-art-sales-on-ethereum-reach-a-record-80-million' target='_blank' rel='noopener noreferrer'>$80M of transaction volume</a>. It is clear that NFT sales are growing at an exponential rate and represent the fastest growing opportunity for crypto-centric commerce."
 msgstr "Em janeiro de 2021, NFTs representaram um recorde de <a href='https://decrypt.co/56998/crypto-art-sales-on-ethereum-reach-a-record-80-million' target='_blank' rel='noopener noreferrer'>80 milhões de dólares em volume de transações</a>. É claro que as vendas de NFT estão crescendo a uma taxa exponencial e representam a oportunidade de crescimento mais rápida para o comércio cripto-centrado."
 
-#: templates/litepaper/platform.html:12
+#: templates/litepaper/platform.html:10
 msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. At Origin, we believe NFTs are the crypto-centric building blocks that bridge fungible payment currencies like OUSD to multiple billion dollar opportunities."
 msgstr "No entanto, acreditamos que a maior parte do mercado interpreta erroneamente os NFTs simplesmente como arte digital escassa. Na Origin, acreditamos que os NFTs são as blocos de construção cripto-centrados que unem moedas de pagamento fungíveis, como OUSD, a oportunidades multibilionárias."
 
-#: templates/litepaper/platform.html:13
+#: templates/litepaper/platform.html:11
 msgid "Origin’s NFT Launchpad will redefine commerce in several key verticals."
 msgstr "O NFT Launchpad do Origin irá redefinir o comércio em vários setores importantes."
 
-#: templates/litepaper/platform.html:15
+#: templates/litepaper/platform.html:13
 msgid "NFTs that are redeemable for offline goods"
 msgstr "NFTs que podem ser resgatados para produtos offline"
 
-#: templates/litepaper/platform.html:16
+#: templates/litepaper/platform.html:14
 msgid "In May 2020, Grammy-winning DJ RAC released his $TAPE NFTs that were redeemable for physical cassette tapes. Little did he know that he would be setting the record for the final sale price of a single cassette tape, as $TAPE tokens redeemable for the cassette tapes eventually cleared $3,000 per token."
 msgstr "Em maio de 2020, o vencedor do Grammy DJ RAC lançou seus NFTs $TAPE que podiam ser resgatados em fitas cassete físicas. Mal sabia ele que estaria estabelecendo o recorde para o preço de venda de uma única fita cassete, já que os tokens $TAPE que resgatam fitas cassete eventualmente chegaram a 3.000 dólares por token."
 
-#: templates/litepaper/platform.html:17
+#: templates/litepaper/platform.html:15
 msgid "This is just one example of how NFTs have changed the landscape for limited-edition premium products. NFTs that represent physical offline goods can be authenticated on the blockchain. Influencers, artists, creators, and other merchants can now issue NFTs that are both certifiably scarce and representative of valuable physical items."
 msgstr "Este é apenas um exemplo de como os NFTs mudaram o cenário para produtos premium de edição limitada. NFTs que representam bens físicos offline podem ser autenticados no blockchain. Influenciadores, artistas, criadores e outros comerciantes agora podem emitir NFTs que são comprovadamente escassos e representativos de itens físicos valiosos."
 
-#: templates/litepaper/platform.html:18
+#: templates/litepaper/platform.html:16
 msgid "There is an enormous opportunity to use NFTs to power these creator communities. Because NFTs are freely exchangeable on the blockchain, they also inherently create an after-market for limited edition goods. "
 msgstr "Há uma enorme oportunidade de usar NFTs para fortalecer essas comunidades de criadores. Como os NFTs podem ser trocados livremente no blockchain, eles naturalmente também criam um mercado de pós-venda para produtos de edição limitada. "
 
-#: templates/litepaper/platform.html:19
-msgid "One needs only to reference StockX, the premium sneaker marketplace that is currently valued at $2.8 B, to recognize the possibility of NFTs flourishing in many verticals where scarcity and authenticity need to be enforced. Today, the company generates $400M in revenue by taking fees to certify that premium sneakers are legitimate and not fraudulent. Using NFTs that are tied to these sneakers would establish a clear sense of provenance as sneakers are sold from my buyer to the next."
-msgstr "Basta fazer referência ao StockX, o mercado de tênis premium, atualmente avaliado em 2,8 bilhões de dólares, para reconhecer a possibilidade de NFTs florescerem em muitos setores onde a escassez e a autenticidade precisam ser fortalecidas. Hoje, a empresa gera 400 milhões de dólares em receita cobrando taxas para certificar que os tênis premium são legítimos e não fraudulentos. Usar NFTs vinculados a esses tênis estabeleceria um claro senso de proveniência, pois os tênis são vendidos de um comprador para o próximo."
+#: templates/litepaper/platform.html:17
+msgid "One needs only to reference StockX, the premium sneaker marketplace that is currently valued at $2.8 B, to recognize the possibility of NFTs flourishing in many verticals where scarcity and authenticity need to be enforced. Today, the company generates $400M in revenue by taking fees to certify that premium sneakers are legitimate and not fraudulent. Using NFTs that are tied to these sneakers would establish a clear sense of provenance as sneakers are sold from one buyer to the next."
+msgstr ""
 
-#: templates/litepaper/platform.html:20
+#: templates/litepaper/platform.html:18
 msgid "In another manifestation of using NFTs connected to offline products, the limited goods do not need to be redeemed. For example, a collector can purchase an NFT that entitles them with the rights to redeem that NFT for fine art, luxury handbags, or other products but can store that product with the original manufacturer. Redemption can happen at any point in the future. Again, because NFTs are exchangeable, collectors could invest in luxury items with the hopes of these items appreciating in value. However, they no longer need to take physical delivery and can simply sell the NFTs representing the items in an after market to profit from their investments."
 msgstr "Em outra forma de uso de NFTs conectados a produtos offline, os bens limitados não precisam ser resgatados. Por exemplo, um colecionador pode comprar um NFT que lhe dá o direito de resgatar esse NFT por obras de arte, bolsas de luxo ou outros produtos, mas pode armazenar esse produto com o fabricante original. O resgate pode acontecer a qualquer momento no futuro. Novamente, como os NFTs podem ser trocados, os colecionadores poderiam investir em itens de luxo com a esperança de que esses itens se valorizem. No entanto, eles não precisam mais receber entrega física e podem simplesmente vender os NFTs que representam os itens em um mercado pós-venda para lucrar com seus investimentos."
 
-#: templates/litepaper/platform.html:21
+#: templates/litepaper/platform.html:19
 msgid "Taking this one model one step further, NFT-powered commerce can generate revenue even before products are developed or manufactured. In the web 2.0 world, we saw how crowdfunding platforms like Kickstarter and Gofundme were able to generate demand for creator projects. In the web 3.0, NFTs can be a better form to issue ownership of future redeemable products. Once again, because these NFTs are freely exchangeable they provide backers the ability to resell their ownership even before the projects are completed."
 msgstr "Levando esse modelo um passo adiante, o comércio baseado em NFT pode gerar receita antes mesmo de os produtos serem desenvolvidos ou fabricados. No mundo da web 2.0, vimos como plataformas de crowdfunding como Kickstarter e Gofundme foram capazes de gerar demanda por projetos de criadores. Na web 3.0, os NFTs podem ser a melhor forma de emitir a propriedade de futuros produtos resgatáveis. Mais uma vez, como esses NFTs podem ser trocados livremente, eles fornecem aos patrocinadores a capacidade de revender sua propriedade antes mesmo de os projetos serem concluídos."
 
-#: templates/litepaper/platform.html:24
+#: templates/litepaper/platform.html:22
 msgid "NFTs that access digital content"
 msgstr "NFTs que acessam conteúdo digital"
 
-#: templates/litepaper/platform.html:25
+#: templates/litepaper/platform.html:23
 msgid "We intend to release NFT features that also provide holders access to digital content and services. For example, content providers can replace paywall subscriptions with NFT ownership. Users that have purchased NFTs can unlock premium articles, unreleased music, premium video content, or special features in social and mobile games."
 msgstr "Pretendemos lançar recursos NFT que também forneçam aos titulares acesso a conteúdos digitais e serviços. Por exemplo, os provedores de conteúdo podem substituir assinaturas de acesso pago pela propriedade de NFT. Os usuários que compraram NFTs podem desbloquear artigos premium, músicas inéditas, conteúdo de vídeo premium ou recursos especiais em jogos sociais e mobile."
 
-#: templates/litepaper/platform.html:26
+#: templates/litepaper/platform.html:24
 msgid "Here are a few examples of how this might work. Today, Patreon influencers allow their super fans to access unique content through the platform. The company generates $50M of revenue and is currently valued at $1.2B. However, these subscriptions and individual payments are tied to unique users. In tomorrow’s world, creators can issue NFTs that unlock special video or music content instead."
 msgstr "Aqui estão alguns exemplos de como isso pode funcionar. Hoje, os influenciadores do Patreon permitem que seus super fãs acessem conteúdo exclusivo por meio da plataforma. A empresa gera US $ 50 milhões de receita e atualmente está avaliada em US $ 1,2 bilhão. No entanto, essas assinaturas e pagamentos individuais estão vinculados a usuários únicos. No mundo de amanhã, criadores podem emitir NFTs que desbloqueiem conteúdos especiais de vídeo ou música."
 
-#: templates/litepaper/platform.html:28
+#: templates/litepaper/platform.html:26
 msgid "NFTs that are access tokens"
 msgstr "NFTs que são tokens de acesso"
 
-#: templates/litepaper/platform.html:29
+#: templates/litepaper/platform.html:27
 msgid "A third opportunity that is a multi-billion dollar opportunity in NFT-powered commerce lies in experiential commerce. NFTs that are certifiable on the blockchain can guarantee authenticity of tickets for professional sports, concerts, and other live performances. This reduces the risk of fraudulent tickets and also maintains clear provenance of ticket resales."
 msgstr "Uma terceira oportunidade multibilhonária no comércio baseado em NFT está no comércio de experiências. Os NFTs certificados no blockchain podem garantir a autenticidade dos ingressos para esportes profissionais, shows e outras apresentações ao vivo. Isso reduz o risco de bilhetes fraudulentos e também mantém a procedência clara das revendas de bilhetes."
 
-#: templates/litepaper/platform.html:30
+#: templates/litepaper/platform.html:28
 msgid "Going back to the Patreon example, a creator NFT may enable a user to get a 1-on-1 video chat with their favorite celebrity. Another user can purchase a premium NFT that grants them backstage access to their favorite musicians concerts for life."
 msgstr "Voltando ao exemplo do Patreon, um criador de NFTs pode permitir que um usuário tenha um chat de vídeo privado com sua celebridade favorita. Outro usuário pode comprar um NFT premium que concede acesso aos bastidores para shows de seus músicos favoritos para o resto da vida."
 
-#: templates/litepaper/platform.html:33 templates/litepaper/sidebar.html:19
-msgid "Dshop NFT Launchpad"
-msgstr "Dshop NFT Launchpad"
-
-#: templates/litepaper/platform.html:34
+#: templates/litepaper/platform.html:32
 msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). The Dshop NFT Launchpad gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs."
 msgstr "A chave para obter valor de todas essas oportunidades cripto-centradas com NFTs é tornar a emissão de NFT extremamente simples para os criadores. Além disso, em contraste com os participantes existentes no mercado como o Nifty Gateway, acreditamos que os criadores devem possuir a marca e ter controle direto sobre os modelos de preços (por exemplo, diferentes mecanismos de leilão ou preços diferenciados). O Dshop NFT Launchpad oferece aos criadores e influenciadores um controle mais direto sobre seu conteúdo e seus produtos físicos, digitais e experienciais. Assim como muitos comerciantes escolheram o Shopify em vez de vender em mercados genéricos que não permitem marcas personalizadas e relacionamento direto com os consumidores, acreditamos que o mesmo modelo será bem sucedido para NFTs."
 
+#: templates/litepaper/platform.html:33
+msgid "All three aforementioned NFT-powered commerce opportunities are already supported by our platform. Almost $11.7M of gross sales were generated using Origin’s commerce platform in our inaugural campaign, a sum that smashed the previous record for a single NFT collection. Coverage of this record breaking event reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
+msgstr ""
+
+#: templates/litepaper/platform.html:34
+msgid "Similarly, with Origin’s ever-deepening relationship with Brave, we enabled them to sell their NFTs on their existing merch store. Their entire first collection sold out in minutes. We anticipate additional NFT-centric commerce opportunities with the exponentially growing browser company that already boasts 20M monthly active users (MAU)."
+msgstr ""
+
 #: templates/litepaper/platform.html:35
-msgid "All three aforementioned NFT-powered commerce opportunities are already supported by our platform. These use cases were highlighted in our recent NFT successful Dshop NFT Launchpad collaboration with world-famous DJ and crypto-currency influencer 3LAU who is ranked #93 on CoinTelegraph’s list of most influential people in cryptocurrency in 2020. Almost $11.7M of gross sales were generated using Origin’s commerce platform in our inaugural campaign, a sum that smashed the previous record for a single NFT collection. Coverage of this record breaking event reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
-msgstr "Todas as três oportunidades de comércio baseadas em NFT mencionadas acima já são oferecidas por nossa plataforma. Esses casos de uso foram destacados em nossa recente e bem-sucedida colaboração na Dshop NFT Launchpad com o mundialmente famoso DJ e influenciador de cripto-moedas, 3LAU, que está classificado em 93º na lista da CoinTelegraph das pessoas mais influentes em criptomoedas em 2020. Quase 11,7 milhões dólares em vendas brutas foram gerados usando a plataforma de comércio da Origin em nossa campanha inaugural, uma soma que quebrou o recorde anterior de uma única coleção de NFTs. A cobertura desse evento e do novo recorde alcançou os principais meios de comunicação como o <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> e <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
-
-#: templates/litepaper/platform.html:36
-msgid "Similarly, with Origin’s ever-deepening relationship with Brave, we enabled them to sell their NFTs on their existing Dshop. Their entire first collection sold out in minutes. We anticipate additional NFT-centric commerce opportunities with the exponentially growing browser company that already boasts 20M monthly active users (MAU)."
-msgstr "Da mesma forma, com o relacionamento cada vez mais profundo da Origin com a Brave, permitimos que vendessem seus NFTs em seu Dshop. Toda a sua primeira coleção esgotou em minutos. Antecipamos oportunidades adicionais de comércio centrado em NFT com a empresa de navegadores em crescimento exponencial que já possui 20 milhões de usuários ativos mensais (UAM)."
-
-#: templates/litepaper/platform.html:37
 msgid "In the near future, we intend to form additional partnerships with additional mainstream influencers and iconic brands to power their NFT commerce initiatives. We believe there is a huge untapped market for monetizing premium, limited-edition online and offline goods and services through our latest NFT product upgrades to the Origin Platform."
 msgstr "Em um futuro próximo, pretendemos formar novas parcerias com grandes influenciadores e marcas icônicas para impulsionar suas iniciativas de comércio NFT. Acreditamos que haja um enorme mercado inexplorado para monetizar bens e serviços premium online e offline de edição limitada por meio de nossas últimas atualizações de produtos NFT para a Plataforma Origin."
 
-#: templates/litepaper/platform.html:41 templates/litepaper/sidebar.html:22
-msgid "NFT Marketplace"
-msgstr "Mercado NFT"
+#: templates/litepaper/platform.html:39
+msgid "Origin NFT Marketplace"
+msgstr ""
 
-#: templates/litepaper/platform.html:42
+#: templates/litepaper/platform.html:40
 msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on the [Origin NFT Auction Platform] as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology and we are the leaders in this field. The Origin Marketplace protocol was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
 msgstr "As vendas no mercado secundário são vitais para a verdadeira descoberta de preço dos NFTs e o amadurecimento desse mercado nascente. Queremos construir uma plataforma de mercado para vendas no mercado secundário de todos os NFTs lançados na [Plataforma de Leilão Origin NFT], bem como NFTs de outras plataformas e mercados. A equipe Origin já tem mais de 4 anos de experiência na construção de tecnologia de mercado peer-to-peer e somos os líderes neste campo. O protocolo Origin Marketplace foi lançado na mainnet da Ethereum em 2018 e suportou dezenas de milhares de usuários e listagens para uma variedade de produtos e serviços. Origin pretende ser o líder do mercado de NFT e na captação de vendas de NFT de nossos criadores parceiros, bem como de criadores que lançam de forma independente ou com outra plataforma."
 
-#: templates/litepaper/platform.html:43
+#: templates/litepaper/platform.html:41
 msgid "NFTs being based on a common set of decentralized technology standards makes building a marketplace that can serve the entire NFT ecosystem possible. Any moats deployed by other NFT marketplace operators will be quickly rendered ineffective as they are against the spirit of decentralization. Another important aspect to our platform is that these secondary marketplaces can be run and curated by the NFT creators themselves. Gallerists and artists have always cared deeply about presentation and curation as it can have a strong impact on the price of their assets. Letting creators control every aspect of their NFT from creation to secondary market sale is a key differentiator to Origin’s NFT platform over more generic NFT marketplaces. Fans of specific creators and artists will also appreciate going direct to the source instead of browsing through unrelated listings on a generalized marketplace."
 msgstr "O fato de os NFTs se basearem em um conjunto comum de padrões tecnológicos descentralizados torna possível a construção de um mercado que possa servir a todo o ecossistema NFT. Quaisquer barreiras implementadas por outros operadores do mercado NFT serão rapidamente tornados ineficazes por serem contrários ao espírito da descentralização. Outro aspecto importante de nossa plataforma é que estes mercados secundários podem ser administrados e selecionados pelos próprios criadores de NFT. Os galeristas e artistas sempre se preocuparam profundamente com a apresentação e a curadoria, pois ela pode ter um forte impacto sobre o preço de seus ativos. Deixar os criadores controlarem cada aspecto de seu NFT desde a criação até a venda no mercado secundário é um diferencial chave para a plataforma NFT da Origin sobre os mercados mais genéricos de NFT. Os fãs de criadores e artistas específicos também apreciarão ir diretamente à fonte em vez de navegar através de listas não relacionadas em um mercado generalizado."
 
-#: templates/litepaper/platform.html:44
+#: templates/litepaper/platform.html:42
 msgid "Another reason creators should be excited about custom NFT marketplaces is that it allows them to better monetize their creations over a longer period of time. Artists will experience increased value capture from programmatic transaction fees attached to NFTs they create. This means that any secondary market sales will generate revenue for NFT creators in perpetuity. Previously, musical artists would only capture a small portion of this value through royalties and fine artists would capture no value from secondary sales."
 msgstr "Outro motivo pelo qual os criadores devem estar entusiasmados com os mercados NFT personalizados é que isso lhes permite rentabilizar melhor suas criações durante um período de tempo mais longo. Os artistas experimentarão um aumento na captação de valores das taxas de transação programáticas anexadas às NFTs que eles criam. Isso significa que qualquer venda no mercado secundário gerará receitas para os criadores de NFTs perpetuamente. Anteriormente, os artistas musicais captariam apenas uma pequena parte deste valor através de royalties e os artistas plásticos não captariam valor algum das vendas secundárias."
 
-#: templates/litepaper/platform.html:45
+#: templates/litepaper/platform.html:43
 msgid "Not only are secondary market sales important for price discovery, transaction fees from these sales will be one of the key revenue drivers for the [Origin NFT product] in the future. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
 msgstr "Não só as vendas no mercado secundário são importantes para a descoberta de preços, as taxas de transação destas vendas serão um dos principais motores de receita para o [produto Origin NFT] no futuro. Muito mais volume é feito no mercado secundário do que durante as vendas iniciais, e esperamos que no futuro se estabeleça um recorde de negócios. A Origin pretende construir plataforma e ecossistema de NFTs completos. Desenvolveremos a melhor plataforma NFT de ponta a ponta no espaço e vamos captar grandes valores para nossos usuários, parceiros criadores de NFT e nossos detentores de tokens."
 
-#: templates/litepaper/platform.html:49 templates/litepaper/sidebar.html:25
+#: templates/litepaper/platform.html:47 templates/litepaper/sidebar.html:25
 msgid "The Origin Dollar (OUSD)"
 msgstr "O Dólar Origin (OUSD)"
 
-#: templates/litepaper/platform.html:50
+#: templates/litepaper/platform.html:48
 msgid "In 1999, Yu Pan, one of PayPal’s original co-founders conceived of creating “the new world currency”, complete with interest yielding strategies and debit cards without having to connect to traditional banking systems. Several pivots and an eBay acquisition later, PayPal dropped its ambitions in this area."
 msgstr "Em 1999, Yu Pan, um dos fundadores originais do PayPal, concebeu a criação da “nova moeda mundial”, completa com estratégias de rendimentos e cartões de débito sem ter que se conectar a sistemas bancários tradicionais. Depois de vários pivôs e uma aquisição do eBay, o PayPal abandonou suas ambições nessa área."
 
-#: templates/litepaper/platform.html:51
+#: templates/litepaper/platform.html:49
 msgid "Two decades later, Yu Pan, Origin’s founding engineer, and the rest of the Origin team have finally launched this new world currency."
 msgstr "Duas décadas depois, Yu Pan, o engenheiro fundador da Origin, e o resto da equipe da Origin finalmente lançaram esta nova moeda mundial."
 
-#: templates/litepaper/platform.html:52
+#: templates/litepaper/platform.html:50
 #, python-format
-msgid "The Origin Dollar is the first cryptocurrency stablecoin that automatically and passively earns yield while sitting in cryptocurrency wallets. Users do not need to stake/unstake or provide liquidity to earn yields across underlying DeFi protocols. While past performance does not guarantee future results, to date OUSD has generated annualized yields between 20%% and 150%% at any given time."
-msgstr "O Dólar Origin é a primeira moeda estável de criptomoeda que ganha rendimentos de forma automática e passiva enquanto está em carteiras de criptomoedas. Os usuários não precisam fazer stake/unstake ou prover liquidez para obter rendimentos através dos protocolos DeFi subjacentes. Embora o desempenho passado não garanta resultados futuros, até o momento OUSD gerou rendimentos anuais entre 20%% e 150%% até agora."
+msgid "The Origin Dollar is the first cryptocurrency stablecoin that automatically and passively provides users with the opportunity to earn yield while sitting in cryptocurrency wallets. Users do not need to stake/unstake or provide liquidity to earn yields across underlying DeFi protocols. While past performance does not guarantee future results, to date OUSD has generated, through the underlying DeFi protocols, annualized yields between 20%% and 150%% at any given time."
+msgstr ""
 
-#: templates/litepaper/platform.html:53
-msgid "OUSD is a superior DeFi product for the masses. By removing all the complexities normally associated with earning fees through lending or supplying liquidity to automated market makers (AMMs), OUSD is highly accessible to users who are new to cryptocurrency technologies. Today, users need only to purchase OUSD on centralized exchanges or decentralized swap sites like Uniswap/Sushiswap to begin earning yield at staggering rates immediately. Alternatively, users can mint OUSD with their existing stablecoins (DAI, USDT, USDC currently) on the <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
-msgstr "OUSD é um produto DeFi excelente para as massas. Ao remover todas as complexidades normalmente associadas às taxas de rendimento por meio de empréstimos ou fornecimento de liquidez a criadores de mercado automatizados (AMMs), o OUSD é altamente acessível para usuários que são novos em tecnologias de criptomoeda. Hoje, os usuários precisam apenas comprar OUSD em exchanges centralizados ou descentralizados como Uniswap/Sushiswap para começar a ganhar rendimentos em taxas surpreendentes, imediatamente. Alternativamente, os usuários podem cunhar OUSD com seus stablecoins existentes (DAI, USDT, USDC atualmente) no <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
+#: templates/litepaper/platform.html:51
+msgid "OUSD is a superior DeFi product for the masses. By removing all the complexities normally associated with earning fees through lending or supplying liquidity to automated market makers (AMMs), OUSD is highly accessible to users who are new to cryptocurrency technologies. Today, users need only to purchase OUSD on centralized exchanges or decentralized swap sites like Uniswap/Sushiswap to begin getting DeFi yield exposure immediately. Alternatively, users can mint OUSD with their existing stablecoins (DAI, USDT, USDC currently) on the <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
+msgstr ""
 
-#: templates/litepaper/platform.html:54
+#: templates/litepaper/platform.html:52
 msgid "Current APYs and circulating supply are published transparently on the <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD dashboard</a>. "
 msgstr "Os Rendimentos Anuais atuais e o fornecimento em circulação são publicados de forma transparente no <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>painel OUSD</a>. "
 
-#: templates/litepaper/platform.html:55
-msgid "With OUSD, there’s no need to unwind complicated positions when you want to spend your OUSD. You can transfer it freely without having to pay gas to unlock spendable capital. In addition, OUSD gives you access to compelling opportunities across DeFi with none of the hassles. The OUSD smart contracts deploy your underlying capital to a diversified set of yield-earning strategies, rebalancing over time to achieve strong yields while diversifying risk. Earnings automatically accrue in your wallet and compound continuously while you hold OUSD. Again, no staking or lockups are required, making your OUSD as easy to transfer as any other ERC-20 token. OUSD also serves as an ideal unit of account. DeFi investors no longer need complicated spreadsheets to calculate their earnings as they can easily see their constantly updated OUSD balances in real-time."
-msgstr "Com OUSD, não há necessidade de desmontar suas posições complicadas quando quiser gastar seu OUSD. Você pode transferir livremente sem ter que pagar gas para liberar capital disponível. Além disso, OUSD dá a você acesso a oportunidades atraentes em DeFi sem nenhuma das complicações. Os contratos inteligentes OUSD empregam seu capital de base em um conjunto diversificado de estratégias de ganho de rendimento, reequilibrando ao longo do tempo para obter rendimentos sólidos enquanto diversifica o risco. Os ganhos são acumulados automaticamente em sua carteira e compostos continuamente enquanto você detêm OUSD. Novamente, não é necessário fazer staking ou bloquear capital, tornando seu OUSD tão fácil de transferir quanto qualquer outro token ERC-20. OUSD também serve como uma unidade de conta ideal. Os investidores do DeFi não precisam mais de planilhas complicadas para calcular seus ganhos, pois podem ver facilmente seus saldos OUSD constantemente atualizados em tempo real."
+#: templates/litepaper/platform.html:53
+msgid "With OUSD, there’s no need to unwind complicated positions when you want to spend your OUSD. You can transfer it freely without having to pay gas to unlock spendable capital. In addition, OUSD gives you the ability to utilize a basket of leading DeFi opportunities with none of the hassles. The OUSD smart contracts deploy your underlying capital to a diversified set of yield-earning strategies, automatically rebalancing over time to achieve strong yields while diversifying risk. Earnings automatically accrue in your wallet and compound continuously while you hold OUSD. Again, no staking or lockups are required, making your OUSD as easy to transfer as any other ERC-20 token. OUSD also serves as an ideal unit of account. DeFi participants no longer need complicated spreadsheets to calculate their earnings as they can easily see their constantly updated OUSD balances in real-time."
+msgstr ""
 
-#: templates/litepaper/platform.html:57
+#: templates/litepaper/platform.html:55
 msgid "Yield strategies"
 msgstr "Estratégias de rendimento"
 
-#: templates/litepaper/platform.html:58
+#: templates/litepaper/platform.html:56
 msgid "OUSD uses two high-level strategies for generating yield--lending and market making."
 msgstr "O OUSD usa duas estratégias de alto nível para gerar rendimento - empréstimos e <i>market making</i>."
 
-#: templates/litepaper/platform.html:60
+#: templates/litepaper/platform.html:58
 msgid "Lending:"
 msgstr "Empréstimo:"
 
-#: templates/litepaper/platform.html:61
+#: templates/litepaper/platform.html:59
 msgid "DeFi lending platforms let users lend and borrow crypto assets without any middlemen. Both lenders and borrowers get more value from their crypto. Lenders earn interest, while borrowers deposit crypto as collateral to gain access to credit without traditional banking headaches. DeFi lending platforms currently provide far superior returns for lenders than are generally available in the traditional markets."
 msgstr "As plataformas de empréstimo DeFi permitem aos usuários emprestar e tomar emprestado criptoativos sem nenhum intermediário. Tanto credores quanto devedores recebem mais valor de seus criptos. Os credores ganham juros, enquanto os devedores depositam criptos como garantia para obter acesso ao crédito sem as dores de cabeça dos bancos tradicionais. As plataformas de empréstimo DeFi atualmente proporcionam retornos muito superiores para os credores do que geralmente estão disponíveis nos mercados tradicionais."
 
-#: templates/litepaper/platform.html:62
+#: templates/litepaper/platform.html:60
 msgid "OUSD integrates with DeFi lending platforms that provide over-collateralized loans. Over-collateralization, combined with smart rules around liquidations, provide a reasonable level of security for lenders. Aave also additionally secures their lending pools with AAVE tokens respectively, further lowering risk."
 msgstr "O OUSD integra-se às plataformas de empréstimos DeFi que oferecem empréstimos super-colaterizados. A super-colaterização, combinado com regras inteligentes sobre liquidações, fornece um nível razoável de segurança para os credores. Aave também protege adicionalmente seus pools de empréstimos com tokens AAVE respectivamente, reduzindo ainda mais o risco."
 
-#: templates/litepaper/platform.html:63
-msgid "OUSD integrates with leading lending providers that have a proven track record, audited smart contracts, and have successfully lent hundreds of millions of dollars without issue. We are currently integrated with Compound and Aave."
-msgstr "OUSD se integra aos principais fornecedores de empréstimos que têm um histórico comprovado, auditaram contratos inteligentes e emprestaram com sucesso centenas de milhões de dólares sem problemas. Atualmente estamos integrados com a Compound e a Aave."
+#: templates/litepaper/platform.html:61
+msgid "OUSD integrates with two leading lending providers, Compound and Aave, that have a proven track record audited smart contracts, and have successfully lent hundreds of millions of dollars without issue."
+msgstr ""
 
-#: templates/litepaper/platform.html:65
+#: templates/litepaper/platform.html:63
 msgid "Market making:"
 msgstr "Market making:"
 
-#: templates/litepaper/platform.html:66
+#: templates/litepaper/platform.html:64
 msgid "Automated market makers (AMMs) have quickly risen as the preferred form of decentralized exchange on the Ethereum network. This is in part due to the difficulty of supporting order book DEXes on Ethereum 1.0 that can rival the instant and low-slippage experiences on centralized exchanges. Further, AMMs like Uniswap are relatively user-friendly and gas-efficient to use."
 msgstr "Market makers automatizados (AMMs) surgiram rapidamente como a forma preferida de exchanges descentralizadas na Ethereum. Isso se deve em parte à dificuldade de suportar DEXs de livro de pedidos no Ethereum 1.0 que podem rivalizar com as experiências instantâneas e de baixo slippage em bolsas centralizadas. Além disso, AMMs como o Uniswap são relativamente fáceis de usar e com uso eficiente de gas."
 
-#: templates/litepaper/platform.html:67
+#: templates/litepaper/platform.html:65
 #, python-format
 msgid "AMMs can only enable new markets when liquidity providers supply liquidity (e.g. multiple tokens for given trading pairs or pools). In return for providing liquidity, liquidity providers are rewarded with trading fees when other users swap tokens. For example, when traders swap USDT for USDC on Uniswap, they are currently charged 0.3%% on top of gas fees. These fees are distributed pro-rata to liquidity providers on the USDT-USDC pair based on the percentage of total liquidity that they have provided."
 msgstr "AMMs só podem permitir novos mercados quando os provedores de liquidez fornecem liquidez (por exemplo, vários tokens para determinados pares ou pools de negociação). Em troca do fornecimento de liquidez, os provedores de liquidez são recompensados com taxas de negociação quando outros usuários trocam fichas. Por exemplo, quando os comerciantes trocam USDT por USDC na Uniswap, atualmente são cobrados 0,3%% além das taxas de gas. Essas taxas são distribuídas proporcionalmente aos provedores de liquidez no par USDT-USDC com base na porcentagem da liquidez total que eles forneceram."
 
-#: templates/litepaper/platform.html:68
-msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. We are currently integrated with Curve and plan on integrating with Uniswap, Sushiswap, and Balancer in the near future."
-msgstr "O protocolo OUSD encaminha USDT, USDC e DAI para pools de liquidez de alto desempenho, conforme determinado pelo volume de negociação e tokens de recompensa (por exemplo, o Balancer recompensa as fichas BAL para os provedores de liquidez). Os rendimentos são então repassados aos detentores de OUSD. Estamos atualmente integrados com o Curve e planejamos integrar com Uniswap, Sushiswap e Balancer num futuro próximo."
+#: templates/litepaper/platform.html:66
+msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. The OUSD smart contract is currently integrated with Curve, and may be integrated with Uniswap, Sushiswap, and Balancer in the future."
+msgstr ""
 
-#: templates/litepaper/platform.html:69
+#: templates/litepaper/platform.html:67
 msgid "In addition to collecting interest from lending and fees from market making, we intend to automatically claim and convert the bonus incentives that are being distributed by many of the DeFi protocols. For example, Compound gives away COMP tokens, Balancer gives away BAL tokens, and Curve gives away CRV tokens. These bonus rewards will be regularly converted into stablecoins, deployed in the market, and distributed to OUSD holders in the form of additional yield."
 msgstr "Além de cobrar juros de empréstimos e taxas de mercado, pretendemos reivindicar e converter automaticamente os incentivos de bônus que estão sendo distribuídos por muitos dos protocolos DeFi. Por exemplo, Compound dá tokens COMP, Balancer dá BAL, e Curve dá CRV. Essas recompensas bônus serão regularmente convertidas em moedas estáveis, aplicadas no mercado, e distribuídas aos detentores de OUSD na forma de rendimento adicional."
 
-#: templates/litepaper/platform.html:70
+#: templates/litepaper/platform.html:68
 msgid "OUSD is able to generate higher yields than competing protocols due to a combination of important design decisions that amplify the rewards that are returned to OUSD holders:"
 msgstr "O OUSD é capaz de gerar rendimentos mais elevados do que os protocolos concorrentes devido a uma combinação de importantes decisões de design que amplificam as recompensas que são devolvidas aos detentores de OUSD:"
 
-#: templates/litepaper/platform.html:72
+#: templates/litepaper/platform.html:70
 msgid "Exit fees are returned to the pool, rewarding long term holders"
 msgstr "As taxas de saída são devolvidas ao pool, recompensando os detentores de longo prazo"
 
-#: templates/litepaper/platform.html:73
+#: templates/litepaper/platform.html:71
 msgid "Price oracles favor the collective over the individual, again rewarding long term holders"
 msgstr "Oráculos de preços favorecem o coletivo sobre o individual, novamente recompensando os detentores de longo prazo"
 
-#: templates/litepaper/platform.html:74
+#: templates/litepaper/platform.html:72
 msgid "Smart contracts must manually opt-in to earn yield. This allows the protocol to put more capital to work than would be otherwise possible."
 msgstr "Contratos inteligentes devem ser consentir manualmente para obter rendimento. Isso permite que o protocolo coloque mais capital para trabalhar do que seria possível de outra forma."
 
-#: templates/litepaper/platform.html:75
-msgid "Smart strategies balance risk and reward more effectively than deploying capital in any single underlying strategy."
-msgstr "Estratégias inteligentes equilibram o risco e a recompensa de forma mais eficaz do que a mobilização de capital em qualquer estratégia subjacente."
+#: templates/litepaper/platform.html:73
+msgid "OUSD smart contracts allow users to balance risk and reward more effectively than deploying capital in any single underlying strategy."
+msgstr ""
 
-#: templates/litepaper/platform.html:78
+#: templates/litepaper/platform.html:76
+msgid "Origin's role in OUSD"
+msgstr ""
+
+#: templates/litepaper/platform.html:77
+#, python-format
+msgid "OUSD is meant to be a tool that gives users easy and passive access to DeFi exposure. Origin’s role in the development of OUSD is ministerial rather than managerial. This means instead of actively managing OUSD as a business or actively managing the funds in the OUSD vault, Origin maintains the OUSD smart contracts as developers in order to keep the protocol functional and avoid catastrophic losses or failures for users. Origin does not intend to make strategic decisions to allocate funds from the OUSD vault. Funds in the OUSD vault are automatically deployed to the largest and most common DeFi protocols including Compound, Aave, and Curve, as outlined above. OUSD is a decentralized protocol on the Ethereum  blockchain without active management. Funds are allocated by OUSD smart contracts, not Origin employees, and Origin developers chose the aforementioned DeFi protocols for their safety and ubiquity in DeFi rather than to seek maximum yields or profits. The OUSD protocol is 100%% open-source and we are fast tracking OUSD to be governed in a totally decentralized fashion."
+msgstr ""
+
+#: templates/litepaper/platform.html:79
 msgid "Readers can learn more about the technical details of OUSD on our <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>documentation</a>."
 msgstr "Leitores podem aprender mais sobre os detalhes técnicos da OUSD em nossa <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>documentação</a>."
 
-#: templates/litepaper/platform.html:80
+#: templates/litepaper/platform.html:81
 msgid "Benefits of OUSD"
 msgstr "Benefícios do OUSD"
 
-#: templates/litepaper/platform.html:81
+#: templates/litepaper/platform.html:82
 msgid "Mainstream cryptocurrency users now have the equivalent of a high-yield savings account automatically built into their Ethereum wallets whenever they are holding OUSD. This increases DeFi’s addressable user base from tens to hundreds of thousands of sophisticated users to tens of millions of users instantly. By comparison, Uniswap, the most widely used DeFi product to date has only interacted with approximately 250k Ethereum wallets since its inception."
 msgstr "Os usuários que já adotaram criptomoedas agora têm o equivalente a uma conta de poupança de alto rendimento automaticamente embutida em suas carteiras Ethereum sempre que estiverem segurando OUSD. Isso aumenta a base de usuários direcionáveis do DeFi de dezenas para centenas de milhares de usuários avançados para dezenas de milhões de usuários instantaneamente. Em comparação, o Uniswap, o produto DeFi mais usado até hoje, só interagiu com aproximadamente 250 mil carteiras Ethereum desde seu início."
 
-#: templates/litepaper/platform.html:82
+#: templates/litepaper/platform.html:83
 #, python-format
 msgid "Because OUSD makes it easy for consumers to switch between spending and savings mode, it can also become the ideal medium of exchange. Today, many merchants other than those dealing in black or grey markets do not have many incentives to accept cryptocurrencies. Because most consumers currently use credit cards and mobile payments, merchants are forced to accept payments predominantly with these methods. In the process, they are often charged a 2.90%% credit card processing fee, with other payment intermediaries (e.g. merchant bankers and interchange networks) also increasing the cost of doing business. "
 msgstr "Como o OUSD torna mais fácil aos consumidores alternar entre os modos de gastar e poupar, ele também pode se tornar o meio de troca ideal. Hoje, muitos comerciantes, exceto aqueles que operam no mercado negro ou cinza, não têm muitos incentivos para aceitar criptomoedas. Como a maioria dos consumidores atualmente usa cartões de crédito e pagamentos móveis, os comerciantes são forçados a aceitar pagamentos predominantemente com esses métodos. No processo, muitas vezes é cobrada uma taxa de cartão de crédito de 2.90%% , com outros intermediários de pagamento (por exemplo, banqueiros comerciais e redes de intercâmbio) também aumentando o custo de fazer negócios."
 
-#: templates/litepaper/platform.html:83
+#: templates/litepaper/platform.html:84
 #, python-format
 msgid "For merchants that have traditionally been skeptical of receiving cryptocurrency payments, being able to accept a yield-bearing stablecoin that beats traditional savings accounts and instantly earns yields at a minimum of 20%% APY is a powerful motivator. Instead of losing money on each sale, they are instantly adding capital to their merchant accounts that compounds instantly, giving them more operating capital over time. For merchants that oftentimes face cash flow management and inventory issues, being able to accept a yield-bearing form of payment is extremely compelling."
 msgstr "Para os comerciantes que tradicionalmente são céticos quanto ao recebimento de pagamentos em criptomoedas, ser capaz de aceitar uma moeda estável com rendimento que supere as contas de poupança tradicionais e ganhar instantaneamente rendimentos de no mínimo 20%% APY é um motivador poderoso. Em vez de perder dinheiro em cada venda, eles estão adicionando capital instantaneamente às contas do comerciante que acumulam imediatamente, proporcionando mais capital operacional com o tempo. Para os comerciantes que muitas vezes enfrentam problemas de gerenciamento de fluxo de caixa e estoque, ser capaz de aceitar uma forma de pagamento com rendimento é extremamente atraente."
 
-#: templates/litepaper/platform.html:84
+#: templates/litepaper/platform.html:85
 msgid "OUSD creates the incentives for merchants to not only accept, but promote the usage of cryptocurrencies in their businesses. As more users hold and make purchases with OUSD, more merchants will similarly accept OUSD. These powerful network effects have the potential to gradually replace the payment rails for both online and offline commerce."
 msgstr "OUSD cria incentivos para que os comerciantes não apenas aceitem, mas promovam o uso de criptomoedas em seus negócios. À medida que mais usuários retêm e fazem compras com OUSD, mais comerciantes aceitarão da mesma forma. Esses poderosos efeitos de rede têm o potencial de substituir gradualmente meios de pagamento do comércio online e offline."
 
-#: templates/litepaper/platform.html:85
-msgid "In the short-term, OUSD’s target audience encompasses the millions of novice to intermediate cryptocurrency users in the world that are not yet invested in DeFi. An even larger opportunity lies in targeting the hundreds of millions of users that are currently using traditional peer-to-peer and merchant payment systems."
-msgstr "No curto prazo, o público-alvo do OUSD abrange os milhões de usuários de criptomoedas iniciantes a intermediários no mundo que ainda não investiram no DeFi. Uma oportunidade ainda maior está em atingir as centenas de milhões de usuários que atualmente usam sistemas tradicionais de pagamento comerciais e peer-to-peer."
-
 #: templates/litepaper/platform.html:86
+msgid "In the short-term, OUSD’s target audience encompasses the millions of cryptocurrency users in the world that are not yet invested in DeFi. An even larger opportunity lies in targeting the hundreds of millions of users that are currently using traditional peer-to-peer and merchant payment systems."
+msgstr ""
+
+#: templates/litepaper/platform.html:87
 msgid "Today, PayPal boasts over 305M consumers and 22M merchants and processes over $200B of payments in a single quarter. Our aspirations are to begin penetrating that customer base with OUSD and future payments applications built on top of the OUSD protocol in the upcoming year."
 msgstr "Hoje, o PayPal possui mais de 305 milhões de consumidores e 22 milhões de comerciantes e processa mais de 200 bilhões de dólares em pagamentos em um único trimestre. Nossas ambições são de começar a penetrar nessa base de clientes com OUSD e aplicativos de pagamentos futuros desenvolvidos com base no protocolo OUSD no próximo ano."
 
-#: templates/litepaper/platform.html:88
-msgid "Business development"
-msgstr "Desenvolvimento de negócios"
-
 #: templates/litepaper/platform.html:89
-msgid "The most obvious success metric for OUSD is its total circulating supply. As demand for OUSD grows, more OUSD will be minted and added to the total supply. DeFi protocols are often valued at a glance by the total dollar amount of value deposited into its smart contracts, or Total Value Locked (TVL). In order for OUSD to become successful, we must convince users to buy or mint OUSD, adding to its supply, and we must keep this OUSD held in user wallets or circulating instead of sold or redeemed for underlying stablecoins. Ease of access and network effects are two important factors in this. Direct incentives beyond industry leading APYs may also be a tool we implement in the future."
-msgstr "A métrica de sucesso mais óbvia para OUSD é o seu fornecimento total em circulação. Conforme a demanda por OUSD cresce, mais OUSD será cunhado e adicionado ao fornecimento total. Os protocolos DeFi são frequentemente avaliados à primeira vista pelo valor total em dólares depositado em seus contratos inteligentes ou Valor Total Bloqueado, no inglês: Total Value Locked (TVL). Para que o OUSD seja bem-sucedido, devemos convencer os usuários a comprar ou cunhar OUSD, aumentando seu estoque, e devemos manter esse OUSD guardado nas carteiras do usuário ou circulando em vez de vendido ou resgatado por moedas estáveis usadas de base. Facilidade de acesso e efeitos de rede são dois fatores importantes nisso. Os incentivos diretos além de rendimentos anuais de ponta da indústria também podem ser uma ferramenta que implementaremos no futuro."
-
-#: templates/litepaper/platform.html:90
-msgid "To achieve greater circulating supply, it is imperative that we make OUSD available on every major DeFi platform, decentralized exchange, and centralized exchange. Increasing OUSD’s representation on decentralized platforms will solidify OUSD as a money lego and composable building block for DeFi. Having OUSD markets on popular centralized exchanges allows us to onboard the millions of crypto users who are not familiar with Web 3 wallets like MetaMask but who do have exchange accounts. Although there are some unique challenges to integrating rebasing tokens on these platforms, these challenges are not difficult to overcome and rebasing tokens are growing in popularity."
-msgstr "Para obter maior circulação de fornecimento, é imperativo que disponibilizemos OUSD em todas as principais plataformas DeFi, exchanges descentralizadas e centralizadas. O aumento da representação da OUSD em plataformas descentralizadas solidificará o OUSD como um bloco de construção em dinheiro componível para a DeFi. Ter mercados OUSD em bolsas centralizadas populares nos permite integrar os milhões de usuários de cripto que não estão familiarizados com carteiras da Web3 como a MetaMask, mas que têm contas em exchanges. Embora existam alguns desafios exclusivos para a integração de tokens de rebasing nessas plataformas, esses desafios não são difíceis de superar e os tokens de rebasing estão cada vez mais populares."
-
-#: templates/litepaper/platform.html:91
-msgid "We have plans to integrate OUSD as a collateral asset on major lending platforms such as Compound, Aave, and Cream. There are already millions of dollars of liquidity available for OUSD on Uniswap and Sushiswap. We intend to target stablecoin-focused AMMs such as Curve and Shell Protocol in the near future. On the centralized exchange side, we aim to have OUSD listed on every major exchange globally."
-msgstr "Temos planos de integrar o OUSD como um ativo colateral nas principais plataformas de empréstimo, como Compound, Aave e Cream. Já existem milhões de dólares de liquidez disponíveis para OUSD no Uniswap e Sushiswap. Pretendemos ter como alvo AMMs com foco em stablecoin, como Curve e Shell Protocol em um futuro próximo. No lado das exchanges centralizadas, pretendemos ter OUSD listado em todas as principais exchanges globais."
-
-#: templates/litepaper/platform.html:92
-msgid "To take OUSD truly mainstream, we must connect it with traditional financial infrastructure. The first step will be to get OUSD listed on exchanges that have fiat on and off-ramps. Enabling the direct purchase of OUSD with fiat currency in the form of bank transfers or credit card payments is also a priority for us. These connections to traditional finance are necessary in order for us to successfully launch the future products we have planned for OUSD."
-msgstr "Para tornar o OUSD realmente popular, devemos conectá-lo à infraestrutura financeira tradicional. O primeiro passo será fazer com que o OUSD seja listado nas bolsas que tenham entrada e saída de moedas correntes (fiat). Permitir a compra direta de OUSD com moeda correntes na forma de transferências bancárias ou pagamentos com cartão de crédito também é uma prioridade para nós. Essas conexões com as finanças tradicionais são necessárias para que possamos lançar com sucesso os produtos futuros que planejamos para o OUSD."
-
-#: templates/litepaper/platform.html:94
 msgid "Future products"
 msgstr "Produtos futuros"
 
-#: templates/litepaper/platform.html:95
+#: templates/litepaper/platform.html:90
 msgid "We imagine a better future for online and offline payments that uses OUSD as the underlying payment rails. Below, we outline our vision for what we'd like to see built on top of the OUSD protocol. We also encourage our large community of supporters and open-source developers to build additional compelling products to bring DeFi and cryptocurrency payments to the masses."
 msgstr "Imaginamos um futuro melhor para pagamentos online e offline que usa OUSD como meio de pagamento subjacente. Abaixo, esboçamos nossa visão para o que gostaríamos de ver construído sobre o protocolo OUSD. Também encorajamos nossa grande comunidade de apoiadores e desenvolvedores de código aberto a criar produtos atraentes adicionais para levar os pagamentos de DeFi e criptomoedas para as massas."
 
-#: templates/litepaper/platform.html:97
+#: templates/litepaper/platform.html:92
 msgid "Venmo meets high-yield savings and a debit card"
 msgstr "Venmo conhece a poupança de alto rendimento e um cartão de débito"
 
-#: templates/litepaper/platform.html:98
+#: templates/litepaper/platform.html:93
 msgid "Today peer-to-peer mobile payments account for trillions of dollars in transaction volume. In the United States, Venmo and Square Cash dominate. In China, cryptocurrency’s largest market by trading volume, Wechat and Alipay have near monopolistic holds on consumers and merchants. These simple, centralized payment apps are used by customers paying merchants and by friends and family transferring money to each other. Furthermore, in many markets, the US and Europe especially, bank cards are still the go-to way to spend money for online and offline transactions. Credit card companies, payment processors, and banks dominate this market and there are a variety of companies such as PayPal that assist merchants and consumers in using their cards online."
 msgstr "Hoje, os pagamentos mobile peer-to-peer respondem por trilhões de dólares em volume de transações. Nos Estados Unidos, Venmo e Square Cash dominam. Na China, o maior mercado da criptomoeda em volume de negócios, Wechat e Alipay têm quase um monopólio de consumidores e comerciantes. Esses aplicativos de pagamento simples e centralizados são usados por clientes que pagam comerciantes e por amigos e familiares que transferem dinheiro uns aos outros. Além disso, em muitos mercados, especialmente nos EUA e na Europa, os cartões bancários ainda são a melhor maneira de gastar dinheiro em transações online e offline. Empresas de cartão de crédito, processadores de pagamento e bancos dominam esse mercado e há uma variedade de empresas, como o PayPal, que auxiliam comerciantes e consumidores a usar seus cartões online."
 
-#: templates/litepaper/platform.html:99
+#: templates/litepaper/platform.html:94
 msgid "The billions of users using these existing payment methods have very little incentive to adopt cryptocurrency payments due to increased friction and lack of network effects."
 msgstr "Os bilhões de usuários que usam esses métodos de pagamento existentes têm muito pouco incentivo para adotar pagamentos por criptomoeda devido ao aumento de atrito e à falta de efeito na rede."
 
-#: templates/litepaper/platform.html:100
+#: templates/litepaper/platform.html:95
 msgid "We believe a new peer-to-peer payment app with an associated debit card built on top of the OUSD protocol can disrupt incumbents. Today, Venmo users shuffle money between their Venmo accounts and their checking accounts and credit cards. In the case of the former, money sitting in Venmo or checking accounts doesn’t earn any interest. Venmo balances that are funded by credit cards are even worse as there are fees charged by multiple intermediaries. In the later case, interest earned by users is usually negligible, especially when taking into account inflation. Cash back or rewards programs can offer users incentives but high interest rates for missing payments are a strong disincentive to users."
 msgstr "Acreditamos que um novo aplicativo de pagamento peer-to-peer com um cartão de débito associado criado com base no protocolo OUSD pode desestabilizar os operadores estabelecidos. Hoje, os usuários do Venmo trocam dinheiro entre suas contas Venmo e suas contas correntes e cartões de crédito. No primeiro, o dinheiro depositado na Venmo ou em contas correntes não rende juros. Os saldos da Venmo que são financiados por cartões de crédito são ainda piores, pois há taxas cobradas por vários intermediários. No último caso, os juros ganhos pelos usuários geralmente são insignificantes, especialmente quando se leva em consideração a inflação. Os programas de reembolso ou recompensa podem oferecer incentivos aos usuários, mas as altas taxas de juros para pagamentos não efetuados são um forte desincentivo para usuários."
 
-#: templates/litepaper/platform.html:101
+#: templates/litepaper/platform.html:96
 msgid "Tomorrow’s peer-to-peer mobile payment application powered by OUSD will introduce the killer feature of double-digit yields. Our version of Venmo will combine the ease of peer-to-peer payments with a high-yield savings account that beats traditional savings accounts by a factor of 10 to 100x."
 msgstr "O aplicativo de pagamento mobile peer-to-peer do amanhã, desenvolvido pela OUSD, apresentará funcionalidade decisiva para rendimentos de dois dígitos. Nossa versão do Venmo combinará a facilidade de pagamentos peer-to-peer com uma conta de poupança de alto rendimento que supera as contas de poupança tradicionais por um fator de 10 a 100 vezes."
 
-#: templates/litepaper/platform.html:102
+#: templates/litepaper/platform.html:97
 msgid "The OUSD payment app will be built with a centralized mobile app and APIs to minimize user friction for mainstream users. Users will be able to deposit USD and/or other fiat currencies to the app and enjoy the seamless user experiences of centralized applications. However, on the backend, these fiat deposits will be used to mint OUSD. New users will hold their balances in OUSD in Origin custodial wallets without needing to understand cryptocurrencies. They will simply be able to earn industry-leading yields when they are not spending. Again, your OUSD is always earning & ready to be spent or transferred at the same time."
 msgstr "O aplicativo de pagamento OUSD será desenvolvido com um aplicativo móvel centralizado e APIs para minimizar o atrito do usuário com os usuários convencionais. Os usuários poderão depositar dólares americanos e/ou outras moedas correntes no aplicativo e desfrutar de experiências de usuário perfeitas de aplicativos centralizados. No entanto, no backend, esses depósitos fiduciários serão usados para cunhar OUSD. Novos usuários manterão seus saldos em OUSD em carteiras de custódia Origin sem a necessidade de entender criptomoedas. Eles simplesmente serão capazes de obter rendimentos dignos quando não estiverem gastando. Novamente, seu OUSD está sempre rendendo e pronto para ser gasto ou transferido ao mesmo tempo."
 
-#: templates/litepaper/platform.html:103
+#: templates/litepaper/platform.html:98
 msgid "The viral effects of the future OUSD payment app cannot be overstated. Payment apps are by nature already viral, with users onboarding their friends and family in order to transact with them, establishing powerful network effects. Merchants quickly adopt the payment services that attract the most users. By adding in the ability to earn yield the very instant that any new referred user accepts funds from a referring user, we believe the viral coefficient for existing users referring new users will be multiples higher than ever seen before in a traditional payments application."
 msgstr "Os efeitos virais do futuo aplicativo de pagamento OUSD não podem ser exagerados. Os aplicativos de pagamento já são por natureza virais, com os usuários integrando seus amigos e familiares para fazer transações com eles, estabelecendo efeitos de rede poderosos. Os comerciantes adotam rapidamente os serviços de pagamento que atraem a maioria dos usuários. Ao adicionar a capacidade de ganhar rendimento no mesmo instante em que qualquer novo usuário indicado aceita fundos de um usuário de referência, acreditamos que o coeficiente viral para usuários existentes que indicam novos usuários será muitas vezes mais alto do que nunca antes visto em um aplicativo de pagamento tradicional."
 
-#: templates/litepaper/platform.html:104
+#: templates/litepaper/platform.html:99
 msgid "The OUSD debit card will be tied to the future OUSD payment app and will allow users to spend down their on-app OUSD balance. Whenever users want to use their OUSD, their OUSD will be converted to USD via Visa’s interchange network and be instantly accepted by 40 million merchants all over the world. Merchants will receive USD and need not know that OUSD was used as the underlying original currency to power the transaction. Again, when users’ OUSD is not being spent, it will automatically accumulate staggering yields that should be superior to any cash bank or credit card rewards program in existence."
 msgstr "O cartão de débito OUSD será vinculado ao futuro aplicativo de pagamento OUSD e permitirá que os usuários gastem seu saldo OUSD no aplicativo. Sempre que os usuários quiserem usar seu OUSD, o OUSD será convertido em dólares americanos por meio da rede de intercâmbio da Visa e será imediatamente aceito por 40 milhões de comerciantes em todo o mundo. Os comerciantes receberão dólares americanos e não precisam saber que OUSD foi usado como moeda original subjacente para operar a transação. Novamente, quando o OUSD dos usuários não está sendo gasto, ele acumula automaticamente rendimentos surpreendentes que devem ser superiores a qualquer programa de recompensa de banco de dinheiro ou cartão de crédito existente."
 
-#: templates/litepaper/platform.html:105
+#: templates/litepaper/platform.html:100
 msgid "Although we plan on launching with hosted or managed wallets, we believe that users should be in control of their own funds if they do not want to use managed wallets. While the service that we build will be centralized at the application and middleware layer, the core protocol is decentralized. Users will be able to eject from the managed wallet at any point in time to simply hold their OUSD in their own self-managed wallets within the same app. We imagine that more and more users will gradually migrate from managed wallets to self-hosted wallets over time as they become educated about the benefits of underlying protocol."
 msgstr "Embora planejamos lançar com carteiras sediadas ou administradas, acreditamos que os usuários devem ter controle de seus próprios fundos se não quiserem usar carteiras administradas. Enquanto o serviço que construímos será centralizado na camada de aplicação e middleware, o protocolo central é descentralizado. Os usuários poderão ejetar da carteira administrada a qualquer momento para simplesmente manter seu OUSD em suas próprias carteiras auto-geridas dentro da mesma aplicação. Imaginamos que mais e mais usuários migrarão gradualmente de carteiras gerenciadas para carteiras auto-geridas ao longo do tempo, à medida que forem sendo instruídos sobre os benefícios do protocolo subjacente."
 
-#: templates/litepaper/platform.html:108
+#: templates/litepaper/platform.html:103
 msgid "Getting online and offline merchants to accept payments that are powered by OUSD rails is a monumental step. However, further down the road, an even more ambitious objective is to get merchants to accept OUSD directly."
 msgstr "Fazer com que os comerciantes online e offline aceitem pagamentos que são movidos por vias do OUSD é um passo monumental. No entanto, mais adiante, um objetivo ainda mais ambicioso é fazer com que os comerciantes aceitem OUSD diretamente."
 
-#: templates/litepaper/platform.html:109
+#: templates/litepaper/platform.html:104
 msgid "The incentives to accept OUSD as a merchant over traditional credit cards or mobile payments is extremely compelling. Merchants can earn double-digit yields upon the sales of goods and services versus getting taxed with multiple payment fees."
 msgstr "Como comerciante, os incentivos para aceitar OUSD em vez de cartões de crédito tradicionais ou pagamentos móveis são extremamente atraentes. Os comerciantes podem obter rendimentos de dois dígitos com a venda de bens e serviços, em vez de serem tributados com várias taxas de pagamento."
 
-#: templates/litepaper/platform.html:110
+#: templates/litepaper/platform.html:105
 msgid "The very first e-commerce platform to accept OUSD is Origin’s own Dshop platform. However, Dshop is a relatively new platform, and the majority of online e-commerce stores are run by incumbents like Shopify and Woo Commerce."
 msgstr "A primeira plataforma de e-commerce a aceitar OUSD é a própria plataforma Dshop da Origin. No entanto, Dshop é uma plataforma relativamente nova e a maioria das lojas de comércio eletrônico on-line são administradas por empresas estabelecidas como Shopify e Woo Commerce."
 
-#: templates/litepaper/platform.html:111
+#: templates/litepaper/platform.html:106
 msgid "Thankfully, both Shopify and Woo Commerce have mature developer platforms and APIs. We intend to build applications on these existing platforms that allow merchants to accept OUSD directly from customers that want to pay with OUSD. These developer plugins are relatively simple to build, and there are many existing examples of working payment alternatives."
 msgstr "Felizmente, tanto Shopify quanto Woo Commerce têm APIs e plataformas de desenvolvedor bem desenvolvidas. Pretendemos construir aplicativos nessas plataformas existentes que permitam que os comerciantes aceitem OUSD diretamente de clientes que desejam pagar com OUSD. Esses plug-ins de desenvolvedor são relativamente simples de construir e há muitos exemplos existentes de alternativas de pagamento que funcionam."
 
-#: templates/litepaper/platform.html:112
+#: templates/litepaper/platform.html:107
 msgid "For example, the Shopify app store currently already offers Coinbase Commerce, Bitpay, and GoCoin. We will release an OUSD payment app for merchants in the coming future."
 msgstr "Por exemplo, a loja de aplicativos Shopify atualmente já oferece Coinbase Commerce, Bitpay e GoCoin. Vamos lançar um aplicativo de pagamento OUSD para comerciantes no futuro próximo."
 
-#: templates/litepaper/platform.html:115
+#: templates/litepaper/platform.html:110
 msgid "Given the recent surge in both the price of ETH and the usage of the Ethereum network, gas fees are becoming increasingly prohibitive and a major deterrent for getting the kind of retail adoption that we want."
 msgstr "Dado o recente aumento no preço da ETH e no uso da rede Ethereum, as taxas de gas estão se tornando cada vez mais proibitivas e um grande impedimento para obter o tipo de adoção de varejo que desejamos."
 
-#: templates/litepaper/platform.html:116
+#: templates/litepaper/platform.html:111
 msgid "Ethereum is by far the most dominant layer 1 chain when it comes to DeFi activity and total value locked (TVL) today. However, as other layer 1 chains gain DeFi adoption, it is our intention to make OUSD accessible on other chains like Binance Smart Chain, Solana, Cosmos, and Polkadot which offer faster transactions and lower gas costs. "
 msgstr "Ethereum é de longe a cadeia de camada 1 mais dominante quando se trata de atividade DeFi e Valor Total Bloqueado (TVL) hoje. No entanto, à medida que outras cadeias da camada 1 ganham a adoção do DeFi, é nossa intenção tornar o OUSD acessível em outras cadeias como Binance Smart Chain, Solana, Cosmos e Polkadot, que oferecem transações mais rápidas e menores custos de gas. "
 
-#: templates/litepaper/platform.html:117
+#: templates/litepaper/platform.html:112
 msgid "All of the yield for OUSD will continue to be generated on the Ethereum platform since that’s where the vast majority of capital and earning opportunities exist today. However, chain-specific versions of OUSD will be mintable by anyone who locks up OUSD in the cross-chain bridge. For example, you could lock 100 OUSD in the Solana bridge in order to generate 100 sOUSD which would be freely transferable within the Solana ecosystem. The original OUSD would stay locked in a smart contract where it would continue earning yield. Inside Solana, the circulating sOUSD tokens would rebase in lockstep with the OUSD that was locked in the smart contract. Anyone who wishes to exit would be able to redeem their sOUSD for the originally locked capital plus any yield that was generated while they were holding it."
 msgstr "Todo o rendimento para OUSD continuará a ser gerado na plataforma Ethereum, uma vez que é onde a grande maioria do capital e oportunidades de ganho existem hoje. No entanto, versões específicas para cada cadeia de OUSD serão cunhadas por qualquer pessoa que bloqueie OUSD na ponte entre as cadeias. Por exemplo, você poderia bloquear 100 OUSD na ponte Solana para gerar 100 sOUSD que seriam livremente transferíveis dentro do ecossistema Solana. O OUSD original permaneceria preso a um contrato inteligente, onde continuaria ganhando rendimento. Dentro de Solana, os tokens sOUSD circulando seriam rebase em sincronia com o OUSD que estava bloqueado no contrato inteligente. Qualquer pessoa que deseje sair poderia resgatar seu sOUSD pelo capital originalmente bloqueado, mais qualquer rendimento gerado enquanto o detinha."
 
-#: templates/litepaper/platform.html:122 templates/litepaper/sidebar.html:28
+#: templates/litepaper/platform.html:117 templates/litepaper/sidebar.html:28
 #: templates/whitepaper/sidebar.html:34
 msgid "The Origin Token (OGN)"
 msgstr "O token de origem (OGN)"
 
-#: templates/litepaper/platform.html:123
+#: templates/litepaper/platform.html:118
 msgid "The Origin Token (OGN) is the governance and value accrual token for the entire Origin Platform and suite of products."
 msgstr "O Origin Token (OGN) é o token de governança e acúmulo de valor para toda a Plataforma Origin e conjunto de produtos."
 
-#: templates/litepaper/platform.html:126
+#: templates/litepaper/platform.html:121
 msgid "Decentralized governance for the OUSD protocol will happen first. Following the successful migration of making OUSD community-owned, we will begin the progressive decentralization of the Origin commerce platform as well."
 msgstr "A governança descentralizada para o protocolo OUSD acontecerá primeiro. Após a migração bem-sucedida de tornar o OUSD propriedade da comunidade, também começaremos a descentralização progressiva da plataforma de comércio Origin."
 
-#: templates/litepaper/platform.html:127
+#: templates/litepaper/platform.html:122
 msgid "Today, the OUSD protocol is already currently undergoing a progressive path to full decentralization. We’ve outlined four phases to full decentralization and are currently in phase 2."
 msgstr "Hoje, o protocolo OUSD já está passando por um caminho progressivo para a descentralização total. Descrevemos quatro fases para a descentralização total e atualmente estamos na fase 2."
 
-#: templates/litepaper/platform.html:129
+#: templates/litepaper/platform.html:124
 msgid "OGN token holders will be able to create and vote on proposals to govern the underlying protocol. This may include:"
 msgstr "Os detentores de tokens OGN poderão criar e votar em propostas para controlar o protocolo subjacente. Isso pode incluir:"
 
-#: templates/litepaper/platform.html:131
+#: templates/litepaper/platform.html:126
 msgid "Adding/removing new types of yield-earning strategies"
 msgstr "Adicionar/remover novos tipos de estratégias de rendimento"
 
-#: templates/litepaper/platform.html:132
+#: templates/litepaper/platform.html:127
 msgid "Allocating capital across a basket of strategies"
 msgstr "Alocação de capital em uma cesta de estratégias"
 
-#: templates/litepaper/platform.html:133
+#: templates/litepaper/platform.html:128
 msgid "Determining what fees are charged by the protocol"
 msgstr "Determinar quais taxas serão cobradas pelo protocolo"
 
-#: templates/litepaper/platform.html:134
+#: templates/litepaper/platform.html:129
 msgid "Determining what incentives (e.g. OGN rewards for liquidity mining) are offered on an ongoing basis"
 msgstr "Determinar quais incentivos (ex. recompensas OGN para mineração por liquidez) são oferecidos de forma contínua"
 
-#: templates/litepaper/platform.html:137
+#: templates/litepaper/platform.html:132
 msgid "Note that decentralized governance privileges will not apply to the centralized applications like the peer-to-peer payments product or debit card to be built on OUSD in the near-term. However, the underlying protocol will be fully decentralized before the end of 2021."
 msgstr "Observe que os privilégios de governança descentralizada não se aplicarão aos aplicativos centralizados, como o produto de pagamento peer-to-peer ou cartão de débito a ser criado no OUSD no curto prazo. No entanto, o protocolo subjacente será totalmente descentralizado antes do final de 2021."
 
-#: templates/litepaper/platform.html:138
-msgid "The Dshop platform will undergo the transition to decentralized governance at a later date. More details will be provided as the platform continues to mature."
-msgstr "A plataforma Dshop passará pela transição para a governança descentralizada em uma data posterior. Mais detalhes serão fornecidos conforme a plataforma continua a se desenvolver."
-
-#: templates/litepaper/platform.html:140
+#: templates/litepaper/platform.html:134
 msgid "Value accrual"
 msgstr "Acúmulo de valor"
 
-#: templates/litepaper/platform.html:141
+#: templates/litepaper/platform.html:135
 msgid "OGN holders will benefit directly from any protocol revenues and fees generated from products built on the Origin Platform. This includes on-chain revenue from OUSD as well as potential off-chain revenue sources from OUSD or our commerce products in the future."
 msgstr "Os detentores de OGN se beneficiarão diretamente de quaisquer receitas de protocolo e taxas geradas a partir de produtos construídos na Plataforma Origin. Isso inclui receita interna da OUSD, bem como fontes potenciais de receita externa da OUSD ou de nossos produtos comerciais no futuro."
 
-#: templates/litepaper/platform.html:144
+#: templates/litepaper/platform.html:138
 #, python-format
-msgid "Currently, 10%% of DeFi yields generated from OUSD are collected as a protocol performance fee. These on-chain fees are being used to buy back OGN on the market, generating consistent buy pressure for OUSD’s governance token."
-msgstr "Atualmente, 10%% dos rendimentos de DeFi gerados pelo OUSD são coletados como uma taxa de desempenho de protocolo. Essas taxas na rede estão sendo usadas para recomprar OGN do mercado, gerando pressão de compra consistente para o token de governança do OUSD."
+msgid "Currently, 10%% of DeFi yields generated from OUSD are collected as a protocol service fee. These on-chain fees are being used to buy back OGN on the market, generating consistent buy pressure for OUSD’s governance token."
+msgstr ""
+
+#: templates/litepaper/platform.html:139
+msgid "Through decentralized governance, the community will be able to adjust service fee settings as well as other value accrual parameters."
+msgstr ""
 
 #: templates/litepaper/platform.html:145
-msgid "Through decentralized governance, the community will be able to adjust performance fee settings as well as other value accrual parameters."
-msgstr "Por meio da governança descentralizada, a comunidade será capaz de ajustar as configurações da taxa de desempenho, bem como outros parâmetros de acumulação de valor."
+msgid "OGN holders are therefore incentivized to promote OUSD. As OUSD circulating supply increases, service fees generated will also increase, directly benefiting OGN holders financially. The converse is also true. OUSD holders are incentivized to be OGN holders, so they can participate actively in the governance of the protocol. This creates a strong flywheel effect between Origin’s two tokens."
+msgstr ""
 
-#: templates/litepaper/platform.html:151
-msgid "OGN holders are therefore incentivized to promote OUSD. As OUSD circulating supply increases, performance fees generated will also increase, directly benefiting OGN holders financially. The converse is also true. OUSD holders are incentivized to be OGN holders, so they can participate actively in the governance of the protocol. This creates a strong flywheel effect between Origin’s two tokens."
-msgstr "Os detentores de OGN são, portanto, incentivados a promover OUSD. À medida que a oferta de OUSD em circulação aumenta, as taxas de desempenho geradas também aumentam, beneficiando diretamente os detentores de OGN financeiramente. O inverso também é verdadeiro. Os titulares de OUSD são incentivados a ser titulares de OGN, para que possam participar ativamente na governança do protocolo. Isso cria um forte efeito de giro entre os dois tokens do Origin."
-
-#: templates/litepaper/platform.html:152
+#: templates/litepaper/platform.html:146
 msgid "Since it is our intention to build powerful applications on top of the OUSD protocol like the new peer-to-peer payments product and debit card offering, we will also be able to create new monetization opportunities with these applications. For example, we may take a small percentage of OUSD yields as revenue to cover the costs of running the centralized infrastructure to power these experiences. Any profits that are generated off-chain can similarly be reinvested into the OGN buyback program or other fee distribution options mentioned above.    "
 msgstr "Como é nossa intenção construir aplicações poderosas sobre o protocolo OUSD como o novo produto de pagamento peer-to-peer e oferta de cartões de débito, também poderemos criar novas oportunidades de monetização com estas aplicações. Por exemplo, podemos tomar uma pequena porcentagem dos rendimentos de OUSD como receita para cobrir os custos de funcionamento da infraestrutura centralizada para alimentar essas experiências. Quaisquer lucros que sejam gerados fora da cadeia podem ser reinvestidos de forma semelhante do programa de recompra do OGN ou em outras opções de distribuição de taxas mencionadas acima.    "
 
-#: templates/litepaper/platform.html:155
-msgid "The core Dshop platform has been free to use since inception, and the basic features will remain free to use forever. However, as we develop more premium features such as creating the NFT launchpad and offering customized commerce experiences and white-glove service for larger clients, we intend to charge fees."
-msgstr "A plataforma central do Dshop é gratuita para uso desde seu início, e os recursos básicos permanecerão gratuitos para sempre. No entanto, à medida que desenvolvemos mais recursos premium, como a criação do NFT Launchpad e a oferta de experiências de comércio personalizadas e serviço de alto nível para clientes maiores, pretendemos cobrar taxas."
-
-#: templates/litepaper/platform.html:156
-msgid "Other revenue generating opportunities beyond the immediate NFT Launchpad product may include:"
-msgstr "Outras oportunidades de geração de receita além do produto NFT Launchpad imediato podem incluir:"
-
-#: templates/litepaper/platform.html:158
-msgid "Customized e-commerce experiences for new vertical categories"
-msgstr "Experiências de e-commerce personalizadas para novas categorias verticais"
-
-#: templates/litepaper/platform.html:159
-msgid "Consulting/contracting revenue for larger enterprise merchant partners that require Origin to build or host custom infrastructure and tooling"
-msgstr "Receita de consultoria/contratação para parceiros comerciais de grandes empresas que precisam do Origin para construir ou hospedar infraestrutura e ferramentas personalizadas"
-
-#: templates/litepaper/platform.html:160
-msgid "Premium applications that any merchants can add to their stores via subscription or a la carte purchases"
-msgstr "Aplicativos premium que qualquer comerciante pode adicionar às suas lojas por meio de assinaturas ou compras à la carte"
-
-#: templates/litepaper/platform.html:161
-msgid "Modest transaction fees for bespoke marketplace and reseller networks"
-msgstr "Taxas de transação modestas para redes de revendedores e mercados sob medida"
+#: templates/litepaper/sidebar.html:22
+msgid "NFT Marketplace"
+msgstr "Mercado NFT"
 
 #: templates/litepaper/sidebar.html:33 templates/litepaper/team.html:2
 msgid "Founding Team"
@@ -3316,10 +3243,6 @@ msgstr ""
 
 #: templates/vc-firms/usa.html:2
 msgid "United States"
-msgstr ""
-
-#: templates/vc-firms/usa.html:5
-msgid "Pantera Capital"
 msgstr ""
 
 #: templates/vc-firms/usa.html:9
@@ -3822,6 +3745,10 @@ msgstr "Principais recursos e benefícios do produto"
 msgid "Founders"
 msgstr "Fundadores"
 
+#: templates/whitepaper/sidebar.html:48 templates/whitepaper/team.html:427
+msgid "Community"
+msgstr "Comunidade"
+
 #: templates/whitepaper/sidebar.html:51
 msgid "Developer community"
 msgstr "Comunidade de desenvolvedores"
@@ -3978,6 +3905,14 @@ msgid "Nick studied Computer Science at the University of\n"
 "            Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "            Sencha, C3 Energy Network and Palo Alto Networks."
 msgstr "Nick estudou Ciência da Computação na Universidade de Warwick. Antes de ingressar na Origin, ele trabalhou como engenheiro na Sencha, C3 Energy Network e Palo Alto Networks."
+
+#: templates/whitepaper/team.html:296
+msgid "Anna Wang"
+msgstr "Anna Wang"
+
+#: templates/whitepaper/team.html:300
+msgid "Regional Manager China"
+msgstr "Gerente Regional da China"
 
 #: templates/whitepaper/team.html:303
 msgid "Anna is leading our community efforts for Chinese\n"
@@ -4236,59 +4171,55 @@ msgstr "Construída sobre essas duas tecnologias subjacentes, a Origin Platform 
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "Acreditamos que agora é o momento perfeito para impulsionar o mercado ponto a ponto e os mercados de comércio eletrônico para aproveitar as crescentes demandas do mercado e promissoras inovações tecnológicas."
 
-#: views/web_views.py:81
-msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
-msgstr "O Origin Protocol é a plataforma blockchain para a construção de mercados descentralizados"
-
-#: views/web_views.py:209
+#: views/web_views.py:216
 msgid "Missing email"
 msgstr "E-mail ausente"
 
-#: views/web_views.py:212
+#: views/web_views.py:219
 msgid "Invalid email"
 msgstr "E-mail inválido"
 
-#: views/web_views.py:275
+#: views/web_views.py:282
 msgid "You're already registered!"
 msgstr "Você já está registrado!"
 
-#: views/web_views.py:277
+#: views/web_views.py:284
 msgid "Thanks for signing up!"
 msgstr "Obrigado por inscrever-se!"
 
-#: views/web_views.py:290
+#: views/web_views.py:297
 msgid "Please enter your name"
 msgstr "Por favor, insira seu nome"
 
-#: views/web_views.py:292
+#: views/web_views.py:299
 msgid "Please enter your email"
 msgstr "Por favor introduza o seu e-mail"
 
-#: views/web_views.py:295
+#: views/web_views.py:302
 msgid "Select your country of citizenship"
 msgstr "Selecione seu país de cidadania"
 
-#: views/web_views.py:299
+#: views/web_views.py:306
 msgid "Please enter your desired allocation"
 msgstr "Por favor, digite sua alocação desejada"
 
-#: views/web_views.py:302
+#: views/web_views.py:309
 msgid "Select a currency"
 msgstr "Selecione uma moeda"
 
-#: views/web_views.py:305
+#: views/web_views.py:312
 msgid "Please prove you are not a robot."
 msgstr "Por favor, prove que você não é um robô."
 
-#: views/web_views.py:319
+#: views/web_views.py:326
 msgid "OK"
 msgstr "Está bem"
 
-#: views/web_views.py:333
+#: views/web_views.py:340
 msgid "You have been unsubscribed"
 msgstr "Você foi desinscrito"
 
-#: views/web_views.py:336
+#: views/web_views.py:343
 msgid "Ooops, something went wrong"
 msgstr "Ooops, algo deu errado"
 
