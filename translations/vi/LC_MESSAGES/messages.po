@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-17 11:39+0530\n"
-"PO-Revision-Date: 2021-05-29 14:15\n"
+"POT-Creation-Date: 2021-06-22 13:11-0400\n"
+"PO-Revision-Date: 2021-06-25 13:30\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.9.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: originprotocolwebsite\n"
 "X-Crowdin-Project-ID: 308054\n"
@@ -27,7 +27,7 @@ msgid "Building on Origin"
 msgstr "Xây dựng dựa trên Origin"
 
 #: logic/emails/mailing_list.py:122 logic/emails/mailing_list.py:190
-#: views/web_views.py:328
+#: views/web_views.py:335
 msgid "Please enter a valid email address"
 msgstr "Vui lòng nhập một địa chỉ email hợp lệ"
 
@@ -42,6 +42,54 @@ msgstr "Cảm ơn! Chúng tôi sẽ sớm liên lạc."
 #: logic/emails/mailing_list.py:193
 msgid "Please enter a valid website address"
 msgstr "Vui lòng nhập một địa chỉ trang web hợp lệ"
+
+#: origin-website/venv/lib/python3.9/site-packages/flask_script/__init__.py:43
+msgid "show this help message and exit"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:368
+#, python-format
+msgid "Content purported to be compressed with %s but failed to decompress."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:532
+#, python-format
+msgid "Unsupported value for qop: %s."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:536
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:614
+#, python-format
+msgid "Unsupported value for algorithm: %s.algorithm"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:609
+msgid "The challenge doesn't contain a server nonce, or this one is empty."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:619
+#, python-format
+msgid "Unsupported value for pw-algorithm: %s.pw-algorithm"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:1448
+msgid "Redirected but the response is missing a Location: header."
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1312
+#, python-format
+msgid "Attempting to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1317
+#, python-format
+msgid "Connected to qpid with SASL mechanism %s"
+msgstr ""
+
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1335
+#, python-format
+msgid "Unable to connect to qpid with SASL mechanism %s"
+msgstr ""
 
 #: templates/404.html:16
 msgid "How did I get here?"
@@ -76,14 +124,14 @@ msgid "It’s time to bring crypto mainstream"
 msgstr "Đã đến lúc đưa crypto đến gần hơn với người dùng"
 
 #: templates/about.html:36 templates/investors.html:37
-#: templates/landing.html:30 templates/landing.html:152 templates/team.html:29
+#: templates/landing.html:30 templates/landing.html:172 templates/team.html:29
 #: templates/video.html:30
 msgid "Watch the video"
 msgstr "Xem video"
 
-#: templates/about.html:44
-msgid "Origin enables decentralized commerce and finance"
-msgstr "Origin thúc đẩy tài chính và thương mại phi tập trung"
+#: templates/about.html:44 templates/product.html:20 views/web_views.py:82
+msgid "Origin Protocol is bringing NFTs and DeFi to the masses"
+msgstr ""
 
 #: templates/about.html:47
 msgid "Origin is a fully distributed team. Our 800+ investors include top venture capitalists and\n"
@@ -92,18 +140,18 @@ msgstr "Đội ngũ Origin trải khắp các quốc gia trên thế giới. Hơ
 "      quỹ tiền điện tử đến từ nhiều quốc gia."
 
 #: templates/about.html:49
-msgid "Origin Tokens (OGN) are held by over 30,000"
-msgstr "Token Origin (OGN) được nắm giữ bởi hơn 30.000"
+msgid "Origin Tokens (OGN) are held by over 37,000"
+msgstr ""
 
 #: templates/about.html:49
 msgid "token holders."
 msgstr "địa chỉ ví."
 
-#: templates/about.html:55 templates/landing.html:131
+#: templates/about.html:55 templates/landing.html:151
 msgid "Learn more about our team"
 msgstr "Tìm hiểu về đội ngũ của chúng tôi"
 
-#: templates/about.html:58 templates/landing.html:159
+#: templates/about.html:58 templates/landing.html:179
 msgid "Learn more about our investors"
 msgstr "Các nhà đầu tư"
 
@@ -364,7 +412,7 @@ msgstr "Khai thác sức mạnh của <span class='green'>khoản thanh toán kh
 msgid "Be on the cutting edge of the cryptocurrency revolution. Your DApp is compatible with Metamask and popular mobile wallets out of the box."
 msgstr "Hãy là người tiên phong trong cuộc cách mạng tiền điện tử. DApp của bạn tương thích với Metamask và ví di động phổ biến."
 
-#: templates/creator.html:135 templates/product.html:146
+#: templates/creator.html:135
 msgid "Features"
 msgstr "Các tính năng"
 
@@ -452,149 +500,149 @@ msgstr "Origin Protocol - Bảng thông tin token Origin"
 msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
 msgstr "Nền tảng Origin Protocol thúc đẩy marketplace ngang hàng trên khắp thế giới."
 
-#: templates/dashboard.html:23
+#: templates/dashboard.html:26
 msgid "Origin Token Dashboard"
 msgstr "Bảng thông tin token Origin"
 
-#: templates/dashboard.html:30
+#: templates/dashboard.html:33
 msgid "Price"
 msgstr "Giá"
 
-#: templates/dashboard.html:38 templates/ogn-token.html:29
+#: templates/dashboard.html:41 templates/ogn-token.html:29
 msgid "Market Cap"
 msgstr "Vốn hoá thị trường"
 
-#: templates/dashboard.html:46 templates/ogn-token.html:22
+#: templates/dashboard.html:49 templates/ogn-token.html:22
 msgid "Circulating Supply"
 msgstr "Cung trong lưu thông"
 
-#: templates/dashboard.html:57
+#: templates/dashboard.html:60
 msgid "Total Supply"
 msgstr "Tổng cung"
 
-#: templates/dashboard.html:73
+#: templates/dashboard.html:76
 msgid "Token Unlock Schedule"
 msgstr "Lịch mở khoá token"
 
-#: templates/dashboard.html:75
+#: templates/dashboard.html:78
 msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
 msgstr "Vào ngày 04/01/2020, chúng tôi cho ra mắt lịch trả token. Người dùng có thể xem thêm chi tiết tại <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'> Báo cáo nghiên cứu của Binance</a> về Origin. Lưu ý rằng trong tương lai cung token trong lưu thông có thể khác so với con số dự kiến bởi chúng tôi luôn hướng tới giảm số lượng token trong lưu thông so với kế hoạch bất cứ khi nào có thể."
 
-#: templates/dashboard.html:79
+#: templates/dashboard.html:82
 msgid "Modeled vs. actual token release schedule"
 msgstr "Số token dự kiến phát hành so với số thực tế phát hành"
 
-#: templates/dashboard.html:81
+#: templates/dashboard.html:84
 #, python-format
 msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 msgstr "Hiện tại, cung OGN trong lưu thông là ogn_circulating_supply. Cung OGN trong lưu thông theo kế hoạch là ogn_modeled_supply. Chênh lệch ogn_supply_diff token (ogn_supply_diff_pct%%)."
 
-#: templates/dashboard.html:106
+#: templates/dashboard.html:109
 msgid "Locked Tokens"
 msgstr "Token đang bị khoá"
 
-#: templates/dashboard.html:108
+#: templates/dashboard.html:111
 msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply."
 msgstr "Mục này bao gồm các token lẽ ra đã được mở khoá và đưa vào lưu thông nhưng vẫn được khoá lại do nhiều nhà đầu tư và các thành viên trong nhóm đã tự nguyện nâng thời hạn khoá token của mình."
 
-#: templates/dashboard.html:113
+#: templates/dashboard.html:116
 msgid "Total number of tokens in investor and team lockups"
 msgstr "Tổng số token đội ngũ và nhà đầu tư tự nguyện khoá"
 
-#: templates/dashboard.html:123
+#: templates/dashboard.html:126
 msgid "Total number of staked tokens"
 msgstr "Tổng số token đang được stake"
 
-#: templates/dashboard.html:133
+#: templates/dashboard.html:136
 msgid "Total number of tokens founders have sold"
 msgstr "Tổng số token các nhà sáng lập đã bán"
 
-#: templates/dashboard.html:141
+#: templates/dashboard.html:144
 msgid "Last updated "
 msgstr "Cập nhật mới nhất "
 
-#: templates/dashboard.html:145
+#: templates/dashboard.html:148
 msgid "Staked amount by duration"
 msgstr "Số lượng stake phân theo thời gian"
 
-#: templates/dashboard.html:159
+#: templates/dashboard.html:162
 msgid "Wallets excluded from circulating supply"
 msgstr "Các ví chứa token đang nằm ngoài lưu thông"
 
-#: templates/dashboard.html:161
+#: templates/dashboard.html:164
 msgid "Foundation Reserves"
 msgstr "Quỹ dự phòng"
 
-#: templates/dashboard.html:172
+#: templates/dashboard.html:175
 msgid "Team Distribution"
 msgstr "Token sẽ phân phối cho team"
 
-#: templates/dashboard.html:183
+#: templates/dashboard.html:186
 msgid "Investor Distribution"
 msgstr "Cổng phân phối token cho nhà đầu tư"
 
-#: templates/dashboard.html:194
+#: templates/dashboard.html:197
 msgid "Distribution Staging"
 msgstr "Token nhà đầu tư"
 
-#: templates/dashboard.html:205
+#: templates/dashboard.html:208
 msgid "Partnerships"
 msgstr "Token phát triển quan hệ đối tác"
 
-#: templates/dashboard.html:216
+#: templates/dashboard.html:219
 msgid "Ecosystem Growth"
 msgstr "Token phát triển hệ sinh thái"
 
-#: templates/dashboard.html:236
+#: templates/dashboard.html:239
 msgid "Stake OGN on OUSD.com"
 msgstr "Stake OGN trên OUSD.com"
 
-#: templates/dashboard.html:237 templates/stake-banner.html:7
+#: templates/dashboard.html:240 templates/stake-banner.html:7
 #, python-format
 msgid "Stake your OGN to earn up to 25%%"
 msgstr "Stake OGN với mức lãi suất lên tới 25%%"
 
-#: templates/dashboard.html:240 templates/stake-banner.html:10
+#: templates/dashboard.html:243 templates/stake-banner.html:10
 msgid "Stake OGN now"
 msgstr "Stake OGN ngay bây giờ"
 
-#: templates/dashboard.html:244
+#: templates/dashboard.html:247
 msgid "Additional Token Metrics"
 msgstr "Số liệu token bổ sung"
 
-#: templates/dashboard.html:247
+#: templates/dashboard.html:250
 msgid "Total number of unique wallets"
 msgstr "Tổng số ví nắm giữ"
 
-#: templates/dashboard.html:251
+#: templates/dashboard.html:254
 msgid "Total number of presale investors"
 msgstr "Tổng số nhà đầu tư presale"
 
-#: templates/dashboard.html:255
+#: templates/dashboard.html:258
 msgid "Presale investor vesting schedule length"
 msgstr "Thời gian khoá hết token cho presale"
 
-#: templates/dashboard.html:259
+#: templates/dashboard.html:262
 msgid "Team vesting schedule length*"
 msgstr "Thời gian mở khoá toàn bộ token của đội ngũ*"
 
-#: templates/dashboard.html:263
+#: templates/dashboard.html:266
 msgid "Average presale purchase size in USD"
 msgstr "Giá trị mỗi suất mua presale bình quân"
 
-#: templates/dashboard.html:267
+#: templates/dashboard.html:270
 msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
 msgstr "* Các nhà sáng lập đồng ý lịch mở khoá token trong 4 năm mới bắt đầu từ ngày 8 tháng 1 năm 2020"
 
-#: templates/dashboard.html:274
+#: templates/dashboard.html:279
 msgid "Centralized Exchanges"
 msgstr "Sàn giao dịch tập trung"
 
-#: templates/dashboard.html:342
+#: templates/dashboard.html:406
 msgid "Decentralized Exchanges"
 msgstr "Sàn giao dịch phi tập trung"
 
-#: templates/dashboard.html:372
+#: templates/dashboard.html:440
 msgid "See more on Coinmarketcap >"
 msgstr "Xem thêm trên Coinmarketcap>"
 
@@ -832,7 +880,7 @@ msgstr "Thiết lập nhanh và không cần cam kết"
 msgid "No commitments or long-term contracts."
 msgstr "Không cần cam kết hoặc hợp đồng dài hạn."
 
-#: templates/dshop.html:292 templates/product.html:46
+#: templates/dshop.html:292 templates/product.html:121
 msgid "Free to run"
 msgstr "Hoàn toàn miễn phí"
 
@@ -926,7 +974,7 @@ msgid "read the"
 msgstr "Đọc"
 
 #: templates/extension-rewards.html:206 templates/footer.html:27
-#: templates/footer.html:106 templates/privacy.html:16
+#: templates/footer.html:105 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr "Chính sách bảo mật"
 
@@ -964,108 +1012,100 @@ msgstr "Đăng kí để biết thêm thông tin chi tiết. Email của bạn s
 msgid "Enter your email"
 msgstr "Nhập địa chỉ email"
 
-#: templates/footer.html:18 templates/footer.html:97
+#: templates/footer.html:18 templates/footer.html:96
 msgid "Copyright © "
 msgstr "Bản quyền © "
 
-#: templates/footer.html:18 templates/footer.html:97
+#: templates/footer.html:18 templates/footer.html:96
 msgid "Origin Protocol Inc. All rights reserved."
 msgstr "Bản quyền thuộc về Origin Protocol Inc ©."
 
-#: templates/footer.html:21 templates/footer.html:100
+#: templates/footer.html:21 templates/footer.html:99
 msgid "Help"
 msgstr "Trợ giúp"
 
-#: templates/footer.html:24 templates/footer.html:103 templates/tos.html:16
+#: templates/footer.html:24 templates/footer.html:102 templates/tos.html:16
 msgid "Terms of Service"
 msgstr "Điều khoản Dịch vụ"
 
-#: templates/footer.html:36
-msgid "Overview"
-msgstr "Tổng quan"
-
-#: templates/footer.html:37
-msgid "OGN"
-msgstr "OGN"
-
-#: templates/footer.html:38 templates/litepaper/platform.html:143
-msgid "OUSD"
-msgstr "OUSD"
-
-#: templates/footer.html:39 templates/product.html:29
-msgid "Dshop"
-msgstr "Dshop"
-
-#: templates/footer.html:43
-msgid "Videos"
-msgstr "Video"
-
-#: templates/footer.html:44
-msgid "Developers"
-msgstr "Nhà phát triển"
-
-#: templates/footer.html:45
-msgid "GitHub"
-msgstr "GitHub"
-
-#: templates/footer.html:46 templates/litepaper.html:19
-msgid "Litepaper"
-msgstr "Litepaper"
-
-#: templates/footer.html:50 templates/navbar.html:69
+#: templates/footer.html:36 templates/navbar.html:69
 msgid "About"
 msgstr "Giới thiệu"
 
-#: templates/footer.html:51 templates/navbar.html:72
+#: templates/footer.html:37 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:39 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr "Đội nhóm"
 
-#: templates/footer.html:52 templates/navbar.html:75
+#: templates/footer.html:38 templates/navbar.html:75
 msgid "Investors"
 msgstr "Nhà đầu tư"
 
-#: templates/footer.html:53
+#: templates/footer.html:39
 msgid "Store"
 msgstr "Cửa hàng"
 
-#: templates/footer.html:54
+#: templates/footer.html:40
 msgid "Jobs"
 msgstr "Việc làm"
 
-#: templates/footer.html:58
+#: templates/footer.html:44
+msgid "NFTs & more"
+msgstr ""
+
+#: templates/footer.html:45 templates/litepaper/platform.html:137
+msgid "OUSD"
+msgstr "OUSD"
+
+#: templates/footer.html:46
+msgid "OGN"
+msgstr "OGN"
+
+#: templates/footer.html:50 templates/litepaper.html:19
+msgid "Litepaper"
+msgstr "Litepaper"
+
+#: templates/footer.html:51
+msgid "Videos"
+msgstr "Video"
+
+#: templates/footer.html:52
+msgid "GitHub"
+msgstr "GitHub"
+
+#: templates/footer.html:57
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:61
+#: templates/footer.html:60
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:64
-msgid "Medium"
-msgstr "Medium"
+#: templates/footer.html:63
+msgid "Blog"
+msgstr ""
 
-#: templates/footer.html:67
+#: templates/footer.html:66
 msgid "Youtube"
 msgstr "Youtube"
 
-#: templates/footer.html:70
+#: templates/footer.html:69
 msgid "Instagram"
 msgstr "Instagram"
 
-#: templates/footer.html:73
+#: templates/footer.html:72
 msgid "Telegram"
 msgstr "Telegram"
 
-#: templates/footer.html:76
+#: templates/footer.html:75
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:79
+#: templates/footer.html:78
 msgid "Discord"
 msgstr "Discord"
 
-#: templates/footer.html:89
+#: templates/footer.html:88
 msgid "VK"
 msgstr "VK"
 
@@ -1319,36 +1359,36 @@ msgid "We're backed by top investors from all over the world"
 msgstr "Dự án được hỗ trợ bởi Top những nhà đầu tư trên toàn thế giới"
 
 #: templates/investors.html:45
-msgid "Fundraising"
-msgstr "Kêu gọi vốn"
+msgid "Funding"
+msgstr ""
 
 #: templates/investors.html:47
-msgid "We are a well-capitalized startup that has sold tokens in\n"
-"            three previous rounds to build our platform."
-msgstr "Chúng tôi thực hiện thành công \n"
-"            3 vòng gọi vốn để xây dựng nền tảng."
+msgid "Origin's native token is called OGN. Today, OGN is publicly traded on top exchanges like Coinbase, Binance and Huobi."
+msgstr ""
 
-#: templates/investors.html:54
+#: templates/investors.html:49
+msgid "We previously raised funding from presale investors across three previous rounds to build our platform."
+msgstr ""
+
+#: templates/investors.html:55
 msgid "$38.1M"
 msgstr "38.1 triệu Usd"
 
-#: templates/investors.html:57
+#: templates/investors.html:58
 msgid "total raised to date"
 msgstr "tổng số vốn đã kêu gọi"
 
-#: templates/investors.html:61
+#: templates/investors.html:62
 msgid "800+"
 msgstr "800+"
 
-#: templates/investors.html:62
-msgid "investors"
-msgstr "Nhà đầu tư"
+#: templates/investors.html:63
+msgid "presale investors"
+msgstr ""
 
-#: templates/investors.html:66
-msgid "Interested in getting a stake in Origin? Sign up to\n"
-"            receive the latest updates."
-msgstr "Bạn có hứng thú stake Origin? Đăng ký để\n"
-"            nhận được các cập nhật mới nhất."
+#: templates/investors.html:67
+msgid "Sign up to get regular token holder updates:"
+msgstr ""
 
 #: templates/investors.html:78
 msgid "Featured Investor"
@@ -1402,7 +1442,7 @@ msgstr "\"Origin là dự án nổi bật nhất trong các\n"
 "                      cộng đồng lớn mạnh nhất mà chúng tôi từng thấy. Với chúng tôi, họ sẽ là người thay đổi \n"
 "                      cuộc chơi.\""
 
-#: templates/investors.html:178 templates/team.html:557
+#: templates/investors.html:178 templates/team.html:591
 msgid "Paul Veradittakit"
 msgstr "Paul Veradittakit"
 
@@ -1458,7 +1498,7 @@ msgstr "Gil Penchina"
 msgid "Angel Investor"
 msgstr "Angel Investor"
 
-#: templates/investors.html:324
+#: templates/investors.html:324 templates/team.html:630
 msgid "Justin Blau"
 msgstr "Justin Blau"
 
@@ -1490,25 +1530,25 @@ msgstr "Randall Kaplan"
 msgid "Founder, Akamai"
 msgstr "Founder, Akamai"
 
-#: templates/landing.html:3 templates/video.html:3 views/web_views.py:80
+#: templates/landing.html:3 templates/video.html:3 views/web_views.py:81
 msgid "Origin Protocol"
 msgstr "Origin Protocol"
 
 #: templates/landing.html:5
-msgid "The sharing economy without intermediaries. Origin is a protocol for creating sharing economy marketplaces using the Ethereum blockchain and IPFS."
-msgstr "Nền kinh tế mở không có trung gian. Origin là một giao thức nhằm phục vụ việc tạo ra các thị trường kinh tế mở bằng cách sử dụng blockchain của Ethereum và IPFS."
+msgid "Origin Protocol is bringing NFTs and DeFi to the masses."
+msgstr ""
 
 #: templates/landing.html:26
-msgid "Connecting artists<br>directly with their fans"
-msgstr "Kết nối nghệ sĩ<br>trực tiếp với người hâm mộ của họ"
+msgid "Bringing NFTs and DeFi<br>to the masses"
+msgstr ""
 
 #: templates/landing.html:42
-msgid "Subscribe to stay in touch"
-msgstr "Đăng kí để được cập nhật nhanh nhất"
+msgid "Never miss a drop. Sign up now!"
+msgstr ""
 
 #: templates/landing.html:45
-msgid "Be the first to hear when we launch important partnerships, celebrity NFT drops, exchange listings, and new products. Your email will be kept private."
-msgstr "Hãy là người đầu tiên nhận được các tin tức về quan hệ đối tác quan trọng, các đợt đấu giá NFT cho người nổi tiếng, và sản phẩm mới. Địa chỉ mail của bạn sẽ được bảo mật hoàn toàn."
+msgid "Be the first to hear when we announce big NFT drops, important partnerships, and new products. Your email will be kept private."
+msgstr ""
 
 #: templates/components/presale-form.html:9
 #: templates/components/presale-form.html:10 templates/landing.html:48
@@ -1517,112 +1557,85 @@ msgstr "Hãy là người đầu tiên nhận được các tin tức về quan 
 msgid "Email"
 msgstr "Email"
 
-#: templates/landing.html:56
-msgid "Origin Products"
-msgstr "Sản phẩm"
+#: templates/landing.html:64
+msgid "Where top creators launch their NFTs"
+msgstr ""
 
-#: templates/landing.html:57
-msgid "Origin’s suite of products is revolutionizing how people shop and conduct business online. Effortlessly create a decentralized e-commerce store with Dshop and earn competitive yields with the Origin Dollar."
-msgstr "Bộ sản phẩm của Origin đang cách mạng hóa cách mọi người mua sắm và kinh doanh trực tuyến. Ai cũng có thể ễ dàng tạo một cửa hàng thương mại điện tử phi tập trung với Dshop và kiếm được lợi nhuận cạnh tranh nhờ Origin Dollar."
+#: templates/landing.html:65
+msgid "Origin has hosted record-breaking NFT sales for top musicans, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace."
+msgstr ""
 
-#: templates/landing.html:59
-msgid "Check out our products"
-msgstr "Ghé thăm các sản phẩm của chúng tôi"
+#: templates/landing.html:67 templates/nft-banner.html:6
+#: templates/product.html:85
+msgid "Interested in running an NFT sale?"
+msgstr "Bạn muốn thực hiện đâu giá NFT?"
 
-#: templates/landing.html:67
-msgid "There is a massive opportunity for blockchain-powered commerce"
-msgstr "Tiềm năng của thương mại dựa trên blockchain là vô cùng to lớn"
+#: templates/landing.html:99
+msgid "Learn more about OUSD"
+msgstr ""
 
-#: templates/landing.html:68
-msgid "E-commerce is projected to be one of the fastest growing verticals in the blockchain industry during the next few years"
-msgstr "Thương mại điện tử được dự đoán là một trong những ngành phát triển nhanh nhất trong ngành công nghiệp blockchain trong vài năm tới"
-
-#: templates/landing.html:75
-msgid "Global e-commerce sales by 2021"
-msgstr "Doanh số thương mại điện tử toàn cầu vào năm 2021"
-
-#: templates/landing.html:79
-msgid "Global blockchain technology revenues by 2023"
-msgstr "Doanh số từ công nghệ blockchain toàn cầu vào năm 2023"
-
-#: templates/landing.html:88
+#: templates/landing.html:108
 msgid "Blockchain-powered commerce is the future"
 msgstr "Thương mại điện tử dựa trên Blockchain sẽ là tương lai"
 
-#: templates/landing.html:89
+#: templates/landing.html:109
 msgid "Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure"
 msgstr "Blockchain sẽ định vị lại thương mại trực tuyến, cho phép cả người mua và người bán đều được hưởng lợi từ chi phí thấp hơn, cơ sở hạ tầng thuận tiện hơn"
 
-#: templates/landing.html:95
+#: templates/landing.html:115
 msgid "Lower fees"
 msgstr "Phí thấp hơn"
 
-#: templates/landing.html:96
+#: templates/landing.html:116
 #, python-format
 msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed"
 msgstr "Người mua và người bán chia sẻ 20-30 %% tiền tiết kiệm khi bên trung gian bị loại bỏ"
 
-#: templates/landing.html:102
+#: templates/landing.html:122
 msgid "Better incentives"
 msgstr "Mô hình khuyến khích tốt hơn"
 
-#: templates/landing.html:103
+#: templates/landing.html:123
 msgid "Everyone can own a stake in the network by contributing to its growth"
 msgstr "Bất cứ ai cũng có thể nắm giữ một phần mạng lưới bằng cách đóng góp vào sự phát triển của nó"
 
-#: templates/landing.html:109
+#: templates/landing.html:129
 msgid "Increased access"
 msgstr "Tăng quyền truy cập"
 
-#: templates/landing.html:110
+#: templates/landing.html:130
 msgid "2 billion unbanked people can access new markets globally"
 msgstr "2 tỷ người không được tiếp cận với hệ thống tài chính, ngân hàng sẽ có thể tham gia vào thị trường toàn cầu"
 
-#: templates/landing.html:116
+#: templates/landing.html:136
 msgid "More resilience"
 msgstr "Khả năng thích nghi cao"
 
-#: templates/landing.html:117
+#: templates/landing.html:137
 msgid "Blockchain-powered commerce can't be banned or shut down"
 msgstr "Thương mại xây dựng trên blockchain không thể bị cấm hoặc đóng cửa"
 
-#: templates/landing.html:123
+#: templates/landing.html:143
 msgid "Origin has a world-class team"
 msgstr "Origin bao gồm đội ngũ hàng đầu thế giới"
 
-#: templates/landing.html:124
+#: templates/landing.html:144
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr "Đôi ngũ được dẫn dắt bởi các doanh nhân hàng đầu, đồng sáng lập của PayPal, nhân viên đầu tiên tại YouTube và các nhà quản lý kỹ thuật tại Google và Dropbox."
 
-#: templates/landing.html:148
+#: templates/landing.html:168
 msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
 msgstr "Chúng tôi được hỗ chỗ bởi Top những quỹ, nhà đầu tư hàng đầu tại thung lũng Silicon và trên toàn thế giới"
 
-#: templates/landing.html:164
+#: templates/landing.html:184
 msgid "Featured Partners"
 msgstr "Đối tác hàng đầu"
 
-#: templates/landing.html:189
-msgid "Origin Marketplace featured in Samsung Blockchain Store"
-msgstr "Origin Marketplace có mặt trên cửa hàng Blockchain của Samsung"
-
-#: templates/landing.html:203 templates/landing.html:225
-msgid "“The short-term rentals space is exploding and needs more innovation and competition. A neutral and open platform will empower renters, hosts, and channel partners. We are excited to partner with Origin to create this new wave of innovation in homesharing.”"
-msgstr "\"Thị trường cho thuê nhà ngắn hạn đang bùng nổ và cần nhiều sự đổi mới và cạnh tranh. Một nền tảng mở trung lập sẽ thúc đẩy người thuê, chủ nhà và các đối tác lại gần nhau. Chúng tôi rất vui mừng được hợp tác với Origin để tạo ra làn sóng đổi mới mới này trong lĩnh vực home -sharing.\""
-
-#: templates/landing.html:207 templates/landing.html:229
-msgid "Luca De Giglio"
-msgstr "Luca De Giglio"
-
-#: templates/landing.html:210 templates/landing.html:232
-msgid "Founder, Trips Community"
-msgstr "Founder, Trips Community"
-
-#: templates/landing.html:248
+#: templates/landing.html:224
 msgid "Featured Videos"
 msgstr "Video nổi bật"
 
-#: templates/landing.html:267
+#: templates/landing.html:243
 msgid "Watch more videos"
 msgstr "Xem nhiều video hơn"
 
@@ -1631,8 +1644,8 @@ msgid "Origin Protocol - Litepaper"
 msgstr "Origin Protocol - Whitepaper"
 
 #: templates/litepaper.html:20
-msgid "Bringing peer-to-peer commerce and decentralized finance to the masses"
-msgstr "Mang thương mại ngang hàng và tài chính phi tập trung đến công chúng"
+msgid "Bringing non-fungible tokens and decentralized finance to the masses"
+msgstr ""
 
 #: templates/mobile.html:3 templates/mobile.html:5
 msgid "Origin Protocol - Mobile"
@@ -1642,11 +1655,11 @@ msgstr "Origin Protocol - Điện thoại di động"
 msgid "Buy and Sell on the Origin Marketplace"
 msgstr "Mua và bán trên Origin Marketplace"
 
-#: templates/mobile.html:18 templates/product.html:94
+#: templates/mobile.html:18
 msgid "Rent a home, buy concert tickets, or hire a contractor on our flagship app, built on the Origin platform."
 msgstr "Thuê nhà, mua vé xem hòa nhạc hoặc thuê người đấu thầu trên ứng dụng trên Origin."
 
-#: templates/mobile.html:27 templates/product.html:102
+#: templates/mobile.html:27
 msgid "Download Android App"
 msgstr "Download Android App"
 
@@ -1673,10 +1686,6 @@ msgstr "OGN token"
 #: templates/navbar.html:85
 msgid "Shop"
 msgstr "Shop"
-
-#: templates/nft-banner.html:6
-msgid "Interested in running an NFT sale?"
-msgstr "Bạn muốn thực hiện đâu giá NFT?"
 
 #: templates/nft-banner.html:9
 msgid "Yes, please!"
@@ -1718,7 +1727,7 @@ msgstr "Giá gần nhất"
 msgid "Last updated on "
 msgstr "Cập nhật mới nhất "
 
-#: templates/ogn-token.html:35 templates/product.html:112
+#: templates/ogn-token.html:35
 msgid "Available on"
 msgstr "Có mặt trên"
 
@@ -1726,7 +1735,7 @@ msgstr "Có mặt trên"
 msgid "…and many others"
 msgstr "…và nhiều hơn thế"
 
-#: templates/ogn-token.html:113
+#: templates/ogn-token.html:113 templates/product.html:167
 msgid "View the OGN Dashboard"
 msgstr "Xem bảng điều khiển token"
 
@@ -1742,7 +1751,7 @@ msgstr "Staking"
 msgid "Earn interest on your OGN while you hold it. Deposit OGN into our high-yield smart contract to grow your stake in the Origin network."
 msgstr "Kiếm thêm lợi nhuận khi nắm giữ OGN. Gửi OGN để nhận thêm OGN từ mạng Origin."
 
-#: templates/litepaper/platform.html:125 templates/ogn-token.html:147
+#: templates/litepaper/platform.html:120 templates/ogn-token.html:147
 msgid "Governance"
 msgstr "Quản trị"
 
@@ -1800,11 +1809,11 @@ msgstr "Xây dựng trên Origin"
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong>Các thành viên từ khắp nơi trên toàn thế giới đang xây dựng các dự án của họ dựa trên các giao thức của Origin. Chúng tôi đang tìm kiếm những người tài năng để <a href='#join_our_mission'>hoàn thành sứ mệnh của mình</a>.</strong>"
 
-#: templates/partners.html:87
+#: templates/components/drops.html:54 templates/partners.html:87
 msgid "View More"
 msgstr "Xem thêm"
 
-#: templates/partners.html:88
+#: templates/components/drops.html:50 templates/partners.html:88
 msgid "View Less"
 msgstr "Xem ít hơn"
 
@@ -1872,173 +1881,94 @@ msgstr "Giao thức gốc - Chính sách bảo mật"
 msgid "Origin Protocol - Product"
 msgstr "Origin Protocol - Sản phẩm"
 
-#: templates/product.html:19
-msgid "The Origin Platform powers commerce on the blockchain"
-msgstr "Origin Platform hỗ trợ thương mại điện tử trên Blockchain"
+#: templates/product.html:24
+msgid "Read our new Litepaper"
+msgstr ""
 
-#: templates/product.html:30
-msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
-msgstr "Nền tảng thương mại điện tử mã nguồn mở và phi tập trung cho phép người dùng xây dựng cửa hàng trực tuyến một cách dễ dàng"
+#: templates/litepaper/platform.html:31 templates/litepaper/sidebar.html:19
+#: templates/product.html:36
+msgid "NFT Launchpad"
+msgstr ""
 
-#: templates/product.html:34
-msgid "No transaction fees"
-msgstr "Không thu phí giao dịch"
+#: templates/product.html:43
+msgid "Customizable and hosted on your own domain"
+msgstr ""
 
-#: templates/product.html:38
-msgid "Fully customizeable"
-msgstr "Hoàn toàn tuỳ chỉnh"
-
-#: templates/product.html:42
-msgid "Supports credit card payments"
-msgstr "Hỗ trợ thanh toán bằng thẻ tín dụng"
+#: templates/product.html:47
+msgid "Maintain control of your brand"
+msgstr ""
 
 #: templates/product.html:54
-msgid "Try Dshop"
-msgstr "Dùng thử Dshop"
+msgid "Unique auction mechanics to maximize revenue"
+msgstr ""
 
-#: templates/product.html:59
-msgid "Visit Origin Store"
-msgstr "Ghé thăm cửa hàng Origin"
+#: templates/product.html:58
+msgid "Secondary marketplace launching soon"
+msgstr ""
 
-#: templates/product.html:63
-msgid "Online stores created with Dshop"
-msgstr "Cửa hàng trực tuyến xây dựng trên nền tảng Dshop"
+#: templates/product.html:65
+msgid "Best-in-class uptime and scaling"
+msgstr ""
 
-#: templates/product.html:72
-msgid "...and others"
-msgstr "...và nhiều hơn thế"
+#: templates/product.html:69
+msgid "Supports both credit cards and cryptocurrency"
+msgstr ""
 
-#: templates/product.html:76
+#: templates/product.html:93
 msgid "Origin Dollar"
 msgstr "Origin Đô La"
 
-#: templates/product.html:77
+#: templates/product.html:94
 msgid "The first stablecoin that earns a yield while it's still in your wallet."
 msgstr "Đồng stablecoin đầu tiên cho phép kiếm lợi nhuận ngay cả khi được giữ trong ví của bạn."
 
-#: templates/product.html:79
+#: templates/product.html:96
 msgid "Get OUSD"
 msgstr "Mua OUSD"
 
-#: templates/product.html:88
-msgid "Buy and sell on Origin"
-msgstr "Mua và bán trên Origin"
-
-#: templates/product.html:89
-msgid "The Origin platform will power hundreds of decentralized, peer-to-peer marketplaces. Download our flagship app today."
-msgstr "Origin sẽ cung cấp sức mạnh cho hàng trăm thị trường giao dịch ngang hàng, phi tập trung. Download ứng dụng ngay hôm nay."
-
-#: templates/product.html:93
-msgid "Origin Marketplace"
-msgstr "Origin Marketplace"
-
 #: templates/product.html:104
-msgid "Visit us on the web"
-msgstr "Ghé thăm website"
+msgid "Dshop"
+msgstr "Dshop"
 
 #: templates/product.html:105
-msgid "shoporigin.com"
-msgstr "shoporigin.com"
+msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
+msgstr "Nền tảng thương mại điện tử mã nguồn mở và phi tập trung cho phép người dùng xây dựng cửa hàng trực tuyến một cách dễ dàng"
 
-#: templates/product.html:108
-msgid "Featured on"
-msgstr "Được đề cập trên"
+#: templates/product.html:109
+msgid "No transaction fees"
+msgstr "Không thu phí giao dịch"
 
-#: templates/product.html:126
-msgid "Decentralized marketplaces powered by Origin"
-msgstr "Marketplace phi tập trung cung cấp bởi Origin"
+#: templates/product.html:113
+msgid "Fully customizeable"
+msgstr "Hoàn toàn tuỳ chỉnh"
 
-#: templates/product.html:128
-msgid "See the Origin Platform in action at shoporigin.com"
-msgstr "Ghé thăm nền tảng tại shoporigin.com"
+#: templates/product.html:117
+msgid "Supports credit card payments"
+msgstr "Hỗ trợ thanh toán bằng thẻ tín dụng"
 
-#: templates/product.html:130
-msgid "Buy and sell today"
-msgstr "Mua bán ngay hôm nay"
+#: templates/product.html:131
+msgid "Try Dshop"
+msgstr "Dùng thử Dshop"
 
-#: templates/product.html:132
-msgid "Other marketplaces built on the Origin Platform"
-msgstr "Những marketplace khác xây dựng trên Origin"
+#: templates/product.html:138
+msgid "Visit Origin Store"
+msgstr "Ghé thăm cửa hàng Origin"
 
-#: templates/product.html:153
-msgid "Self-sovereign Identity"
-msgstr "Danh tính toàn quyền"
+#: templates/product.html:144
+msgid "Online stores created with Dshop"
+msgstr "Cửa hàng trực tuyến xây dựng trên nền tảng Dshop"
 
-#: templates/product.html:155
-msgid "Own and protect your own data. Your profile is portable and can be used across any Origin-enabled application."
-msgstr "Sở hữu và bảo vệ dữ liệu cá nhân của mình. Thông tin của bạn có thể được sử dụng trên bất kì ứng dụng có quyền truy cập nào của Origin."
+#: templates/product.html:152
+msgid "...and hundreds more"
+msgstr ""
 
-#: templates/product.html:164
-msgid "Encrypted Messaging"
-msgstr "Mã hóa tin nhắn"
-
-#: templates/product.html:166
-msgid "Send secure, private messages to other buyers and sellers on the platform."
-msgstr "Gửi tin nhắn một cách an toàn và bảo mật tới những người bán và người mua trên nền tảng."
-
-#: templates/product.html:175
-msgid "Permissionless Payments"
-msgstr "Phương thức thanh toán không cần cấp phép"
-
-#: templates/product.html:177
-msgid "Use your choice of Origin Token (OGN), Ether (ETH), or MakerDai (DAI) to buy and sell."
-msgstr "Bạn có quyền chọn giữa OGN, ETH hoặc DAI làm phương thức thanh toán."
-
-#: templates/product.html:186
-msgid "Reputation Systems"
-msgstr "Hệ thống danh tiếng"
-
-#: templates/product.html:188
-msgid "Give ratings and leave reviews for your transactions just like you would on a centralized app."
-msgstr "Để lại xếp hạng và đánh giá tương tự như trên ứng dụng tập trung khác."
-
-#: templates/product.html:197
-msgid "Blockchain-Powered Transactions"
-msgstr "Các giao dịch trên Blockchain"
-
-#: templates/product.html:199
-msgid "Funds are escrowed on our marketplace smart contract. Buy and sell without intermediaries."
-msgstr "Tiền được ký quỹ trên thương trường qua hợp đồng thông minh giúp bạn mua bán mà không cần qua trung gian."
-
-#: templates/product.html:208
-msgid "Arbitration Services"
-msgstr "Dịch vụ trọng tài"
-
-#: templates/product.html:210
-msgid "Use Origin or select a third-party arbitration service to keep both counterparties safe."
-msgstr "Sử dụng Origin hoặc chọn đối tác thứ ba để bảo vệ quyền lợi của mình."
-
-#: templates/product.html:221
-msgid "How it works"
-msgstr "Cách thứ hoạt động"
-
-#: templates/product.html:230
-msgid "Buyers search and browse for sellers' listings on the blockchain through DApps"
-msgstr "Người mua tìm kiếm danh sách của người bán ngay trên blockchain thông qua DApps"
-
-#: templates/product.html:236
-msgid "Buyers submit offers and escrowed payments to our marketplace smart contract"
-msgstr "Người mua gửi đề nghị và ký quỹ thanh toán vào hợp đồng thông minh marketplace của chúng tôi"
-
-#: templates/product.html:242
-msgid "Sellers accept or reject offers from prospective buyers, then fulfill active offers"
-msgstr "Người bán chấp nhận hoặc từ chối đề nghị từ người mua tiềm năng, sau đó thực hiện các yêu cầu hiện có"
-
-#: templates/product.html:248
-msgid "After offers are finalized, the smart contract releases escrowed payments to sellers"
-msgstr "Sau khi hoàn thành đề nghị, hợp đồng thông minh sẽ trả các khoản thanh toán cho người bán"
-
-#: templates/product.html:260
+#: templates/product.html:160
 msgid "Origin Token"
 msgstr "Token Origin"
 
-#: templates/product.html:263
+#: templates/product.html:163
 msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
 msgstr "Token Origin (OGN) là token khuyến khích nhằm đảm bảo sự phát triển lâu dài của mạng lưới."
-
-#: templates/product.html:267
-msgid "Learn more about Origin Token"
-msgstr "Tìm hiểu thêm về Token Origin"
 
 #: templates/referral_campaign.html:335
 msgid "Your friend"
@@ -2282,7 +2212,8 @@ msgstr "Kay là Kế toán viên chuyên nghiệp (CPA).\n"
 "                  Trước đây cô làm Kế toán cao cấp\n"
 "                  và sau đó là Tư vấn viên cao cấp tại KPMG Canada."
 
-#: templates/team.html:179 templates/whitepaper/team.html:194
+#: templates/team.html:179 templates/team.html:422
+#: templates/whitepaper/team.html:194
 msgid "Business Development"
 msgstr "Phát triển kinh doanh"
 
@@ -2314,7 +2245,7 @@ msgstr "Mila đang dẫn đầu các nỗ lực cộng đồng của chúng tôi
 msgid "Tom Linton"
 msgstr "Tom Linton"
 
-#: templates/team.html:221 templates/team.html:265 templates/team.html:391
+#: templates/team.html:221 templates/team.html:264 templates/team.html:390
 #: templates/whitepaper/team.html:258 templates/whitepaper/team.html:279
 #: templates/whitepaper/team.html:403
 msgid "Senior Engineer"
@@ -2330,29 +2261,25 @@ msgstr "Trước Origin, Tom đã có một sự nghiệp thành công \n"
 "                  Ông có hai bằng Thạc sĩ về Hệ thống phân tán \n"
 "                  của Đại học Kỹ thuật Berlin và KTH tại Stockholm."
 
-#: templates/team.html:239 templates/whitepaper/team.html:296
-msgid "Anna Wang"
-msgstr "Anna Vương"
+#: templates/team.html:239
+msgid "Anna Crouy"
+msgstr ""
 
-#: templates/team.html:243 templates/whitepaper/team.html:300
-msgid "Regional Manager China"
-msgstr "Giám đốc quản lý bộ phận Trung Quốc"
+#: templates/team.html:243
+msgid "Collector Relations"
+msgstr ""
 
 #: templates/team.html:246
-msgid "Anna is leading our community efforts for Chinese\n"
-"                  speakers. Before Origin, Anna managed global social media at\n"
+msgid "Anna helps ensure that top collectors have a direct relationship to the company. Before Origin, Anna managed global social media at\n"
 "                  Exness, a leading forex broker. She also co-founded a\n"
 "                  non-profit in Australia."
-msgstr "Anna đang dẫn đầu các nỗ lực cộng đồng của chúng tôi cho người nói tiếng Trung Quốc. \n"
-"                  Trước Origin, Anna quản lý phương tiện truyền thông xã hội toàn cầu tại Exness, \n"
-"                  một nhà môi giới ngoại hối hàng đầu. \n"
-"                  Cô cũng đồng sáng lập một tổ chức phi lợi nhuận ở Úc."
+msgstr ""
 
-#: templates/team.html:261 templates/whitepaper/team.html:275
+#: templates/team.html:260 templates/whitepaper/team.html:275
 msgid "Nick Poulden"
 msgstr "Nick Poulden"
 
-#: templates/team.html:268
+#: templates/team.html:267
 msgid "Nick studied Computer Science at the University of\n"
 "                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
 "                  Sencha, C3 Energy Network and Palo Alto Networks."
@@ -2360,17 +2287,17 @@ msgstr "Nick học Khoa học Máy tính tại Đại học Warwick.\n"
 "                  Trước khi gia nhập Origin, anh từng làm kỹ sư tại Sencha, Mạng lưới năng lượng C3 \n"
 "                  và Palo Alto Networks."
 
-#: templates/team.html:282 templates/whitepaper/team.html:318
+#: templates/team.html:281 templates/whitepaper/team.html:318
 msgid "Domen Grabec"
 msgstr "Domen Grabec"
 
-#: templates/team.html:286 templates/team.html:307 templates/team.html:328
-#: templates/team.html:407 templates/whitepaper/team.html:322
+#: templates/team.html:285 templates/team.html:306 templates/team.html:327
+#: templates/team.html:406 templates/whitepaper/team.html:322
 #: templates/whitepaper/team.html:343 templates/whitepaper/team.html:364
 msgid "Engineer"
 msgstr "Kỹ sư"
 
-#: templates/team.html:289
+#: templates/team.html:288
 msgid "Domen co-founded and led a team developing a\n"
 "                  mobile application with 2 chess Grandmasters. He previously\n"
 "                  had a successful career at Cetra, Zemanta and Peerindex."
@@ -2378,11 +2305,11 @@ msgstr "Domen - Đồng sáng lập và là trưởng nhóm phát triển ứng 
 "                  cùng với 2 đại kiện tướng cờ vua. \n"
 "                  Ông được biết đến khá thành công tại Cetra, Zemanta và Peerindex."
 
-#: templates/team.html:303 templates/whitepaper/team.html:339
+#: templates/team.html:302 templates/whitepaper/team.html:339
 msgid "Shahul Hameed"
 msgstr "Shahul Hameed"
 
-#: templates/team.html:310
+#: templates/team.html:309
 msgid "Shahul is a fullstack engineer who started\n"
 "                  programming at age of 10. He previously worked as a freelancer\n"
 "                  and then joined Zoho as a front-end developer."
@@ -2390,11 +2317,11 @@ msgstr "Shahul là kỹ sư lập trình được biết đến là đã lập t
 "                  Trước đây anh đã từng làm tự do \n"
 "                  và sau đó trở thành lập trình viên đầu - cuối cho Zoho."
 
-#: templates/team.html:324 templates/whitepaper/team.html:360
+#: templates/team.html:323 templates/whitepaper/team.html:360
 msgid "Mike Shultz"
 msgstr "Mike Shultz"
 
-#: templates/team.html:331
+#: templates/team.html:330
 msgid "Mike is a long-time contributor to open-source. He\n"
 "                  created a dev toolkit for creating Ethereum smart contracts\n"
 "                  with Python and previously worked with Ethereum and IPFS at\n"
@@ -2403,15 +2330,15 @@ msgstr "Mike có nhiều đóng góp cho lập trình mã nguồn mở. \n"
 "                  Anh đã tạo ra bộ công cụ hỗ trợ lập trình hợp đồng thông minh của Ethereum với Python \n"
 "                  và trước đây từng lập trình cho Ethereum, IPFS tại Lunyr."
 
-#: templates/team.html:346 templates/whitepaper/team.html:211
+#: templates/team.html:345 templates/whitepaper/team.html:211
 msgid "Aure Gimon"
 msgstr "Aure Gimon"
 
-#: templates/team.html:350 templates/whitepaper/team.html:215
+#: templates/team.html:349 templates/whitepaper/team.html:215
 msgid "Product Designer"
 msgstr "Nhà Thiết kế Sản phẩm"
 
-#: templates/team.html:353
+#: templates/team.html:352
 msgid "Aure is a product designer with 10+ years of\n"
 "                  experience. Prior to joining Origin, Aure worked at multiple\n"
 "                  startups and Fortune 500 companies. In a past life, he was\n"
@@ -2421,15 +2348,15 @@ msgstr "Aure có hơn 10 năm kinh nghiệm thiết kế sản phẩm.\n"
 "                  Aure đã làm việc tại nhiều công ty khởi nghiệp và công ty Fortune 500. \n"
 "                  Trước đó, anh cũng là một Kỹ sư phần mềm."
 
-#: templates/team.html:368 templates/whitepaper/team.html:381
+#: templates/team.html:367 templates/whitepaper/team.html:381
 msgid "Max Unger"
 msgstr "Max Unger"
 
-#: templates/team.html:372 templates/whitepaper/team.html:385
+#: templates/team.html:371 templates/whitepaper/team.html:385
 msgid "Head of Community"
 msgstr "Trưởng nhóm quản lý cộng đồng"
 
-#: templates/team.html:375
+#: templates/team.html:374
 msgid "Before joining Origin, Max helped build\n"
 "                  communities for notable blockchain companies like OKEx. He\n"
 "                  also worked with RedNova, the marketing and incubation entity\n"
@@ -2439,137 +2366,169 @@ msgstr "Trước khi tham gia Origin, Max đã giúp xây dựng\n"
 "                  cũng đã làm việc với RedNova, tổ chức tiếp thị và ươm tạo\n"
 "                  cho Du Capital."
 
-#: templates/team.html:389 templates/whitepaper/team.html:401
+#: templates/team.html:388 templates/whitepaper/team.html:401
 msgid "Daniel Von Fange"
 msgstr "Daniel Von Fange"
 
-#: templates/team.html:394 templates/whitepaper/team.html:406
+#: templates/team.html:393 templates/whitepaper/team.html:406
 msgid "Daniel brings a strong emphasis on security and data analysis to our team. Daniel has earned a reputation for being able to gather massive amounts of data and create dynamic visualizations at lightning speed."
 msgstr "Daniel tập trung vào bảo mật và phân tích dữ liệu. Daniel nổi tiếng trong việc thu thập một lượng lớn dữ liệu và tạo ra hình ảnh trực quan động với tốc độ cực nhanh."
 
-#: templates/team.html:405
+#: templates/team.html:404
 msgid "Mark Mathis"
 msgstr "Mark Mathis"
 
-#: templates/team.html:410
+#: templates/team.html:409
 msgid "Mark Mathis has a broad background in fintech and defi. As a former touring musician, Mark has a particular interest in seeing artists compensated fairly for their work through decentralized channels."
 msgstr "Mark Mathis có kiến thức chuyên sâu về fintech và defi. Là một cựu nhạc sĩ lưu diễn, Mark đặc biệt quan tâm đến việc các nghệ sĩ được đền đáp xứng đáng với công việc của họ thông qua các kênh phi tập trung."
 
-#: templates/team.html:427
+#: templates/team.html:420
+msgid "William Tong"
+msgstr ""
+
+#: templates/team.html:425
+msgid "William Tong was a real estate broker before stumbling into the world of NFTs. He quickly built a reputation as a connector and community builder on the Clubhouse app and within the broader NFT collector community.  "
+msgstr ""
+
+#: templates/team.html:435
+msgid "Chase Colman"
+msgstr ""
+
+#: templates/team.html:437
+msgid "Project Manager"
+msgstr ""
+
+#: templates/team.html:440
+msgid "Chase comes from creative and marketing agency life in Los Angeles. She’s managed projects and accounts for clients like YouTube, W Hotels, and Stitch Fix. She's now in charge of creator relationship management at Origin."
+msgstr ""
+
+#: templates/team.html:451
+msgid "You?"
+msgstr ""
+
+#: templates/team.html:453
+msgid "We're hiring!"
+msgstr ""
+
+#: templates/team.html:456
+msgid "We are a distributed team with employees all over the world. We have a fast-paced bias-to-action culture and a really big vision for bringing crypto mainstream. Check out our <a href='https://angel.co/originprotocol/jobs'>open-positions on AngelList</a>."
+msgstr ""
+
+#: templates/team.html:473
 msgid "Community team"
 msgstr "Nhóm cộng đồng"
 
-#: templates/team.html:437 templates/whitepaper/team.html:435
+#: templates/team.html:483 templates/whitepaper/team.html:435
 msgid "Zoe Hoang"
 msgstr "Zoe Hoang"
 
-#: templates/team.html:445 templates/whitepaper/team.html:443
+#: templates/team.html:491 templates/whitepaper/team.html:443
 msgid "Aaron Faulkner"
 msgstr "Aaron Faulkner"
 
-#: templates/team.html:453 templates/whitepaper/team.html:451
+#: templates/team.html:499 templates/whitepaper/team.html:451
 msgid "Moisés Sosa"
 msgstr "Moisés Sosa"
 
-#: templates/team.html:461 templates/whitepaper/team.html:459
+#: templates/team.html:507 templates/whitepaper/team.html:459
 msgid "Kevin Lee"
 msgstr "Kevin Lee"
 
-#: templates/team.html:469 templates/whitepaper/team.html:467
+#: templates/team.html:515 templates/whitepaper/team.html:467
 msgid "Danil Myakin"
 msgstr "Danil Myakin"
 
-#: templates/team.html:477 templates/whitepaper/team.html:475
+#: templates/team.html:523 templates/whitepaper/team.html:475
 msgid "Joseph Stewart"
 msgstr "Joseph Stewart"
 
-#: templates/team.html:485 templates/whitepaper/team.html:483
+#: templates/team.html:531 templates/whitepaper/team.html:483
 msgid "Erkan Ciftci"
 msgstr "Erkan Ciftci"
 
-#: templates/team.html:493 templates/whitepaper/team.html:491
+#: templates/team.html:539 templates/whitepaper/team.html:491
 msgid "Stefano Terenzi"
 msgstr "Stefano Terenzi"
 
-#: templates/team.html:501 templates/whitepaper/team.html:499
+#: templates/team.html:547 templates/whitepaper/team.html:499
 msgid "Zizen Chang"
 msgstr "Zizen Chang"
 
-#: templates/team.html:509 templates/whitepaper/team.html:507
+#: templates/team.html:555 templates/whitepaper/team.html:507
 msgid "Lee Gwangmyeong"
 msgstr "Lee Gwangmyeong"
 
-#: templates/team.html:521
+#: templates/team.html:567
 msgid "Advisors"
 msgstr "Nhà cố vấn"
 
-#: templates/team.html:531
-msgid "Addison Huegel"
-msgstr "Addison Huegel"
-
-#: templates/team.html:535
-msgid "PR"
-msgstr "PR"
-
-#: templates/team.html:544
+#: templates/team.html:578
 msgid "Melody He"
 msgstr "Melody He"
 
-#: templates/team.html:548
-msgid "International BD"
-msgstr "Phát triển Kinh doanh Quốc tế"
+#: templates/team.html:582
+msgid "Spartan Group"
+msgstr ""
 
-#: templates/team.html:561 templates/team.html:574
-msgid "Advisor"
-msgstr "Cố vấn"
+#: templates/team.html:595 templates/team.html:608
+#: templates/vc-firms/usa.html:5
+msgid "Pantera Capital"
+msgstr "Pantera Capital"
 
-#: templates/team.html:570
+#: templates/team.html:604
 msgid "Joey Krug"
 msgstr "Joey Krug"
 
-#: templates/team.html:583
-msgid "Andrew Hyde"
-msgstr "Andrew Hyde"
+#: templates/team.html:617
+msgid "Andrew Kang"
+msgstr ""
 
-#: templates/team.html:587 templates/whitepaper/sidebar.html:48
-#: templates/whitepaper/team.html:427
-msgid "Community"
-msgstr "Cộng đồng"
+#: templates/team.html:621
+msgid "Mechanism Capital"
+msgstr ""
 
-#: templates/team.html:598
+#: templates/team.html:634
+msgid "3LAU"
+msgstr ""
+
+#: templates/team.html:643 templates/team.html:647
+msgid "Paris Hilton"
+msgstr ""
+
+#: templates/team.html:658
 #, python-format
 msgid "100%% open-source."
 msgstr "100% mã nguồn mở."
 
-#: templates/team.html:599
+#: templates/team.html:659
 msgid " contributors."
 msgstr "người đóng góp."
 
-#: templates/team.html:618
+#: templates/team.html:678
 msgid "Want to contribute?"
 msgstr "Bạn muốn đóng góp?"
 
-#: templates/team.html:623
+#: templates/team.html:683
 msgid "Visit our GitHub Repository"
 msgstr "Ghé thăm GitHub Repository của chúng tôi"
 
-#: templates/team.html:625
+#: templates/team.html:685
 msgid "Join our #engineering channel on Discord"
 msgstr "Tham gia kênh #enginerring của chúng tôi tại Discord"
 
-#: templates/team.html:636
+#: templates/team.html:696
 msgid "Interested in working at Origin?"
 msgstr "Quan tâm tới việc làm tại Origin?"
 
-#: templates/team.html:640
+#: templates/team.html:700
 msgid "We are a distributed team and are hiring all around the\n"
 "            world."
 msgstr "Chúng tôi là một đội ngũ phân tán \n"
 "            và đang tuyển dụng trên toàn thế giới."
 
-#: templates/team.html:647
-msgid "View job posts"
-msgstr "Xem các bài viết tuyển dụng"
+#: templates/team.html:707
+msgid "View open positions"
+msgstr ""
 
 #: templates/tokens.html:3
 msgid "Origin Protocol - Buy Origin Tokens (OGN)"
@@ -2663,6 +2622,22 @@ msgstr "Cho phép thương mại ngang hàng thực sự"
 msgid "To be Announced"
 msgstr "Sẽ sớm được công bố"
 
+#: templates/components/drops.html:3
+msgid "Upcoming Drops"
+msgstr ""
+
+#: templates/components/drops.html:21
+msgid "No Drops Scheduled"
+msgstr ""
+
+#: templates/components/drops.html:26
+msgid "Past Drops"
+msgstr ""
+
+#: templates/components/drops.html:44
+msgid "No Past Drops"
+msgstr ""
+
 #: templates/litepaper/conclusion.html:2 templates/litepaper/sidebar.html:38
 msgid "Conclusion"
 msgstr "Kết luận"
@@ -2678,8 +2653,8 @@ msgid "Executive Summary"
 msgstr "Tóm tắt"
 
 #: templates/litepaper/exec-summary.html:4
-msgid "Origin’s mission is to bring peer-to-peer commerce (NFTs) and decentralized finance (DeFi) to the masses."
-msgstr "Sứ mệnh của Origin là mang thương mại ngang hàng (NFT) và tài chính phi tập trung (DeFi) đến với phần đông người dùng."
+msgid "Origin’s mission is to bring non-fungible tokens (NFTs) and decentralized finance (DeFi) to the masses."
+msgstr ""
 
 #: templates/litepaper/exec-summary.html:7
 msgid "After three years of building consumer-friendly products in the blockchain space, we’ve learned many valuable lessons."
@@ -2690,8 +2665,8 @@ msgid "The first significant wave of users of decentralized commerce application
 msgstr "Làn sóng quan trọng người dùng đầu tiên sử dụng các ứng dụng thương mại phi tập trung sẽ là những người đang tìm kiếm trải nghiệm hoặc sản phẩm mà thị trường tập trung không có. Nhiều người trong số những người dùng ban đầu này sẽ là những người sử dụng thành thạo tiền điện tử. Danh mục sản phẩm tiềm năng đầu tiên là Non-Fungible Token (NFT). NFT không chỉ đại diện cho các bộ sưu tập kỹ thuật số mà có thể tạo ra những trải nghiệm hoàn toàn mới cho người sáng tạo và cộng đồng."
 
 #: templates/litepaper/exec-summary.html:13
-msgid "NFTs can function as digital collectible. Further, they can be  tokenized representations of physical goods and collectibles, unlock other digital content, and act as access tokens to digital or in-person experiences. NFTs can be used for a wide array of financial applications and use cases. The design space for NFTs is nearly unlimited and represents an exciting paradigm shift for blockchain technology."
-msgstr "NFT có thể hoạt động như một bộ sưu tập kỹ thuật số. Hơn nữa, chúng có thể được mã hóa đại diện cho hàng hóa vật chất và đồ sưu tầm, mở khóa nội dung kỹ thuật số khác và hoạt động như các token có quyền truy cập vào trải nghiệm kỹ thuật số hoặc trải nghiệm trực tiếp. NFT có thể được sử dụng cho một loạt các ứng dụng tài chính và các ứng dụng khác. Không gian thiết kế cho NFT gần như không giới hạn và đại diện cho lớp ứng dụng khác của công nghệ blockchain."
+msgid "NFTs can function as digital collectibles. Further, they can be  tokenized representations of physical goods and collectibles, unlock other digital content, and act as access tokens to digital or in-person experiences. NFTs can be used for a wide array of financial applications and use cases. The design space for NFTs is nearly unlimited and represents an exciting paradigm shift for blockchain technology."
+msgstr ""
 
 #: templates/litepaper/exec-summary.html:16
 msgid "Decentralized Finance (DeFi) is the gateway to unlocking massive new financial opportunities for lenders, creditors, and liquidity providers. Over <a href='https://defipulse.com/' target='_blank' rel='noopener noreferrer'>$40B of value</a> is locked in DeFi protocols, and this number is expected to grow by multiple orders of magnitude in the next few years. However, we are still in the very early innings of the DeFi movement."
@@ -2746,452 +2721,404 @@ msgstr "Tương tự, chúng tôi tin rằng cần có nhiều lý do thuyết p
 msgid "To realize our ambitious vision, we will continue to develop and grow the <a href='https://ousd.com/' target='_blank' rel='noopener noreferrer'>Origin Dollar (OUSD)</a> as a critical DeFi building block and money lego that is highly composable. It will power multiple mainstream consumer and merchant applications in the near future. We anticipate millions of users to be using applications powered by OUSD in the next few years without necessarily even realizing they are using an underlying DeFi product."
 msgstr "Để hiện thực hóa tầm nhìn đầy tham vọng của mình, chúng tôi sẽ tiếp tục phát triển và cải tiến <a href='https://ousd.com/' target='_blank' rel='noopener noreferrer'>Origin Dollar (OUSD)</a> như trở thành 1 yếu tố quan trọng trong DeFi. Nó sẽ trở thành phương thức thanh toán cho nhiều ứng dụng tiêu dùng phổ biến trong tương lai gần. Chúng tôi dự đoán hàng triệu người dùng sẽ sử dụng các ứng dụng được cung cấp bởi OUSD trong vài năm tới và nó đơn giản tới mức họ không hề nhận ra rằng họ đang sử dụng 1 sản phẩm DeFi."
 
-#: templates/litepaper/platform.html:2 templates/litepaper/platform.html:154
-#: templates/litepaper/sidebar.html:16
+#: templates/litepaper/platform.html:2 templates/litepaper/sidebar.html:16
 msgid "Origin Commerce Platform"
 msgstr "Nền tảng thương mại Origin"
 
 #: templates/litepaper/platform.html:4
-msgid "Throughout 2020, we built and iterated upon Origin’s flagship commerce platform, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>. Dshop is a completely open-source alternative to Shopify, and all its core features are free to use. Today, we’ve had hundreds of merchants sign up to use Dshop, including dozens of name brand cryptocurrency companies such as Brave, Solana, and Kyber Network."
-msgstr "Trong suốt năm 2020, chúng tôi liên tục xây dựng và cải tiến nền tảng thương mại hàng đầu của Origin, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>. Dshop là một giải pháp mã nguồn mở thay thế Shopify. Người dùng không cần trả khoản phí nào (ngoại trừ khí gas cho Ethereum) khi sử dụng Dshop. Tính tới thời điểm hiện tại, chúng tôi đã có hàng trăm người bán đăng ký sử dụng Dshop, trong đó có cả hàng chục công ty tiền điện tử có thương hiệu như Brave, Solana và Kyber Network."
+msgid "Throughout 2020, we built and iterated upon Origin’s flagship commerce platform, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>, which is used by hundreds of merchants including Brave and Kyber Network and supported by marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a>."
+msgstr ""
 
 #: templates/litepaper/platform.html:6
-msgid "Further, we announced marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a> to enable our merchant partners to launch completely decentralized storefronts on these iconic cloud computing platforms. We are working with both companies to promote Dshop to additional merchants with co-marketing initiatives. We are also working with the Google team to make Dshop’s blockchain commerce data more readily accessible in Google Data Studio."
-msgstr "Hơn nữa, chúng tôi đã công bố quan hệ đối tác hợp tác với <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> và <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a>, cho phép các đối tác của chúng tôi khởi chạy các giao diện cửa hàng hoàn toàn phi tập trung trên các nền tảng điện toán đám mây mang tính biểu tượng này. Chúng tôi đang làm việc với cả hai công ty để quảng bá Dshop cho những người bán khác bằng phương thức đồng marketing. Chúng tôi cũng đang làm việc trực tiếp với đội ngũ Google để làm cho dữ liệu thương mại blockchain của Dshop dễ dàng truy cập hơn trong Google Data Studio."
+msgid "While we continue to see increased usage of Dshop, we are hyper focused on crypto-specific commerce verticals--most prominently non-fungible tokens (NFTs)--and are hard at work developing a fully-featured NFT platform."
+msgstr ""
 
 #: templates/litepaper/platform.html:7
-msgid "We’ve also made OUSD a supported payment option on all our Dshops to begin turning the flywheel for OUSD adoption by merchants."
-msgstr "Chúng tôi cũng đã đưa OUSD trở thành tùy chọn thanh toán được hỗ trợ trên tất cả các Dshops, là bước đệm giúp OUSD tiếp cận với doanh nghiệp và người dùng."
+msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set an all-time record for gross sales in a single NFT drop at nearly $11.7M."
+msgstr ""
 
 #: templates/litepaper/platform.html:8
-msgid "While we continue to see increased usage of Dshop, we believe that introducing new killer use cases that are crypto-centric will rocket Dshop adoption to new heights."
-msgstr "Trong khi Dshop vẫn ngày càng được sử dụng rộng rãi, chúng tôi tin rằng những ứng dụng tiên tiến tập trung vào tiền điện tử sẽ thúc đẩy việc áp dụng Dshop lên một tầm cao mới."
-
-#: templates/litepaper/platform.html:9
-msgid "Our initial focus on creating features and tackling verticals that incumbents like Shopify and Woo Commerce cannot compete in will center on non-fungible tokens (NFTs). We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set an all-time record for gross sales in a single NFT drop at nearly $11.7M."
-msgstr "Trọng tâm ban đầu của chúng tôi trong việc tạo ra các tính năng và giải quyết các vấn đề mà các công ty truyền thống như Shopify và Woo Commerce không thể cạnh tranh sẽ tập trung vào token không thể thay thế (NFT). Chúng tôi tin rằng NFT là công nghệ mặc dù mới ra đời nhưng tính đột của nó sẽ đưa các sản phẩm thương mại tiền điện tử của chúng tôi đến với hàng triệu, hàng trăm triệu, người dùng trong vài năm tới. Vào thời điểm viết bài, NFT Launchpad của Origin đã lập kỷ lục về tổng doanh thu trong 1 đợt mở bán NFT đạt 11,7 triệu đô."
-
-#: templates/litepaper/platform.html:10
 msgid "In January of 2021, NFTs accounted for a record <a href='https://decrypt.co/56998/crypto-art-sales-on-ethereum-reach-a-record-80-million' target='_blank' rel='noopener noreferrer'>$80M of transaction volume</a>. It is clear that NFT sales are growing at an exponential rate and represent the fastest growing opportunity for crypto-centric commerce."
 msgstr "Vào tháng 1 năm 2021, NFTs đạt kỉ lục <a href='https://decrypt.co/56998/crypto-art-sales-on-ethereum-reach-a-record-80-million' target='_blank' rel='noopener noreferrer'>$ 80 triệu khối lượng giao dịch</a>. Rõ ràng doanh số NFT đang tăng với tốc độ cấp số nhân và đại diện cho cơ hội phát triển nhanh nhất cho thương mại sử dụng tiền điện tử làm trung tâm."
 
-#: templates/litepaper/platform.html:12
+#: templates/litepaper/platform.html:10
 msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. At Origin, we believe NFTs are the crypto-centric building blocks that bridge fungible payment currencies like OUSD to multiple billion dollar opportunities."
 msgstr "Tuy nhiên, chúng tôi tin rằng phần lớn mọi người đang hiểu sau theo cách NFT chỉ đơn giản là nghệ thuật kỹ thuật số khan hiếm. Đội ngũ Origin chúng tôi tin rằng NFT là \"khối xây dựng\" tập trung vào tiền điện tử, cầu nối các loại tiền tệ thanh toán có thể thay thế như OUSD với các cơ hội hàng tỷ Đô la."
 
-#: templates/litepaper/platform.html:13
+#: templates/litepaper/platform.html:11
 msgid "Origin’s NFT Launchpad will redefine commerce in several key verticals."
 msgstr "NFT Launchpad của Origin sẽ định hình lại thương mại theo một số ngành dọc chính."
 
-#: templates/litepaper/platform.html:15
+#: templates/litepaper/platform.html:13
 msgid "NFTs that are redeemable for offline goods"
 msgstr "NFT có thể đổi lấy hàng hoá hiện vật"
 
-#: templates/litepaper/platform.html:16
+#: templates/litepaper/platform.html:14
 msgid "In May 2020, Grammy-winning DJ RAC released his $TAPE NFTs that were redeemable for physical cassette tapes. Little did he know that he would be setting the record for the final sale price of a single cassette tape, as $TAPE tokens redeemable for the cassette tapes eventually cleared $3,000 per token."
 msgstr "Tháng 5/2020, DJ RAC từng đoạt giải Grammy đã phát hành $TAPE NFT, có thể dùng để đổi lấy băng cát-sét. Anh ấy không ngờ rằng, giá cuối cùng của 1 cuốn bằng cát-set đã đạt kỷ lục, mỗi 1 $TAPE - sử dụng để đổi lấy 1 cuốn bằng cát-set đã được mua mới giá 3.000 USD."
 
-#: templates/litepaper/platform.html:17
+#: templates/litepaper/platform.html:15
 msgid "This is just one example of how NFTs have changed the landscape for limited-edition premium products. NFTs that represent physical offline goods can be authenticated on the blockchain. Influencers, artists, creators, and other merchants can now issue NFTs that are both certifiably scarce and representative of valuable physical items."
 msgstr "Đây chỉ là một ví dụ về cách NFT thay đổi hoàn toàn cách thức trao đổi các phiên bản giới hạn. NFT đại diện cho hàng hoá vật lý có thể được xác thực trên blockchain. Những người có ảnh hưởng, nghệ sĩ, người sáng tạo và những người bán khác hiện có thể phát hành NFT vừa khan hiếm vừa có giá trị đại diện cho các mặt hàng vật chất."
 
-#: templates/litepaper/platform.html:18
+#: templates/litepaper/platform.html:16
 msgid "There is an enormous opportunity to use NFTs to power these creator communities. Because NFTs are freely exchangeable on the blockchain, they also inherently create an after-market for limited edition goods. "
 msgstr "NFT tạo ra cơ hội giúp tăng sức mạnh cho các cộng đồng người sáng tạo, bởi NFT có thể trao đổi tự do trên blockchain. Chúng cũng tạo ra một thị trường hậu mãi cho hàng hóa phiên bản giới hạn. "
 
-#: templates/litepaper/platform.html:19
-msgid "One needs only to reference StockX, the premium sneaker marketplace that is currently valued at $2.8 B, to recognize the possibility of NFTs flourishing in many verticals where scarcity and authenticity need to be enforced. Today, the company generates $400M in revenue by taking fees to certify that premium sneakers are legitimate and not fraudulent. Using NFTs that are tied to these sneakers would establish a clear sense of provenance as sneakers are sold from my buyer to the next."
-msgstr "Thử lấy ví dụ StockX, thị trường giày thể thao cao cấp hiện được định giá 2,8 tỷ USD, để thấy được tiềm năng của NFT ở những ngành hàng hoá khan hiếm và cần phải xác minh nguồn gốc hàng hoá. Hiện tại, công ty này tạo ra khoản doanh thu trị giá 400 triệu Đô bằng cách thu phí xác thực nguồn gốc của giày. Sử dụng NFT gắn với những đôi giày thể thao này sẽ cung cấp cơ sở xác thực đáng tin cậy hơn cho người mua lại những đôi giày đó."
+#: templates/litepaper/platform.html:17
+msgid "One needs only to reference StockX, the premium sneaker marketplace that is currently valued at $2.8 B, to recognize the possibility of NFTs flourishing in many verticals where scarcity and authenticity need to be enforced. Today, the company generates $400M in revenue by taking fees to certify that premium sneakers are legitimate and not fraudulent. Using NFTs that are tied to these sneakers would establish a clear sense of provenance as sneakers are sold from one buyer to the next."
+msgstr ""
 
-#: templates/litepaper/platform.html:20
+#: templates/litepaper/platform.html:18
 msgid "In another manifestation of using NFTs connected to offline products, the limited goods do not need to be redeemed. For example, a collector can purchase an NFT that entitles them with the rights to redeem that NFT for fine art, luxury handbags, or other products but can store that product with the original manufacturer. Redemption can happen at any point in the future. Again, because NFTs are exchangeable, collectors could invest in luxury items with the hopes of these items appreciating in value. However, they no longer need to take physical delivery and can simply sell the NFTs representing the items in an after market to profit from their investments."
 msgstr "Ứng dụng khác của NFT là đại diện cho hàng hoá vật lý. Ví dụ: một nhà sưu tập có thể mua một NFT cho phép họ có quyền đổi NFT đó để lấy đồ mỹ nghệ, túi xách sang trọng hoặc các sản phẩm khác nhưng không cần phải sở hữu hiện vật ngay tại thời điểm mua. Người nắm giữ NFT có thể đổi lấy hàng hoá bất kỳ lúc nào trong tương lai. Vì tính chất có thể dễ dàng trao đổi, các nhà sưu tập có thể đầu tư vào NFT của mặt hàng mà họ cho là sẽ tăng giá trong tương lai và có thể bán lại 1 cách dễ dàng."
 
-#: templates/litepaper/platform.html:21
+#: templates/litepaper/platform.html:19
 msgid "Taking this one model one step further, NFT-powered commerce can generate revenue even before products are developed or manufactured. In the web 2.0 world, we saw how crowdfunding platforms like Kickstarter and Gofundme were able to generate demand for creator projects. In the web 3.0, NFTs can be a better form to issue ownership of future redeemable products. Once again, because these NFTs are freely exchangeable they provide backers the ability to resell their ownership even before the projects are completed."
 msgstr "Ngoài ra, NFT giúp tạo ra doanh thu ngay cả khi sản phẩm đang ở dạng ý tưởng hoặc đang trong quá trình sản xuất. Trong thế giới web 2.0, chúng tôi đã thấy được cách các nền tảng huy động vốn cộng đồng như Kickstarter và Gofundme, tạo ra nhu cầu cho các dự án. Với web 3.0, NFT có được sử dụng để quyền sở hữu các sản phẩm trong tương lai. Một lần nữa, nhờ tính chất có thể tự do trao đổi mà NFT cung cấp khả năng bán lại quyền sở hữu ngay cả khi sản phẩm chưa hoàn thành."
 
-#: templates/litepaper/platform.html:24
+#: templates/litepaper/platform.html:22
 msgid "NFTs that access digital content"
 msgstr "NFT truy cập nội dung kỹ thuật số"
 
-#: templates/litepaper/platform.html:25
+#: templates/litepaper/platform.html:23
 msgid "We intend to release NFT features that also provide holders access to digital content and services. For example, content providers can replace paywall subscriptions with NFT ownership. Users that have purchased NFTs can unlock premium articles, unreleased music, premium video content, or special features in social and mobile games."
 msgstr "Chúng tôi dự định phát hành các tính năng NFT, cung cấp cho chủ sở hữu quyền truy cập vào nội dung và dịch vụ kỹ thuật số. Ví dụ: nhà cung cấp nội dung có thể thay việc thu phí thường kỳ bằng bằng quyền sở hữu NFT. Người dùng đã mua NFT có thể mở khóa các bài báo cao cấp, nhạc chưa phát hành, nội dung video cao cấp hoặc các tính năng đặc biệt trong các trò chơi."
 
-#: templates/litepaper/platform.html:26
+#: templates/litepaper/platform.html:24
 msgid "Here are a few examples of how this might work. Today, Patreon influencers allow their super fans to access unique content through the platform. The company generates $50M of revenue and is currently valued at $1.2B. However, these subscriptions and individual payments are tied to unique users. In tomorrow’s world, creators can issue NFTs that unlock special video or music content instead."
 msgstr "Dưới đây là một vài ví dụ về cách tính năng này có thể hoạt động. Patreon cho phép những người hâm mộ truy cập nội dung độc đáo của những người sáng tạo nội dung. Công ty tạo ra doanh thu 50 triệu Đô và hiện được định giá 1,2 tỷ Đô. Tuy nhiên, việc đăng ký tài khoản và trả phí bị ràng sẽ chỉ được sử dụng bởi 1 người dùng duy nhất (chủ tài khoản). Trong tương lai, người sáng tạo nội dung có thể phát hành NFT, cho phép mở khóa nội dung âm nhạc hoặc video đặc biệt."
 
-#: templates/litepaper/platform.html:28
+#: templates/litepaper/platform.html:26
 msgid "NFTs that are access tokens"
 msgstr "NFT là token truy cập"
 
-#: templates/litepaper/platform.html:29
+#: templates/litepaper/platform.html:27
 msgid "A third opportunity that is a multi-billion dollar opportunity in NFT-powered commerce lies in experiential commerce. NFTs that are certifiable on the blockchain can guarantee authenticity of tickets for professional sports, concerts, and other live performances. This reduces the risk of fraudulent tickets and also maintains clear provenance of ticket resales."
 msgstr "Cơ hội thứ ba trị giá hàng tỷ Đô khi thương mại ứng dụng NFT là thương mại trải nghiệm. Các NFT được chứng nhận trên blockchain có thể đảm bảo tính xác thực của vé xem thi đấu thể thao chuyên nghiệp, buổi hòa nhạc và các buổi biểu diễn trực tiếp khác. Điều này làm giảm nguy cơ gian lận vé và dễ xác nhận nguồn gốc khi thực hiện giao dịch bán lại."
 
-#: templates/litepaper/platform.html:30
+#: templates/litepaper/platform.html:28
 msgid "Going back to the Patreon example, a creator NFT may enable a user to get a 1-on-1 video chat with their favorite celebrity. Another user can purchase a premium NFT that grants them backstage access to their favorite musicians concerts for life."
 msgstr "Quay lại ví dụ về Patreon, người tạo NFT có thể cho phép người dùng trò chuyện video 1-1 với người nổi tiếng mà họ yêu thích. Người dùng có thể mua NFT cao cấp, cho phép họ được tới khu vực hậu trường để xem các buổi hòa nhạc của nhạc sĩ mà họ hâm mộ."
 
-#: templates/litepaper/platform.html:33 templates/litepaper/sidebar.html:19
-msgid "Dshop NFT Launchpad"
-msgstr "Dshop NFT Launchpad"
-
-#: templates/litepaper/platform.html:34
+#: templates/litepaper/platform.html:32
 msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). The Dshop NFT Launchpad gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs."
 msgstr "Chìa khóa để mở khóa giá trị lĩnh vực đặt crypto làm trọng tâm thông qua NFT là biến NFT trở nên đơn gian với người sáng tạo nội dung. Ngoài ra, trái ngược với một số bên đang hoạt động trong lĩnh vực NFT Nifty Gateway, chúng tôi tin rằng người sáng tạo nên sở hữu thương hiệu và có quyền kiểm soát trực tiếp đối với các mô hình đấu giá (ví dụ: cơ chế đấu giá khác nhau hoặc định giá theo từng cấp). Dshop NFT Launchpad cho phép người sáng tạo và những người có ảnh hưởng quyền kiểm soát trực tiếp hơn đối với nội dung, các sản phẩm và trải nghiệm của họ. Tương tự như việc nhiều nhãn hàng, doanh nghiệp đã chọn Shopify thay vì bán hàng trên 1 marketplace chung, không cho phép xây dựng thương hiệu tùy chỉnh và mối quan hệ trực tiếp với khách hàng. Chúng tôi tin rằng mô hình tương tự sẽ thành công khi áp dụng cho NFT."
 
+#: templates/litepaper/platform.html:33
+msgid "All three aforementioned NFT-powered commerce opportunities are already supported by our platform. Almost $11.7M of gross sales were generated using Origin’s commerce platform in our inaugural campaign, a sum that smashed the previous record for a single NFT collection. Coverage of this record breaking event reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
+msgstr ""
+
+#: templates/litepaper/platform.html:34
+msgid "Similarly, with Origin’s ever-deepening relationship with Brave, we enabled them to sell their NFTs on their existing merch store. Their entire first collection sold out in minutes. We anticipate additional NFT-centric commerce opportunities with the exponentially growing browser company that already boasts 20M monthly active users (MAU)."
+msgstr ""
+
 #: templates/litepaper/platform.html:35
-msgid "All three aforementioned NFT-powered commerce opportunities are already supported by our platform. These use cases were highlighted in our recent NFT successful Dshop NFT Launchpad collaboration with world-famous DJ and crypto-currency influencer 3LAU who is ranked #93 on CoinTelegraph’s list of most influential people in cryptocurrency in 2020. Almost $11.7M of gross sales were generated using Origin’s commerce platform in our inaugural campaign, a sum that smashed the previous record for a single NFT collection. Coverage of this record breaking event reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
-msgstr "Tất cả ba cơ hội thương mại do NFT mang lại nói trên đều đã được nền tảng của chúng tôi hỗ trợ. Tính khả thi được chứng minh thông qua lần hợp tác thành công gần đây giữa Dshop NFT Launchpad với DJ nổi tiếng thế giới cũng đồng thời người có ảnh hưởng trong lĩnh vực tiền điện tử - 3LAU - được xếp hạng #93 trong danh sách 100 người có ảnh hưởng nhất đến tiền điện tử theo CoinTelegraph năm 2020. Với doanh số thu gần 11,7 tỉ USD, NFT 3LAU trên Origin Launchpad đã phá vỡ kỷ lục trước đó về doanh số thu được từ bán NFT cho một bộ sưu tập NFT duy nhất. Tin tức về sự kiện phá kỷ lục này đã được chia sẻ trên phương tiện truyền thông chính thống lớn như <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> và <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
-
-#: templates/litepaper/platform.html:36
-msgid "Similarly, with Origin’s ever-deepening relationship with Brave, we enabled them to sell their NFTs on their existing Dshop. Their entire first collection sold out in minutes. We anticipate additional NFT-centric commerce opportunities with the exponentially growing browser company that already boasts 20M monthly active users (MAU)."
-msgstr "Ngoài ra, chúng tôi hỗ trợ Brave bán NFT trên Dshop hiện có của họ. Toàn bộ bộ sưu tập đầu tiên của họ đã được bán hết trong vài phút. Chúng tôi tin rằng nhiều cơ hội hợp tác NFT khác với công ty chuyên về cung cấp nền tảng trình duyệt sở hữu 20 triệu người dùng thường xuyên hàng tháng này trong tương lai."
-
-#: templates/litepaper/platform.html:37
 msgid "In the near future, we intend to form additional partnerships with additional mainstream influencers and iconic brands to power their NFT commerce initiatives. We believe there is a huge untapped market for monetizing premium, limited-edition online and offline goods and services through our latest NFT product upgrades to the Origin Platform."
 msgstr "Trong tương lai gần, Origin dự kiến sẽ thiết lập thêm nhiều quan hệ đối tác với những người có tầm có ảnh hưởng và các thương hiệu lớn để hỗ trợ các ý tưởng ứng dung NFT. Chúng tôi tin rằng thị trường hàng hóa và dịch vụ trực tuyến và ngoại tuyến phiên bản giới hạn và cao cấp thông qua NFT là 1 thị trường mới đầy tiềm năng."
 
-#: templates/litepaper/platform.html:41 templates/litepaper/sidebar.html:22
-msgid "NFT Marketplace"
-msgstr "NFT Marketplace"
+#: templates/litepaper/platform.html:39
+msgid "Origin NFT Marketplace"
+msgstr ""
 
-#: templates/litepaper/platform.html:42
+#: templates/litepaper/platform.html:40
 msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on the [Origin NFT Auction Platform] as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology and we are the leaders in this field. The Origin Marketplace protocol was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
 msgstr "Doanh số bán hàng trên thị trường thứ cấp rất quan trọng đối với việc khám phá giá thực sự của NFT và sự trưởng thành của thị trường non trẻ này. Chúng tôi dự định xây dựng một marketplace phục vụ giao dịch trên thị trường thứ cấp cho tất cả các NFT được khởi chạy trên [Nền tảng đấu giá NFT Origin] cũng như NFT từ các nền tảng và marketplace khác. Nhóm Origin đã có hơn 4 năm kinh nghiệm xây dựng công nghệ marketplace ngang hàng và chúng tôi là những người đi đầu trong lĩnh vực này. Giao thức Origin Marketplace đã được ra mắt trên Ethereum vào năm 2018. Origin đặt mục tiêu trở thành người dẫn đầu thị trường NFT và thu hút doanh số NFT từ nhà sáng tạo mở bán NFT trên Origin cũng như những người sáng tạo khởi chạy độc lập hoặc chạy trên nền tảng khác."
 
-#: templates/litepaper/platform.html:43
+#: templates/litepaper/platform.html:41
 msgid "NFTs being based on a common set of decentralized technology standards makes building a marketplace that can serve the entire NFT ecosystem possible. Any moats deployed by other NFT marketplace operators will be quickly rendered ineffective as they are against the spirit of decentralization. Another important aspect to our platform is that these secondary marketplaces can be run and curated by the NFT creators themselves. Gallerists and artists have always cared deeply about presentation and curation as it can have a strong impact on the price of their assets. Letting creators control every aspect of their NFT from creation to secondary market sale is a key differentiator to Origin’s NFT platform over more generic NFT marketplaces. Fans of specific creators and artists will also appreciate going direct to the source instead of browsing through unrelated listings on a generalized marketplace."
 msgstr "Các thị trường thứ cấp xây dựng trên Origin sẽ được điều hành và quản lý bởi chính những người tạo NFT. Các nhà trưng bày và nghệ sĩ luôn quan tâm sâu sắc đến bố cục và nội dung vì nó có thể tác động mạnh đến giá tài sản của họ. Việc cho phép người sáng tạo kiểm soát mọi khía cạnh của NFT của mình từ lúc hình thành ra đến khi bán ra thị trường thứ cấp là điểm khác biệt chính giữa nền tảng Origin cung cấp và các nền tảng khác. Người hâm mộ và nghệ sĩ ưa chuộng trải nghiệm trực tiếp hơn là thông qua các kênh marketplace chung hiện đang có trên thị trường."
 
-#: templates/litepaper/platform.html:44
+#: templates/litepaper/platform.html:42
 msgid "Another reason creators should be excited about custom NFT marketplaces is that it allows them to better monetize their creations over a longer period of time. Artists will experience increased value capture from programmatic transaction fees attached to NFTs they create. This means that any secondary market sales will generate revenue for NFT creators in perpetuity. Previously, musical artists would only capture a small portion of this value through royalties and fine artists would capture no value from secondary sales."
 msgstr "Một lý do khác khiến người sáng tạo hứng thú về NFT marketplace có thể tùy chỉnh là nó cho phép họ kiếm được thu nhập trong thời gian dài. Các nghệ sĩ sẽ thu được 1 khoản phí giao dịch khi NFT của họ được giao dịch qua lại. Trước đây, các nghệ sĩ âm nhạc sẽ chỉ thu được một phần nhỏ giá trị này thông qua tiền bản quyền và không có 1 khoản thu nào từ các giao dịch thứ cấp."
 
-#: templates/litepaper/platform.html:45
+#: templates/litepaper/platform.html:43
 msgid "Not only are secondary market sales important for price discovery, transaction fees from these sales will be one of the key revenue drivers for the [Origin NFT product] in the future. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
 msgstr "Ngoài việc mang lại lợi ích cho những người sáng tạp nội dung, phí giao dịch từ các giao dịch trên thị trường thứ cấp sẽ là một trong những nguồn doanh thu chính của [sản phẩm Origin NFT] trong tương lai. Khối lượng giao dịch trên thị trường thứ cấp sẽ lớn hơn rất nhiều so với đợt bán ban đầu và dự kiến sẽ tăng mạnh trong tương lai. Origin hướng tới xây dựng một nền tảng và hệ sinh thái NFT đầy đủ tính năng. Nền tảng NFT end-to-end sẽ dẫn đầu trong lĩnh vực NFT, mang lại giá trị cho người dùng, người tạo nội dung NFT và người nắm giữ OGN."
 
-#: templates/litepaper/platform.html:49 templates/litepaper/sidebar.html:25
+#: templates/litepaper/platform.html:47 templates/litepaper/sidebar.html:25
 msgid "The Origin Dollar (OUSD)"
 msgstr "Origin Dollar (OUSD)"
 
-#: templates/litepaper/platform.html:50
+#: templates/litepaper/platform.html:48
 msgid "In 1999, Yu Pan, one of PayPal’s original co-founders conceived of creating “the new world currency”, complete with interest yielding strategies and debit cards without having to connect to traditional banking systems. Several pivots and an eBay acquisition later, PayPal dropped its ambitions in this area."
 msgstr "Năm 1999, Yu Pan, kỹ sư Rd của Origin, cùng những người đồng sáng lập PayPal, đã đưa ra ý tưởng về việc tạo ra “tiền tệ thế giới mới” với đầy đủ chiến lược sinh lãi và thẻ ghi nợ mà không cần phải kết nối với các hệ thống ngân hàng truyền thống. Vì một số thay đổi và sau đó dược mua lại bởi eBay, PayPal đã từ bỏ tham vọng trong lĩnh vực này."
 
-#: templates/litepaper/platform.html:51
+#: templates/litepaper/platform.html:49
 msgid "Two decades later, Yu Pan, Origin’s founding engineer, and the rest of the Origin team have finally launched this new world currency."
 msgstr "Hai thập kỷ sau, Yu Pan, kỹ sư sáng lập của Origin, và các thành viên của nhóm Origin đã ra mắt loại tiền tệ thế giới mới này."
 
-#: templates/litepaper/platform.html:52
+#: templates/litepaper/platform.html:50
 #, python-format
-msgid "The Origin Dollar is the first cryptocurrency stablecoin that automatically and passively earns yield while sitting in cryptocurrency wallets. Users do not need to stake/unstake or provide liquidity to earn yields across underlying DeFi protocols. While past performance does not guarantee future results, to date OUSD has generated annualized yields between 20%% and 150%% at any given time."
-msgstr "Origin Dollar là stablecoin đầu tiên kiếm được lợi nhuận một cách tự động và thụ động trong ngay cả khi được giữ trong ví. Người dùng không cần stake hay cung cấp thanh khoản để kiếm được lợi nhuận. Mặc dù lãi suất thay đổi tuỳ theo thời điểm, nhưng tính tới hiện tại lãi suất theo năm của OUSD giao động từ 20%% đến 150%%."
+msgid "The Origin Dollar is the first cryptocurrency stablecoin that automatically and passively provides users with the opportunity to earn yield while sitting in cryptocurrency wallets. Users do not need to stake/unstake or provide liquidity to earn yields across underlying DeFi protocols. While past performance does not guarantee future results, to date OUSD has generated, through the underlying DeFi protocols, annualized yields between 20%% and 150%% at any given time."
+msgstr ""
 
-#: templates/litepaper/platform.html:53
-msgid "OUSD is a superior DeFi product for the masses. By removing all the complexities normally associated with earning fees through lending or supplying liquidity to automated market makers (AMMs), OUSD is highly accessible to users who are new to cryptocurrency technologies. Today, users need only to purchase OUSD on centralized exchanges or decentralized swap sites like Uniswap/Sushiswap to begin earning yield at staggering rates immediately. Alternatively, users can mint OUSD with their existing stablecoins (DAI, USDT, USDC currently) on the <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
-msgstr "OUSD là một sản phẩm DeFi cao cấp dành cho phần lớn người dùng. Bằng cách loại bỏ tất cả những bước phức tạp và khoản phí đắt đỏ khi cho vay hoặc cung cấp thanh khoản cho các nhà tạo lập thị trường tự động (AMM) để kiếm lãi, người dùng OUSD chỉ cần mua OUSD trên các sàn giao dịch tập trung hoặc swap trên Uniswap / Sushiswap, giữ nó trong ví và hưởng các mức lãi suất cạnh tranh ngay lập tức. Ngoài ra, người dùng có thể mua OUSD bằng các stablecoin (DAI, USDT, USDC) trên <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
+#: templates/litepaper/platform.html:51
+msgid "OUSD is a superior DeFi product for the masses. By removing all the complexities normally associated with earning fees through lending or supplying liquidity to automated market makers (AMMs), OUSD is highly accessible to users who are new to cryptocurrency technologies. Today, users need only to purchase OUSD on centralized exchanges or decentralized swap sites like Uniswap/Sushiswap to begin getting DeFi yield exposure immediately. Alternatively, users can mint OUSD with their existing stablecoins (DAI, USDT, USDC currently) on the <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
+msgstr ""
 
-#: templates/litepaper/platform.html:54
+#: templates/litepaper/platform.html:52
 msgid "Current APYs and circulating supply are published transparently on the <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD dashboard</a>. "
 msgstr "APY hiện tại và nguồn cung lưu hành được công bố minh bạch trên <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD dashboard</a>. "
 
-#: templates/litepaper/platform.html:55
-msgid "With OUSD, there’s no need to unwind complicated positions when you want to spend your OUSD. You can transfer it freely without having to pay gas to unlock spendable capital. In addition, OUSD gives you access to compelling opportunities across DeFi with none of the hassles. The OUSD smart contracts deploy your underlying capital to a diversified set of yield-earning strategies, rebalancing over time to achieve strong yields while diversifying risk. Earnings automatically accrue in your wallet and compound continuously while you hold OUSD. Again, no staking or lockups are required, making your OUSD as easy to transfer as any other ERC-20 token. OUSD also serves as an ideal unit of account. DeFi investors no longer need complicated spreadsheets to calculate their earnings as they can easily see their constantly updated OUSD balances in real-time."
-msgstr "Người dùng có thể sử dụng OUSD bất kỳ lúc nào mà không cần phải trả phí gas để unstake. Ngoài ra, OUSD cung cấp cho bạn quyền truy cập vào các cơ hội hấp dẫn trên DeFi vô cùng đơn giản. Các hợp đồng thông minh OUSD sử dụng các tài sản cơ sở để kiếm lợi nhuận trên các chiến lược thu đa dạng, tái cân bằng theo thời gian để đạt được lợi suất cao và cân bằng rủi ro. Thu nhập sẽ tự động cộng đồn vào ví người nắm giữ OUSD. Chúng tôi xin nhắc lại, người dùng chỉ cần giữ OUSD trong ví và có thể sử dụng OUSD bất kỳ lúc nào. Ngoài ra, người sở hữu OUSD có thể dễ dàng thấy được tài sản thực tế tăng lên bao nhiêu do số dư OUSD được cập nhật liên tục."
+#: templates/litepaper/platform.html:53
+msgid "With OUSD, there’s no need to unwind complicated positions when you want to spend your OUSD. You can transfer it freely without having to pay gas to unlock spendable capital. In addition, OUSD gives you the ability to utilize a basket of leading DeFi opportunities with none of the hassles. The OUSD smart contracts deploy your underlying capital to a diversified set of yield-earning strategies, automatically rebalancing over time to achieve strong yields while diversifying risk. Earnings automatically accrue in your wallet and compound continuously while you hold OUSD. Again, no staking or lockups are required, making your OUSD as easy to transfer as any other ERC-20 token. OUSD also serves as an ideal unit of account. DeFi participants no longer need complicated spreadsheets to calculate their earnings as they can easily see their constantly updated OUSD balances in real-time."
+msgstr ""
 
-#: templates/litepaper/platform.html:57
+#: templates/litepaper/platform.html:55
 msgid "Yield strategies"
 msgstr "Các chiến lược tạo lợi nhuận"
 
-#: templates/litepaper/platform.html:58
+#: templates/litepaper/platform.html:56
 msgid "OUSD uses two high-level strategies for generating yield--lending and market making."
 msgstr "OUSD sử dụng hai chiến lược cấp cao để tạo ra lợi tức là cho vay và tạo lập thị trường."
 
-#: templates/litepaper/platform.html:60
+#: templates/litepaper/platform.html:58
 msgid "Lending:"
 msgstr "Cho vay:"
 
-#: templates/litepaper/platform.html:61
+#: templates/litepaper/platform.html:59
 msgid "DeFi lending platforms let users lend and borrow crypto assets without any middlemen. Both lenders and borrowers get more value from their crypto. Lenders earn interest, while borrowers deposit crypto as collateral to gain access to credit without traditional banking headaches. DeFi lending platforms currently provide far superior returns for lenders than are generally available in the traditional markets."
 msgstr "Các nền tảng cho vay DeFi cho phép người dùng cho vay, vay tài sản tiền điện tử mà không cần bất kỳ người trung gian nào. Người cho vay nhận được lãi suất, trong khi người đi vay chỉ cần tiền điện tử làm tài sản thế chấp mà không phải đau đầu với các thủ tục thường gặp ở các ngân hàng truyền thống. Các nền tảng cho vay DeFi hiện mang lại lãi suất cho vay cao hơn nhiều so với các nền tảng cho vay hiện có trên thị trường truyền thống."
 
-#: templates/litepaper/platform.html:62
+#: templates/litepaper/platform.html:60
 msgid "OUSD integrates with DeFi lending platforms that provide over-collateralized loans. Over-collateralization, combined with smart rules around liquidations, provide a reasonable level of security for lenders. Aave also additionally secures their lending pools with AAVE tokens respectively, further lowering risk."
 msgstr "OUSD tích hợp với nền tảng cho vay DeFi cung cấp các khoản vay over-collateralized (tài sản đảm bảo lớn hơn mức đi vay). Khoản đảm bảo nhiều hơn mức cần vay kết hợp với các quy tắc thông minh xung quanh việc thanh lý cung cấp mức độ bảo mật hợp lý cho người cho vay. Aave cũng đảm bảo an toàn cho các pool cho vay của họ bằng token AAVE, giảm rủi ro xuống mức thấp hơn."
 
-#: templates/litepaper/platform.html:63
-msgid "OUSD integrates with leading lending providers that have a proven track record, audited smart contracts, and have successfully lent hundreds of millions of dollars without issue. We are currently integrated with Compound and Aave."
-msgstr "OUSD tích hợp với các nhà cung cấp dịch vụ cho vay hàng đầu đã được sử dụng rộng rãi, các hợp đồng thông minh đã được kiểm toán và đã cho vay thành công hàng trăm triệu đô la mà không gặp vấn đề gì. Hiện chúng tôi đang tích hợp với Compound và Aave."
+#: templates/litepaper/platform.html:61
+msgid "OUSD integrates with two leading lending providers, Compound and Aave, that have a proven track record audited smart contracts, and have successfully lent hundreds of millions of dollars without issue."
+msgstr ""
 
-#: templates/litepaper/platform.html:65
+#: templates/litepaper/platform.html:63
 msgid "Market making:"
 msgstr "Tạo lập thị trường:"
 
-#: templates/litepaper/platform.html:66
+#: templates/litepaper/platform.html:64
 msgid "Automated market makers (AMMs) have quickly risen as the preferred form of decentralized exchange on the Ethereum network. This is in part due to the difficulty of supporting order book DEXes on Ethereum 1.0 that can rival the instant and low-slippage experiences on centralized exchanges. Further, AMMs like Uniswap are relatively user-friendly and gas-efficient to use."
 msgstr "Tạo lập thị trường tự động (AMM) đã nhanh chóng trở thành hình thức giao dịch phi tập trung ưa thích trên mạng Ethereum. Các AMM như Uniswap tương đối thân thiện với người dùng và khá tiết kiệm phí gas."
 
-#: templates/litepaper/platform.html:67
+#: templates/litepaper/platform.html:65
 #, python-format
 msgid "AMMs can only enable new markets when liquidity providers supply liquidity (e.g. multiple tokens for given trading pairs or pools). In return for providing liquidity, liquidity providers are rewarded with trading fees when other users swap tokens. For example, when traders swap USDT for USDC on Uniswap, they are currently charged 0.3%% on top of gas fees. These fees are distributed pro-rata to liquidity providers on the USDT-USDC pair based on the percentage of total liquidity that they have provided."
 msgstr "AMM chỉ có thể kích hoạt các thị trường mới khi có người cung cấp thanh khoản. Các nhà cung cấp thanh khoản được thưởng phí giao dịch khi những người dùng khi họ swap token. Ví dụ: khi các người dùng đổi (swap) USDT lấy USDC trên Uniswap, khoản thu 0,3%% ngoài phí gas sẽ được phân bổ theo tỷ lệ cho các nhà cung cấp thanh khoản trên cặp USDT-USDC dựa trên phần trăm tổng thanh khoản mà họ đã cung cấp."
 
-#: templates/litepaper/platform.html:68
-msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. We are currently integrated with Curve and plan on integrating with Uniswap, Sushiswap, and Balancer in the near future."
-msgstr "Giao thức OUSD tự động gửi USDT, USDC và DAI đến các nhóm thanh khoản có hiệu suất cao dựa theo khối lượng giao dịch và token thưởng (ví dụ: Balancer thưởng BAL cho các nhà cung cấp thanh khoản). Lợi tức sau đó được chuyển cho người nắm giữ OUSD. Chúng tôi hiện đang tích hợp với Curve và có kế hoạch tích hợp với Uniswap, Sushiswap và Balancer trong tương lai gần."
+#: templates/litepaper/platform.html:66
+msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. The OUSD smart contract is currently integrated with Curve, and may be integrated with Uniswap, Sushiswap, and Balancer in the future."
+msgstr ""
 
-#: templates/litepaper/platform.html:69
+#: templates/litepaper/platform.html:67
 msgid "In addition to collecting interest from lending and fees from market making, we intend to automatically claim and convert the bonus incentives that are being distributed by many of the DeFi protocols. For example, Compound gives away COMP tokens, Balancer gives away BAL tokens, and Curve gives away CRV tokens. These bonus rewards will be regularly converted into stablecoins, deployed in the market, and distributed to OUSD holders in the form of additional yield."
 msgstr "Ngoài việc thu lãi từ việc cho vay và phí tạo lập thị trường, chúng tôi dự định sẽ tự động nhận airdrop đang được phân phối bởi nhiều giao thức DeFi ví dụCompound tặng token COMP, Balancer tặng token BAL và Curve tặng token CRV, sau đó chuyển đổi thành stablecoin, kiếm lãi và phân phối cho người nắm giữ OUSD dưới dạng lợi nhuận bổ sung."
 
-#: templates/litepaper/platform.html:70
+#: templates/litepaper/platform.html:68
 msgid "OUSD is able to generate higher yields than competing protocols due to a combination of important design decisions that amplify the rewards that are returned to OUSD holders:"
 msgstr "OUSD có thể tạo ra lợi suất cao hơn so với các giao thức đối thủ nhờ 1 được thiết kế đặc biệt, giúp khuếch đại phần thưởng trả cho chủ sở hữu OUSD:"
 
-#: templates/litepaper/platform.html:72
+#: templates/litepaper/platform.html:70
 msgid "Exit fees are returned to the pool, rewarding long term holders"
 msgstr "Phí khi rút Ousd sẽ được gửi về pool như 1 phần thưởng cho cho những người nắm giữ lâu dài"
 
-#: templates/litepaper/platform.html:73
+#: templates/litepaper/platform.html:71
 msgid "Price oracles favor the collective over the individual, again rewarding long term holders"
 msgstr "Oracle giá ưu tiên nhóm hơn cá nhân, một lần nữa thưởng cho những người nắm giữ lâu dài"
 
-#: templates/litepaper/platform.html:74
+#: templates/litepaper/platform.html:72
 msgid "Smart contracts must manually opt-in to earn yield. This allows the protocol to put more capital to work than would be otherwise possible."
 msgstr "Hợp đồng thông minh phải chọn tham gia theo cách thủ công để kiếm được lợi nhuận. Điều này cho phép giao thức sử dụng vốn hiệu quả hơn bất kỳ cách nào khác."
 
-#: templates/litepaper/platform.html:75
-msgid "Smart strategies balance risk and reward more effectively than deploying capital in any single underlying strategy."
-msgstr "Các chiến lược thông minh cân bằng rủi ro và lãi suất thay vì sử dụng các chiến lược 1 cách ngẫu nhiên."
+#: templates/litepaper/platform.html:73
+msgid "OUSD smart contracts allow users to balance risk and reward more effectively than deploying capital in any single underlying strategy."
+msgstr ""
 
-#: templates/litepaper/platform.html:78
+#: templates/litepaper/platform.html:76
+msgid "Origin's role in OUSD"
+msgstr ""
+
+#: templates/litepaper/platform.html:77
+#, python-format
+msgid "OUSD is meant to be a tool that gives users easy and passive access to DeFi exposure. Origin’s role in the development of OUSD is ministerial rather than managerial. This means instead of actively managing OUSD as a business or actively managing the funds in the OUSD vault, Origin maintains the OUSD smart contracts as developers in order to keep the protocol functional and avoid catastrophic losses or failures for users. Origin does not intend to make strategic decisions to allocate funds from the OUSD vault. Funds in the OUSD vault are automatically deployed to the largest and most common DeFi protocols including Compound, Aave, and Curve, as outlined above. OUSD is a decentralized protocol on the Ethereum  blockchain without active management. Funds are allocated by OUSD smart contracts, not Origin employees, and Origin developers chose the aforementioned DeFi protocols for their safety and ubiquity in DeFi rather than to seek maximum yields or profits. The OUSD protocol is 100%% open-source and we are fast tracking OUSD to be governed in a totally decentralized fashion."
+msgstr ""
+
+#: templates/litepaper/platform.html:79
 msgid "Readers can learn more about the technical details of OUSD on our <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>documentation</a>."
 msgstr "Bạn có thể tìm hiểu thêm về thông công nghệ đứng sau OUSD trên <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>tài liệu</a>."
 
-#: templates/litepaper/platform.html:80
+#: templates/litepaper/platform.html:81
 msgid "Benefits of OUSD"
 msgstr "Lợi ích của OUSD"
 
-#: templates/litepaper/platform.html:81
+#: templates/litepaper/platform.html:82
 msgid "Mainstream cryptocurrency users now have the equivalent of a high-yield savings account automatically built into their Ethereum wallets whenever they are holding OUSD. This increases DeFi’s addressable user base from tens to hundreds of thousands of sophisticated users to tens of millions of users instantly. By comparison, Uniswap, the most widely used DeFi product to date has only interacted with approximately 250k Ethereum wallets since its inception."
 msgstr "Người dùng tiền điện tử chính thống có cơ hội sở hữu một tài khoản tiết kiệm lãi suất cao được tự động tích hợp vào ví Ethereum của họ bất cứ khi nào nếu họ nắm giữ OUSD. Điều này làm tăng số lượng người dùng DeFi từ hàng chục, hàng trăm nghìn người dùng lên hàng chục triệu người dùng ngay lập tức. Để so sánh, Uniswap, sản phẩm DeFi được sử dụng rộng rãi nhất cho đến nay chỉ tương tác với khoảng 250 nghìn ví Ethereum kể từ khi thành lập."
 
-#: templates/litepaper/platform.html:82
+#: templates/litepaper/platform.html:83
 #, python-format
 msgid "Because OUSD makes it easy for consumers to switch between spending and savings mode, it can also become the ideal medium of exchange. Today, many merchants other than those dealing in black or grey markets do not have many incentives to accept cryptocurrencies. Because most consumers currently use credit cards and mobile payments, merchants are forced to accept payments predominantly with these methods. In the process, they are often charged a 2.90%% credit card processing fee, with other payment intermediaries (e.g. merchant bankers and interchange networks) also increasing the cost of doing business. "
 msgstr "Bởi vì OUSD giúp người tiêu dùng dễ dàng chuyển đổi giữa chế độ chi tiêu và tiết kiệm, nó cũng có thể trở thành phương tiện trao đổi lý tưởng. Hiện tại, nhiều người kinh doanh trừ những người kinh doanh chợ đen và chợ xám chưa có nhiều lý do để chấp nhận tiền điện tử. Bởi vì hầu hết người tiêu dùng hiện đang sử dụng thẻ tín dụng và ứng dụng thanh toán di động, người bán buộc phải chấp nhận thanh toán chủ yếu bằng các phương thức này. Trong quá trình này, họ thường bị thu 2,90%% phí xử lý thẻ tín dụng và phí cho các bên trung gian khác. "
 
-#: templates/litepaper/platform.html:83
+#: templates/litepaper/platform.html:84
 #, python-format
 msgid "For merchants that have traditionally been skeptical of receiving cryptocurrency payments, being able to accept a yield-bearing stablecoin that beats traditional savings accounts and instantly earns yields at a minimum of 20%% APY is a powerful motivator. Instead of losing money on each sale, they are instantly adding capital to their merchant accounts that compounds instantly, giving them more operating capital over time. For merchants that oftentimes face cash flow management and inventory issues, being able to accept a yield-bearing form of payment is extremely compelling."
 msgstr "Đối với các công ty truyền thống đang hoài nghi về việc ứng dụng tiền điện tử, chấp nhận một stablecoin mang lại lợi nhuận cao hơn các tài khoản tiết kiệm truyền thống và ngay lập tức kiếm được lợi tức tối thiểu là 20%% APY là một động lực mạnh mẽ. Thay vì mất đi 1 khoản phí mỗi lần thu tiền, nhận được lãi suất ngay khi tiền về tài khoản. Đối với những người bán thường phải đối mặt với các vấn đề về quản lý dòng tiền và hàng tồn kho, việc có thể chấp nhận một hình thức thanh toán mang lại lợi nhuận là cực kỳ hấp dẫn."
 
-#: templates/litepaper/platform.html:84
+#: templates/litepaper/platform.html:85
 msgid "OUSD creates the incentives for merchants to not only accept, but promote the usage of cryptocurrencies in their businesses. As more users hold and make purchases with OUSD, more merchants will similarly accept OUSD. These powerful network effects have the potential to gradually replace the payment rails for both online and offline commerce."
 msgstr "OUSD tạo ra các động lực để người bán không chỉ chấp nhận mà còn thúc đẩy việc sử dụng tiền điện tử trong doanh nghiệp của họ. Khi nhiều người dùng nắm giữ và mua hàng bằng OUSD, nhiều người bán sẽ chấp nhận OUSD. Những hiệu ứng dây chuyền có khả năng thay thế hình thức thanh toán cũ cho cả thương mại online và offline."
 
-#: templates/litepaper/platform.html:85
-msgid "In the short-term, OUSD’s target audience encompasses the millions of novice to intermediate cryptocurrency users in the world that are not yet invested in DeFi. An even larger opportunity lies in targeting the hundreds of millions of users that are currently using traditional peer-to-peer and merchant payment systems."
-msgstr "Trong ngắn hạn, đối tượng mục tiêu của OUSD bao gồm hàng triệu người mới làm quen đã và đang làm quen với tiền điện tử nhưng chưa từng sử dụng DeFi. Đối tượng tiếp theo phải kể đến là hàng trăm triệu người dùng hiện đang sử dụng các hệ thống thanh toán ngang hàng truyền thống."
-
 #: templates/litepaper/platform.html:86
+msgid "In the short-term, OUSD’s target audience encompasses the millions of cryptocurrency users in the world that are not yet invested in DeFi. An even larger opportunity lies in targeting the hundreds of millions of users that are currently using traditional peer-to-peer and merchant payment systems."
+msgstr ""
+
+#: templates/litepaper/platform.html:87
 msgid "Today, PayPal boasts over 305M consumers and 22M merchants and processes over $200B of payments in a single quarter. Our aspirations are to begin penetrating that customer base with OUSD and future payments applications built on top of the OUSD protocol in the upcoming year."
 msgstr "Ngày nay, PayPal có hơn 305 triệu người tiêu dùng, 22 triệu người bán, xử lý hơn 200 tỷ USD giao dịch trong một quý. Mong muốn của chúng tôi là bắt đầu thâm nhập vào cơ sở khách hàng đó bằng OUSD và các ứng dụng thanh toán trong tương lai được xây dựng dựa trên giao thức OUSD trong các năm tới."
 
-#: templates/litepaper/platform.html:88
-msgid "Business development"
-msgstr "Phát triển kinh doanh"
-
 #: templates/litepaper/platform.html:89
-msgid "The most obvious success metric for OUSD is its total circulating supply. As demand for OUSD grows, more OUSD will be minted and added to the total supply. DeFi protocols are often valued at a glance by the total dollar amount of value deposited into its smart contracts, or Total Value Locked (TVL). In order for OUSD to become successful, we must convince users to buy or mint OUSD, adding to its supply, and we must keep this OUSD held in user wallets or circulating instead of sold or redeemed for underlying stablecoins. Ease of access and network effects are two important factors in this. Direct incentives beyond industry leading APYs may also be a tool we implement in the future."
-msgstr "Chỉ số đo lường sự thành công của OUSD là tổng nguồn cung lưu hành. Khi nhu cầu về OUSD tăng lên, sẽ có nhiều OUSD được mua từ đó tổng cung sẽ tăng lên. Các giao thức DeFi thường được định giá trong nháy mắt bằng tổng số tiền giá trị được gửi vào các hợp đồng thông minh, hoặc Tổng giá trị đã khóa (TVL). Để OUSD trở nên thành công, chúng tôi phải thuyết phục người dùng mua OUSD, để tăng nguồn cung và thuyết phục họ giữ OUSD hoặc sử dụng để thanh toán thay vì đổi thành các stablecoin hiện có. Dễ dàng sử dung và hiệu ứng dây chuyền là hai yếu tố quan trọng để thực hiện điều này. Các ưu đãi khác ngoài cung cấp APY hấp dẫn cũng có thể là một công cụ mà chúng tôi sẽ sử dụng trong tương lai."
-
-#: templates/litepaper/platform.html:90
-msgid "To achieve greater circulating supply, it is imperative that we make OUSD available on every major DeFi platform, decentralized exchange, and centralized exchange. Increasing OUSD’s representation on decentralized platforms will solidify OUSD as a money lego and composable building block for DeFi. Having OUSD markets on popular centralized exchanges allows us to onboard the millions of crypto users who are not familiar with Web 3 wallets like MetaMask but who do have exchange accounts. Although there are some unique challenges to integrating rebasing tokens on these platforms, these challenges are not difficult to overcome and rebasing tokens are growing in popularity."
-msgstr "Để tăng nguồn cung lưu hành, OUSD phải có sẵn trên trên mọi nền tảng DeFi chính, sàn giao dịch phi tập trung và sàn giao dịch tập trung. Niêm yết OUSD lên các sàn giao dịch phổ biến cho phép chúng tôi tiếp cận hàng triệu người dùng tiền điện tử, những người không quen sử dụng các ví Web 3 như MetaMask. Mặc dù có một số thách thức nhất định để tích hợp rebase token trên các nền tảng này, nhưng những thách thức này không khó để vượt qua và rebase token đang ngày càng phổ biến."
-
-#: templates/litepaper/platform.html:91
-msgid "We have plans to integrate OUSD as a collateral asset on major lending platforms such as Compound, Aave, and Cream. There are already millions of dollars of liquidity available for OUSD on Uniswap and Sushiswap. We intend to target stablecoin-focused AMMs such as Curve and Shell Protocol in the near future. On the centralized exchange side, we aim to have OUSD listed on every major exchange globally."
-msgstr "Chúng tôi có kế hoạch tích hợp OUSD làm tài sản thế chấp trên các nền tảng cho vay chính như Compound, Aave và Cream. Đã có hàng triệu USD thanh khoản cho OUSD trên Uniswap và Sushiswap. Chúng tôi dự định nhắm mục tiêu các AMM tập trung vào stablecoin như Curve và Shell Protocol trong tương lai gần. Về sàn giao dịch tập trung, chúng tôi mong muốn OUSD sẽ được niêm yết trên tất cả các sàn giao dịch lớn toàn cầu."
-
-#: templates/litepaper/platform.html:92
-msgid "To take OUSD truly mainstream, we must connect it with traditional financial infrastructure. The first step will be to get OUSD listed on exchanges that have fiat on and off-ramps. Enabling the direct purchase of OUSD with fiat currency in the form of bank transfers or credit card payments is also a priority for us. These connections to traditional finance are necessary in order for us to successfully launch the future products we have planned for OUSD."
-msgstr "Để đưa OUSD thực sự trở thành xu hướng chủ đạo, chúng ta phải kết nối nó với cơ sở hạ tầng tài chính truyền thống. Bước đầu tiên sẽ là đưa OUSD được niêm yết trên các sàn giao dịch hỗ trợ fiat on và off-ramp. Cho phép mua trực tiếp OUSD bằng tiền tệ pháp định bằng hình thức chuyển khoản ngân hàng hoặc thanh toán bằng thẻ tín dụng cũng là một ưu tiên của chúng tôi. Kết nối với tài chính truyền thống là điều cần thiết để các sản phẩm trong tương lai mà chúng tôi đã lên kế hoạch cho OUSD ra mắt thành công."
-
-#: templates/litepaper/platform.html:94
 msgid "Future products"
 msgstr "Sản phẩm tương lai"
 
-#: templates/litepaper/platform.html:95
+#: templates/litepaper/platform.html:90
 msgid "We imagine a better future for online and offline payments that uses OUSD as the underlying payment rails. Below, we outline our vision for what we'd like to see built on top of the OUSD protocol. We also encourage our large community of supporters and open-source developers to build additional compelling products to bring DeFi and cryptocurrency payments to the masses."
 msgstr "Chúng tôi mường tượng ra tương lai, khi mà các khoản thanh toán online và offline sử dụng OUSD làm phương tiện thanh toán cơ bản. Dưới đây, chúng tôi phác thảo tầm nhìn của mìnhi về những gì đội ngũ Origin muốn thấy được xây dựng dựa trên giao thức OUSD. Chúng tôi cũng khuyến khích cộng đồng và các nhà phát triển mã nguồn mở xây dựng các sản phẩm hấp dẫn bổ sung để đưa DeFi và thanh toán tiền điện tử đến với phần lớn người dùng."
 
-#: templates/litepaper/platform.html:97
+#: templates/litepaper/platform.html:92
 msgid "Venmo meets high-yield savings and a debit card"
 msgstr "Venmo cung cấp lãi suất cao và thẻ ghi nợ"
 
-#: templates/litepaper/platform.html:98
+#: templates/litepaper/platform.html:93
 msgid "Today peer-to-peer mobile payments account for trillions of dollars in transaction volume. In the United States, Venmo and Square Cash dominate. In China, cryptocurrency’s largest market by trading volume, Wechat and Alipay have near monopolistic holds on consumers and merchants. These simple, centralized payment apps are used by customers paying merchants and by friends and family transferring money to each other. Furthermore, in many markets, the US and Europe especially, bank cards are still the go-to way to spend money for online and offline transactions. Credit card companies, payment processors, and banks dominate this market and there are a variety of companies such as PayPal that assist merchants and consumers in using their cards online."
 msgstr "Ngày nay, thanh toán di động ngang hàng có khối lượng giao dịch đạt hàng nghìn tỷ USD. Ở Mỹ, Venmo và Square Cash là 2 hình thức thanh toán thống trị. Ở Trung Quốc, thị trường có khổi lượng giao dịch tiền điện tử cao nhất, Wechat và Alipay gần như nắm vị trí độc quyền. Các ứng dụng thanh toán tập trung, đơn giản này được sử dụng bởi nó được sử dụng phổ biến bởi người dùng. Hơn nữa, tại nhiều thị trường, đặc biệt là Hoa Kỳ và Châu Âu, thẻ ngân hàng vẫn là phương thức phổ biến thanh toán giao dịch online và offline. Các công ty thẻ tín dụng, bên xử thanh toán, ngân hàng thống trị thị trường này và các công ty như PayPal hỗ trợ người bán và người tiêu dùng sử dụng thẻ của họ trực tuyến."
 
-#: templates/litepaper/platform.html:99
+#: templates/litepaper/platform.html:94
 msgid "The billions of users using these existing payment methods have very little incentive to adopt cryptocurrency payments due to increased friction and lack of network effects."
 msgstr "Hàng tỷ người dùng sử dụng các phương thức thanh toán hiện tại này có rất ít lý do để chấp nhận chuyển sang phương thức thanh toán bằng tiền điện tử."
 
-#: templates/litepaper/platform.html:100
+#: templates/litepaper/platform.html:95
 msgid "We believe a new peer-to-peer payment app with an associated debit card built on top of the OUSD protocol can disrupt incumbents. Today, Venmo users shuffle money between their Venmo accounts and their checking accounts and credit cards. In the case of the former, money sitting in Venmo or checking accounts doesn’t earn any interest. Venmo balances that are funded by credit cards are even worse as there are fees charged by multiple intermediaries. In the later case, interest earned by users is usually negligible, especially when taking into account inflation. Cash back or rewards programs can offer users incentives but high interest rates for missing payments are a strong disincentive to users."
 msgstr "Chúng tôi tin rằng một ứng dụng thanh toán ngang hàng mới liên kết với thẻ ghi nợ được xây dựng dựa trên giao thức OUSD sẽ trở thành đối thủ đàng gờm với các hình thức thanh toán hiện tại. Ngày nay, người dùng Venmo lưu chuyển tiền qua lại giữa tài khoản Venmo với tài khoản séc và thẻ tín dụng của họ. Trước đây, tiền giữ ở Venmo hoặc tài khoản séc sẽ không nhận được lãi. Tiền chuyển qua Venmo bằng thẻ tín dụng thậm chí còn tồi tệ hơn vì nhiều bên trung gian thu phí. Trong trường hợp sau đó, tiền lãi mà người dùng kiếm được thường không đáng kể, đặc biệt là khi so sánh với lạm phát. Các chương trình hoàn lại tiền hoặc các chương trình thưởng khuyên khích người dùng, tuy nhiên, không trả lãi suất cho tiền đang chưa dùng đến là 1 điểm trừ lớn."
 
-#: templates/litepaper/platform.html:101
+#: templates/litepaper/platform.html:96
 msgid "Tomorrow’s peer-to-peer mobile payment application powered by OUSD will introduce the killer feature of double-digit yields. Our version of Venmo will combine the ease of peer-to-peer payments with a high-yield savings account that beats traditional savings accounts by a factor of 10 to 100x."
 msgstr "Ứng dụng thanh toán di động ngang hàng do OUSD cung cấp trong tương lai bao gồm tính năng \"sát thủ\", cung cấp lãi lợi suất hai con số. Phiên bản Venmo của chúng tôi là sự kết hợp giữa thanh toán ngang hàng và một tài khoản tiết kiệm lãi suất cao, đánh bại các tài khoản tiết kiệm truyền thống với lãi suất gấp10 đến 100 lần."
 
-#: templates/litepaper/platform.html:102
+#: templates/litepaper/platform.html:97
 msgid "The OUSD payment app will be built with a centralized mobile app and APIs to minimize user friction for mainstream users. Users will be able to deposit USD and/or other fiat currencies to the app and enjoy the seamless user experiences of centralized applications. However, on the backend, these fiat deposits will be used to mint OUSD. New users will hold their balances in OUSD in Origin custodial wallets without needing to understand cryptocurrencies. They will simply be able to earn industry-leading yields when they are not spending. Again, your OUSD is always earning & ready to be spent or transferred at the same time."
 msgstr "Ứng dụng thanh toán OUSD sẽ được xây dựng với ứng dụng di động tập trung và các API để tránh người phổ thông phải chịu quá nhiều thay đổi. Người dùng sẽ có thể gửi USD và / hoặc các loại tiền pháp định khác vào ứng dụng và tận hưởng trải nghiệm người dùng liền mạch của các ứng dụng tập trung. Tuy nhiên, đằng sau đó, những khoản tiền gửi pháp định này sẽ được sử dụng để mua OUSD. Người dùng mới sẽ giữ số dư của họ bằng OUSD trong ví custody của Origin mà không nhiều hiểu về tiền điện tử."
 
-#: templates/litepaper/platform.html:103
+#: templates/litepaper/platform.html:98
 msgid "The viral effects of the future OUSD payment app cannot be overstated. Payment apps are by nature already viral, with users onboarding their friends and family in order to transact with them, establishing powerful network effects. Merchants quickly adopt the payment services that attract the most users. By adding in the ability to earn yield the very instant that any new referred user accepts funds from a referring user, we believe the viral coefficient for existing users referring new users will be multiples higher than ever seen before in a traditional payments application."
 msgstr "Hiệu ứng lan truyền của ứng dụng thanh toán OUSD có thể đạt được trong tương lai là khá tiềm năng. Các ứng dụng thanh toán hiện đang rất phổ biến. Nếu tạo ra 1 sản phẩm tốt, với việc người dùng giới thiệu bạn bè và gia đình cùng sử dụng sẽ tạo ra hiệu ứng mạnh mẽ. Những người kinh doanh sẽ theo đó áp dụng phương thức thanh toán mới được phần đông người dùng ưa chuộng. Bằng cách bổ sung khả năng kiếm tiền khi giới thiệu người dùng mới, chúng tôi tin rằng hệ số lan truyền sẽ cao hơn nhiều lần."
 
-#: templates/litepaper/platform.html:104
+#: templates/litepaper/platform.html:99
 msgid "The OUSD debit card will be tied to the future OUSD payment app and will allow users to spend down their on-app OUSD balance. Whenever users want to use their OUSD, their OUSD will be converted to USD via Visa’s interchange network and be instantly accepted by 40 million merchants all over the world. Merchants will receive USD and need not know that OUSD was used as the underlying original currency to power the transaction. Again, when users’ OUSD is not being spent, it will automatically accumulate staggering yields that should be superior to any cash bank or credit card rewards program in existence."
 msgstr "Thẻ ghi nợ OUSD sẽ được gắn với ứng dụng thanh toán OUSD trong tương lai và sẽ cho phép người dùng chi tiêu số dư OUSD trên ứng dụng của họ. Bất cứ khi nào người dùng muốn sử dụng OUSD, OUSD của họ sẽ được chuyển đổi sang USD thông qua mạng lưới trao đổi của Visa và được chấp nhận ngay lập tức bởi 40 triệu người bán trên khắp thế giới. Người bán sẽ nhận được USD và không cần biết rằng OUSD đã được sử dụng làm đơn vị tiền tệ gốc cơ bản để thực hiện giao dịch. Một lần nữa, bất kỳ khi nào OUSD được giữ trong ví, nó sẽ tự động tích lũy mức lãi suất đáng kinh ngạc, vượt xa với bất kỳ chương trình lãi suất truyền thống nào hiện có."
 
-#: templates/litepaper/platform.html:105
+#: templates/litepaper/platform.html:100
 msgid "Although we plan on launching with hosted or managed wallets, we believe that users should be in control of their own funds if they do not want to use managed wallets. While the service that we build will be centralized at the application and middleware layer, the core protocol is decentralized. Users will be able to eject from the managed wallet at any point in time to simply hold their OUSD in their own self-managed wallets within the same app. We imagine that more and more users will gradually migrate from managed wallets to self-hosted wallets over time as they become educated about the benefits of underlying protocol."
 msgstr "Mặc dù kế hoạch hiện tại xây dựng ví được lưu trữ hoặc được quản lý, nhưng chúng tôi tin rằng người dùng có quyền tự kiểm soát tiền của mình nếu họ không muốn sử dụng ví được quản lý. Dịch vụ xây dựng dưới hình thức tập trung ở lớp ứng dụng và phần mềm trung gian, tuy nhiên, giao thức cốt lõi vẫn là phi tập trung. Người dùng có thể rút khỏi ví tập trung bất kỳ lúc và giữ OUSD trong ví phi tập trung chỉ trên cùng 1 ứng dụng. Chúng tôi dự đoán rằng rằng ngày càng nhiều người dùng sẽ dần dần chuyển từ ví được quản lý sang ví phi tập trung theo thời gian khi họ được giáo dục về lợi ích của nó."
 
-#: templates/litepaper/platform.html:108
+#: templates/litepaper/platform.html:103
 msgid "Getting online and offline merchants to accept payments that are powered by OUSD rails is a monumental step. However, further down the road, an even more ambitious objective is to get merchants to accept OUSD directly."
 msgstr "Thuyết phục người bán hàng online và offline chấp nhận thanh toán bằng các ứng dụng xây dựng bởi OUSD là 1 bước tiến lớn. Xa hơn thế nữa, chúng tôi có tham vọng thu hút người kinh doanh chấp nhận sử dụng OUSD trực tiếp."
 
-#: templates/litepaper/platform.html:109
+#: templates/litepaper/platform.html:104
 msgid "The incentives to accept OUSD as a merchant over traditional credit cards or mobile payments is extremely compelling. Merchants can earn double-digit yields upon the sales of goods and services versus getting taxed with multiple payment fees."
 msgstr "Các ưu đãi khi người bán chấp nhận các khoản thanh toán qua OUSD thay vì các hình thức truyền thống là cực kỳ hấp dẫn. Người bán có thể kiếm được lợi tức hai con số khi bán hàng hóa và dịch vụ thay vì chịu đựng nhiều khoản phí khác nhau."
 
-#: templates/litepaper/platform.html:110
+#: templates/litepaper/platform.html:105
 msgid "The very first e-commerce platform to accept OUSD is Origin’s own Dshop platform. However, Dshop is a relatively new platform, and the majority of online e-commerce stores are run by incumbents like Shopify and Woo Commerce."
 msgstr "Nền tảng thương mại điện tử đầu tiên chấp nhận OUSD là nền tảng Dshop của chính Origin. Tuy nhiên, Dshop là một nền tảng tương đối mới và phần lớn các cửa hàng thương mại điện tử trực tuyến được điều hành bởi các công ty đương nhiệm như Shopify và Woo Commerce."
 
-#: templates/litepaper/platform.html:111
+#: templates/litepaper/platform.html:106
 msgid "Thankfully, both Shopify and Woo Commerce have mature developer platforms and APIs. We intend to build applications on these existing platforms that allow merchants to accept OUSD directly from customers that want to pay with OUSD. These developer plugins are relatively simple to build, and there are many existing examples of working payment alternatives."
 msgstr "Rất may, cả Shopify và Woo Commerce đều có API và nền tảng tiên tiến. Chúng tôi dự định xây dựng các ứng dụng trên các nền tảng hiện có này cho phép người bán chấp nhận OUSD trực tiếp từ những khách hàng muốn thanh toán bằng OUSD. Các plugin dành cho nhà phát triển tương đối đơn giản để xây dựng, và hiện tại, các hình thức thanh toán khác đã được tích hợp."
 
-#: templates/litepaper/platform.html:112
+#: templates/litepaper/platform.html:107
 msgid "For example, the Shopify app store currently already offers Coinbase Commerce, Bitpay, and GoCoin. We will release an OUSD payment app for merchants in the coming future."
 msgstr "Ví dụ: cửa hàng ứng dụng Shopify hiện đã chấp nhận Coinbase Commerce, Bitpay và GoCoin. Chúng tôi sẽ phát hành ứng dụng thanh toán OUSD cho người bán trong tương lai."
 
-#: templates/litepaper/platform.html:115
+#: templates/litepaper/platform.html:110
 msgid "Given the recent surge in both the price of ETH and the usage of the Ethereum network, gas fees are becoming increasingly prohibitive and a major deterrent for getting the kind of retail adoption that we want."
 msgstr "Với sự tăng giá ETH và chi phí sử dụng Ethereum, phí gas đang ngày càng trở quá đắt đỏ và là một yếu tố cản trở kế hoạch chúng tôi đặt ra."
 
-#: templates/litepaper/platform.html:116
+#: templates/litepaper/platform.html:111
 msgid "Ethereum is by far the most dominant layer 1 chain when it comes to DeFi activity and total value locked (TVL) today. However, as other layer 1 chains gain DeFi adoption, it is our intention to make OUSD accessible on other chains like Binance Smart Chain, Solana, Cosmos, and Polkadot which offer faster transactions and lower gas costs. "
 msgstr "Ethereum cho đến nay là chuỗi lớp 1 phổ biến nhất khi nhắc đến giao dịch DeFi và tổng giá trị bị khóa (TVL) hiện nay. Tuy nhiên, khi các chuỗi lớp 1 khác được áp dụng DeFi, chúng tôi có mở rộng khả năng truy cập của OUSD trên các chain khác như Binance Smart Chain, Solana, Cosmos và Polkadot, những chuỗi cho phép khả năng giao dịch nhanh hơn với mức phí thấp hơn. "
 
-#: templates/litepaper/platform.html:117
+#: templates/litepaper/platform.html:112
 msgid "All of the yield for OUSD will continue to be generated on the Ethereum platform since that’s where the vast majority of capital and earning opportunities exist today. However, chain-specific versions of OUSD will be mintable by anyone who locks up OUSD in the cross-chain bridge. For example, you could lock 100 OUSD in the Solana bridge in order to generate 100 sOUSD which would be freely transferable within the Solana ecosystem. The original OUSD would stay locked in a smart contract where it would continue earning yield. Inside Solana, the circulating sOUSD tokens would rebase in lockstep with the OUSD that was locked in the smart contract. Anyone who wishes to exit would be able to redeem their sOUSD for the originally locked capital plus any yield that was generated while they were holding it."
 msgstr "Tất cả lợi nhuận của OUSD sẽ tiếp tục được tạo ra trên nền tảng Ethereum vì đó là nơi mà phần lớn vốn và cơ hội kiếm tiền đang tập trung ở thời điểm hiện tại Tuy nhiên, các phiên bản OUSD dành riêng cho từng chuỗi sẽ có thể được mint bởi bất kỳ ai khóa OUSD trong cross-chain bridge. Ví dụ: bạn có thể khóa 100 OUSD cross-chain bridge với Solana để tạo ra 100 sOUSD có thể sửu dụng trong hệ sinh thái Solana. OUSD ban đầu sẽ bị khóa trong một hợp đồng thông minh, nơi nó sẽ tiếp tục kiếm được lợi nhuận. Bên trong mạng Solana, các token sOUSD sẽ được rebase ở bước khoá với OUSD được giữ ở hợp đồng thông minh. Bất kỳ ai muốn thoát khỏi mạng Solana sẽ có thể đổi sOUSD lấy cho số vốn bị khóa ban đầu và lợi tức tạo ra trong quá trình họ nắm giữ sOUSD."
 
-#: templates/litepaper/platform.html:122 templates/litepaper/sidebar.html:28
+#: templates/litepaper/platform.html:117 templates/litepaper/sidebar.html:28
 #: templates/whitepaper/sidebar.html:34
 msgid "The Origin Token (OGN)"
 msgstr "Token Origin (OGN)"
 
-#: templates/litepaper/platform.html:123
+#: templates/litepaper/platform.html:118
 msgid "The Origin Token (OGN) is the governance and value accrual token for the entire Origin Platform and suite of products."
 msgstr "Origin token (OGN) là token tích lũy giá trị và quản trị cho toàn bộ Nền tảng Origin và bộ sản phẩm xây dựng trên Origin."
 
-#: templates/litepaper/platform.html:126
+#: templates/litepaper/platform.html:121
 msgid "Decentralized governance for the OUSD protocol will happen first. Following the successful migration of making OUSD community-owned, we will begin the progressive decentralization of the Origin commerce platform as well."
 msgstr "Quản trị phi tập trung cho giao thức OUSD sẽ được tung ra đầu tiên. Khi chuyển quyền sở hữu OUSD cho cộng đồng, chúng tôi sẽ tiến hành phi tập trung hoá nền tảng thương mại Origin."
 
-#: templates/litepaper/platform.html:127
+#: templates/litepaper/platform.html:122
 msgid "Today, the OUSD protocol is already currently undergoing a progressive path to full decentralization. We’ve outlined four phases to full decentralization and are currently in phase 2."
 msgstr "Hiện tại, giao thức OUSD đang đi trên lộ trình tiến đến quản lý phi tập trung hoàn toàn. Chúng tôi đã vạch ra bốn giai đoạn mà OUSD cần trải qua và hiện đang ở giai đoạn 2."
 
-#: templates/litepaper/platform.html:129
+#: templates/litepaper/platform.html:124
 msgid "OGN token holders will be able to create and vote on proposals to govern the underlying protocol. This may include:"
 msgstr "Người nắm giữ OGN sẽ có thể tạo và bỏ phiếu cho các đề xuất để điều chỉnh giao thức cơ bản. Bao gồm:"
 
-#: templates/litepaper/platform.html:131
+#: templates/litepaper/platform.html:126
 msgid "Adding/removing new types of yield-earning strategies"
 msgstr "Thêm / xóa các loại chiến lược thu nhập lợi nhuận mới"
 
-#: templates/litepaper/platform.html:132
+#: templates/litepaper/platform.html:127
 msgid "Allocating capital across a basket of strategies"
 msgstr "Phân bổ vốn cho các chiến lược"
 
-#: templates/litepaper/platform.html:133
+#: templates/litepaper/platform.html:128
 msgid "Determining what fees are charged by the protocol"
 msgstr "Xác định những khoản phí nào được thu bởi giao thức"
 
-#: templates/litepaper/platform.html:134
+#: templates/litepaper/platform.html:129
 msgid "Determining what incentives (e.g. OGN rewards for liquidity mining) are offered on an ongoing basis"
 msgstr "Xác định những ưu đãi nào (ví dụ phần thưởng OGN cho việc khai thác thanh khoản) được cung cấp liên tục"
 
-#: templates/litepaper/platform.html:137
+#: templates/litepaper/platform.html:132
 msgid "Note that decentralized governance privileges will not apply to the centralized applications like the peer-to-peer payments product or debit card to be built on OUSD in the near-term. However, the underlying protocol will be fully decentralized before the end of 2021."
 msgstr "Lưu ý rằng các đặc quyền quản trị phi tập trung sẽ không áp dụng cho các ứng dụng tập trung như sản phẩm thanh toán ngang hàng hoặc thẻ ghi nợ sẽ được xây dựng trên OUSD trong thời gian tới. Tuy nhiên, giao thức cơ bản sẽ được phi tập trung hoá hoàn toàn trước khi kết thúc năm 2021."
 
-#: templates/litepaper/platform.html:138
-msgid "The Dshop platform will undergo the transition to decentralized governance at a later date. More details will be provided as the platform continues to mature."
-msgstr "Nền tảng Dshop sẽ trải qua quá trình chuyển đổi sang quản trị phi tập trung trong tương lai. Thông tin chi tiết sẽ được cập n khi nền tảng tiếp tục hoàn thiện."
-
-#: templates/litepaper/platform.html:140
+#: templates/litepaper/platform.html:134
 msgid "Value accrual"
 msgstr "Tích lũy giá trị"
 
-#: templates/litepaper/platform.html:141
+#: templates/litepaper/platform.html:135
 msgid "OGN holders will benefit directly from any protocol revenues and fees generated from products built on the Origin Platform. This includes on-chain revenue from OUSD as well as potential off-chain revenue sources from OUSD or our commerce products in the future."
 msgstr "Chủ sở hữu OGN sẽ được hưởng lợi trực tiếp từ bất kỳ doanh thu và phí giao thức nào được tạo ra từ các sản phẩm được xây dựng trên Nền tảng Origin, bao gồm doanh thu trên chuỗi từ OUSD cũng như các nguồn doanh thu ngoài chuỗi tiềm năng từ OUSD hoặc các sản phẩm thương mại của chúng tôi trong tương lai."
 
-#: templates/litepaper/platform.html:144
+#: templates/litepaper/platform.html:138
 #, python-format
-msgid "Currently, 10%% of DeFi yields generated from OUSD are collected as a protocol performance fee. These on-chain fees are being used to buy back OGN on the market, generating consistent buy pressure for OUSD’s governance token."
-msgstr "Hiện tại, 10%% lợi tức DeFi tạo ra từ OUSD được thu dưới dạng phí thực hiện giao thức. Các khoản phí trực tuyến này đang được sử dụng để mua lại OGN trên thị trường, tạo ra áp lực mua liên tục đối với token quản trị mạng OUSD."
+msgid "Currently, 10%% of DeFi yields generated from OUSD are collected as a protocol service fee. These on-chain fees are being used to buy back OGN on the market, generating consistent buy pressure for OUSD’s governance token."
+msgstr ""
+
+#: templates/litepaper/platform.html:139
+msgid "Through decentralized governance, the community will be able to adjust service fee settings as well as other value accrual parameters."
+msgstr ""
 
 #: templates/litepaper/platform.html:145
-msgid "Through decentralized governance, the community will be able to adjust performance fee settings as well as other value accrual parameters."
-msgstr "Thông qua quản trị phi tập trung, cộng đồng sẽ có thể điều chỉnh cài đặt phí thực hiện giao thức cũng như các thông số tích lũy giá trị khác."
+msgid "OGN holders are therefore incentivized to promote OUSD. As OUSD circulating supply increases, service fees generated will also increase, directly benefiting OGN holders financially. The converse is also true. OUSD holders are incentivized to be OGN holders, so they can participate actively in the governance of the protocol. This creates a strong flywheel effect between Origin’s two tokens."
+msgstr ""
 
-#: templates/litepaper/platform.html:151
-msgid "OGN holders are therefore incentivized to promote OUSD. As OUSD circulating supply increases, performance fees generated will also increase, directly benefiting OGN holders financially. The converse is also true. OUSD holders are incentivized to be OGN holders, so they can participate actively in the governance of the protocol. This creates a strong flywheel effect between Origin’s two tokens."
-msgstr "Do đó, người nắm giữ OGN sẽ có động lực phát triển OUSD. Khi nguồn cung lưu hành OUSD tăng lên, phí thực hiện được tạo ra cũng sẽ tăng lên và trực tiếp mang lại lợi ích cho chủ sở hữu OGN. Ở chiều ngược lại, chủ sở hữu OUSD được khuyến khích nắm giữ OGN để có được quyền quản trị. Điều này tạo nên mối quan hệ thúc đẩy lẫn nhau giữa 2 token của Origin."
-
-#: templates/litepaper/platform.html:152
+#: templates/litepaper/platform.html:146
 msgid "Since it is our intention to build powerful applications on top of the OUSD protocol like the new peer-to-peer payments product and debit card offering, we will also be able to create new monetization opportunities with these applications. For example, we may take a small percentage of OUSD yields as revenue to cover the costs of running the centralized infrastructure to power these experiences. Any profits that are generated off-chain can similarly be reinvested into the OGN buyback program or other fee distribution options mentioned above.    "
 msgstr "Vì mục đích của chúng tôi là xây dựng các ứng dụng mạnh mẽ trên giao thức OUSD như sản phẩm thanh toán ngang hàng mới và cung cấp thẻ ghi nợ, chúng tôi cũng sẽ có thể tạo ra các cơ hội kiếm tiền mới với các ứng dụng này. Ví dụ: chúng tôi có thể lấy một tỷ lệ nhỏ lợi nhuận OUSD làm doanh thu để trang trải chi phí vận hành cơ sở hạ tầng tập trung. Tương tự, bất kỳ lợi nhuận nào được tạo ra ngoài chuỗi đều có thể được tái đầu tư vào chương trình mua lại OGN hoặc các tùy chọn phân phối khác được đề cập ở trên.    "
 
-#: templates/litepaper/platform.html:155
-msgid "The core Dshop platform has been free to use since inception, and the basic features will remain free to use forever. However, as we develop more premium features such as creating the NFT launchpad and offering customized commerce experiences and white-glove service for larger clients, we intend to charge fees."
-msgstr "Nền tảng Dshop cốt lõi cho phép người dùng sử dụng miễn phí kể từ khi thành lập và các tính năng cơ bản sẽ vẫn được sử dụng miễn phí mãi mãi. Tuy nhiên, khi chúng tôi phát triển các tính năng cao cấp hơn như tạo ra NFT Launchpad và cung cấp trải nghiệm thương mại tùy chỉnh cũng như dịch vụ white-glove cho các khách hàng lớn hơn, chúng tôi dự định sẽ tính phí."
-
-#: templates/litepaper/platform.html:156
-msgid "Other revenue generating opportunities beyond the immediate NFT Launchpad product may include:"
-msgstr "Các cơ hội tạo doanh thu khác ngoài sản phẩm NFT Launchpad có thể là:"
-
-#: templates/litepaper/platform.html:158
-msgid "Customized e-commerce experiences for new vertical categories"
-msgstr "Tuỳ chỉnh trải nghiệp thương mại điện tử cho các danh mục ngành dọc mới"
-
-#: templates/litepaper/platform.html:159
-msgid "Consulting/contracting revenue for larger enterprise merchant partners that require Origin to build or host custom infrastructure and tooling"
-msgstr "Doanh thu tư vấn / ký hợp đồng cho các đối tác là doanh nghiệp lớn hơn yêu cầu Origin xây dựng hoặc lưu trữ cơ sở hạ tầng và công cụ tùy chỉnh"
-
-#: templates/litepaper/platform.html:160
-msgid "Premium applications that any merchants can add to their stores via subscription or a la carte purchases"
-msgstr "Các ứng dụng cao cấp mà bất kỳ người bán nào cũng có thể thêm vào cửa hàng của họ thông qua đăng ký hoặc mua trọn gói"
-
-#: templates/litepaper/platform.html:161
-msgid "Modest transaction fees for bespoke marketplace and reseller networks"
-msgstr "Phí giao dịch cho marketplace độc quyền và mạng lưới đại lý"
+#: templates/litepaper/sidebar.html:22
+msgid "NFT Marketplace"
+msgstr "NFT Marketplace"
 
 #: templates/litepaper/sidebar.html:33 templates/litepaper/team.html:2
 msgid "Founding Team"
@@ -3324,10 +3251,6 @@ msgstr "Eterna Capital"
 #: templates/vc-firms/usa.html:2
 msgid "United States"
 msgstr "Mỹ"
-
-#: templates/vc-firms/usa.html:5
-msgid "Pantera Capital"
-msgstr "Pantera Capital"
 
 #: templates/vc-firms/usa.html:9
 msgid "Foundation Capital"
@@ -3829,6 +3752,10 @@ msgstr "Các tính năng và lợi ích chính của sản phẩm"
 msgid "Founders"
 msgstr "Các nhà đồng sáng lập"
 
+#: templates/whitepaper/sidebar.html:48 templates/whitepaper/team.html:427
+msgid "Community"
+msgstr "Cộng đồng"
+
 #: templates/whitepaper/sidebar.html:51
 msgid "Developer community"
 msgstr "Cộng đồng nhà phát triển"
@@ -4024,6 +3951,14 @@ msgid "Nick studied Computer Science at the University of\n"
 msgstr "Nick học Khoa học Máy tính tại Đại học\n"
 "            Warwick. Trước khi gia nhập Origin, anh từng làm kỹ sư tại\n"
 "            Sencha, C3 Energy Network và Palo Alto Networks."
+
+#: templates/whitepaper/team.html:296
+msgid "Anna Wang"
+msgstr "Anna Vương"
+
+#: templates/whitepaper/team.html:300
+msgid "Regional Manager China"
+msgstr "Giám đốc quản lý bộ phận Trung Quốc"
 
 #: templates/whitepaper/team.html:303
 msgid "Anna is leading our community efforts for Chinese\n"
@@ -4292,59 +4227,55 @@ msgstr "Nền tảng Origin được xây dựng dựa trên hai công nghệ c�
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "Chúng tôi tin rằng bây giờ là thời điểm hoàn hảo để thúc đẩy thương mại hàng ngang và thương mại điện tử để đáp ứng nhu cầu thị trường đang phát triển cùng sự đổi mới công nghệ đầy hứa hẹn."
 
-#: views/web_views.py:81
-msgid "Origin Protocol is the blockchain platform for building decentralized marketplaces"
-msgstr "Origin Protocol là nền tảng blockchain để xây dựng các thị trường phi tập trung"
-
-#: views/web_views.py:209
+#: views/web_views.py:216
 msgid "Missing email"
 msgstr "Email nhỡ"
 
-#: views/web_views.py:212
+#: views/web_views.py:219
 msgid "Invalid email"
 msgstr "Email không hợp lệ"
 
-#: views/web_views.py:275
+#: views/web_views.py:282
 msgid "You're already registered!"
 msgstr "Bạn đã đăng ký xong!"
 
-#: views/web_views.py:277
+#: views/web_views.py:284
 msgid "Thanks for signing up!"
 msgstr "Cảm ơn bạn đã đăng ký!"
 
-#: views/web_views.py:290
+#: views/web_views.py:297
 msgid "Please enter your name"
 msgstr "Vui lòng nhập tên của bạn"
 
-#: views/web_views.py:292
+#: views/web_views.py:299
 msgid "Please enter your email"
 msgstr "Vui lòng nhập email của bạn"
 
-#: views/web_views.py:295
+#: views/web_views.py:302
 msgid "Select your country of citizenship"
 msgstr "Chọn đất nước của bạn"
 
-#: views/web_views.py:299
+#: views/web_views.py:306
 msgid "Please enter your desired allocation"
 msgstr "Vui lòng nhập phân bổ mong muốn của bạn"
 
-#: views/web_views.py:302
+#: views/web_views.py:309
 msgid "Select a currency"
 msgstr "Chọn loại tiền"
 
-#: views/web_views.py:305
+#: views/web_views.py:312
 msgid "Please prove you are not a robot."
 msgstr "Hãy chứng minh bạn không phải là một robot."
 
-#: views/web_views.py:319
+#: views/web_views.py:326
 msgid "OK"
 msgstr "OK"
 
-#: views/web_views.py:333
+#: views/web_views.py:340
 msgid "You have been unsubscribed"
 msgstr "Bạn đã được hủy đăng ký"
 
-#: views/web_views.py:336
+#: views/web_views.py:343
 msgid "Ooops, something went wrong"
 msgstr "Rất tiếc, đã xảy ra sự cố"
 
