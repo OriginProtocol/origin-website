@@ -49,72 +49,14 @@
         <input class="ml-2" type="submit" value="">
       </form>
     </div>
-
-    <!-- Drops section -->
-    <div class="justify-content-center">
-    <div class="container mb-5">
-      <div class="drops-section row justify-content-center">
-
-        <div class="col-12 col-sm-6 col-md-2 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://tabong.brave.com/">
-            <img src="https://partner-assets-prod.ogn.app/brave/lg/Brave-logo-monotone.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://nft.monoxkii.com/">
-            <img src="https://nft.monoxkii.com/static/images/logo.ec07fe3a.png" style="-webkit-filter: invert(100%);"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://nft.obey422.com/">
-            <img src="https://nft.obey422.com/static/images/logo.8e908a4a.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.charliebitme.com/" style="-webkit-filter: grayscale(100%)">
-            <img src="https://www.charliebitme.com/static/images/logo.42534ebe.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://nft.bassjackers.com">
-            <img src="https://nft.bassjackers.com/static/images/logo.3a427842.png" style="-webkit-filter: invert(100%);"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center small">
-          <a target="_blank" rel="noopener noreferrer" href="https://nft.micro.com">
-            <img src="https://nft.micro.com/static/images/logo.2b1df620.png" style="-webkit-filter: invert(100%);"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://wtf.dudewithsign.com" style="-webkit-filter: grayscale(100%)">
-            <img src="https://wtf.dudewithsign.com/static/images/logo.ac30cee9.png"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="http://ryantedder.com/">
-            <img src="https://nft.ryantedder.com/static/images/logo.67f84bf8.png" style="-webkit-filter: invert(100%);"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="http://nft.jakepaul.com/">
-            <img src="https://nft.jakepaul.com/static/images/logo.430d9451.svg" style="-webkit-filter: grayscale(100%) brightness(0%)"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="http://nft.lupefiasco.com/" style="-webkit-filter: grayscale(100%)">
-            <img src="https://nft.lupefiasco.com/static/images/logo.f90be243.png"/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 drop text-center">
-          <a target="_blank" rel="noopener noreferrer" href="http://nft.3lau.com/">
-            <img src="https://nft.3lau.com/static/images/logo-white.4e4b525d.svg" style="-webkit-filter: invert(100%);"/>
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
-
   </div>
+
+  <!-- Put drops here-->
+  {% with 
+    drops=allDrops
+  %} 
+  {% include 'components/drops.html' %} 
+  {% endwith %} 
 
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->

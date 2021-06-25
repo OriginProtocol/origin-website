@@ -40,7 +40,7 @@ import googleapiclient.discovery
 
 import json
 
-from logic.scripts import token_stats
+from logic.scripts import token_stats, drops
 
 # Translation: change path of messages.mo files
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "../translations"
@@ -96,7 +96,9 @@ def root():
 
     all_videos = json.load(open("static/files/videos.json"))
     featured_videos = filter(filter_featured_videos, all_videos)
-    return render_template("landing.html", featured_videos=featured_videos)
+    allPast  = request.args.get('allPast', None)
+    data = drops.get_drops(allPast)
+    return render_template("landing.html", featured_videos=featured_videos, allDrops=data)
 
 
 @app.route("/robots.txt", strict_slashes=False)
@@ -153,7 +155,9 @@ def index():
 
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
-        return render_template("landing.html", featured_videos=featured_videos, ousd_apy=apy)
+        allPast  = request.args.get('allPast', None)
+        data = drops.get_drops(allPast)
+        return render_template("landing.html", featured_videos=featured_videos, ousd_apy=apy, allDrops=data)
     # nope, it's a 404
     else:
         return render_template("404.html"), 404
@@ -625,8 +629,6 @@ def dashboard():
         supply_history=data["ogn_supply_history"],
         staked_data=data["ogn_staked_data"]
     )
-    
-
 
 @app.route("/static/css/all_styles.css", strict_slashes=False)
 def assets_all_styles():
@@ -662,6 +664,8 @@ def assets_all_styles():
                 "static/css/pages/browser-extension.css",
                 "static/css/pages/dshop.css",
                 "static/css/pages/dashboard.css",
+                "static/css/components/drop.css",
+                "static/css/components/drop-card.css",
             ]
         ),
         mimetype="text/css",
