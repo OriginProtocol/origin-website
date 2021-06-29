@@ -371,7 +371,6 @@ def total_supply(address):
 @app.route("/<lang_code>/circulating-ogn", strict_slashes=False)
 def circulating_ogn():
     data = token_stats.get_ogn_stats()
-    print(data)
     return make_response(str(data["ogn_supply_stats"]["circulating_supply"]), 200)
 
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
