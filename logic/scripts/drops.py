@@ -31,7 +31,7 @@ def filter_upcoming_drops(drops):
         if not drop.startDate or not drop.endDate:
             continue
         if (parse_date(drop.startDate) > datetime.now(timezone.utc) or parse_date(drop.endDate) > datetime.now(timezone.utc)):
-            drop.countdown = parse_date(drop.startDate).strftime('%A %B %m')
+            drop.countdown = parse_date(drop.startDate).strftime('%A %B %d')
             upcomingDrops.append(drop)
     upcomingDrops = sort_drops(upcomingDrops) 
     
