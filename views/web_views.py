@@ -365,6 +365,13 @@ def total_supply(address):
     wei = response.json()["result"]
     return make_response(wei[:-18], 200)
 
+# do not remove
+# used by coingecko for the circulating supply
+@app.route("/circulating-ogn", strict_slashes=False)
+@app.route("/<lang_code>/circulating-ogn", strict_slashes=False)
+def circulating_ogn():
+    data = token_stats.get_ogn_stats()
+    return make_response(data["ogn_supply_stats"]["circulating_supply"], 200)
 
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/social-stats", methods=["GET"], strict_slashes=False)
