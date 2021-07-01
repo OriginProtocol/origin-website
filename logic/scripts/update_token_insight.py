@@ -420,9 +420,11 @@ def fetch_reserved_wallet_balances():
     print("Computing OGN stats...")
     # Fetch reserved wallet balances
     fetch_wallet_balance(token_stats.foundation_reserve_address)
+    fetch_wallet_balance(token_stats.new_foundation_reserve_address)
     fetch_wallet_balance(token_stats.team_dist_address)
     fetch_wallet_balance(token_stats.investor_dist_address)
     fetch_wallet_balance(token_stats.dist_staging_address)
+    fetch_wallet_balance(token_stats.new_dist_staging_address)
     fetch_wallet_balance(token_stats.partnerships_address)
     fetch_wallet_balance(token_stats.ecosystem_growth_address)
     fetch_wallet_balance(token_stats.ogn_staking_contract)
@@ -433,7 +435,7 @@ if __name__ == "__main__":
         # fetch_ogn_transactions()
         # alert_on_balance_drop("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
-        alert_on_balance_drop("0xDF73aF150b8E446a6D39FDdc2CFA7Bf067B88936", "Dshop", 1)
+        # alert_on_balance_drop("0xDF73aF150b8E446a6D39FDdc2CFA7Bf067B88936", "Dshop", 1)
         # fetch token info
         fetch_ogn_token_info()
         # fetch_from_ethplorer()
