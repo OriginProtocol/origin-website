@@ -160,18 +160,9 @@
             </div>
 
             <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
-            <div class="reserved-wallet">
-              <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
-              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.foundation_reserve_address}}" target="_blank" rel="noopener noreferrer">
-                <div class="wallet-address d-none">{{ogn_stats.foundation_reserve_address}}</div>
-                <div class="wallet-address d-md-none">{{ogn_stats.foundation_reserve_address[:6]}}...{{ogn_stats.foundation_reserve_address[-4:]}}</div>
-                <div class="wallet-address d-none d-md-flex">{{ogn_stats.foundation_reserve_address}}</div>
-              </a>
-              <div class="wallet-balance">{{ogn_stats.foundation_reserve_balance_formatted}} OGN</div>
-            </div>
 
             <div class="reserved-wallet">
-              <div class="wallet-name">{{gettext("New Foundation Reserves")}}</div>
+              <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
               <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.new_foundation_reserve_address}}" target="_blank" rel="noopener noreferrer">
                 <div class="wallet-address d-none">{{ogn_stats.new_foundation_reserve_address}}</div>
                 <div class="wallet-address d-md-none">{{ogn_stats.new_foundation_reserve_address[:6]}}...{{ogn_stats.new_foundation_reserve_address[-4:]}}</div>
@@ -202,16 +193,6 @@
 
             <div class="reserved-wallet">
               <div class="wallet-name">{{gettext("Distribution Staging")}}</div>
-              <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.dist_staging_address}}" target="_blank" rel="noopener noreferrer">
-                <div class="wallet-address d-none">{{ogn_stats.dist_staging_address}}</div>
-                <div class="wallet-address d-md-none">{{ogn_stats.dist_staging_address[:6]}}...{{ogn_stats.dist_staging_address[-4:]}}</div>
-                <div class="wallet-address d-none d-md-flex">{{ogn_stats.dist_staging_address}}</div>
-              </a>
-              <div class="wallet-balance">{{ogn_stats.dist_staging_balance_formatted}} OGN</div>
-            </div>
-
-            <div class="reserved-wallet">
-              <div class="wallet-name">{{gettext("New Distribution Staging")}}</div>
               <a class="wallet-link" href="https://etherscan.io/address/{{ogn_stats.new_dist_staging_address}}" target="_blank" rel="noopener noreferrer">
                 <div class="wallet-address d-none">{{ogn_stats.new_dist_staging_address}}</div>
                 <div class="wallet-address d-md-none">{{ogn_stats.new_dist_staging_address[:6]}}...{{ogn_stats.new_dist_staging_address[-4:]}}</div>
