@@ -380,6 +380,10 @@ def fetch_wallet_balance(wallet):
                 contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
                 print("DAI balance of %s is %s".format(wallet, contact.dai_balance))
         contact.token_count = len(results["tokens"])
+    else:
+        print("OGN balance of {} is {}".format(wallet, 0))
+        contact.ogn_balance = 0
+        contact.dai_balance = 0
     contact.last_updated = datetime.utcnow()
 
     db.session.add(contact)
@@ -419,15 +423,15 @@ def alert_on_balance_drop(wallet, label, eth_threshold):
 def fetch_reserved_wallet_balances():
     print("Computing OGN stats...")
     # Fetch reserved wallet balances
-    fetch_wallet_balance(token_stats.foundation_reserve_address)
-    fetch_wallet_balance(token_stats.new_foundation_reserve_address)
-    fetch_wallet_balance(token_stats.team_dist_address)
-    fetch_wallet_balance(token_stats.investor_dist_address)
+    # fetch_wallet_balance(token_stats.foundation_reserve_address)
+    # fetch_wallet_balance(token_stats.new_foundation_reserve_address)
+    # fetch_wallet_balance(token_stats.team_dist_address)
+    # fetch_wallet_balance(token_stats.investor_dist_address)
     fetch_wallet_balance(token_stats.dist_staging_address)
-    fetch_wallet_balance(token_stats.new_dist_staging_address)
-    fetch_wallet_balance(token_stats.partnerships_address)
-    fetch_wallet_balance(token_stats.ecosystem_growth_address)
-    fetch_wallet_balance(token_stats.ogn_staking_contract)
+    # fetch_wallet_balance(token_stats.new_dist_staging_address)
+    # fetch_wallet_balance(token_stats.partnerships_address)
+    # fetch_wallet_balance(token_stats.ecosystem_growth_address)
+    # fetch_wallet_balance(token_stats.ogn_staking_contract)
 
 if __name__ == "__main__":
     # called via cron on Heroku
