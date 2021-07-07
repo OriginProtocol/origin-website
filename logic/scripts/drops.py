@@ -46,10 +46,12 @@ def filter_past_drops(drops, allPast):
             pastDrops.append(drop) 
     pastDrops = sort_drops(pastDrops)
 
-    if allPast:
-        return pastDrops
-    else:    
-        return pastDrops[slice(0, 3)]  
+    return pastDrops
+    # skip filtering for now
+    # if allPast:
+    #     return pastDrops
+    # else:    
+    #     return pastDrops[slice(0, 3)]  
                
 
 def get_drops(allPast):
