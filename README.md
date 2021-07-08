@@ -73,6 +73,9 @@ We use [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/) for running b
 ## Running locally with Docker Compose
 
 You can run the website in combination with a local PostgreSQL, Redis and Celery using [Docker Compose](https://docs.docker.com/compose/).
+
+Remove the `.[deploy]` at the end of the requirements.txt
+
 ```bash
 cd origin-website
 docker-compose up
