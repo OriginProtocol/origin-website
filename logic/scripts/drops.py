@@ -14,7 +14,7 @@ from types import SimpleNamespace
 from datetime import date, datetime, timezone, timedelta
 from dateutil import parser
 
-fetch_interval_in_minutes = 30
+fetch_interval_in_minutes = 5
 last_fetch = datetime(1900, 1, 1) # A long time ago - to ensure first fetch
 cached_drops = []
 
@@ -31,7 +31,7 @@ def filter_upcoming_drops(drops):
         if not drop.startDate or not drop.endDate:
             continue
         if (parse_date(drop.startDate) > datetime.now(timezone.utc) or parse_date(drop.endDate) > datetime.now(timezone.utc)):
-            drop.countdown = parse_date(drop.startDate).strftime('%A %B %d')
+            drop.countdown = parse_date(drop.startDate)
             upcomingDrops.append(drop)
     upcomingDrops = sort_drops(upcomingDrops) 
     
@@ -58,7 +58,7 @@ def get_drops(allPast):
     global cached_drops
     global last_fetch
     drops = []
-    next_fetch = last_fetch + timedelta(minutes=fetch_interval_in_minutes)
+    next_fetch = last_fetch + timedelta(seconds=fetch_interval_in_minutes)
 
     if datetime.utcnow() < next_fetch:
         drops = cached_drops
