@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-22 13:11-0400\n"
-"PO-Revision-Date: 2021-06-25 13:31\n"
+"POT-Creation-Date: 2021-07-08 04:32+0000\n"
+"PO-Revision-Date: 2021-07-08 05:27\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -43,50 +43,50 @@ msgstr "Спасибо! Мы скоро свяжемся с Вами."
 msgid "Please enter a valid website address"
 msgstr "Пожалуйста, введите действующий адрес веб-сайта"
 
-#: origin-website/venv/lib/python3.9/site-packages/flask_script/__init__.py:43
+#: origin-website/venv/lib/python3.6/site-packages/flask_script/__init__.py:43
 msgid "show this help message and exit"
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:368
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:368
 #, python-format
 msgid "Content purported to be compressed with %s but failed to decompress."
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:532
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:532
 #, python-format
 msgid "Unsupported value for qop: %s."
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:536
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:614
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:536
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:614
 #, python-format
 msgid "Unsupported value for algorithm: %s.algorithm"
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:609
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:609
 msgid "The challenge doesn't contain a server nonce, or this one is empty."
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:619
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:619
 #, python-format
 msgid "Unsupported value for pw-algorithm: %s.pw-algorithm"
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:1448
+#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:1448
 msgid "Redirected but the response is missing a Location: header."
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1312
+#: origin-website/venv/lib/python3.6/site-packages/kombu/transport/qpid.py:1312
 #, python-format
 msgid "Attempting to connect to qpid with SASL mechanism %s"
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1317
+#: origin-website/venv/lib/python3.6/site-packages/kombu/transport/qpid.py:1317
 #, python-format
 msgid "Connected to qpid with SASL mechanism %s"
 msgstr ""
 
-#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1335
+#: origin-website/venv/lib/python3.6/site-packages/kombu/transport/qpid.py:1335
 #, python-format
 msgid "Unable to connect to qpid with SASL mechanism %s"
 msgstr ""
@@ -569,76 +569,84 @@ msgstr "Кошельки, исключенные из циркулирующег
 msgid "Foundation Reserves"
 msgstr "Резервы фонда"
 
-#: templates/dashboard.html:175
+#: templates/dashboard.html:174
+msgid "New Foundation Reserves"
+msgstr ""
+
+#: templates/dashboard.html:184
 msgid "Team Distribution"
 msgstr "Токены команды"
 
-#: templates/dashboard.html:186
+#: templates/dashboard.html:194
 msgid "Investor Distribution"
 msgstr "Токены инвесторов"
 
-#: templates/dashboard.html:197
+#: templates/dashboard.html:204
 msgid "Distribution Staging"
 msgstr "Промежуточное распределение"
 
-#: templates/dashboard.html:208
+#: templates/dashboard.html:214
+msgid "New Distribution Staging"
+msgstr ""
+
+#: templates/dashboard.html:224
 msgid "Partnerships"
 msgstr "Партнерства"
 
-#: templates/dashboard.html:219
+#: templates/dashboard.html:234
 msgid "Ecosystem Growth"
 msgstr "Развитие экосистемы"
 
-#: templates/dashboard.html:239
+#: templates/dashboard.html:253
 msgid "Stake OGN on OUSD.com"
 msgstr "Стейкайте OGN на OUSD.com"
 
-#: templates/dashboard.html:240 templates/stake-banner.html:7
+#: templates/dashboard.html:254 templates/stake-banner.html:7
 #, python-format
 msgid "Stake your OGN to earn up to 25%%"
 msgstr "Заблокируйте свои OGN и зарабатывайте до 25%%"
 
-#: templates/dashboard.html:243 templates/stake-banner.html:10
+#: templates/dashboard.html:257 templates/stake-banner.html:10
 msgid "Stake OGN now"
 msgstr "Начать стейкать OGN"
 
-#: templates/dashboard.html:247
+#: templates/dashboard.html:261
 msgid "Additional Token Metrics"
 msgstr "Дополнения токенометрики"
 
-#: templates/dashboard.html:250
+#: templates/dashboard.html:264
 msgid "Total number of unique wallets"
 msgstr "Общее число уникальных кошельков"
 
-#: templates/dashboard.html:254
+#: templates/dashboard.html:268
 msgid "Total number of presale investors"
 msgstr "Общее число ранних инвесторов"
 
-#: templates/dashboard.html:258
+#: templates/dashboard.html:272
 msgid "Presale investor vesting schedule length"
 msgstr "Продолжительность разморозки токенов ранних инвесторов"
 
-#: templates/dashboard.html:262
+#: templates/dashboard.html:276
 msgid "Team vesting schedule length*"
 msgstr "Продолжительность разморозки токенов команды*"
 
-#: templates/dashboard.html:266
+#: templates/dashboard.html:280
 msgid "Average presale purchase size in USD"
 msgstr "Средний размер инвестиции на ранних раундах в долларах США"
 
-#: templates/dashboard.html:270
+#: templates/dashboard.html:284
 msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
 msgstr "* 8 января 2020 года учредители подписали новый 4-летний график разморозки токенов"
 
-#: templates/dashboard.html:279
+#: templates/dashboard.html:293
 msgid "Centralized Exchanges"
 msgstr "Централизованные биржи"
 
-#: templates/dashboard.html:406
+#: templates/dashboard.html:420
 msgid "Decentralized Exchanges"
 msgstr "Децентрализованные биржи"
 
-#: templates/dashboard.html:440
+#: templates/dashboard.html:454
 msgid "See more on Coinmarketcap >"
 msgstr "См. больше на Coinmarketcap >"
 
@@ -746,7 +754,7 @@ msgstr "Создайте свой интернет-магазин бесплат
 msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform built on the decentralized web.  Get started for free and launch your store in a day."
 msgstr "Запускайте и развивайте свой бизнес с помощью Dshop, настраиваемой децентрализованной платформы электронной коммерции с открытым исходным кодом. Попробуйте бесплатно и запустите свой магазин за один день."
 
-#: templates/dshop.html:30 templates/dshop.html:366
+#: templates/dshop.html:30 templates/dshop.html:360
 msgid "Try it – it’s free"
 msgstr "Попробуйте - это бесплатно"
 
@@ -774,7 +782,7 @@ msgstr "Запустите децентрализованный интернет
 msgid "Easy crypto payments"
 msgstr "Простые криптоплатежи"
 
-#: templates/dshop.html:81 templates/dshop.html:320
+#: templates/dshop.html:81 templates/dshop.html:314
 msgid "Accept every way your customers want to pay.  Fast, secure payments with no extra fees."
 msgstr "Принимаем любые формы оплаты. Быстрые, безопасные платежи без дополнительных комиссий."
 
@@ -823,88 +831,88 @@ msgstr "Наши клиенты"
 msgid "Meet the companies who are choosing Dshop to build and grow their decentralized online stores"
 msgstr "Представляем Вам компании, которые выбирают Dshop для создания и развития своих децентрализованных интернет-магазинов"
 
-#: templates/dshop.html:208 templates/dshop.html:333
+#: templates/dshop.html:202 templates/dshop.html:327
 msgid "Here to help you succeed"
 msgstr "Здесь, чтобы помочь вам добиться успеха"
 
-#: templates/dshop.html:210
+#: templates/dshop.html:204
 msgid "Speak with a real person when something’s not right. You can email our in-house support anytime, 24/7."
 msgstr "Если что-то не так, поговорите с реальным человеком. Вы можете написать в нашу службу поддержки в любое время, 24/7."
 
-#: templates/dshop.html:212 templates/dshop.html:344
+#: templates/dshop.html:206 templates/dshop.html:338
 msgid "Still have more questions? Feel free to contact us."
 msgstr "Остались вопросы? Напишите нам."
 
-#: templates/dshop.html:215 templates/dshop.html:346
+#: templates/dshop.html:209 templates/dshop.html:340
 msgid "Contact Us"
 msgstr "Написать нам"
 
-#: templates/dshop.html:222
+#: templates/dshop.html:216
 msgid "Dshop success stories"
 msgstr "Истории успеха Dshop"
 
-#: templates/dshop.html:228
+#: templates/dshop.html:222
 msgid "“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”"
 msgstr "«[С Dshop] у нас был быстрый и простой опыт создания онлайн-магазина Contentos»."
 
-#: templates/dshop.html:231
+#: templates/dshop.html:225
 msgid "- Jackie Lim , Senior B.D. Director, Contentos"
 msgstr "- Jackie Lim, старший директор по развитию, Contentos"
 
-#: templates/dshop.html:243
+#: templates/dshop.html:237
 msgid "“We are thrilled to partner with Origin Protocol to launch the Ternio Dshop. They made the entire setup process easy and hands-off, and it has been exciting to see how they have applied the principles of blockchain and decentralization into the e-commerce space. Dshop provides the perfect platform for BlockCard users and our own team to purchase branded merchandise to promote our brand.”"
 msgstr "«Мы очень рады сотрудничеству с Origin Protocol для запуска Ternio Dshop. Они упростили весь процесс настройки и сделали его удобным, и было интересно увидеть, как они применили принципы блокчейна и децентрализации в контексте онлайн торговли. Dshop предоставляет пользователям BlockCard и нашей собственной команде идеальную платформу для покупки фирменных товаров и для продвижения нашего бренда»."
 
-#: templates/dshop.html:255
+#: templates/dshop.html:249
 msgid "“Origin dshops are making blockchain-powered commerce accessible to thousands of people around the world. Kyber is glad to help facilitate liquidity for the Origin Token (OGN).”"
 msgstr "«Origin dshops делают торговлю на основе блокчейна доступной для тысяч людей по всему миру. Kyber рад помочь повысить ликвидность токена Origin (OGN)»."
 
-#: templates/dshop.html:258
+#: templates/dshop.html:252
 msgid "- Shane Hong, Kyber Marketing"
 msgstr "- Shane Hong, Маркетинг в Kyber"
 
-#: templates/dshop.html:274 templates/navbar-dshop.html:7
+#: templates/dshop.html:268 templates/navbar-dshop.html:7
 #: templates/navbar-dshop.html:37
 msgid "Features & Benefits"
 msgstr "Особенности и преимущества"
 
-#: templates/dshop.html:281
+#: templates/dshop.html:275
 msgid "Fast setup, no commitments"
 msgstr "Быстрая настройка, никаких обязательств"
 
-#: templates/dshop.html:284
+#: templates/dshop.html:278
 msgid "No commitments or long-term contracts."
 msgstr "Никаких обязательств или долгосрочных контрактов."
 
-#: templates/dshop.html:292 templates/product.html:121
+#: templates/dshop.html:286 templates/product.html:121
 msgid "Free to run"
 msgstr "Бесплатное использование"
 
-#: templates/dshop.html:295
+#: templates/dshop.html:289
 msgid "Dshop is free to run, and transaction fees are limited to crypto gas costs (typically a few cents per transaction)."
 msgstr "Dshop полностью бесплатен, а комиссионные за транзакции ограничены лишь стоимостью газа (обычно несколько центов за транзакцию)."
 
-#: templates/dshop.html:306
+#: templates/dshop.html:300
 msgid "Sell what you want"
 msgstr "Продавайте всё, что угодно"
 
-#: templates/dshop.html:309
+#: templates/dshop.html:303
 msgid "There are no restrictions on what you can sell, now or ever."
 msgstr "Нет никаких ограничений на то, что вы когда-либо захотите продать."
 
-#: templates/dshop.html:317
+#: templates/dshop.html:311
 msgid "Secure fiat and crypto payments"
 msgstr "Безопасные фиатные и криптовалютные платежи"
 
-#: templates/dshop.html:335 templates/dshop.html:340
+#: templates/dshop.html:329 templates/dshop.html:334
 msgid "Speak with a real person when something’s not right."
 msgstr "Живая служба поддержки. Только живые люди."
 
-#: templates/dshop.html:337 templates/dshop.html:341
+#: templates/dshop.html:331 templates/dshop.html:335
 msgid "You can email our in-house support anytime, 24/7."
 msgstr "Вы можете обратиться в нашу собственную службу поддержки в любое время, 24/7."
 
-#: templates/dshop.html:360
+#: templates/dshop.html:354
 msgid "Ready to start selling today?"
 msgstr "Готовы начать продавать уже сегодня?"
 
@@ -1049,7 +1057,7 @@ msgstr "Вакансии"
 msgid "NFTs & more"
 msgstr ""
 
-#: templates/footer.html:45 templates/litepaper/platform.html:137
+#: templates/footer.html:45 templates/litepaper/platform.html:162
 msgid "OUSD"
 msgstr "OUSD"
 
@@ -1735,7 +1743,7 @@ msgstr "Стейкинг"
 msgid "Earn interest on your OGN while you hold it. Deposit OGN into our high-yield smart contract to grow your stake in the Origin network."
 msgstr "Получайте доход от своего OGN, пока вы просто держите его. Внесите OGN в наш смарт-контракт, чтобы увеличить свою долю в сети Origin."
 
-#: templates/litepaper/platform.html:120 templates/ogn-token.html:147
+#: templates/litepaper/platform.html:145 templates/ogn-token.html:147
 msgid "Governance"
 msgstr "Управление"
 
@@ -1793,11 +1801,11 @@ msgstr "Строить с Origin"
 msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
 msgstr "<strong> Команды по всему миру создают свои проекты, используя Origin. Мы продолжаем искать потрясающих людей, которые <a href='#join_our_mission'> присоединятся к нашей миссии </a>. </strong>"
 
-#: templates/components/drops.html:54 templates/partners.html:87
+#: templates/components/drops.html:66 templates/partners.html:87
 msgid "View More"
 msgstr "Посмотреть больше"
 
-#: templates/components/drops.html:50 templates/partners.html:88
+#: templates/components/drops.html:62 templates/partners.html:88
 msgid "View Less"
 msgstr "Просмотреть меньше"
 
@@ -1869,7 +1877,7 @@ msgstr "Origin Protocol - Продукт"
 msgid "Read our new Litepaper"
 msgstr ""
 
-#: templates/litepaper/platform.html:31 templates/litepaper/sidebar.html:19
+#: templates/litepaper/platform.html:33 templates/litepaper/sidebar.html:19
 #: templates/product.html:36
 msgid "NFT Launchpad"
 msgstr ""
@@ -2577,23 +2585,23 @@ msgstr "Создание настоящей p2p коммерции"
 msgid "To be Announced"
 msgstr "Быть Объявленным"
 
-#: templates/components/drops.html:3
+#: templates/components/drops.html:6
 msgid "Upcoming Drops"
 msgstr ""
 
-#: templates/components/drops.html:21
+#: templates/components/drops.html:27
 msgid "No Drops Scheduled"
 msgstr ""
 
-#: templates/components/drops.html:26
+#: templates/components/drops.html:34
 msgid "Past Drops"
 msgstr ""
 
-#: templates/components/drops.html:44
+#: templates/components/drops.html:55
 msgid "No Past Drops"
 msgstr ""
 
-#: templates/litepaper/conclusion.html:2 templates/litepaper/sidebar.html:38
+#: templates/litepaper/conclusion.html:2 templates/litepaper/sidebar.html:35
 msgid "Conclusion"
 msgstr "Заключение"
 
@@ -2681,24 +2689,24 @@ msgid "Origin Commerce Platform"
 msgstr "Торговая платформа Origin"
 
 #: templates/litepaper/platform.html:4
-msgid "Throughout 2020, we built and iterated upon Origin’s flagship commerce platform, <a href='/dshop' target='_blank' rel='noopener noreferrer'>Dshop</a>, which is used by hundreds of merchants including Brave and Kyber Network and supported by marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a>."
+msgid "Since our founding in 2017, Origin has focused on enabling commerce on the blockchain. We’ve powered sales of physical goods and offline services (e.g. home rentals). We’ve also formed marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a> and dozens of merchant partners like Brave Software."
 msgstr ""
 
 #: templates/litepaper/platform.html:6
-msgid "While we continue to see increased usage of Dshop, we are hyper focused on crypto-specific commerce verticals--most prominently non-fungible tokens (NFTs)--and are hard at work developing a fully-featured NFT platform."
+msgid "While we plan to address commerce across many different verticals, today we are keenly focused on crypto-specific commerce opportunities that target early adopters of our technology. In the last few months, we’ve had tremendous success in the non-fungible token (NFT) market."
 msgstr ""
 
 #: templates/litepaper/platform.html:7
-msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set an all-time record for gross sales in a single NFT drop at nearly $11.7M."
+msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set all-time records for largest music NFT sale at nearly $11.7M with <a href='https://nft.3lau.com' target='_blank' rel='noopener noreferrer'>3LAU</a> and largest viral video/meme NFT sale at $760k with the original viral video, <a href='http://charliebitme.com' target='_blank' rel='noopener noreferrer'>Charlie Bit My Finger</a>. The 3LAU sale reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>, <a href='https://www.cnbc.com/video/2021/05/20/charlie-bit-my-finger-video-to-be-auctioned-off-as-an-nft-on-may-22nd.html' target='_blank' rel='noopener noreferrer'>CNBC</a>, <a href='https://edition.cnn.com/2021/05/22/us/charlie-bit-my-finger-nft-trnd/index.html' target='_blank' rel='noopener noreferrer'>CNN</a>, <a href='https://www.bbc.com/news/newsbeat-57227290' target='_blank' rel='noopener noreferrer'>BBC</a>, <a href='https://time.com/6050450/charlie-bit-my-finger-leaving-youtube/' target='_blank' rel='noopener noreferrer'>Time</a>, <a href='https://www.npr.org/2021/05/21/999360273/viral-charlie-bit-my-finger-video-to-leave-youtube-sell-as-nft' target='_blank' rel='noopener noreferrer'>NPR</a>, <a href='https://www.cbsnews.com/news/charlie-bit-my-finger-video-deleted-youtube-nft/' target='_blank' rel='noopener noreferrer'>ABC</a>, <a href='https://www.nytimes.com/2021/05/24/arts/charlie-bit-my-finger-nft-auction.html' target='_blank' rel='noopener noreferrer'>NY Times</a>, and dozens of other outlets covered the globally-viewed Charlie Bit My Finger sale. In both instances, Origin saw significantly increased community membership and engagement and interest in OGN following these record-breaking events. We believe that future blockbuster NFT sales will further introduce mainstream audiences to the Origin Commerce Platform and OGN."
 msgstr ""
 
 #: templates/litepaper/platform.html:8
-msgid "In January of 2021, NFTs accounted for a record <a href='https://decrypt.co/56998/crypto-art-sales-on-ethereum-reach-a-record-80-million' target='_blank' rel='noopener noreferrer'>$80M of transaction volume</a>. It is clear that NFT sales are growing at an exponential rate and represent the fastest growing opportunity for crypto-centric commerce."
-msgstr "В январе 2021 года на NFT приходился <a href='https://decrypt.co/56998/crypto-art-sales-on-ethereum-reach-a-record-80-million' target='_blank' rel='noopener noreferrer'>рекордный объем транзакций в 80 миллионов долларов</a>. Ясно, что продажи NFT растут экспоненциально и представляют собой наиболее быстрорастущую возможность для распростаненя криптовалют."
+msgid "The overall market for NFTs is about to hit an explosive inflection point, and Origin is very well positioned to take advantage of this opportunity. While NBA Top Shots has recently seen a decrease in secondary sales, over $200M of transactions were achieved in both February and March of 2021. In May, Larva Labs sold nearly $90M of NFTs in 24 hours with their <a href='http://meebits.io' target='_blank' rel='noopener noreferrer'>Meebits</a> launch. This was soon followed by mainstream business influencer Gary Vaynerchuk launching <a href='http://veefriends.com' target='_blank' rel='noopener noreferrer'>Veefriends</a> successfully. It is clear that NFT sales are growing at an exponential rate and represent the fastest growing opportunity for crypto-centric commerce. Even more importantly, we are now seeing iconic global brands and personalities like Gucci, the Golden State Warriors, Playboy, and Paris Hilton embrace NFT technology to interact more directly with their fanbases."
+msgstr ""
 
 #: templates/litepaper/platform.html:10
-msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. At Origin, we believe NFTs are the crypto-centric building blocks that bridge fungible payment currencies like OUSD to multiple billion dollar opportunities."
-msgstr "Однако мы считаем, что большая часть рынка неверно истолковывает NFT как просто дефицитное цифровое искусство. В Origin мы считаем, что NFT - это крипто-строительные блоки, которые соединяют взаимозаменяемые платежные валюты, такие как OUSD, с возможностями на несколько миллиардов долларов."
+msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. While digital art is one exciting vertical that we have been able to capitalize on, we believe Origin’s NFT Launchpad will redefine commerce in several other key verticals as well."
+msgstr ""
 
 #: templates/litepaper/platform.html:11
 msgid "Origin’s NFT Launchpad will redefine commerce in several key verticals."
@@ -2717,8 +2725,8 @@ msgid "This is just one example of how NFTs have changed the landscape for limit
 msgstr "Это всего лишь один пример того, как NFT изменили ландшафт для премиальных продуктов, выпущенных ограниченным тиражом. NFT, которые представляют собой физические товары, могут быть аутентифицированы в цепочке блоков. Влиятельные лица, художники, артисты и другие, теперь могут выпускать NFT, которые являются достоверно редкими и представляют собой ценные физические предметы."
 
 #: templates/litepaper/platform.html:16
-msgid "There is an enormous opportunity to use NFTs to power these creator communities. Because NFTs are freely exchangeable on the blockchain, they also inherently create an after-market for limited edition goods. "
-msgstr "Существует огромная возможность использовать NFT для поддержки этих сообществ создателей. Поскольку NFT можно свободно обменивать на блокчейне, они также создают вторичный рынок для товаров ограниченного выпуска. "
+msgid "There is an enormous opportunity to use NFTs to power these creator communities. Because NFTs are freely exchangeable on the blockchain, they also inherently create an after-market for limited edition goods."
+msgstr ""
 
 #: templates/litepaper/platform.html:17
 msgid "One needs only to reference StockX, the premium sneaker marketplace that is currently valued at $2.8 B, to recognize the possibility of NFTs flourishing in many verticals where scarcity and authenticity need to be enforced. Today, the company generates $400M in revenue by taking fees to certify that premium sneakers are legitimate and not fraudulent. Using NFTs that are tied to these sneakers would establish a clear sense of provenance as sneakers are sold from one buyer to the next."
@@ -2732,6 +2740,10 @@ msgstr "В другом варианте использования NFT, под�
 msgid "Taking this one model one step further, NFT-powered commerce can generate revenue even before products are developed or manufactured. In the web 2.0 world, we saw how crowdfunding platforms like Kickstarter and Gofundme were able to generate demand for creator projects. In the web 3.0, NFTs can be a better form to issue ownership of future redeemable products. Once again, because these NFTs are freely exchangeable they provide backers the ability to resell their ownership even before the projects are completed."
 msgstr "Продвигая эту модель еще на один шаг, торговля на основе NFT может приносить доход еще до того, как продукты будут разработаны или произведены. В мире Web 2.0 мы увидели, как краудфандинговые платформы, такие как Kickstarter и Gofundme, смогли создать спрос на проекты авторов. В сети 3.0 NFT могут быть лучшей формой для подтверждения права собственности на будущие подлежащие погашению продукты. Опять же, поскольку эти NFT можно свободно обменивать, они предоставляют инвесторам возможность перепродать свою собственность еще до завершения проектов."
 
+#: templates/litepaper/platform.html:20
+msgid "At Origin, we have conducted NFT sales for mega-influencer <a href='https://nft.jakepaul.com' target='_blank' rel='noopener noreferrer'>Jake Paul</a> and One Republic frontman, <a href='https://nft.ryantedder.com' target='_blank' rel='noopener noreferrer'>Ryan Tedder</a>, that enabled collectors to receive limited edition physical merchandise in addition to their NFTs. We have even helped secretive, but highly funded electric bike startup Micro pre-sell their earliest e-bikes that will come off the assembly line. In the far future, we imagine using  NFTs as the technology for tracking ownership of major physical items like homes and cars instead of the arcane processes we have today, like going down to the local courthouse to make sure no one else is claiming to own the same property."
+msgstr ""
+
 #: templates/litepaper/platform.html:22
 msgid "NFTs that access digital content"
 msgstr "NFT для доступа к цифровому контенту"
@@ -2744,338 +2756,382 @@ msgstr "Мы намерены выпустить функции NFT, котор�
 msgid "Here are a few examples of how this might work. Today, Patreon influencers allow their super fans to access unique content through the platform. The company generates $50M of revenue and is currently valued at $1.2B. However, these subscriptions and individual payments are tied to unique users. In tomorrow’s world, creators can issue NFTs that unlock special video or music content instead."
 msgstr "Вот несколько примеров того, как это может работать. Сегодня успешные авторы на Patreon позволяют своим супер-фанатам получать доступ к уникальному контенту через платформу. Выручка компании составляет 50 миллионов долларов, а в настоящее время ее стоимость составляет 1,2 миллиарда долларов. Однако эти подписки и индивидуальные платежи привязаны к уникальным пользователям. В завтрашнем мире создатели могут выпускать NFT, которые вместо этого разблокируют специальный видео- или музыкальный контент."
 
-#: templates/litepaper/platform.html:26
+#: templates/litepaper/platform.html:25
+msgid "In late Q3 2021, we expect many of our NFT sales to feature unlockable content. Users only need to have purchased NFTs in their Origin managed wallets or a web3 wallet like Metamask to get access to premium content offered by our many creators."
+msgstr ""
+
+#: templates/litepaper/platform.html:27
 msgid "NFTs that are access tokens"
 msgstr "NFT, как токены доступа"
 
-#: templates/litepaper/platform.html:27
+#: templates/litepaper/platform.html:28
 msgid "A third opportunity that is a multi-billion dollar opportunity in NFT-powered commerce lies in experiential commerce. NFTs that are certifiable on the blockchain can guarantee authenticity of tickets for professional sports, concerts, and other live performances. This reduces the risk of fraudulent tickets and also maintains clear provenance of ticket resales."
 msgstr "Третья возможность, которая представляет собой многомиллиардную возможность в торговле на основе NFT, заключается в «продаже опыта». Сертифицируемые на блокчейне NFT могут гарантировать подлинность билетов на профессиональные спортивные состязания, концерты и другие живые выступления. Это снижает риск поддельных билетов, а также сохраняет полную история происхождения и перепродажи билетов."
 
-#: templates/litepaper/platform.html:28
+#: templates/litepaper/platform.html:29
 msgid "Going back to the Patreon example, a creator NFT may enable a user to get a 1-on-1 video chat with their favorite celebrity. Another user can purchase a premium NFT that grants them backstage access to their favorite musicians concerts for life."
 msgstr "Возвращаясь к примеру с Patreon, создатель NFT может позволить пользователю получить видеочат один на один со своей любимой знаменитостью. Другой пользователь может приобрести премиальный NFT, который дает ему доступ за кулисы к концертам своих любимых музыкантов на всю жизнь."
 
-#: templates/litepaper/platform.html:32
-msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). The Dshop NFT Launchpad gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs."
-msgstr "Ключом к раскрытию ценности всех этих криптоцентрических возможностей является упрощение выпуска NFT для артистов и авторов. Кроме того, в отличие от существующих игроков на рынке, таких как Nifty Gateway, мы считаем, что создатели должны владеть брендом и иметь прямой контроль над моделями ценообразования (например, различные механизмы аукционов или многоуровневое ценообразование). Панель запуска Dshop NFT дает создателям и звёздам более прямой контроль над своим контентом, а также над их физическими, цифровыми и экспериментальными продуктами. Подобно тому, как многие продавцы выбрали Shopify вместо продажи на общих торговых площадках, которые не допускают индивидуальный брендинг и прямые отношения с конечными покупателями, мы считаем, что та же модель будет успешной для NFT."
-
-#: templates/litepaper/platform.html:33
-msgid "All three aforementioned NFT-powered commerce opportunities are already supported by our platform. Almost $11.7M of gross sales were generated using Origin’s commerce platform in our inaugural campaign, a sum that smashed the previous record for a single NFT collection. Coverage of this record breaking event reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>."
+#: templates/litepaper/platform.html:30
+msgid "In our highly successful <a href='https://nft.bassjackers.com' target='_blank' rel='noopener noreferrer'>Bassjackers</a> NFT sale, the winning bidder was given the ability to name a track and appear on stage with BassJackers at future music festivals and concerts."
 msgstr ""
 
 #: templates/litepaper/platform.html:34
-msgid "Similarly, with Origin’s ever-deepening relationship with Brave, we enabled them to sell their NFTs on their existing merch store. Their entire first collection sold out in minutes. We anticipate additional NFT-centric commerce opportunities with the exponentially growing browser company that already boasts 20M monthly active users (MAU)."
+msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). Origin’s NFT Launchpad gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs. Further, many creators prefer Origin’s NFT platform because they do not need to share the stage with other competing NFT drops that may be off-brand. We have also lowered the user experience barriers for newcomers to NFTs. While many of the other platforms require using cryptocurrency, we also offer the ability to purchase NFTs with credit and debit cards."
 msgstr ""
 
 #: templates/litepaper/platform.html:35
 msgid "In the near future, we intend to form additional partnerships with additional mainstream influencers and iconic brands to power their NFT commerce initiatives. We believe there is a huge untapped market for monetizing premium, limited-edition online and offline goods and services through our latest NFT product upgrades to the Origin Platform."
 msgstr "В ближайшем будущем мы намерены наладить дополнительные партнерские отношения с многими знаменитостями и знаковыми брендами для поддержки их коммерческих инициатив NFT. Мы считаем, что существует огромный недооцененный рынок для монетизации премиальных, ограниченных выпусков онлайн- и офлайн-товаров и услуг посредством наших последних обновлений продуктов NFT для платформы Origin."
 
-#: templates/litepaper/platform.html:39
-msgid "Origin NFT Marketplace"
+#: templates/litepaper/platform.html:36
+msgid "We are especially excited about several NFT Launchpad upgrades that are scheduled to launch in Q3 of 2021."
+msgstr ""
+
+#: templates/litepaper/platform.html:38
+msgid "Self-serve NFT launchpad"
 msgstr ""
 
 #: templates/litepaper/platform.html:40
-msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on the [Origin NFT Auction Platform] as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology and we are the leaders in this field. The Origin Marketplace protocol was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
-msgstr "Продажи на вторичном рынке жизненно важны для истинного определения цены NFT и взросления этого зарождающегося рынка. Мы намерены создать рыночную платформу для вторичных продаж всех NFT, запущенных на Платформе Origin NFT, а также NFT с других платформ и торговых площадок. Команда Origin уже имеет более чем 4-летний опыт создания технологии p2p торговых площадок, и мы являемся лидерами в этой области. Протокол Origin Marketplace был запущен в основной сети Ethereum в 2018 году и поддерживал десятки тысяч пользователей и листинги для различных товаров и услуг. Origin полностью намерена стать лидером рынка NFT и захватывать продажи NFT от наших партнеров-создателей, а также от создателей, которые запускают их самостоятельно или с другой платформой."
+msgid "Today, Origin’s NFT Launchpad is a curated experience for our collectors and is an invite-only platform. For creators, we build custom storefronts that oftentimes require several weeks of engineering work. While this allows us to hold record-breaking NFT sales with top creators, the last thing we want to do in the long-term is to become the gatekeepers of which creators can launch NFT drops."
+msgstr ""
 
 #: templates/litepaper/platform.html:41
-msgid "NFTs being based on a common set of decentralized technology standards makes building a marketplace that can serve the entire NFT ecosystem possible. Any moats deployed by other NFT marketplace operators will be quickly rendered ineffective as they are against the spirit of decentralization. Another important aspect to our platform is that these secondary marketplaces can be run and curated by the NFT creators themselves. Gallerists and artists have always cared deeply about presentation and curation as it can have a strong impact on the price of their assets. Letting creators control every aspect of their NFT from creation to secondary market sale is a key differentiator to Origin’s NFT platform over more generic NFT marketplaces. Fans of specific creators and artists will also appreciate going direct to the source instead of browsing through unrelated listings on a generalized marketplace."
-msgstr "NFT, основанные на общем наборе децентрализованных технологических стандартов, делают возможным создание рынка, который может обслуживать всю экосистему NFT. Любые попытки других игроков рынка NFT, быстро станут неэффективными, поскольку они противоречат духу децентрализации. Еще одним важным аспектом нашей платформы является то, что эти вторичные торговые площадки могут управляться и курироваться самими создателями NFT. Галеристы и художники всегда глубоко заботились о презентации и курировании, поскольку это может сильно повлиять на цену их активов. Предоставление создателям возможности контролировать каждый аспект своей NFT от создания до продажи на вторичном рынке - это ключевое отличие платформы Origin от более общих торговых площадок NFT. Поклонники конкретных авторов и исполнителей также оценят прямое взаимодействие с автором, а не просмотр несвязанных списков на общем рынке."
+msgid "We have thousands of inbound requests from creators of all sizes, from verticals like music, art, sports, retail, and many others. We are excited to open the NFT Launchpad to all interested creators by the second half of 2021 with the launch of our self-serve WYSIWYG (what you see is what you get) editor."
+msgstr ""
 
-#: templates/litepaper/platform.html:42
-msgid "Another reason creators should be excited about custom NFT marketplaces is that it allows them to better monetize their creations over a longer period of time. Artists will experience increased value capture from programmatic transaction fees attached to NFTs they create. This means that any secondary market sales will generate revenue for NFT creators in perpetuity. Previously, musical artists would only capture a small portion of this value through royalties and fine artists would capture no value from secondary sales."
-msgstr "Еще одна причина, по которой создатели должны быть в восторге от специализированных торговых площадок NFT, заключается в том, что они позволяют им лучше монетизировать свои творения в течение более длительного периода времени. Художники получат повышенную выгоду от комиссий за программные транзакции, связанных с созданными ими NFT. Это означает, что любые продажи на вторичном рынке будут приносить прибыль создателям NFT на постоянной основе. Раньше музыкальные исполнители получали лишь небольшую часть этой стоимости за счет гонораров, а художники-исполнители не получали никакой выгоды от вторичных продаж."
+#: templates/litepaper/platform.html:45
+msgid "Creators will be able to create Origin accounts, upload audio and visual assets for their NFTs and customized websites, and schedule NFT sales using a variety of different sale formas (e.g. 1 of 1 auctions, leaderboard auctions, open editions, limited editions, and more). NFT Launchpad will democratize NFT creation and sales. Importantly, Origin will share in the proceeds of NFT sales conducted by our creators, creating substantial revenue-generating possibilities for us."
+msgstr ""
 
-#: templates/litepaper/platform.html:43
-msgid "Not only are secondary market sales important for price discovery, transaction fees from these sales will be one of the key revenue drivers for the [Origin NFT product] in the future. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
-msgstr "Продажи на вторичном рынке важны не только для определения цены, но и комиссионные за транзакции с этих продаж будут одним из ключевых факторов дохода для NFT платформы Origin в будущем. На вторичном рынке делается гораздо больший объем, чем во время первоначальных продаж, и мы ожидаем рекордных сделок в будущем. Origin намеревается создать полнофункциональную платформу и экосистему NFT. Мы разработаем лучшую в отрасли комплексную платформу NFT и принесем огромную пользу нашим пользователям, партнерам-создателям NFT и держателям токенов."
+#: templates/litepaper/platform.html:49
+msgid "Site-specific and Aggregator NFT Marketplaces"
+msgstr ""
 
-#: templates/litepaper/platform.html:47 templates/litepaper/sidebar.html:25
+#: templates/litepaper/platform.html:51
+msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on our Launchpad as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology, and we are the leaders in this field. The original Origin Marketplace was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
+msgstr ""
+
+#: templates/litepaper/platform.html:52
+msgid "Our marketplace product will allow for both site-specific marketplaces and a larger Origin-branded aggregator marketplace."
+msgstr ""
+
+#: templates/litepaper/platform.html:53
+msgid "With the former implementation, secondary marketplaces can be run and curated by the NFT creators themselves. Again, these marketplaces can live on the individual creators’ websites. Gallerists and artists have always cared deeply about presentation and curation as it can have a strong impact on the price of their assets. In another scenario, one can imagine top brands like Marvel or the NFL wanting to showcase secondary sales of their NFTs in more brand-centric experiences. Letting creators control every aspect of their NFT from creation to secondary market sale is a key differentiator to Origin’s NFT platform over more generic NFT marketplaces. Fans of specific creators and artists will also appreciate going direct to the source instead of browsing through unrelated listings on a generalized marketplace."
+msgstr ""
+
+#: templates/litepaper/platform.html:57
+msgid "With the Origin-branded marketplace, we will aggregate all our NFT sales on a single website that makes it easy for buyers to discover new creators. Site-specific marketplace NFTs will be aggregated to the Origin-branded marketplace. In the future, we will allow for creators like brands and celebrities to promote their NFTs on the Origin-branded marketplace. This is similar to how Google AdWords works and presents a potentially lucrative additional business model for Origin."
+msgstr ""
+
+#: templates/litepaper/platform.html:58
+msgid "Creators are excited about custom NFT marketplaces because they allow them to better monetize their creations over a longer period of time. Artists will experience increased value capture from programmatic transaction fees attached to NFTs they create. This means that any secondary market sales will generate revenue for NFT creators in perpetuity. Previously, musical artists would only capture a small portion of this value through royalties and fine artists would capture no value from secondary sales."
+msgstr ""
+
+#: templates/litepaper/platform.html:60
+msgid "Not only are secondary market sales important for price discovery, revenue sharing from these sales will be one of the key revenue drivers for Origin’s Launchpad. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
+msgstr ""
+
+#: templates/litepaper/platform.html:62
+msgid "OGN buybacks and other token utilities"
+msgstr ""
+
+#: templates/litepaper/platform.html:63
+msgid "We may conduct additional OGN buybacks over time using revenue generated from the various income streams that are being developed across the NFT launchpad (e.g. primary sales proceeds, secondary sales revenue share, paid promotion by creators). We conducted our first buyback at the end of May 2021 for $1.3M worth of OGN."
+msgstr ""
+
+#: templates/litepaper/platform.html:64
+msgid "We also anticipate tightly coupling OGN into our self-serve and marketplace products. For example, we intend to experiment with allowing creators to stake OGN for increased revenue share. There may also be certain NFT sales that will be structured around buyers using OGN for special bonuses and perks (e.g. require OGN staking or payment for drawing/raffle sales). It is also anticipated that OGN will be the native currency for paid promotion on our aggregator marketplace."
+msgstr ""
+
+#: templates/litepaper/platform.html:66
+msgid "Mainstream NFTs"
+msgstr ""
+
+#: templates/litepaper/platform.html:67
+msgid "Origin’s NFTs are currently Ethereum ERC-721 NFTs. While this effectively targets the early adopter community that has developed around Ethereum, we recognize that the minting costs of today’s Ethereum NFTs, oftentimes $25 to $50+ per NFT, make these NFTs prohibitively expensive for more mainstream adoption. In order to bring NFTs to the hundreds of millions of consumers, NFTs must be cheaper to mint. To tackle this volume-centric strategy, Origin will begin integrations with alternative blockchains and also explore Ethereum layer 2 solutions in Q3. Our goal is to enable creators to offer NFTs at $10 to $20 that can be purchased by their mainstream in seconds with credit and debit cards. This will be especially important for NFT use cases related to merchandise, ticketing, and collectibles."
+msgstr ""
+
+#: templates/litepaper/platform.html:72 templates/litepaper/sidebar.html:22
 msgid "The Origin Dollar (OUSD)"
 msgstr "Origin Dollar (OUSD)"
 
-#: templates/litepaper/platform.html:48
+#: templates/litepaper/platform.html:73
 msgid "In 1999, Yu Pan, one of PayPal’s original co-founders conceived of creating “the new world currency”, complete with interest yielding strategies and debit cards without having to connect to traditional banking systems. Several pivots and an eBay acquisition later, PayPal dropped its ambitions in this area."
 msgstr "В 1999 году Ю Пэн, один из первых соучредителей PayPal, задумал создать «новую мировую валюту», дополненную стратегиями получения процентов и дебетовыми картами без необходимости подключения к традиционным банковским системам. После нескольких разворотов и приобретения eBay, PayPal отказался от своих амбиций в этой области."
 
-#: templates/litepaper/platform.html:49
+#: templates/litepaper/platform.html:74
 msgid "Two decades later, Yu Pan, Origin’s founding engineer, and the rest of the Origin team have finally launched this new world currency."
 msgstr "Два десятилетия спустя Ю Пэн, инженер-основатель Origin, и остальная часть команды Origin, наконец, запустили эту новую мировую валюту."
 
-#: templates/litepaper/platform.html:50
+#: templates/litepaper/platform.html:75
 #, python-format
 msgid "The Origin Dollar is the first cryptocurrency stablecoin that automatically and passively provides users with the opportunity to earn yield while sitting in cryptocurrency wallets. Users do not need to stake/unstake or provide liquidity to earn yields across underlying DeFi protocols. While past performance does not guarantee future results, to date OUSD has generated, through the underlying DeFi protocols, annualized yields between 20%% and 150%% at any given time."
 msgstr ""
 
-#: templates/litepaper/platform.html:51
+#: templates/litepaper/platform.html:76
 msgid "OUSD is a superior DeFi product for the masses. By removing all the complexities normally associated with earning fees through lending or supplying liquidity to automated market makers (AMMs), OUSD is highly accessible to users who are new to cryptocurrency technologies. Today, users need only to purchase OUSD on centralized exchanges or decentralized swap sites like Uniswap/Sushiswap to begin getting DeFi yield exposure immediately. Alternatively, users can mint OUSD with their existing stablecoins (DAI, USDT, USDC currently) on the <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
 msgstr ""
 
-#: templates/litepaper/platform.html:52
+#: templates/litepaper/platform.html:77
 msgid "Current APYs and circulating supply are published transparently on the <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD dashboard</a>. "
 msgstr "Текущие APY и количество токенов в обращении прозрачно публикуются на <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>панели инструментов OUSD</a>."
 
-#: templates/litepaper/platform.html:53
+#: templates/litepaper/platform.html:78
 msgid "With OUSD, there’s no need to unwind complicated positions when you want to spend your OUSD. You can transfer it freely without having to pay gas to unlock spendable capital. In addition, OUSD gives you the ability to utilize a basket of leading DeFi opportunities with none of the hassles. The OUSD smart contracts deploy your underlying capital to a diversified set of yield-earning strategies, automatically rebalancing over time to achieve strong yields while diversifying risk. Earnings automatically accrue in your wallet and compound continuously while you hold OUSD. Again, no staking or lockups are required, making your OUSD as easy to transfer as any other ERC-20 token. OUSD also serves as an ideal unit of account. DeFi participants no longer need complicated spreadsheets to calculate their earnings as they can easily see their constantly updated OUSD balances in real-time."
 msgstr ""
 
-#: templates/litepaper/platform.html:55
+#: templates/litepaper/platform.html:80
 msgid "Yield strategies"
 msgstr "Стратегии получения дохода"
 
-#: templates/litepaper/platform.html:56
+#: templates/litepaper/platform.html:81
 msgid "OUSD uses two high-level strategies for generating yield--lending and market making."
 msgstr "OUSD использует две основные стратегии для получения прибыли - кредитование и маркет-мейкинг."
 
-#: templates/litepaper/platform.html:58
+#: templates/litepaper/platform.html:83
 msgid "Lending:"
 msgstr "Кредитование:"
 
-#: templates/litepaper/platform.html:59
+#: templates/litepaper/platform.html:84
 msgid "DeFi lending platforms let users lend and borrow crypto assets without any middlemen. Both lenders and borrowers get more value from their crypto. Lenders earn interest, while borrowers deposit crypto as collateral to gain access to credit without traditional banking headaches. DeFi lending platforms currently provide far superior returns for lenders than are generally available in the traditional markets."
 msgstr "Платформы кредитования DeFi позволяют пользователям одалживать и брать в долг криптоактивы без посредников. И кредиторы, и заемщики получают больше от своей криптовалюты. Кредиторы получают проценты, а заемщики вносят криптовалюту в качестве залога, чтобы получить доступ к кредиту без традиционных банковских проблем. Платформы кредитования DeFi в настоящее время обеспечивают гораздо более высокую доходность для кредиторов, чем обычно доступны на традиционных рынках."
 
-#: templates/litepaper/platform.html:60
+#: templates/litepaper/platform.html:85
 msgid "OUSD integrates with DeFi lending platforms that provide over-collateralized loans. Over-collateralization, combined with smart rules around liquidations, provide a reasonable level of security for lenders. Aave also additionally secures their lending pools with AAVE tokens respectively, further lowering risk."
 msgstr "OUSD интегрируется с кредитными платформами DeFi, которые предоставляют займы с чрезмерным обеспечением. Избыточное обеспечение в сочетании с разумными правилами ликвидации обеспечивает разумный уровень безопасности для кредиторов. Aave также дополнительно обеспечивает свои кредитные пулы токенами AAVE соответственно, что еще больше снижает риск."
 
-#: templates/litepaper/platform.html:61
+#: templates/litepaper/platform.html:86
 msgid "OUSD integrates with two leading lending providers, Compound and Aave, that have a proven track record audited smart contracts, and have successfully lent hundreds of millions of dollars without issue."
 msgstr ""
 
-#: templates/litepaper/platform.html:63
+#: templates/litepaper/platform.html:88
 msgid "Market making:"
 msgstr "Маркет-мейкинг:"
 
-#: templates/litepaper/platform.html:64
+#: templates/litepaper/platform.html:89
 msgid "Automated market makers (AMMs) have quickly risen as the preferred form of decentralized exchange on the Ethereum network. This is in part due to the difficulty of supporting order book DEXes on Ethereum 1.0 that can rival the instant and low-slippage experiences on centralized exchanges. Further, AMMs like Uniswap are relatively user-friendly and gas-efficient to use."
 msgstr "Автоматизированные маркет-мейкеры (AMM) быстро стали предпочтительной формой децентрализованного обмена в сети Ethereum. Частично это связано со сложностью поддержки DEX на основе стакана заявок на Ethereum 1.0, которая сможет конкурировать с мгновенным и низким проскальзыванием на централизованных биржах. Кроме того, такие AMM, как Uniswap, относительно удобны и экономичны в использовании."
 
-#: templates/litepaper/platform.html:65
+#: templates/litepaper/platform.html:90
 #, python-format
 msgid "AMMs can only enable new markets when liquidity providers supply liquidity (e.g. multiple tokens for given trading pairs or pools). In return for providing liquidity, liquidity providers are rewarded with trading fees when other users swap tokens. For example, when traders swap USDT for USDC on Uniswap, they are currently charged 0.3%% on top of gas fees. These fees are distributed pro-rata to liquidity providers on the USDT-USDC pair based on the percentage of total liquidity that they have provided."
 msgstr "AMM могут открывать новые рынки только тогда, когда поставщики ликвидности предоставляют ликвидность (например, несколько токенов для определенных торговых пар или пулов). В обмен на предоставление ликвидности, её поставщики вознаграждаются торговыми сборами, когда другие пользователи обменивают токены. Например, когда трейдеры обменивают USDT на USDC на Uniswap, с них в настоящее время взимается 0,3% сверх платы за газ. Эти комиссии распределяются пропорционально между поставщиками ликвидности по паре USDT-USDC на основе процента от общей ликвидности, которую они предоставили."
 
-#: templates/litepaper/platform.html:66
+#: templates/litepaper/platform.html:91
 msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. The OUSD smart contract is currently integrated with Curve, and may be integrated with Uniswap, Sushiswap, and Balancer in the future."
 msgstr ""
 
-#: templates/litepaper/platform.html:67
+#: templates/litepaper/platform.html:92
 msgid "In addition to collecting interest from lending and fees from market making, we intend to automatically claim and convert the bonus incentives that are being distributed by many of the DeFi protocols. For example, Compound gives away COMP tokens, Balancer gives away BAL tokens, and Curve gives away CRV tokens. These bonus rewards will be regularly converted into stablecoins, deployed in the market, and distributed to OUSD holders in the form of additional yield."
 msgstr "В дополнение к сбору процентов от кредитования и комиссионных от увеличения эффективности рынка мы намерены автоматически запрашивать и конвертировать бонусные стимулы, которые распределяются по многим протоколам DeFi. Например, Compound раздает токены COMP, Balancer раздает токены BAL, а Curve раздает токены CRV. Эти бонусные вознаграждения будут регулярно конвертироваться в стейблкоины, размещаться на рынке и распределяться среди держателей OUSD в виде дополнительной прибыли."
 
-#: templates/litepaper/platform.html:68
+#: templates/litepaper/platform.html:93
 msgid "OUSD is able to generate higher yields than competing protocols due to a combination of important design decisions that amplify the rewards that are returned to OUSD holders:"
 msgstr "OUSD может генерировать более высокую доходность, чем конкурирующие протоколы, благодаря комбинации важных решений, которые увеличивают вознаграждение, возвращаемое держателям OUSD:"
 
-#: templates/litepaper/platform.html:70
+#: templates/litepaper/platform.html:95
 msgid "Exit fees are returned to the pool, rewarding long term holders"
 msgstr "Плата за выход возвращается в пул, вознаграждая долгосрочных держателей"
 
-#: templates/litepaper/platform.html:71
+#: templates/litepaper/platform.html:96
 msgid "Price oracles favor the collective over the individual, again rewarding long term holders"
 msgstr "Оракулы вознаграждают долгосрочных держателей токенов"
 
-#: templates/litepaper/platform.html:72
+#: templates/litepaper/platform.html:97
 msgid "Smart contracts must manually opt-in to earn yield. This allows the protocol to put more capital to work than would be otherwise possible."
 msgstr "Чтобы получать доход, смарт-контракты должны вручную включить эту опцию. Это позволяет протоколу задействовать больше капитала, чем это было бы возможно в другом случае."
 
-#: templates/litepaper/platform.html:73
+#: templates/litepaper/platform.html:98
 msgid "OUSD smart contracts allow users to balance risk and reward more effectively than deploying capital in any single underlying strategy."
 msgstr ""
 
-#: templates/litepaper/platform.html:76
+#: templates/litepaper/platform.html:101
 msgid "Origin's role in OUSD"
 msgstr ""
 
-#: templates/litepaper/platform.html:77
+#: templates/litepaper/platform.html:102
 #, python-format
 msgid "OUSD is meant to be a tool that gives users easy and passive access to DeFi exposure. Origin’s role in the development of OUSD is ministerial rather than managerial. This means instead of actively managing OUSD as a business or actively managing the funds in the OUSD vault, Origin maintains the OUSD smart contracts as developers in order to keep the protocol functional and avoid catastrophic losses or failures for users. Origin does not intend to make strategic decisions to allocate funds from the OUSD vault. Funds in the OUSD vault are automatically deployed to the largest and most common DeFi protocols including Compound, Aave, and Curve, as outlined above. OUSD is a decentralized protocol on the Ethereum  blockchain without active management. Funds are allocated by OUSD smart contracts, not Origin employees, and Origin developers chose the aforementioned DeFi protocols for their safety and ubiquity in DeFi rather than to seek maximum yields or profits. The OUSD protocol is 100%% open-source and we are fast tracking OUSD to be governed in a totally decentralized fashion."
 msgstr ""
 
-#: templates/litepaper/platform.html:79
+#: templates/litepaper/platform.html:104
 msgid "Readers can learn more about the technical details of OUSD on our <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>documentation</a>."
 msgstr "Читатели могут узнать больше о технических деталях OUSD в нашей <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>документации</a>."
 
-#: templates/litepaper/platform.html:81
+#: templates/litepaper/platform.html:106
 msgid "Benefits of OUSD"
 msgstr "Преимущества OUSD"
 
-#: templates/litepaper/platform.html:82
+#: templates/litepaper/platform.html:107
 msgid "Mainstream cryptocurrency users now have the equivalent of a high-yield savings account automatically built into their Ethereum wallets whenever they are holding OUSD. This increases DeFi’s addressable user base from tens to hundreds of thousands of sophisticated users to tens of millions of users instantly. By comparison, Uniswap, the most widely used DeFi product to date has only interacted with approximately 250k Ethereum wallets since its inception."
 msgstr "У всех пользователей криптовалюты теперь есть эквивалент высокодоходного сберегательного счета, который автоматически встроен в их кошельки Ethereum всякий раз, когда они хранят OUSD. Это мгновенно увеличивает потенциальную базу пользователей DeFi с десятков до сотен тысяч опытных пользователей до десятков миллионов пользователей. Для сравнения: Uniswap, наиболее широко используемый на сегодняшний день продукт DeFi, с момента своего создания взаимодействовал только с примерно 250 тысяч кошельков Ethereum."
 
-#: templates/litepaper/platform.html:83
+#: templates/litepaper/platform.html:108
 #, python-format
 msgid "Because OUSD makes it easy for consumers to switch between spending and savings mode, it can also become the ideal medium of exchange. Today, many merchants other than those dealing in black or grey markets do not have many incentives to accept cryptocurrencies. Because most consumers currently use credit cards and mobile payments, merchants are forced to accept payments predominantly with these methods. In the process, they are often charged a 2.90%% credit card processing fee, with other payment intermediaries (e.g. merchant bankers and interchange networks) also increasing the cost of doing business. "
 msgstr "Поскольку OUSD позволяет потребителям легко переключаться между платформами, он также может стать идеальным средством обмена. Сегодня у многих продавцов, помимо тех, которые работают на черном или сером рынке, нет особых стимулов принимать криптовалюту. Поскольку большинство потребителей в настоящее время используют кредитные карты и мобильные платежи, продавцы вынуждены принимать платежи преимущественно этими методами. При этом с них часто взимается комиссия за обработку кредитной карты в размере 2,90% и более, при этом другие платежные посредники (например, торговые банкиры и обменные сети) также увеличивают стоимость ведения бизнеса. "
 
-#: templates/litepaper/platform.html:84
+#: templates/litepaper/platform.html:109
 #, python-format
 msgid "For merchants that have traditionally been skeptical of receiving cryptocurrency payments, being able to accept a yield-bearing stablecoin that beats traditional savings accounts and instantly earns yields at a minimum of 20%% APY is a powerful motivator. Instead of losing money on each sale, they are instantly adding capital to their merchant accounts that compounds instantly, giving them more operating capital over time. For merchants that oftentimes face cash flow management and inventory issues, being able to accept a yield-bearing form of payment is extremely compelling."
 msgstr "Для продавцов, которые традиционно скептически относились к получению платежей в криптовалюте, возможность принять стабильную монету, которая превосходит традиционные сберегательные счета и мгновенно приносит доходность минимум 20% годовых, является мощным мотиватором. Вместо того, чтобы терять деньги на каждой продаже, они мгновенно добавляют капитал на свои торговые счета, который постоянно увеличивается, давая им больше оборотного капитала с течением времени. Для продавцов, которые часто сталкиваются с проблемами управления денежными потоками и запасами, возможность принять приносящую доход форму оплаты является чрезвычайно привлекательной."
 
-#: templates/litepaper/platform.html:85
+#: templates/litepaper/platform.html:110
 msgid "OUSD creates the incentives for merchants to not only accept, but promote the usage of cryptocurrencies in their businesses. As more users hold and make purchases with OUSD, more merchants will similarly accept OUSD. These powerful network effects have the potential to gradually replace the payment rails for both online and offline commerce."
 msgstr "OUSD побуждает продавцов не только принимать, но и продвигать использование криптовалют в своем бизнесе. Чем больше пользователей держат и совершают покупки с помощью OUSD, тем больше продавцов будут принимать OUSD. Эти мощные сетевые эффекты могут постепенно заменить платёжные системы как для онлайн, так и для офлайн-торговли."
 
-#: templates/litepaper/platform.html:86
+#: templates/litepaper/platform.html:111
 msgid "In the short-term, OUSD’s target audience encompasses the millions of cryptocurrency users in the world that are not yet invested in DeFi. An even larger opportunity lies in targeting the hundreds of millions of users that are currently using traditional peer-to-peer and merchant payment systems."
 msgstr ""
 
-#: templates/litepaper/platform.html:87
+#: templates/litepaper/platform.html:112
 msgid "Today, PayPal boasts over 305M consumers and 22M merchants and processes over $200B of payments in a single quarter. Our aspirations are to begin penetrating that customer base with OUSD and future payments applications built on top of the OUSD protocol in the upcoming year."
 msgstr "Сегодня PayPal насчитывает более 305 миллионов пользователей и 22 миллиона продавцов и обрабатывает платежи на сумму более 200 миллиардов долларов за один квартал. Мы стремимся начать проникновение в эту клиентскую базу с помощью OUSD и будущих платежных приложений, построенных на основе протокола OUSD в следующем году."
 
-#: templates/litepaper/platform.html:89
+#: templates/litepaper/platform.html:114
 msgid "Future products"
 msgstr "Будущие продукты"
 
-#: templates/litepaper/platform.html:90
+#: templates/litepaper/platform.html:115
 msgid "We imagine a better future for online and offline payments that uses OUSD as the underlying payment rails. Below, we outline our vision for what we'd like to see built on top of the OUSD protocol. We also encourage our large community of supporters and open-source developers to build additional compelling products to bring DeFi and cryptocurrency payments to the masses."
 msgstr "Мы представляем себе лучшее будущее для онлайн- и офлайн-платежей, когда в качестве основы для платежей используются OUSD. Ниже мы обрисовываем наше видение того, что мы хотели бы видеть на основе протокола OUSD. Мы также призываем наше большое сообщество сторонников и разработчиков создавать дополнительные привлекательные продукты, которые сделают DeFi и криптовалютные платежи доступными для масс."
 
-#: templates/litepaper/platform.html:92
+#: templates/litepaper/platform.html:117
 msgid "Venmo meets high-yield savings and a debit card"
 msgstr "Как Venmo, только лучше"
 
-#: templates/litepaper/platform.html:93
+#: templates/litepaper/platform.html:118
 msgid "Today peer-to-peer mobile payments account for trillions of dollars in transaction volume. In the United States, Venmo and Square Cash dominate. In China, cryptocurrency’s largest market by trading volume, Wechat and Alipay have near monopolistic holds on consumers and merchants. These simple, centralized payment apps are used by customers paying merchants and by friends and family transferring money to each other. Furthermore, in many markets, the US and Europe especially, bank cards are still the go-to way to spend money for online and offline transactions. Credit card companies, payment processors, and banks dominate this market and there are a variety of companies such as PayPal that assist merchants and consumers in using their cards online."
 msgstr "Сегодня объем транзакций p2p мобильных платежей составляет триллионы долларов. В Соединенных Штатах доминируют Venmo и Square Cash. В Китае, крупнейшем рынке криптовалюты по объему торгов, Wechat и Alipay практически монополизируют потребителей и продавцов. Эти простые централизованные платежные приложения используются покупателями, которые платят продавцам, а также друзьями и семьей, переводящими деньги друг другу. Более того, на многих рынках, особенно в США и Европе, банковские карты по-прежнему используются для совершения онлайн- и офлайн-транзакций. Компании, выпускающие кредитные карты, платежные системы и банки доминируют на этом рынке, и существует множество компаний, таких как PayPal, которые помогают продавцам и потребителям использовать свои карты в Интернете."
 
-#: templates/litepaper/platform.html:94
+#: templates/litepaper/platform.html:119
 msgid "The billions of users using these existing payment methods have very little incentive to adopt cryptocurrency payments due to increased friction and lack of network effects."
 msgstr "У миллиардов пользователей, использующих эти существующие способы оплаты, очень мало стимулов для принятия платежей в криптовалюте из-за большого количества барьеров и отсутствия сетевых эффектов."
 
-#: templates/litepaper/platform.html:95
+#: templates/litepaper/platform.html:120
 msgid "We believe a new peer-to-peer payment app with an associated debit card built on top of the OUSD protocol can disrupt incumbents. Today, Venmo users shuffle money between their Venmo accounts and their checking accounts and credit cards. In the case of the former, money sitting in Venmo or checking accounts doesn’t earn any interest. Venmo balances that are funded by credit cards are even worse as there are fees charged by multiple intermediaries. In the later case, interest earned by users is usually negligible, especially when taking into account inflation. Cash back or rewards programs can offer users incentives but high interest rates for missing payments are a strong disincentive to users."
 msgstr "Мы считаем, что новое приложение для p2p платежей со связанной дебетовой картой, созданное на основе протокола OUSD, выигрывает у традиционных операторов. Сегодня пользователи Venmo перемещают деньги между своими счетами Venmo, текущими счетами, кредитными картами. В первом случае деньги, хранящиеся на Venmo или текущих счетах, не приносят никаких процентов. Балансы Venmo, которые финансируются с помощью кредитных карт, еще хуже, поскольку есть комиссии, взимаемые несколькими посредниками. В последнем случае проценты, получаемые пользователями, обычно незначительны, особенно с учетом инфляции. Программы «кэшбэк» или вознаграждения могут предлагать пользователям стимулы, но высокие процентные ставки за пропущенные платежи являются сильным сдерживающим фактором для пользователей."
 
-#: templates/litepaper/platform.html:96
+#: templates/litepaper/platform.html:121
 msgid "Tomorrow’s peer-to-peer mobile payment application powered by OUSD will introduce the killer feature of double-digit yields. Our version of Venmo will combine the ease of peer-to-peer payments with a high-yield savings account that beats traditional savings accounts by a factor of 10 to 100x."
 msgstr "В приложении для мобильных платежей между пользователями на базе OUSD появится потрясающая функция - двузначная годовая доходность. Наша версия Venmo будет сочетать в себе простоту p2p платежей с высокодоходным сберегательным счетом, предлагаю доходность в десятки раз превышающую рыночную."
 
-#: templates/litepaper/platform.html:97
+#: templates/litepaper/platform.html:122
 msgid "The OUSD payment app will be built with a centralized mobile app and APIs to minimize user friction for mainstream users. Users will be able to deposit USD and/or other fiat currencies to the app and enjoy the seamless user experiences of centralized applications. However, on the backend, these fiat deposits will be used to mint OUSD. New users will hold their balances in OUSD in Origin custodial wallets without needing to understand cryptocurrencies. They will simply be able to earn industry-leading yields when they are not spending. Again, your OUSD is always earning & ready to be spent or transferred at the same time."
 msgstr "Платежное приложение OUSD будет построено с централизованным мобильным приложением и API, чтобы минимизировать неудобства для обычных пользователей. Пользователи смогут вносить в приложение доллары США и / или другую фиатную валюту и наслаждаться плавным пользовательским интерфейсом централизованных приложений. Однако на бэкэнде эти фиатные депозиты будут использоваться для выпуска OUSD. Новые пользователи будут хранить свои балансы в OUSD в кастодиальных кошельках Origin без необходимости разбираться в криптовалютах. Они просто смогут получать лучшую в отрасли доходность. Опять же, ваш OUSD всегда зарабатывает и может быть потрачен или переведен одновременно."
 
-#: templates/litepaper/platform.html:98
+#: templates/litepaper/platform.html:123
 msgid "The viral effects of the future OUSD payment app cannot be overstated. Payment apps are by nature already viral, with users onboarding their friends and family in order to transact with them, establishing powerful network effects. Merchants quickly adopt the payment services that attract the most users. By adding in the ability to earn yield the very instant that any new referred user accepts funds from a referring user, we believe the viral coefficient for existing users referring new users will be multiples higher than ever seen before in a traditional payments application."
 msgstr "Вирусный эффект будущего платежного приложения OUSD невозможно переоценить. Платежные приложения по своей природе уже являются вирусными: пользователи подключают своих друзей и родственников к работе с ними, создавая мощные сетевые эффекты. Продавцы быстро внедряют платежные сервисы, которые привлекают больше всего пользователей. Добавляя возможность зарабатывать доход в тот самый момент, когда любой новый привлеченный пользователь принимает средства от направляющего пользователя, мы полагаем, что вирусный коэффициент для существующих пользователей, ссылающихся на новых пользователей, будет в несколько раз выше, чем когда-либо ранее в традиционных платежных приложениях."
 
-#: templates/litepaper/platform.html:99
+#: templates/litepaper/platform.html:124
 msgid "The OUSD debit card will be tied to the future OUSD payment app and will allow users to spend down their on-app OUSD balance. Whenever users want to use their OUSD, their OUSD will be converted to USD via Visa’s interchange network and be instantly accepted by 40 million merchants all over the world. Merchants will receive USD and need not know that OUSD was used as the underlying original currency to power the transaction. Again, when users’ OUSD is not being spent, it will automatically accumulate staggering yields that should be superior to any cash bank or credit card rewards program in existence."
 msgstr "Дебетовая карта OUSD будет привязана к будущему платежному приложению OUSD и позволит пользователям оплачивать свой баланс OUSD в приложении. Когда пользователи захотят использовать свои OUSD, их OUSD будут конвертированы в доллары США через обменную сеть Visa и будут немедленно приняты 40 миллионами продавцов по всему миру. Продавцы будут получать доллары США, и им не нужно знать, что OUSD использовалась в качестве базовой исходной валюты для проведения транзакции. Опять же, когда OUSD пользователей не тратится, он автоматически накапливает ошеломляющие доходы, которые должны быть выше, чем у любой существующей программы вознаграждения банка наличными или кредитной карты."
 
-#: templates/litepaper/platform.html:100
+#: templates/litepaper/platform.html:125
 msgid "Although we plan on launching with hosted or managed wallets, we believe that users should be in control of their own funds if they do not want to use managed wallets. While the service that we build will be centralized at the application and middleware layer, the core protocol is decentralized. Users will be able to eject from the managed wallet at any point in time to simply hold their OUSD in their own self-managed wallets within the same app. We imagine that more and more users will gradually migrate from managed wallets to self-hosted wallets over time as they become educated about the benefits of underlying protocol."
 msgstr "Хотя мы планируем запуск с горячими или управляемыми кошельками, мы считаем, что пользователи должны контролировать свои собственные средства. В то время как сервис, который мы создаем, будет централизован на уровне приложения и промежуточного программного обеспечения, основной протокол будет децентрализованным. Пользователи смогут в любой момент выйти из управляемого кошелька, чтобы просто удерживать свои OUSD в своих собственных самоуправляемых кошельках в том же приложении. Мы предполагаем, что со временем все больше и больше пользователей будут постепенно переходить с управляемых кошельков на автономные кошельки по мере того, как они узнают о преимуществах базового протокола."
 
-#: templates/litepaper/platform.html:103
+#: templates/litepaper/platform.html:128
 msgid "Getting online and offline merchants to accept payments that are powered by OUSD rails is a monumental step. However, further down the road, an even more ambitious objective is to get merchants to accept OUSD directly."
 msgstr "Заставить онлайн- и офлайн-продавцов принимать платежи через OUSD - это серьезный шаг. Однако в дальнейшем появится еще более амбициозная цель - заставить продавцов принимать OUSD напрямую."
 
-#: templates/litepaper/platform.html:104
+#: templates/litepaper/platform.html:129
 msgid "The incentives to accept OUSD as a merchant over traditional credit cards or mobile payments is extremely compelling. Merchants can earn double-digit yields upon the sales of goods and services versus getting taxed with multiple payment fees."
 msgstr "Стимулы принимать OUSD по сравнению с традиционными кредитными картами или мобильными платежами чрезвычайно убедительны. Продавцы могут получать двузначную прибыль сразу после продажи товаров ли услуг вместо того, чтобы облагаться несколькими комиссиями за каждую транзакцию."
 
-#: templates/litepaper/platform.html:105
+#: templates/litepaper/platform.html:130
 msgid "The very first e-commerce platform to accept OUSD is Origin’s own Dshop platform. However, Dshop is a relatively new platform, and the majority of online e-commerce stores are run by incumbents like Shopify and Woo Commerce."
 msgstr "Самой первой онлайн платформой, которая принимает OUSD, является собственная платформа Origin Dshop. Тем не менее, Dshop - относительно новая платформа, и большинство онлайн-магазинов используют технологи таких компаний, как Shopify и Woo Commerce."
 
-#: templates/litepaper/platform.html:106
+#: templates/litepaper/platform.html:131
 msgid "Thankfully, both Shopify and Woo Commerce have mature developer platforms and APIs. We intend to build applications on these existing platforms that allow merchants to accept OUSD directly from customers that want to pay with OUSD. These developer plugins are relatively simple to build, and there are many existing examples of working payment alternatives."
 msgstr "К счастью, и Shopify, и Woo Commerce имеют отличные порталы для разработчиков и современные API. Мы намерены создавать приложения на этих существующих платформах, которые позволят продавцам принимать OUSD напрямую от клиентов, которые хотят платить с помощью OUSD. Эти плагины относительно просты в сборке, и существует множество работающих примеров для интеграции альтернативных способов оплаты."
 
-#: templates/litepaper/platform.html:107
+#: templates/litepaper/platform.html:132
 msgid "For example, the Shopify app store currently already offers Coinbase Commerce, Bitpay, and GoCoin. We will release an OUSD payment app for merchants in the coming future."
 msgstr "Например, магазины на Shopify в настоящее время уже предлагают Coinbase Commerce, Bitpay и GoCoin. В ближайшем будущем OUSD будет также доступен для продавцов."
 
-#: templates/litepaper/platform.html:110
+#: templates/litepaper/platform.html:135
 msgid "Given the recent surge in both the price of ETH and the usage of the Ethereum network, gas fees are becoming increasingly prohibitive and a major deterrent for getting the kind of retail adoption that we want."
 msgstr "Учитывая недавний скачок цен на ETH и растущее использование сети Ethereum, плата за газ (комиссии сети Ethereum) становится все более высокой и является серьезным сдерживающим фактором для получения того вида розничной торговли, который мы хотим."
 
-#: templates/litepaper/platform.html:111
+#: templates/litepaper/platform.html:136
 msgid "Ethereum is by far the most dominant layer 1 chain when it comes to DeFi activity and total value locked (TVL) today. However, as other layer 1 chains gain DeFi adoption, it is our intention to make OUSD accessible on other chains like Binance Smart Chain, Solana, Cosmos, and Polkadot which offer faster transactions and lower gas costs. "
 msgstr "Ethereum на сегодняшний день является наиболее доминирующим блокчеином первого уровня, когда дело доходит до активности DeFi и общей заблокированной стоимости (TVL). Однако по мере того как все больше DeFi проектов создаётся на альтернативных блокчеинах, мы намерены сделать OUSD доступным на таких платформах как Binance Smart Chain, Solana, Cosmos и Polkadot, которые предлагают более быстрые транзакции и низкие комиссии. "
 
-#: templates/litepaper/platform.html:112
+#: templates/litepaper/platform.html:137
 msgid "All of the yield for OUSD will continue to be generated on the Ethereum platform since that’s where the vast majority of capital and earning opportunities exist today. However, chain-specific versions of OUSD will be mintable by anyone who locks up OUSD in the cross-chain bridge. For example, you could lock 100 OUSD in the Solana bridge in order to generate 100 sOUSD which would be freely transferable within the Solana ecosystem. The original OUSD would stay locked in a smart contract where it would continue earning yield. Inside Solana, the circulating sOUSD tokens would rebase in lockstep with the OUSD that was locked in the smart contract. Anyone who wishes to exit would be able to redeem their sOUSD for the originally locked capital plus any yield that was generated while they were holding it."
 msgstr "Весь доход от OUSD будет по-прежнему генерироваться на платформе Ethereum, поскольку именно там сегодня существует подавляющее большинство возможностей для получения стабильной доходности. Тем не менее, версии OUSD для блокчеинов будут доступны для выпуска любым пользователям, кто заблокирует OUSD использую кросс-чеин мост. Например, вы можете заблокировать 100 OUSD через мост Solana, чтобы сгенерировать 100 SOUSD, которые можно было бы свободно передавать в экосистеме Solana. Исходный OUSD останется заблокированным в смарт-контракте, где он продолжит приносить доход. Внутри Solana циркулирующие токены sOUSD будут перемещаться синхронно с OUSD, заблокированным в смарт-контракте. Любой, кто пожелает выйти, сможет обменять свои sOUSD на изначально заблокированный капитал плюс любой доход, который был получен, пока они его держали."
 
-#: templates/litepaper/platform.html:117 templates/litepaper/sidebar.html:28
+#: templates/litepaper/platform.html:142 templates/litepaper/sidebar.html:25
 #: templates/whitepaper/sidebar.html:34
 msgid "The Origin Token (OGN)"
 msgstr "Origin Токен (OGN)"
 
-#: templates/litepaper/platform.html:118
+#: templates/litepaper/platform.html:143
 msgid "The Origin Token (OGN) is the governance and value accrual token for the entire Origin Platform and suite of products."
 msgstr "Origin Token (OGN) - это токен управления и получения доходности для всей платформы Origin и набора продуктов."
 
-#: templates/litepaper/platform.html:121
+#: templates/litepaper/platform.html:146
 msgid "Decentralized governance for the OUSD protocol will happen first. Following the successful migration of making OUSD community-owned, we will begin the progressive decentralization of the Origin commerce platform as well."
 msgstr "Сначала OUSD протокол станет управляемым децентрализовано. После успешной миграции и передачи OUSD в собственность сообщества мы также начнем постепенную децентрализацию торговой платформы Origin."
 
-#: templates/litepaper/platform.html:122
+#: templates/litepaper/platform.html:147
 msgid "Today, the OUSD protocol is already currently undergoing a progressive path to full decentralization. We’ve outlined four phases to full decentralization and are currently in phase 2."
 msgstr "Сегодня протокол OUSD уже находится на постепенном пути к полной децентрализации. Мы выделили четыре этапа полной децентрализации, и в настоящее время мы находимся на этапе 2."
 
-#: templates/litepaper/platform.html:124
+#: templates/litepaper/platform.html:149
 msgid "OGN token holders will be able to create and vote on proposals to govern the underlying protocol. This may include:"
 msgstr "Держатели токенов OGN смогут создавать и голосовать за предложения по управлению базовым протоколом. Это может включать:"
 
-#: templates/litepaper/platform.html:126
+#: templates/litepaper/platform.html:151
 msgid "Adding/removing new types of yield-earning strategies"
 msgstr "•\tДобавление / удаление новых типов стратегий доходности"
 
-#: templates/litepaper/platform.html:127
+#: templates/litepaper/platform.html:152
 msgid "Allocating capital across a basket of strategies"
 msgstr "Распределение капитала по корзине стратегий"
 
-#: templates/litepaper/platform.html:128
+#: templates/litepaper/platform.html:153
 msgid "Determining what fees are charged by the protocol"
 msgstr "Определение комиссии, взимаемой протоколом"
 
-#: templates/litepaper/platform.html:129
+#: templates/litepaper/platform.html:154
 msgid "Determining what incentives (e.g. OGN rewards for liquidity mining) are offered on an ongoing basis"
 msgstr "Определение того, какие стимулы (например, вознаграждения OGN за добычу ликвидности) предлагаются на постоянной основе"
 
-#: templates/litepaper/platform.html:132
+#: templates/litepaper/platform.html:157
 msgid "Note that decentralized governance privileges will not apply to the centralized applications like the peer-to-peer payments product or debit card to be built on OUSD in the near-term. However, the underlying protocol will be fully decentralized before the end of 2021."
 msgstr "Обратите внимание, что привилегии децентрализованного управления не будут применяться к централизованным приложениям, таким как продукт для p2p платежей или дебетовая карта, которые будут построены на OUSD в ближайшем будущем. Однако основной протокол будет полностью децентрализован до конца 2021 года."
 
-#: templates/litepaper/platform.html:134
+#: templates/litepaper/platform.html:159
 msgid "Value accrual"
 msgstr "Увеличение стоимости"
 
-#: templates/litepaper/platform.html:135
+#: templates/litepaper/platform.html:160
 msgid "OGN holders will benefit directly from any protocol revenues and fees generated from products built on the Origin Platform. This includes on-chain revenue from OUSD as well as potential off-chain revenue sources from OUSD or our commerce products in the future."
 msgstr "Владельцы OGN получат прямую выгоду от любых доходов от протокола и сборов, полученных от продуктов, созданных на платформе Origin. Это включает в себя выручку внутри сети от OUSD, а также потенциальные источники дохода вне сети от OUSD или наших коммерческих продуктов в будущем."
 
-#: templates/litepaper/platform.html:138
+#: templates/litepaper/platform.html:163
 #, python-format
 msgid "Currently, 10%% of DeFi yields generated from OUSD are collected as a protocol service fee. These on-chain fees are being used to buy back OGN on the market, generating consistent buy pressure for OUSD’s governance token."
 msgstr ""
 
-#: templates/litepaper/platform.html:139
+#: templates/litepaper/platform.html:164
 msgid "Through decentralized governance, the community will be able to adjust service fee settings as well as other value accrual parameters."
 msgstr ""
 
-#: templates/litepaper/platform.html:145
+#: templates/litepaper/platform.html:170
 msgid "OGN holders are therefore incentivized to promote OUSD. As OUSD circulating supply increases, service fees generated will also increase, directly benefiting OGN holders financially. The converse is also true. OUSD holders are incentivized to be OGN holders, so they can participate actively in the governance of the protocol. This creates a strong flywheel effect between Origin’s two tokens."
 msgstr ""
 
-#: templates/litepaper/platform.html:146
+#: templates/litepaper/platform.html:171
 msgid "Since it is our intention to build powerful applications on top of the OUSD protocol like the new peer-to-peer payments product and debit card offering, we will also be able to create new monetization opportunities with these applications. For example, we may take a small percentage of OUSD yields as revenue to cover the costs of running the centralized infrastructure to power these experiences. Any profits that are generated off-chain can similarly be reinvested into the OGN buyback program or other fee distribution options mentioned above.    "
 msgstr "Поскольку мы намерены создавать мощные приложения на основе протокола OUSD, такие как новый продукт для прямых платежей и выпуск дебетовых карт, мы также сможем создать новые возможности монетизации с помощью этих приложений. Например, мы можем взять небольшой процент от дохода OUSD в качестве комиссии, чтобы покрыть расходы на управление централизованной инфраструктурой для обеспечения этого работы приложений. Любая прибыль, полученная вне сети, аналогичным образом может быть реинвестирована в программу обратного выкупа OGN или другие варианты распределения комиссий, упомянутые выше.    "
 
-#: templates/litepaper/sidebar.html:22
-msgid "NFT Marketplace"
-msgstr "Торговая площадка NFT"
-
-#: templates/litepaper/sidebar.html:33 templates/litepaper/team.html:2
+#: templates/litepaper/sidebar.html:30 templates/litepaper/team.html:2
 msgid "Founding Team"
 msgstr "Команда основателей"
 
