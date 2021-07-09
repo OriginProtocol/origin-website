@@ -1,7 +1,7 @@
 <script>
     function getLocalDate(dateString) {
         var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         var start = new Date('{{time}}')
         return days[start.getDay()] + ' ' + months[start.getMonth()] + ' ' + start.getDate()
     }
