@@ -1,3 +1,11 @@
+<script>
+    function getLocalDate(dateString) {
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        var start = new Date('{{time}}')
+        return days[start.getDay()] + ' ' + months[start.getMonth()] + ' ' + start.getDate()
+    }
+</script>
 <a href="{{drop_url}}" target="_blank">
     <div class="nft-card">
         <img src="{{image}}"/>
@@ -6,7 +14,8 @@
                 <div class="title">{{title}}</div>
             </div>
             <div class="col-6 d-flex flex-column">
-                <div class="time justify-content">{{time}}</div>
+                <!-- <div class="time justify-content">{{time}}</div> -->
+                <div class="time justify-content"><script> document.write(getLocalDate('{{time}}')); </script></div>
             </div>
         </div>
         <div class="subtitle">{{subtitle}}</div>
