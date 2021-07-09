@@ -23,7 +23,7 @@ Setup and activate a Python virtualenv
 
 Install
 
-    pip install -e .
+    pip install -e .[dev]
 
 
 Rename the file `sample.env` to `.env`, and update env variables as desired.
