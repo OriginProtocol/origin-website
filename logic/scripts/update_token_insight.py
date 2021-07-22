@@ -391,7 +391,7 @@ def fetch_wallet_balance(wallet):
 
     return contact
 
-# alerting system to notify us if a wallet drops below a certain threshold
+# Alerting system to notify us if a wallet ETH  balance drops below a certain threshold.
 def alert_on_balance_drop(wallet, label, eth_threshold):
 
     print("Checking if the balance of {} ({}) is below {}".format(
@@ -414,7 +414,7 @@ def alert_on_balance_drop(wallet, label, eth_threshold):
             body = "Please send more ETH to %s" % (wallet)
             print(body)
             print(subject)
-            sgw.notify_founders(body, subject)
+            sgw.notify_finance(body, subject)
 
     except Exception as e:
         print(e)
@@ -440,6 +440,10 @@ if __name__ == "__main__":
         # alert_on_balance_drop("0x440EC5490c26c58A3c794f949345b10b7c83bdC2", "AC", 1)
         # alert_on_balance_drop("0x5fabfc823e13de8f1d138953255dd020e2b3ded0", "Meta-transactions", 1)
         # alert_on_balance_drop("0xDF73aF150b8E446a6D39FDdc2CFA7Bf067B88936", "Dshop", 1)
+        alert_on_balance_drop("0xB6F1eCA4C41df46E1e20d63Dd90B639559c4e9D3", "NFT Launchpad - Hot wallet", 1)
+        alert_on_balance_drop("0xa27413bC29a8EcEB32549b4b95b5Bd57265006ca", "NFT Launchpad - Master wallet", 1)
+        alert_on_balance_drop("0xdABF42c0851051bbBCC700a68Ac8d046678a2C58", "NFT Launchpad - Deployer wallet", 1)
+        alert_on_balance_drop("0xC7CCE656178465D1db0DCFE4f3EA32797801E715", "NFT Launchpad - Collector wallet", 1)
         # fetch token info
         fetch_ogn_token_info()
         # fetch_from_ethplorer()

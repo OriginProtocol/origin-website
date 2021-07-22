@@ -29,6 +29,9 @@ def notify_admins(message, subject=None):
 def notify_founders(message, subject=None):
     return notify_(message, subject, Email('founders@originprotocol.com', 'Origin Founders'))
 
+def notify_finance(message, subject=None):
+    return notify_(message, subject, Email('finance@originprotocol.com', 'Origin Finance Team'))
+
 def notify_(message, subject=None, to_notify=None):
     subject = subject.encode('ascii', 'ignore') if subject else None
     if 'localhost' in constants.HOST or 'pagekite' in constants.HOST:
