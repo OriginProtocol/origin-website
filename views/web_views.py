@@ -629,15 +629,15 @@ def dashboard():
     data = token_stats.get_ogn_stats()
     binance_lang_code = constants.BINANCE_LOCALE_MAP[g.current_lang] or "en"
 
-    return render_template("dashboard.html")
-    # return render_template(
-    #     "dashboard.html",
-    #     hide_ogn_banner=True,
-    #     ogn_stats=data["ogn_supply_stats"],
-    #     supply_history=data["ogn_supply_history"],
-    #     staked_data=data["ogn_staked_data"],
-    #     binance_lang_code=binance_lang_code
-    # )
+    # return render_template("dashboard.html")
+    return render_template(
+        "dashboard.html",
+        hide_ogn_banner=True,
+        ogn_stats=data["ogn_supply_stats"],
+        supply_history=data["ogn_supply_history"],
+        staked_data=data["ogn_staked_data"],
+        binance_lang_code=binance_lang_code
+    )
 
 @app.route("/static/css/all_styles.css", strict_slashes=False)
 def assets_all_styles():
