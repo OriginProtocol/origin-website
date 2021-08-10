@@ -106,18 +106,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h3>{{gettext("Locked Tokens")}}</h3>
+          <h3>{{gettext("Staked amount by duration")}}</h3>
           <div class="desc">
-            {{gettext("Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply.")}}
+            {{gettext("Staked OGN is included as part of the circulating supply. You can <a href='{{universal.STAKE_URL}}'>stake your OGN</a> on ousd.com")}}
           </div>
           
-          <div class="locked-token-widget">
-            <div class="title">
-              {{gettext("Total number of tokens in investor and team lockups")}}
+          <div class="row staked-chart">
+            <div class="col-md-3">
+              <div class="chart-container">
+                <canvas id="staked_amount_chart" height="110px"></canvas>
+              </div>
             </div>
-            <div class="value">
-              {{ogn_stats.formatted_staked_token_count}}
-              <div class="ogn-label">OGN</div>
+            <div class="col">
+              <div id="staked_amount_legends" class="chart-legends-container"></div>
             </div>
           </div>
           
@@ -131,35 +132,18 @@
             </div>
           </div>
 
-          <div class="locked-token-widget">
-            <div class="title">
-              {{gettext("Total number of tokens founders have sold")}}
-            </div>
-            <div class="value">
-              0
-              <div class="ogn-label">OGN</div>
-            </div>
-          </div>
-
           <div class="subtitle2 mb-0">{{gettext("Last updated ")}}{{ogn_stats["created_at_formatted_timeago"]}}</div>
 
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0">
-          <h3>{{gettext("Staked amount by duration")}}</h3>
+          
+          <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
+          <div class="desc">
+            {{gettext("Circulating supply is calculated as the total supply minus the OGN balances of the following wallets:")}}
+          </div>
+          
 
           <div class="reserved-wallets mb-0">
-            <div class="row staked-chart">
-              <div class="col-md-3">
-                <div class="chart-container">
-                  <canvas id="staked_amount_chart" height="110px"></canvas>
-                </div>
-              </div>
-              <div class="col">
-                <div id="staked_amount_legends" class="chart-legends-container"></div>
-              </div>
-            </div>
-
-            <h3>{{gettext("Wallets excluded from circulating supply")}}</h3>
 
             <div class="reserved-wallet">
               <div class="wallet-name">{{gettext("Foundation Reserves")}}</div>
@@ -231,11 +215,11 @@
           <img class="ogn-coin" src="/static/img/coins/ogn-coin.svg"/>
         </div>
         <div class="stake-content d-flex flex-column">
-          <h1>{{gettext("Stake OGN on OUSD.com")}}</h1>
-          <p>{{gettext("Stake your OGN to earn up to 25%%")}}</p>
+          <h1>{{gettext("Participate in governance")}}</h1>
+          <p>{{gettext("Use your OGN to vote and issue proposals")}}</p>
         </div>
-        <a class='btn btn-dark ml-lg-auto' href="{{universal.STAKE_URL}}" target="_blank" rel="noopener noreferrer">
-          {{gettext("Stake OGN now")}}
+        <a class='btn btn-dark ml-lg-auto' href="https://vote.originprotocol.com" target="_blank" rel="noopener noreferrer">
+          {{gettext("Vote now")}}
         </a>
       </div>
       <div class="additional-token-metrics px-3">
