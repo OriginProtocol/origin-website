@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-07-08 04:32+0000\n"
-"PO-Revision-Date: 2021-09-23 10:26\n"
+"PO-Revision-Date: 2021-09-23 10:37\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -2929,7 +2929,7 @@ msgstr "Στρατηγικές απόδοσης"
 
 #: templates/litepaper/platform.html:81
 msgid "OUSD uses two high-level strategies for generating yield--lending and market making."
-msgstr ""
+msgstr "Το OUSD χρησιμοποιεί δύο στρατηγικές υψηλού επιπέδου για τη δημιουργία αποδόσεων-δανεισμού και δημιουργία αγοράς."
 
 #: templates/litepaper/platform.html:83
 msgid "Lending:"
@@ -2937,60 +2937,60 @@ msgstr "Δανεισμός:"
 
 #: templates/litepaper/platform.html:84
 msgid "DeFi lending platforms let users lend and borrow crypto assets without any middlemen. Both lenders and borrowers get more value from their crypto. Lenders earn interest, while borrowers deposit crypto as collateral to gain access to credit without traditional banking headaches. DeFi lending platforms currently provide far superior returns for lenders than are generally available in the traditional markets."
-msgstr ""
+msgstr "Οι πλατφόρμες δανεισμού DeFi επιτρέπουν στους χρήστες να δανείζουν και να δανείζονται κρυπτογραφικά περιουσιακά στοιχεία χωρίς μεσάζοντες. Τόσο οι δανειστές όσο και οι δανειολήπτες παίρνουν μεγαλύτερη αξία από το κρυπτογράφημά τους. Οι δανειστές κερδίζουν τόκους, ενώ οι δανειολήπτες καταθέτουν κρυπτογράφηση ως εγγύηση για να αποκτήσουν πρόσβαση σε πίστωση χωρίς παραδοσιακά τραπεζικά εμπόδια. Οι πλατφόρμες δανεισμού DeFi παρέχουν επί του παρόντος πολύ υψηλότερες αποδόσεις για τους δανειστές από αυτές που είναι γενικά διαθέσιμες στις παραδοσιακές αγορές."
 
 #: templates/litepaper/platform.html:85
 msgid "OUSD integrates with DeFi lending platforms that provide over-collateralized loans. Over-collateralization, combined with smart rules around liquidations, provide a reasonable level of security for lenders. Aave also additionally secures their lending pools with AAVE tokens respectively, further lowering risk."
-msgstr ""
+msgstr "Το OUSD ενσωματώνεται με πλατφόρμες δανεισμού DeFi που παρέχουν δάνεια με υψηλή εξασφάλιση. Η υπερβολική εξασφάλιση, σε συνδυασμό με τους έξυπνους κανόνες για τις εκκαθαρίσεις, παρέχουν ένα λογικό επίπεδο ασφάλειας στους δανειστές. Επιπλέον, η Aave εξασφαλίζει επιπλέον τις πιστώσεις δανεισμού τους με μάρκες AAVE αντίστοιχα, μειώνοντας περαιτέρω τον κίνδυνο."
 
 #: templates/litepaper/platform.html:86
 msgid "OUSD integrates with two leading lending providers, Compound and Aave, that have a proven track record audited smart contracts, and have successfully lent hundreds of millions of dollars without issue."
-msgstr ""
+msgstr "Το OUSD ενσωματώνεται με δύο κορυφαίους παρόχους δανεισμού, το Compound και το Aave, που έχουν αποδεδειγμένα ελεγμένα έξυπνα συμβόλαια και έχουν δανείσει με επιτυχία εκατοντάδες εκατομμύρια δολάρια χωρίς πρόβλημα."
 
 #: templates/litepaper/platform.html:88
 msgid "Market making:"
-msgstr ""
+msgstr "Δημιουργία αγοράς:"
 
 #: templates/litepaper/platform.html:89
 msgid "Automated market makers (AMMs) have quickly risen as the preferred form of decentralized exchange on the Ethereum network. This is in part due to the difficulty of supporting order book DEXes on Ethereum 1.0 that can rival the instant and low-slippage experiences on centralized exchanges. Further, AMMs like Uniswap are relatively user-friendly and gas-efficient to use."
-msgstr ""
+msgstr "Οι Automated market makers (AMM) αυξήθηκαν γρήγορα ως η προτιμώμενη μορφή αποκεντρωμένης ανταλλαγής στο δίκτυο Ethereum. Αυτό οφείλεται εν μέρει στη δυσκολία υποστήριξης του βιβλίου παραγγελιών των DEXes στο Ethereum 1.0 που μπορεί να ανταγωνιστεί τις στιγμιαίες και χαμηλής ολίσθησης εμπειρίες σε κεντρικές ανταλλαγές. Επιπλέον, τα AMM όπως το Uniswap είναι σχετικά φιλικά προς το χρήστη και αποδοτικά στη χρήση gas."
 
 #: templates/litepaper/platform.html:90
 #, python-format
 msgid "AMMs can only enable new markets when liquidity providers supply liquidity (e.g. multiple tokens for given trading pairs or pools). In return for providing liquidity, liquidity providers are rewarded with trading fees when other users swap tokens. For example, when traders swap USDT for USDC on Uniswap, they are currently charged 0.3%% on top of gas fees. These fees are distributed pro-rata to liquidity providers on the USDT-USDC pair based on the percentage of total liquidity that they have provided."
-msgstr ""
+msgstr "Τα AMM μπορούν να ενεργοποιήσουν νέες αγορές μόνο όταν οι πάροχοι ρευστότητας παρέχουν ρευστότητα (π.χ. πολλαπλά tokens για συγκεκριμένα ζεύγη συναλλαγών ή ομάδες). Σε αντάλλαγμα για την παροχή ρευστότητας, οι πάροχοι ρευστότητας ανταμείβονται με τέλη συναλλαγών όταν άλλοι χρήστες ανταλλάσσουν μάρκες. Για παράδειγμα, όταν οι έμποροι ανταλλάσσουν USDT με USDC στο Uniswap, χρεώνονται επί του παρόντος 0,3 %% πέραν των τελών αερίου. Αυτά τα τέλη κατανέμονται κατ 'αναλογία στους παρόχους ρευστότητας στο ζεύγος USDT-USDC με βάση το ποσοστό της συνολικής ρευστότητας που έχουν παράσχει."
 
 #: templates/litepaper/platform.html:91
 msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. The OUSD smart contract is currently integrated with Curve, and may be integrated with Uniswap, Sushiswap, and Balancer in the future."
-msgstr ""
+msgstr "Το πρωτόκολλο OUSD κατευθύνει το USDT, το USDC και το DA σε ομάδες ρευστότητας υψηλής απόδοσης, όπως καθορίζεται από τον όγκο συναλλαγών και τα tokens ανταμοιβής (π.χ. ο Balancer ανταμείβει τα διακριτικά BAL σε παρόχους ρευστότητας). Στη συνέχεια, οι αποδόσεις μεταβιβάζονται στους κατόχους OUSD. Το έξυπνο συμβόλαιο OUSD είναι προς το παρόν ενσωματωμένο στο Curve και ενδέχεται να ενσωματωθεί με το Uniswap, το Sushiswap και το Balancer στο μέλλον."
 
 #: templates/litepaper/platform.html:92
 msgid "In addition to collecting interest from lending and fees from market making, we intend to automatically claim and convert the bonus incentives that are being distributed by many of the DeFi protocols. For example, Compound gives away COMP tokens, Balancer gives away BAL tokens, and Curve gives away CRV tokens. These bonus rewards will be regularly converted into stablecoins, deployed in the market, and distributed to OUSD holders in the form of additional yield."
-msgstr ""
+msgstr "Εκτός από τη συλλογή τόκων από δανεισμό και τέλη από την αγορά, σκοπεύουμε να διεκδικήσουμε και να μετατρέψουμε αυτόματα τα μπόνους κίνητρα που διανέμονται από πολλά από τα πρωτόκολλα DeFi. Για παράδειγμα, το Compound δίνει διακριτικά COMP, το Balancer δίνει διακριτικά BAL και το Curve δίνει διακριτικά CRV. Αυτές οι ανταμοιβές μπόνους θα μετατρέπονται τακτικά σε σταθερά νομίσματα, θα αναπτύσσονται στην αγορά και θα διανέμονται στους κατόχους OUSD με τη μορφή πρόσθετης απόδοσης."
 
 #: templates/litepaper/platform.html:93
 msgid "OUSD is able to generate higher yields than competing protocols due to a combination of important design decisions that amplify the rewards that are returned to OUSD holders:"
-msgstr ""
+msgstr "Το OUSD είναι σε θέση να παράγει υψηλότερες αποδόσεις από τα ανταγωνιστικά πρωτόκολλα λόγω ενός συνδυασμού σημαντικών αποφάσεων σχεδιασμού που ενισχύουν τις ανταμοιβές που επιστρέφονται στους κατόχους του OUSD:"
 
 #: templates/litepaper/platform.html:95
 msgid "Exit fees are returned to the pool, rewarding long term holders"
-msgstr ""
+msgstr "Τα τέλη εξόδου επιστρέφονται στην πισίνα, ανταμείβοντας τους μακροπρόθεσμους κατόχους"
 
 #: templates/litepaper/platform.html:96
 msgid "Price oracles favor the collective over the individual, again rewarding long term holders"
-msgstr ""
+msgstr "Τα oracles των τιμών ευνοούν τη συλλογικότητα έναντι του ατόμου, ανταμείβοντας και πάλι τους μακροπρόθεσμους κατόχους"
 
 #: templates/litepaper/platform.html:97
 msgid "Smart contracts must manually opt-in to earn yield. This allows the protocol to put more capital to work than would be otherwise possible."
-msgstr ""
+msgstr "Τα έξυπνα συμβόλαια πρέπει να συμμετέχουν χειροκίνητα για να αποκτήσουν απόδοση. Αυτό επιτρέπει στο πρωτόκολλο να θέσει σε λειτουργία περισσότερα κεφάλαια από ό, τι θα ήταν διαφορετικά δυνατό."
 
 #: templates/litepaper/platform.html:98
 msgid "OUSD smart contracts allow users to balance risk and reward more effectively than deploying capital in any single underlying strategy."
-msgstr ""
+msgstr "Τα έξυπνα συμβόλαια OUSD επιτρέπουν στους χρήστες να εξισορροπούν τον κίνδυνο και να ανταμείβουν πιο αποτελεσματικά από την ανάπτυξη κεφαλαίου σε οποιαδήποτε μεμονωμένη στρατηγική."
 
 #: templates/litepaper/platform.html:101
 msgid "Origin's role in OUSD"
-msgstr ""
+msgstr "Ο ρόλος του Origin στο OUSD"
 
 #: templates/litepaper/platform.html:102
 #, python-format
@@ -3033,7 +3033,7 @@ msgstr ""
 
 #: templates/litepaper/platform.html:114
 msgid "Future products"
-msgstr ""
+msgstr "Μελλοντικά προϊόντα"
 
 #: templates/litepaper/platform.html:115
 msgid "We imagine a better future for online and offline payments that uses OUSD as the underlying payment rails. Below, we outline our vision for what we'd like to see built on top of the OUSD protocol. We also encourage our large community of supporters and open-source developers to build additional compelling products to bring DeFi and cryptocurrency payments to the masses."
