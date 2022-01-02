@@ -283,49 +283,6 @@ def join_mailing_list():
 
     return jsonify(success=True, message=gettext("Thanks for signing up!"))
 
-
-@app.route("/presale/join", methods=["POST"], strict_slashes=False)
-def join_presale():
-    full_name = request.form["full_name"]
-    email = request.form["email"]
-    desired_allocation = request.form["desired_allocation"]
-    desired_allocation_currency = request.form["desired_allocation_currency"]
-    citizenship = request.form["citizenship"]
-    sending_addr = request.form["sending_addr"]
-    ip_addr = get_real_ip()
-    if not full_name:
-        return jsonify(success=False, message=gettext("Please enter your name"))
-    if not email:
-        return jsonify(success=False, message=gettext("Please enter your email"))
-    if not citizenship:
-        return jsonify(
-            success=False, message=gettext("Select your country of citizenship")
-        )
-    if not desired_allocation:
-        return jsonify(
-            success=False, message=gettext("Please enter your desired allocation")
-        )
-    if not desired_allocation_currency:
-        return jsonify(success=False, message=gettext("Select a currency"))
-    if not recaptcha.verify():
-        return jsonify(
-            success=False, message=gettext("Please prove you are not a robot.")
-        )
-    feedback = mailing_list.presale(
-        full_name,
-        email,
-        desired_allocation,
-        desired_allocation_currency,
-        citizenship,
-        sending_addr,
-        request.remote_addr,
-    )
-    mailing_list.add_sendgrid_contact(email, full_name, citizenship)
-    insight.add_contact(sending_addr, name=full_name, email=email, presale_interest=1)
-    flash(feedback)
-    return jsonify(success=True, message=gettext("OK"))
-
-
 @app.route("/mailing-list/unsubscribe", methods=["GET"], strict_slashes=False)
 def unsubscribe():
     email = request.args.get("email")
