@@ -7,64 +7,84 @@
 {% block content %}
 
 {% with theme_dark=True %}
-{% include 'origin-story-banner.html' %}
-{% endwith %}
-
-{% with theme_dark=True %}
 {% include 'navbar.html' %}
 {% endwith %}
 
 <main class="landing-page">
   <div class="video-block screen-size-segment d-flex flex-column justify-content-center align-items-center">
-    <div id="landing-video" class="full-screen-video d-none"></div>
-    <div id="exit-fullscreen-button" class="d-none">{{gettext("Exit full screen")}}</div>
-    <div class="background-video">
-      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <div id="landing-video-background" ></div>
-      </div>
-    </div>
-    <div class="video-overlay"></div>
-    <div id="landing-video-poster" class="video-overlay-poster"></div>
-    <div class="video-overlay-gradient"></div>
+   
     <div class="contents d-flex flex-column justify-content-center align-items-center">
-      <h1 class="video-title">{{gettext("Bringing NFTs and DeFi<br>to the masses")}}</h1>
-      <button id="index-video-button" class="play-button d-flex justify-content-center align-items-center m-4">
-        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
-      </button>
-      <div class="mt-2">{{gettext("Watch the video")}}</div>
-      <div class="bottom clickable d-flex justify-content-center mb-4 flex-wrap">
+      <h1 class="video-title">{{gettext("NFTs are going mainstream.<br>DeFi is eating traditional finance.")}}</h1>
+      <!-- <h4>Origin's flagship products are tackling the fastest growing verticals in Web3</h4> -->
+      <!-- <div class="bottom clickable d-flex justify-content-center mb-4 flex-wrap">
         <a href="https://techcrunch.com/2018/10/10/origin-protocol/" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/techcrunch.svg"/></a>
         <a href="https://www.forbes.com/sites/leslieankney/2019/01/21/why-these-innovators-left-facebook-google-and-more-for-crypto/#7f2871a15a06" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/forbes.svg"/></a>
         <a href="https://www.inc.com/joel-comm/why-best-blockchain-is-an-invisible-blockchain.html" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/inc.svg"/></a>
         <a href="https://www.coindesk.com/pantera-invests-3-million-sharing-economy-token-origin/" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/coindesk.svg"/></a>
         <a href="https://www.wsj.com/articles/origin-protocol-nabs-28-million-for-peer-to-peer-blockchain-platform-1524700028" target="_blank" rel="noopener noreferrer"><img src="/static/img/landing/wsj.svg"/></a>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+    <h1 class='mb-5'>{{gettext("Origin's flagship products are tackling<br>the fastest growing verticals in Web3")}}</h1>
+    <div class="segment-subtitle mb-5">{{gettext("")}}</div>
+    
+    <div class="container mb-6">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="col-sm text-center">
+          <a href="https://story.xyz"><img src="/static/img/ousd/ousd-coin.svg"></a>
+        </div>
+        <div class="col-sm text-center">
+            <a href="https://story.xyz"><img width="60%" style='filter:invert(1)' src="/static/img/origin-story-logo.png" srcset="/static/img/origin-story-logo@2x.png 2x, /static/img/origin-story-logo@3x.png 3x"></a>
+        </div>
+        <div class="col-sm text-center">
+            <a href="/ogn-token"><img src="/static/img/landing/nft-3.png" srcset="/static/img/landing/nft-3@2x.png 2x, /static/img/landing/nft-3@3x.png 3x"></a>
+        </div>
+      </div>
+      <div class="row d-flex flex-wrap">
+        <div class="col-sm text-center p-4">
+          Origin Dollar (OUSD) is the first stablecoin that earns a yield while it's still in your wallet. Access DeFi yields without any of the hassles. No staking. No lockups.
+        </div>
+        <div class="col-sm text-center p-4">
+          Origin Story is where top creators sell their NFTs. Now you can too! Personalized storefronts. Flexible sale formats. Secondary royalties. No code required.
+        </div>
+        <div class="col-sm text-center p-4">
+          Origin Token (OGN) allows you to own a stake in the Origin ecosystem. Believe NFTs are the future? Want governance privileges? Buy OGN on Coinbase, Binance, or Uniswap.
+        </div>
+      </div>
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="col-sm text-center p-4">
+          <a class="btn white-border-button" href="https://ousd.com">{{gettext("Origin Dollar")}}</a>
+        </div>
+        <div class="col-sm text-center p-4">
+          <a class="btn white-border-button" href="https://story.xyz">{{gettext("Origin Story")}}</a>  
+        </div>
+        <div class="col-sm text-center p-4">
+          <a class="btn white-border-button" href="/dashboard">{{gettext("Origin Token")}}</a>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Countdown section -->
-  <div class="countdown-block-TEMPHIDE d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
-  <h1 class="clock-title">{{gettext("Never miss a drop. Sign up now!")}}</h1>
+
+  <!-- mailing list-->
+  <div class="d-flex flex-column justify-content-between align-items-center" style='background-color:white'>
+  <h1 class="clock-title">{{gettext("Join our mailing list to stay in touch!")}}</h1>
 
 
-    <div class="segment-subtitle ml-3 mr-3">{{gettext("Be the first to hear when we announce big NFT drops, important partnerships, and new products. Your email will be kept private.")}}</div>
+    <div class="segment-subtitle ml-3 mr-3 mb-5">{{gettext("Be the first to hear about major NFT drops and important product updates.")}}<br>{{gettext("Your email will be kept private.")}}</div>
     <div class="email-form">
       <form id="mailing-list" class="d-flex" method="post" action="/mailing-list/join">
-        <input id="email" class="email-input" type="email" name="email" placeholder="{{gettext("Email")}}">
+        <input id="email" class="email-input" type="email" name="email" placeholder='{{gettext("Email")}}'>
         <input class="ml-2" type="submit" value="">
       </form>
     </div>
   </div>
 
-  <!-- Put drops here-->
-  {% with 
-    drops=allDrops
-  %} 
-  {% include 'components/drops.html' %} 
-  {% endwith %} 
 
   <!-- Buy and Sell on Origin section -->
   <!-- origin-marketplace-0.23.16.apk -->
-  <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+  <!-- <div class="buy-sell-block d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
     <h1>{{gettext("Where top creators launch their NFTs")}}</h1>
     <div class="segment-subtitle mx-3">{{gettext("Origin has hosted record-breaking NFT sales for top musicians, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace.")}}</div>
     <a class="mb-5 mt-5 btn btn-dark d-flex justify-content-center align-items-center" href="https://story.xyz">
@@ -93,9 +113,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="buy-sell-block ousd-pitch d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+  <!-- <div class="buy-sell-block ousd-pitch d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
     <div class="container text-center">
       <h1 class="pt-3">Origin Dollar is the first stablecoin that earns yield while sitting in your wallet</h1>
       <p class="d-none d-sm-block">Get access to exciting DeFi returns, with none of the hassles.</p>
@@ -106,7 +126,7 @@
 
 
     </div>
-  </div>
+  </div> -->
   <!-- Decentralised marketplaces inevitable -->
   <!-- <div class="decentralised-marketplaces d-flex flex-column justify-content-center align-items-center">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Blockchain-powered commerce is the future")}}</h1>
@@ -142,8 +162,91 @@
       </div>
     </div>
   </div> -->
+
+  {%if ogn_stats %}
+
+  <section class="title-section blue-section">
+    <div class="container pt-5 pb-5">
+      <!-- <h1>{{gettext("Origin Token (OGN)")}}</h1> -->
+
+      <div class="row">
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/price-icon.svg" />
+            <div class="stats-label">{{gettext("OGN Price")}}</div>
+            <div class="stats-value">{{ogn_stats.formatted_ogn_usd_price}}</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/market-cap-icon.svg" />
+            <div class="stats-label">{{gettext("Market Cap")}}</div>
+            <div class="stats-value">{{ogn_stats.formatted_market_cap}}</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/circulating-supply-icon.svg" />
+            <div class="stats-label">{{gettext("Circulating Supply")}}</div>
+            <div class="stats-value">
+              {{ogn_stats.formatted_circulating_supply}}
+              <div class="ogn-label">OGN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mx-md-0 px-md-0">
+          <div class="stats-widget">
+            <img src="/static/img/dashboard/total-supply-icon.svg" />
+            <div class="stats-label">{{gettext("Total Supply")}}</div>
+            <div class="stats-value">
+              {{ogn_stats.formatted_total_supply}}
+              <div class="ogn-label">OGN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm text-center p-4">
+          <a class="btn white-border-button" href="/dashboard">{{gettext("Learn more about OGN")}}</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% endif %}
+
+<!-- 
+<div class="video-block vc-backed screen-size-segment d-flex flex-column justify-content-between align-items-center">
+  <div id="landing-video2" class="full-screen-video d-none" ></div>
+  <div class="background-video">
+    <div class="video-holder d-flex flex-column justify-content-end align-items-center">
+      <div id="landing-video-background2" ></div>
+    </div>
+  </div>
+  <div class="video-overlay blue"></div>
+  <div id="landing-video-poster2" class="video-overlay-poster"></div>
+  <div class="contents d-flex flex-column justify-content-between align-items-center">
+    <h1 class="video-title small mt-5 pt-4">{{gettext("We are backed by top venture capital firms and investors in Silicon Valley and around the world")}}</h1>
+    <button id="landing-video-button2" class="play-button d-flex justify-content-center align-items-center m-4">
+      <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
+    </button>
+    <div class="watch mt-2 mb-auto">{{gettext("Watch the video")}}</div>
+    <div class="bottom d-flex justify-content-center flex-wrap">
+      <img src="/static/img/landing/pantera.svg"/>
+      <img src="/static/img/landing/foundation-capital.svg"/>
+      <img src="/static/img/landing/preangel.svg"/>
+      <img src="/static/img/landing/hashed.svg"/>
+    </div>
+    <a class="button mb-md-6 mb-5" href="/investors">{{gettext("Learn more about our investors")}}</a>
+  </div>
+</div> -->
+
   <!-- World class team -->
-  <div class="world-class d-flex flex-column justify-content-center align-items-center">
+  <div class="world-class d-flex flex-column justify-content-center align-items-center pb-5">
     <h1 class="segment-title ml-4 mr-4">{{gettext("Origin has a world-class team")}}</h1>
     <div class="segment-subtitle ml-3 mr-3">{{gettext("Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox.")}}</div>
     <div class="d-flex logos-holder mt-4 justify-content-center align-items-center flex-wrap">
@@ -152,100 +255,147 @@
         <img src="/static/img/landing/google-logo.svg"/>
         <img src="/static/img/landing/dropbox-logo.svg"/>
     </div>
-    <a class="white-button-blue-border mt-4" href="/team">{{gettext("Learn more about our team")}}</a>
-    <div class="mw-940 d-flex justify-content-center">
-      <img class="mt-5 mb-5 pb-3 team_img align-self-center" src="/static/img/landing/team-photo@3x.jpg"/>
-    </div>
+    <a class="white-button-blue-border mt-4 mb-5" href="/team">{{gettext("Learn more about our team")}}</a>
   </div>
 
-  <!-- Backed by venture capital firms -->
-  <div class="video-block vc-backed screen-size-segment d-flex flex-column justify-content-between align-items-center">
-    <div id="landing-video2" class="full-screen-video d-none" ></div>
-    <div class="background-video">
-      <div class="video-holder d-flex flex-column justify-content-end align-items-center">
-        <div id="landing-video-background2" ></div>
-      </div>
-    </div>
-    <div class="video-overlay blue"></div>
-    <div id="landing-video-poster2" class="video-overlay-poster"></div>
-    <div class="contents d-flex flex-column justify-content-between align-items-center">
-      <h1 class="video-title small mt-5 pt-4">{{gettext("We are backed by top venture capital firms and investors in Silicon Valley and around the world")}}</h1>
-      <button id="landing-video-button2" class="play-button d-flex justify-content-center align-items-center m-4">
-        <img class="ml-2" src="/static/img/landing/play-triangle.svg"/>
-      </button>
-      <div class="watch mt-2 mb-auto">{{gettext("Watch the video")}}</div>
-      <div class="bottom d-flex justify-content-center flex-wrap">
-        <img src="/static/img/landing/pantera.svg"/>
-        <img src="/static/img/landing/foundation-capital.svg"/>
-        <img src="/static/img/landing/preangel.svg"/>
-        <img src="/static/img/landing/hashed.svg"/>
-      </div>
-      <a class="button mb-md-6 mb-5" href="/investors">{{gettext("Learn more about our investors")}}</a>
-    </div>
-  </div>
-  <!-- Featured partner -->
-  <div class="featured-partner d-flex flex-column justify-content-center align-items-center">
-    <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Partners")}}</h1>
-    <div class="container mb-5">
-      <div class="partners row">
-
-        <div class="col-12 col-md-4 col-sm-6 text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/">
-            <img src="/static/img/landing/partner-amazon.png" />
-          </a>
-        </div>
-        <div class="col-12 col-md-4 col-sm-6 text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://btcmanager.com/samsung-blockchain-wallet-origin-marketplace-app/">
-            <img src="/static/img/landing/partner-samsung.png" />
-          </a>
-        </div>
-        <div class="col-12 col-md-4 col-sm-6 text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://coinmarketcap.com/headlines/news/origin-protocol-and-google-cloud/">
-            <img src="/static/img/landing/partner-google.png" />
-          </a>
-        </div>
-        <div class="col-12 col-md-4 col-sm-6 text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://brave.com/brave-launches-new-swag-store-powered-by-origin/">
-            <img src="/static/img/landing/partner-brave.png" />
-          </a>
-        </div>
-        <div class="col-12 col-md-4 col-sm-6 text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.binance.com/en/support/articles/360038151092">
-            <img src="/static/img/landing/partner-binance.png" />
-          </a>
-        </div>
-        <div class="col-12 col-md-4 col-sm-6 text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://medium.com/originprotocol/how-origin-uses-chainlink-oracles-to-secure-ousd-bff5601e840e">
-            <img src="/static/img/landing/partner-chainlink.png" />
-          </a>
-        </div>
+ 
 
       </div>
     </div>
   </div>
-  <!-- Featured video -->
-  <div class="featured-video d-flex flex-column justify-content-center align-items-center">
-    <h1 class="segment-title ml-4 mr-4">{{gettext("Featured Videos")}}</h1>
-    <div class="tiles-holder d-flex justify-content-center flex-wrap">
-      {% for video in featured_videos %}
-        <div class="col-12 col-md-4 video-item" data-category="{{video.category}}">
-          <a class="image-video-link" href="{{ url_for('video', lang_code=CURRENT_LANGUAGE, video_slug=video.slug) }}">
-            <img src="{{ "/static/img/videos/%s.jpg" % (video.hash)}}" />
-            <div class="overlay hide hover-show justify-content-center align-items-center">
-              <img class="play" src="/static/img/landing/play-triangle.svg" />
-            </div>
-            <div class="overlay d-flex justify-content-end align-items-end">
-              <div class="duration mb-2 mr-2">{{video.duration}}</div>
-            </div>
-          </a>
-          <a href="{{ "/video/%s" % (video.slug)}}" class="title">
-            {{ gettext(video.title) }}
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-    <a class="white-button-blue-border" href="/videos">{{gettext("Watch more videos")}}</a>
+  
   </div>
+
+
+
+<!-- social media links -->
+  <div
+  class="social-media-section d-flex flex-column justify-content-between align-items-center"
+>
+  <h1>
+    {{gettext("Join the Community")}}
+  </h1>
+  <div
+    id="social-media-list"
+    class="d-flex flex-wrap justify-content-center"
+  ></div>
+  <h2>{{gettext("Region-specific Channels")}}</h2>
+  <div
+    id="social-media-list-country-specific"
+    class="d-flex flex-wrap justify-content-center"
+  ></div>
+</div>
+
+
+    <!-- Origin in the press section -->
+    <div
+    class="the-press d-flex flex-column justify-content-center align-items-center"
+  >
+    <h1 class="segment-title ml-4 mr-4">{{gettext("Origin in the Press")}}</h1>
+    <div
+      class="content d-flex flex-wrap align-items-center justify-content-center"
+    >
+      <div class="d-flex justify-content-center coindesk">
+        <a
+          href="https://www.coindesk.com/tag/origin-protocol"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-201" src="/static/img/about/coindesk@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.wsj.com/articles/origin-protocol-nabs-28-million-for-peer-to-peer-blockchain-platform-1524700028"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-86" src="/static/img/about/wsj@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.nasdaq.com/articles/blockchain-solutions-are-changing-sharing-economy-2018-05-18"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-179" src="/static/img/about/nasdaq@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://thenextweb.com/cryptocurrency/2018/02/05/beauty-and-the-blockchain-this-company-aims-do-decentralize-cosmetic-the-industry/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-140" src="/static/img/about/tnw@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.fastcompany.com/40578033/five-ways-blockchain-could-disrupt-the-sharing-economys-disrupters"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-187" src="/static/img/about/fast-company@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.vice.com/en_us/article/j5aj3y/how-the-blockchain-will-change-uber-lyft-peer-to-peer-transportation-startups"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-111" src="/static/img/about/vice@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center cointelegraph">
+        <a
+          href="https://cointelegraph.com/news/startup-to-give-beauty-industry-a-blockchain-facelift"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-205" src="/static/img/about/cointelegraph@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.wired.it/economia/finanza/2018/05/29/blockchain-airbnb/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-161" src="/static/img/about/wired@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://bitcoinmagazine.com/articles/decentralizing-sharing-economy-blockchain-technology/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-164" src="/static/img/about/bitcoinmag@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.inc.com/joel-comm/why-best-blockchain-is-an-invisible-blockchain.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-114" src="/static/img/about/inc@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://www.forbes.com/sites/leslieankney/2019/01/21/why-these-innovators-left-facebook-google-and-more-for-crypto/#6f0bf6e85a06"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-152" src="/static/img/about/forbes@2x.png"
+        /></a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://techcrunch.com/2018/10/10/origin-protocol/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="w-189" src="/static/img/about/techcrunch@2x.png"
+        /></a>
+      </div>
+    </div>
+  </div>
+
+
+
   {% include 'footer.html' %}
 </main>
 

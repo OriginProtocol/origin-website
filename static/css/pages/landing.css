@@ -208,6 +208,22 @@
   text-align: center;
 }
 
+.white-border-button {
+  font-size: 1.125rem;
+  max-width: 350px;
+  border-radius: 26px;
+  border: solid 1px var(--white);
+  padding: 12px 40px;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  font-weight: normal;
+}
+.white-border-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .buy-sell-block .marketplace .button:hover {
   background-color: #036ddd;
   cursor: pointer;
@@ -830,4 +846,41 @@
   .landing-page .prod-image {
     max-width: 100%;
   }
+}
+
+
+.landing-page .stats-widget {
+  margin: 0 0 0 20px;
+  padding: 20px 20px;
+  border-left: 1px solid #399aff;
+}
+
+.landing-page .stats-widget img {
+  object-fit: contain;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 16px;
+}
+
+.landing-page .stats-widget .stats-label {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.landing-page .stats-widget .stats-value {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.landing-page .stats-widget .stats-value .ogn-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }

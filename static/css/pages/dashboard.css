@@ -241,9 +241,9 @@
   margin-right: 20px;
 }
 
-.dashboard-page .exchanges-section {
+/* .dashboard-page .exchanges-section {
   padding: 60px 20px 70px 20px;
-}
+} */
 
 .dashboard-page .exchanges-section h3 {
   margin-bottom: 30px;
@@ -317,7 +317,7 @@
   background-position-y: top;
   background-position-x: inherit;
   background-repeat: repeat-y;
-  margin: 60px 0px;
+  margin-bottom: 60px;
   background-color: #007cff;
   padding: 20px 30px;
   border-radius: 10px;
@@ -350,13 +350,14 @@
   color: #dbe6eb;
 }
 
-.stake-banner-blue .btn {
+.stake-banner-blue a.btn {
   width: 210px;
   margin: 0px;
   padding: 7px;
   font-size: 18px;
   font-weight: bold;
   background-color: #061d2a;
+  color:#fff;
 }
 
 .stake-banner-blue .btn:hover {
@@ -400,4 +401,57 @@
     display: grid;
     grid-template-columns: repeat(2, 0fr);
   }
+}
+
+
+
+
+
+.dashboard-page .vc-section.vc-firms {
+  background-image: url('/static/img/investors/map.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dashboard-page .vc-section.vc-firms .container {
+  padding: 0 7rem 5rem 7rem;
+}
+
+.dashboard-page .vc-section .country-name {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  text-align: left;
+}
+
+.dashboard-page .vc-section .vc-firm + .country-name {
+  margin-top: 2rem;
+}
+
+.dashboard-page .vc-section .vc-firm {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.dashboard-page .vc-firm.smaller img {
+  flex: 38px 0 0;
+  width: 38px;
+  height: 38px;
+  margin-right: 12px;
+}
+
+.dashboard-page .vc-firm img {
+  flex: 45px 0 0;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.dashboard-page .vc-firm .firm-name {
+  flex: 1;
+  font-size: 1.125rem;
+  color: #fff;
+  font-weight: normal;
 }

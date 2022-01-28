@@ -162,14 +162,15 @@ sites.append(
         "json": False,
     }
 )
-sites.append(
-    {
-        "name": "Facebook",
-        "url": "https://www.facebook.com/originprotocol",
-        "selector": ".clearfix ._ikh div._4bl9",
-        "json": False,
-    }
-)
+# TODO broken, needs fixing
+# sites.append(
+#     {
+#         "name": "Facebook",
+#         "url": "https://www.facebook.com/originprotocol",
+#         "selector": ".clearfix ._ikh div._4bl9",
+#         "json": False,
+#     }
+# )
 sites.append(
     {
         "name": "Naver",
@@ -178,14 +179,15 @@ sites.append(
         "json": False,
     }
 )
-sites.append(
-    {
-        "name": "KaKao plus friends",
-        "url": "https://pf.kakao.com/_qTxeYC",
-        "selector": "span.num_count",
-        "json": False,
-    }
-)
+# TODO broken, needs fixing
+# sites.append(
+#     {
+#         "name": "KaKao plus friends",
+#         "url": "https://pf.kakao.com/_qTxeYC",
+#         "selector": "span.num_count",
+#         "json": False,
+#     }
+# )
 sites.append(
     {
         "name": "Tencent/QQ video",

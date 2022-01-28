@@ -19,8 +19,6 @@
 
 <main class="dashboard-page">
 
-  {%if ogn_stats %}
-
   <section class="title-section blue-section">
     <div class="container">
       <h1>{{gettext("Origin Token Dashboard")}}</h1>
@@ -69,8 +67,202 @@
     </div>
   </section>
 
+
+  <section class="exchanges-section white-section">
+
+    <div class="container">
+      <h3>{{gettext("Decentralized Exchanges")}}</h3>
+      <div class="exchanges row mb-5">
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
+          <a target="_blank" rel="noopener noreferrer" href="https://app.1inch.io/#/1/swap/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/0x8207c1ffc5b6804f6024322ccf34f29c3541ae26">
+            <img src="/static/img/ognToken/1inch.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://uniswap.exchange/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
+            <img src="/static/img/ognToken/uniswap.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://exchange.sushiswapclassic.org/#/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
+            <img src="/static/img/ognToken/sushiswap.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://balancer.exchange/#/swap/ether/0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
+            <img src="/static/img/ognToken/balancer.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
+          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/swap/eth-ogn">
+            <img src="/static/img/ognToken/kyber.svg" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>{{gettext("Centralized Exchanges")}}</h3>
+      <div class="exchanges row">
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://pro.coinbase.com/trade/OGN-USD">
+            <img src="/static/img/ognToken/coinbase.png" style='position:relative; top:-10px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658">
+            <img src="/static/img/ognToken/binance.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.huobi.com/en-us/exchange/ogn_usdt/">
+            <img src="/static/img/ognToken/huobi.png" style='position:relative; top:-5px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://pro.ambergroup.io/">
+            <img src="/static/img/ognToken/amber.png" style='position:relative; top:-3px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://coinone.co.kr/">
+            <img src="/static/img/ognToken/coinone.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://upbit.com/exchange?code=CRIX.UPBIT.BTC-OGN">
+            <img src="/static/img/ognToken/upbit.png" style='position:relative; top:-5px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.zb.com/en/kline/ogn_usdt">
+            <img src="/static/img/ognToken/zb.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.gopax.co.kr/exchange/ogn-krw">
+            <img src="/static/img/ognToken/gopax.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center medium">
+          <a target="_blank" rel="noopener noreferrer" href="https://crypto.com/">
+            <img src="/static/img/ognToken/cryptocom-logo.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://exchange.blockchain.com/trade/OGN-USD">
+            <img src="/static/img/ognToken/blockchaincom.png" style='position:relative; top:-5px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://global.bittrex.com/">
+            <img src="/static/img/ognToken/bittrex-logo.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.gate.io/trade/OGN_USDT">
+            <img src="/static/img/ognToken/gateio.svg" style='position:relative; top:-5px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://hitbtc.com/ogn-to-btc">
+            <img src="/static/img/ognToken/hitbtc-logo.svg" style='position:relative; top:-14px'/>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.mxc.com/trade/pro#OGN_USDT">
+            <img src="/static/img/ognToken/mxc.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.biki.com/trade/OGN_USDT">
+            <img src="/static/img/ognToken/biki.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://tokocrypto.com/id/dashboard/OGNIDR">
+            <img src="/static/img/ognToken/tokocrypto.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.hotbit.io/exchange?symbol=OGN_USDT">
+            <img src="/static/img/ognToken/hotbit.svg" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.coinex.com/exchange/ogn-usdt">
+            <img src="/static/img/ognToken/coinex.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://trade.kucoin.com/OGN-USDT">
+            <img src="/static/img/ognToken/kucoin.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://vcc.exchange/exchange/basic?currency=usdt&coin=ogn">
+            <img src="/static/img/ognToken/vcc.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.bitz.ai/exchange/ogn_usdt">
+            <img src="/static/img/ognToken/bitz.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.bkex.com/trade/OGN_USDT">
+            <img src="/static/img/ognToken/bkex.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.coinbene.com/spot/exchange/OGN_USDT">
+            <img src="/static/img/ognToken/coinbene.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
+          <a target="_blank" rel="noopener noreferrer" href="https://bilaxy.com/trade/OGN_USDT">
+            <img src="/static/img/ognToken/bilaxy.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://trade.kraken.com/charts/KRAKEN:OGN-USD">
+            <img src="/static/img/ognToken/kraken.png" />
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
+          <a target="_blank" rel="noopener noreferrer" href="https://poloniex.com/exchange/USDT_OGN">
+            <img src="/static/img/ognToken/poloniex.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      {{gettext("See more on ")}}<a target='_blank' rel='noreferrer noopener' href="https://coinmarketcap.com/currencies/origin-protocol/markets">CoinMarketCap</a>{{gettext(" or ")}}<a target='_blank' rel='noreferrer noopener' href="https://www.coingecko.com/en/coins/origin-protocol#markets">CoinGecko</a>
+    </div>
+  </section>
+
   <section class="schedule-section white-section">
     <div class="container">
+
+      <div class="stake-banner-blue d-flex flex-column flex-lg-row justify-content-center align-items-center">
+        <div class="coins-icon">
+          <img class="ousd-coin" src="/static/img/coins/ousd-coin.svg"/>
+          <img class="ogn-coin" src="/static/img/coins/ogn-coin.svg"/>
+        </div>
+        <div class="stake-content d-flex flex-column">
+          <h1>{{gettext("Participate in governance")}}</h1>
+          <p>{{gettext("Use your OGN to vote and issue proposals")}}</p>
+        </div>
+        <a class='btn btn-dark ml-lg-auto' href="https://vote.originprotocol.com" target="_blank" rel="noopener noreferrer">
+          {{gettext("Vote")}}
+        </a>
+      </div>
+
       <div class="row">
         <div class="col-lg-6">
           <h3>{{gettext("Token Unlock Schedule")}}</h3>
@@ -206,22 +398,27 @@
             </div>
 
           </div>
+</div>
+</div>
 
-        </div>
-      </div>
-      <div class="stake-banner-blue d-flex flex-column flex-lg-row justify-content-center align-items-center">
+      <div class="stake-banner-blue d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5">
         <div class="coins-icon">
           <img class="ousd-coin" src="/static/img/coins/ousd-coin.svg"/>
           <img class="ogn-coin" src="/static/img/coins/ogn-coin.svg"/>
         </div>
         <div class="stake-content d-flex flex-column">
-          <h1>{{gettext("Participate in governance")}}</h1>
-          <p>{{gettext("Use your OGN to vote and issue proposals")}}</p>
+          <h1>{{gettext("Stake your OGN")}}</h1>
+          <p>{{gettext("Earn up to 25%% APY")}}</p>
         </div>
-        <a class='btn btn-dark ml-lg-auto' href="https://vote.originprotocol.com" target="_blank" rel="noopener noreferrer">
-          {{gettext("Vote now")}}
+        <a class='btn btn-dark ml-lg-auto' href="https://ousd.com/earn" target="_blank" rel="noopener noreferrer">
+          {{gettext("Stake OGN")}}
         </a>
       </div>
+
+
+
+
+
       <div class="additional-token-metrics px-3">
         <h3>{{gettext("Additional Token Metrics")}}</h3>
         <div class="d-flex flex-column flex-sm-row flex-sm-wrap metric-holder">
@@ -251,184 +448,181 @@
     </div>
   </section>
 
-  {% endif %}
-
-  <section class="exchanges-section white-section">
+  <section class="vc-section blue-section">
     <div class="container">
-      <h3>{{gettext("Centralized Exchanges")}}</h3>
-      <div class="exchanges row">
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer"
-            href="https://www.binance.com/{{binance_lang_code}}/register?ref=38914658">
-            <img src="/static/img/ognToken/binance.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.huobi.com/en-us/exchange/ogn_usdt/">
-            <img src="/static/img/ognToken/huobi.png" style='position:relative; top:-5px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://pro.coinbase.com/trade/OGN-USD">
-            <img src="/static/img/ognToken/coinbase.png" style='position:relative; top:-10px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://pro.ambergroup.io/">
-            <img src="/static/img/ognToken/amber.png" style='position:relative; top:-3px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://coinone.co.kr/">
-            <img src="/static/img/ognToken/coinone.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://upbit.com/exchange?code=CRIX.UPBIT.BTC-OGN">
-            <img src="/static/img/ognToken/upbit.png" style='position:relative; top:-5px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.zb.com/en/kline/ogn_usdt">
-            <img src="/static/img/ognToken/zb.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.gopax.co.kr/exchange/ogn-krw">
-            <img src="/static/img/ognToken/gopax.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center medium">
-          <a target="_blank" rel="noopener noreferrer" href="https://crypto.com/">
-            <img src="/static/img/ognToken/cryptocom-logo.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://exchange.blockchain.com/trade/OGN-USD">
-            <img src="/static/img/ognToken/blockchaincom.png" style='position:relative; top:-5px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://global.bittrex.com/">
-            <img src="/static/img/ognToken/bittrex-logo.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.gate.io/trade/OGN_USDT">
-            <img src="/static/img/ognToken/gateio.svg" style='position:relative; top:-5px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://hitbtc.com/ogn-to-btc">
-            <img src="/static/img/ognToken/hitbtc-logo.svg" style='position:relative; top:-14px'/>
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.mxc.com/trade/pro#OGN_USDT">
-            <img src="/static/img/ognToken/mxc.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.biki.com/trade/OGN_USDT">
-            <img src="/static/img/ognToken/biki.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://tokocrypto.com/id/dashboard/OGNIDR">
-            <img src="/static/img/ognToken/tokocrypto.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.hotbit.io/exchange?symbol=OGN_USDT">
-            <img src="/static/img/ognToken/hotbit.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.coinex.com/exchange/ogn-usdt">
-            <img src="/static/img/ognToken/coinex.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://trade.kucoin.com/OGN-USDT">
-            <img src="/static/img/ognToken/kucoin.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://vcc.exchange/exchange/basic?currency=usdt&coin=ogn">
-            <img src="/static/img/ognToken/vcc.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center larger">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.bitz.ai/exchange/ogn_usdt">
-            <img src="/static/img/ognToken/bitz.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.bkex.com/trade/OGN_USDT">
-            <img src="/static/img/ognToken/bkex.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.coinbene.com/spot/exchange/OGN_USDT">
-            <img src="/static/img/ognToken/coinbene.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center large">
-          <a target="_blank" rel="noopener noreferrer" href="https://bilaxy.com/trade/OGN_USDT">
-            <img src="/static/img/ognToken/bilaxy.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://trade.kraken.com/charts/KRAKEN:OGN-USD">
-            <img src="/static/img/ognToken/kraken.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center">
-          <a target="_blank" rel="noopener noreferrer" href="https://poloniex.com/exchange/USDT_OGN">
-            <img src="/static/img/ognToken/poloniex.png" />
-          </a>
+      <div class="row">
+        <div class="col-12">
+          <h1>
+            {{gettext("OGN is held by many of the top crypto funds around the world")}}
+          </h1>
         </div>
       </div>
-    </div>
-    <br><br>
-    <div class="container">
-      <h3>{{gettext("Decentralized Exchanges")}}</h3>
-      <div class="exchanges row mb-5">
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
-          <a target="_blank" rel="noopener noreferrer" href="https://app.1inch.io/#/1/swap/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/0x8207c1ffc5b6804f6024322ccf34f29c3541ae26">
-            <img src="/static/img/ognToken/1inch.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
-          <a target="_blank" rel="noopener noreferrer"
-            href="https://exchange.sushiswapclassic.org/#/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
-            <img src="/static/img/ognToken/sushiswap.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
-          <a target="_blank" rel="noopener noreferrer"
-            href="https://uniswap.exchange/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
-            <img src="/static/img/ognToken/uniswap.png" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
-          <a target="_blank" rel="noopener noreferrer"
-            href="https://balancer.exchange/#/swap/ether/0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26">
-            <img src="/static/img/ognToken/balancer.svg" />
-          </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-2 token-exchange text-center xxl">
-          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/swap/eth-ogn">
-            <img src="/static/img/ognToken/kyber.svg" />
-          </a>
-        </div>
-
-      </div>
-    </div>
-    <div class="container">
-      <a target='_blank' rel='noreferrer noopener' href="https://coinmarketcap.com/currencies/origin-protocol/markets">{{gettext("See more on Coinmarketcap >")}}</a>
     </div>
   </section>
+  <section class="vc-section blue-section vc-firms">
+    <div class="container px-3">
+      <div class="row d-none d-md-flex">
+        <div class="col-4">
+          {% include 'vc-firms/usa.html' %} {% include 'vc-firms/germany.html'
+          %} {% include 'vc-firms/uk.html' %} {% include 'vc-firms/uae.html' %}
+        </div>
+        <div class="col-4">
+          {% include 'vc-firms/china.html' %} {% include 'vc-firms/russia.html'
+          %} {% include 'vc-firms/singapore.html' %}
+        </div>
+        <div class="col-4">
+          {% include 'vc-firms/hongkong.html' %} {% include
+          'vc-firms/korea.html' %} {% include 'vc-firms/japan.html' %}
+        </div>
+      </div>
+
+      <div class="row d-flex d-md-none">
+        <div class="col-6">
+          {% include 'vc-firms/usa.html' %} {% include 'vc-firms/germany.html'
+          %} {% include 'vc-firms/uk.html' %} {% include 'vc-firms/uae.html' %}
+          {% include 'vc-firms/russia.html' %} {% include
+          'vc-firms/singapore.html' %}
+        </div>
+        <div class="col-6">
+          {% include 'vc-firms/china.html' %} {% include
+          'vc-firms/hongkong.html' %} {% include 'vc-firms/korea.html' %} {%
+          include 'vc-firms/japan.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="individual-investors-section white-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>{{gettext("Notable OGN holders")}}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/steve.jpeg"
+              class="headshot"
+              alt="Steve Chens headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Steve Chen") }}
+          </div>
+          <div class="title">
+            {{ gettext("Founder, YouTube") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/alex.png"
+              class="headshot"
+              alt="Alexis Ohanian headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Alexis Ohanian") }}
+          </div>
+          <div class="title">
+            {{ gettext("Founder, Reddit") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/garry.png"
+              class="headshot"
+              alt="Garry Tan headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Garry Tan") }}
+          </div>
+          <div class="title">
+            {{ gettext("Partner, Y Combinator") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/gil.png"
+              class="headshot"
+              alt="Gil Penchina headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Gil Penchina") }}
+          </div>
+          <div class="title">
+            {{ gettext("Angel Investor") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/justin.jpg"
+              class="headshot"
+              alt="Justin Blau headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Justin Blau") }}
+          </div>
+          <div class="title">
+            {{ gettext("Acclaimed DJ") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/steve.png"
+              class="headshot"
+              alt="Steve Jang headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Steve Jang") }}
+          </div>
+          <div class="title">
+            {{ gettext("Advisor & Angel, Uber") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/kamal.png"
+              class="headshot"
+              alt="Kamal Ravikant headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Kamal Ravikant") }}
+          </div>
+          <div class="title">
+            {{ gettext("Serial Entrepreneur") }}
+          </div>
+        </div>
+        <div class="team-member col-12 col-md-3">
+          <div class="headshot-wrapper">
+            <img
+              src="/static/img/investors/randall.png"
+              class="headshot"
+              alt="Randall Kaplan headshot"
+            />
+          </div>
+          <div class="name">
+            {{ gettext("Randall Kaplan") }}
+          </div>
+          <div class="title">
+            {{ gettext("Founder, Akamai") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   {% include 'footer.html' %}
 </main>

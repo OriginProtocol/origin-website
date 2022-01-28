@@ -40,7 +40,7 @@ import googleapiclient.discovery
 
 import json
 
-from logic.scripts import token_stats, drops
+from logic.scripts import token_stats
 
 # Translation: change path of messages.mo files
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "../translations"
@@ -91,15 +91,13 @@ def after_request(response):
 
 @app.route("/", strict_slashes=False)
 def root():
-    def filter_featured_videos(video):
-        return video["landing_page_featured"]
 
-    all_videos = json.load(open("static/files/videos.json"))
-    featured_videos = filter(filter_featured_videos, all_videos)
-    allPast  = request.args.get('allPast', None)
-    data = drops.get_drops(allPast)
-    return render_template("landing.html", featured_videos=featured_videos, allDrops=data)
-
+    data = token_stats.get_ogn_stats()
+    
+    return render_template(
+        "landing.html",
+        ogn_stats=data["ogn_supply_stats"]
+    )
 
 @app.route("/robots.txt", strict_slashes=False)
 def robots():
@@ -115,12 +113,6 @@ def apple_app_site_association():
 @app.route("/<lang_code>/mobile", strict_slashes=False)
 def mobile():
     return render_template("mobile.html")
-
-
-@app.route("/singles", strict_slashes=False)
-@app.route("/<lang_code>/singles", strict_slashes=False)
-def singles():
-    return render_template("singles.html")
 
 
 @app.route("/mobile/apk", strict_slashes=False)
@@ -139,25 +131,23 @@ def mobile_apk():
 @app.route("/<lang_code>/", strict_slashes=False)
 # @app.route("/", strict_slashes=False)
 def index():
-    def filter_featured_videos(video):
-        return video["landing_page_featured"]
-
-    all_videos = json.load(open("static/files/videos.json"))
-    featured_videos = random.sample(json.load(open("static/files/videos.json")), k=3)
-    # filter(filter_featured_videos, all_videos)
 
     # fetch the current yield for OUSD
-    try:
-        r = requests.get('https://analytics.ousd.com/api/v1/apr/trailing', timeout=2)
-        apy = r.json()['apy']
-    except:
-        apy = "~20.0"
+    # try:
+    #     r = requests.get('https://analytics.ousd.com/api/v1/apr/trailing', timeout=2)
+    #     apy = r.json()['apy']
+    # except:
+    #     apy = "~20.0"
 
     # check if it's a legit language code
     if g.lang_code in constants.LANGUAGES:
-        allPast  = request.args.get('allPast', None)
-        data = drops.get_drops(allPast)
-        return render_template("landing.html", featured_videos=featured_videos, ousd_apy=apy, allDrops=data)
+
+        data = token_stats.get_ogn_stats()
+        
+        return render_template(
+            "landing.html",
+            ogn_stats=data["ogn_supply_stats"]
+        )
     # nope, it's a 404
     else:
         return render_template("404.html"), 404
@@ -171,24 +161,20 @@ def team():
 
     return render_template("team.html", contributors=contributors)
 
-
 @app.route("/admin", strict_slashes=False)
 @app.route("/<lang_code>/admin", strict_slashes=False)
 def admin():
     return redirect("https://admin.staging.originprotocol.com", code=302)
 
-
 @app.route("/presale", strict_slashes=False)
 @app.route("/<lang_code>/presale", strict_slashes=False)
 def presale():
-    return redirect("/ogn-token", code=302)
-
+    return redirect("/dashboard", code=302)
 
 @app.route("/tokens", strict_slashes=False)
 @app.route("/<lang_code>/tokens", strict_slashes=False)
 def tokens():
-    return redirect("/ogn-token", code=302)
-
+    return redirect("/dashboard", code=302)
 
 @app.route("/whitepaper.pdf", strict_slashes=False)
 @app.route("/<lang_code>/whitepaper.pdf", strict_slashes=False)
@@ -416,33 +402,39 @@ def partners():
 @app.route("/about", strict_slashes=False)
 @app.route("/<lang_code>/about", strict_slashes=False)
 def about():
-    return render_template("about.html")
+    return redirect("/team", code=301)
 
 
+# investors merged into dashboard page
 @app.route("/investors", strict_slashes=False)
 @app.route("/<lang_code>/investors", strict_slashes=False)
 def investors():
-    return render_template("investors.html")
+    return redirect("/dashboard", code=302)
 
 
 @app.route("/product", strict_slashes=False)
 @app.route("/<lang_code>/product", strict_slashes=False)
 def product():
-    return render_template("product.html")
+    # fetch the current yield for OUSD
+    try:
+        r = requests.get('https://analytics.ousd.com/api/v1/apr/trailing', timeout=2)
+        apy = r.json()['apy']
+    except:
+        apy = "~20.0"
+
+    # fetch the current supply for OUSD
+    try:
+        r = requests.get('https://www.originprotocol.com/total-ousd', timeout=2)
+        supply = "Over $%dM" % (round(int(r.text)/1000000))
+    except:
+        supply = "Over 260M"
+    return render_template("product.html",ousd_apy=apy, ousd_supply=supply)
 
 
 @app.route("/ogn-token", strict_slashes=False)
 @app.route("/<lang_code>/ogn-token", strict_slashes=False)
 def ogn_token():
-    data = token_stats.get_ogn_stats()
-    binance_lang_code = constants.BINANCE_LOCALE_MAP[g.current_lang] or "en"
-
-    return render_template(
-        "ogn-token.html",
-        binance_lang_code=binance_lang_code,
-        ogn_stats=data["ogn_supply_stats"]
-    )
-
+    return redirect("/dashboard", code=302)
 
 @app.route("/video/<video_slug>", strict_slashes=False)
 @app.route("/<lang_code>/video/<video_slug>", strict_slashes=False)
@@ -526,29 +518,6 @@ def creator():
 @app.route("/<lang_code>/brave-customer-story", strict_slashes=False)
 def brave_dshop_pr():
     return render_template("brave-dshop-pr.html")
-
-# @app.route('/partners/interest', methods=['POST'], strict_slashes=False)
-# def partners_interest():
-#     name = request.form['name']
-#     company_name = request.form['company_name']
-#     email = request.form['email']
-#     website = request.form["website"]
-#     note = request.form["note"]
-#     ip_addr = get_real_ip()
-#     if not name:
-#         return jsonify(gettext("Please enter your name"))
-#     if not company_name:
-#         return jsonify(gettext("Please enter your company name"))
-#     if not email:
-#         return jsonify(gettext("Please enter your email"))
-#     if not recaptcha.verify():
-#         return jsonify(gettext("Please prove you are not a robot."))
-#     feedback = mailing_list.partners_interest(name, company_name, email,
-#                                               website, note, ip_addr)
-#     mailing_list.add_sendgrid_contact(email,name)
-#     flash(feedback)
-#     return jsonify("OK")
-
 
 @app.route("/whitepaper", strict_slashes=False)
 @app.route("/<lang_code>/whitepaper", strict_slashes=False)

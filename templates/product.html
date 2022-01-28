@@ -21,7 +21,7 @@
           <a
         href="{{ url_for('litepaper', lang_code=CURRENT_LANGUAGE) }}"
         class="btn btn-dark d-flex align-items-center justify-content-center mr-2">
-        {{gettext("Read our new Litepaper")}}
+        {{gettext("Read our Litepaper")}}
       </a>
           </div>
         </div>
@@ -32,8 +32,44 @@
     </div>
   </section>
 
-  <div class="nft-launchpad d-flex flex-column justify-content-between align-items-center px-3 px-md-0 pb-5">
-    <h1>{{gettext("NFT Launchpad")}}</h1>
+
+  <!-- Buy and Sell on Origin section -->
+  <!-- origin-marketplace-0.23.16.apk -->
+  <section class="tokens-section white-section">
+  <div class="d-flex flex-column justify-content-between align-items-center">
+    <h1>{{gettext("Origin Story is where top creators launch their NFTs")}}</h1>
+    <div class="segment-subtitle mt-1">{{gettext("Origin has hosted record-breaking NFT sales for top musicians, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace.")}}</div>
+    <a class="mb-5 mt-5 btn btn-dark d-flex justify-content-center align-items-center" href="https://story.xyz">
+      {{gettext("Interested in selling NFTs?")}}</a>
+
+      <div class="container mb-6 nft-pitch">
+        <div class="row">
+          <div class="col-sm text-center p-4 custom-domain">
+            <div class="img-wrapper">
+              <img src="/static/img/landing/nft-1.png" srcset="/static/img/landing/nft-1@2x.png 2x, /static/img/landing/nft-1@3x.png 3x">
+            </div>
+            <p>You control the experience. Host your NFT sale on your own domain and start growing your community.</p>
+          </div>
+          <div class="col-sm text-center p-4 more-sales inline-table">
+            <div class="img-wrapper">
+              <img src="/static/img/landing/nft-2.png" srcset="/static/img/landing/nft-2@2x.png 2x, /static/img/landing/nft-2@3x.png 3x">
+            </div>
+            <p>Increase your sales by intelligently targeting different audiences with different sales formats.</p>
+          </div>
+          <div class="col-sm text-center p-4 join-ogn">
+            <div class="img-wrapper">
+              <img src="/static/img/landing/nft-3.png" srcset="/static/img/landing/nft-3@2x.png 2x, /static/img/landing/nft-3@3x.png 3x">
+            </div>
+            <p>Participate in the network with OGN. Available on top exchanges like Coinbase and Binance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <div class="nft-launchpad d-flex flex-column justify-content-between align-items-center px-3 pt-5 pb-5">
     <div class="checked-items d-flex justify-content-center flex-wrap">
       <div class="row nft-benefits">
         <div class="col-12 col-md-4 pt-1 pb-2">
@@ -55,7 +91,7 @@
           </div>
           <div class="d-flex checked-item">
             <img class="mr-2" src="/static/img/product/checkmark.svg">
-            {{gettext("Secondary marketplace launching soon")}}
+            {{gettext("Sell on both Ethereum and Polygon")}}
           </div>
         </div>
         <div class="col-12 col-md-4 pt-1 pb-2">
@@ -74,7 +110,7 @@
     </div>
     
     <div class="nft-benefits">
-      <img class="p-4 img-fluid" src='/static/img/product/leaderboard.png' />
+      <a href="https://story.xyz"><img class="p-4 img-fluid" src='/static/img/product/leaderboard.png' /></a>
     </div>
     
 
@@ -82,85 +118,99 @@
       <a
         href="https://story.xyz"
         class="btn btn-primary d-flex align-items-center justify-content-center mr-2 p-3 mt-5 mb-5">
-        {{gettext("Interested in running an NFT sale?")}}
+        {{gettext("Learn more at story.xyz")}}
       </a>
       </div>
 
 </div>
 
+<div class="buy-sell-block ousd-pitch d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
+  <div class="container text-center">
+    <h1 class="pt-3">Origin Dollar is the first stablecoin that earns yield while sitting in your wallet</h1>
+    <p class="d-none d-sm-block">Get access to exciting DeFi returns, with none of the hassles.</p>
+    <a class="mb-5 mt-5 btn justify-content-center align-items-center" href="https://www.ousd.com">
+      {{gettext("Learn more about OUSD")}}</a>
+    <p class="d-none d-sm-block">Currently earning</p>
+    <h2>{{ousd_apy}}% APY</h2>
 
-<div class="origin-dollar d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-  <h1>{{gettext("Origin Dollar")}}</h1>
-  <div class="segment-subtitle mx-3">{{gettext("The first stablecoin that earns a yield while it's still in your wallet.")}}</div>
-  <a class="mb-5 mt-0 btn btn-dark d-flex justify-content-center align-items-center" href="https://ousd.com" target="_blank" rel="noreferrer noopener">
-    {{gettext("Get OUSD")}}</a>
-  <div class="d-flex flex-column flex-md-row marketplace align-items-center align-items-md-start">
-    <img class="prod-image" src="/static/img/ousd/origindollar-screenshots.png" srcset="/static/img/ousd/origindollar-screenshots@2x.png 2x, /static/img/ousd/origindollar-screenshots@3x.png 3x" >
+
   </div>
 </div>
 
-<!--
-  <div class="dshop-section d-flex flex-column justify-content-between align-items-center px-3 px-md-0">
-    <h1>{{gettext("Dshop")}}</h1>
-    <div class="sub-title">{{gettext("A decentralized and open source e-commerce platform that allows anyone to create an online store easily")}}</div>
-    <div class="checked-items d-flex justify-content-center flex-wrap">
-      <div class="d-flex checked-item">
-        <img class="mr-2" src="/static/img/product/checkmark.svg">
-        {{gettext("No transaction fees")}}
+<div class="nft-launchpad d-flex flex-column justify-content-between align-items-center px-3 pt-5 pb-5">
+  <div class="checked-items d-flex justify-content-center flex-wrap">
+    <div class="row nft-benefits">
+      <div class="col-12 col-md-4 pt-1 pb-2">
+        <h4 class='ml-3 mb-0'>Highest yields. Least hassle.</h4><br>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Automated smart contracts manage your funds")}}
+        </div>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("No staking, claiming, or lock-ups required")}}
+        </div>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Take advantage of the highest APYs in DeFi")}}
+        </div>
       </div>
-      <div class="d-flex checked-item">
-        <img class="mr-2" src="/static/img/product/checkmark.svg">
-        {{gettext("Fully customizeable")}}
+      <div class="col-12 col-md-4 pt-1 pb-2">
+        <h4 class='ml-3 mb-0'>Elastic supply. Stable price.</h4><br>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Your tokenized high-yield savings account")}}
+        </div>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Backed 1:1 by USDT, USDC, and DAI")}}
+        </div>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Your balance grows automatically in your wallet")}}
+        </div>
       </div>
-      <div class="d-flex checked-item">
-        <img class="mr-2" src="/static/img/product/checkmark.svg">
-        {{gettext("Supports credit card payments")}}
-      </div>
-      <div class="d-flex checked-item">
-        <img class="mr-2" src="/static/img/product/checkmark.svg">
-        {{gettext("Free to run")}}
+      <div class="col-12 col-md-4 pt-1 pb-2">
+        <h4 class='ml-3 mb-0'>Secure and battle tested.</h4><br>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Audited by Trail of Bits, Open Zeppelin, and more")}}
+        </div>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{gettext("Optional smart contract insurance available")}}
+        </div>
+        <div class="d-flex checked-item">
+          <img class="mr-2" src="/static/img/product/checkmark.svg">
+          {{ousd_supply}} {{gettext(" is being held in OUSD today")}}
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="nft-benefits">
+    <a href="https://ousd.com"><img class="m-4 img-fluid" src='/static/img/ousd/origindollar-screenshot.png' /></a>
+  </div>
 
     <div class="d-flex">
-      <div class="row">
-      <div class="col-12 col-sm-6">
       <a
-        href="{{ url_for('dshop', lang_code=CURRENT_LANGUAGE) }}"
-        class="btn btn-primary d-flex align-items-center justify-content-center mr-2">
-        {{gettext("Try Dshop")}}
+        href="https://ousd.com"
+        class="btn btn-primary d-flex align-items-center justify-content-center mr-2 p-3 mt-5 mb-5">
+        {{gettext("Learn more at ousd.com")}}
       </a>
       </div>
-      <div class="col-12 col-sm-6">
-      <a
-        href="https://store.originprotocol.com"
-        class="btn btn-primary d-flex align-items-center justify-content-center ml-2">
-        {{gettext("Visit Origin Store")}}
-      </a>
-      </div>
-      </div>
-    </div>
-    <img class="dshop-image" src="/static/img/product/dshop-screenshots.png" srcset="/static/img/product/dshop-screenshots@2x.png 2x, /static/img/product/dshop-screenshots@3x.png 3x" />
-    <div class="sub-title mt-5">{{gettext("Online stores created with Dshop")}}</div>
-    <div class="bottom d-flex justify-content-center align-items-center flex-wrap mt-3 mt-md-0">
-      <a href="https://store.originprotocol.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/origin-logo-dark.png"/></a>
-      <a href="https://store.brave.com/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/brave-logo-color-rgb.svg"/></a>
-      <a href="https://kyber.ogn.app/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/kyber-network.svg"/></a>
-      <a href="https://store.contentos.io/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/contentos.png" srcset="/static/img/product/contentos@2x.png 2x, /static/img/product/contentos@3x.png 3x"/></a>
-      <a href="https://ternio.ogn.app/" target="_blank" rel="noopener noreferrer"><img class="swag mt-4 mt-md-3" src="/static/img/product/ternio.png" srcset="/static/img/product/ternio@2x.png 2x, /static/img/product/ternio@3x.png 3x"/></a>
-    </div>
-    <div class="sub-title-footer">{{gettext("...and hundreds more")}}</div>
-  </div>
--->
+
+</div>
+
 
   <section class="tokens-section white-section">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>{{gettext("Origin Token")}}</h1>
+          <h1>{{gettext("Origin Token (OGN)")}}</h1>
         </div>
         <div class="col-12">
-          <div class="subtitle">{{gettext("Origin Token (OGN) is an incentive token that ensures the health and growth of the network.")}}</div>
+          <div class="subtitle">{{gettext("Origin Token (OGN) allows you to own a stake in the Origin ecosystem.<br>Buy OGN to participate in governance and growth of the network.")}}</div>
         </div>
         <div class="col-12">
           <div class="action-buttons">

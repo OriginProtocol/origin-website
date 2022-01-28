@@ -33,22 +33,20 @@
         <div class="row footer-links">
           <div class="col-4 d-flex flex-column">
             <strong>Organization</strong>
-            <a href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a>
             <a href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
-            <a href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a>
-            <!-- <a href="https://store.originprotocol.com">{{ gettext("Store") }}</a> -->
+            <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Products") }}</a>
             <a href="{{ universal.JOBS_URL }}">{{ gettext("Jobs") }}</a>
           </div>
           <div class="col-4 d-flex flex-column">
             <strong>Products</strong>
-            <a href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("NFTs & more") }}</a>
-            <a href="https://www.ousd.com">{{ gettext("OUSD") }}</a>
-            <a href="{{ url_for('dashboard', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN") }}</a>
+            <a href="https://story.xyz">{{ gettext("Origin Story") }}</a>
+            <a href="https://www.ousd.com">{{ gettext("Origin Dollar") }}</a>
+            <a href="{{ url_for('dashboard', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Origin Token") }}</a>
           </div>
           <div class="col-4 d-flex flex-column">
             <strong>Resources</strong>
             <a href="{{ url_for('litepaper', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Litepaper") }}</a>
-            <a href="{{ url_for('videos', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Videos") }}</a>
+            <a href="{{ url_for('videos', lang_code=CURRENT_LANGUAGE) }}">{{ gettext(" Videos") }}</a>
             <a href="{{ universal.GITHUB_URL }}">{{ gettext("GitHub") }}</a>
             <a href="https://vote.originprotocol.com">{{ gettext("Governance") }}</a>
           </div>

@@ -66,13 +66,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link{% if 'about' in request.path %} selected{% endif %}" href="{{ url_for('about', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("About") }}</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link{% if 'team' in request.path %} selected{% endif %}" href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link{% if 'investors' in request.path %} selected{% endif %}" href="{{ url_for('investors', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Investors") }}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link{% if 'product' in request.path %} selected{% endif %}" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Products") }}</a>

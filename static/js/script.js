@@ -757,7 +757,7 @@ $(function () {
 
   var hardcodedStats = [{
       name: "Discord",
-      subscribed_count: 9177
+      subscribed_count: 10981
     },
     {
       name: "Wechat",
@@ -778,6 +778,12 @@ $(function () {
       img: "/static/img/about/discord.svg",
       countLabel: "members",
       link: "https://discordapp.com/invite/jyxpUSe",
+      regionSpecific: false
+    },
+    Facebook: {
+      img: "/static/img/about/facebook.svg",
+      countLabel: "followers",
+      link: "https://www.facebook.com/originprotocol",
       regionSpecific: false
     },
     Telegram: {
@@ -834,18 +840,6 @@ $(function () {
       qr: "/static/img/origin-weibo-qr.png",
       regionSpecific: true
     },
-    Vk: {
-      img: "/static/img/about/russia-vk.svg",
-      countLabel: "subscribers",
-      link: "https://vk.com/originprotocol",
-      regionSpecific: true
-    },
-    Facebook: {
-      img: "/static/img/about/facebook.svg",
-      countLabel: "followers",
-      link: "https://www.facebook.com/originprotocol",
-      regionSpecific: false
-    },
     Twitter: {
       img: "/static/img/about/twitter.svg",
       countLabel: "followers",
@@ -881,7 +875,7 @@ $(function () {
       countLabel: "followers",
       link: "https://blockfolio.com/coin/OGN",
       regionSpecific: false
-    }
+    },
   };
 
   function createElementFromHTML(htmlString) {
