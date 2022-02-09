@@ -65,7 +65,6 @@ APK_URL = os.environ.get('APK_URL')
 
 FIREFOX_EXTENSION_URL = os.environ.get('FIREFOX_EXTENSION_URL')
 CHROME_EXTENSION_URL = os.environ.get('CHROME_EXTENSION_URL')
-DSHOP_DEMO_FORM = os.environ.get('DSHOP_DEMO_FORM')
 
 LAUNCHPAD_API = os.environ.get('LAUNCHPAD_API')
 
