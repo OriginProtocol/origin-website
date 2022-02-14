@@ -514,11 +514,6 @@ def aup():
 def creator():
     return render_template("creator.html")
 
-@app.route("/brave-customer-story", strict_slashes=False)
-@app.route("/<lang_code>/brave-customer-story", strict_slashes=False)
-def brave_dshop_pr():
-    return render_template("brave-dshop-pr.html")
-
 @app.route("/whitepaper", strict_slashes=False)
 @app.route("/<lang_code>/whitepaper", strict_slashes=False)
 def whitepaperv2():
@@ -540,13 +535,6 @@ def browser_extension():
 @app.route("/<lang_code>/huobi-launch", strict_slashes=False)
 def huobi_launch():
     return render_template("huobi-launch.html", hide_ogn_banner=True)
-
-
-@app.route("/dshop", methods=["GET"], strict_slashes=False)
-@app.route("/<lang_code>/dshop", strict_slashes=False)
-def dshop():
-    redirected = request.args.get("redirected")
-    return render_template("dshop.html", hide_ogn_banner=True, redirected=redirected)
 
 
 @app.route("/dashboard", strict_slashes=False)
@@ -597,7 +585,6 @@ def assets_all_styles():
                 "static/css/pages/presale.css",
                 "static/css/pages/whitepaper.css",
                 "static/css/pages/browser-extension.css",
-                "static/css/pages/dshop.css",
                 "static/css/pages/dashboard.css",
                 "static/css/components/drop.css",
                 "static/css/components/drop-card.css",
@@ -628,8 +615,7 @@ def assets_all_javascript():
                 "static/js/videos.js",
                 "static/js/youkuPlayer.js",
                 "static/js/scrollspy.js",
-                "static/js/dashboard.js",
-                "static/js/dshop.js",
+                "static/js/dashboard.js"
             ],
             True,
         ),
