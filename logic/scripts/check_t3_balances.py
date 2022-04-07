@@ -3,7 +3,7 @@ import os
 
 etherscan_api_key = os.environ["ETHERSCAN_API_KEY"]
 webhook_url = os.environ["WEBHOOK_URL"]
-threshold = 100000 * 1e18
+threshold = 500000 * 1e18
 
 for (address, wallet) in [("0x3Da5045699802Ea1fCc60130dEDEa67139C5b8C0", "Investor"), ("0xcaa5ef7abc36d5e5a3e4d7930dcff3226617a167", "Team")]:
     result = requests.get(
