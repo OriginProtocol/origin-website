@@ -109,13 +109,13 @@ def fetch_staking_stats():
         staking_stats = fetch_onchain_staking_stats()
 
         investor_staked_users = int(investor_stats["userCount"] or 0)
-        investor_locked_sum = int(investor_stats["lockupSum"] or 0)
+        investor_locked_sum = int(math.ceil(float(investor_stats["lockupSum"])) or 0)
 
         team_staked_users = int(team_stats["userCount"] or 0)
-        team_locked_sum = int(team_stats["lockupSum"] or 0)
+        team_locked_sum = int(math.ceil(float(team_stats["lockupSum"])) or 0)
 
         ogn_stakers_count = int(staking_stats["userCount"] or 0)
-        ogn_staked_amount = int(staking_stats["lockupSum"] or 0)
+        ogn_staked_amount = int(math.ceil(float(staking_stats["lockupSum"])) or 0)
 
         sum_users = investor_staked_users + team_staked_users
         sum_tokens = investor_locked_sum + team_locked_sum
