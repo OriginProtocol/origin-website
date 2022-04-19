@@ -231,7 +231,7 @@ def fetch_from_ethplorer():
 
         try:
 
-            url = "http://api.ethplorer.io/getAddressInfo/%s" % (contact.address)
+            url = "https://api.ethplorer.io/getAddressInfo/%s" % (contact.address)
             results = call_ethplorer(url)
 
             contact.eth_balance = results["ETH"]["balance"]
@@ -325,7 +325,7 @@ def fetch_ogn_transactions():
 def fetch_ogn_token_info():
     print("Checking OGN token info")
 
-    url = "http://api.ethplorer.io/getTokenInfo/%s" % (token_stats.ogn_contract)
+    url = "https://api.ethplorer.io/getTokenInfo/%s" % (token_stats.ogn_contract)
     results = call_ethplorer(url)
 
     if "error" in results:
@@ -353,7 +353,7 @@ def fetch_wallet_balance(wallet):
         wallet,
     ))
 
-    url = "http://api.ethplorer.io/getAddressInfo/%s" % (wallet)
+    url = "https://api.ethplorer.io/getAddressInfo/%s" % (wallet)
     results = call_ethplorer(url)
 
     contact = db_common.get_or_create(
