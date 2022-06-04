@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  originprotocolwebsite\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-08 04:32+0000\n"
+"POT-Creation-Date: 2022-06-02 10:00+0100\n"
 "PO-Revision-Date: 2020-12-19 05:12+0000\n"
 "Last-Translator: \n"
 "Language: zh_Hans_CN\n"
@@ -23,7 +23,7 @@ msgid "Building on Origin"
 msgstr "在Origin上进行开发"
 
 #: logic/emails/mailing_list.py:122 logic/emails/mailing_list.py:190
-#: views/web_views.py:335
+#: views/web_views.py:278
 msgid "Please enter a valid email address"
 msgstr "请输入有效的邮箱地址"
 
@@ -39,50 +39,46 @@ msgstr "谢谢！我们会尽快联系您的。"
 msgid "Please enter a valid website address"
 msgstr "请输入有效的邮箱地址"
 
-#: origin-website/venv/lib/python3.6/site-packages/flask_script/__init__.py:43
-msgid "show this help message and exit"
-msgstr ""
-
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:368
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:368
 #, python-format
 msgid "Content purported to be compressed with %s but failed to decompress."
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:532
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:532
 #, python-format
 msgid "Unsupported value for qop: %s."
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:536
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:614
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:536
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:614
 #, python-format
 msgid "Unsupported value for algorithm: %s.algorithm"
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:609
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:609
 msgid "The challenge doesn't contain a server nonce, or this one is empty."
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:619
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:619
 #, python-format
 msgid "Unsupported value for pw-algorithm: %s.pw-algorithm"
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/httplib2/__init__.py:1448
+#: origin-website/venv/lib/python3.9/site-packages/httplib2/__init__.py:1448
 msgid "Redirected but the response is missing a Location: header."
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/kombu/transport/qpid.py:1312
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1312
 #, python-format
 msgid "Attempting to connect to qpid with SASL mechanism %s"
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/kombu/transport/qpid.py:1317
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1317
 #, python-format
 msgid "Connected to qpid with SASL mechanism %s"
 msgstr ""
 
-#: origin-website/venv/lib/python3.6/site-packages/kombu/transport/qpid.py:1335
+#: origin-website/venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1335
 #, python-format
 msgid "Unable to connect to qpid with SASL mechanism %s"
 msgstr ""
@@ -110,8 +106,8 @@ msgid ""
 "true peer-to-peer commerce."
 msgstr "Origin实现真正的点对点商务"
 
-#: templates/about.html:12 templates/investors.html:13
-#: templates/landing.html:16 templates/team.html:11 templates/video.html:18
+#: templates/about.html:12 templates/company.html:11
+#: templates/investors.html:13 templates/team.html:11 templates/video.html:18
 msgid "Exit full screen"
 msgstr "退出全屏"
 
@@ -119,9 +115,8 @@ msgstr "退出全屏"
 msgid "It’s time to bring crypto mainstream"
 msgstr ""
 
-#: templates/about.html:36 templates/investors.html:37
-#: templates/landing.html:30 templates/landing.html:172 templates/team.html:29
-#: templates/video.html:30
+#: templates/about.html:36 templates/company.html:28
+#: templates/investors.html:37 templates/team.html:28 templates/video.html:30
 msgid "Watch the video"
 msgstr "观看视频"
 
@@ -143,11 +138,11 @@ msgstr ""
 msgid "token holders."
 msgstr "持有者。"
 
-#: templates/about.html:55 templates/landing.html:151
+#: templates/about.html:55 templates/landing.html:191
 msgid "Learn more about our team"
 msgstr "了解更多关于团队的信息"
 
-#: templates/about.html:58 templates/landing.html:179
+#: templates/about.html:58
 msgid "Learn more about our investors"
 msgstr "了解投资方"
 
@@ -202,7 +197,7 @@ msgstr ""
 msgid "Decentralized finance lets users take control of their money. They will be able to choose what assets to conduct business with and keep their savings in. Unlike in traditional centralized systems, funds cannot be seized and accounts cannot be shut down. DeFi is powered by smart contracts and code which minimizes the need for trust and limits human intervention and misadventure."
 msgstr ""
 
-#: templates/about.html:186
+#: templates/about.html:186 templates/landing.html:227
 msgid "Origin in the Press"
 msgstr "有关Origin的新闻"
 
@@ -212,7 +207,7 @@ msgid ""
 "      supporters"
 msgstr "我们拥有广泛的支持者和开发者，以及一个庞大且快速发展的社区"
 
-#: templates/about.html:300
+#: templates/about.html:300 templates/landing.html:215
 msgid "Region-specific Channels"
 msgstr "特定地区频道"
 
@@ -223,46 +218,6 @@ msgstr "Origin 起源协议 - 电商品台可接受使用政策"
 #: templates/aup.html:16
 msgid "Marketplace Acceptable Use Policy"
 msgstr "电商品台可接受使用政策"
-
-#: templates/brave-dshop-pr.html:3 templates/brave-dshop-pr.html:5
-msgid "Origin Protocol - Brave Customer Story"
-msgstr ""
-
-#: templates/brave-dshop-pr.html:16
-msgid "Brave Customer Story"
-msgstr ""
-
-#: templates/brave-dshop-pr.html:28
-msgid "SAN FRANCISCO/TAIPEI, March 11, 2021"
-msgstr ""
-
-#: templates/brave-dshop-pr.html:29
-msgid "Origin Protocol (Origin), a blockchain technology company developing decentralized commerce and finance (DeFi) applications, is pleased to be engaged by Brave Browser (Brave) in its switch from a centralized e-commerce platform to Origin’s decentralized Dshop platform. Working jointly with Brave, Origin enabled Brave to accept payments in its native token, BAT, for merchandise for the very first time. As part of the engagement, Origin also helped Brave sell its first ever non-fungible token (NFT) collection, which sold out in minutes."
-msgstr ""
-
-#: templates/brave-dshop-pr.html:30
-msgid "Adoption of decentralized technologies and cryptocurrency tokens are key to Brave’s mission and product offerings. Origin’s Dshop platform will enable Brave to better serve its BAT token holder community through increased cryptocurrency integration. Previously Brave’s merchandise store only accepted credit cards and was on a completely centralized platform."
-msgstr ""
-
-#: templates/brave-dshop-pr.html:31
-msgid "Origin helped Brave switch from Shopify to the Dshop platform. The NFT integration to Dshop in collaboration with Brave led to a highly successful outcome for both parties. Brave sold all 30 NFTs, a result of a BAT token holder community campaign to create tokenized images of BAT memes, in just under two minutes. In addition, Brave continues to do brisk business through Dshop split between credit card payments and cryptocurrency payments."
-msgstr ""
-
-#: templates/brave-dshop-pr.html:32
-msgid "“We are delighted to be a strategic partner of Brave in support of their efforts to push forward decentralized technologies,” says Nick Poulden, technical lead for Dshop - Origin. “Working closely with Brave, we were able to provide a solution that served both their crypto native customers and BAT token holder community while also making it easy for non-crypto users to make purchases on their store. Brave wanted to signal to their token holders that they were committed to decentralized tech while still being able to serve their tens of millions of users who may be unfamiliar with it. Their previous platform could only serve the latter group. Brave’s first NFT collection sale was a smash success and we look forward to continuing a long-term, mutually rewarding relationship with them.”"
-msgstr ""
-
-#: templates/brave-dshop-pr.html:33
-msgid "About Origin Protocol"
-msgstr ""
-
-#: templates/brave-dshop-pr.html:34
-msgid "Origin Protocol is a leading blockchain technology company founded in 2017 in San Francisco, CA. Origin’s focus is on building platforms that enable peer-to-peer commerce applications with a focus on NFTs and DeFi protocols and applications. We launched the Origin Dollar (OUSD) protocol in 2020 and conducted a record-breaking NFT auction in 2021. Origin Tokens (OGN) are listed on some of the largest exchanges in the world, including Binance Global and Huobi Global. <a href='/'>www.originprotocol.com</a>"
-msgstr ""
-
-#: templates/brave-dshop-pr.html:35
-msgid "Media Contact:"
-msgstr ""
 
 #: templates/browser-extension.html:2 templates/browser-extension.html:3
 #: templates/browser-extension.html:15
@@ -284,6 +239,516 @@ msgstr "下载火狐插件"
 #: templates/browser-extension.html:30
 msgid "Download for Brave"
 msgstr "下载Brave插件"
+
+#: templates/company.html:1 templates/team.html:1
+msgid ""
+"Origin Protocol -\n"
+"Team"
+msgstr "起源协议 - 团队"
+
+#: templates/company.html:2 templates/team.html:2
+msgid ""
+"Origin\n"
+"Protocol's world-class team is led by entrepreneurs and engineers from iconic\n"
+"tech companies"
+msgstr "起源协议的世界级团队成员，均来自于各大巨头公司。"
+
+#: templates/company.html:23 templates/team.html:23
+#, fuzzy
+msgid "A world-class team led by entrepreneurs and engineers from iconic tech companies"
+msgstr "我们世界级团队是由来自于标志性技术公司的企业家和程序员带领组成的"
+
+#: templates/company.html:36 templates/litepaper.html:20 templates/team.html:36
+msgid "Bringing NFTs and DeFi to the masses"
+msgstr ""
+
+#: templates/company.html:39
+msgid ""
+"Origin was founded in 2017 by successful Silicon Valley entrepreneurs and has a team of experienced engineers from iconic tech companies like YouTube, Google, PayPal, and DropBox. Today, Origin is a global community with hundreds of open-source contributors and thousands of token holders.<br><br>Origin's flagship products are <a href='https://story.xyz'>Origin Story</a>, which has powered numerous high-profile, record-breaking NFT drops, and <a href='https://ousd.com'>Origin Dollar</a>, the first stablecoin that earns a yield while it's still in your wallet. \n"
+"       <br><br>Origin's platform and governance token is <a href='/dashboard'>OGN</a> that trades on <a href='https://pro.coinbase.com/trade/OGN-USD'>Coinbase</a>, <a href='https://www.binance.com/en/register?ref=38914658'>Binance</a>, <a href='https://uniswap.exchange/swap?outputCurrency=0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26'>Uniswap</a>, and other top exchanges."
+msgstr ""
+
+#: templates/company.html:46 templates/landing.html:171
+#, fuzzy
+msgid "Learn more about OGN"
+msgstr "了解更多关于团队的信息"
+
+#: templates/company.html:56 templates/team.html:48
+#: templates/whitepaper/sidebar.html:45
+msgid "Core team"
+msgstr "核心团队"
+
+#: templates/company.html:67 templates/team.html:59
+#: templates/whitepaper/team.html:57
+msgid "Josh Fraser"
+msgstr "Josh Fraser"
+
+#: templates/company.html:71 templates/company.html:91 templates/team.html:63
+#: templates/team.html:83
+msgid "Cofounder"
+msgstr "联合创始人"
+
+#: templates/company.html:74 templates/team.html:66
+msgid ""
+"Josh started coding at the age of 10. Prior to\n"
+"                  Origin, he co-founded three other venture-backed companies:\n"
+"                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
+msgstr "Josh在10岁开始编码。在Origin之前，他共同创办了三家风险投资公司：EventVue，Torbit（被沃尔玛实验室收购） &amp; Forage。                  "
+
+#: templates/company.html:87 templates/team.html:79
+#: templates/whitepaper/team.html:13
+msgid "Matthew Liu"
+msgstr "Matthew Liu"
+
+#: templates/company.html:94
+msgid ""
+"Matt was the 3rd PM at YouTube (acquired by\n"
+"                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
+"                  (acquired by Walmart). He has an MS and BS from Stanford."
+msgstr "Matt是YouTube（被谷歌收购）的第3个PM, Qwiki（被雅虎收购）的VP PM和Bonobos（被沃尔玛收购）。他拥有斯坦福大学的硕士和学士学位。"
+
+#: templates/company.html:108 templates/team.html:100
+#: templates/whitepaper/team.html:106
+msgid "Yu Pan"
+msgstr "潘宇"
+
+#: templates/company.html:112 templates/team.html:104
+#: templates/whitepaper/team.html:110
+msgid "Founding Engineer"
+msgstr ""
+
+#: templates/company.html:115 templates/team.html:107
+msgid ""
+"Yu Pan was one of the 6 founding team members of\n"
+"                  PayPal and was the 1st employee at YouTube. He is a former\n"
+"                  Google employee and co-founder of Kiwi Crate."
+msgstr "潘宇是PayPal的6位创始团队成员之一，也是YouTube的第一位员工。他是Google的前员工，也是Kiwi Crate的共同创始人。"
+
+#: templates/company.html:129 templates/team.html:121
+#: templates/whitepaper/team.html:127
+msgid "Franck Chastagnol"
+msgstr "Franck Chastagnol"
+
+#: templates/company.html:133 templates/team.html:125
+#: templates/whitepaper/team.html:131
+msgid "VP of Engineering"
+msgstr ""
+
+#: templates/company.html:136 templates/team.html:128
+msgid ""
+"Franck has had a successful career as an early\n"
+"                  employee at numerous high-profile companies. He previously led\n"
+"                  engineering teams at Inktomi, Paypal, YouTube, Google and\n"
+"                  Dropbox."
+msgstr "Franck作为众多知名公司的早期员工，已经取得了成功的职业生涯。他之前曾在Inktomi，Paypal，YouTube，Google和Dropbox领导工程团队。"
+
+#: templates/company.html:151 templates/team.html:143
+#: templates/whitepaper/team.html:148
+msgid "Micah Alcorn"
+msgstr "Micah Alcorn"
+
+#: templates/company.html:155 templates/team.html:147
+#: templates/whitepaper/team.html:152
+msgid "Director of Product"
+msgstr ""
+
+#: templates/company.html:158 templates/team.html:150
+msgid ""
+"Micah was the technical co-founder of\n"
+"                  WellAttended, a bootstrapped box office management platform.\n"
+"                  He worked as a commercial real estate broker while learning to\n"
+"                  code."
+msgstr "Micah是WellAttended的技术联合创始人，WellAttended是一个自助式票房管理平台。在学习编码的同时，他还是一名商业房地产经纪人。"
+
+#: templates/company.html:173 templates/whitepaper/team.html:169
+msgid "Kay Yoo"
+msgstr "Kay Yoo"
+
+#: templates/company.html:177
+msgid "Director of BD & Ops"
+msgstr ""
+
+#: templates/company.html:180
+msgid ""
+"Kay is a Chartered Professional Accountant (CPA).\n"
+"                  She previously worked as a Senior Accountant and then as a\n"
+"                  Senior Consultant at KPMG Canada."
+msgstr "Kay是特许专业会计师（CPA）。之前曾在毕马威加拿大担任高级会计师，之后担任高级顾问。"
+
+#: templates/company.html:198 templates/company.html:404
+#: templates/team.html:311 templates/whitepaper/team.html:194
+msgid "Business Development"
+msgstr "商业开发"
+
+#: templates/company.html:201
+msgid ""
+"Coleman is an active cryptocurrency investor and\n"
+"                  real estate entrepreneur, owning and managing multiple Airbnb\n"
+"                  properties. He studied mathematics at Berkeley."
+msgstr "Coleman是一位活跃的加密数字货币投资人和房地产企业家，拥有和管理多个Airbnb房产。 他曾在伯克利学习数学。"
+
+#: templates/company.html:215 templates/whitepaper/team.html:233
+msgid "Mila Choi"
+msgstr "Mila Choi"
+
+#: templates/company.html:219 templates/whitepaper/team.html:237
+msgid "Regional Manager Korea"
+msgstr "韩国总经理"
+
+#: templates/company.html:222
+msgid ""
+"Mila is leading our community efforts in South\n"
+"                  Korea. She previously organized blockhain hackathons and has\n"
+"                  degrees from Penn State and Erasmus University Rotterdam."
+msgstr "Mila正在领导我们在韩国的社区工作。她之前曾组织过区块链黑客马拉松，并拥有宾夕法尼亚州立大学和鹿特丹伊拉斯姆斯大学的学位。"
+
+#: templates/company.html:236 templates/team.html:165
+#: templates/whitepaper/team.html:254
+msgid "Tom Linton"
+msgstr "Tom Linton"
+
+#: templates/company.html:240 templates/company.html:262
+#: templates/company.html:388 templates/company.html:495
+#: templates/team.html:169 templates/team.html:191 templates/team.html:295
+#: templates/team.html:402 templates/team.html:440 templates/team.html:535
+#: templates/whitepaper/team.html:258 templates/whitepaper/team.html:279
+#: templates/whitepaper/team.html:403
+msgid "Senior Engineer"
+msgstr "高级工程师"
+
+#: templates/company.html:243 templates/team.html:172
+msgid ""
+"Before Origin, Tom had a successful career as a\n"
+"                  solo startup founder. He has two Masters degrees in\n"
+"                  Distributed Systems from the Technical University of Berlin\n"
+"                  and KTH in Stockholm."
+msgstr "在Origin之前，Tom作为一名独立创业公司创立了一个成功的职业生涯。他拥有柏林技术大学和斯德哥尔摩KTH两个分布式系统硕士学位。"
+
+#: templates/company.html:258 templates/team.html:187
+#: templates/whitepaper/team.html:275
+msgid "Nick Poulden"
+msgstr "Nick Poulden"
+
+#: templates/company.html:265 templates/team.html:194
+msgid ""
+"Nick studied Computer Science at the University of\n"
+"                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
+"                  Sencha, C3 Energy Network and Palo Alto Networks."
+msgstr "尼克拥有华威大学的计算机科学学位。在加入Origin之前，他曾在Sencha，C3 Energy Network和Palo Alto Networks担任工程师。"
+
+#: templates/company.html:279 templates/team.html:208
+#: templates/whitepaper/team.html:318
+msgid "Domen Grabec"
+msgstr "Domen Grabec"
+
+#: templates/company.html:283 templates/company.html:304
+#: templates/company.html:325 templates/team.html:212 templates/team.html:233
+#: templates/team.html:254 templates/whitepaper/team.html:322
+#: templates/whitepaper/team.html:343 templates/whitepaper/team.html:364
+msgid "Engineer"
+msgstr "工程师"
+
+#: templates/company.html:286 templates/team.html:215
+msgid ""
+"Domen co-founded and led a team developing a\n"
+"                  mobile application with 2 chess Grandmasters. He previously\n"
+"                  had a successful career at Cetra, Zemanta and Peerindex."
+msgstr "Domen与两位国际象棋大师共同创办并领导了一个移动应用程序的开发团队。他也曾在Cetra，Zemanta和Peerindex有着成功的职业生涯。"
+
+#: templates/company.html:300 templates/team.html:229
+#: templates/whitepaper/team.html:339
+msgid "Shahul Hameed"
+msgstr "Shahul Hameed"
+
+#: templates/company.html:307 templates/team.html:236
+msgid ""
+"Shahul is a fullstack engineer who started\n"
+"                  programming at age of 10. He previously worked as a freelancer\n"
+"                  and then joined Zoho as a front-end developer."
+msgstr "Shahul是一名全栈工程师，10岁就开始编程。加入Origin之前他是一名自由职业者，也在Zoho担任前端开发者。"
+
+#: templates/company.html:321 templates/team.html:250
+#: templates/whitepaper/team.html:360
+msgid "Mike Shultz"
+msgstr "Mike Shultz"
+
+#: templates/company.html:328 templates/team.html:257
+msgid ""
+"Mike is a long-time contributor to open-source. He\n"
+"                  created a dev toolkit for creating Ethereum smart contracts\n"
+"                  with Python and previously worked with Ethereum and IPFS at\n"
+"                  Lunyr."
+msgstr "Mike是长期的开源贡献者。他创建了一个允许开发者使用Python来创建以太坊智能合约的开发工具包，之前也在Lunyr做以太坊和IPFS方面的工作。"
+
+#: templates/company.html:343 templates/team.html:272
+#: templates/whitepaper/team.html:211
+msgid "Aure Gimon"
+msgstr "Aure Gimon"
+
+#: templates/company.html:347 templates/team.html:276
+#: templates/whitepaper/team.html:215
+msgid "Product Designer"
+msgstr "产品设计师"
+
+#: templates/company.html:350 templates/team.html:279
+msgid ""
+"Aure is a product designer with 10+ years of\n"
+"                  experience. Prior to joining Origin, Aure worked at multiple\n"
+"                  startups and Fortune 500 companies. In a past life, he was\n"
+"                  also a software engineer."
+msgstr "Aure是个拥有十多年经验的产品设计师。在Origin之前，他在许多初创公司和世界500强企业工作。他也曾担任过软件工程师。"
+
+#: templates/company.html:365 templates/whitepaper/team.html:381
+msgid "Max Unger"
+msgstr "Max Unger"
+
+#: templates/company.html:369 templates/whitepaper/team.html:385
+msgid "Head of Community"
+msgstr "全球社区总负责人"
+
+#: templates/company.html:372
+msgid ""
+"Before joining Origin, Max helped build\n"
+"                  communities for notable blockchain companies like OKEx. He\n"
+"                  also worked with RedNova, the marketing and incubation entity\n"
+"                  for Du Capital."
+msgstr ""
+"在加入Origin之前，Max帮助OKEx等著名的区块链公司建立\n"
+"                  社区。他\n"
+"                  还曾与为Du Capital担任营销和孵化实体的Red Capital合作。\n"
+"。"
+
+#: templates/company.html:386 templates/team.html:293
+#: templates/whitepaper/team.html:401
+msgid "Daniel Von Fange"
+msgstr "Daniel Von Fange"
+
+#: templates/company.html:391 templates/team.html:298
+#: templates/whitepaper/team.html:406
+msgid "Daniel brings a strong emphasis on security and data analysis to our team. Daniel has earned a reputation for being able to gather massive amounts of data and create dynamic visualizations at lightning speed."
+msgstr "Daniel为团队带来了安全性和数据分析能力，他擅长收集大量数据并快速创建动态可视化。"
+
+#: templates/company.html:402 templates/team.html:309
+msgid "William Tong"
+msgstr ""
+
+#: templates/company.html:407 templates/team.html:314
+msgid "William Tong was a real estate broker before stumbling into the world of NFTs. He quickly built a reputation as a connector and community builder on the Clubhouse app and within the broader NFT collector community.  "
+msgstr ""
+
+#: templates/company.html:417 templates/team.html:324
+msgid "Chase Colman"
+msgstr ""
+
+#: templates/company.html:419 templates/team.html:326
+msgid "Project Manager"
+msgstr ""
+
+#: templates/company.html:422 templates/team.html:329
+msgid "Chase comes from creative and marketing agency life in Los Angeles. She’s managed projects and accounts for clients like YouTube, W Hotels, and Stitch Fix. She's now in charge of creator relationship management at Origin."
+msgstr ""
+
+#: templates/company.html:434 templates/team.html:341
+msgid "Eric Charles"
+msgstr ""
+
+#: templates/company.html:438 templates/team.html:345
+msgid "Account Manager"
+msgstr ""
+
+#: templates/company.html:441 templates/team.html:348
+msgid "Eric was an early employee at Lyft and a founding member of their first B2B solution. He was an account manager at Tophatter and worked at a marketing agency connecting brands with creators and celebrities."
+msgstr ""
+
+#: templates/company.html:453 templates/team.html:360
+msgid "Jon Youshaei"
+msgstr ""
+
+#: templates/company.html:457 templates/team.html:364
+#, fuzzy
+msgid "Creator in Residence"
+msgstr "更具韧性"
+
+#: templates/company.html:460 templates/team.html:367
+msgid "Jon has spent his career helping creators. Before joining Origin, Jon was responsible for creator monetization marketing at YouTube and product marketing at Instagram. He's also a frequent contributor for Forbes."
+msgstr ""
+
+#: templates/company.html:472 templates/team.html:379
+msgid "Kara Chang"
+msgstr ""
+
+#: templates/company.html:476 templates/team.html:383
+msgid "Executive Assistant"
+msgstr ""
+
+#: templates/company.html:479 templates/team.html:386
+msgid "Kara is the executive assistant to Origin co-founders, Josh and Matt. She graduated from UC San Diego and previously managed a team of 10 people at an ecommerce company in Taiwan."
+msgstr ""
+
+#: templates/company.html:491 templates/team.html:398
+msgid "Ed Spencer"
+msgstr ""
+
+#: templates/company.html:498 templates/team.html:405
+msgid "Ed previously worked at Sencha, C3 Energy Network, and Palo Alto Networks as a UI and software architect. He studied at the University of Warwick where he met his lifelong friend and now colleague, Nick Poulden."
+msgstr ""
+
+#: templates/company.html:510 templates/team.html:417
+#: templates/whitepaper/team.html:443
+msgid "Aaron Faulkner"
+msgstr "Aaron Faulkner"
+
+#: templates/company.html:514 templates/team.html:421
+msgid "Social Media Manager"
+msgstr ""
+
+#: templates/company.html:517 templates/team.html:424
+msgid "Aaron has spent his career building and managing communities. He served as a long-term member of our community team before joining fulltime to help us with social media, content, and marketing at Origin."
+msgstr ""
+
+#: templates/company.html:528 templates/team.html:549
+msgid "You?"
+msgstr ""
+
+#: templates/company.html:530 templates/team.html:551
+msgid "We're hiring!"
+msgstr ""
+
+#: templates/company.html:533 templates/team.html:554
+msgid "We are a distributed team with employees all over the world. We have a fast-paced bias-to-action culture and a really big vision for bringing crypto mainstream. Check out our <a href='https://angel.co/originprotocol/jobs'>open-positions on AngelList</a>."
+msgstr ""
+
+#: templates/company.html:550 templates/team.html:571
+msgid "Community team"
+msgstr "社区团队"
+
+#: templates/company.html:560 templates/team.html:582
+#: templates/whitepaper/team.html:435
+msgid "Zoe Hoang"
+msgstr "Zoe Hoang"
+
+#: templates/company.html:568 templates/team.html:592
+#: templates/whitepaper/team.html:451
+msgid "Moisés Sosa"
+msgstr "Moisés Sosa"
+
+#: templates/company.html:576 templates/team.html:602
+#: templates/whitepaper/team.html:459
+msgid "Kevin Lee"
+msgstr ""
+
+#: templates/company.html:584 templates/team.html:612
+#: templates/whitepaper/team.html:467
+msgid "Danil Myakin"
+msgstr ""
+
+#: templates/company.html:592 templates/team.html:622
+#: templates/whitepaper/team.html:475
+msgid "Joseph Stewart"
+msgstr ""
+
+#: templates/company.html:600 templates/team.html:632
+#: templates/whitepaper/team.html:483
+msgid "Erkan Ciftci"
+msgstr ""
+
+#: templates/company.html:608 templates/team.html:642
+#: templates/whitepaper/team.html:491
+msgid "Stefano Terenzi"
+msgstr ""
+
+#: templates/company.html:616 templates/team.html:652
+#: templates/whitepaper/team.html:499
+msgid "Zizen Chang"
+msgstr ""
+
+#: templates/company.html:624 templates/team.html:662
+#: templates/whitepaper/team.html:507
+msgid "Lee Gwangmyeong"
+msgstr ""
+
+#: templates/company.html:637 templates/team.html:676
+msgid "Advisors"
+msgstr "顾问"
+
+#: templates/company.html:650 templates/team.html:689
+msgid "Melody He"
+msgstr "Melody He"
+
+#: templates/company.html:654 templates/team.html:693
+#, fuzzy
+msgid "Spartan Group"
+msgstr "Spartan"
+
+#: templates/company.html:666 templates/investors.html:178
+#: templates/team.html:705
+msgid "Paul Veradittakit"
+msgstr "Paul Veradittakit"
+
+#: templates/company.html:670 templates/company.html:686
+#: templates/team.html:709 templates/team.html:725
+#: templates/vc-firms/usa.html:5
+msgid "Pantera Capital"
+msgstr "Pantera Capital"
+
+#: templates/company.html:682 templates/team.html:721
+msgid "Joey Krug"
+msgstr "Joey Krug"
+
+#: templates/company.html:698 templates/team.html:737
+msgid "Andrew Kang"
+msgstr ""
+
+#: templates/company.html:702 templates/team.html:741
+#, fuzzy
+msgid "Mechanism Capital"
+msgstr "Kenetic Capital"
+
+#: templates/company.html:714 templates/dashboard.html:576
+#: templates/investors.html:324 templates/team.html:753
+msgid "Justin Blau"
+msgstr "贾斯汀·布劳（Justin Blau）"
+
+#: templates/company.html:718 templates/team.html:757
+msgid "3LAU"
+msgstr ""
+
+#: templates/company.html:730 templates/company.html:734
+#: templates/team.html:769 templates/team.html:773
+msgid "Paris Hilton"
+msgstr ""
+
+#: templates/company.html:747 templates/team.html:786
+#, fuzzy
+msgid " open-source contributors"
+msgstr "贡献者。"
+
+#: templates/company.html:766 templates/team.html:805
+msgid "Want to contribute?"
+msgstr "想为Origin做出贡献吗？"
+
+#: templates/company.html:771 templates/team.html:810
+msgid "Visit our GitHub Repository"
+msgstr "访问我们的Github仓库"
+
+#: templates/company.html:773 templates/team.html:812
+msgid "Join our #engineering channel on Discord"
+msgstr "加入我们Discord上的#engineering（工程师）频道"
+
+#: templates/company.html:784 templates/team.html:823
+msgid "Interested in working at Origin?"
+msgstr "有兴趣加入Origin团队？"
+
+#: templates/company.html:788 templates/team.html:827
+msgid ""
+"We are a distributed team and are hiring all around the\n"
+"            world."
+msgstr "我们开放和分布式的团队正在寻找世界各地的开拓性人才。"
+
+#: templates/company.html:795 templates/team.html:834
+#, fuzzy
+msgid "View open positions"
+msgstr "招聘岗位"
 
 #: templates/countdown-bar.html:8
 msgid "See the new OGN Token dashboard"
@@ -491,165 +956,235 @@ msgstr "联系我们"
 msgid "Origin Protocol - Origin Token Dashboard"
 msgstr "Origin Protocol - Origin通证仪表板"
 
-#: templates/dashboard.html:5 templates/dshop.html:5 templates/product.html:5
+#: templates/dashboard.html:5 templates/product.html:5
 msgid "Origin Protocol's platform powers true peer-to-peer marketplaces everywhere."
 msgstr "起源协议平台为任何地方的真正的点对点市场提供支持。"
 
-#: templates/dashboard.html:26
+#: templates/dashboard.html:24
 msgid "Origin Token Dashboard"
 msgstr "Origin通证仪表板"
 
-#: templates/dashboard.html:33
+#: templates/dashboard.html:31
 msgid "Price"
 msgstr "价格"
 
-#: templates/dashboard.html:41 templates/ogn-token.html:29
+#: templates/dashboard.html:39 templates/landing.html:143
+#: templates/ogn-token.html:29
 msgid "Market Cap"
 msgstr "市值"
 
-#: templates/dashboard.html:49 templates/ogn-token.html:22
+#: templates/dashboard.html:47 templates/landing.html:151
+#: templates/ogn-token.html:22
 msgid "Circulating Supply"
 msgstr "流通供给量"
 
-#: templates/dashboard.html:60
+#: templates/dashboard.html:58 templates/landing.html:162
 msgid "Total Supply"
 msgstr "总供给量"
 
-#: templates/dashboard.html:76
+#: templates/dashboard.html:74
+msgid "Decentralized Exchanges"
+msgstr "去中心化交易所"
+
+#: templates/dashboard.html:109
+msgid "Centralized Exchanges"
+msgstr "中心化交易所"
+
+#: templates/dashboard.html:250
+msgid "See more on "
+msgstr ""
+
+#: templates/dashboard.html:250
+#, fuzzy
+msgid " or "
+msgstr "或"
+
+#: templates/dashboard.html:263
+msgid "Participate in governance"
+msgstr ""
+
+#: templates/dashboard.html:264
+msgid "Use your OGN to vote and issue proposals"
+msgstr ""
+
+#: templates/dashboard.html:267
+msgid "Vote"
+msgstr ""
+
+#: templates/dashboard.html:273
 msgid "Token Unlock Schedule"
 msgstr "通证解锁计划"
 
-#: templates/dashboard.html:78
+#: templates/dashboard.html:275
 msgid "On January 4, 2020, we released our projected token release schedule. This can also be found in <a href='https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener'>Binance's Research Report</a> on Origin. Note that actual circulating supply may differ from modeled circulating supply as time passes. It is our intention to decrease actual circulating supply when compared to modeled circulating supply whenever possible."
 msgstr "2020年1月4日，我们发布了通证释放计划的建模模型。释放计划可以在 （https://research.binance.com/projects/origin' target='_blank' rel='noreferrer noopener）《币安上的Origin研究报告》查看。实际的流通供給量可能与建模的流通供給量有一些差异。与建模的流通供給量相比，我们在尽可能减少实际的流通供給量。"
 
-#: templates/dashboard.html:82
+#: templates/dashboard.html:279
 msgid "Modeled vs. actual token release schedule"
 msgstr "建模与实际通证释放计划"
 
-#: templates/dashboard.html:84
+#: templates/dashboard.html:281
 #, python-format
 msgid "Currently, OGN's actual circulating supply is ogn_circulating_supply. Modeled circulating supply was projected at ogn_modeled_supply. The difference is ogn_supply_diff tokens (ogn_supply_diff_pct%%)."
 msgstr "当前，OGN的实际循环供应量为 ogn_circulating_supply 。预测的循环供应量为 ogn_modeled_supply 。区别在于 ogn_supply_diff 代币（ogn_supply_diff_pct%%） 。"
 
-#: templates/dashboard.html:109
-msgid "Locked Tokens"
-msgstr "锁定的通证数量"
-
-#: templates/dashboard.html:111
-msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply."
-msgstr "我们的许多投资者和团队成员已经自愿增加了通证锁定期，锁定的通证包括那些本来会被释放并进入流通供应的。"
-
-#: templates/dashboard.html:116
-msgid "Total number of tokens in investor and team lockups"
-msgstr ""
-
-#: templates/dashboard.html:126
-msgid "Total number of staked tokens"
-msgstr ""
-
-#: templates/dashboard.html:136
-msgid "Total number of tokens founders have sold"
-msgstr "创始人已售出的通证总数"
-
-#: templates/dashboard.html:144
-msgid "Last updated "
-msgstr "最近更新时间 "
-
-#: templates/dashboard.html:148
+#: templates/dashboard.html:306
 msgid "Staked amount by duration"
 msgstr ""
 
-#: templates/dashboard.html:162
+#: templates/dashboard.html:308
+msgid "Staked OGN is included as part of the circulating supply. You can <a href='https://www.ousd.com/stake'>stake your OGN</a> on ousd.com"
+msgstr ""
+
+#: templates/dashboard.html:324
+msgid "Total number of staked tokens"
+msgstr ""
+
+#: templates/dashboard.html:332
+msgid "Last updated "
+msgstr "最近更新时间 "
+
+#: templates/dashboard.html:337
 msgid "Wallets excluded from circulating supply"
 msgstr "流通共给量不包括以下钱包"
 
-#: templates/dashboard.html:164
+#: templates/dashboard.html:339
+msgid "Circulating supply is calculated as the total supply minus the OGN balances of the following wallets:"
+msgstr ""
+
+#: templates/dashboard.html:346
 msgid "Foundation Reserves"
 msgstr "基金储备"
 
-#: templates/dashboard.html:174
-#, fuzzy
-msgid "New Foundation Reserves"
-msgstr "基金储备"
-
-#: templates/dashboard.html:184
+#: templates/dashboard.html:356
 msgid "Team Distribution"
 msgstr "团队释放"
 
-#: templates/dashboard.html:194
+#: templates/dashboard.html:366
 msgid "Investor Distribution"
 msgstr "投资者释放"
 
-#: templates/dashboard.html:204
+#: templates/dashboard.html:376
 msgid "Distribution Staging"
 msgstr "发行阶段"
 
-#: templates/dashboard.html:214
-#, fuzzy
-msgid "New Distribution Staging"
-msgstr "发行阶段"
-
-#: templates/dashboard.html:224
+#: templates/dashboard.html:386
 msgid "Partnerships"
 msgstr "合作"
 
-#: templates/dashboard.html:234
+#: templates/dashboard.html:396
 msgid "Ecosystem Growth"
 msgstr "生态发展"
 
-#: templates/dashboard.html:253
-msgid "Stake OGN on OUSD.com"
+#: templates/dashboard.html:415
+msgid "Stake your OGN"
 msgstr ""
 
-#: templates/dashboard.html:254 templates/stake-banner.html:7
+#: templates/dashboard.html:416
 #, python-format
-msgid "Stake your OGN to earn up to 25%%"
-msgstr "投注您的OGN可赚取高达25%%"
+msgid "Earn up to 25%% APY"
+msgstr ""
 
-#: templates/dashboard.html:257 templates/stake-banner.html:10
-msgid "Stake OGN now"
-msgstr "立即投注OGN"
+#: templates/dashboard.html:419
+msgid "Stake OGN"
+msgstr ""
 
-#: templates/dashboard.html:261
+#: templates/dashboard.html:428
 msgid "Additional Token Metrics"
 msgstr "其他指标"
 
-#: templates/dashboard.html:264
+#: templates/dashboard.html:431
 msgid "Total number of unique wallets"
 msgstr "唯一钱包总数"
 
-#: templates/dashboard.html:268
+#: templates/dashboard.html:435
 msgid "Total number of presale investors"
 msgstr "预售投资者总数"
 
-#: templates/dashboard.html:272
+#: templates/dashboard.html:439
 msgid "Presale investor vesting schedule length"
 msgstr "预售投资者归属时间表长度"
 
-#: templates/dashboard.html:276
+#: templates/dashboard.html:443
 msgid "Team vesting schedule length*"
 msgstr "团队通证释放"
 
-#: templates/dashboard.html:280
+#: templates/dashboard.html:447
 msgid "Average presale purchase size in USD"
 msgstr "预售平均购买金额（美元）"
 
-#: templates/dashboard.html:284
+#: templates/dashboard.html:451
 msgid "* Founders signed new 4 year vesting schedule on Jan 8 2020"
 msgstr "*项目的两位创始人于2020年1月8日签署了新的4年释放计划"
 
-#: templates/dashboard.html:293
-msgid "Centralized Exchanges"
-msgstr "中心化交易所"
+#: templates/dashboard.html:461
+msgid "OGN is held by many of the top crypto funds around the world"
+msgstr ""
 
-#: templates/dashboard.html:420
-msgid "Decentralized Exchanges"
-msgstr "去中心化交易所"
+#: templates/dashboard.html:503
+#, fuzzy
+msgid "Notable OGN holders"
+msgstr "持有者。"
 
-#: templates/dashboard.html:454
-msgid "See more on Coinmarketcap >"
-msgstr "在Coinmarketcap上查看更多信息>"
+#: templates/dashboard.html:516 templates/investors.html:264
+msgid "Steve Chen"
+msgstr "史蒂夫·陈"
+
+#: templates/dashboard.html:519 templates/investors.html:267
+msgid "Founder, YouTube"
+msgstr "YouTube创办人"
+
+#: templates/dashboard.html:531 templates/investors.html:279
+msgid "Alexis Ohanian"
+msgstr "Alexis Ohanian"
+
+#: templates/dashboard.html:534 templates/investors.html:282
+msgid "Founder, Reddit"
+msgstr "Reddit 创始人"
+
+#: templates/dashboard.html:546 templates/investors.html:294
+msgid "Garry Tan"
+msgstr "Garry Tan"
+
+#: templates/dashboard.html:549 templates/investors.html:297
+msgid "Partner, Y Combinator"
+msgstr "Y Combinator 合伙人"
+
+#: templates/dashboard.html:561 templates/investors.html:309
+msgid "Gil Penchina"
+msgstr "Gil Penchina"
+
+#: templates/dashboard.html:564 templates/investors.html:312
+msgid "Angel Investor"
+msgstr "天使投资者"
+
+#: templates/dashboard.html:579 templates/investors.html:327
+msgid "Acclaimed DJ"
+msgstr "著名的DJ"
+
+#: templates/dashboard.html:591 templates/investors.html:339
+msgid "Steve Jang"
+msgstr "Steve Jang"
+
+#: templates/dashboard.html:594 templates/investors.html:342
+msgid "Advisor & Angel, Uber"
+msgstr "Uber顾问和天使投资人"
+
+#: templates/dashboard.html:606 templates/investors.html:354
+msgid "Kamal Ravikant"
+msgstr "卡马尔·拉维坎特（Kamal Ravikant）"
+
+#: templates/dashboard.html:609 templates/investors.html:357
+msgid "Serial Entrepreneur"
+msgstr "连续企业家"
+
+#: templates/dashboard.html:621 templates/investors.html:369
+msgid "Randall Kaplan"
+msgstr "Randall Kalpan"
+
+#: templates/dashboard.html:624 templates/investors.html:372
+msgid "Founder, Akamai"
+msgstr "Akamai 创始人"
 
 #: templates/developers.html:2
 msgid "Origin Protocol - Developers"
@@ -739,183 +1274,9 @@ msgstr "graphql"
 msgid "html/css"
 msgstr "html/css"
 
-#: templates/developers.html:131 templates/dshop.html:158
+#: templates/developers.html:131
 msgid "Join us on Discord"
 msgstr "加入我们的 Discord"
-
-#: templates/dshop.html:3
-msgid "Origin Protocol - DShop"
-msgstr "起源协议—去中心化商店"
-
-#: templates/dshop.html:23
-msgid "Create your free online store in minutes & harness the power of a decentralized platform"
-msgstr "在几分钟内创建免费商店，并利用去中心化平台的强大功能"
-
-#: templates/dshop.html:24
-msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform built on the decentralized web.  Get started for free and launch your store in a day."
-msgstr "使用Dshop来运营和发展您的业务，Dshop是一个基于去中心化网络的可自定义的开源电子商务平台。免费开始使用，并在一天之内启动您的商店。"
-
-#: templates/dshop.html:30 templates/dshop.html:360
-msgid "Try it – it’s free"
-msgstr "免费尝试"
-
-#: templates/dshop.html:44
-msgid "We’re here to support you–no matter what business you’re in"
-msgstr "无论你做任何行业，我们都会在提供支持"
-
-#: templates/dshop.html:45
-msgid "Create an ecommerce website backed by powerful tools that help you find customers and drive sales."
-msgstr "创建一个以强大工具为后盾的电商网站，这些工具可帮助你找到客户并促进销售。"
-
-#: templates/dshop.html:67
-msgid "A better way to do online commerce. Run your business on the new web."
-msgstr "进行在线商务的更好方法，在新网站上经营业务。"
-
-#: templates/dshop.html:73
-msgid "Multiple shops, 1 account"
-msgstr "1个帐户多个商店"
-
-#: templates/dshop.html:74
-msgid "Launch a decentralised shop in a day - no commitments or long-term contracts."
-msgstr "一天可创建并上线，无承诺或长期合同。"
-
-#: templates/dshop.html:80
-msgid "Easy crypto payments"
-msgstr "轻松使用加密货币支付"
-
-#: templates/dshop.html:81 templates/dshop.html:314
-msgid "Accept every way your customers want to pay.  Fast, secure payments with no extra fees."
-msgstr "接受客户需要的所有支付方式，快捷、安全且无需额外费用"
-
-#: templates/dshop.html:87
-msgid "Secure, distributed data"
-msgstr "安全的分布式数据"
-
-#: templates/dshop.html:88
-msgid "Keep your data safe with IPFS, a resilient, censorship resistant system of file storage."
-msgstr "使用IPFS确保数据安全。"
-
-#: templates/dshop.html:94
-msgid "Infinitely extensible"
-msgstr "无限扩展"
-
-#: templates/dshop.html:95
-msgid "Integrate with your favorite third party services or build your very own."
-msgstr "集成流行的第三方服务或构建自己的第三方服务。"
-
-#: templates/dshop.html:101
-msgid "Work with all your existing tools"
-msgstr "使用所有工具"
-
-#: templates/dshop.html:102
-msgid "Explore integrations to speed up your workflow, or build your own custom integrations on our open source platform."
-msgstr "探索更多集成以加快工作流程，或在Origin的开源平台上自定义集成"
-
-#: templates/dshop.html:144
-msgid "…and many more on the way!"
-msgstr "接下来还有更多"
-
-#: templates/dshop.html:150
-msgid "Build on top of the world’s first decentralized e-commerce platform"
-msgstr "建立在世界上第一个去中心化电商平台上"
-
-#: templates/dshop.html:151
-msgid "Join our rapidly growing global community of developers and add your own features to our ever-expanding platform."
-msgstr "加入起源快速发展的全球开发者社区，并在不断扩展的平台中添加自己的功能。"
-
-#: templates/dshop.html:167 templates/navbar-dshop.html:9
-#: templates/navbar-dshop.html:43
-msgid "Our Customers"
-msgstr "我们的顾客"
-
-#: templates/dshop.html:169
-msgid "Meet the companies who are choosing Dshop to build and grow their decentralized online stores"
-msgstr "了解使用Dshop来建立和发展去中心化商店的公司"
-
-#: templates/dshop.html:202 templates/dshop.html:327
-msgid "Here to help you succeed"
-msgstr "帮助您成功"
-
-#: templates/dshop.html:204
-msgid "Speak with a real person when something’s not right. You can email our in-house support anytime, 24/7."
-msgstr "遇到不对的情况时，请与真实的人交谈。你可以随时向我们发送邮件。"
-
-#: templates/dshop.html:206 templates/dshop.html:338
-msgid "Still have more questions? Feel free to contact us."
-msgstr "如有其他问题欢迎与我们联系"
-
-#: templates/dshop.html:209 templates/dshop.html:340
-msgid "Contact Us"
-msgstr "与我们联系"
-
-#: templates/dshop.html:216
-msgid "Dshop success stories"
-msgstr "Dshop成功案例"
-
-#: templates/dshop.html:222
-msgid "“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”"
-msgstr "“ [借助Dshop]，Contentos在电商方面获得了更多的便利。”"
-
-#: templates/dshop.html:225
-msgid "- Jackie Lim , Senior B.D. Director, Contentos"
-msgstr "Contentos高级BD总监Jackie Lim"
-
-#: templates/dshop.html:237
-msgid "“We are thrilled to partner with Origin Protocol to launch the Ternio Dshop. They made the entire setup process easy and hands-off, and it has been exciting to see how they have applied the principles of blockchain and decentralization into the e-commerce space. Dshop provides the perfect platform for BlockCard users and our own team to purchase branded merchandise to promote our brand.”"
-msgstr ""
-
-#: templates/dshop.html:249
-msgid "“Origin dshops are making blockchain-powered commerce accessible to thousands of people around the world. Kyber is glad to help facilitate liquidity for the Origin Token (OGN).”"
-msgstr ""
-
-#: templates/dshop.html:252
-msgid "- Shane Hong, Kyber Marketing"
-msgstr ""
-
-#: templates/dshop.html:268 templates/navbar-dshop.html:7
-#: templates/navbar-dshop.html:37
-msgid "Features & Benefits"
-msgstr "特点和好处"
-
-#: templates/dshop.html:275
-msgid "Fast setup, no commitments"
-msgstr "快速设置，无需承诺"
-
-#: templates/dshop.html:278
-msgid "No commitments or long-term contracts."
-msgstr "无需承诺签订长期合同。"
-
-#: templates/dshop.html:286 templates/product.html:121
-msgid "Free to run"
-msgstr "免费运行"
-
-#: templates/dshop.html:289
-msgid "Dshop is free to run, and transaction fees are limited to crypto gas costs (typically a few cents per transaction)."
-msgstr "Dshop是免费运行的，交易费用仅限于Gas费(通常每笔交易几美分)。"
-
-#: templates/dshop.html:300
-msgid "Sell what you want"
-msgstr "卖任何你想买的东西"
-
-#: templates/dshop.html:303
-msgid "There are no restrictions on what you can sell, now or ever."
-msgstr "无论是现在还是以后，对你要出售的商品都没有任何限制"
-
-#: templates/dshop.html:311
-msgid "Secure fiat and crypto payments"
-msgstr "安全的法币和加密货币支付"
-
-#: templates/dshop.html:329 templates/dshop.html:334
-msgid "Speak with a real person when something’s not right."
-msgstr "遇到困难时向客服反馈。"
-
-#: templates/dshop.html:331 templates/dshop.html:335
-msgid "You can email our in-house support anytime, 24/7."
-msgstr "可以随时发送邮件向我们寻求帮助，我们7x24小时在线为您服务"
-
-#: templates/dshop.html:354
-msgid "Ready to start selling today?"
-msgstr "现在，准备开始销售了吗？"
 
 #: templates/extension-rewards.html:1
 msgid "Origin Protocol - March Rewards"
@@ -979,7 +1340,7 @@ msgid "read the"
 msgstr "阅读"
 
 #: templates/extension-rewards.html:206 templates/footer.html:27
-#: templates/footer.html:105 templates/privacy.html:16
+#: templates/footer.html:104 templates/privacy.html:16
 msgid "Privacy Policy"
 msgstr "隐私权政策"
 
@@ -1017,102 +1378,109 @@ msgstr "订阅我们的快讯和我们保持联系。您的邮件将被保密。
 msgid "Enter your email"
 msgstr "输入电邮地址"
 
-#: templates/footer.html:18 templates/footer.html:96
+#: templates/footer.html:18 templates/footer.html:95
 msgid "Copyright © "
 msgstr "版权所有© "
 
-#: templates/footer.html:18 templates/footer.html:96
-msgid "Origin Protocol Inc. All rights reserved."
+#: templates/footer.html:18
+#, fuzzy
+msgid "Origin Protocol Labs. All rights reserved."
 msgstr "Origin Protocol. All rights reserved."
 
-#: templates/footer.html:21 templates/footer.html:99
+#: templates/footer.html:21 templates/footer.html:98
 msgid "Help"
 msgstr "帮助"
 
-#: templates/footer.html:24 templates/footer.html:102 templates/tos.html:16
+#: templates/footer.html:24 templates/footer.html:101 templates/tos.html:16
 msgid "Terms of Service"
 msgstr "服务条款"
 
 #: templates/footer.html:36 templates/navbar.html:69
-msgid "About"
-msgstr "关于我们"
-
-#: templates/footer.html:37 templates/navbar.html:72
 #: templates/whitepaper/sidebar.html:39 templates/whitepaper/team.html:2
 msgid "Team"
 msgstr "团队"
 
-#: templates/footer.html:38 templates/navbar.html:75
-msgid "Investors"
-msgstr "投资方"
-
-#: templates/footer.html:39
-msgid "Store"
+#: templates/footer.html:37 templates/navbar.html:72
+msgid "Products"
 msgstr ""
 
-#: templates/footer.html:40
+#: templates/footer.html:38
 msgid "Jobs"
 msgstr "工作"
 
-#: templates/footer.html:44
-msgid "NFTs & more"
-msgstr ""
+#: templates/footer.html:42 templates/landing.html:52
+#: templates/landing.html:101 templates/litepaper/platform.html:33
+#: templates/litepaper/sidebar.html:19
+#, fuzzy
+msgid "Origin Story"
+msgstr "Origin Dollar"
 
-#: templates/footer.html:45 templates/litepaper/platform.html:162
-msgid "OUSD"
-msgstr "OUSD"
+#: templates/footer.html:43 templates/landing.html:42 templates/landing.html:98
+msgid "Origin Dollar"
+msgstr "Origin Dollar"
 
-#: templates/footer.html:46
-msgid "OGN"
-msgstr "OGN"
+#: templates/footer.html:44 templates/landing.html:62
+#: templates/landing.html:104
+msgid "Origin Token"
+msgstr "Origin 代币"
 
-#: templates/footer.html:50 templates/litepaper.html:19
+#: templates/footer.html:48 templates/litepaper.html:19
 msgid "Litepaper"
 msgstr ""
 
-#: templates/footer.html:51
-msgid "Videos"
+#: templates/footer.html:49
+#, fuzzy
+msgid " Videos"
 msgstr "视频"
 
-#: templates/footer.html:52
+#: templates/footer.html:50
 msgid "GitHub"
 msgstr "Github"
 
-#: templates/footer.html:57
+#: templates/footer.html:51 templates/litepaper/platform.html:143
+#: templates/ogn-token.html:147
+msgid "Governance"
+msgstr "治理模式"
+
+#: templates/footer.html:56
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:60
+#: templates/footer.html:59
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:63
+#: templates/footer.html:62
 msgid "Blog"
 msgstr ""
 
-#: templates/footer.html:66
+#: templates/footer.html:65
 msgid "Youtube"
 msgstr "Youtube"
 
-#: templates/footer.html:69
+#: templates/footer.html:68
 msgid "Instagram"
 msgstr "Instagram"
 
-#: templates/footer.html:72
+#: templates/footer.html:71
 msgid "Telegram"
 msgstr "电报"
 
-#: templates/footer.html:75
+#: templates/footer.html:74
 msgid "Reddit"
 msgstr "Reddit"
 
-#: templates/footer.html:78
+#: templates/footer.html:77
 msgid "Discord"
 msgstr "Discord"
 
-#: templates/footer.html:88
+#: templates/footer.html:87
 msgid "VK"
 msgstr "VK"
+
+#: templates/footer.html:95
+msgid "Origin Protocol Inc. All rights reserved."
+msgstr "Origin Protocol. All rights reserved."
 
 #: templates/huobi-launch.html:2 templates/huobi-launch.html:3
 msgid "Origin Huobi Listing"
@@ -1447,10 +1815,6 @@ msgid ""
 "                      changer.\""
 msgstr "Origin能够从我们投资的其他去中心化产品中脱颖而出，主要是因为他们建立了一整套社区体系。对于我们（投资者）而言，Origin是一个改变现行游戏规则的项目。"
 
-#: templates/investors.html:178 templates/team.html:591
-msgid "Paul Veradittakit"
-msgstr "Paul Veradittakit"
-
 #: templates/investors.html:181
 msgid "Co-investment Officer at Pantera Capital"
 msgstr "Pantera Capital 联合首席投资官"
@@ -1471,70 +1835,6 @@ msgid ""
 "            previous founders in Silicon Valley."
 msgstr "我们也获得了硅谷的著名天使投资人以及知名公司创始人的投资。"
 
-#: templates/investors.html:264
-msgid "Steve Chen"
-msgstr "史蒂夫·陈"
-
-#: templates/investors.html:267
-msgid "Founder, YouTube"
-msgstr "YouTube创办人"
-
-#: templates/investors.html:279
-msgid "Alexis Ohanian"
-msgstr "Alexis Ohanian"
-
-#: templates/investors.html:282
-msgid "Founder, Reddit"
-msgstr "Reddit 创始人"
-
-#: templates/investors.html:294
-msgid "Garry Tan"
-msgstr "Garry Tan"
-
-#: templates/investors.html:297
-msgid "Partner, Y Combinator"
-msgstr "Y Combinator 合伙人"
-
-#: templates/investors.html:309
-msgid "Gil Penchina"
-msgstr "Gil Penchina"
-
-#: templates/investors.html:312
-msgid "Angel Investor"
-msgstr "天使投资者"
-
-#: templates/investors.html:324 templates/team.html:630
-msgid "Justin Blau"
-msgstr "贾斯汀·布劳（Justin Blau）"
-
-#: templates/investors.html:327
-msgid "Acclaimed DJ"
-msgstr "著名的DJ"
-
-#: templates/investors.html:339
-msgid "Steve Jang"
-msgstr "Steve Jang"
-
-#: templates/investors.html:342
-msgid "Advisor & Angel, Uber"
-msgstr "Uber顾问和天使投资人"
-
-#: templates/investors.html:354
-msgid "Kamal Ravikant"
-msgstr "卡马尔·拉维坎特（Kamal Ravikant）"
-
-#: templates/investors.html:357
-msgid "Serial Entrepreneur"
-msgstr "连续企业家"
-
-#: templates/investors.html:369
-msgid "Randall Kaplan"
-msgstr "Randall Kalpan"
-
-#: templates/investors.html:372
-msgid "Founder, Akamai"
-msgstr "Akamai 创始人"
-
 #: templates/landing.html:3 templates/video.html:3 views/web_views.py:81
 msgid "Origin Protocol"
 msgstr "起源协议"
@@ -1543,114 +1843,61 @@ msgstr "起源协议"
 msgid "Origin Protocol is bringing NFTs and DeFi to the masses."
 msgstr ""
 
-#: templates/landing.html:26
-msgid "Bringing NFTs and DeFi<br>to the masses"
+#: templates/landing.html:17
+msgid "NFTs are going mainstream.<br>DeFi is eating traditional finance."
 msgstr ""
 
-#: templates/landing.html:42
-msgid "Never miss a drop. Sign up now!"
+#: templates/landing.html:30
+msgid "Origin's flagship products are tackling the fastest growing verticals in Web3"
 msgstr ""
 
-#: templates/landing.html:45
-msgid "Be the first to hear when we announce big NFT drops, important partnerships, and new products. Your email will be kept private."
+#: templates/landing.html:70
+msgid "Origin's flagship products are tackling<br>the fastest growing verticals in Web3"
 msgstr ""
+
+#: templates/landing.html:112
+msgid "Join our mailing list to stay in touch!"
+msgstr ""
+
+#: templates/landing.html:115
+msgid "Be the first to hear about major NFT drops and important product updates."
+msgstr ""
+
+#: templates/landing.html:115
+#, fuzzy
+msgid "Your email will be kept private."
+msgstr "订阅我们的快讯和我们保持联系。您的邮件将被保密。"
 
 #: templates/components/presale-form.html:9
-#: templates/components/presale-form.html:10 templates/landing.html:48
-#: templates/partners.html:133 templates/tokens.html:46
-#: templates/tokens.html:47
+#: templates/components/presale-form.html:10 templates/landing.html:118
+#: templates/tokens.html:46 templates/tokens.html:47
 msgid "Email"
 msgstr "电子邮件"
 
-#: templates/landing.html:64
-msgid "Where top creators launch their NFTs"
-msgstr ""
-
-#: templates/landing.html:65
-msgid "Origin has hosted record-breaking NFT sales for top musicans, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace."
-msgstr ""
-
-#: templates/landing.html:67 templates/nft-banner.html:6
-#: templates/product.html:85
-msgid "Interested in running an NFT sale?"
-msgstr ""
-
-#: templates/landing.html:99
+#: templates/landing.html:128 templates/litepaper/sidebar.html:25
+#: templates/product.html:210
 #, fuzzy
-msgid "Learn more about OUSD"
-msgstr "了解更多关于团队的信息"
+msgid "Origin Token (OGN)"
+msgstr "Origin 代币"
 
-#: templates/landing.html:108
-msgid "Blockchain-powered commerce is the future"
-msgstr "区块链驱动的商业是未来"
+#: templates/landing.html:135
+msgid "OGN Price"
+msgstr ""
 
-#: templates/landing.html:109
-msgid "Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure"
-msgstr "区块链将重新定义在线商业，并允许买卖双方从成本降低和区块链驱动的基础设施改善中受益"
-
-#: templates/landing.html:115
-msgid "Lower fees"
-msgstr "更低的费用"
-
-#: templates/landing.html:116
-#, python-format
-msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed"
-msgstr "去除中间商，买卖双方可以节省20-30%%的中介费。"
-
-#: templates/landing.html:122
-msgid "Better incentives"
-msgstr "更好的激励措施"
-
-#: templates/landing.html:123
-msgid "Everyone can own a stake in the network by contributing to its growth"
-msgstr "所有为Origin网络创造价值的参与者都可以获得收益。"
-
-#: templates/landing.html:129
-msgid "Increased access"
-msgstr "更多的通道"
-
-#: templates/landing.html:130
-msgid "2 billion unbanked people can access new markets globally"
-msgstr "为20亿没有银行账户的人开辟新市场"
-
-#: templates/landing.html:136
-msgid "More resilience"
-msgstr "更具韧性"
-
-#: templates/landing.html:137
-msgid "Blockchain-powered commerce can't be banned or shut down"
-msgstr "不可禁止或关闭以区块链驱动的商业"
-
-#: templates/landing.html:143
+#: templates/landing.html:183
 msgid "Origin has a world-class team"
 msgstr "Origin有一个世界级的团队"
 
-#: templates/landing.html:144
+#: templates/landing.html:184
 msgid "Our team is led by serial entrepreneurs, a founder of PayPal, early employees at YouTube, and engineering managers at Google and Dropbox."
 msgstr "我们的团队领导层由众多连续创业者组成,他们包括Paypal创始人、YouTube的几位早期员工以及Google和Dropbox的工程经理。"
 
-#: templates/landing.html:168
-msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
-msgstr "我们得到了全球顶级风险投资公司和顶级硅谷投资者的支持"
-
-#: templates/landing.html:184
-msgid "Featured Partners"
-msgstr "项目合作伙伴"
-
-#: templates/landing.html:224
-msgid "Featured Videos"
-msgstr "特色视频"
-
-#: templates/landing.html:243
-msgid "Watch more videos"
-msgstr "更多视频"
+#: templates/landing.html:209
+msgid "Join the Community"
+msgstr ""
 
 #: templates/litepaper.html:3 templates/litepaper.html:5
 msgid "Origin Protocol - Litepaper"
-msgstr ""
-
-#: templates/litepaper.html:20
-msgid "Bringing non-fungible tokens and decentralized finance to the masses"
 msgstr ""
 
 #: templates/mobile.html:3 templates/mobile.html:5
@@ -1673,25 +1920,17 @@ msgstr "下载安卓APP"
 msgid "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 msgstr "Copyright © 2019 Origin Protocol Inc. All rights reserved."
 
-#: templates/navbar-dshop.html:8 templates/navbar-dshop.html:40
-msgid "Integrations"
-msgstr "集成"
-
-#: templates/navbar-dshop.html:15 templates/navbar-dshop.html:51
-msgid "Try it - it's free"
-msgstr "免费尝试"
-
-#: templates/navbar.html:78
-msgid "Products"
-msgstr ""
-
-#: templates/navbar.html:81
+#: templates/navbar.html:75
 msgid "OGN Token"
 msgstr "OGN 代币"
 
-#: templates/navbar.html:85
+#: templates/navbar.html:79
 msgid "Shop"
 msgstr "浏览"
+
+#: templates/nft-banner.html:6
+msgid "Interested in running an NFT sale?"
+msgstr ""
 
 #: templates/nft-banner.html:9
 msgid "Yes, please!"
@@ -1706,7 +1945,12 @@ msgid "Origin Protocol - NFT Platform Terms of Use"
 msgstr ""
 
 #: templates/nft-terms.html:16
-msgid "Origin NFT Platform Terms and Conditions of Use."
+#, fuzzy
+msgid "Origin Protocol Labs"
+msgstr "Origin协议"
+
+#: templates/nft-terms.html:19
+msgid "NFT Platform User Terms Of Service"
 msgstr ""
 
 #: templates/ogn-token.html:1
@@ -1741,7 +1985,7 @@ msgstr "也可以通过以下方式购买Origin"
 msgid "…and many others"
 msgstr "…和更多"
 
-#: templates/ogn-token.html:113 templates/product.html:167
+#: templates/ogn-token.html:113 templates/product.html:217
 msgid "View the OGN Dashboard"
 msgstr "查看OGN仪表板"
 
@@ -1757,12 +2001,9 @@ msgstr "权益质押"
 msgid "Earn interest on your OGN while you hold it. Deposit OGN into our high-yield smart contract to grow your stake in the Origin network."
 msgstr "持有OGN时可赚取利息。将OGN存入我们的高收益智能合约，以增加您在Origin网络中的股份。"
 
-#: templates/litepaper/platform.html:145 templates/ogn-token.html:147
-msgid "Governance"
-msgstr "治理模式"
-
 #: templates/ogn-token.html:149
-msgid "Create and vote on proposals determining the future direction of Origin Dollar (OUSD), Dshop and the rest of the Origin platform. Accrue value generated from platform revenues."
+#, fuzzy
+msgid "Create and vote on proposals determining the future direction of Origin Dollar (OUSD) and the rest of the Origin platform. Accrue value generated from platform revenues."
 msgstr "创建提案并对其进行投票，以决定 Origin Dollar (OUSD)，Dshop和其他Origin平台的未来方向。平台收入产生的应计价值。"
 
 #: templates/ogn-token.html:171
@@ -1773,112 +2014,6 @@ msgstr "手续费"
 msgid "Promote your listings across the Origin flagship app and third-party apps with Origin Commissions. Pay with OGN to get featured prominently in search results. Application developers and marketplace operators earn OGN by helping sellers complete their sales."
 msgstr "使用Origin Commissions在Origin旗舰应用和第三方应用之间推广您的商家信息。若使用OGN付费可在搜索结果中获得显眼的位置。应用程序开发人员和市场运营商通过帮助卖方完成销售而获得OGN。"
 
-#: templates/partner_campaign.html:3 templates/partner_campaign.html:5
-#: templates/referral_campaign.html:3 templates/referral_campaign.html:5
-msgid "Get Origin Protocol"
-msgstr "获取原始协议"
-
-#: templates/partner_campaign.html:273
-msgid "Get Origin Marketplace & earn"
-msgstr "下载Origin Marketplace并开始赚取"
-
-#: templates/partner_campaign.html:277 templates/referral_campaign.html:340
-msgid "Origin Tokens"
-msgstr "原始代币"
-
-#: templates/partner_campaign.html:281 templates/referral_campaign.html:344
-msgid "Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone."
-msgstr "通过下载Origin Marketplace开始使用-该应用程序可让您直接从手机上使用加密货币买卖任何东西。"
-
-#: templates/partner_campaign.html:310 templates/referral_campaign.html:376
-msgid "What are Origin Rewards?"
-msgstr "什么是原点奖励？"
-
-#: templates/partner_campaign.html:311 templates/referral_campaign.html:377
-msgid "OGN is a rewards cryptocurrency earned by Origin users. Earn rewards when you verify your account or invite your friends to join Origin. Even get OGN as cash back when you buy and sell."
-msgstr "OGN是一个用来奖励Origin用户的加密货币。您可以通过在平台上验证身份或将 Origin 推荐给朋友使用而获得奖励，甚至在买卖时获得现金返还。"
-
-#: templates/partner_campaign.html:319 templates/referral_campaign.html:348
-#: templates/referral_campaign.html:385
-msgid "Scan to install our app"
-msgstr "扫描以安装我们的应用"
-
-#: templates/partners.html:3 templates/partners.html:5
-msgid "Origin Protocol - Build on Origin"
-msgstr "Origin 起源协议 - 在Origin上建立"
-
-#: templates/partners.html:16
-msgid "Build on Origin"
-msgstr "在Origin上进行开发"
-
-#: templates/partners.html:22
-msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
-msgstr "<strong>世界各地的团队正在使用Origin的协议构建他们的项目。我们正在寻找更多的让人叹为观止，以 <a href='#join_our_mission'>加入我们的任务</a>。</strong>"
-
-#: templates/components/drops.html:66 templates/partners.html:87
-msgid "View More"
-msgstr "查看更多"
-
-#: templates/components/drops.html:62 templates/partners.html:88
-msgid "View Less"
-msgstr "查看较少"
-
-#: templates/partners.html:118
-msgid "Join our mission!"
-msgstr "加入我们的使命！"
-
-#: templates/partners.html:121
-msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
-msgstr "无论您是现有的区块链公司或是在思考区块链技术的传统市场, 我们都很乐意听取您的建议，请填写下方表格，我们会尽快给您回复。"
-
-#: templates/partners.html:125
-msgid "Name"
-msgstr "名字"
-
-#: templates/partners.html:126
-msgid "Firstname Lastname"
-msgstr "名字 姓氏"
-
-#: templates/partners.html:129
-msgid "Company"
-msgstr "公司"
-
-#: templates/partners.html:130
-msgid "My Amazing Company"
-msgstr "我的公司"
-
-#: templates/partners.html:134
-msgid "yourname@websitename.com"
-msgstr "你的名字@网站名.com"
-
-#: templates/partners.html:137
-msgid "Website"
-msgstr "网站"
-
-#: templates/partners.html:138
-msgid "https://websitename.com"
-msgstr "https://websitename.com"
-
-#: templates/partners.html:141
-msgid "<strong>Anything else we should know?</strong> (optional)"
-msgstr "<strong>还有什么我们应该知道的吗？</strong> （可选）"
-
-#: templates/partners.html:153
-msgid "Become a Partner"
-msgstr "成为合作伙伴"
-
-#: templates/privacy-extension.html:3
-msgid "Origin Protocol - Browser ExtensionPrivacy Policy"
-msgstr "起源协议-浏览器扩展隐私政策"
-
-#: templates/privacy-extension.html:5
-msgid "Origin Protocol - Browser Extension Privacy Policy"
-msgstr "起源协议-浏览器扩展隐私政策"
-
-#: templates/privacy-extension.html:16
-msgid "Browser Extension Privacy Policy"
-msgstr "浏览器扩展程序隐私权政策"
-
 #: templates/privacy.html:3 templates/privacy.html:5
 msgid "Origin Protocol - Privacy Policy"
 msgstr "原始协议 - 隐私政策"
@@ -1888,107 +2023,101 @@ msgid "Origin Protocol - Product"
 msgstr "Origin Protocol - 产品"
 
 #: templates/product.html:24
-msgid "Read our new Litepaper"
+msgid "Read our Litepaper"
 msgstr ""
 
-#: templates/litepaper/platform.html:33 templates/litepaper/sidebar.html:19
-#: templates/product.html:36
-msgid "NFT Launchpad"
+#: templates/product.html:40
+msgid "Origin Story is where top creators launch their NFTs"
+msgstr ""
+
+#: templates/product.html:41
+msgid "Origin has hosted record-breaking NFT sales for top musicians, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace."
 msgstr ""
 
 #: templates/product.html:43
+#, fuzzy
+msgid "Interested in selling NFTs?"
+msgstr "对Origin代币感兴趣？"
+
+#: templates/product.html:79
 msgid "Customizable and hosted on your own domain"
 msgstr ""
 
-#: templates/product.html:47
+#: templates/product.html:83
 msgid "Maintain control of your brand"
 msgstr ""
 
-#: templates/product.html:54
+#: templates/product.html:90
 msgid "Unique auction mechanics to maximize revenue"
 msgstr ""
 
-#: templates/product.html:58
-#, fuzzy
-msgid "Secondary marketplace launching soon"
-msgstr "Origin 即将发币了！"
+#: templates/product.html:94
+msgid "Sell on both Ethereum and Polygon"
+msgstr ""
 
-#: templates/product.html:65
+#: templates/product.html:101
 msgid "Best-in-class uptime and scaling"
 msgstr ""
 
-#: templates/product.html:69
+#: templates/product.html:105
 #, fuzzy
 msgid "Supports both credit cards and cryptocurrency"
 msgstr "支持信用卡支付"
 
-#: templates/product.html:93
-msgid "Origin Dollar"
-msgstr "Origin Dollar"
+#: templates/product.html:121
+#, fuzzy
+msgid "Learn more at story.xyz"
+msgstr "了解投资方"
 
-#: templates/product.html:94
-msgid "The first stablecoin that earns a yield while it's still in your wallet."
-msgstr "首个在您的钱包中赚取收益的稳定币。"
+#: templates/product.html:132
+#, fuzzy
+msgid "Learn more about OUSD"
+msgstr "了解更多关于团队的信息"
 
-#: templates/product.html:96
-msgid "Get OUSD"
-msgstr "获取OUSD"
-
-#: templates/product.html:104
-msgid "Dshop"
-msgstr "去中心化商店"
-
-#: templates/product.html:105
-msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
-msgstr "去中心化的开源电商平台，任何人都可以轻松创建在线商店"
-
-#: templates/product.html:109
-msgid "No transaction fees"
-msgstr "无交易费"
-
-#: templates/product.html:113
-msgid "Fully customizeable"
-msgstr "完全可定制的"
-
-#: templates/product.html:117
-msgid "Supports credit card payments"
-msgstr "支持信用卡支付"
-
-#: templates/product.html:131
-msgid "Try Dshop"
+#: templates/product.html:147
+msgid "Automated smart contracts manage your funds"
 msgstr ""
 
-#: templates/product.html:138
-msgid "Visit Origin Store"
+#: templates/product.html:151
+msgid "No staking, claiming, or lock-ups required"
 msgstr ""
 
-#: templates/product.html:144
-msgid "Online stores created with Dshop"
-msgstr "用Dshop创建的在线商店"
-
-#: templates/product.html:152
-msgid "...and hundreds more"
+#: templates/product.html:155
+msgid "Take advantage of the highest APYs in DeFi"
 msgstr ""
 
-#: templates/product.html:160
-msgid "Origin Token"
-msgstr "Origin 代币"
+#: templates/product.html:162
+msgid "Your tokenized high-yield savings account"
+msgstr ""
 
-#: templates/product.html:163
-msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
-msgstr "Origin 代币（OGN）是一种保证健康又可以持续发展网络的激励代币"
+#: templates/product.html:166
+msgid "Backed 1:1 by USDT, USDC, and DAI"
+msgstr ""
 
-#: templates/referral_campaign.html:335
-msgid "Your friend"
-msgstr "您的朋友"
+#: templates/product.html:170
+msgid "Your balance grows automatically in your wallet"
+msgstr ""
 
-#: templates/referral_campaign.html:335
-msgid "has invited you to earn"
-msgstr "邀请您开始赚取"
+#: templates/product.html:177
+msgid "Audited by Trail of Bits, Open Zeppelin, and more"
+msgstr ""
 
-#: templates/referral_campaign.html:350
-msgid "or"
-msgstr "或"
+#: templates/product.html:181
+msgid "Optional smart contract insurance available"
+msgstr ""
+
+#: templates/product.html:185
+msgid " is being held in OUSD today"
+msgstr ""
+
+#: templates/product.html:199
+#, fuzzy
+msgid "Learn more at ousd.com"
+msgstr "了解更多关于团队的信息"
+
+#: templates/product.html:213
+msgid "Origin Token (OGN) allows you to own a stake in the Origin ecosystem.<br>Buy OGN to participate in governance and growth of the network."
+msgstr ""
 
 #: templates/singles.html:3 templates/singles.html:5
 msgid "Origin Protocol - imToken"
@@ -1997,6 +2126,15 @@ msgstr "Origin Protocol - imToken"
 #: templates/stake-banner.html:6
 msgid "OGN Staking is live on OUSD.com"
 msgstr "OGN Staking在OUSD.com上线"
+
+#: templates/stake-banner.html:7
+#, python-format
+msgid "Stake your OGN to earn up to 25%%"
+msgstr "投注您的OGN可赚取高达25%%"
+
+#: templates/stake-banner.html:10
+msgid "Stake OGN now"
+msgstr "立即投注OGN"
 
 #: templates/stayHomeStore.html:1 templates/swagStore.html:1
 msgid "Origin Protocol - February Rewards"
@@ -2107,430 +2245,81 @@ msgstr "2月获得的奖励，将在3月的第一周之后分发（参考活动�
 msgid "Shop at the Origin Swag Store today, and enter for a chance to win up to 3,000 OGN!"
 msgstr "立即在Origin Swag商店购物，并有机会赢取高达3,000 OGN的奖金！"
 
-#: templates/team.html:1
-msgid ""
-"Origin Protocol -\n"
-"Team"
-msgstr "起源协议 - 团队"
+#: templates/team.html:39
+msgid "Origin was founded in 2017 by successful Silicon Valley entrepreneurs and has a team of experienced engineers from iconic tech companies like YouTube, Google, PayPal, and DropBox. Today, Origin is a global community with hundreds of open-source contributors and thousands of token holders. We work in public and you can always find at least one of us awake in our <a href='https://www.originprotocol.com/discord'>Discord</a>.<br><br>"
+msgstr ""
 
-#: templates/team.html:2
-msgid ""
-"Origin\n"
-"Protocol's world-class team is led by entrepreneurs and engineers from iconic\n"
-"tech companies"
-msgstr "起源协议的世界级团队成员，均来自于各大巨头公司。"
-
-#: templates/team.html:23
-msgid ""
-"Our world-class team is led by entrepreneurs and engineers\n"
-"        from iconic tech companies"
-msgstr "我们世界级团队是由来自于标志性技术公司的企业家和程序员带领组成的"
-
-#: templates/team.html:37 templates/whitepaper/sidebar.html:45
-msgid "Core team"
-msgstr "核心团队"
-
-#: templates/team.html:48 templates/whitepaper/team.html:57
-msgid "Josh Fraser"
-msgstr "Josh Fraser"
-
-#: templates/team.html:52 templates/team.html:72
-msgid "Cofounder"
-msgstr "联合创始人"
-
-#: templates/team.html:55
-msgid ""
-"Josh started coding at the age of 10. Prior to\n"
-"                  Origin, he co-founded three other venture-backed companies:\n"
-"                  EventVue, Torbit (acquired by Walmart Labs) &amp; Forage."
-msgstr "Josh在10岁开始编码。在Origin之前，他共同创办了三家风险投资公司：EventVue，Torbit（被沃尔玛实验室收购） &amp; Forage。                  "
-
-#: templates/team.html:68 templates/whitepaper/team.html:13
-msgid "Matthew Liu"
-msgstr "Matthew Liu"
-
-#: templates/team.html:75
+#: templates/team.html:86
+#, fuzzy
 msgid ""
 "Matt was the 3rd PM at YouTube (acquired by\n"
 "                  Google) and VP PM at Qwiki (acquired by Yahoo) and Bonobos\n"
-"                  (acquired by Walmart). He has an MS and BS from Stanford."
+"                  (acquired by Walmart). He has a MS and BS from Stanford."
 msgstr "Matt是YouTube（被谷歌收购）的第3个PM, Qwiki（被雅虎收购）的VP PM和Bonobos（被沃尔玛收购）。他拥有斯坦福大学的硕士和学士学位。"
 
-#: templates/team.html:89 templates/whitepaper/team.html:106
-msgid "Yu Pan"
-msgstr "潘宇"
-
-#: templates/team.html:93 templates/whitepaper/team.html:110
-msgid "Founding Engineer"
+#: templates/team.html:436
+msgid "Christopher Jacobs"
 msgstr ""
 
-#: templates/team.html:96
-msgid ""
-"Yu Pan was one of the 6 founding team members of\n"
-"                  PayPal and was the 1st employee at YouTube. He is a former\n"
-"                  Google employee and co-founder of Kiwi Crate."
-msgstr "潘宇是PayPal的6位创始团队成员之一，也是YouTube的第一位员工。他是Google的前员工，也是Kiwi Crate的共同创始人。"
-
-#: templates/team.html:110 templates/whitepaper/team.html:127
-msgid "Franck Chastagnol"
-msgstr "Franck Chastagnol"
-
-#: templates/team.html:114 templates/whitepaper/team.html:131
-msgid "VP of Engineering"
+#: templates/team.html:443
+msgid "Chris previously worked at OCZ, Toshiba, Storcentric and Palo Alo Networks as a Full Stack / UI Engineer. He is a creative developer who has over 15 years experience architecting software solutions."
 msgstr ""
 
-#: templates/team.html:117
-msgid ""
-"Franck has had a successful career as an early\n"
-"                  employee at numerous high-profile companies. He previously led\n"
-"                  engineering teams at Inktomi, Paypal, YouTube, Google and\n"
-"                  Dropbox."
-msgstr "Franck作为众多知名公司的早期员工，已经取得了成功的职业生涯。他之前曾在Inktomi，Paypal，YouTube，Google和Dropbox领导工程团队。"
-
-#: templates/team.html:132 templates/whitepaper/team.html:148
-msgid "Micah Alcorn"
-msgstr "Micah Alcorn"
-
-#: templates/team.html:136 templates/whitepaper/team.html:152
-msgid "Director of Product"
+#: templates/team.html:455
+msgid "Kelly Hwang"
 msgstr ""
 
-#: templates/team.html:139
-msgid ""
-"Micah was the technical co-founder of\n"
-"                  WellAttended, a bootstrapped box office management platform.\n"
-"                  He worked as a commercial real estate broker while learning to\n"
-"                  code."
-msgstr "Micah是WellAttended的技术联合创始人，WellAttended是一个自助式票房管理平台。在学习编码的同时，他还是一名商业房地产经纪人。"
-
-#: templates/team.html:154 templates/whitepaper/team.html:169
-msgid "Kay Yoo"
-msgstr "Kay Yoo"
-
-#: templates/team.html:158 templates/whitepaper/team.html:173
-msgid "Finance & Operations"
-msgstr "财务和运营"
-
-#: templates/team.html:161
-msgid ""
-"Kay is a Chartered Professional Accountant (CPA).\n"
-"                  She previously worked as a Senior Accountant and then as a\n"
-"                  Senior Consultant at KPMG Canada."
-msgstr "Kay是特许专业会计师（CPA）。之前曾在毕马威加拿大担任高级会计师，之后担任高级顾问。"
-
-#: templates/team.html:179 templates/team.html:422
-#: templates/whitepaper/team.html:194
-msgid "Business Development"
-msgstr "商业开发"
-
-#: templates/team.html:182
-msgid ""
-"Coleman is an active cryptocurrency investor and\n"
-"                  real estate entrepreneur, owning and managing multiple Airbnb\n"
-"                  properties. He studied mathematics at Berkeley."
-msgstr "Coleman是一位活跃的加密数字货币投资人和房地产企业家，拥有和管理多个Airbnb房产。 他曾在伯克利学习数学。"
-
-#: templates/team.html:196 templates/whitepaper/team.html:233
-msgid "Mila Choi"
-msgstr "Mila Choi"
-
-#: templates/team.html:200 templates/whitepaper/team.html:237
-msgid "Regional Manager Korea"
-msgstr "韩国总经理"
-
-#: templates/team.html:203
-msgid ""
-"Mila is leading our community efforts in South\n"
-"                  Korea. She previously organized blockhain hackathons and has\n"
-"                  degrees from Penn State and Erasmus University Rotterdam."
-msgstr "Mila正在领导我们在韩国的社区工作。她之前曾组织过区块链黑客马拉松，并拥有宾夕法尼亚州立大学和鹿特丹伊拉斯姆斯大学的学位。"
-
-#: templates/team.html:217 templates/whitepaper/team.html:254
-msgid "Tom Linton"
-msgstr "Tom Linton"
-
-#: templates/team.html:221 templates/team.html:264 templates/team.html:390
-#: templates/whitepaper/team.html:258 templates/whitepaper/team.html:279
-#: templates/whitepaper/team.html:403
-msgid "Senior Engineer"
-msgstr "高级工程师"
-
-#: templates/team.html:224
-msgid ""
-"Before Origin, Tom had a successful career as a\n"
-"                  solo startup founder. He has two Masters degrees in\n"
-"                  Distributed Systems from the Technical University of Berlin\n"
-"                  and KTH in Stockholm."
-msgstr "在Origin之前，Tom作为一名独立创业公司创立了一个成功的职业生涯。他拥有柏林技术大学和斯德哥尔摩KTH两个分布式系统硕士学位。"
-
-#: templates/team.html:239
-msgid "Anna Crouy"
+#: templates/team.html:459
+msgid "Investments/Treasury"
 msgstr ""
 
-#: templates/team.html:243
-msgid "Collector Relations"
+#: templates/team.html:462
+msgid "Kelly was previously a successful startup founder and venture investor at Upfront Ventures before spending the last few years investing in DeFi. He has a BA in Economics from Stanford."
 msgstr ""
 
-#: templates/team.html:246
-msgid ""
-"Anna helps ensure that top collectors have a direct relationship to the company. Before Origin, Anna managed global social media at\n"
-"                  Exness, a leading forex broker. She also co-founded a\n"
-"                  non-profit in Australia."
+#: templates/team.html:474
+msgid "Linus Chung"
 msgstr ""
 
-#: templates/team.html:260 templates/whitepaper/team.html:275
-msgid "Nick Poulden"
-msgstr "Nick Poulden"
-
-#: templates/team.html:267
-msgid ""
-"Nick studied Computer Science at the University of\n"
-"                  Warwick. Prior to joining Origin, he worked as an engineer at\n"
-"                  Sencha, C3 Energy Network and Palo Alto Networks."
-msgstr "尼克拥有华威大学的计算机科学学位。在加入Origin之前，他曾在Sencha，C3 Energy Network和Palo Alto Networks担任工程师。"
-
-#: templates/team.html:281 templates/whitepaper/team.html:318
-msgid "Domen Grabec"
-msgstr "Domen Grabec"
-
-#: templates/team.html:285 templates/team.html:306 templates/team.html:327
-#: templates/team.html:406 templates/whitepaper/team.html:322
-#: templates/whitepaper/team.html:343 templates/whitepaper/team.html:364
-msgid "Engineer"
-msgstr "工程师"
-
-#: templates/team.html:288
-msgid ""
-"Domen co-founded and led a team developing a\n"
-"                  mobile application with 2 chess Grandmasters. He previously\n"
-"                  had a successful career at Cetra, Zemanta and Peerindex."
-msgstr "Domen与两位国际象棋大师共同创办并领导了一个移动应用程序的开发团队。他也曾在Cetra，Zemanta和Peerindex有着成功的职业生涯。"
-
-#: templates/team.html:302 templates/whitepaper/team.html:339
-msgid "Shahul Hameed"
-msgstr "Shahul Hameed"
-
-#: templates/team.html:309
-msgid ""
-"Shahul is a fullstack engineer who started\n"
-"                  programming at age of 10. He previously worked as a freelancer\n"
-"                  and then joined Zoho as a front-end developer."
-msgstr "Shahul是一名全栈工程师，10岁就开始编程。加入Origin之前他是一名自由职业者，也在Zoho担任前端开发者。"
-
-#: templates/team.html:323 templates/whitepaper/team.html:360
-msgid "Mike Shultz"
-msgstr "Mike Shultz"
-
-#: templates/team.html:330
-msgid ""
-"Mike is a long-time contributor to open-source. He\n"
-"                  created a dev toolkit for creating Ethereum smart contracts\n"
-"                  with Python and previously worked with Ethereum and IPFS at\n"
-"                  Lunyr."
-msgstr "Mike是长期的开源贡献者。他创建了一个允许开发者使用Python来创建以太坊智能合约的开发工具包，之前也在Lunyr做以太坊和IPFS方面的工作。"
-
-#: templates/team.html:345 templates/whitepaper/team.html:211
-msgid "Aure Gimon"
-msgstr "Aure Gimon"
-
-#: templates/team.html:349 templates/whitepaper/team.html:215
-msgid "Product Designer"
-msgstr "产品设计师"
-
-#: templates/team.html:352
-msgid ""
-"Aure is a product designer with 10+ years of\n"
-"                  experience. Prior to joining Origin, Aure worked at multiple\n"
-"                  startups and Fortune 500 companies. In a past life, he was\n"
-"                  also a software engineer."
-msgstr "Aure是个拥有十多年经验的产品设计师。在Origin之前，他在许多初创公司和世界500强企业工作。他也曾担任过软件工程师。"
-
-#: templates/team.html:367 templates/whitepaper/team.html:381
-msgid "Max Unger"
-msgstr "Max Unger"
-
-#: templates/team.html:371 templates/whitepaper/team.html:385
-msgid "Head of Community"
-msgstr "全球社区总负责人"
-
-#: templates/team.html:374
-msgid ""
-"Before joining Origin, Max helped build\n"
-"                  communities for notable blockchain companies like OKEx. He\n"
-"                  also worked with RedNova, the marketing and incubation entity\n"
-"                  for Du Capital."
-msgstr ""
-"在加入Origin之前，Max帮助OKEx等著名的区块链公司建立\n"
-"                  社区。他\n"
-"                  还曾与为Du Capital担任营销和孵化实体的Red Capital合作。\n"
-"。"
-
-#: templates/team.html:388 templates/whitepaper/team.html:401
-msgid "Daniel Von Fange"
-msgstr "Daniel Von Fange"
-
-#: templates/team.html:393 templates/whitepaper/team.html:406
-msgid "Daniel brings a strong emphasis on security and data analysis to our team. Daniel has earned a reputation for being able to gather massive amounts of data and create dynamic visualizations at lightning speed."
-msgstr "Daniel为团队带来了安全性和数据分析能力，他擅长收集大量数据并快速创建动态可视化。"
-
-#: templates/team.html:404
-msgid "Mark Mathis"
+#: templates/team.html:478
+msgid "VP of Product"
 msgstr ""
 
-#: templates/team.html:409
-msgid "Mark Mathis has a broad background in fintech and defi. As a former touring musician, Mark has a particular interest in seeing artists compensated fairly for their work through decentralized channels."
+#: templates/team.html:481
+msgid "Linus previously worked as Director of Product at Coinbase. Before that, he lead product at companies like Tesla, Pinterest, and LinkedIn. He has a BS in Electrical Engineering from Stanford."
 msgstr ""
 
-#: templates/team.html:420
-msgid "William Tong"
+#: templates/team.html:493
+msgid "Andra Nicolau"
 msgstr ""
 
-#: templates/team.html:425
-msgid "William Tong was a real estate broker before stumbling into the world of NFTs. He quickly built a reputation as a connector and community builder on the Clubhouse app and within the broader NFT collector community.  "
+#: templates/team.html:497
+msgid "Head of BD, OUSD"
 msgstr ""
 
-#: templates/team.html:435
-msgid "Chase Colman"
+#: templates/team.html:500
+msgid "Andra is a longtime crypto veteran. She was most recently the Head of Growth at 1inch where she raised over $250M. She has spent over 8 years in Silicon Valley and studied Economics at UC Berkeley."
 msgstr ""
 
-#: templates/team.html:437
-msgid "Project Manager"
+#: templates/team.html:512
+msgid "Justin Charlton"
 msgstr ""
 
-#: templates/team.html:440
-msgid "Chase comes from creative and marketing agency life in Los Angeles. She’s managed projects and accounts for clients like YouTube, W Hotels, and Stitch Fix. She's now in charge of creator relationship management at Origin."
+#: templates/team.html:516
+msgid "Head of Finance"
 msgstr ""
 
-#: templates/team.html:451
-msgid "You?"
+#: templates/team.html:519
+msgid "Justin started investing in middle school, designed budgets for launching satellites into space (successfully!), and advised tech clients on M&A and strategy for 7 years at PwC and KPMG."
 msgstr ""
 
-#: templates/team.html:453
-msgid "We're hiring!"
+#: templates/team.html:531
+msgid "Tom Hirst"
 msgstr ""
 
-#: templates/team.html:456
-msgid "We are a distributed team with employees all over the world. We have a fast-paced bias-to-action culture and a really big vision for bringing crypto mainstream. Check out our <a href='https://angel.co/originprotocol/jobs'>open-positions on AngelList</a>."
+#: templates/team.html:538
+msgid "Tom helped ship digital projects for the NHS, Umbro, BMW and Meta before entering web3. He has launched multiple successful solo endeavours, including most recently, an NFT project with fully on-chain artwork."
 msgstr ""
-
-#: templates/team.html:473
-msgid "Community team"
-msgstr "社区团队"
-
-#: templates/team.html:483 templates/whitepaper/team.html:435
-msgid "Zoe Hoang"
-msgstr "Zoe Hoang"
-
-#: templates/team.html:491 templates/whitepaper/team.html:443
-msgid "Aaron Faulkner"
-msgstr "Aaron Faulkner"
-
-#: templates/team.html:499 templates/whitepaper/team.html:451
-msgid "Moisés Sosa"
-msgstr "Moisés Sosa"
-
-#: templates/team.html:507 templates/whitepaper/team.html:459
-msgid "Kevin Lee"
-msgstr ""
-
-#: templates/team.html:515 templates/whitepaper/team.html:467
-msgid "Danil Myakin"
-msgstr ""
-
-#: templates/team.html:523 templates/whitepaper/team.html:475
-msgid "Joseph Stewart"
-msgstr ""
-
-#: templates/team.html:531 templates/whitepaper/team.html:483
-msgid "Erkan Ciftci"
-msgstr ""
-
-#: templates/team.html:539 templates/whitepaper/team.html:491
-msgid "Stefano Terenzi"
-msgstr ""
-
-#: templates/team.html:547 templates/whitepaper/team.html:499
-msgid "Zizen Chang"
-msgstr ""
-
-#: templates/team.html:555 templates/whitepaper/team.html:507
-msgid "Lee Gwangmyeong"
-msgstr ""
-
-#: templates/team.html:567
-msgid "Advisors"
-msgstr "顾问"
-
-#: templates/team.html:578
-msgid "Melody He"
-msgstr "Melody He"
-
-#: templates/team.html:582
-#, fuzzy
-msgid "Spartan Group"
-msgstr "Spartan"
-
-#: templates/team.html:595 templates/team.html:608
-#: templates/vc-firms/usa.html:5
-msgid "Pantera Capital"
-msgstr "Pantera Capital"
-
-#: templates/team.html:604
-msgid "Joey Krug"
-msgstr "Joey Krug"
-
-#: templates/team.html:617
-msgid "Andrew Kang"
-msgstr ""
-
-#: templates/team.html:621
-#, fuzzy
-msgid "Mechanism Capital"
-msgstr "Kenetic Capital"
-
-#: templates/team.html:634
-msgid "3LAU"
-msgstr ""
-
-#: templates/team.html:643 templates/team.html:647
-msgid "Paris Hilton"
-msgstr ""
-
-#: templates/team.html:658
-#, python-format
-msgid "100%% open-source."
-msgstr "100%% 开源。"
-
-#: templates/team.html:659
-msgid " contributors."
-msgstr "贡献者。"
-
-#: templates/team.html:678
-msgid "Want to contribute?"
-msgstr "想为Origin做出贡献吗？"
-
-#: templates/team.html:683
-msgid "Visit our GitHub Repository"
-msgstr "访问我们的Github仓库"
-
-#: templates/team.html:685
-msgid "Join our #engineering channel on Discord"
-msgstr "加入我们Discord上的#engineering（工程师）频道"
-
-#: templates/team.html:696
-msgid "Interested in working at Origin?"
-msgstr "有兴趣加入Origin团队？"
-
-#: templates/team.html:700
-msgid ""
-"We are a distributed team and are hiring all around the\n"
-"            world."
-msgstr "我们开放和分布式的团队正在寻找世界各地的开拓性人才。"
-
-#: templates/team.html:707
-#, fuzzy
-msgid "View open positions"
-msgstr "招聘岗位"
 
 #: templates/tokens.html:3
 msgid "Origin Protocol - Buy Origin Tokens (OGN)"
@@ -2574,23 +2363,23 @@ msgstr "Origin 起源协议 - 视频"
 msgid "Watch videos featuring Origin's top investors, employees, and other supporters."
 msgstr "视频：Origin的主要投资者，员工和支持者。"
 
-#: templates/videos.html:18 templates/videos.html:21
+#: templates/videos.html:21 templates/videos.html:24
 msgid "Featured"
 msgstr "推荐"
 
-#: templates/videos.html:19
+#: templates/videos.html:22
 msgid "Employee Videos"
 msgstr "团队案例视频"
 
-#: templates/videos.html:20
+#: templates/videos.html:23
 msgid "Meetup Videos"
 msgstr "线下活动视频"
 
-#: templates/videos.html:22
+#: templates/videos.html:25
 msgid "Employees"
 msgstr "团队"
 
-#: templates/videos.html:23
+#: templates/videos.html:26
 msgid "Meetups"
 msgstr "线下活动"
 
@@ -2629,7 +2418,7 @@ msgid "Upcoming Drops"
 msgstr ""
 
 #: templates/components/drops.html:27
-msgid "No Drops Scheduled"
+msgid "Announcements coming soon"
 msgstr ""
 
 #: templates/components/drops.html:34
@@ -2639,6 +2428,14 @@ msgstr ""
 #: templates/components/drops.html:55
 msgid "No Past Drops"
 msgstr ""
+
+#: templates/components/drops.html:62
+msgid "View Less"
+msgstr "查看较少"
+
+#: templates/components/drops.html:66
+msgid "View More"
+msgstr "查看更多"
 
 #: templates/litepaper/conclusion.html:2 templates/litepaper/sidebar.html:35
 msgid "Conclusion"
@@ -2699,7 +2496,7 @@ msgid "We believe the convergence of peer-to-peer commerce, especially in the NF
 msgstr ""
 
 #: templates/litepaper/intro.html:6
-msgid "To get there, we will bring blockchain-enabled commerce and finance to the masses. We will continue to upgrade the Origin Commerce platform to enable new killer use cases that are only made possible by cryptocurrency technologies. To start, we will take advantage of non-fungible tokens (NFTs) to build new commerce experiences that cannot be replicated on incumbent platforms like Shopify, Amazon, or Alibaba."
+msgid "To get there, we will bring blockchain-enabled commerce and finance to the masses. We will continue to improve Origin products to enable new killer use cases that are only made possible by cryptocurrency technologies. To start, we will take advantage of non-fungible tokens (NFTs) to build new commerce experiences that cannot be replicated on incumbent platforms like Shopify, Amazon, or Alibaba."
 msgstr ""
 
 #: templates/litepaper/intro.html:8
@@ -2724,11 +2521,12 @@ msgid "To realize our ambitious vision, we will continue to develop and grow the
 msgstr ""
 
 #: templates/litepaper/platform.html:2 templates/litepaper/sidebar.html:16
-msgid "Origin Commerce Platform"
-msgstr ""
+#, fuzzy
+msgid "Origin Products"
+msgstr "Origin协议"
 
 #: templates/litepaper/platform.html:4
-msgid "Since our founding in 2017, Origin has focused on enabling commerce on the blockchain. We’ve powered sales of physical goods and offline services (e.g. home rentals). We’ve also formed marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a> and dozens of merchant partners like Brave Software."
+msgid "Since our founding in 2017, Origin has focused on enabling commerce on the blockchain."
 msgstr ""
 
 #: templates/litepaper/platform.html:6
@@ -2736,7 +2534,7 @@ msgid "While we plan to address commerce across many different verticals, today 
 msgstr ""
 
 #: templates/litepaper/platform.html:7
-msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set all-time records for largest music NFT sale at nearly $11.7M with <a href='https://nft.3lau.com' target='_blank' rel='noopener noreferrer'>3LAU</a> and largest viral video/meme NFT sale at $760k with the original viral video, <a href='http://charliebitme.com' target='_blank' rel='noopener noreferrer'>Charlie Bit My Finger</a>. The 3LAU sale reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>, <a href='https://www.cnbc.com/video/2021/05/20/charlie-bit-my-finger-video-to-be-auctioned-off-as-an-nft-on-may-22nd.html' target='_blank' rel='noopener noreferrer'>CNBC</a>, <a href='https://edition.cnn.com/2021/05/22/us/charlie-bit-my-finger-nft-trnd/index.html' target='_blank' rel='noopener noreferrer'>CNN</a>, <a href='https://www.bbc.com/news/newsbeat-57227290' target='_blank' rel='noopener noreferrer'>BBC</a>, <a href='https://time.com/6050450/charlie-bit-my-finger-leaving-youtube/' target='_blank' rel='noopener noreferrer'>Time</a>, <a href='https://www.npr.org/2021/05/21/999360273/viral-charlie-bit-my-finger-video-to-leave-youtube-sell-as-nft' target='_blank' rel='noopener noreferrer'>NPR</a>, <a href='https://www.cbsnews.com/news/charlie-bit-my-finger-video-deleted-youtube-nft/' target='_blank' rel='noopener noreferrer'>ABC</a>, <a href='https://www.nytimes.com/2021/05/24/arts/charlie-bit-my-finger-nft-auction.html' target='_blank' rel='noopener noreferrer'>NY Times</a>, and dozens of other outlets covered the globally-viewed Charlie Bit My Finger sale. In both instances, Origin saw significantly increased community membership and engagement and interest in OGN following these record-breaking events. We believe that future blockbuster NFT sales will further introduce mainstream audiences to the Origin Commerce Platform and OGN."
+msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin set all-time records for largest music NFT sale at nearly $11.7M with <a href='https://nft.3lau.com' target='_blank' rel='noopener noreferrer'>3LAU</a> and largest viral video/meme NFT sale at $760k with the original viral video, <a href='http://charliebitme.com' target='_blank' rel='noopener noreferrer'>Charlie Bit My Finger</a>. The 3LAU sale reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>, <a href='https://www.cnbc.com/video/2021/05/20/charlie-bit-my-finger-video-to-be-auctioned-off-as-an-nft-on-may-22nd.html' target='_blank' rel='noopener noreferrer'>CNBC</a>, <a href='https://edition.cnn.com/2021/05/22/us/charlie-bit-my-finger-nft-trnd/index.html' target='_blank' rel='noopener noreferrer'>CNN</a>, <a href='https://www.bbc.com/news/newsbeat-57227290' target='_blank' rel='noopener noreferrer'>BBC</a>, <a href='https://time.com/6050450/charlie-bit-my-finger-leaving-youtube/' target='_blank' rel='noopener noreferrer'>Time</a>, <a href='https://www.npr.org/2021/05/21/999360273/viral-charlie-bit-my-finger-video-to-leave-youtube-sell-as-nft' target='_blank' rel='noopener noreferrer'>NPR</a>, <a href='https://www.cbsnews.com/news/charlie-bit-my-finger-video-deleted-youtube-nft/' target='_blank' rel='noopener noreferrer'>ABC</a>, <a href='https://www.nytimes.com/2021/05/24/arts/charlie-bit-my-finger-nft-auction.html' target='_blank' rel='noopener noreferrer'>NY Times</a>, and dozens of other outlets covered the globally-viewed Charlie Bit My Finger sale. In both instances, Origin saw significantly increased community membership and engagement and interest in OGN following these record-breaking events. We believe that future blockbuster NFT sales will further introduce mainstream audiences to Origin's products and OGN."
 msgstr ""
 
 #: templates/litepaper/platform.html:8
@@ -2744,11 +2542,11 @@ msgid "The overall market for NFTs is about to hit an explosive inflection point
 msgstr ""
 
 #: templates/litepaper/platform.html:10
-msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. While digital art is one exciting vertical that we have been able to capitalize on, we believe Origin’s NFT Launchpad will redefine commerce in several other key verticals as well."
+msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. While digital art is one exciting vertical that we have been able to capitalize on, we believe Origin will redefine commerce in several other key verticals as well."
 msgstr ""
 
 #: templates/litepaper/platform.html:11
-msgid "Origin’s NFT Launchpad will redefine commerce in several key verticals."
+msgid "Origin Story will redefine commerce in several key verticals."
 msgstr ""
 
 #: templates/litepaper/platform.html:13
@@ -2816,359 +2614,358 @@ msgid "In our highly successful <a href='https://nft.bassjackers.com' target='_b
 msgstr ""
 
 #: templates/litepaper/platform.html:34
-msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). Origin’s NFT Launchpad gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs. Further, many creators prefer Origin’s NFT platform because they do not need to share the stage with other competing NFT drops that may be off-brand. We have also lowered the user experience barriers for newcomers to NFTs. While many of the other platforms require using cryptocurrency, we also offer the ability to purchase NFTs with credit and debit cards."
+msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). Origin Story gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs. Further, many creators prefer Origin’s NFT platform because they do not need to share the stage with other competing NFT drops that may be off-brand. We have also lowered the user experience barriers for newcomers to NFTs. While many of the other platforms require using cryptocurrency, we also offer the ability to purchase NFTs with credit and debit cards."
 msgstr ""
 
 #: templates/litepaper/platform.html:35
 msgid "In the near future, we intend to form additional partnerships with additional mainstream influencers and iconic brands to power their NFT commerce initiatives. We believe there is a huge untapped market for monetizing premium, limited-edition online and offline goods and services through our latest NFT product upgrades to the Origin Platform."
 msgstr ""
 
-#: templates/litepaper/platform.html:36
-msgid "We are especially excited about several NFT Launchpad upgrades that are scheduled to launch in Q3 of 2021."
+#: templates/litepaper/platform.html:37
+msgid "Self-serve NFT sale"
 msgstr ""
 
-#: templates/litepaper/platform.html:38
-msgid "Self-serve NFT launchpad"
+#: templates/litepaper/platform.html:39
+msgid "Today, Origin Story is a curated experience for our collectors and is an invite-only platform. For creators, we build custom storefronts that oftentimes require several weeks of engineering work. While this allows us to hold record-breaking NFT sales with top creators, the last thing we want to do in the long-term is to become the gatekeepers of which creators can launch NFT drops."
 msgstr ""
 
 #: templates/litepaper/platform.html:40
-msgid "Today, Origin’s NFT Launchpad is a curated experience for our collectors and is an invite-only platform. For creators, we build custom storefronts that oftentimes require several weeks of engineering work. While this allows us to hold record-breaking NFT sales with top creators, the last thing we want to do in the long-term is to become the gatekeepers of which creators can launch NFT drops."
+msgid "We have thousands of inbound requests from creators of all sizes, from verticals like music, art, sports, retail, and many others. We are excited to open Origin Story to all interested creators by the second half of 2021 with the launch of our self-serve WYSIWYG (what you see is what you get) editor."
 msgstr ""
 
-#: templates/litepaper/platform.html:41
-msgid "We have thousands of inbound requests from creators of all sizes, from verticals like music, art, sports, retail, and many others. We are excited to open the NFT Launchpad to all interested creators by the second half of 2021 with the launch of our self-serve WYSIWYG (what you see is what you get) editor."
+#: templates/litepaper/platform.html:44
+msgid "Creators will be able to create Origin accounts, upload audio and visual assets for their NFTs and customized websites, and schedule NFT sales using a variety of different sale formas (e.g. 1 of 1 auctions, leaderboard auctions, open editions, limited editions, and more). Origin Story will democratize NFT creation and sales. Importantly, Origin will share in the proceeds of NFT sales conducted by our creators, creating substantial revenue-generating possibilities for us."
 msgstr ""
 
-#: templates/litepaper/platform.html:45
-msgid "Creators will be able to create Origin accounts, upload audio and visual assets for their NFTs and customized websites, and schedule NFT sales using a variety of different sale formas (e.g. 1 of 1 auctions, leaderboard auctions, open editions, limited editions, and more). NFT Launchpad will democratize NFT creation and sales. Importantly, Origin will share in the proceeds of NFT sales conducted by our creators, creating substantial revenue-generating possibilities for us."
-msgstr ""
-
-#: templates/litepaper/platform.html:49
+#: templates/litepaper/platform.html:48
 msgid "Site-specific and Aggregator NFT Marketplaces"
 msgstr ""
 
-#: templates/litepaper/platform.html:51
-msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on our Launchpad as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology, and we are the leaders in this field. The original Origin Marketplace was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
+#: templates/litepaper/platform.html:50
+msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on Origin Story as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology, and we are the leaders in this field. The original Origin Marketplace was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
 msgstr ""
 
-#: templates/litepaper/platform.html:52
+#: templates/litepaper/platform.html:51
 msgid "Our marketplace product will allow for both site-specific marketplaces and a larger Origin-branded aggregator marketplace."
 msgstr ""
 
-#: templates/litepaper/platform.html:53
+#: templates/litepaper/platform.html:52
 msgid "With the former implementation, secondary marketplaces can be run and curated by the NFT creators themselves. Again, these marketplaces can live on the individual creators’ websites. Gallerists and artists have always cared deeply about presentation and curation as it can have a strong impact on the price of their assets. In another scenario, one can imagine top brands like Marvel or the NFL wanting to showcase secondary sales of their NFTs in more brand-centric experiences. Letting creators control every aspect of their NFT from creation to secondary market sale is a key differentiator to Origin’s NFT platform over more generic NFT marketplaces. Fans of specific creators and artists will also appreciate going direct to the source instead of browsing through unrelated listings on a generalized marketplace."
 msgstr ""
 
-#: templates/litepaper/platform.html:57
+#: templates/litepaper/platform.html:56
 msgid "With the Origin-branded marketplace, we will aggregate all our NFT sales on a single website that makes it easy for buyers to discover new creators. Site-specific marketplace NFTs will be aggregated to the Origin-branded marketplace. In the future, we will allow for creators like brands and celebrities to promote their NFTs on the Origin-branded marketplace. This is similar to how Google AdWords works and presents a potentially lucrative additional business model for Origin."
 msgstr ""
 
-#: templates/litepaper/platform.html:58
+#: templates/litepaper/platform.html:57
 msgid "Creators are excited about custom NFT marketplaces because they allow them to better monetize their creations over a longer period of time. Artists will experience increased value capture from programmatic transaction fees attached to NFTs they create. This means that any secondary market sales will generate revenue for NFT creators in perpetuity. Previously, musical artists would only capture a small portion of this value through royalties and fine artists would capture no value from secondary sales."
 msgstr ""
 
-#: templates/litepaper/platform.html:60
-msgid "Not only are secondary market sales important for price discovery, revenue sharing from these sales will be one of the key revenue drivers for Origin’s Launchpad. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
+#: templates/litepaper/platform.html:59
+msgid "Not only are secondary market sales important for price discovery, revenue sharing from these sales will be one of the key revenue drivers for Origin Story. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
 msgstr ""
 
-#: templates/litepaper/platform.html:62
+#: templates/litepaper/platform.html:61
 msgid "OGN buybacks and other token utilities"
 msgstr ""
 
-#: templates/litepaper/platform.html:63
-msgid "We may conduct additional OGN buybacks over time using revenue generated from the various income streams that are being developed across the NFT launchpad (e.g. primary sales proceeds, secondary sales revenue share, paid promotion by creators). We conducted our first buyback at the end of May 2021 for $1.3M worth of OGN."
+#: templates/litepaper/platform.html:62
+msgid "We may conduct additional OGN buybacks over time using revenue generated from the various income streams that are being developed across Origin Story (e.g. primary sales proceeds, secondary sales revenue share, paid promotion by creators). We conducted our first buyback at the end of May 2021 for $1.3M worth of OGN."
 msgstr ""
 
-#: templates/litepaper/platform.html:64
+#: templates/litepaper/platform.html:63
 msgid "We also anticipate tightly coupling OGN into our self-serve and marketplace products. For example, we intend to experiment with allowing creators to stake OGN for increased revenue share. There may also be certain NFT sales that will be structured around buyers using OGN for special bonuses and perks (e.g. require OGN staking or payment for drawing/raffle sales). It is also anticipated that OGN will be the native currency for paid promotion on our aggregator marketplace."
 msgstr ""
 
-#: templates/litepaper/platform.html:66
+#: templates/litepaper/platform.html:65
 msgid "Mainstream NFTs"
 msgstr ""
 
-#: templates/litepaper/platform.html:67
-msgid "Origin’s NFTs are currently Ethereum ERC-721 NFTs. While this effectively targets the early adopter community that has developed around Ethereum, we recognize that the minting costs of today’s Ethereum NFTs, oftentimes $25 to $50+ per NFT, make these NFTs prohibitively expensive for more mainstream adoption. In order to bring NFTs to the hundreds of millions of consumers, NFTs must be cheaper to mint. To tackle this volume-centric strategy, Origin will begin integrations with alternative blockchains and also explore Ethereum layer 2 solutions in Q3. Our goal is to enable creators to offer NFTs at $10 to $20 that can be purchased by their mainstream in seconds with credit and debit cards. This will be especially important for NFT use cases related to merchandise, ticketing, and collectibles."
+#: templates/litepaper/platform.html:66
+msgid "Origin’s NFTs are currently Ethereum ERC-721 NFTs. While this effectively targets the early adopter community that has developed around Ethereum, we recognize that the minting costs of today’s Ethereum NFTs, oftentimes $25 to $50+ per NFT, make these NFTs prohibitively expensive for more mainstream adoption. In order to bring NFTs to the hundreds of millions of consumers, NFTs must be cheaper to mint. To tackle this volume-centric strategy, Origin will begin integrations with alternative blockchains and also explore Ethereum layer 2 solutions in Q3. Our goal is to enable creators to offer NFTs at $10 to $20 that can be purchased by their mainstream audiences in seconds with credit and debit cards. This will be especially important for NFT use cases related to merchandise, ticketing, and collectibles."
 msgstr ""
 
-#: templates/litepaper/platform.html:72 templates/litepaper/sidebar.html:22
+#: templates/litepaper/platform.html:71
 msgid "The Origin Dollar (OUSD)"
 msgstr ""
 
-#: templates/litepaper/platform.html:73
+#: templates/litepaper/platform.html:72
 msgid "In 1999, Yu Pan, one of PayPal’s original co-founders conceived of creating “the new world currency”, complete with interest yielding strategies and debit cards without having to connect to traditional banking systems. Several pivots and an eBay acquisition later, PayPal dropped its ambitions in this area."
 msgstr ""
 
-#: templates/litepaper/platform.html:74
+#: templates/litepaper/platform.html:73
 msgid "Two decades later, Yu Pan, Origin’s founding engineer, and the rest of the Origin team have finally launched this new world currency."
 msgstr ""
 
-#: templates/litepaper/platform.html:75
+#: templates/litepaper/platform.html:74
 #, python-format
 msgid "The Origin Dollar is the first cryptocurrency stablecoin that automatically and passively provides users with the opportunity to earn yield while sitting in cryptocurrency wallets. Users do not need to stake/unstake or provide liquidity to earn yields across underlying DeFi protocols. While past performance does not guarantee future results, to date OUSD has generated, through the underlying DeFi protocols, annualized yields between 20%% and 150%% at any given time."
 msgstr ""
 
-#: templates/litepaper/platform.html:76
+#: templates/litepaper/platform.html:75
 msgid "OUSD is a superior DeFi product for the masses. By removing all the complexities normally associated with earning fees through lending or supplying liquidity to automated market makers (AMMs), OUSD is highly accessible to users who are new to cryptocurrency technologies. Today, users need only to purchase OUSD on centralized exchanges or decentralized swap sites like Uniswap/Sushiswap to begin getting DeFi yield exposure immediately. Alternatively, users can mint OUSD with their existing stablecoins (DAI, USDT, USDC currently) on the <a href='https://www.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD DApp</a>."
 msgstr ""
 
-#: templates/litepaper/platform.html:77
+#: templates/litepaper/platform.html:76
 msgid "Current APYs and circulating supply are published transparently on the <a href='https://analytics.ousd.com' target='_blank' rel='noopener noreferrer'>OUSD dashboard</a>. "
 msgstr ""
 
-#: templates/litepaper/platform.html:78
+#: templates/litepaper/platform.html:77
 msgid "With OUSD, there’s no need to unwind complicated positions when you want to spend your OUSD. You can transfer it freely without having to pay gas to unlock spendable capital. In addition, OUSD gives you the ability to utilize a basket of leading DeFi opportunities with none of the hassles. The OUSD smart contracts deploy your underlying capital to a diversified set of yield-earning strategies, automatically rebalancing over time to achieve strong yields while diversifying risk. Earnings automatically accrue in your wallet and compound continuously while you hold OUSD. Again, no staking or lockups are required, making your OUSD as easy to transfer as any other ERC-20 token. OUSD also serves as an ideal unit of account. DeFi participants no longer need complicated spreadsheets to calculate their earnings as they can easily see their constantly updated OUSD balances in real-time."
 msgstr ""
 
-#: templates/litepaper/platform.html:80
+#: templates/litepaper/platform.html:79
 msgid "Yield strategies"
 msgstr ""
 
-#: templates/litepaper/platform.html:81
+#: templates/litepaper/platform.html:80
 msgid "OUSD uses two high-level strategies for generating yield--lending and market making."
 msgstr ""
 
-#: templates/litepaper/platform.html:83
+#: templates/litepaper/platform.html:82
 msgid "Lending:"
 msgstr ""
 
-#: templates/litepaper/platform.html:84
+#: templates/litepaper/platform.html:83
 msgid "DeFi lending platforms let users lend and borrow crypto assets without any middlemen. Both lenders and borrowers get more value from their crypto. Lenders earn interest, while borrowers deposit crypto as collateral to gain access to credit without traditional banking headaches. DeFi lending platforms currently provide far superior returns for lenders than are generally available in the traditional markets."
 msgstr ""
 
-#: templates/litepaper/platform.html:85
+#: templates/litepaper/platform.html:84
 msgid "OUSD integrates with DeFi lending platforms that provide over-collateralized loans. Over-collateralization, combined with smart rules around liquidations, provide a reasonable level of security for lenders. Aave also additionally secures their lending pools with AAVE tokens respectively, further lowering risk."
 msgstr ""
 
-#: templates/litepaper/platform.html:86
+#: templates/litepaper/platform.html:85
 msgid "OUSD integrates with two leading lending providers, Compound and Aave, that have a proven track record audited smart contracts, and have successfully lent hundreds of millions of dollars without issue."
 msgstr ""
 
-#: templates/litepaper/platform.html:88
+#: templates/litepaper/platform.html:87
 msgid "Market making:"
 msgstr ""
 
-#: templates/litepaper/platform.html:89
+#: templates/litepaper/platform.html:88
 msgid "Automated market makers (AMMs) have quickly risen as the preferred form of decentralized exchange on the Ethereum network. This is in part due to the difficulty of supporting order book DEXes on Ethereum 1.0 that can rival the instant and low-slippage experiences on centralized exchanges. Further, AMMs like Uniswap are relatively user-friendly and gas-efficient to use."
 msgstr ""
 
-#: templates/litepaper/platform.html:90
+#: templates/litepaper/platform.html:89
 #, python-format
 msgid "AMMs can only enable new markets when liquidity providers supply liquidity (e.g. multiple tokens for given trading pairs or pools). In return for providing liquidity, liquidity providers are rewarded with trading fees when other users swap tokens. For example, when traders swap USDT for USDC on Uniswap, they are currently charged 0.3%% on top of gas fees. These fees are distributed pro-rata to liquidity providers on the USDT-USDC pair based on the percentage of total liquidity that they have provided."
 msgstr ""
 
-#: templates/litepaper/platform.html:91
+#: templates/litepaper/platform.html:90
 msgid "The OUSD protocol routes USDT, USDC, and DAI to highly-performing liquidity pools as determined by trading volume and rewards tokens (e.g. Balancer rewards BAL tokens to liquidity providers). Yields are then passed on to OUSD holders. The OUSD smart contract is currently integrated with Curve, and may be integrated with Uniswap, Sushiswap, and Balancer in the future."
 msgstr ""
 
-#: templates/litepaper/platform.html:92
+#: templates/litepaper/platform.html:91
 msgid "In addition to collecting interest from lending and fees from market making, we intend to automatically claim and convert the bonus incentives that are being distributed by many of the DeFi protocols. For example, Compound gives away COMP tokens, Balancer gives away BAL tokens, and Curve gives away CRV tokens. These bonus rewards will be regularly converted into stablecoins, deployed in the market, and distributed to OUSD holders in the form of additional yield."
 msgstr ""
 
-#: templates/litepaper/platform.html:93
+#: templates/litepaper/platform.html:92
 msgid "OUSD is able to generate higher yields than competing protocols due to a combination of important design decisions that amplify the rewards that are returned to OUSD holders:"
 msgstr ""
 
-#: templates/litepaper/platform.html:95
+#: templates/litepaper/platform.html:94
 msgid "Exit fees are returned to the pool, rewarding long term holders"
 msgstr ""
 
-#: templates/litepaper/platform.html:96
+#: templates/litepaper/platform.html:95
 msgid "Price oracles favor the collective over the individual, again rewarding long term holders"
 msgstr ""
 
-#: templates/litepaper/platform.html:97
+#: templates/litepaper/platform.html:96
 msgid "Smart contracts must manually opt-in to earn yield. This allows the protocol to put more capital to work than would be otherwise possible."
 msgstr ""
 
-#: templates/litepaper/platform.html:98
+#: templates/litepaper/platform.html:97
 msgid "OUSD smart contracts allow users to balance risk and reward more effectively than deploying capital in any single underlying strategy."
 msgstr ""
 
-#: templates/litepaper/platform.html:101
+#: templates/litepaper/platform.html:100
 msgid "Origin's role in OUSD"
 msgstr ""
 
-#: templates/litepaper/platform.html:102
+#: templates/litepaper/platform.html:101
 #, python-format
 msgid "OUSD is meant to be a tool that gives users easy and passive access to DeFi exposure. Origin’s role in the development of OUSD is ministerial rather than managerial. This means instead of actively managing OUSD as a business or actively managing the funds in the OUSD vault, Origin maintains the OUSD smart contracts as developers in order to keep the protocol functional and avoid catastrophic losses or failures for users. Origin does not intend to make strategic decisions to allocate funds from the OUSD vault. Funds in the OUSD vault are automatically deployed to the largest and most common DeFi protocols including Compound, Aave, and Curve, as outlined above. OUSD is a decentralized protocol on the Ethereum  blockchain without active management. Funds are allocated by OUSD smart contracts, not Origin employees, and Origin developers chose the aforementioned DeFi protocols for their safety and ubiquity in DeFi rather than to seek maximum yields or profits. The OUSD protocol is 100%% open-source and we are fast tracking OUSD to be governed in a totally decentralized fashion."
 msgstr ""
 
-#: templates/litepaper/platform.html:104
+#: templates/litepaper/platform.html:103
 msgid "Readers can learn more about the technical details of OUSD on our <a href='https://docs.ousd.com' target='_blank' rel='noopener noreferrer'>documentation</a>."
 msgstr ""
 
-#: templates/litepaper/platform.html:106
+#: templates/litepaper/platform.html:105
 msgid "Benefits of OUSD"
 msgstr ""
 
-#: templates/litepaper/platform.html:107
+#: templates/litepaper/platform.html:106
 msgid "Mainstream cryptocurrency users now have the equivalent of a high-yield savings account automatically built into their Ethereum wallets whenever they are holding OUSD. This increases DeFi’s addressable user base from tens to hundreds of thousands of sophisticated users to tens of millions of users instantly. By comparison, Uniswap, the most widely used DeFi product to date has only interacted with approximately 250k Ethereum wallets since its inception."
 msgstr ""
 
-#: templates/litepaper/platform.html:108
+#: templates/litepaper/platform.html:107
 #, python-format
 msgid "Because OUSD makes it easy for consumers to switch between spending and savings mode, it can also become the ideal medium of exchange. Today, many merchants other than those dealing in black or grey markets do not have many incentives to accept cryptocurrencies. Because most consumers currently use credit cards and mobile payments, merchants are forced to accept payments predominantly with these methods. In the process, they are often charged a 2.90%% credit card processing fee, with other payment intermediaries (e.g. merchant bankers and interchange networks) also increasing the cost of doing business. "
 msgstr ""
 
-#: templates/litepaper/platform.html:109
-#, python-format
-msgid "For merchants that have traditionally been skeptical of receiving cryptocurrency payments, being able to accept a yield-bearing stablecoin that beats traditional savings accounts and instantly earns yields at a minimum of 20%% APY is a powerful motivator. Instead of losing money on each sale, they are instantly adding capital to their merchant accounts that compounds instantly, giving them more operating capital over time. For merchants that oftentimes face cash flow management and inventory issues, being able to accept a yield-bearing form of payment is extremely compelling."
+#: templates/litepaper/platform.html:108
+msgid "For merchants that have traditionally been skeptical of receiving cryptocurrency payments, being able to accept a yield-bearing stablecoin that beats traditional savings accounts and instantly earns yield is a powerful motivator. Instead of losing money on each sale, they are instantly adding capital to their merchant accounts that compounds instantly, giving them more operating capital over time. For merchants that oftentimes face cash flow management and inventory issues, being able to accept a yield-bearing form of payment is extremely compelling."
 msgstr ""
 
-#: templates/litepaper/platform.html:110
+#: templates/litepaper/platform.html:109
 msgid "OUSD creates the incentives for merchants to not only accept, but promote the usage of cryptocurrencies in their businesses. As more users hold and make purchases with OUSD, more merchants will similarly accept OUSD. These powerful network effects have the potential to gradually replace the payment rails for both online and offline commerce."
 msgstr ""
 
-#: templates/litepaper/platform.html:111
+#: templates/litepaper/platform.html:110
 msgid "In the short-term, OUSD’s target audience encompasses the millions of cryptocurrency users in the world that are not yet invested in DeFi. An even larger opportunity lies in targeting the hundreds of millions of users that are currently using traditional peer-to-peer and merchant payment systems."
 msgstr ""
 
-#: templates/litepaper/platform.html:112
+#: templates/litepaper/platform.html:111
 msgid "Today, PayPal boasts over 305M consumers and 22M merchants and processes over $200B of payments in a single quarter. Our aspirations are to begin penetrating that customer base with OUSD and future payments applications built on top of the OUSD protocol in the upcoming year."
 msgstr ""
 
-#: templates/litepaper/platform.html:114
+#: templates/litepaper/platform.html:113
 msgid "Future products"
 msgstr ""
 
-#: templates/litepaper/platform.html:115
+#: templates/litepaper/platform.html:114
 msgid "We imagine a better future for online and offline payments that uses OUSD as the underlying payment rails. Below, we outline our vision for what we'd like to see built on top of the OUSD protocol. We also encourage our large community of supporters and open-source developers to build additional compelling products to bring DeFi and cryptocurrency payments to the masses."
 msgstr ""
 
-#: templates/litepaper/platform.html:117
+#: templates/litepaper/platform.html:116
 msgid "Venmo meets high-yield savings and a debit card"
 msgstr ""
 
-#: templates/litepaper/platform.html:118
+#: templates/litepaper/platform.html:117
 msgid "Today peer-to-peer mobile payments account for trillions of dollars in transaction volume. In the United States, Venmo and Square Cash dominate. In China, cryptocurrency’s largest market by trading volume, Wechat and Alipay have near monopolistic holds on consumers and merchants. These simple, centralized payment apps are used by customers paying merchants and by friends and family transferring money to each other. Furthermore, in many markets, the US and Europe especially, bank cards are still the go-to way to spend money for online and offline transactions. Credit card companies, payment processors, and banks dominate this market and there are a variety of companies such as PayPal that assist merchants and consumers in using their cards online."
 msgstr ""
 
-#: templates/litepaper/platform.html:119
+#: templates/litepaper/platform.html:118
 msgid "The billions of users using these existing payment methods have very little incentive to adopt cryptocurrency payments due to increased friction and lack of network effects."
 msgstr ""
 
-#: templates/litepaper/platform.html:120
+#: templates/litepaper/platform.html:119
 msgid "We believe a new peer-to-peer payment app with an associated debit card built on top of the OUSD protocol can disrupt incumbents. Today, Venmo users shuffle money between their Venmo accounts and their checking accounts and credit cards. In the case of the former, money sitting in Venmo or checking accounts doesn’t earn any interest. Venmo balances that are funded by credit cards are even worse as there are fees charged by multiple intermediaries. In the later case, interest earned by users is usually negligible, especially when taking into account inflation. Cash back or rewards programs can offer users incentives but high interest rates for missing payments are a strong disincentive to users."
 msgstr ""
 
-#: templates/litepaper/platform.html:121
+#: templates/litepaper/platform.html:120
 msgid "Tomorrow’s peer-to-peer mobile payment application powered by OUSD will introduce the killer feature of double-digit yields. Our version of Venmo will combine the ease of peer-to-peer payments with a high-yield savings account that beats traditional savings accounts by a factor of 10 to 100x."
 msgstr ""
 
-#: templates/litepaper/platform.html:122
+#: templates/litepaper/platform.html:121
 msgid "The OUSD payment app will be built with a centralized mobile app and APIs to minimize user friction for mainstream users. Users will be able to deposit USD and/or other fiat currencies to the app and enjoy the seamless user experiences of centralized applications. However, on the backend, these fiat deposits will be used to mint OUSD. New users will hold their balances in OUSD in Origin custodial wallets without needing to understand cryptocurrencies. They will simply be able to earn industry-leading yields when they are not spending. Again, your OUSD is always earning & ready to be spent or transferred at the same time."
 msgstr ""
 
-#: templates/litepaper/platform.html:123
+#: templates/litepaper/platform.html:122
 msgid "The viral effects of the future OUSD payment app cannot be overstated. Payment apps are by nature already viral, with users onboarding their friends and family in order to transact with them, establishing powerful network effects. Merchants quickly adopt the payment services that attract the most users. By adding in the ability to earn yield the very instant that any new referred user accepts funds from a referring user, we believe the viral coefficient for existing users referring new users will be multiples higher than ever seen before in a traditional payments application."
 msgstr ""
 
-#: templates/litepaper/platform.html:124
+#: templates/litepaper/platform.html:123
 msgid "The OUSD debit card will be tied to the future OUSD payment app and will allow users to spend down their on-app OUSD balance. Whenever users want to use their OUSD, their OUSD will be converted to USD via Visa’s interchange network and be instantly accepted by 40 million merchants all over the world. Merchants will receive USD and need not know that OUSD was used as the underlying original currency to power the transaction. Again, when users’ OUSD is not being spent, it will automatically accumulate staggering yields that should be superior to any cash bank or credit card rewards program in existence."
 msgstr ""
 
-#: templates/litepaper/platform.html:125
+#: templates/litepaper/platform.html:124
 msgid "Although we plan on launching with hosted or managed wallets, we believe that users should be in control of their own funds if they do not want to use managed wallets. While the service that we build will be centralized at the application and middleware layer, the core protocol is decentralized. Users will be able to eject from the managed wallet at any point in time to simply hold their OUSD in their own self-managed wallets within the same app. We imagine that more and more users will gradually migrate from managed wallets to self-hosted wallets over time as they become educated about the benefits of underlying protocol."
 msgstr ""
 
-#: templates/litepaper/platform.html:128
+#: templates/litepaper/platform.html:127
 msgid "Getting online and offline merchants to accept payments that are powered by OUSD rails is a monumental step. However, further down the road, an even more ambitious objective is to get merchants to accept OUSD directly."
 msgstr ""
 
-#: templates/litepaper/platform.html:129
+#: templates/litepaper/platform.html:128
 msgid "The incentives to accept OUSD as a merchant over traditional credit cards or mobile payments is extremely compelling. Merchants can earn double-digit yields upon the sales of goods and services versus getting taxed with multiple payment fees."
 msgstr ""
 
-#: templates/litepaper/platform.html:130
-msgid "The very first e-commerce platform to accept OUSD is Origin’s own Dshop platform. However, Dshop is a relatively new platform, and the majority of online e-commerce stores are run by incumbents like Shopify and Woo Commerce."
-msgstr ""
-
-#: templates/litepaper/platform.html:131
+#: templates/litepaper/platform.html:129
 msgid "Thankfully, both Shopify and Woo Commerce have mature developer platforms and APIs. We intend to build applications on these existing platforms that allow merchants to accept OUSD directly from customers that want to pay with OUSD. These developer plugins are relatively simple to build, and there are many existing examples of working payment alternatives."
 msgstr ""
 
-#: templates/litepaper/platform.html:132
+#: templates/litepaper/platform.html:130
 msgid "For example, the Shopify app store currently already offers Coinbase Commerce, Bitpay, and GoCoin. We will release an OUSD payment app for merchants in the coming future."
 msgstr ""
 
-#: templates/litepaper/platform.html:135
+#: templates/litepaper/platform.html:133
 msgid "Given the recent surge in both the price of ETH and the usage of the Ethereum network, gas fees are becoming increasingly prohibitive and a major deterrent for getting the kind of retail adoption that we want."
 msgstr ""
 
-#: templates/litepaper/platform.html:136
+#: templates/litepaper/platform.html:134
 msgid "Ethereum is by far the most dominant layer 1 chain when it comes to DeFi activity and total value locked (TVL) today. However, as other layer 1 chains gain DeFi adoption, it is our intention to make OUSD accessible on other chains like Binance Smart Chain, Solana, Cosmos, and Polkadot which offer faster transactions and lower gas costs. "
 msgstr ""
 
-#: templates/litepaper/platform.html:137
+#: templates/litepaper/platform.html:135
 msgid "All of the yield for OUSD will continue to be generated on the Ethereum platform since that’s where the vast majority of capital and earning opportunities exist today. However, chain-specific versions of OUSD will be mintable by anyone who locks up OUSD in the cross-chain bridge. For example, you could lock 100 OUSD in the Solana bridge in order to generate 100 sOUSD which would be freely transferable within the Solana ecosystem. The original OUSD would stay locked in a smart contract where it would continue earning yield. Inside Solana, the circulating sOUSD tokens would rebase in lockstep with the OUSD that was locked in the smart contract. Anyone who wishes to exit would be able to redeem their sOUSD for the originally locked capital plus any yield that was generated while they were holding it."
 msgstr ""
 
-#: templates/litepaper/platform.html:142 templates/litepaper/sidebar.html:25
-#: templates/whitepaper/sidebar.html:34
+#: templates/litepaper/platform.html:140 templates/whitepaper/sidebar.html:34
 msgid "The Origin Token (OGN)"
 msgstr "Origin代币（OGN）"
 
-#: templates/litepaper/platform.html:143
+#: templates/litepaper/platform.html:141
 msgid "The Origin Token (OGN) is the governance and value accrual token for the entire Origin Platform and suite of products."
 msgstr ""
 
-#: templates/litepaper/platform.html:146
-msgid "Decentralized governance for the OUSD protocol will happen first. Following the successful migration of making OUSD community-owned, we will begin the progressive decentralization of the Origin commerce platform as well."
+#: templates/litepaper/platform.html:144
+msgid "Decentralized governance for the OUSD protocol will happen first. Following the successful migration of making OUSD community-owned, we will begin the progressive decentralization of Origin's products as well."
 msgstr ""
 
-#: templates/litepaper/platform.html:147
+#: templates/litepaper/platform.html:145
 msgid "Today, the OUSD protocol is already currently undergoing a progressive path to full decentralization. We’ve outlined four phases to full decentralization and are currently in phase 2."
 msgstr ""
 
-#: templates/litepaper/platform.html:149
+#: templates/litepaper/platform.html:147
 msgid "OGN token holders will be able to create and vote on proposals to govern the underlying protocol. This may include:"
 msgstr ""
 
-#: templates/litepaper/platform.html:151
+#: templates/litepaper/platform.html:149
 msgid "Adding/removing new types of yield-earning strategies"
 msgstr ""
 
-#: templates/litepaper/platform.html:152
+#: templates/litepaper/platform.html:150
 msgid "Allocating capital across a basket of strategies"
 msgstr ""
 
-#: templates/litepaper/platform.html:153
+#: templates/litepaper/platform.html:151
 msgid "Determining what fees are charged by the protocol"
 msgstr ""
 
-#: templates/litepaper/platform.html:154
+#: templates/litepaper/platform.html:152
 msgid "Determining what incentives (e.g. OGN rewards for liquidity mining) are offered on an ongoing basis"
 msgstr ""
 
-#: templates/litepaper/platform.html:157
+#: templates/litepaper/platform.html:155
 msgid "Note that decentralized governance privileges will not apply to the centralized applications like the peer-to-peer payments product or debit card to be built on OUSD in the near-term. However, the underlying protocol will be fully decentralized before the end of 2021."
 msgstr ""
 
-#: templates/litepaper/platform.html:159
+#: templates/litepaper/platform.html:157
 msgid "Value accrual"
 msgstr ""
 
-#: templates/litepaper/platform.html:160
+#: templates/litepaper/platform.html:158
 msgid "OGN holders will benefit directly from any protocol revenues and fees generated from products built on the Origin Platform. This includes on-chain revenue from OUSD as well as potential off-chain revenue sources from OUSD or our commerce products in the future."
 msgstr ""
 
-#: templates/litepaper/platform.html:163
+#: templates/litepaper/platform.html:160
+msgid "OUSD"
+msgstr "OUSD"
+
+#: templates/litepaper/platform.html:161
 #, python-format
 msgid "Currently, 10%% of DeFi yields generated from OUSD are collected as a protocol service fee. These on-chain fees are being used to buy back OGN on the market, generating consistent buy pressure for OUSD’s governance token."
 msgstr ""
 
-#: templates/litepaper/platform.html:164
+#: templates/litepaper/platform.html:162
 msgid "Through decentralized governance, the community will be able to adjust service fee settings as well as other value accrual parameters."
 msgstr ""
 
-#: templates/litepaper/platform.html:170
+#: templates/litepaper/platform.html:168
 msgid "OGN holders are therefore incentivized to promote OUSD. As OUSD circulating supply increases, service fees generated will also increase, directly benefiting OGN holders financially. The converse is also true. OUSD holders are incentivized to be OGN holders, so they can participate actively in the governance of the protocol. This creates a strong flywheel effect between Origin’s two tokens."
 msgstr ""
 
-#: templates/litepaper/platform.html:171
+#: templates/litepaper/platform.html:169
 msgid "Since it is our intention to build powerful applications on top of the OUSD protocol like the new peer-to-peer payments product and debit card offering, we will also be able to create new monetization opportunities with these applications. For example, we may take a small percentage of OUSD yields as revenue to cover the costs of running the centralized infrastructure to power these experiences. Any profits that are generated off-chain can similarly be reinvested into the OGN buyback program or other fee distribution options mentioned above.    "
 msgstr ""
+
+#: templates/litepaper/sidebar.html:22
+#, fuzzy
+msgid "Origin Dollar (OUSD)"
+msgstr "Origin Dollar"
 
 #: templates/litepaper/sidebar.html:30 templates/litepaper/team.html:2
 msgid "Founding Team"
@@ -3921,6 +3718,10 @@ msgid ""
 "            commercial real estate broker while learning to code."
 msgstr "Micah是WellAttended的技术联合创始人，WellAttended是一个自助式票房管理平台。在学习编码的同时，他还是一名商业房地产经纪人。"
 
+#: templates/whitepaper/team.html:173
+msgid "Finance & Operations"
+msgstr "财务和运营"
+
 #: templates/whitepaper/team.html:176
 msgid ""
 "Kay is a Chartered Professional Accountant (CPA). She\n"
@@ -4235,55 +4036,27 @@ msgstr "建立在这两个基础技术之上的Origin平台已经在Beta阶段�
 msgid "We believe that now is the perfect time to push forward the peer-to-peer marketplace and e-commerce markets to take advantage of growing market demands and promising technology innovations."
 msgstr "我们相信，要推动点对点市场和电商市场，从而利用不断增长的市场需求和充满前景的技术创新，最理想的时机正在眼前。"
 
-#: views/web_views.py:216
+#: views/web_views.py:202
 msgid "Missing email"
 msgstr "请提供电邮地址"
 
-#: views/web_views.py:219
+#: views/web_views.py:205
 msgid "Invalid email"
 msgstr "电邮地址无效"
 
-#: views/web_views.py:282
+#: views/web_views.py:268
 msgid "You're already registered!"
 msgstr "您已经注册！"
 
-#: views/web_views.py:284
+#: views/web_views.py:270
 msgid "Thanks for signing up!"
 msgstr "谢谢您注册！"
 
-#: views/web_views.py:297
-msgid "Please enter your name"
-msgstr "请输入你的名字"
-
-#: views/web_views.py:299
-msgid "Please enter your email"
-msgstr "请输入你的邮箱地址"
-
-#: views/web_views.py:302
-msgid "Select your country of citizenship"
-msgstr "选择您的国籍"
-
-#: views/web_views.py:306
-msgid "Please enter your desired allocation"
-msgstr "请输入你期望的分配额度"
-
-#: views/web_views.py:309
-msgid "Select a currency"
-msgstr "选择显示的货币"
-
-#: views/web_views.py:312
-msgid "Please prove you are not a robot."
-msgstr "请证明你不是机器人"
-
-#: views/web_views.py:326
-msgid "OK"
-msgstr "好的"
-
-#: views/web_views.py:340
+#: views/web_views.py:283
 msgid "You have been unsubscribed"
 msgstr "您已经取消订阅"
 
-#: views/web_views.py:343
+#: views/web_views.py:286
 msgid "Ooops, something went wrong"
 msgstr "哎呀！出了些问题。"
 
@@ -4927,4 +4700,496 @@ msgstr "哎呀！出了些问题。"
 
 #~ msgid "NFT Marketplace"
 #~ msgstr ""
+
+#~ msgid "show this help message and exit"
+#~ msgstr ""
+
+#~ msgid "Origin Protocol - Brave Customer Story"
+#~ msgstr ""
+
+#~ msgid "Brave Customer Story"
+#~ msgstr ""
+
+#~ msgid "SAN FRANCISCO/TAIPEI, March 11, 2021"
+#~ msgstr ""
+
+#~ msgid "Origin Protocol (Origin), a blockchain technology company developing decentralized commerce and finance (DeFi) applications, is pleased to be engaged by Brave Browser (Brave) in its switch from a centralized e-commerce platform to Origin’s decentralized Dshop platform. Working jointly with Brave, Origin enabled Brave to accept payments in its native token, BAT, for merchandise for the very first time. As part of the engagement, Origin also helped Brave sell its first ever non-fungible token (NFT) collection, which sold out in minutes."
+#~ msgstr ""
+
+#~ msgid "Adoption of decentralized technologies and cryptocurrency tokens are key to Brave’s mission and product offerings. Origin’s Dshop platform will enable Brave to better serve its BAT token holder community through increased cryptocurrency integration. Previously Brave’s merchandise store only accepted credit cards and was on a completely centralized platform."
+#~ msgstr ""
+
+#~ msgid "Origin helped Brave switch from Shopify to the Dshop platform. The NFT integration to Dshop in collaboration with Brave led to a highly successful outcome for both parties. Brave sold all 30 NFTs, a result of a BAT token holder community campaign to create tokenized images of BAT memes, in just under two minutes. In addition, Brave continues to do brisk business through Dshop split between credit card payments and cryptocurrency payments."
+#~ msgstr ""
+
+#~ msgid "“We are delighted to be a strategic partner of Brave in support of their efforts to push forward decentralized technologies,” says Nick Poulden, technical lead for Dshop - Origin. “Working closely with Brave, we were able to provide a solution that served both their crypto native customers and BAT token holder community while also making it easy for non-crypto users to make purchases on their store. Brave wanted to signal to their token holders that they were committed to decentralized tech while still being able to serve their tens of millions of users who may be unfamiliar with it. Their previous platform could only serve the latter group. Brave’s first NFT collection sale was a smash success and we look forward to continuing a long-term, mutually rewarding relationship with them.”"
+#~ msgstr ""
+
+#~ msgid "About Origin Protocol"
+#~ msgstr ""
+
+#~ msgid "Origin Protocol is a leading blockchain technology company founded in 2017 in San Francisco, CA. Origin’s focus is on building platforms that enable peer-to-peer commerce applications with a focus on NFTs and DeFi protocols and applications. We launched the Origin Dollar (OUSD) protocol in 2020 and conducted a record-breaking NFT auction in 2021. Origin Tokens (OGN) are listed on some of the largest exchanges in the world, including Binance Global and Huobi Global. <a href='/'>www.originprotocol.com</a>"
+#~ msgstr ""
+
+#~ msgid "Media Contact:"
+#~ msgstr ""
+
+#~ msgid "Locked Tokens"
+#~ msgstr "锁定的通证数量"
+
+#~ msgid "Many of our investors and team members have voluntarily increased their lock-ups. Locked tokens include tokens that otherwise would have been released and entered the circulating supply."
+#~ msgstr "我们的许多投资者和团队成员已经自愿增加了通证锁定期，锁定的通证包括那些本来会被释放并进入流通供应的。"
+
+#~ msgid "Total number of tokens in investor and team lockups"
+#~ msgstr ""
+
+#~ msgid "Total number of tokens founders have sold"
+#~ msgstr "创始人已售出的通证总数"
+
+#~ msgid "New Foundation Reserves"
+#~ msgstr "基金储备"
+
+#~ msgid "New Distribution Staging"
+#~ msgstr "发行阶段"
+
+#~ msgid "Stake OGN on OUSD.com"
+#~ msgstr ""
+
+#~ msgid "See more on Coinmarketcap >"
+#~ msgstr "在Coinmarketcap上查看更多信息>"
+
+#~ msgid "Origin Protocol - DShop"
+#~ msgstr "起源协议—去中心化商店"
+
+#~ msgid "Create your free online store in minutes & harness the power of a decentralized platform"
+#~ msgstr "在几分钟内创建免费商店，并利用去中心化平台的强大功能"
+
+#~ msgid "Run and grow your business with Dshop, a customizable and open-source e-commerce platform built on the decentralized web.  Get started for free and launch your store in a day."
+#~ msgstr "使用Dshop来运营和发展您的业务，Dshop是一个基于去中心化网络的可自定义的开源电子商务平台。免费开始使用，并在一天之内启动您的商店。"
+
+#~ msgid "Try it – it’s free"
+#~ msgstr "免费尝试"
+
+#~ msgid "We’re here to support you–no matter what business you’re in"
+#~ msgstr "无论你做任何行业，我们都会在提供支持"
+
+#~ msgid "Create an ecommerce website backed by powerful tools that help you find customers and drive sales."
+#~ msgstr "创建一个以强大工具为后盾的电商网站，这些工具可帮助你找到客户并促进销售。"
+
+#~ msgid "A better way to do online commerce. Run your business on the new web."
+#~ msgstr "进行在线商务的更好方法，在新网站上经营业务。"
+
+#~ msgid "Multiple shops, 1 account"
+#~ msgstr "1个帐户多个商店"
+
+#~ msgid "Launch a decentralised shop in a day - no commitments or long-term contracts."
+#~ msgstr "一天可创建并上线，无承诺或长期合同。"
+
+#~ msgid "Easy crypto payments"
+#~ msgstr "轻松使用加密货币支付"
+
+#~ msgid "Accept every way your customers want to pay.  Fast, secure payments with no extra fees."
+#~ msgstr "接受客户需要的所有支付方式，快捷、安全且无需额外费用"
+
+#~ msgid "Secure, distributed data"
+#~ msgstr "安全的分布式数据"
+
+#~ msgid "Keep your data safe with IPFS, a resilient, censorship resistant system of file storage."
+#~ msgstr "使用IPFS确保数据安全。"
+
+#~ msgid "Infinitely extensible"
+#~ msgstr "无限扩展"
+
+#~ msgid "Integrate with your favorite third party services or build your very own."
+#~ msgstr "集成流行的第三方服务或构建自己的第三方服务。"
+
+#~ msgid "Work with all your existing tools"
+#~ msgstr "使用所有工具"
+
+#~ msgid "Explore integrations to speed up your workflow, or build your own custom integrations on our open source platform."
+#~ msgstr "探索更多集成以加快工作流程，或在Origin的开源平台上自定义集成"
+
+#~ msgid "…and many more on the way!"
+#~ msgstr "接下来还有更多"
+
+#~ msgid "Build on top of the world’s first decentralized e-commerce platform"
+#~ msgstr "建立在世界上第一个去中心化电商平台上"
+
+#~ msgid "Join our rapidly growing global community of developers and add your own features to our ever-expanding platform."
+#~ msgstr "加入起源快速发展的全球开发者社区，并在不断扩展的平台中添加自己的功能。"
+
+#~ msgid "Our Customers"
+#~ msgstr "我们的顾客"
+
+#~ msgid "Meet the companies who are choosing Dshop to build and grow their decentralized online stores"
+#~ msgstr "了解使用Dshop来建立和发展去中心化商店的公司"
+
+#~ msgid "Here to help you succeed"
+#~ msgstr "帮助您成功"
+
+#~ msgid "Speak with a real person when something’s not right. You can email our in-house support anytime, 24/7."
+#~ msgstr "遇到不对的情况时，请与真实的人交谈。你可以随时向我们发送邮件。"
+
+#~ msgid "Still have more questions? Feel free to contact us."
+#~ msgstr "如有其他问题欢迎与我们联系"
+
+#~ msgid "Contact Us"
+#~ msgstr "与我们联系"
+
+#~ msgid "Dshop success stories"
+#~ msgstr "Dshop成功案例"
+
+#~ msgid "“[With Dshop] we had a swift and easy experience establishing the Contentos online e-commerce store.”"
+#~ msgstr "“ [借助Dshop]，Contentos在电商方面获得了更多的便利。”"
+
+#~ msgid "- Jackie Lim , Senior B.D. Director, Contentos"
+#~ msgstr "Contentos高级BD总监Jackie Lim"
+
+#~ msgid "“We are thrilled to partner with Origin Protocol to launch the Ternio Dshop. They made the entire setup process easy and hands-off, and it has been exciting to see how they have applied the principles of blockchain and decentralization into the e-commerce space. Dshop provides the perfect platform for BlockCard users and our own team to purchase branded merchandise to promote our brand.”"
+#~ msgstr ""
+
+#~ msgid "“Origin dshops are making blockchain-powered commerce accessible to thousands of people around the world. Kyber is glad to help facilitate liquidity for the Origin Token (OGN).”"
+#~ msgstr ""
+
+#~ msgid "- Shane Hong, Kyber Marketing"
+#~ msgstr ""
+
+#~ msgid "Features & Benefits"
+#~ msgstr "特点和好处"
+
+#~ msgid "Fast setup, no commitments"
+#~ msgstr "快速设置，无需承诺"
+
+#~ msgid "No commitments or long-term contracts."
+#~ msgstr "无需承诺签订长期合同。"
+
+#~ msgid "Free to run"
+#~ msgstr "免费运行"
+
+#~ msgid "Dshop is free to run, and transaction fees are limited to crypto gas costs (typically a few cents per transaction)."
+#~ msgstr "Dshop是免费运行的，交易费用仅限于Gas费(通常每笔交易几美分)。"
+
+#~ msgid "Sell what you want"
+#~ msgstr "卖任何你想买的东西"
+
+#~ msgid "There are no restrictions on what you can sell, now or ever."
+#~ msgstr "无论是现在还是以后，对你要出售的商品都没有任何限制"
+
+#~ msgid "Secure fiat and crypto payments"
+#~ msgstr "安全的法币和加密货币支付"
+
+#~ msgid "Speak with a real person when something’s not right."
+#~ msgstr "遇到困难时向客服反馈。"
+
+#~ msgid "You can email our in-house support anytime, 24/7."
+#~ msgstr "可以随时发送邮件向我们寻求帮助，我们7x24小时在线为您服务"
+
+#~ msgid "Ready to start selling today?"
+#~ msgstr "现在，准备开始销售了吗？"
+
+#~ msgid "About"
+#~ msgstr "关于我们"
+
+#~ msgid "Investors"
+#~ msgstr "投资方"
+
+#~ msgid "Store"
+#~ msgstr ""
+
+#~ msgid "NFTs & more"
+#~ msgstr ""
+
+#~ msgid "OGN"
+#~ msgstr "OGN"
+
+#~ msgid "Bringing NFTs and DeFi<br>to the masses"
+#~ msgstr ""
+
+#~ msgid "Never miss a drop. Sign up now!"
+#~ msgstr ""
+
+#~ msgid "Be the first to hear when we announce big NFT drops, important partnerships, and new products. Your email will be kept private."
+#~ msgstr ""
+
+#~ msgid "Where top creators launch their NFTs"
+#~ msgstr ""
+
+#~ msgid "Origin has hosted record-breaking NFT sales for top musicans, celebrities and creators. Sell NFTs on your own website, not someone else's marketplace."
+#~ msgstr ""
+
+#~ msgid "Blockchain-powered commerce is the future"
+#~ msgstr "区块链驱动的商业是未来"
+
+#~ msgid "Blockchain will redefine online commerce and allow both buyers and sellers to benefit from lower costs and improved infrastructure"
+#~ msgstr "区块链将重新定义在线商业，并允许买卖双方从成本降低和区块链驱动的基础设施改善中受益"
+
+#~ msgid "Lower fees"
+#~ msgstr "更低的费用"
+
+#~ msgid "Buyers and sellers share 20-30%% in savings when middlemen are removed"
+#~ msgstr "去除中间商，买卖双方可以节省20-30%%的中介费。"
+
+#~ msgid "Better incentives"
+#~ msgstr "更好的激励措施"
+
+#~ msgid "Everyone can own a stake in the network by contributing to its growth"
+#~ msgstr "所有为Origin网络创造价值的参与者都可以获得收益。"
+
+#~ msgid "Increased access"
+#~ msgstr "更多的通道"
+
+#~ msgid "2 billion unbanked people can access new markets globally"
+#~ msgstr "为20亿没有银行账户的人开辟新市场"
+
+#~ msgid "Blockchain-powered commerce can't be banned or shut down"
+#~ msgstr "不可禁止或关闭以区块链驱动的商业"
+
+#~ msgid "We are backed by top venture capital firms and investors in Silicon Valley and around the world"
+#~ msgstr "我们得到了全球顶级风险投资公司和顶级硅谷投资者的支持"
+
+#~ msgid "Featured Partners"
+#~ msgstr "项目合作伙伴"
+
+#~ msgid "Featured Videos"
+#~ msgstr "特色视频"
+
+#~ msgid "Watch more videos"
+#~ msgstr "更多视频"
+
+#~ msgid "Bringing non-fungible tokens and decentralized finance to the masses"
+#~ msgstr ""
+
+#~ msgid "Integrations"
+#~ msgstr "集成"
+
+#~ msgid "Try it - it's free"
+#~ msgstr "免费尝试"
+
+#~ msgid "Origin NFT Platform Terms and Conditions of Use."
+#~ msgstr ""
+
+#~ msgid "Get Origin Protocol"
+#~ msgstr "获取原始协议"
+
+#~ msgid "Get Origin Marketplace & earn"
+#~ msgstr "下载Origin Marketplace并开始赚取"
+
+#~ msgid "Origin Tokens"
+#~ msgstr "原始代币"
+
+#~ msgid "Get started by downloading Origin Marketplace - the app that allows you to buy and sell anything using crypto right from your phone."
+#~ msgstr "通过下载Origin Marketplace开始使用-该应用程序可让您直接从手机上使用加密货币买卖任何东西。"
+
+#~ msgid "What are Origin Rewards?"
+#~ msgstr "什么是原点奖励？"
+
+#~ msgid "OGN is a rewards cryptocurrency earned by Origin users. Earn rewards when you verify your account or invite your friends to join Origin. Even get OGN as cash back when you buy and sell."
+#~ msgstr "OGN是一个用来奖励Origin用户的加密货币。您可以通过在平台上验证身份或将 Origin 推荐给朋友使用而获得奖励，甚至在买卖时获得现金返还。"
+
+#~ msgid "Scan to install our app"
+#~ msgstr "扫描以安装我们的应用"
+
+#~ msgid "Origin Protocol - Build on Origin"
+#~ msgstr "Origin 起源协议 - 在Origin上建立"
+
+#~ msgid "Build on Origin"
+#~ msgstr "在Origin上进行开发"
+
+#~ msgid "<strong>Teams all over the world are building their projects using Origin’s protocols. We are looking for more amazing people to <a href='#join_our_mission'>join our mission</a>.</strong>"
+#~ msgstr "<strong>世界各地的团队正在使用Origin的协议构建他们的项目。我们正在寻找更多的让人叹为观止，以 <a href='#join_our_mission'>加入我们的任务</a>。</strong>"
+
+#~ msgid "Join our mission!"
+#~ msgstr "加入我们的使命！"
+
+#~ msgid "Whether you’re an existing blockchain company or a traditional marketplace thinking about blockchain technology, we’d love to hear from you. Fill out the form below and we will get back to you shortly."
+#~ msgstr "无论您是现有的区块链公司或是在思考区块链技术的传统市场, 我们都很乐意听取您的建议，请填写下方表格，我们会尽快给您回复。"
+
+#~ msgid "Name"
+#~ msgstr "名字"
+
+#~ msgid "Firstname Lastname"
+#~ msgstr "名字 姓氏"
+
+#~ msgid "Company"
+#~ msgstr "公司"
+
+#~ msgid "My Amazing Company"
+#~ msgstr "我的公司"
+
+#~ msgid "yourname@websitename.com"
+#~ msgstr "你的名字@网站名.com"
+
+#~ msgid "Website"
+#~ msgstr "网站"
+
+#~ msgid "https://websitename.com"
+#~ msgstr "https://websitename.com"
+
+#~ msgid "<strong>Anything else we should know?</strong> (optional)"
+#~ msgstr "<strong>还有什么我们应该知道的吗？</strong> （可选）"
+
+#~ msgid "Become a Partner"
+#~ msgstr "成为合作伙伴"
+
+#~ msgid "Origin Protocol - Browser ExtensionPrivacy Policy"
+#~ msgstr "起源协议-浏览器扩展隐私政策"
+
+#~ msgid "Origin Protocol - Browser Extension Privacy Policy"
+#~ msgstr "起源协议-浏览器扩展隐私政策"
+
+#~ msgid "Browser Extension Privacy Policy"
+#~ msgstr "浏览器扩展程序隐私权政策"
+
+#~ msgid "Read our new Litepaper"
+#~ msgstr ""
+
+#~ msgid "NFT Launchpad"
+#~ msgstr ""
+
+#~ msgid "Secondary marketplace launching soon"
+#~ msgstr "Origin 即将发币了！"
+
+#~ msgid "The first stablecoin that earns a yield while it's still in your wallet."
+#~ msgstr "首个在您的钱包中赚取收益的稳定币。"
+
+#~ msgid "Get OUSD"
+#~ msgstr "获取OUSD"
+
+#~ msgid "Dshop"
+#~ msgstr "去中心化商店"
+
+#~ msgid "A decentralized and open source e-commerce platform that allows anyone to create an online store easily"
+#~ msgstr "去中心化的开源电商平台，任何人都可以轻松创建在线商店"
+
+#~ msgid "No transaction fees"
+#~ msgstr "无交易费"
+
+#~ msgid "Fully customizeable"
+#~ msgstr "完全可定制的"
+
+#~ msgid "Supports credit card payments"
+#~ msgstr "支持信用卡支付"
+
+#~ msgid "Try Dshop"
+#~ msgstr ""
+
+#~ msgid "Visit Origin Store"
+#~ msgstr ""
+
+#~ msgid "Online stores created with Dshop"
+#~ msgstr "用Dshop创建的在线商店"
+
+#~ msgid "...and hundreds more"
+#~ msgstr ""
+
+#~ msgid "Origin Token (OGN) is an incentive token that ensures the health and growth of the network."
+#~ msgstr "Origin 代币（OGN）是一种保证健康又可以持续发展网络的激励代币"
+
+#~ msgid "Your friend"
+#~ msgstr "您的朋友"
+
+#~ msgid "has invited you to earn"
+#~ msgstr "邀请您开始赚取"
+
+#~ msgid "Anna Crouy"
+#~ msgstr ""
+
+#~ msgid "Collector Relations"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Anna helps ensure that top collectors have a direct relationship to the company. Before Origin, Anna managed global social media at\n"
+#~ "                  Exness, a leading forex broker. She also co-founded a\n"
+#~ "                  non-profit in Australia."
+#~ msgstr ""
+
+#~ msgid "Mark Mathis"
+#~ msgstr ""
+
+#~ msgid "Mark Mathis has a broad background in fintech and defi. As a former touring musician, Mark has a particular interest in seeing artists compensated fairly for their work through decentralized channels."
+#~ msgstr ""
+
+#~ msgid "100%% open-source."
+#~ msgstr "100%% 开源。"
+
+#~ msgid "No Drops Scheduled"
+#~ msgstr ""
+
+#~ msgid "To get there, we will bring blockchain-enabled commerce and finance to the masses. We will continue to upgrade the Origin Commerce platform to enable new killer use cases that are only made possible by cryptocurrency technologies. To start, we will take advantage of non-fungible tokens (NFTs) to build new commerce experiences that cannot be replicated on incumbent platforms like Shopify, Amazon, or Alibaba."
+#~ msgstr ""
+
+#~ msgid "Origin Commerce Platform"
+#~ msgstr ""
+
+#~ msgid "Since our founding in 2017, Origin has focused on enabling commerce on the blockchain. We’ve powered sales of physical goods and offline services (e.g. home rentals). We’ve also formed marquee partnerships with <a href='https://medium.com/google-cloud/origin-launches-decentralized-commerce-on-google-cloud-marketplace-b74fb46be7d9' target='_blank' rel='noopener noreferrer'>Google Cloud</a> and <a href='https://aws.amazon.com/blogs/awsmarketplace/launch-a-blockchain-powered-ecommerce-store-with-dshop-in-aws-marketplace/' target='_blank' rel='noopener noreferrer'>Amazon</a> and dozens of merchant partners like Brave Software."
+#~ msgstr ""
+
+#~ msgid "We believe NFTs are a nascent but highly disruptive technology that will bring our crypto-centric commerce products to millions, if not hundreds of millions, of users in the next few years. At the time of writing, Origin’s NFT Launchpad set all-time records for largest music NFT sale at nearly $11.7M with <a href='https://nft.3lau.com' target='_blank' rel='noopener noreferrer'>3LAU</a> and largest viral video/meme NFT sale at $760k with the original viral video, <a href='http://charliebitme.com' target='_blank' rel='noopener noreferrer'>Charlie Bit My Finger</a>. The 3LAU sale reached mainstream media outlets like the <a href='https://www.nytimes.com/2021/02/22/business/nft-nba-top-shot-crypto.html' target='_blank' rel='noopener noreferrer'>New York Times</a> and <a href='https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=17043b94643b' target='_blank' rel='noopener noreferrer'>Forbes</a>, <a href='https://www.cnbc.com/video/2021/05/20/charlie-bit-my-finger-video-to-be-auctioned-off-as-an-nft-on-may-22nd.html' target='_blank' rel='noopener noreferrer'>CNBC</a>, <a href='https://edition.cnn.com/2021/05/22/us/charlie-bit-my-finger-nft-trnd/index.html' target='_blank' rel='noopener noreferrer'>CNN</a>, <a href='https://www.bbc.com/news/newsbeat-57227290' target='_blank' rel='noopener noreferrer'>BBC</a>, <a href='https://time.com/6050450/charlie-bit-my-finger-leaving-youtube/' target='_blank' rel='noopener noreferrer'>Time</a>, <a href='https://www.npr.org/2021/05/21/999360273/viral-charlie-bit-my-finger-video-to-leave-youtube-sell-as-nft' target='_blank' rel='noopener noreferrer'>NPR</a>, <a href='https://www.cbsnews.com/news/charlie-bit-my-finger-video-deleted-youtube-nft/' target='_blank' rel='noopener noreferrer'>ABC</a>, <a href='https://www.nytimes.com/2021/05/24/arts/charlie-bit-my-finger-nft-auction.html' target='_blank' rel='noopener noreferrer'>NY Times</a>, and dozens of other outlets covered the globally-viewed Charlie Bit My Finger sale. In both instances, Origin saw significantly increased community membership and engagement and interest in OGN following these record-breaking events. We believe that future blockbuster NFT sales will further introduce mainstream audiences to the Origin Commerce Platform and OGN."
+#~ msgstr ""
+
+#~ msgid "However, we believe that the majority of the market misconstrues NFTs as simply scarce digital art. While digital art is one exciting vertical that we have been able to capitalize on, we believe Origin’s NFT Launchpad will redefine commerce in several other key verticals as well."
+#~ msgstr ""
+
+#~ msgid "Origin’s NFT Launchpad will redefine commerce in several key verticals."
+#~ msgstr ""
+
+#~ msgid "The key to unlocking value in all of these crypto-centric opportunities with NFTs is making NFT issuance dead simple for creators. In addition, in contrast to existing players in the market like Nifty Gateway, we believe the creators should own the branding and have direct control over pricing models (e.g. different auction mechanics or tiered pricing). Origin’s NFT Launchpad gives creators and influencers more direct control over their content and their physical, digital, and experiential products. Just as many merchants have chosen Shopify over selling on generic marketplaces that do not allow for custom branding and direct relationships to end customers, we believe the same model will be successful for NFTs. Further, many creators prefer Origin’s NFT platform because they do not need to share the stage with other competing NFT drops that may be off-brand. We have also lowered the user experience barriers for newcomers to NFTs. While many of the other platforms require using cryptocurrency, we also offer the ability to purchase NFTs with credit and debit cards."
+#~ msgstr ""
+
+#~ msgid "We are especially excited about several NFT Launchpad upgrades that are scheduled to launch in Q3 of 2021."
+#~ msgstr ""
+
+#~ msgid "Self-serve NFT launchpad"
+#~ msgstr ""
+
+#~ msgid "Today, Origin’s NFT Launchpad is a curated experience for our collectors and is an invite-only platform. For creators, we build custom storefronts that oftentimes require several weeks of engineering work. While this allows us to hold record-breaking NFT sales with top creators, the last thing we want to do in the long-term is to become the gatekeepers of which creators can launch NFT drops."
+#~ msgstr ""
+
+#~ msgid "We have thousands of inbound requests from creators of all sizes, from verticals like music, art, sports, retail, and many others. We are excited to open the NFT Launchpad to all interested creators by the second half of 2021 with the launch of our self-serve WYSIWYG (what you see is what you get) editor."
+#~ msgstr ""
+
+#~ msgid "Creators will be able to create Origin accounts, upload audio and visual assets for their NFTs and customized websites, and schedule NFT sales using a variety of different sale formas (e.g. 1 of 1 auctions, leaderboard auctions, open editions, limited editions, and more). NFT Launchpad will democratize NFT creation and sales. Importantly, Origin will share in the proceeds of NFT sales conducted by our creators, creating substantial revenue-generating possibilities for us."
+#~ msgstr ""
+
+#~ msgid "Secondary market sales are vital for true price discovery of NFTs and the maturation of this nascent market. We intend to build a marketplace platform for secondary market sales of all NFTs launched on our Launchpad as well NFTs from other platforms and marketplaces. The Origin team already has over 4 years of experience building peer-to-peer marketplace technology, and we are the leaders in this field. The original Origin Marketplace was launched on Ethereum mainnet in 2018 and supported tens of thousands of users and listings for a variety of goods and services. Origin fully intends on being the NFT marketplace leader and capturing NFT sales from our partner creators as well as creators who launch independently or with another platform."
+#~ msgstr ""
+
+#~ msgid "Not only are secondary market sales important for price discovery, revenue sharing from these sales will be one of the key revenue drivers for Origin’s Launchpad. Far more volume is done on the secondary market than during initial sales and we expect record-breaking trades in the future. Origin intends to build a fully-featured NFT platform and ecosystem. We will develop the best end-to-end NFT platform in the space and capture massive value for our users, NFT creator partners, and our token holders."
+#~ msgstr ""
+
+#~ msgid "We may conduct additional OGN buybacks over time using revenue generated from the various income streams that are being developed across the NFT launchpad (e.g. primary sales proceeds, secondary sales revenue share, paid promotion by creators). We conducted our first buyback at the end of May 2021 for $1.3M worth of OGN."
+#~ msgstr ""
+
+#~ msgid "Origin’s NFTs are currently Ethereum ERC-721 NFTs. While this effectively targets the early adopter community that has developed around Ethereum, we recognize that the minting costs of today’s Ethereum NFTs, oftentimes $25 to $50+ per NFT, make these NFTs prohibitively expensive for more mainstream adoption. In order to bring NFTs to the hundreds of millions of consumers, NFTs must be cheaper to mint. To tackle this volume-centric strategy, Origin will begin integrations with alternative blockchains and also explore Ethereum layer 2 solutions in Q3. Our goal is to enable creators to offer NFTs at $10 to $20 that can be purchased by their mainstream in seconds with credit and debit cards. This will be especially important for NFT use cases related to merchandise, ticketing, and collectibles."
+#~ msgstr ""
+
+#~ msgid "For merchants that have traditionally been skeptical of receiving cryptocurrency payments, being able to accept a yield-bearing stablecoin that beats traditional savings accounts and instantly earns yields at a minimum of 20%% APY is a powerful motivator. Instead of losing money on each sale, they are instantly adding capital to their merchant accounts that compounds instantly, giving them more operating capital over time. For merchants that oftentimes face cash flow management and inventory issues, being able to accept a yield-bearing form of payment is extremely compelling."
+#~ msgstr ""
+
+#~ msgid "The very first e-commerce platform to accept OUSD is Origin’s own Dshop platform. However, Dshop is a relatively new platform, and the majority of online e-commerce stores are run by incumbents like Shopify and Woo Commerce."
+#~ msgstr ""
+
+#~ msgid "Decentralized governance for the OUSD protocol will happen first. Following the successful migration of making OUSD community-owned, we will begin the progressive decentralization of the Origin commerce platform as well."
+#~ msgstr ""
+
+#~ msgid "Please enter your name"
+#~ msgstr "请输入你的名字"
+
+#~ msgid "Please enter your email"
+#~ msgstr "请输入你的邮箱地址"
+
+#~ msgid "Select your country of citizenship"
+#~ msgstr "选择您的国籍"
+
+#~ msgid "Please enter your desired allocation"
+#~ msgstr "请输入你期望的分配额度"
+
+#~ msgid "Select a currency"
+#~ msgstr "选择显示的货币"
+
+#~ msgid "Please prove you are not a robot."
+#~ msgstr "请证明你不是机器人"
+
+#~ msgid "OK"
+#~ msgstr "好的"
 
