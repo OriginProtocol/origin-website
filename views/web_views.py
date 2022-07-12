@@ -296,6 +296,13 @@ def total_ogn():
     return total_supply("0x8207c1ffc5b6804f6024322ccf34f29c3541ae26")
 
 # do not remove
+# used by coinmarketcap.com to calculate total supply and circulating supply of OGV
+@app.route("/total-ogv", methods=["GET"], strict_slashes=False)
+@app.route("/<lang_code>/total-ogv", methods=["GET"], strict_slashes=False)
+def total_ogv():
+    return total_supply("0x9c354503c38481a7a7a51629142963f98ecc12d0")
+
+# do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
 @app.route("/total-ousd", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ousd", methods=["GET"], strict_slashes=False)
