@@ -425,8 +425,10 @@ def fetch_reserved_wallet_balances():
     # Fetch reserved wallet balances
     # fetch_wallet_balance(token_stats.foundation_reserve_address)
     fetch_wallet_balance(token_stats.new_foundation_reserve_address)
-    fetch_wallet_balance(token_stats.team_dist_address)
-    fetch_wallet_balance(token_stats.investor_dist_address)
+    #fetch_wallet_balance(token_stats.team_dist_address)
+    fetch_wallet_balance(token_stats.new_team_dist_address)
+    #fetch_wallet_balance(token_stats.investor_dist_address)
+    fetch_wallet_balance(token_stats.new_investor_dist_address)
     # fetch_wallet_balance(token_stats.dist_staging_address)
     fetch_wallet_balance(token_stats.new_dist_staging_address)
     fetch_wallet_balance(token_stats.partnerships_address)
