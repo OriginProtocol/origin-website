@@ -29,7 +29,9 @@ ogn_staking_contract = "0x501804b374ef06fa9c427476147ac09f1551b9a0"
 foundation_reserve_address = "0xe011fa2a6df98c69383457d87a056ed0103aa352"
 new_foundation_reserve_address = "0xbe2ab3d3d8f6a32b96414ebbd865dbd276d3d899"
 team_dist_address = "0xcaa5ef7abc36d5e5a3e4d7930dcff3226617a167"
+new_team_dist_address = "0x2eae0cae2323167abf78462e0c0686865c67a655"
 investor_dist_address = "0x3da5045699802ea1fcc60130dedea67139c5b8c0"
+new_investor_dist_address = "0xfe730b3cf80ca7b31905f70241f7c786baf443e3"
 dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 new_dist_staging_address = "0x12d7ef3c933d091210cd931224ead45d9cfddde0"
 partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
@@ -144,7 +146,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         foundation_reserve_address,
         new_foundation_reserve_address,
         team_dist_address,
+        new_team_dist_address,
         investor_dist_address,
+        new_investor_dist_address,
         dist_staging_address,
         new_dist_staging_address,
         partnerships_address,
@@ -156,7 +160,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
     foundation_reserve_balance = int(ogn_balances[foundation_reserve_address])
     new_foundation_reserve_balance = int(ogn_balances[new_foundation_reserve_address])
     team_dist_balance = int(ogn_balances[team_dist_address])
+    new_team_dist_balance = int(ogn_balances[new_team_dist_address])
     investor_dist_balance = int(ogn_balances[investor_dist_address])
+    new_investor_dist_balance = int(ogn_balances[new_investor_dist_address])
     dist_staging_balance = int(ogn_balances[dist_staging_address])
     new_dist_staging_balance = int(ogn_balances[new_dist_staging_address])
     partnerships_balance = int(ogn_balances[partnerships_address])
@@ -166,7 +172,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         foundation_reserve_balance +
         new_foundation_reserve_balance + 
         team_dist_balance +
+        new_team_dist_balance +
         investor_dist_balance +
+        new_investor_dist_balance +
         dist_staging_balance +
         new_dist_staging_balance +
         partnerships_balance +
@@ -196,7 +204,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         ("foundation_reserve_address", foundation_reserve_address),
         ("new_foundation_reserve_address", new_foundation_reserve_address),
         ("team_dist_address", team_dist_address),
+        ("new_team_dist_address", new_team_dist_address),
         ("investor_dist_address", investor_dist_address),
+        ("new_investor_dist_address", new_investor_dist_address),
         ("dist_staging_address", dist_staging_address),
         ("new_dist_staging_address", new_dist_staging_address),
         ("partnerships_address", partnerships_address),
@@ -206,7 +216,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         ("foundation_reserve_balance_formatted", '{:,}'.format(foundation_reserve_balance)),
         ("new_foundation_reserve_balance_formatted", '{:,}'.format(new_foundation_reserve_balance)),
         ("team_dist_balance_formatted", '{:,}'.format(team_dist_balance)),
+        ("new_team_dist_balance_formatted", '{:,}'.format(new_team_dist_balance)),
         ("investor_dist_balance_formatted", '{:,}'.format(investor_dist_balance)),
+        ("new_investor_dist_balance_formatted", '{:,}'.format(new_investor_dist_balance)),
         ("dist_staging_balance_formatted", '{:,}'.format(dist_staging_balance)),
         ("new_dist_staging_balance_formatted", '{:,}'.format(new_dist_staging_balance)),
         ("partnerships_balance_formatted", '{:,}'.format(partnerships_balance)),
