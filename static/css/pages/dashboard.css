@@ -313,23 +313,30 @@
 
 
 .stake-banner-blue {
+  margin-bottom: 60px;
+  background-color: #007cff;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+}
+
+.stake-banner-blue.governance {
   background-image: url('/static/img/coins/coin-waves-rectangle.svg');
   background-position-y: top;
   background-position-x: inherit;
   background-repeat: repeat-y;
-  margin-bottom: 60px;
-  background-color: #007cff;
   padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
 }
 
 .stake-banner-blue .coins-icon {
   margin-right: 20px;
 }
 
-.stake-banner-blue .coins-icon .ogn-coin {
-  margin-left: -12px;
+.stake-banner-blue.story {
+  background-image: url('/static/img/splines.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 20px 80px 20px 30px;
 }
 
 .stake-banner-blue .stake-content h1 {
@@ -350,9 +357,28 @@
   color: #dbe6eb;
 }
 
+.stake-banner-blue .title {
+  font-family: Poppins;
+  font-size: 26px;
+  font-weight: 500;
+  font-stretch: normal;
+  line-height: 1.04;
+  color: #ffffff;
+}
+
+.stake-banner-blue .text {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 65%;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+  color: #dbe6eb;
+}
+
 .stake-banner-blue a.btn {
   width: 210px;
-  margin: 0px;
   padding: 7px;
   font-size: 18px;
   font-weight: bold;
@@ -370,11 +396,12 @@
     margin-right: unset;
   }
 
-  .stake-banner-blue {
-    background-image: url('/static/img/coins/coin-waves-circle.svg');
-    background-position-x: center;
-    background-position-y: top;
+  .stake-banner-blue.governance {
     padding: 25px 15px;
+  }
+
+  .stake-banner-blue.story {
+    padding: 20px 10px;
   }
 
   .stake-banner-blue .stake-content {
@@ -388,6 +415,28 @@
   }
 
   .stake-banner-blue .stake-content p {
+    display: none;
+  }
+
+  .stake-banner-blue .stake-box {
+    margin: auto;
+    text-align: center;
+  }
+
+  .stake-banner-blue .stake-box .btn {
+    margin: auto;
+  }
+
+  .stake-banner-blue .stake-box .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .stake-banner-blue .story-logo {
+    display: none;
+  }
+
+  .stake-banner-blue .text {
     display: none;
   }
 }
