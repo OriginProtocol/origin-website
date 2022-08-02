@@ -323,6 +323,12 @@ def circulating_ogn():
     data = token_stats.get_ogn_stats()
     return make_response(str(data["ogn_supply_stats"]["circulating_supply"]), 200)
 
+@app.route("/circulating-ogv", strict_slashes=False)
+@app.route("/<lang_code>/circulating-ogv", strict_slashes=False)
+def circulating_ogv():
+    data = token_stats.get_ogv_stats()
+    return make_response(str(data["ogv_supply_stats"]["circulating_supply"]), 200)
+
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/social-stats", methods=["GET"], strict_slashes=False)
 def fetch_social_stats():
