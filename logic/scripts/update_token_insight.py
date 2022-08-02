@@ -103,8 +103,6 @@ def call_amberdata(url):
 def call_ethplorer(url):
     url = "%s?apiKey=%s" % (url, constants.ETHPLORER_KEY or 'freekey')
     raw_json = requests.get(url)
-    print('AAAAAAAAAA')
-    print(constants.ETHPLORER_KEY)
     return raw_json.json()
 
 
