@@ -22,8 +22,8 @@ import json
 
 # token contract addresses
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
-ogv_contract = "0x9c354503C38481a7A7a51629142963F98eCC12D0"
-ousd_contract = "0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86"
+ogv_contract = "0x9c354503c38481a7a7a51629142963f98ecc12d0"
+ousd_contract = "0x2a8e1e676ec238d8a992307b495b45b3feaa5e86"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
 ogn_staking_contract = "0x501804b374ef06fa9c427476147ac09f1551b9a0"
 
