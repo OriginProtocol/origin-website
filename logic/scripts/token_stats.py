@@ -23,6 +23,7 @@ import json
 # token contract addresses
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 ogv_contract = "0x9c354503C38481a7A7a51629142963F98eCC12D0"
+ousd_contract = "0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
 ogn_staking_contract = "0x501804b374ef06fa9c427476147ac09f1551b9a0"
 
@@ -142,8 +143,23 @@ def fetch_staking_stats():
         ("ogn_staked_amount", ogn_staked_amount)
     ])
 
+def total_supply(address):
+    url = "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=%s&apikey=%s" % (address, constants.ETHERSCAN_KEY)
+    response = requests.get(url)
+    wei = response.json()["result"]
+    return wei[:-18]
+
+def total_ogn():
+    return total_supply(ogn_contract)
+
+def total_ogv():
+    return total_supply(ogv_contract)
+
+def total_ousd():
+    return total_supply(ousd_contract)
+
 def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stakers_count,ogn_staked_amount):
-    total_supply = 1000000000
+    total_supply = int(total_ogn())
 
     number_of_addresses = db_models.TokenInfo.query.order_by(
         db_models.TokenInfo.created_at.desc()
@@ -247,7 +263,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
     return out_data
 
 def fetch_ogv_stats(ogv_usd_price):
-    total_supply = 4071219784
+    total_supply = int(total_ogv())
 
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         new_foundation_reserve_address,
