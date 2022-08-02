@@ -247,7 +247,7 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
     return out_data
 
 def fetch_ogv_stats(ogv_usd_price):
-    total_supply = 4000000000
+    total_supply = 4071219784
 
     results = db_models.EthContact.query.filter(db_models.EthContact.address.in_((
         new_foundation_reserve_address,
