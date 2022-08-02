@@ -38,9 +38,9 @@ dist_staging_address = "0x1a34e5b97d684b124e32bd3b7dc82736c216976b"
 new_dist_staging_address = "0x12d7ef3c933d091210cd931224ead45d9cfddde0"
 partnerships_address = "0xbc0722eb6e8ba0217aeea5694fe4f214d2e53017"
 ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
-staked_ogv_address = "0x0C4576Ca1c365868E162554AF8e385dc3e7C66D9"
-ogv_claims_address = "0x7aE2334f12a449895AD21d4c255D9DE194fe986f"
-veogv_claims_address = "0xD667091c2d1DCc8620f4eaEA254CdFB0a176718D"
+staked_ogv_address = "0x0c4576ca1c365868e162554af8e385dc3e7c66d9"
+ogv_claims_address = "0x7ae2334f12a449895ad21d4c255d9de194fe986f"
+veogv_claims_address = "0xd667091c2d1dcc8620f4eaea254cdfb0a176718d"
 
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
