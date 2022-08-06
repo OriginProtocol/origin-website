@@ -376,6 +376,9 @@ def fetch_wallet_balance(wallet):
             if token["tokenInfo"]["address"] == token_stats.ogn_contract:
                 contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
                 print("OGN balance of {} is {}".format(wallet, contact.ogn_balance))
+            elif token["tokenInfo"]["address"] == token_stats.ogv_contract:
+                contact.ogv_balance = float(token["balance"]) / math.pow(10, 18)
+                print("OGV balance of {} is {}".format(wallet, contact.ogv_balance))
             elif token["tokenInfo"]["address"] == token_stats.dai_contract:
                 contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
                 print("DAI balance of %s is %s".format(wallet, contact.dai_balance))
@@ -383,6 +386,7 @@ def fetch_wallet_balance(wallet):
     else:
         print("OGN balance of {} is {}".format(wallet, 0))
         contact.ogn_balance = 0
+        contact.ogv_balance = 0
         contact.dai_balance = 0
     contact.last_updated = datetime.utcnow()
 
@@ -434,6 +438,9 @@ def fetch_reserved_wallet_balances():
     fetch_wallet_balance(token_stats.partnerships_address)
     fetch_wallet_balance(token_stats.ecosystem_growth_address)
     fetch_wallet_balance(token_stats.ogn_staking_contract)
+    fetch_wallet_balance(token_stats.staked_ogv_address)
+    fetch_wallet_balance(token_stats.ogv_claims_address)
+    fetch_wallet_balance(token_stats.veogv_claims_address)
 
 if __name__ == "__main__":
     # called via cron on Heroku
@@ -452,3 +459,4 @@ if __name__ == "__main__":
         fetch_reserved_wallet_balances()
 
         token_stats.compute_ogn_stats()
+        token_stats.compute_ogv_stats()

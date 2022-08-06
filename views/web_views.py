@@ -293,27 +293,21 @@ def unsubscribe():
 @app.route("/total-ogn", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogn", methods=["GET"], strict_slashes=False)
 def total_ogn():
-    return total_supply("0x8207c1ffc5b6804f6024322ccf34f29c3541ae26")
+    return make_response(token_stats.total_ogn(), 200)
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OGV
 @app.route("/total-ogv", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogv", methods=["GET"], strict_slashes=False)
 def total_ogv():
-    return total_supply("0x9c354503c38481a7a7a51629142963f98ecc12d0")
+    return make_response(token_stats.total_ogv(), 200)
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
 @app.route("/total-ousd", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ousd", methods=["GET"], strict_slashes=False)
 def total_ousd():
-    return total_supply("0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86")
-
-def total_supply(address):
-    url = "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=%s&apikey=%s" % (address, constants.ETHERSCAN_KEY)
-    response = requests.get(url)
-    wei = response.json()["result"]
-    return make_response(wei[:-18], 200)
+    return make_response(token_stats.total_ousd(), 200)
 
 # do not remove
 # used by coingecko for the circulating supply
@@ -322,6 +316,12 @@ def total_supply(address):
 def circulating_ogn():
     data = token_stats.get_ogn_stats()
     return make_response(str(data["ogn_supply_stats"]["circulating_supply"]), 200)
+
+@app.route("/circulating-ogv", strict_slashes=False)
+@app.route("/<lang_code>/circulating-ogv", strict_slashes=False)
+def circulating_ogv():
+    data = token_stats.get_ogv_stats()
+    return make_response(str(data["ogv_supply_stats"]["circulating_supply"]), 200)
 
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/social-stats", methods=["GET"], strict_slashes=False)

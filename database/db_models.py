@@ -118,6 +118,7 @@ class EthContact(db.Model):
     phone = db.Column(db.String(255), index=True)
     eth_balance = db.Column(db.Float(), default=0)
     ogn_balance = db.Column(db.Float(), default=0)
+    ogv_balance = db.Column(db.Float(), default=0)
     dai_balance = db.Column(db.Float(), default=0)
     investor = db.Column(db.Boolean())
     presale_interest = db.Column(db.Boolean())
@@ -151,8 +152,18 @@ class TokenTransaction(db.Model):
     def __str__(self):
         return '%s' % (self.name)
 
-class CirculatingSupply(db.Model):
-    __tablename__ = 'circulating_supply'
+class CirculatingOgnSupply(db.Model):
+    __tablename__ = 'circulating_ogn_supply'
+    id = db.Column(db.Integer, primary_key=True)
+    supply_amount = db.Column(db.Float(), default=0)
+    snapshot_date = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+    created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
+
+    def __str__(self):
+        return '%s' % (self.name)
+
+class CirculatingOgvSupply(db.Model):
+    __tablename__ = 'circulating_ogv_supply'
     id = db.Column(db.Integer, primary_key=True)
     supply_amount = db.Column(db.Float(), default=0)
     snapshot_date = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
