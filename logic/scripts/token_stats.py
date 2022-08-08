@@ -487,7 +487,7 @@ def compute_ogv_stats():
 
     token_prices = fetch_token_prices()
 
-    ogv_supply_stats = fetch_ogn_stats(
+    ogv_supply_stats = fetch_ogv_stats(
         token_prices["ogv_usd_price"]
     )
 
