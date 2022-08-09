@@ -36,7 +36,7 @@ def insert_data(snapshot_date, supply, do_it):
     print("Will set supply of month {} to {}".format(snapshot_date, supply))
     return
 
-  instance = db_models.CirculatingSupply(
+  instance = db_models.CirculatingOgnSupply(
     supply_amount=supply,
     snapshot_date=snapshot_date
   )
@@ -46,12 +46,12 @@ def insert_data(snapshot_date, supply, do_it):
 def delete_bad_data(do_it):
   if not do_it:
     bad_data_result = db.engine.execute("""
-    select count(*) from circulating_supply where snapshot_date >= '2020-06-01'::date and snapshot_date <= '2020-06-15'::date
+    select count(*) from circulating_ogn_supply where snapshot_date >= '2020-06-01'::date and snapshot_date <= '2020-06-15'::date
     """)
     print("Skipping delete statement that'd delete {} records".format(list(bad_data_result)[0][0]))
     return
   db.engine.execute("""
-  delete from circulating_supply where snapshot_date >= '2020-06-01'::date and snapshot_date <= '2020-06-15'::date
+  delete from circulating_ogn_supply where snapshot_date >= '2020-06-01'::date and snapshot_date <= '2020-06-15'::date
   """)
 
 def fill_missing_txs(do_it):
@@ -80,7 +80,7 @@ def fill_missing_txs(do_it):
   
     update = update + 1
     instance = db_common.get_or_create(
-      db.session, db_models.CirculatingSupply, snapshot_date=time_.fromtimestamp(result["timeStamp"])
+      db.session, db_models.CirculatingOgnSupply, snapshot_date=time_.fromtimestamp(result["timeStamp"])
     )
     instance.supply_amount = new_supply
     db.session.add(instance)
