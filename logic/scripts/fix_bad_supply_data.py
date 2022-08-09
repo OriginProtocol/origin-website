@@ -36,7 +36,7 @@ def insert_data(snapshot_date, supply, do_it):
     print("Will set supply of month {} to {}".format(snapshot_date, supply))
     return
 
-  instance = db_models.CirculatingSupply(
+  instance = db_models.CirculatingOgnSupply(
     supply_amount=supply,
     snapshot_date=snapshot_date
   )
@@ -80,7 +80,7 @@ def fill_missing_txs(do_it):
   
     update = update + 1
     instance = db_common.get_or_create(
-      db.session, db_models.CirculatingSupply, snapshot_date=time_.fromtimestamp(result["timeStamp"])
+      db.session, db_models.CirculatingOgnSupply, snapshot_date=time_.fromtimestamp(result["timeStamp"])
     )
     instance.supply_amount = new_supply
     db.session.add(instance)

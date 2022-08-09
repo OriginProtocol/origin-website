@@ -307,7 +307,7 @@ def fetch_ogv_stats(ogv_usd_price):
     market_cap = int(circulating_supply * ogv_usd_price)
 
     out_data = dict([
-        ("ogv_usd_price", ogn_usd_price),
+        ("ogv_usd_price", ogv_usd_price),
         ("circulating_supply", circulating_supply),
         ("market_cap", market_cap),
         ("total_supply", total_supply),
@@ -487,7 +487,7 @@ def compute_ogv_stats():
 
     token_prices = fetch_token_prices()
 
-    ogv_supply_stats = fetch_ogn_stats(
+    ogv_supply_stats = fetch_ogv_stats(
         token_prices["ogv_usd_price"]
     )
 
