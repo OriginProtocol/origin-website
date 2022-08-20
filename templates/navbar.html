@@ -72,7 +72,7 @@
             <a class="nav-link{% if 'product' in request.path %} selected{% endif %}" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Products") }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ universal.JOBS_URL }}">{{ gettext("Jobs") }}</a>
+            <a class="nav-link" href="{{ universal.JOBS_URL }}" target="_blank" rel="noopener noreferrer">{{ gettext("Jobs") }}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link{% if 'dashboard' in request.path %} selected{% endif %}" href="{{ url_for('dashboard', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("OGN Token") }}</a>
