@@ -269,6 +269,7 @@ def join_mailing_list():
 
     return jsonify(success=True, message=gettext("Thanks for signing up!"))
 
+@cross_origin()
 @app.route("/mailing-list/unsubscribe", methods=["GET"], strict_slashes=False)
 def unsubscribe():
     email = request.args.get("email")
@@ -290,6 +291,7 @@ def unsubscribe():
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OGN
+@cross_origin()
 @app.route("/total-ogn", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogn", methods=["GET"], strict_slashes=False)
 def total_ogn():
@@ -297,6 +299,7 @@ def total_ogn():
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OGV
+@cross_origin()
 @app.route("/total-ogv", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogv", methods=["GET"], strict_slashes=False)
 def total_ogv():
@@ -304,6 +307,7 @@ def total_ogv():
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
+@cross_origin()
 @app.route("/total-ousd", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ousd", methods=["GET"], strict_slashes=False)
 def total_ousd():
@@ -311,12 +315,14 @@ def total_ousd():
 
 # do not remove
 # used by coingecko for the circulating supply
+@cross_origin()
 @app.route("/circulating-ogn", strict_slashes=False)
 @app.route("/<lang_code>/circulating-ogn", strict_slashes=False)
 def circulating_ogn():
     data = token_stats.get_ogn_stats()
     return make_response(str(data["ogn_supply_stats"]["circulating_supply"]), 200)
 
+@cross_origin()
 @app.route("/circulating-ogv", strict_slashes=False)
 @app.route("/<lang_code>/circulating-ogv", strict_slashes=False)
 def circulating_ogv():
