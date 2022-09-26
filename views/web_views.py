@@ -195,8 +195,8 @@ def whitepaper():
 def product_brief():
     return redirect("/whitepaper", code=302)
 
-@cross_origin()
 @app.route("/mailing-list/join", methods=["POST"], strict_slashes=False)
+@cross_origin()
 def join_mailing_list():
     if not "email" in request.form:
         return jsonify(success=False, message=gettext("Missing email"))
@@ -269,8 +269,8 @@ def join_mailing_list():
 
     return jsonify(success=True, message=gettext("Thanks for signing up!"))
 
-@cross_origin()
 @app.route("/mailing-list/unsubscribe", methods=["GET"], strict_slashes=False)
+@cross_origin()
 def unsubscribe():
     email = request.args.get("email")
     if not email or not re.match(
@@ -291,40 +291,40 @@ def unsubscribe():
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OGN
-@cross_origin()
 @app.route("/total-ogn", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogn", methods=["GET"], strict_slashes=False)
+@cross_origin()
 def total_ogn():
     return make_response(token_stats.total_ogn(), 200)
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OGV
-@cross_origin()
 @app.route("/total-ogv", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ogv", methods=["GET"], strict_slashes=False)
+@cross_origin()
 def total_ogv():
     return make_response(token_stats.total_ogv(), 200)
 
 # do not remove
 # used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
-@cross_origin()
 @app.route("/total-ousd", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-ousd", methods=["GET"], strict_slashes=False)
+@cross_origin()
 def total_ousd():
     return make_response(token_stats.total_ousd(), 200)
 
 # do not remove
 # used by coingecko for the circulating supply
-@cross_origin()
 @app.route("/circulating-ogn", strict_slashes=False)
 @app.route("/<lang_code>/circulating-ogn", strict_slashes=False)
+@cross_origin()
 def circulating_ogn():
     data = token_stats.get_ogn_stats()
     return make_response(str(data["ogn_supply_stats"]["circulating_supply"]), 200)
 
-@cross_origin()
 @app.route("/circulating-ogv", strict_slashes=False)
 @app.route("/<lang_code>/circulating-ogv", strict_slashes=False)
+@cross_origin()
 def circulating_ogv():
     data = token_stats.get_ogv_stats()
     return make_response(str(data["ogv_supply_stats"]["circulating_supply"]), 200)
