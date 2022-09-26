@@ -331,6 +331,7 @@ def circulating_ogv():
 
 @app.route("/social-stats", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/social-stats", methods=["GET"], strict_slashes=False)
+@cross_origin()
 def fetch_social_stats():
     stats = social_stats.get_social_stats(g.current_lang)
     return jsonify({"stats": stats})
