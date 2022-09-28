@@ -41,6 +41,8 @@ ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
 staked_ogv_address = "0x0c4576ca1c365868e162554af8e385dc3e7c66d9"
 ogv_claims_address = "0x7ae2334f12a449895ad21d4c255d9de194fe986f"
 veogv_claims_address = "0xd667091c2d1dcc8620f4eaea254cdfb0a176718d"
+brave_endeavors_address = "0x8ac3b96d118288427055ae7f62e407fC7c482F57"
+limitless_alpha_address = "0xA2Cc2eAE69cBf04a3D5660bc3E689B035324Fc3F"
 
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
@@ -274,7 +276,9 @@ def fetch_ogv_stats(ogv_usd_price):
         new_dist_staging_address,
         staked_ogv_address,
         ogv_claims_address,
-        veogv_claims_address
+        veogv_claims_address,
+        brave_endeavors_address,
+        limitless_alpha_address,
     ))).all()
 
     ogv_balances = dict([(result.address, result.ogv_balance) for result in results])
@@ -288,6 +292,8 @@ def fetch_ogv_stats(ogv_usd_price):
     staked_ogv_balance = int(ogv_balances[staked_ogv_address])
     ogv_claims_balance = int(ogv_balances[ogv_claims_address])
     veogv_claims_balance = int(ogv_balances[veogv_claims_address])
+    brave_endeavors_balance = int(ogv_balances[brave_endeavors_address])
+    limitless_alpha_balance = int(ogv_balances[limitless_alpha_address])
     
     reserved_tokens = int(
         new_foundation_reserve_balance + 
@@ -298,7 +304,9 @@ def fetch_ogv_stats(ogv_usd_price):
         new_dist_staging_balance +
         staked_ogv_balance +
         ogv_claims_balance +
-        veogv_claims_balance
+        veogv_claims_balance +
+        brave_endeavors_balance +
+        limitless_alpha_balance
     )
     
     print("Full reserved token balance: {}".format(reserved_tokens))
@@ -323,6 +331,8 @@ def fetch_ogv_stats(ogv_usd_price):
         ("staked_ogv_address", staked_ogv_address),
         ("ogv_claims_address", ogv_claims_address),
         ("veogv_claims_address", veogv_claims_address),
+        ("brave_endeavors_address", brave_endeavors_address),
+        ("limitless_alpha_address", limitless_alpha_address),
 
         # formatted wallet balances
         ("new_foundation_reserve_balance_formatted", '{:,}'.format(new_foundation_reserve_balance)),
@@ -334,6 +344,8 @@ def fetch_ogv_stats(ogv_usd_price):
         ("staked_ogv_balance_formatted", '{:,}'.format(staked_ogv_balance)),
         ("ogv_claims_balance_formatted", '{:,}'.format(ogv_claims_balance)),
         ("veogv_claims_balance_formatted", '{:,}'.format(veogv_claims_balance)),
+        ("breave_endeavors_balance_formatted", '{:,}'.format(brave_endeavors_balance)),
+        ("limitless_alpha_balance_formatted", '{:,}'.format(limitless_alpha_balance)),
 
         # Formatted values to display
         ("formatted_ogv_usd_price", '${:,}'.format(ogv_usd_price)),

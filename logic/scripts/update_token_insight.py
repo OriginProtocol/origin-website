@@ -441,6 +441,8 @@ def fetch_reserved_wallet_balances():
     fetch_wallet_balance(token_stats.staked_ogv_address)
     fetch_wallet_balance(token_stats.ogv_claims_address)
     fetch_wallet_balance(token_stats.veogv_claims_address)
+    fetch_wallet_balance(token_stats.brave_endeavors_address)
+    fetch_wallet_balance(token_stats.limitless_alpha_address)
 
 if __name__ == "__main__":
     # called via cron on Heroku
