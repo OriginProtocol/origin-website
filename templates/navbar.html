@@ -68,9 +68,9 @@
           <li class="nav-item">
             <a class="nav-link{% if 'team' in request.path %} selected{% endif %}" href="{{ url_for('team', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Team") }}</a>
           </li>
-          <li class="nav-item">
+<!--           <li class="nav-item">
             <a class="nav-link{% if 'product' in request.path %} selected{% endif %}" href="{{ url_for('product', lang_code=CURRENT_LANGUAGE) }}">{{ gettext("Products") }}</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="{{ universal.JOBS_URL }}" target="_blank" rel="noopener noreferrer">{{ gettext("Jobs") }}</a>
           </li>
