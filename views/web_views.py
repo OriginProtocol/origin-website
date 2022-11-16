@@ -161,6 +161,12 @@ def team():
 
     return render_template("team.html", contributors=contributors)
 
+@app.route("/contributors", strict_slashes=False)
+@app.route("/<lang_code>/contributors", strict_slashes=False)
+def contributors():
+    contributors = db_models.Contributor.query.all()
+    return jsonify({"contributors": contributors})
+
 @app.route("/admin", strict_slashes=False)
 @app.route("/<lang_code>/admin", strict_slashes=False)
 def admin():
