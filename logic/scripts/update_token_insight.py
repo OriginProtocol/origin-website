@@ -346,12 +346,47 @@ def fetch_ogn_token_info():
 
     return token_info
 
+def fetch_wallet_token_balance(wallet, token_addr, decimals = 18):
+    etherscan_url = (
+        "http://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=%s&tag=latest&address=%s&apikey=%s"
+        % (token_addr, wallet, constants.ETHERSCAN_KEY)
+    )
+
+    resp = call_etherscan(etherscan_url)
+    if resp["status"] != "1":
+        print("Error while fetching balance")
+        print(resp)
+        raise ValueError(resp["message"] or ("Failed to fetch %s balance" % token_addr))
+    if resp["result"]:
+        return float(resp["result"]) / math.pow(10, decimals)
+    return 0
+
+def fetch_wallet_eth_balance(wallet):
+    etherscan_url = (
+        "http://api.etherscan.io/api?module=account&action=balance&tag=latest&address=%s&apikey=%s"
+        % (wallet, constants.ETHERSCAN_KEY)
+    )
+
+    resp = call_etherscan(etherscan_url)
+
+    if resp["status"] != "1":
+        print("Error while fetching balance")
+        print(resp)
+        raise ValueError(resp["message"] or "Failed to fetch ETH balance")
+    if resp["result"]:
+        return float(resp["result"]) / math.pow(10, 18)
+    return 0
 
 # Fetches wallet balance from API and stores that to DB
 def fetch_wallet_balance(wallet):
     print("Checking the balance of wallet {}".format(
         wallet,
     ))
+
+    eth_balance = fetch_wallet_eth_balance(wallet)
+    ogn_balance = fetch_wallet_token_balance(wallet, token_stats.ogn_contract)
+    ogv_balance = fetch_wallet_token_balance(wallet, token_stats.ogv_contract)
+    dai_balance = fetch_wallet_token_balance(wallet, token_stats.dai_contract)
 
     url = "https://api.ethplorer.io/getAddressInfo/%s" % (wallet)
     results = call_ethplorer(url)
@@ -360,34 +395,22 @@ def fetch_wallet_balance(wallet):
         db.session, db_models.EthContact, address=wallet
     )
 
-    if "error" in results:
-        print("Error while fetching balance")
-        print(results["error"]["message"])
-        raise ValueError(results["error"]["message"])
+    contact.eth_balance = eth_balance
+    contact.ogn_balance = ogn_balance
+    contact.ogv_balance = ogv_balance
+    contact.dai_balance = dai_balance
 
-    contact.eth_balance = results["ETH"]["balance"]
-    contact.transaction_count = results["countTxs"]
+    print("ETH balance of {} is {}".format(wallet, eth_balance))
+    print("OGN balance of {} is {}".format(wallet, ogn_balance))
+    print("OGV balance of {} is {}".format(wallet, ogv_balance))
+    print("DAI balance of %s is %s".format(wallet, dai_balance))
 
-    print("ETH balance of {} is {}".format(wallet, results["ETH"]["balance"]))
-    if "tokens" in results:
-        contact.tokens = results["tokens"]
-        # update the OGN & DAI balance
-        for token in results["tokens"]:
-            if token["tokenInfo"]["address"] == token_stats.ogn_contract:
-                contact.ogn_balance = float(token["balance"]) / math.pow(10, 18)
-                print("OGN balance of {} is {}".format(wallet, contact.ogn_balance))
-            elif token["tokenInfo"]["address"] == token_stats.ogv_contract:
-                contact.ogv_balance = float(token["balance"]) / math.pow(10, 18)
-                print("OGV balance of {} is {}".format(wallet, contact.ogv_balance))
-            elif token["tokenInfo"]["address"] == token_stats.dai_contract:
-                contact.dai_balance = float(token["balance"]) / math.pow(10, 18)
-                print("DAI balance of %s is %s".format(wallet, contact.dai_balance))
-        contact.token_count = len(results["tokens"])
-    else:
-        print("OGN balance of {} is {}".format(wallet, 0))
-        contact.ogn_balance = 0
-        contact.ogv_balance = 0
-        contact.dai_balance = 0
+    # Note: We have these columns and have been populating it in the past
+    # But I don't see it being used anywhere, so I'm commenting this out
+    # since it'd require more API calls
+    # # contact.transaction_count = results["countTxs"]
+    # # contact.token_count = len(results["tokens"])
+
     contact.last_updated = datetime.utcnow()
 
     db.session.add(contact)
