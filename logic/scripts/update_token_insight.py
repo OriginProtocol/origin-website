@@ -384,12 +384,16 @@ def fetch_wallet_balance(wallet):
     ))
 
     eth_balance = fetch_wallet_eth_balance(wallet)
-    ogn_balance = fetch_wallet_token_balance(wallet, token_stats.ogn_contract)
-    ogv_balance = fetch_wallet_token_balance(wallet, token_stats.ogv_contract)
-    dai_balance = fetch_wallet_token_balance(wallet, token_stats.dai_contract)
+    print("ETH balance of {} is {}".format(wallet, eth_balance))
 
-    url = "https://api.ethplorer.io/getAddressInfo/%s" % (wallet)
-    results = call_ethplorer(url)
+    ogn_balance = fetch_wallet_token_balance(wallet, token_stats.ogn_contract)
+    print("OGN balance of {} is {}".format(wallet, ogn_balance))
+
+    ogv_balance = fetch_wallet_token_balance(wallet, token_stats.ogv_contract)
+    print("OGV balance of {} is {}".format(wallet, ogv_balance))
+
+    dai_balance = fetch_wallet_token_balance(wallet, token_stats.dai_contract)
+    print("DAI balance of %s is %s".format(wallet, dai_balance))
 
     contact = db_common.get_or_create(
         db.session, db_models.EthContact, address=wallet
@@ -399,11 +403,6 @@ def fetch_wallet_balance(wallet):
     contact.ogn_balance = ogn_balance
     contact.ogv_balance = ogv_balance
     contact.dai_balance = dai_balance
-
-    print("ETH balance of {} is {}".format(wallet, eth_balance))
-    print("OGN balance of {} is {}".format(wallet, ogn_balance))
-    print("OGV balance of {} is {}".format(wallet, ogv_balance))
-    print("DAI balance of %s is %s".format(wallet, dai_balance))
 
     # Note: We have these columns and have been populating it in the past
     # But I don't see it being used anywhere, so I'm commenting this out
