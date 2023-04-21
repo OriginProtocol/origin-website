@@ -13,6 +13,7 @@ class EmailList(db.Model):
     __tablename__ = 'email_list'
 
     email = db.Column(db.String(255), primary_key=True, autoincrement=False)
+    source = db.Column(db.String(255), index=True)
     unsubscribed = db.Column(db.Boolean())
     created_at = db.Column(db.DateTime(timezone=True), server_default=db.func.now())
     ip_addr = db.Column(db.String(100))
