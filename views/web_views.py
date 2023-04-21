@@ -244,7 +244,7 @@ def join_mailing_list():
         # Add an entry to the email_list table.
         log("Adding to mailing list")
         new_contact = mailing_list.add_contact(
-            email, first_name, last_name, ip_addr, country_code
+            email, first_name, last_name, ip_addr, country_code, "originprotocol.com"
         )
 
         # If it is a new contact and not a backfill, send a welcome email.
