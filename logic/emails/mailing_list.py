@@ -73,7 +73,7 @@ def mass_unsubscribe_sendgrid_contact(emails):
 # Inserts or updates an entry in the email_list table.
 # Returns True if a new entry was added, False if the entry already existed.
 # Raises an exception in case of an error.
-def add_contact(email, first_name, last_name, ip_addr, country_code):
+def add_contact(email, first_name, last_name, ip_addr, country_code, source=None):
     if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
         raise Exception('Invalid email')
 
@@ -89,6 +89,7 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
             row.last_name = last_name
             row.ip_addr = ip_addr
             row.country_code = country_code
+            row.source = source
         else:
             # Insert a new entry.
             new_contact = True
@@ -99,6 +100,7 @@ def add_contact(email, first_name, last_name, ip_addr, country_code):
             row.unsubscribed = False
             row.ip_addr = ip_addr
             row.country_code = country_code
+            row.source = source
             db.session.add(row)
         db.session.commit()
     except Exception as e:

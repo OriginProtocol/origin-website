@@ -2,9 +2,6 @@ from collections import OrderedDict
 from datetime import datetime
 import os
 import re
-import sys
-import calendar
-import random
 
 from flask_cors import CORS, cross_origin
 from app import app
@@ -274,6 +271,50 @@ def join_mailing_list():
         return jsonify(success=True, message=gettext("You're already registered!"))
 
     return jsonify(success=True, message=gettext("Thanks for signing up!"))
+
+@cross_origin()
+@app.route("/oeth-subscribe", methods=["POST"], strict_slashes=False)
+def oeth_subscribe():
+    if not "email" in request.form:
+        return jsonify(success=False, message=gettext("Missing email"))
+    email = request.form["email"]
+    if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+        return jsonify(success=False, message=gettext("Invalid email"))
+
+    # optional fields
+    source = request.form.get("source") or None
+    eth_address = request.form.get("eth_address") or None
+    first_name = request.form.get("first_name") or None
+    last_name = request.form.get("last_name") or None
+    full_name = request.form.get("name") or None
+    if not full_name and (first_name or last_name):
+        full_name = " ".join(filter(None, (first_name, last_name)))
+    ip_addr = request.form.get("ip_addr") or get_real_ip()
+    country_code = request.form.get("country_code") or get_country(ip_addr)
+
+    new_user = False
+
+    log("Updating mailing list for", email, eth_address)
+    try:
+        # Add an entry to the email_list table.
+        log("Adding to mailing list")
+        new_contact = mailing_list.add_contact(
+            email, first_name, last_name, ip_addr, country_code, source
+        )
+
+        # Add the entry to the Sendgrid contact list.
+        if new_contact:
+            new_user = True
+
+    except Exception as err:
+        log("Failure: %s" % err)
+        return jsonify(success=False, message=str(err))
+
+    if not new_user:
+        return jsonify(success=True, message=gettext("You're already registered!"))
+
+    return jsonify(success=True, message=gettext("Thanks for signing up!"))
+
 
 @app.route("/mailing-list/unsubscribe", methods=["GET"], strict_slashes=False)
 def unsubscribe():
