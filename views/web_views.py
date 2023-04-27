@@ -357,7 +357,7 @@ def total_ousd():
     return make_response(token_stats.total_ousd(), 200)
 
 # do not remove
-# used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
+# used by coinmarketcap.com to calculate total supply and circulating supply of OETH
 @app.route("/total-oeth", methods=["GET"], strict_slashes=False)
 @app.route("/<lang_code>/total-oeth", methods=["GET"], strict_slashes=False)
 def total_oeth():
