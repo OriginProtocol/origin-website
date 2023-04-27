@@ -24,6 +24,7 @@ import json
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 ogv_contract = "0x9c354503c38481a7a7a51629142963f98ecc12d0"
 ousd_contract = "0x2a8e1e676ec238d8a992307b495b45b3feaa5e86"
+oeth_contract = "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
 ogn_staking_contract = "0x501804b374ef06fa9c427476147ac09f1551b9a0"
 
@@ -159,6 +160,9 @@ def total_ogv():
 
 def total_ousd():
     return total_supply(ousd_contract)
+
+def total_oeth():
+    return total_supply(oeth_contract)
 
 def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stakers_count,ogn_staked_amount):
     total_supply = int(total_ogn())

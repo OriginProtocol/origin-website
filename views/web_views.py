@@ -357,6 +357,13 @@ def total_ousd():
     return make_response(token_stats.total_ousd(), 200)
 
 # do not remove
+# used by coinmarketcap.com to calculate total supply and circulating supply of OUSD
+@app.route("/total-oeth", methods=["GET"], strict_slashes=False)
+@app.route("/<lang_code>/total-oeth", methods=["GET"], strict_slashes=False)
+def total_oeth():
+    return make_response(token_stats.total_oeth(), 200)
+
+# do not remove
 # used by coingecko for the circulating supply
 @app.route("/circulating-ogn", strict_slashes=False)
 @app.route("/<lang_code>/circulating-ogn", strict_slashes=False)
