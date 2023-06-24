@@ -10,7 +10,7 @@ def init_redis():
     host=url.hostname,
     port=url.port,
     password=url.password,
-    connection_pool=BlockingConnectionPool(max_connections=1),
+    connection_pool=BlockingConnectionPool(max_connections=20),
     ssl=True, 
     ssl_cert_reqs=None
   )
