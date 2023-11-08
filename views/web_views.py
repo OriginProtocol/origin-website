@@ -247,21 +247,25 @@ def join_mailing_list():
             email, first_name, last_name, ip_addr, country_code, "originprotocol.com"
         )
 
+        # Franck 11/8/2023: Commenting out this block of code since:
+        #  - The welcome email is now sent from ListMonk.
+        #  - Contact list management is also handled in ListMonk.
+
         # If it is a new contact and not a backfill, send a welcome email.
-        if new_contact and not backfill:
-            log("Sending welcome email")
-            mailing_list.send_welcome(email, source)
+        #if new_contact and not backfill:
+        #    log("Sending welcome email")
+        #    mailing_list.send_welcome(email, source)
 
         # Add the entry to the Sendgrid contact list.
-        if new_contact:
-            new_user = True
-            log("Adding to Sendgrid contact list")
-            mailing_list.add_sendgrid_contact(
-                email=email,
-                full_name=full_name,
-                country_code=country_code,
-                dapp_user=dapp_user,
-            )
+        #if new_contact:
+        #    new_user = True
+        #    log("Adding to Sendgrid contact list")
+        #    mailing_list.add_sendgrid_contact(
+        #        email=email,
+        #        full_name=full_name,
+        #        country_code=country_code,
+        #        dapp_user=dapp_user,
+        #    )
 
     except Exception as err:
         log("Failure: %s" % err)
