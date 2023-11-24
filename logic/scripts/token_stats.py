@@ -42,8 +42,8 @@ ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
 staked_ogv_address = "0x0c4576ca1c365868e162554af8e385dc3e7c66d9"
 ogv_claims_address = "0x7ae2334f12a449895ad21d4c255d9de194fe986f"
 veogv_claims_address = "0xd667091c2d1dcc8620f4eaea254cdfb0a176718d"
-brave_endeavors_address = "0x8ac3b96d118288427055ae7f62e407fC7c482F57"
-limitless_alpha_address = "0xA2Cc2eAE69cBf04a3D5660bc3E689B035324Fc3F"
+brave_endeavors_address = "0x8ac3b96d118288427055ae7f62e407fc7c482f57"
+limitless_alpha_address = "0xa2cc2eae69cbf04a3d5660bc3e689b035324fc3f"
 
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
