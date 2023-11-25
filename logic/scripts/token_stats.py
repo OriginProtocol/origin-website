@@ -181,7 +181,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         dist_staging_address,
         new_dist_staging_address,
         partnerships_address,
-        ecosystem_growth_address
+        ecosystem_growth_address,
+        brave_endeavors_address,
+        limitless_alpha_address
     ))).all()
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
@@ -196,6 +198,8 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
     new_dist_staging_balance = int(ogn_balances[new_dist_staging_address])
     partnerships_balance = int(ogn_balances[partnerships_address])
     ecosystem_growth_balance = int(ogn_balances[ecosystem_growth_address])
+    brave_endeavors_balance = int(ogn_balances[brave_endeavors_address])
+    limitless_alpha_balance = int(ogn_balances[limitless_alpha_address])
     
     reserved_tokens = int(
         foundation_reserve_balance +
@@ -207,7 +211,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         dist_staging_balance +
         new_dist_staging_balance +
         partnerships_balance +
-        ecosystem_growth_balance
+        ecosystem_growth_balance + 
+        brave_endeavors_balance +
+        limitless_alpha_balance
     )
     
     print("Full reserved token balance: {}".format(reserved_tokens))
