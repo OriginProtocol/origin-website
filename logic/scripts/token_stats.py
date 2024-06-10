@@ -24,6 +24,7 @@ import json
 ogn_contract = "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26"
 ogv_contract = "0x9c354503c38481a7a7a51629142963f98ecc12d0"
 ousd_contract = "0x2a8e1e676ec238d8a992307b495b45b3feaa5e86"
+oeth_contract = "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
 dai_contract = "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359"
 ogn_staking_contract = "0x501804b374ef06fa9c427476147ac09f1551b9a0"
 
@@ -41,8 +42,8 @@ ecosystem_growth_address = "0x2d00c3c132a0567bbbb45ffcfd8c6543e08ff626"
 staked_ogv_address = "0x0c4576ca1c365868e162554af8e385dc3e7c66d9"
 ogv_claims_address = "0x7ae2334f12a449895ad21d4c255d9de194fe986f"
 veogv_claims_address = "0xd667091c2d1dcc8620f4eaea254cdfb0a176718d"
-brave_endeavors_address = "0x8ac3b96d118288427055ae7f62e407fC7c482F57"
-limitless_alpha_address = "0xA2Cc2eAE69cBf04a3D5660bc3E689B035324Fc3F"
+brave_endeavors_address = "0x8ac3b96d118288427055ae7f62e407fc7c482f57"
+limitless_alpha_address = "0xa2cc2eae69cbf04a3d5660bc3e689b035324fc3f"
 
 # Fetches and stores OGN & ETH prices froom CoinGecko
 def fetch_token_prices():
@@ -160,6 +161,9 @@ def total_ogv():
 def total_ousd():
     return total_supply(ousd_contract)
 
+def total_oeth():
+    return total_supply(oeth_contract)
+
 def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stakers_count,ogn_staked_amount):
     total_supply = int(total_ogn())
 
@@ -177,7 +181,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         dist_staging_address,
         new_dist_staging_address,
         partnerships_address,
-        ecosystem_growth_address
+        ecosystem_growth_address,
+        brave_endeavors_address,
+        limitless_alpha_address
     ))).all()
 
     ogn_balances = dict([(result.address, result.ogn_balance) for result in results])
@@ -192,6 +198,8 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
     new_dist_staging_balance = int(ogn_balances[new_dist_staging_address])
     partnerships_balance = int(ogn_balances[partnerships_address])
     ecosystem_growth_balance = int(ogn_balances[ecosystem_growth_address])
+    brave_endeavors_balance = int(ogn_balances[brave_endeavors_address])
+    limitless_alpha_balance = int(ogn_balances[limitless_alpha_address])
     
     reserved_tokens = int(
         foundation_reserve_balance +
@@ -203,7 +211,9 @@ def fetch_ogn_stats(ogn_usd_price,staked_user_count,staked_token_count,ogn_stake
         dist_staging_balance +
         new_dist_staging_balance +
         partnerships_balance +
-        ecosystem_growth_balance
+        ecosystem_growth_balance + 
+        brave_endeavors_balance +
+        limitless_alpha_balance
     )
     
     print("Full reserved token balance: {}".format(reserved_tokens))
