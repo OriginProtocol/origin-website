@@ -4,7 +4,7 @@
 
 Head to https://www.originprotocol.com/developers to learn more about what we're building and how to get involved.
 
-# originprotocol.com
+# originprotocol.com An Amazing Project 
 
 Official website for Origin Protocol
 
