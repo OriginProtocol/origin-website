@@ -8,7 +8,7 @@ setup(
         'Babel~=2.9.0',
         'backoff~=1.10.0',
         'beautifulsoup4>=4.9.3',
-        'celery~=5.0.5',
+        'celery>=5.0.5,<5.3.0',
         'factory-boy>=3.2.0',
         'Flask~=1.1.2',
         'Flask-Babel~=2.0.0',
