@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 import re
 
-from flask_cors import CORS, cross_origin
+from flask_cors import cross_origin
 from app import app
 from database import db, db_models
 
@@ -42,7 +42,6 @@ from logic.scripts import token_stats
 # Translation: change path of messages.mo files
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "../translations"
 babel = Babel(app)
-cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 recaptcha = ReCaptcha(app=app)
